@@ -14,9 +14,6 @@ ports:
   8095/tcp: null
 map:
 - media:rw
-discovery:
-- music_assistant
-schema:
 backup_exclude:
 init: false
 name: Music Assistant
