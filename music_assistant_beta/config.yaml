@@ -3,7 +3,7 @@ url: https://github.com/music-assistant/hass-music-assistant
 arch:
 - amd64
 - aarch64
-hassio_api: true
+homeassistant_api: true
 auth_api: true
 host_network: true
 ingress: true
@@ -14,7 +14,6 @@ ports:
   8095/tcp: null
 map:
 - media:rw
-backup_exclude:
 init: false
 name: Music Assistant
 version: "2.0.0b0"
