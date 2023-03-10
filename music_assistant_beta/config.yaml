@@ -8,7 +8,7 @@ auth_api: true
 host_network: true
 ingress: true
 ingress_port: 8095
-panel_icon: mdi:play
+panel_icon: mdi:play-circle
 uart: false
 ports:
   8095/tcp: null
