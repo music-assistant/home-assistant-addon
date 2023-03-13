@@ -1,4 +1,4 @@
-## 2.0.0
+## Music Assistant 2.0 (BETA)
 Warning: this is an early beta, features are still missing.
 
 - Public BETA of Music Assistant 2.0
