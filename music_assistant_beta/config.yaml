@@ -1,22 +1,24 @@
----
+name: Music Assistant BETA
+version: "2.0.0b5"
+slug: music_assistant_beta
+description: BETA version of Music Assistant. Install this version if you want to keep up with the latest and greatest and don't mind some beta testing. Follow us on discord to report and discuss feedback!
 url: https://github.com/music-assistant/hass-music-assistant
 arch:
-- amd64
-- aarch64
+  - amd64
+  - aarch64
 homeassistant_api: true
 auth_api: true
 host_network: true
 ingress: true
 ingress_port: 8095
 panel_icon: mdi:play-circle
+panel_title: Music Assistant
 uart: false
-ports:
-  8095/tcp: null
 map:
 - media:rw
 init: false
-name: Music Assistant
-version: "2.0.0b4"
-slug: music_assistant
-description: Music Assistant is a music library manager for your offline and online music sources, combined with the power of Home Assistant to easily stream your favourite music to a wide range of supported players.
+# NOTE: set to advanced when we're out of 2.0 beta
+advanced: false
+stage: stable
 image: ghcr.io/music-assistant/server
+tmpfs: true
