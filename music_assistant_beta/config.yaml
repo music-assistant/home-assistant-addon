@@ -13,6 +13,7 @@ ingress: true
 ingress_port: 8095
 panel_icon: mdi:play-circle
 panel_title: Music Assistant
+panel_admin: false
 uart: false
 map:
 - media:rw
