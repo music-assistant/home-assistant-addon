@@ -23,3 +23,7 @@ advanced: false
 stage: stable
 image: ghcr.io/music-assistant/server
 tmpfs: true
+options:
+  log_level: info
+schema:
+  log_level: list(debug|info|warning|error|critical)
