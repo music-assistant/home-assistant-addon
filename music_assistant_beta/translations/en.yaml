@@ -1,0 +1,4 @@
+configuration:
+  log_level:
+    name: Log Level
+    description: "Set the (global) log level (NOTE: only enable debug when needed)."
