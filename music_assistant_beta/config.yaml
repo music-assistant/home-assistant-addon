@@ -27,7 +27,6 @@ options:
   log_level: info
 schema:
   log_level: list(debug|info|warning|error)
-ports:
 privileged:
   - SYS_ADMIN
   - DAC_READ_SEARCH
