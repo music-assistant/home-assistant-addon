@@ -2,3 +2,6 @@ configuration:
   log_level:
     name: Log Level
     description: "Set the (global) log level (NOTE: only enable debug when needed)."
+  enable_uvloop:
+    name: Enable UVLoop
+    description: "Enable (experimental) uvloop support which should drastically increase performance but may also lead to unexpected side effects."
