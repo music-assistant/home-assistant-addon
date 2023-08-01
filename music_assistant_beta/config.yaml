@@ -1,5 +1,5 @@
 name: Music Assistant BETA
-version: "2.0.0b61"
+version: "2.0.0b62"
 slug: music_assistant_beta
 description: BETA version of Music Assistant. Install this version if you want to keep up with the latest and greatest and don't mind some beta testing. Follow us on discord to report and discuss feedback!
 url: https://github.com/music-assistant/hass-music-assistant
@@ -25,8 +25,10 @@ image: ghcr.io/music-assistant/server
 tmpfs: true
 options:
   log_level: info
+  enable_uvloop: false
 schema:
   log_level: list(debug|info|warning|error)
+  enable_uvloop: bool
 privileged:
   - SYS_ADMIN
   - DAC_READ_SEARCH
