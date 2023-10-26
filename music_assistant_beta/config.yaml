@@ -26,6 +26,8 @@ tmpfs: true
 options:
   log_level: info
   enable_uvloop: false
+ports:
+  8095/tcp: 8095
 schema:
   log_level: list(debug|info|warning|error)
   enable_uvloop: bool
