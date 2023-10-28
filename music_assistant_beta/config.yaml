@@ -32,4 +32,4 @@ stage: stable
 tmpfs: true
 uart: false
 url: https://github.com/music-assistant/hass-music-assistant
-version: 2.0.0b74
+version: ''
