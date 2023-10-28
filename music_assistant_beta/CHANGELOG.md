@@ -1,3 +1,136 @@
+# [2.0.0 BETA 74] - 28.10.2023
+
+## Frontend 2.0.15
+
+## What’s Changed
+
+- #252 - A few small fixes (@marcelveldt)
+- #239 - Lokalise: Translations update (@marcelveldt)
+- #213 - Add dark mode theme-color for top bar on mobile browsers (and Safari desktop) (@krisnoble)
+- #196 - Update release.yml (@jozefKruszynski)
+- #195 - CI action to create a PR on the core repo on release (@jozefKruszynski)
+- #194 - Lokalise: Translations update (@marcelveldt)
+- #193 - Improve browse feature (@marcelveldt)
+- #191 - Lokalise: Translations update (@marcelveldt)
+- #190 - Add (basic) Widget rows to Home screen (@marcelveldt)
+- #189 - Small refactor of theme colors (@marcelveldt)
+- #186 - Several small bugfixes (@marcelveldt)
+- #175 - Rework Navigation (@marcelveldt)
+- #169 - mobile player color schema correction (@dobby5)
+- #171 - Lokalise: Translations update (@marcelveldt)
+- #170 - Some small adjustments to the settings pages (@marcelveldt)
+- #168 - Button improvements (@dobby5)
+- #167 - A collection of small bug fixes (@marcelveldt)
+- #166 - Lokalise: Translations update (@marcelveldt)
+- #164 - Remove header and adjust all views (@marcelveldt)
+- #163 - Bottom mobile player (@dobby5)
+- #162 - Fix add to playlist (@marcelveldt)
+- #161 - Improve Itemdetails (@marcelveldt)
+- #160 - Various bugfixes and improvements (@dobby5)
+- #159 - MA - Merge (@dobby5)
+- #158 - Add some base diagnostic server info (@marcelveldt)
+- #157 - Fix some glitches (@marcelveldt)
+- #156 - Switch to SVG provider icons (@marcelveldt)
+- #155 - Backend changes for library refactor (@marcelveldt)
+- #143 - Ma design 2.0 (@dobby5)
+- #136 - Improve CI for releases (@marcelveldt)
+- #99 - Update Polish translations (@LukaszP2)
+- #135 - Add configuration pages for core controllers (@marcelveldt)
+
+## ⬆️ Dependencies
+
+<details>
+<summary>49 changes</summary>
+
+- #245 - Bump vite from 4.4.7 to 4.5.0 (@dependabot)
+- #222 - Bump prettier from 3.0.0 to 3.0.3 (@dependabot)
+- #249 - Bump @types/node from 20.4.5 to 20.8.9 (@dependabot)
+- #251 - Bump eslint-plugin-vue from 9.16.1 to 9.18.1 (@dependabot)
+- #250 - Bump sass from 1.64.2 to 1.69.5 (@dependabot)
+- #243 - Bump release-drafter/release-drafter from 5.24.0 to 5.25.0 (@dependabot)
+- #225 - Bump actions/checkout from 3 to 4 (@dependabot)
+- #207 - Bump pypa/gh-action-pypi-publish from 1.8.8 to 1.8.10 (@dependabot)
+- #206 - Update release.yml (@jozefKruszynski)
+- #219 - Use specific dependency version (@arctixdev)
+- #205 - Bump eslint-config-prettier from 8.9.0 to 9.0.0 (@dependabot)
+- #203 - Bump @fontsource/roboto from 5.0.5 to 5.0.8 (@dependabot)
+- #202 - Bump @egjs/vue3-flicking from 4.10.8 to 4.11.0 (@dependabot)
+- #247 - Bump vuetify from 3.3.10 to 3.3.22 (@dependabot)
+- #248 - Bump actions/setup-node from 3 to 4 (@dependabot)
+- #177 - Bump v3-infinite-loading from 1.2.2 to 1.3.1 (@dependabot)
+- #179 - Bump eslint from 8.45.0 to 8.46.0 (@dependabot)
+- #187 - Bump @typescript-eslint/parser from 6.1.0 to 6.2.1 (@dependabot)
+- #181 - Bump eslint-config-prettier from 8.8.0 to 8.9.0 (@dependabot)
+- #188 - Bump @typescript-eslint/eslint-plugin from 6.1.0 to 6.2.1 (@dependabot)
+- #182 - Bump @types/node from 20.4.4 to 20.4.5 (@dependabot)
+- #178 - Bump vite from 4.4.6 to 4.4.7 (@dependabot)
+- #176 - Bump vue-tsc from 1.8.6 to 1.8.8 (@dependabot)
+- #183 - Bump vuetify from 3.3.9 to 3.3.10 (@dependabot)
+- #185 - Bump eslint-plugin-vue from 9.15.1 to 9.16.1 (@dependabot)
+- #173 - Bump sass from 1.64.0 to 1.64.1 (@dependabot)
+- #174 - Bump @types/node from 20.4.2 to 20.4.4 (@dependabot)
+- #172 - Bump v3-infinite-loading from 1.2.2 to 1.3.1 (@dependabot)
+- #146 - Bump @types/node from 20.4.1 to 20.4.2 (@dependabot)
+- #145 - Bump eslint from 8.44.0 to 8.45.0 (@dependabot)
+- #148 - Bump @typescript-eslint/eslint-plugin from 5.61.0 to 5.62.0 (@dependabot)
+- #147 - Bump @egjs/flicking-plugins from 4.7.0 to 4.7.1 (@dependabot)
+- #144 - Bump pypa/gh-action-pypi-publish from 1.8.7 to 1.8.8 (@dependabot)
+- #149 - Bump @typescript-eslint/parser from 5.61.0 to 5.62.0 (@dependabot)
+- #150 - Bump vue-tsc from 1.8.4 to 1.8.5 (@dependabot)
+- #152 - Bump home-assistant-js-websocket from 8.1.0 to 8.2.0 (@dependabot)
+- #154 - Bump vuetify from 3.3.7 to 3.3.9 (@dependabot)
+- #153 - Bump vite from 4.4.2 to 4.4.4 (@dependabot)
+- #137 - Bump actions/cache from 1 to 3 (@dependabot)
+- #138 - Bump softprops/action-gh-release from 0.1.14 to 0.1.15 (@dependabot)
+- #139 - Bump actions/checkout from 2 to 3 (@dependabot)
+- #140 - Bump actions/setup-node from 1 to 3 (@dependabot)
+- #141 - Bump vite from 4.4.1 to 4.4.2 (@dependabot)
+- #142 - Bump @intlify/unplugin-vue-i18n from 0.12.0 to 0.12.1 (@dependabot)
+- #133 - Bump vue-router from 4.2.2 to 4.2.4 (@dependabot)
+- #134 - Bump home-assistant-js-websocket from 8.0.1 to 8.1.0 (@dependabot)
+- #131 - Bump @fontsource/roboto from 5.0.3 to 5.0.4 (@dependabot)
+- #130 - Bump @intlify/unplugin-vue-i18n from 0.11.0 to 0.12.0 (@dependabot)
+- #129 - Bump vite from 4.3.9 to 4.4.1 (@dependabot)
+</details>
+
+
+## Server 2.0.0 BETA 74
+
+## What's Changed
+* Update job and step names for ci addon job by @jozefKruszynski in https://github.com/music-assistant/server/pull/850
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/851
+* Bump mypy from 1.5.0 to 1.5.1 by @dependabot in https://github.com/music-assistant/server/pull/854
+* Bump ruff from 0.0.284 to 0.1.1 by @dependabot in https://github.com/music-assistant/server/pull/892
+* Bump zeroconf from 0.79.0 to 0.119.0 by @dependabot in https://github.com/music-assistant/server/pull/891
+* Bump orjson from 3.9.4 to 3.9.9 by @dependabot in https://github.com/music-assistant/server/pull/890
+* [Deezer] Fix sync album if no cover image by @arctixdev in https://github.com/music-assistant/server/pull/863
+* Bump docker/login-action from 2.2.0 to 3.0.0 by @dependabot in https://github.com/music-assistant/server/pull/876
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/870
+* Bump docker/setup-buildx-action from 2.9.1 to 3.0.0 by @dependabot in https://github.com/music-assistant/server/pull/878
+* FIx cumbersome restart, add idx to album tracks by @jozefKruszynski in https://github.com/music-assistant/server/pull/868
+* Bump orjson from 3.9.9 to 3.9.10 by @dependabot in https://github.com/music-assistant/server/pull/894
+* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/music-assistant/server/pull/866
+* Bump docker/metadata-action from 4 to 5 by @dependabot in https://github.com/music-assistant/server/pull/875
+* Bump docker/build-push-action from 4.1.1 to 5.0.0 by @dependabot in https://github.com/music-assistant/server/pull/877
+* Feature/tidal-quality-updates by @jozefKruszynski in https://github.com/music-assistant/server/pull/857
+* Bump pytest from 7.4.0 to 7.4.3 by @dependabot in https://github.com/music-assistant/server/pull/895
+* Bump ytmusicapi from 1.1.1 to 1.3.1 by @dependabot in https://github.com/music-assistant/server/pull/893
+* Bump pillow from 10.0.0 to 10.1.0 by @dependabot in https://github.com/music-assistant/server/pull/889
+* Bump cryptography from 41.0.3 to 41.0.4 by @dependabot in https://github.com/music-assistant/server/pull/881
+* Bump Airplay bridge binaries by @marcelveldt in https://github.com/music-assistant/server/pull/896
+* Fix grouped volume control by @OzGav in https://github.com/music-assistant/server/pull/867
+* Debounce and log commands to players by @marcelveldt in https://github.com/music-assistant/server/pull/897
+* Bump release-drafter/release-drafter from 5.24.0 to 5.25.0 by @dependabot in https://github.com/music-assistant/server/pull/900
+* Bump actions/setup-python from 4.7.0 to 4.7.1 by @dependabot in https://github.com/music-assistant/server/pull/899
+* update release action by @jozefKruszynski in https://github.com/music-assistant/server/pull/898
+* A few small fixes by @marcelveldt in https://github.com/music-assistant/server/pull/901
+* Bump frontend to 2.0.15 by @marcelveldt in https://github.com/music-assistant/server/pull/902
+
+## New Contributors
+* @OzGav made their first contribution in https://github.com/music-assistant/server/pull/867
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b73...2.0.0b74
+
 ## Music Assistant 2.0 (BETA)
 Warning: this is an early beta, features are still missing.
 
@@ -6,3 +139,5 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
