@@ -1,4 +1,32 @@
-# [2.0.0 BETA 74] - 28.10.2023
+# [2.0.0 BETA 75] - 13.11.2023
+
+## What's Changed
+* Adjust volume normalisation default by @OzGav in https://github.com/music-assistant/server/pull/909
+* Fix overriding global log level on module level by @marcelveldt in https://github.com/music-assistant/server/pull/918
+* Fix some issues with Airplay provider by @marcelveldt in https://github.com/music-assistant/server/pull/919
+* Fix issues with debouncing commands to (group)players by @marcelveldt in https://github.com/music-assistant/server/pull/921
+* [soundcloud] bug fix: add limit parameter to get_recommended function by @domanchi in https://github.com/music-assistant/server/pull/920
+* [soundcloud] improved track iteration by @domanchi in https://github.com/music-assistant/server/pull/922
+* Fix cast player playing duplicate songs by @marcelveldt in https://github.com/music-assistant/server/pull/923
+* Tidal: add missing session object to add/remove from library by @jozefKruszynski in https://github.com/music-assistant/server/pull/911
+* Fix config for addon update action by @jozefKruszynski in https://github.com/music-assistant/server/pull/903
+
+
+## Dependencies
+* Bump uvloop from 0.17.0 to 0.19.0 by @dependabot in https://github.com/music-assistant/server/pull/904
+* Bump mypy from 1.5.1 to 1.6.1 by @dependabot in https://github.com/music-assistant/server/pull/908
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/910
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/915
+* Bump pytest-aiohttp from 1.0.4 to 1.0.5 by @dependabot in https://github.com/music-assistant/server/pull/905
+* Bump pre-commit from 3.3.3 to 3.5.0 by @dependabot in https://github.com/music-assistant/server/pull/907
+* Bump mashumaro from 3.9 to 3.10 by @dependabot in https://github.com/music-assistant/server/pull/913
+* Bump ruff from 0.1.1 to 0.1.5 by @dependabot in https://github.com/music-assistant/server/pull/917
+* Bump plexapi from 4.15.0 to 4.15.5 by @dependabot in https://github.com/music-assistant/server/pull/912
+
+## New Contributors
+* @domanchi made their first contribution in https://github.com/music-assistant/server/pull/920
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b74...2.0.0b75# [2.0.0 BETA 74] - 28.10.2023
 
 ## Frontend 2.0.15
 
@@ -139,5 +167,7 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
