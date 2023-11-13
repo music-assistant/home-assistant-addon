@@ -26,7 +26,9 @@
 ## New Contributors
 * @domanchi made their first contribution in https://github.com/music-assistant/server/pull/920
 
-**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b74...2.0.0b75# [2.0.0 BETA 74] - 28.10.2023
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b74...2.0.0b75
+
+# [2.0.0 BETA 74] - 28.10.2023
 
 ## Frontend 2.0.15
 
