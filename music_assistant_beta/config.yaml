@@ -1,11 +1,13 @@
 name: Music Assistant BETA
-version: "2.0.0b74"
+version: 2.0.0b75
 slug: music_assistant_beta
-description: BETA version of Music Assistant. Install this version if you want to keep up with the latest and greatest and don't mind some beta testing. Follow us on discord to report and discuss feedback!
+description: BETA version of Music Assistant. Install this version if you want to
+  keep up with the latest and greatest and don't mind some beta testing. Follow us
+  on discord to report and discuss feedback!
 url: https://github.com/music-assistant/hass-music-assistant
 arch:
-  - amd64
-  - aarch64
+- amd64
+- aarch64
 homeassistant_api: true
 auth_api: true
 host_network: true
@@ -18,7 +20,6 @@ uart: false
 map:
 - media:rw
 init: false
-# NOTE: set to advanced when we're out of 2.0 beta
 advanced: false
 stage: stable
 image: ghcr.io/music-assistant/server
@@ -30,5 +31,5 @@ schema:
   log_level: list(debug|info|warning|error)
   enable_uvloop: bool
 privileged:
-  - SYS_ADMIN
-  - DAC_READ_SEARCH
+- SYS_ADMIN
+- DAC_READ_SEARCH
