@@ -1,6 +1,8 @@
 # [2.0.0 BETA 76] - 06.12.2023
 
 ## What's Changed
+
+### Server 2.0.0 BETA 76
 * Add Snapcast Player Provider by @SantiagoSotoC in https://github.com/music-assistant/server/pull/916
 * [Deezer]: New brand (Logo) by @arctixdev in https://github.com/music-assistant/server/pull/930
 * Fixes for slimproto cli and wiim pro streamers by @marcelveldt in https://github.com/music-assistant/server/pull/934
@@ -15,6 +17,38 @@
 * @music-assistant-machine made their first contribution in https://github.com/music-assistant/server/pull/954
 
 **Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b75...2.0.0b76
+
+### Frontend 2.0.16
+
+- #271 - Move the count of the number of items next to the title of the row (@JeffersonBledsoe)
+- #272 - Add arrows to the home page rows for scrolling (@JeffersonBledsoe)
+
+## ⬆️ Dependencies
+
+### Frontend
+
+<details>
+<summary>18 changes</summary>
+
+- #284 - Bump @types/node from 20.8.9 to 20.10.3 (@dependabot)
+- #287 - Bump nanoid from 4.0.2 to 5.0.4 (@dependabot)
+- #288 - Bump jsdom from 22.1.0 to 23.0.1 (@dependabot)
+- #285 - Bump vite-plugin-pwa from 0.16.4 to 0.17.2 (@dependabot)
+- #283 - Bump @vitejs/plugin-vue from 4.2.3 to 4.5.1 (@dependabot)
+- #276 - Bump eslint-plugin-prettier from 5.0.0 to 5.0.1 (@dependabot)
+- #279 - Bump typescript from 5.1.6 to 5.3.2 (@dependabot)
+- #282 - Bump @typescript-eslint/eslint-plugin from 6.11.0 to 6.13.1 (@dependabot)
+- #280 - Bump @intlify/unplugin-vue-i18n from 0.12.3 to 1.5.0 (@dependabot)
+- #281 - Bump pypa/gh-action-pypi-publish from 1.8.10 to 1.8.11 (@dependabot)
+- #258 - Bump replace-in-file from 7.0.1 to 7.0.2 (@dependabot)
+- #257 - Bump @mdi/font from 7.2.96 to 7.3.67 (@dependabot)
+- #266 - Bump @types/color from 3.0.3 to 3.0.6 (@dependabot)
+- #268 - Bump vue-i18n from 9.2.2 to 9.7.0 (@dependabot)
+- #261 - Bump vue-tsc from 1.8.8 to 1.8.22 (@dependabot)
+- #253 - Bump @mdi/js from 7.2.96 to 7.3.67 (@dependabot)
+- #269 - Bump eslint from 8.46.0 to 8.54.0 (@dependabot)
+- #270 - Bump @typescript-eslint/eslint-plugin from 6.2.1 to 6.11.0 (@dependabot)
+</details>
 
 # [2.0.0 BETA 75] - 13.11.2023
 
