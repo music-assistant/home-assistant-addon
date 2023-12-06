@@ -1,3 +1,21 @@
+# [2.0.0 BETA 76] - 06.12.2023
+
+## What's Changed
+* Add Snapcast Player Provider by @SantiagoSotoC in https://github.com/music-assistant/server/pull/916
+* [Deezer]: New brand (Logo) by @arctixdev in https://github.com/music-assistant/server/pull/930
+* Fixes for slimproto cli and wiim pro streamers by @marcelveldt in https://github.com/music-assistant/server/pull/934
+* [soundcloud] Improved playlist iteration by @domanchi in https://github.com/music-assistant/server/pull/924
+* fix: handle invalid start_index when receiving command player status by @wiflye81 in https://github.com/music-assistant/server/pull/935
+* frontend-2.0.16 by @music-assistant-machine in https://github.com/music-assistant/server/pull/954
+* Improve Filesystem provider by @marcelveldt in https://github.com/music-assistant/server/pull/953
+
+## New Contributors
+* @SantiagoSotoC made their first contribution in https://github.com/music-assistant/server/pull/916
+* @wiflye81 made their first contribution in https://github.com/music-assistant/server/pull/935
+* @music-assistant-machine made their first contribution in https://github.com/music-assistant/server/pull/954
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b75...2.0.0b76
+
 # [2.0.0 BETA 75] - 13.11.2023
 
 ## What's Changed
@@ -169,6 +187,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
