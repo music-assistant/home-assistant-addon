@@ -1,3 +1,7 @@
+# [2.0.0 BETA 77] - 06.12.2023
+
+Hotfix to fix some issues introduced in beta 76
+
 # [2.0.0 BETA 76] - 06.12.2023
 
 ## What's Changed
@@ -187,6 +191,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
