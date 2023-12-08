@@ -1,3 +1,13 @@
+# [2.0.0 BETA 78] - 08.12.2023
+
+## What's Changed
+* Fix snapcast provider in the dynamic generation of tcp streams  by @SantiagoSotoC in https://github.com/music-assistant/server/pull/955
+* Fixing pyproject.toml by @jozefKruszynski in https://github.com/music-assistant/server/pull/957
+* Some fixes for the database migration and matching logic by @marcelveldt in https://github.com/music-assistant/server/pull/958
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b77...2.0.0b78
+
 # [2.0.0 BETA 77] - 06.12.2023
 
 Hotfix to fix some issues introduced in beta 76
@@ -191,6 +201,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
