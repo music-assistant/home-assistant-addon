@@ -1,3 +1,31 @@
+# [2.0.0 BETA 79] - 30.12.2023
+
+## What's Changed
+* Bump aiohttp from 3.9.0 to 3.9.1 by @dependabot in https://github.com/music-assistant/server/pull/960
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/965
+* Bump black from 23.7.0 to 23.11.0 by @dependabot in https://github.com/music-assistant/server/pull/964
+* Bump pre-commit from 3.5.0 to 3.6.0 by @dependabot in https://github.com/music-assistant/server/pull/963
+* Bump cryptography from 41.0.6 to 41.0.7 by @dependabot in https://github.com/music-assistant/server/pull/962
+* Bump ruff from 0.1.6 to 0.1.7 by @dependabot in https://github.com/music-assistant/server/pull/961
+* Fix status of child players  by @SantiagoSotoC in https://github.com/music-assistant/server/pull/959
+* Update manifest files for several providers by @OzGav in https://github.com/music-assistant/server/pull/967
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/966
+* Fix typo in TuneIn init/py by @OzGav in https://github.com/music-assistant/server/pull/968
+* Fixed theaudiodb provider with get_track_metadata issue by @celestianx in https://github.com/music-assistant/server/pull/969
+* Retain extra url keys by @OzGav in https://github.com/music-assistant/server/pull/979
+* Bump ruff from 0.1.7 to 0.1.9 by @dependabot in https://github.com/music-assistant/server/pull/978
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/975
+* Bump soco from 0.29.1 to 0.30.1 by @dependabot in https://github.com/music-assistant/server/pull/977
+* Bump python-ffmpeg from 2.0.4 to 2.0.9 by @dependabot in https://github.com/music-assistant/server/pull/972
+* Bump async-upnp-client from 0.36.2 to 0.38.0 by @dependabot in https://github.com/music-assistant/server/pull/974
+* Bump black from 23.11.0 to 23.12.1 by @dependabot in https://github.com/music-assistant/server/pull/976
+* A few small bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/980
+
+## New Contributors
+* @celestianx made their first contribution in https://github.com/music-assistant/server/pull/969
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b78...2.0.0b79
+
 # [2.0.0 BETA 78] - 08.12.2023
 
 ## What's Changed
@@ -201,6 +229,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
