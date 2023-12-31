@@ -1,3 +1,12 @@
+# [2.0.0 BETA 80] - 31.12.2023
+
+## What's Changed
+* Some tweaks to MediaItem models by @marcelveldt in https://github.com/music-assistant/server/pull/981
+* Fix playback of radio stations by @marcelveldt in https://github.com/music-assistant/server/pull/982
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b79...2.0.0b80
+
 # [2.0.0 BETA 79] - 30.12.2023
 
 ## What's Changed
@@ -229,6 +238,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
