@@ -1,5 +1,57 @@
 # [2.0.0 BETA 81] - 09.01.2024
 
+## What’s Changed
+
+### Server 2.0.0 BETA 81
+
+## What's Changed
+* Fixes bug where snapcast does not work by @SantiagoSotoC in https://github.com/music-assistant/server/pull/991
+* Add guard for missing id in MusicBrainz result by @marcelveldt in https://github.com/music-assistant/server/pull/995
+* frontend-2.0.17 by @music-assistant-machine in https://github.com/music-assistant/server/pull/996
+
+
+### Dependencies
+* Bump mypy from 1.7.1 to 1.8.0 by @dependabot in https://github.com/music-assistant/server/pull/984
+* Bump zeroconf from 0.128.0 to 0.131.0 by @dependabot in https://github.com/music-assistant/server/pull/986
+* Bump pytest from 7.4.3 to 7.4.4 by @dependabot in https://github.com/music-assistant/server/pull/987
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/990
+* Bump pillow from 10.1.0 to 10.2.0 by @dependabot in https://github.com/music-assistant/server/pull/994
+* Bump ruff from 0.1.9 to 0.1.11 by @dependabot in https://github.com/music-assistant/server/pull/992
+* Bump ytmusicapi from 1.3.2 to 1.4.2 by @dependabot in https://github.com/music-assistant/server/pull/993
+* Bump pytest-asyncio from 0.23.2 to 0.23.3 by @dependabot in https://github.com/music-assistant/server/pull/985
+* Bump pycryptodome from 3.19.0 to 3.19.1 by @dependabot in https://github.com/music-assistant/server/pull/983
+
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b80...2.0.0b81
+
+### Frontend 2.0.17
+
+- #299 - Make the icon in the "Play modal dialog" not interactive (@JeffersonBledsoe)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>8 changes</summary>
+
+- #293 - Bump vite-plugin-pwa from 0.17.2 to 0.17.4 (@dependabot)
+- #296 - Bump vite-plugin-webfont-dl from 3.7.6 to 3.9.1 (@dependabot)
+- #294 - Bump eslint-plugin-vue from 9.18.1 to 9.19.2 (@dependabot)
+- #289 - Bump actions/setup-python from 4 to 5 (@dependabot)
+- #291 - Bump vue-router from 4.2.4 to 4.2.5 (@dependabot)
+- #303 - Bump @egjs/vue3-flicking from 4.10.8 to 4.11.2 (@dependabot)
+- #308 - Bump vue-tsc from 1.8.22 to 1.8.27 (@dependabot)
+- #309 - Bump @types/node from 20.10.3 to 20.10.7 (@dependabot)
+</details>
+
+
+
+# [2.0.0 BETA 81] - 09.01.2024
+
 ## What's Changed
 * Fixes bug where snapcast does not work by @SantiagoSotoC in #991
 * Add guard for missing id in MusicBrainz result by @marcelveldt in #995
@@ -247,6 +299,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
