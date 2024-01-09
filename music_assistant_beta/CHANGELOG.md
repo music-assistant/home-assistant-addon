@@ -1,3 +1,12 @@
+# [2.0.0 BETA 81] - 09.01.2024
+
+## What's Changed
+* Fixes bug where snapcast does not work by @SantiagoSotoC in #991
+* Add guard for missing id in MusicBrainz result by @marcelveldt in #995
+* bump frontend to 2.0.17 by @music-assistant-machine in #996
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b79...2.0.0b80
+
 # [2.0.0 BETA 80] - 31.12.2023
 
 ## What's Changed
