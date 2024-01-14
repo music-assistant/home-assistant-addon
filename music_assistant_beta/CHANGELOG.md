@@ -1,3 +1,13 @@
+# [2.0.0 BETA 82] - 14.01.2024
+
+## What's Changed
+* Reverting a change in the ytmusicapi that currently breaks YTMusic. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/997
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/998
+* Some small bug fixes by @marcelveldt in https://github.com/music-assistant/server/pull/999
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b81...2.0.0b82
+
 # [2.0.0 BETA 81] - 09.01.2024
 
 ## What’s Changed
@@ -299,6 +309,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
