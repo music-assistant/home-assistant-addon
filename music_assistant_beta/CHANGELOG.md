@@ -1,3 +1,59 @@
+# [2.0.0 BETA 83] - 21.01.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 83
+
+## What's Changed
+
+* Refactor enqueing of items during playback and standardize player settings by @marcelveldt in https://github.com/music-assistant/server/pull/1008
+* Fixes for plex connection by @jozefKruszynski in https://github.com/music-assistant/server/pull/1000
+* Better support for Player groups by @marcelveldt in https://github.com/music-assistant/server/pull/1011
+* A few small tweaks by @marcelveldt in https://github.com/music-assistant/server/pull/1012
+* frontend-2.1.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1013
+
+**BREAKING CHANGE!**
+If you used Universal Player Group to create groups, you need to re-create your playergroups.
+For best quality and convenience use the new provider specific syncgroups introduced in this release.
+The Universal Sync Group will allow you to put syncgroups as childs but none of the members of a Universal Player group will be synced.
+
+**Dependencies:**
+* Bump unidecode from 1.3.7 to 1.3.8 by @dependabot in https://github.com/music-assistant/server/pull/1005
+* Bump ruff from 0.1.11 to 0.1.13 by @dependabot in https://github.com/music-assistant/server/pull/1002
+* Bump pycryptodome from 3.19.1 to 3.20.0 by @dependabot in https://github.com/music-assistant/server/pull/1001
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/1010
+
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b82...2.0.0b83
+
+### Frontend 2.1.0
+
+- #320 - Adjust to backend changes (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>10 changes</summary>
+
+- #277 - Bump websocket-ts from 1.1.1 to 2.1.5 (@dependabot)
+- #319 - Bump vuetify from 3.3.14 to 3.4.11 (@dependabot)
+- #311 - Bump replace-in-file from 7.0.2 to 7.1.0 (@dependabot)
+- #312 - Bump eslint from 8.54.0 to 8.56.0 (@dependabot)
+- #310 - Bump home-assistant-js-websocket from 8.2.0 to 9.1.0 (@dependabot)
+- #313 - Bump vue-i18n from 9.7.0 to 9.9.0 (@dependabot)
+- #314 - Bump sass from 1.69.5 to 1.69.7 (@dependabot)
+- #315 - Bump @typescript-eslint/eslint-plugin from 6.13.1 to 6.18.1 (@dependabot)
+- #316 - Bump @mdi/js from 7.3.67 to 7.4.47 (@dependabot)
+- #318 - Bump actions/cache from 3 to 4 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 82] - 14.01.2024
 
 ## What's Changed
@@ -309,6 +365,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
