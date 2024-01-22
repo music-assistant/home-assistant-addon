@@ -1,3 +1,25 @@
+# [2.0.0 BETA 84] - 22.01.2024
+
+## New Music provider
+@khers added the SubSonic music provider, great work, thanks!
+
+## What's Changed
+* Add Open Subsonic MusicProvider by @khers in https://github.com/music-assistant/server/pull/1006
+* Cleanup binaries by @marcelveldt in https://github.com/music-assistant/server/pull/1014
+* Replace UUID check on MusicBrainz ID by @marcelveldt in https://github.com/music-assistant/server/pull/1015
+* Fix next track playback on Chromecast groups by @marcelveldt in https://github.com/music-assistant/server/pull/1016
+
+### Dependencies
+* Bump ruff from 0.1.13 to 0.1.14 by @dependabot in https://github.com/music-assistant/server/pull/1020
+* Bump orjson from 3.9.10 to 3.9.12 by @dependabot in https://github.com/music-assistant/server/pull/1019
+* Bump soco from 0.30.1 to 0.30.2 by @dependabot in https://github.com/music-assistant/server/pull/1021
+* Bump async-upnp-client from 0.38.0 to 0.38.1 by @dependabot in https://github.com/music-assistant/server/pull/1017
+
+## New Contributors
+* @khers made their first contribution in https://github.com/music-assistant/server/pull/1006
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b83...2.0.0b84
+
 # [2.0.0 BETA 83] - 21.01.2024
 
 ## What’s Changed
@@ -365,6 +387,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
