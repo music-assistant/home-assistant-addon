@@ -1,3 +1,15 @@
+# [2.0.0 BETA 85] - 24.01.2024
+
+## What's Changed
+* Youtube maintenance by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1022
+* RadioBrowser: pin requirement to pip version by @gieljnssns in https://github.com/music-assistant/server/pull/1024
+* Remove python-ffmpeg requirement from Snapcast manifest.json by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1023
+* A few small improvements to the Chromecast provider by @marcelveldt in https://github.com/music-assistant/server/pull/1025
+* Fix musicbrainz id check by @marcelveldt in https://github.com/music-assistant/server/pull/1026
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b84...2.0.0b85
+
 # [2.0.0 BETA 84] - 22.01.2024
 
 ## New Music provider
@@ -387,6 +399,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
