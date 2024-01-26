@@ -1,3 +1,13 @@
+# [2.0.0 BETA86] - 26.01.2024
+
+## What's Changed
+* Some fixes to the Subsonic provider by @khers in https://github.com/music-assistant/server/pull/1027
+* Subsonic: Handle missing artist id and check before building Images by @khers in https://github.com/music-assistant/server/pull/1028
+* Fix queue track repeat + Some improvements to Sonos players by @marcelveldt in https://github.com/music-assistant/server/pull/1029
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b85...2.0.0b86
+
 # [2.0.0 BETA 85] - 24.01.2024
 
 ## What's Changed
@@ -399,6 +409,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
