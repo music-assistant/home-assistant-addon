@@ -1,3 +1,59 @@
+# [2.0.0 BETA 87] - 27.01.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 87
+
+## What's Changed
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/1031
+* A collection of small fixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1030
+* Add player provider for devices running fully kiosk by @marcelveldt in https://github.com/music-assistant/server/pull/1032
+* Add default enqueue options by @marcelveldt in https://github.com/music-assistant/server/pull/1033
+* frontend-2.1.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1034
+* A few enqueue fixes by @marcelveldt in https://github.com/music-assistant/server/pull/1036
+* Subsonic: Better scrobbling and track enumeration by @khers in https://github.com/music-assistant/server/pull/1035
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b86...2.0.0b87
+
+### Frontend 2.1.1
+
+- #335 - Lokalise: Translations update (@marcelveldt)
+- #334 - Lokalise: Translations update (@marcelveldt)
+- #333 - Add better translations for settings (@marcelveldt)
+- #332 - Lokalise: Translations update (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>18 changes</summary>
+
+- #336 - Bump prettier from 3.0.3 to 3.2.4 (@dependabot)
+- #337 - Bump vite-plugin-pwa from 0.17.4 to 0.17.5 (@dependabot)
+- #338 - Bump @typescript-eslint/parser from 6.2.1 to 6.19.1 (@dependabot)
+- #339 - Bump eslint-plugin-vue from 9.19.2 to 9.20.1 (@dependabot)
+- #340 - Bump jsdom from 23.0.1 to 24.0.0 (@dependabot)
+- #341 - Bump @mdi/font from 7.3.67 to 7.4.47 (@dependabot)
+- #342 - Bump @types/node from 20.11.6 to 20.11.7 (@dependabot)
+- #343 - Bump sass from 1.69.7 to 1.70.0 (@dependabot)
+- #344 - Bump eslint-plugin-prettier from 5.0.1 to 5.1.3 (@dependabot)
+- #321 - Bump eslint-config-prettier from 8.9.0 to 9.1.0 (@dependabot)
+- #325 - Bump @vitejs/plugin-vue from 4.5.1 to 4.6.2 (@dependabot)
+- #326 - Bump @vue/eslint-config-typescript from 11.0.3 to 12.0.0 (@dependabot)
+- #322 - Bump vuetify from 3.4.11 to 3.5.1 (@dependabot)
+- #330 - Bump @typescript-eslint/eslint-plugin from 6.18.1 to 6.19.1 (@dependabot)
+- #331 - Bump @types/node from 20.10.7 to 20.11.6 (@dependabot)
+- #327 - Bump @intlify/unplugin-vue-i18n from 1.5.0 to 2.0.0 (@dependabot)
+- #328 - Bump @vue/tsconfig from 0.4.0 to 0.5.1 (@dependabot)
+- #329 - Bump typescript from 5.3.2 to 5.3.3 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA86] - 26.01.2024
 
 ## What's Changed
@@ -409,6 +465,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
