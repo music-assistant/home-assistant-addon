@@ -1,3 +1,34 @@
+# [2.0.0 BETA 88] - 28.01.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 88
+
+Fixes the stability issues introduced in beta87 !
+
+## What's Changed
+* Subsonic: Support track enumeration on older Navidrome servers by @khers in https://github.com/music-assistant/server/pull/1037
+* Fix Sonos player provider by @marcelveldt in https://github.com/music-assistant/server/pull/1038
+* Some small bugfixes and optimizations by @marcelveldt in https://github.com/music-assistant/server/pull/1039
+* frontend-2.1.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1040
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b87...2.0.0b88
+
+### Frontend 2.1.2
+
+- Some bug fixes for freezing UI
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+- #345 - Bump vue from 3.3.4 to 3.4.15 (@dependabot)
+
+
+
 # [2.0.0 BETA 87] - 27.01.2024
 
 ## What’s Changed
@@ -465,6 +496,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
