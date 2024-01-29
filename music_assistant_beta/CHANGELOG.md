@@ -1,3 +1,12 @@
+# [2.0.0 BETA 90] - 29.01.2024
+
+## What's Changed
+* Bugfixes for corrupted Sonos player configs and slimproto sync by @marcelveldt in https://github.com/music-assistant/server/pull/1044
+* Speed-up startup and fix clear cache by @marcelveldt in https://github.com/music-assistant/server/pull/1045
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b89...2.0.0b90
+
 # [2.0.0 BETA 89] - 29.01.2024
 
 ## What's Changed
@@ -506,6 +515,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
