@@ -1,3 +1,13 @@
+# [2.0.0 BETA 89] - 29.01.2024
+
+## What's Changed
+* Soundcloud - Fix for sync error by @gieljnssns in https://github.com/music-assistant/server/pull/1042
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/1041
+* Some stability and bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1043
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b88...2.0.0b89
+
 # [2.0.0 BETA 88] - 28.01.2024
 
 ## What’s Changed
@@ -496,6 +506,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
