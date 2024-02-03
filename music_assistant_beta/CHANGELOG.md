@@ -1,3 +1,25 @@
+# [2.0.0 BETA 92] - 03.02.2024
+
+## What's Changed
+* Bump mashumaro from 3.11 to 3.12 by @dependabot in https://github.com/music-assistant/server/pull/1048
+* Bump black from 23.12.1 to 24.1.1 by @dependabot in https://github.com/music-assistant/server/pull/1046
+* Bump colorlog from 6.8.0 to 6.8.2 by @dependabot in https://github.com/music-assistant/server/pull/1049
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/1052
+* Bump aiohttp from 3.9.1 to 3.9.2 by @dependabot in https://github.com/music-assistant/server/pull/1051
+* Bump ytmusicapi from 1.5.0 to 1.5.1 by @dependabot in https://github.com/music-assistant/server/pull/1050
+* Replace None with empty string where necessary by @jozefKruszynski in https://github.com/music-assistant/server/pull/1053
+* Fix async issue in SnapcastProvider by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1054
+* Bump tidalapi from 0.7.3 to 0.7.4 by @dependabot in https://github.com/music-assistant/server/pull/1047
+* Fix the browsing error for album tracks by @jozefKruszynski in https://github.com/music-assistant/server/pull/1061
+* Bump release-drafter/release-drafter from 5.25.0 to 6.0.0 by @dependabot in https://github.com/music-assistant/server/pull/1060
+* Subsonic: Two new features, better error handling, and reworked album/track parsing by @khers in https://github.com/music-assistant/server/pull/1055
+* Fix empty players list in config by @marcelveldt in https://github.com/music-assistant/server/pull/1062
+* Bump peter-evans/create-pull-request from 5.0.2 to 6.0.0 by @dependabot in https://github.com/music-assistant/server/pull/1058
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/1059
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b90...2.0.0b92
+
 # [2.0.0 BETA 90] - 29.01.2024
 
 ## What's Changed
@@ -515,6 +537,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
