@@ -1,3 +1,76 @@
+# [2.0.0 BETA 93] - 13.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 93
+
+## What's Changed
+* Add Home Assistant player provider by @marcelveldt in https://github.com/music-assistant/server/pull/1077
+* Add Jellyfin Music Provider by @lokiberra in https://github.com/music-assistant/server/pull/1007
+* Subsonic: Implement features required by Nextcloud Music support by @perillamint in https://github.com/music-assistant/server/pull/1056
+
+### Dependencies and maintenance
+* Auto-update pre-commit hooks by @github-actions in https://github.com/music-assistant/server/pull/1068
+* Reconfigure linting,testing and formatting by @marcelveldt in https://github.com/music-assistant/server/pull/1070
+* Bump cryptography from 41.0.7 to 42.0.2 by @dependabot in https://github.com/music-assistant/server/pull/1067
+* Bump aiohttp from 3.9.2 to 3.9.3 by @dependabot in https://github.com/music-assistant/server/pull/1066
+* Bump ludeeus/action-require-labels from 1.0.0 to 1.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1069
+
+* Bump pychromecast from 13.0.8 to 13.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1065
+* Tidal typing by @jozefKruszynski in https://github.com/music-assistant/server/pull/1057
+* Bump python-slugify from 8.0.1 to 8.0.3 by @dependabot in https://github.com/music-assistant/server/pull/1063
+* Add support for Python 3.12 + fix issues with type checking by @marcelveldt in https://github.com/music-assistant/server/pull/1071
+* Bump pytest from 7.4.4 to 8.0.0 by @dependabot in https://github.com/music-assistant/server/pull/1074
+* Bump python-slugify from 8.0.3 to 8.0.4 by @dependabot in https://github.com/music-assistant/server/pull/1076
+* Bump orjson from 3.9.12 to 3.9.13 by @dependabot in https://github.com/music-assistant/server/pull/1073
+* Bump ytmusicapi from 1.5.1 to 1.5.2 by @dependabot in https://github.com/music-assistant/server/pull/1072
+* Bump plexapi from 4.15.7 to 4.15.9 by @dependabot in https://github.com/music-assistant/server/pull/1075
+
+* frontend-2.2.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1078
+
+## New Contributors
+* @perillamint made their first contribution in https://github.com/music-assistant/server/pull/1056
+* @lokiberra made their first contribution in https://github.com/music-assistant/server/pull/1007
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b92...2.0.0b93
+
+### Frontend 2.2.0
+
+- #371 - Handle provider set-up depending on another provider (@marcelveldt)
+- #370 - Lokalise: Translations update (@marcelveldt)
+- #347 - Add wheel event to PlayerVolume component (@githrdw)
+- #348 - Added currently playing player queues to widget row (@jozefKruszynski)
+- #350 - Add a badge for when search is filtering results (@jozefKruszynski)
+- #349 - Add album to playlist (@jozefKruszynski)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>15 changes</summary>
+
+- #365 - Bump vite-plugin-pwa from 0.17.5 to 0.18.1 (@dependabot)
+- #368 - Bump @typescript-eslint/eslint-plugin from 6.20.0 to 7.0.0 (@dependabot)
+- #369 - Bump vue from 3.4.15 to 3.4.19 (@dependabot)
+- #364 - Bump ludeeus/action-require-labels from 1.0.0 to 1.1.0 (@dependabot)
+- #362 - Bump @types/node from 20.11.10 to 20.11.17 (@dependabot)
+- #363 - Bump @typescript-eslint/parser from 6.19.1 to 6.21.0 (@dependabot)
+- #352 - Bump prettier from 3.2.4 to 3.2.5 (@dependabot)
+- #355 - Bump @typescript-eslint/eslint-plugin from 6.19.1 to 6.20.0 (@dependabot)
+- #361 - Bump vuetify from 3.5.1 to 3.5.3 (@dependabot)
+- #351 - Bump release-drafter/release-drafter from 5.25.0 to 6.0.0 (@dependabot)
+- #356 - Bump marked from 11.2.0 to 12.0.0 (@dependabot)
+- #357 - Bump eslint-plugin-vue from 9.20.1 to 9.21.1 (@dependabot)
+- #359 - Bump nanoid from 5.0.4 to 5.0.5 (@dependabot)
+- #360 - Bump vue-i18n from 9.9.0 to 9.9.1 (@dependabot)
+- #346 - Bump @types/node from 20.11.7 to 20.11.10 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 92] - 03.02.2024
 
 ## What's Changed
@@ -537,6 +610,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
