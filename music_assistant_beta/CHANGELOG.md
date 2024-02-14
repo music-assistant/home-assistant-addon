@@ -1,3 +1,29 @@
+# [2.0.0 BETA 94] - 14.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 94
+
+## What's Changed
+* Bump hass client to 1.0.1 by @marcelveldt in https://github.com/music-assistant/server/pull/1079
+* frontend-2.2.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1080
+* Bugfix for skipped track when playing an artist or album by @marcelveldt in https://github.com/music-assistant/server/pull/1081
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b93...2.0.0b94
+
+### Frontend 2.2.1
+
+* Fix volume slider
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 93] - 13.02.2024
 
 ## What’s Changed
@@ -610,6 +636,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
