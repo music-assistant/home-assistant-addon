@@ -1,3 +1,13 @@
+# [2.0.0 BETA95] - 18.02.2024
+
+## What's Changed
+* Fix HomeAssistant provider on supervised installs by @marcelveldt in https://github.com/music-assistant/server/pull/1082
+* Change documentation links by @OzGav in https://github.com/music-assistant/server/pull/1083
+* Replace Airplay provider by @marcelveldt in https://github.com/music-assistant/server/pull/1084
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b94...2.0.0b95
+
 # [2.0.0 BETA 94] - 14.02.2024
 
 ## What’s Changed
@@ -636,6 +646,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
