@@ -1,3 +1,11 @@
+# [2.0.0 BETA 96] - 18.02.2024
+
+## What's Changed
+* Add missing pyatv dependency by @jozefKruszynski in https://github.com/music-assistant/server/pull/1085
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b95...2.0.0b96
+
 # [2.0.0 BETA95] - 18.02.2024
 
 ## What's Changed
@@ -646,6 +654,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
