@@ -1,3 +1,35 @@
+# [2.0.0 BETA 99] - 18.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 99
+
+## What's Changed
+* Some more fixes for the Airplay provider by @marcelveldt in https://github.com/music-assistant/server/pull/1088
+* frontend-2.2.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1089
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b98...2.0.0b99
+
+### Frontend 2.2.2
+
+- #380 - Lokalise: Translations update (@marcelveldt)
+- #376 - Fix the weird behaviour with the search field and badge (@jozefKruszynski)
+- #378 - Fix homescreen widgets for radio and playlists (@marcelveldt)
+- #377 - Fix players list empty in settings (@marcelveldt)
+- #375 - Lokalise: Translations update (@marcelveldt)
+- #374 - Changes to when and how the player row cards are shown (@jozefKruszynski)
+- #372 - Added wheel event to PlayerVolume (along with existing native events) (@githrdw)
+- #373 - Remove duplicate [default] (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 98] - 18.02.2024
 
 ## What’s Changed
@@ -669,6 +701,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
