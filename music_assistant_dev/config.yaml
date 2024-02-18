@@ -1,10 +1,9 @@
-name: Music Assistant BETA
-version: 2.0.0b99
-slug: music_assistant_beta
-description:
-  BETA version of Music Assistant. Install this version if you want to
-  keep up with the latest and greatest and don't mind some beta testing. Follow us
-  on discord to report and discuss feedback!
+name: Music Assistant DEV
+version: 1.0.0
+slug: music_assistant_dev
+description: DEV version of Music Assistant.
+  Do not install this add-on unless you're specifically asked or a developer!
+  This add-on installs the latest version from the main branch directly from git at startup.
 url: https://music-assistant.io
 arch:
   - amd64
@@ -22,15 +21,16 @@ map:
   - media:rw
 init: false
 advanced: false
-stage: stable
-image: ghcr.io/music-assistant/server
+stage: experimental
 tmpfs: true
 options:
   log_level: info
   enable_uvloop: false
+  branch: main
 schema:
   log_level: list(debug|info|warning|error)
   enable_uvloop: bool
+  branch: str
 privileged:
   - SYS_ADMIN
   - DAC_READ_SEARCH
