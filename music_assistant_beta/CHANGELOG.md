@@ -1,3 +1,11 @@
+# [2.0.0 BETA 97] - 18.02.2024
+
+## What's Changed
+* Fix Airplay playback on docker/haos installs by @marcelveldt in https://github.com/music-assistant/server/pull/1086
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b96...2.0.0b97
+
 # [2.0.0 BETA 96] - 18.02.2024
 
 ## What's Changed
@@ -654,6 +662,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
