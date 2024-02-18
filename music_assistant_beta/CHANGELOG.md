@@ -1,3 +1,10 @@
+# [2.0.0 BETA 98] - 18.02.2024
+
+## What’s Changed
+
+- #1087 - Fix cliraop lib permissions (@MarvinSchenkel)
+
+
 # [2.0.0 BETA 97] - 18.02.2024
 
 ## What's Changed
@@ -662,6 +669,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
