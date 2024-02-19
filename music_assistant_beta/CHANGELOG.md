@@ -1,3 +1,11 @@
+# [2.00 BETA 101] - 19.02.2024
+
+## What's Changed
+* A collection of small bugfixes and optimizations by @marcelveldt in https://github.com/music-assistant/server/pull/1092
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b100...2.0.0b101
+
 # [2.0.0 BETA 100] - 19.02.2024
 
 ## What's Changed
@@ -710,6 +718,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
