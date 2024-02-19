@@ -9,7 +9,7 @@ This is the Home Assistant add-on repository for Music Assistant for a convenien
 
 Music Assistant is a music library manager for your offline and online music sources, combined with the power of Home Assistant to easily stream your favourite music to a wide range of supported players.
 
-**Documentation:** https://github.com/music-assistant/hass-music-assistant/discussions
+**Documentation:** https://music-assistant.io/
 
 For issues, please go to [the issue tracker](https://github.com/music-assistant/hass-music-assistant/issues/issues).
 
