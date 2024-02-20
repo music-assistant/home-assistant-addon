@@ -1,3 +1,39 @@
+# [2.0.0 BETA 103] - 20.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 103
+
+## What's Changed
+* More improvements for the Airplay provider by @marcelveldt in https://github.com/music-assistant/server/pull/1100
+* Add documentation links by @OzGav in https://github.com/music-assistant/server/pull/1098
+* frontend-2.3.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1101
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b102...2.0.0b103
+
+### Frontend 2.3.0
+
+- #385 - Add translation docs link (@OzGav)
+- #300 - Add heart icon to grid view (@JeffersonBledsoe)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>4 changes</summary>
+
+- #381 - Bump sass from 1.70.0 to 1.71.0 (@dependabot)
+- #382 - Bump @types/node from 20.11.17 to 20.11.19 (@dependabot)
+- #383 - Bump vuetify from 3.5.3 to 3.5.4 (@dependabot)
+- #384 - Bump vite-plugin-pwa from 0.18.1 to 0.19.0 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 102] - 20.02.2024
 
 ## What's Changed
@@ -732,6 +768,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
