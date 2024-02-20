@@ -1,3 +1,17 @@
+# [2.0.0 BETA 102] - 20.02.2024
+
+## What's Changed
+* Various bugfixes
+
+* Bump pre-commit from 3.6.0 to 3.6.2 by @dependabot in https://github.com/music-assistant/server/pull/1097
+* Bump black from 24.1.1 to 24.2.0 by @dependabot in https://github.com/music-assistant/server/pull/1096
+* Bump pytest from 8.0.0 to 8.0.1 by @dependabot in https://github.com/music-assistant/server/pull/1095
+* Bump orjson from 3.9.13 to 3.9.14 by @dependabot in https://github.com/music-assistant/server/pull/1094
+* Bump async-upnp-client from 0.38.1 to 0.38.2 by @dependabot in https://github.com/music-assistant/server/pull/1093
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b101...2.0.0b102
+
 # [2.00 BETA 101] - 19.02.2024
 
 ## What's Changed
@@ -718,6 +732,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
