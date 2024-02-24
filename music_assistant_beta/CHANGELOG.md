@@ -1,3 +1,31 @@
+# [2.0.0 BETA 104] - 24.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 104
+
+## What's Changed
+* Change documentation link again by @OzGav in https://github.com/music-assistant/server/pull/1102
+* [Deezer]: Fix search by @arctixdev in https://github.com/music-assistant/server/pull/1104
+* Bump cryptography from 42.0.2 to 42.0.4 by @dependabot in https://github.com/music-assistant/server/pull/1103
+* frontend-2.3.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1105
+* Some small bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1106
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b103...2.0.0b104
+
+### Frontend 2.3.1
+
+- #386 - Lokalise: Translations update (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 103] - 20.02.2024
 
 ## What’s Changed
@@ -768,6 +796,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
