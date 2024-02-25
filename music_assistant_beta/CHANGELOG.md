@@ -1,3 +1,33 @@
+# [2.0.0 BETA 105] - 25.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 105
+
+## What's Changed
+* Some optimizations for Airplay streaming by @marcelveldt in https://github.com/music-assistant/server/pull/1107
+* Add verbose log level by @marcelveldt in https://github.com/music-assistant/server/pull/1109
+* Subsonic: fix cover art resolution by @khers in https://github.com/music-assistant/server/pull/1108
+* frontend-2.3.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1110
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b104...2.0.0b105
+
+### Frontend 2.3.2
+
+- #391 - Various small tweaks and fixes (@marcelveldt)
+- #390 - Improved paths (@dobby5)
+- #388 - Reworked Home View Page (@dobby5)
+- #389 - Remove unused ellipsis (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 104] - 24.02.2024
 
 ## What’s Changed
@@ -796,6 +826,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
