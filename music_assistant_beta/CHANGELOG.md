@@ -1,3 +1,46 @@
+# [2.0.0 BETA 106] - 26.02.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 106
+
+## What's Changed
+* frontend-2.3.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1116
+* Some small bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1117
+* Bump pylint from 3.0.3 to 3.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1115
+* Bump orjson from 3.9.14 to 3.9.15 by @dependabot in https://github.com/music-assistant/server/pull/1114
+* Bump pytest from 8.0.1 to 8.0.2 by @dependabot in https://github.com/music-assistant/server/pull/1113
+* Bump ruff from 0.2.1 to 0.2.2 by @dependabot in https://github.com/music-assistant/server/pull/1111
+* Bump ytmusicapi from 1.5.2 to 1.5.3 by @dependabot in https://github.com/music-assistant/server/pull/1112
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b105...2.0.0b106
+
+### Frontend 2.3.3
+
+- #401 - Fix icons on panel view (@marcelveldt)
+- #400 - Fix for now playing widget (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>8 changes</summary>
+
+- #393 - Bump vue-router from 4.2.5 to 4.3.0 (@dependabot)
+- #392 - Bump eslint from 8.56.0 to 8.57.0 (@dependabot)
+- #394 - Bump sass from 1.71.0 to 1.71.1 (@dependabot)
+- #395 - Bump vue from 3.4.19 to 3.4.20 (@dependabot)
+- #396 - Bump @types/node from 20.11.19 to 20.11.20 (@dependabot)
+- #397 - Bump nanoid from 5.0.5 to 5.0.6 (@dependabot)
+- #398 - Bump vuetify from 3.5.4 to 3.5.6 (@dependabot)
+- #399 - Bump eslint-plugin-vue from 9.21.1 to 9.22.0 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 105] - 25.02.2024
 
 ## What’s Changed
@@ -826,6 +869,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
