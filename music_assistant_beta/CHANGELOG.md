@@ -1,3 +1,26 @@
+# [2.0.0 BETA 107] - 10.03.2024
+
+## What's Changed
+* A collection of small enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1130
+* A lot of optimizations to the SlimProto provider by @marcelveldt in https://github.com/music-assistant/server/pull/1131
+* Make the logging less verbose for errors by @marcelveldt in https://github.com/music-assistant/server/pull/1118
+* Correctly select a free port by @raxbg in https://github.com/music-assistant/server/pull/1121
+
+## Dependencies
+* Bump docker/setup-buildx-action from 3.0.0 to 3.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1120
+* Bump pypa/gh-action-pypi-publish from 1.8.11 to 1.8.12 by @dependabot in https://github.com/music-assistant/server/pull/1119
+* Bump shortuuid from 1.0.11 to 1.0.12 by @dependabot in https://github.com/music-assistant/server/pull/1125
+* Bump aiosqlite from 0.19.0 to 0.20.0 by @dependabot in https://github.com/music-assistant/server/pull/1123
+* Bump cryptography from 42.0.4 to 42.0.5 by @dependabot in https://github.com/music-assistant/server/pull/1124
+* Bump pypa/gh-action-pypi-publish from 1.8.12 to 1.8.14 by @dependabot in https://github.com/music-assistant/server/pull/1129
+* Bump docker/build-push-action from 5.1.0 to 5.2.0 by @dependabot in https://github.com/music-assistant/server/pull/1128
+
+
+## New Contributors
+* @raxbg made their first contribution in https://github.com/music-assistant/server/pull/1121
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b106...2.0.0b107
+
 # [2.0.0 BETA 106] - 26.02.2024
 
 ## What’s Changed
@@ -869,6 +892,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
