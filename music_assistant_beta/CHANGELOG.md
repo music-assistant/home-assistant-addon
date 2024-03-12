@@ -1,3 +1,16 @@
+# [2.0.0 BETA 108] - 12.03.2024
+
+## What's Changed
+
+- Some fixes for slimproto
+- Some fixes for Airplay
+- Skip sending default name as metadata in stream
+- Handle Spotify rate limiter
+- Speed-up loading the configs
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b107...2.0.0b108
+
 # [2.0.0 BETA 107] - 10.03.2024
 
 ## What's Changed
@@ -892,6 +905,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
