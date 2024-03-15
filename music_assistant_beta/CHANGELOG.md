@@ -1,3 +1,22 @@
+# [2.0.0 BETA 109] - 15.03.2024
+
+## What's Changed
+
+* Subsonic: Check for transcodeOffset support on startup by @khers in https://github.com/music-assistant/server/pull/1137
+* Fix volume normalization by @marcelveldt in https://github.com/music-assistant/server/pull/1139
+* Subsonic: Moving blocking IO to task by @khers in https://github.com/music-assistant/server/pull/1141
+
+* Group playback fixes by @marcelveldt in https://github.com/music-assistant/server/pull/1144
+
+### Dependencies
+* Bump ytmusicapi from 1.5.3 to 1.6.0 by @dependabot in https://github.com/music-assistant/server/pull/1133
+* Bump docker/login-action from 3.0.0 to 3.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1138
+* Bump docker/build-push-action from 5.2.0 to 5.3.0 by @dependabot in https://github.com/music-assistant/server/pull/1143
+* Bump docker/setup-buildx-action from 3.1.0 to 3.2.0 by @dependabot in https://github.com/music-assistant/server/pull/1142
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b108...2.0.0b109
+
 # [2.0.0 BETA 108] - 12.03.2024
 
 ## What's Changed
@@ -905,6 +924,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
