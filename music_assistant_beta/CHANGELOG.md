@@ -1,3 +1,17 @@
+# [2.0.0 BETA 110] - 16.03.2024
+
+## What's Changed
+* YTMusic fixes by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1145
+* Added seek support to Jellyfin Provider by @lyonzy in https://github.com/music-assistant/server/pull/1140
+* Add option to connect to plex server over https by @tenfire in https://github.com/music-assistant/server/pull/1127
+* Fix playback on Google cast and grouped players by @marcelveldt in https://github.com/music-assistant/server/pull/1146
+
+## New Contributors
+* @lyonzy made their first contribution in https://github.com/music-assistant/server/pull/1140
+* @tenfire made their first contribution in https://github.com/music-assistant/server/pull/1127
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b109...2.0.0b110
+
 # [2.0.0 BETA 109] - 15.03.2024
 
 ## What's Changed
@@ -924,6 +938,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
