@@ -1,3 +1,7 @@
+# [2.0.0 BETA 111] - 16.03.2024
+
+Fix (stand-alone) Airplay playback
+
 # [2.0.0 BETA 110] - 16.03.2024
 
 ## What's Changed
@@ -938,6 +942,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
