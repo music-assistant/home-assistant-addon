@@ -1,3 +1,12 @@
+# [2.0.0 BETA 114] - 18.03.2024
+
+## What's Changed
+* Fix playback issues on Qobuz by @marcelveldt in https://github.com/music-assistant/server/pull/1147
+* Announce support (TTS with automatic resume) by @marcelveldt in https://github.com/music-assistant/server/pull/1148
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b111...2.0.0b114
+
 # [2.0.0 BETA 111] - 16.03.2024
 
 Fix (stand-alone) Airplay playback
@@ -942,6 +951,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
