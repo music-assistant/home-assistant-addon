@@ -1,3 +1,19 @@
+# [2.0.0 BETA 116] - 18.03.2024
+
+**Some small follow-up fixes:**
+
+- Better exception handling in spotify
+
+- Prevent useless logging in fileprovider
+
+- Try to prevent port conflict with jellyfin
+
+- Fix snapserver builtin server start
+
+- Improve seek performance of airplay
+
+- Fix airplay stutter with crossfade
+
 # [2.0.0 BETA 115] - 18.03.2024
 
 ## What's Changed
@@ -960,6 +976,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
