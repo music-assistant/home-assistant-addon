@@ -1,3 +1,12 @@
+# [2.0.0 BETA 115] - 18.03.2024
+
+## What's Changed
+* Fix playback on Universal Group and Snapcast by @marcelveldt in https://github.com/music-assistant/server/pull/1149
+* Include a Snapserver in the snapcast provider by @marcelveldt in https://github.com/music-assistant/server/pull/1150
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b114...2.0.0b115
+
 # [2.0.0 BETA 114] - 18.03.2024
 
 ## What's Changed
@@ -951,6 +960,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
