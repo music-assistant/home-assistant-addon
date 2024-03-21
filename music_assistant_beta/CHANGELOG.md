@@ -1,3 +1,16 @@
+# [2.0.0 BETA 117] - 21.03.2024
+
+## What's Changed
+
+* Use Deezer artist name instead of ID when ID isn't present by @lyonzy in https://github.com/music-assistant/server/pull/1154
+* Performance and stability improvements to streaming by @marcelveldt in https://github.com/music-assistant/server/pull/1156
+* Jellyfin Transcoding Fix by @tesnos6921 in https://github.com/music-assistant/server/pull/1155
+
+## New Contributors
+* @tesnos6921 made their first contribution in https://github.com/music-assistant/server/pull/1155
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b116...2.0.0b117
+
 # [2.0.0 BETA 116] - 18.03.2024
 
 **Some small follow-up fixes:**
@@ -976,6 +989,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
