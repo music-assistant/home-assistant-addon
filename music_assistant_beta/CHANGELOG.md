@@ -1,3 +1,15 @@
+# [2.0.0 BETA 118] - 22.03.2024
+
+## What's Changed
+* Fix high memory and cpu usage by @marcelveldt in https://github.com/music-assistant/server/pull/1157
+* Minor change to server version example by @OzGav in https://github.com/music-assistant/server/pull/1158
+* Some fixes for Announcement feature by @marcelveldt in https://github.com/music-assistant/server/pull/1159
+* Flow stream enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1162
+* Fix default Snapserver config by @marcelveldt in https://github.com/music-assistant/server/pull/1163
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b117...2.0.0b118
+
 # [2.0.0 BETA 117] - 21.03.2024
 
 ## What's Changed
@@ -989,6 +1001,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
