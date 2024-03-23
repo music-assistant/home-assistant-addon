@@ -29,7 +29,6 @@ options:
   enable_uvloop: false
 schema:
   log_level: list(debug|info|warning|error)
-  enable_uvloop: bool
 privileged:
 - SYS_ADMIN
 - DAC_READ_SEARCH
