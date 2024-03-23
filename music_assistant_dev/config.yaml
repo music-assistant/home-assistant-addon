@@ -29,7 +29,6 @@ options:
   branch: main
 schema:
   log_level: list(debug|info|warning|error)
-  enable_uvloop: bool
   branch: str
 privileged:
   - SYS_ADMIN
