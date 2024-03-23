@@ -1,3 +1,20 @@
+# [2.0.0 BETA 119] - 23.03.2024
+
+## What's Changed
+* Fix typo in config controller by @marcelveldt in https://github.com/music-assistant/server/pull/1164
+* Fix cleanup of (aborted) ffmpeg processes by @marcelveldt in https://github.com/music-assistant/server/pull/1166
+* Add support for Dev Containers/Codespaces by @robin-thoni in https://github.com/music-assistant/server/pull/1160
+
+* Bump pychromecast from 13.1.0 to 14.0.0 by @dependabot in https://github.com/music-assistant/server/pull/1122
+* Bump ruff from 0.2.2 to 0.3.3 by @dependabot in https://github.com/music-assistant/server/pull/1152
+* Bump plexapi from 4.15.9 to 4.15.10 by @dependabot in https://github.com/music-assistant/server/pull/1134
+
+
+## New Contributors
+* @robin-thoni made their first contribution in https://github.com/music-assistant/server/pull/1160
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b118...2.0.0b119
+
 # [2.0.0 BETA 118] - 22.03.2024
 
 ## What's Changed
@@ -1001,6 +1018,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
