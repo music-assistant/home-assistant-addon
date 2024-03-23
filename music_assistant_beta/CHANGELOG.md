@@ -1,3 +1,14 @@
+# [2.0.0 BETA 120] - 23.03.2024
+
+## What's Changed
+* Several improvements to playing radio streams by @marcelveldt in https://github.com/music-assistant/server/pull/1167
+* Add support for Spotify Liked Songs by @robin-thoni in https://github.com/music-assistant/server/pull/1161
+* Add small buffer in Airplay streaming logic  by @marcelveldt in https://github.com/music-assistant/server/pull/1168
+* Fix install packages using pip by @marcelveldt in https://github.com/music-assistant/server/pull/1169
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b119...2.0.0b120
+
 # [2.0.0 BETA 119] - 23.03.2024
 
 ## What's Changed
@@ -1018,6 +1029,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
