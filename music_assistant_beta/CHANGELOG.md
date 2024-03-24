@@ -1,3 +1,14 @@
+# [2.0.0 BETA 122] - 24.03.2024
+
+## What's Changed
+* [Tidal] bump tidal-api to 0.7.5 by @jozefKruszynski in https://github.com/music-assistant/server/pull/1165
+* [Deezer]: Update deezer-python-async to use pypi version by @arctixdev in https://github.com/music-assistant/server/pull/1171
+* Increase Airplay playback buffer by @marcelveldt in https://github.com/music-assistant/server/pull/1172
+* Implement a safer way to deal with the buffer limit by @marcelveldt in https://github.com/music-assistant/server/pull/1173
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b121...2.0.0b122
+
 # [2.0.0 BETA 121] - 24.03.2024
 
 Patch to fix long running radio streams stopping after a while.
@@ -1033,6 +1044,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
