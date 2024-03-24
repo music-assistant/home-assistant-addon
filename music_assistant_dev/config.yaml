@@ -25,7 +25,6 @@ stage: experimental
 tmpfs: true
 options:
   log_level: info
-  enable_uvloop: false
   branch: main
 schema:
   log_level: list(debug|info|warning|error)
