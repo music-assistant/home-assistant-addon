@@ -26,7 +26,6 @@ image: ghcr.io/music-assistant/server
 tmpfs: true
 options:
   log_level: info
-  enable_uvloop: false
 schema:
   log_level: list(debug|info|warning|error)
 privileged:
