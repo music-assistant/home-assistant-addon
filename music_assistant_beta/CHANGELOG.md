@@ -1,3 +1,7 @@
+# [2.0.0 BETA 121] - 24.03.2024
+
+Patch to fix long running radio streams stopping after a while.
+
 # [2.0.0 BETA 120] - 23.03.2024
 
 ## What's Changed
@@ -1029,6 +1033,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
