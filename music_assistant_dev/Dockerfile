@@ -11,7 +11,6 @@ RUN set -x \
     && cd /tmp && curl -sLO https://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb \
     && apt install -y /tmp/deb-multimedia-keyring_2016.8.1_all.deb \
     && apt-get update \
-    && apt-get remove ffmpeg \
     && apt install -y -t 'o=Unofficial Multimedia Packages' ffmpeg
 
 COPY entrypoint.sh /home
