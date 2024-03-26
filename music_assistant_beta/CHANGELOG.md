@@ -1,3 +1,14 @@
+# [2.0.0 BETA 125] - 26.03.2024
+
+## What's Changed
+* Some fixes for playback
+* Fixes for logging by @marcelveldt in https://github.com/music-assistant/server/pull/1182
+* Some enhancements to the Announcement feature by @marcelveldt in https://github.com/music-assistant/server/pull/1184
+* Add categories to config entries by @marcelveldt in https://github.com/music-assistant/server/pull/1185
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b124...2.0.0b125
+
 # [2.0.0 BETA 124] - 26.03.2024
 
 ## What's Changed
@@ -1052,6 +1063,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
