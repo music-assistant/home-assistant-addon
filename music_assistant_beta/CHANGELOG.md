@@ -1,3 +1,11 @@
+# [2.0.0 BETA 124] - 26.03.2024
+
+## What's Changed
+* Various fixes for Tidal by @jozefKruszynski in https://github.com/music-assistant/server/pull/1174
+* Performance and stability fixes by @marcelveldt in https://github.com/music-assistant/server/pull/1180
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b122...2.0.0b123
+
 # [2.0.0 BETA 122] - 24.03.2024
 
 ## What's Changed
@@ -1044,6 +1052,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
