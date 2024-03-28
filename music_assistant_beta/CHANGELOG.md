@@ -1,3 +1,7 @@
+# [2.0.0 BETA 127] - 28.03.2024
+
+Several tweaks for radio streams and YTM
+
 # [2.0.0 BETA 125] - 26.03.2024
 
 ## What's Changed
@@ -1063,6 +1067,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
