@@ -1,3 +1,10 @@
+# [2.0.0 BETA 128] - 29.03.2024
+
+Fixed support for seeking in several providers
+Fixed playback on local filesystems 
+A few other tweaks regarding playback
+Frontend updates 
+
 # [2.0.0 BETA 127] - 28.03.2024
 
 Several tweaks for radio streams and YTM
@@ -1067,6 +1074,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
