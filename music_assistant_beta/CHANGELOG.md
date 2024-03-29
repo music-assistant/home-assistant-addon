@@ -1,3 +1,9 @@
+# [2.0.0 BETA 129] - 29.03.2024
+
+- Fix playback to Airplay speakers
+- Possible Fix for Announcements to slimproto groups
+- Possible fix for playback of Soundcloud
+
 # [2.0.0 BETA 128] - 29.03.2024
 
 Fixed support for seeking in several providers
@@ -1074,6 +1080,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
