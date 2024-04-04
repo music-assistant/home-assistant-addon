@@ -1,3 +1,27 @@
+# [2.0.0 BETA 130] - 04.04.2024
+
+## What's Changed
+
+* Fix issues with streaming YTM and some radio stations by @marcelveldt in https://github.com/music-assistant/server/pull/1193
+* Fixes Spotify API for library Add/Remove of Artist/Album/Track by @sprocket-9 in https://github.com/music-assistant/server/pull/1192
+* Fix sending announcements to playergroups/synced players by @marcelveldt in https://github.com/music-assistant/server/pull/1199
+* Bugfixes and improvements to (universal) player groups by @marcelveldt in https://github.com/music-assistant/server/pull/1203
+* Add videos to YTM search results by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1202
+* Fixes Spotify API for library Add/Remove of Artist by @sprocket-9 in https://github.com/music-assistant/server/pull/1200
+
+### Dependencies
+* Bump orjson from 3.9.15 to 3.10.0 by @dependabot in https://github.com/music-assistant/server/pull/1194
+* Bump ruff from 0.3.3 to 0.3.4 by @dependabot in https://github.com/music-assistant/server/pull/1195
+* Soundcloudpy pip by @gieljnssns in https://github.com/music-assistant/server/pull/1191
+* Bump async-upnp-client from 0.38.2 to 0.38.3 by @dependabot in https://github.com/music-assistant/server/pull/1198
+* Bump plexapi from 4.15.10 to 4.15.11 by @dependabot in https://github.com/music-assistant/server/pull/1196
+* Bump pillow from 10.2.0 to 10.3.0 by @dependabot in https://github.com/music-assistant/server/pull/1201
+
+## New Contributors
+* @sprocket-9 made their first contribution in https://github.com/music-assistant/server/pull/1192
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b129...2.0.0b130
+
 # [2.0.0 BETA 129] - 29.03.2024
 
 - Fix playback to Airplay speakers
@@ -1080,6 +1104,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
