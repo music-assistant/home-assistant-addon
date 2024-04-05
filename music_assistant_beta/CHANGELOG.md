@@ -1,3 +1,24 @@
+# [2.0.0 BETA 131] - 05.04.2024
+
+## What's Changed
+* Tidal: Fix retrieval of images for media items by @jozefKruszynski in https://github.com/music-assistant/server/pull/1204
+* Some small bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1205
+
+> fix preview/demo stream
+> fix log level for fully kiosk provider
+> Fix quality calculation to determine best stream
+> Fix external id compare
+> fix hiccups in radio stream when icy data is wrong
+> Catch timeout in audiodb
+> split out hls and icy into own streamtype
+> Small tweak to airplay buffer to prevent hiccup
+> Force mdns discovery when enabling provider or player
+
+* Fix streaming of soundcloud by @marcelveldt in https://github.com/music-assistant/server/pull/1206
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b130...2.0.0b131
+
 # [2.0.0 BETA 130] - 04.04.2024
 
 ## What's Changed
@@ -1104,6 +1125,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
