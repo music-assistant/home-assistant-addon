@@ -1,3 +1,7 @@
+# [2.0.0 BETA 133] - 08.04.2024
+
+Hotfix for Airplay issue introduced in b132
+
 # [2.0.0 BETA 132] - 08.04.2024
 
 ## What's Changed
@@ -1135,6 +1139,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
