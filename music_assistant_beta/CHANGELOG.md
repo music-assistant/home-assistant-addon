@@ -1,3 +1,13 @@
+# [2.0.0 BETA 132] - 08.04.2024
+
+## What's Changed
+* Some optimizations to Airplay buffering by @marcelveldt in https://github.com/music-assistant/server/pull/1208
+* Ensure favorited item is added to provider library by @sprocket-9 in https://github.com/music-assistant/server/pull/1207
+* Announcements improvements by @marcelveldt in https://github.com/music-assistant/server/pull/1209
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b131...2.0.0b132
+
 # [2.0.0 BETA 131] - 05.04.2024
 
 ## What's Changed
@@ -1125,6 +1135,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
