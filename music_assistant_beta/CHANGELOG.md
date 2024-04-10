@@ -1,3 +1,19 @@
+# [2.0.0 BETA 134] - 10.04.2024
+
+## What's Changed
+* Fix repeat when flow mode enabled by @marcelveldt in https://github.com/music-assistant/server/pull/1215
+* Various fixes and code cleanup to the streaming logic by @marcelveldt in https://github.com/music-assistant/server/pull/1216
+* Introduce native Music Assistant Chromecast app
+
+### Dependency upgrades
+* Bump zeroconf from 0.131.0 to 0.132.0 by @dependabot in https://github.com/music-assistant/server/pull/1213
+* Bump ruff from 0.3.4 to 0.3.5 by @dependabot in https://github.com/music-assistant/server/pull/1212
+* Bump pre-commit-hooks from 4.5.0 to 4.6.0 by @dependabot in https://github.com/music-assistant/server/pull/1211
+* Bump docker/setup-buildx-action from 3.2.0 to 3.3.0 by @dependabot in https://github.com/music-assistant/server/pull/1210
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b133...2.0.0b134
+
 # [2.0.0 BETA 133] - 08.04.2024
 
 Hotfix for Airplay issue introduced in b132
@@ -1139,6 +1155,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
