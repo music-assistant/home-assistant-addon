@@ -1,3 +1,7 @@
+# [2.0.0 BETA 135] - 11.04.2024
+
+Hotfix release to fix issues with streams not starting due to bug in ffmpeg used in the docker image
+
 # [2.0.0 BETA 134] - 10.04.2024
 
 ## What's Changed
@@ -1155,6 +1159,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
