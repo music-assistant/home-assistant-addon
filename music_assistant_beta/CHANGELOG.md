@@ -1,3 +1,16 @@
+# [2.0.0 BETA 136] - 13.04.2024
+
+## What's Changed
+* Add support for using streamer provider publicly shareable URLs in search query by @sprocket-9 in https://github.com/music-assistant/server/pull/1214
+* Add support to specify the Metadata language by @marcelveldt in https://github.com/music-assistant/server/pull/1217
+* Fix parse error in uri parser when track in name by @marcelveldt in https://github.com/music-assistant/server/pull/1218
+* Some small fixes and enhancements to audio streaming by @marcelveldt in https://github.com/music-assistant/server/pull/1219
+* Fix seeking in HLS streams (e.g. soundcloud) by @marcelveldt in https://github.com/music-assistant/server/pull/1221
+* Fix cleanup on removal of a provider by @marcelveldt in https://github.com/music-assistant/server/pull/1222
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b135...2.0.0b136
+
 # [2.0.0 BETA 135] - 11.04.2024
 
 Hotfix release to fix issues with streams not starting due to bug in ffmpeg used in the docker image
@@ -1159,6 +1172,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
