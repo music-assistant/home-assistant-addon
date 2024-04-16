@@ -1,3 +1,44 @@
+# [2.0.0 BETA 137] - 16.04.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 137
+
+## What's Changed
+* Add builtin Music provider by @marcelveldt in https://github.com/music-assistant/server/pull/1228
+* Various improvements and bugfixes to handling of (thumbnail) images
+* Various improvements and bugfixes to handling of builtin playlists
+* Add some default/builtin playlists
+
+**BREAKING CHANGE**
+
+It is no longer possible to have non filesystem items in m3u playlists in you media folder for the filesystem provider.
+Universal playlists already created by MA will be automatically migrated.
+
+
+### Dependencies
+* Bump zeroconf from 0.132.0 to 0.132.2 by @dependabot in https://github.com/music-assistant/server/pull/1226
+* Bump ruff from 0.3.5 to 0.3.7 by @dependabot in https://github.com/music-assistant/server/pull/1225
+* Bump black from 24.3.0 to 24.4.0 by @dependabot in https://github.com/music-assistant/server/pull/1223
+* Bump aiohttp from 3.9.3 to 3.9.4 by @dependabot in https://github.com/music-assistant/server/pull/1224
+* Bump soco from 0.30.2 to 0.30.3 by @dependabot in https://github.com/music-assistant/server/pull/1227
+* frontend-2.4.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1229
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b136...2.0.0b137
+
+### Frontend 2.4.2
+
+Adjust for changes in the backend.
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 136] - 13.04.2024
 
 ## What's Changed
@@ -1172,6 +1213,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
