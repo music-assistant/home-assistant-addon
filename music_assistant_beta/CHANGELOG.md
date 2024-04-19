@@ -1,3 +1,33 @@
+# [2.0.0b138] - 19.04.2024
+
+## What’s Changed
+
+### Server 2.0.0b138
+
+## What's Changed
+* Fix local artwork retrieval on filesystem providers by @marcelveldt in https://github.com/music-assistant/server/pull/1233
+* A few small fixes and optimizations to playback by @marcelveldt in https://github.com/music-assistant/server/pull/1232
+* fix: Several minor fixes for deezer by @micha91 in https://github.com/music-assistant/server/pull/1231
+* Library and filesystem providers optimizations by @marcelveldt in https://github.com/music-assistant/server/pull/1234
+* frontend-2.4.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1235
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b137...2.0.0b138
+
+### Frontend 2.4.3
+
+- #461 - Lokalise: Translations update (@marcelveldt)
+- #459 - Fix race condition in global search (@sprocket-9)
+- #458 - Fixes for radio stream title and subtitle in full screen player (@sprocket-9)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 137] - 16.04.2024
 
 ## What’s Changed
@@ -1213,6 +1243,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
