@@ -1,3 +1,9 @@
+# [2.0.0 BETA 139] - 20.04.2024
+
+A collection of small bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1237
+
+
+
 # [2.0.0b138] - 19.04.2024
 
 ## What’s Changed
@@ -1243,6 +1249,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
