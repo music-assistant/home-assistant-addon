@@ -1,3 +1,47 @@
+# [2.0.0 BETA 140] - 22.04.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 140
+
+## What's Changed
+* 429 backoff implementation by @jozefKruszynski in https://github.com/music-assistant/server/pull/1230
+* Handle a few errors in the Jellyfin provider by @marcelveldt in https://github.com/music-assistant/server/pull/1238
+* Some fixes for Db migration and startup by @marcelveldt in https://github.com/music-assistant/server/pull/1239
+* Bugfixes and optimizations by @marcelveldt in https://github.com/music-assistant/server/pull/1240
+* Bump music-assistant-frontend from 2.4.4 to 2.4.5 by @dependabot in https://github.com/music-assistant/server/pull/1242
+* frontend-2.4.5 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1241
+* Bump aiohttp from 3.9.4 to 3.9.5 by @dependabot in https://github.com/music-assistant/server/pull/1245
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b139...2.0.0b140
+
+### Frontend 2.4.5
+
+- #473 - Lokalise: Translations update (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>9 changes</summary>
+
+- #468 - Bump vue-router from 4.3.0 to 4.3.2 (@dependabot)
+- #466 - Bump swiper from 11.1.0 to 11.1.1 (@dependabot)
+- #465 - Bump @fontsource/roboto from 5.0.12 to 5.0.13 (@dependabot)
+- #469 - Bump vue-i18n from 9.12.1 to 9.13.1 (@dependabot)
+- #464 - Bump eslint-plugin-vue from 9.24.0 to 9.25.0 (@dependabot)
+- #470 - Bump vue-tsc from 2.0.13 to 2.0.14 (@dependabot)
+- #463 - Bump marked from 12.0.1 to 12.0.2 (@dependabot)
+- #472 - Bump vue from 3.4.21 to 3.4.24 (@dependabot)
+- #471 - Bump vuetify from 3.5.15 to 3.5.16 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 139] - 20.04.2024
 
 A collection of small bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1237
@@ -1249,6 +1293,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
