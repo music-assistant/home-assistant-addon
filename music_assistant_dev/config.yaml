@@ -1,5 +1,5 @@
 name: Music Assistant DEV
-version: 1.0.3
+version: 1.0.4
 slug: music_assistant_dev
 description: DEV version of Music Assistant.
   Do not install this add-on unless you're specifically asked or a developer!
@@ -26,9 +26,11 @@ tmpfs: true
 options:
   log_level: info
   branch: main
+  safe_mode: false
 schema:
   log_level: list(debug|info|warning|error)
   branch: str
+  safe_mode: bool
 privileged:
   - SYS_ADMIN
   - DAC_READ_SEARCH

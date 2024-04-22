@@ -5,3 +5,6 @@ configuration:
   branch:
     name: Github branch
     description: "Specify the branch (or PR) to install at startup."
+  safe_mode:
+    name: Safe mode
+    description: "Start the Music Assistant server in safe mode where only the core controllers are started without any providers, to troubleshoot issues"
