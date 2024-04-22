@@ -1,3 +1,12 @@
+# [2.0.0 BETA 141] - 22.04.2024
+
+## What's Changed
+* Fix frontend issues after Vue update
+* Fix issue with youtube Music album yracks
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b140...2.0.0b141
+
 # [2.0.0 BETA 140] - 22.04.2024
 
 ## What’s Changed
@@ -1293,6 +1302,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
