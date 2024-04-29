@@ -1,3 +1,22 @@
+# [2.0.0 BETA 142] - 29.04.2024
+
+This beta contains the final database structure before we stable release and will require a full rescan.
+It should solve several reported issues but most important should be much faster, even very large collections with over 1 million tracks should be fast while browsing now.
+
+## All changes
+
+* Fix: Order not respected when playing an entire album by @marcelveldt in https://github.com/music-assistant/server/pull/1248
+* Handle missing album key in jellyfin playlist track by @marcelveldt in https://github.com/music-assistant/server/pull/1249
+* Fix add to library on Tidal by @jozefKruszynski in https://github.com/music-assistant/server/pull/1250
+* Do not load any providers by default (except builtin) by @marcelveldt in https://github.com/music-assistant/server/pull/1252
+* Optimize the database/library for large collections by @marcelveldt in https://github.com/music-assistant/server/pull/1254
+* Downgrade orjson to 3.9.15 due to segmentation faults by @marcelveldt in https://github.com/music-assistant/server/pull/1255
+* Bump plexapi from 4.15.11 to 4.15.12 by @dependabot in https://github.com/music-assistant/server/pull/1244
+* Bump tidalapi from 0.7.5 to 0.7.6 by @dependabot in https://github.com/music-assistant/server/pull/1243
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b141...2.0.0b142
+
 # [2.0.0 BETA 141] - 22.04.2024
 
 ## What's Changed
@@ -1302,6 +1321,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
