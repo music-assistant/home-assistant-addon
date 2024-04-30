@@ -1,3 +1,42 @@
+# [2.0.0 BETA 143] - 30.04.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 143
+
+## What's Changed
+* Fix cleanup on removal of file/provider/item by @marcelveldt in https://github.com/music-assistant/server/pull/1261
+* Various small fixes and tweaks by @marcelveldt in https://github.com/music-assistant/server/pull/1262
+* frontend-2.4.7 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1263
+
+* Bump black from 24.4.0 to 24.4.2 by @dependabot in https://github.com/music-assistant/server/pull/1256
+* Bump mypy from 1.9.0 to 1.10.0 by @dependabot in https://github.com/music-assistant/server/pull/1260
+* Bump pytest from 8.1.1 to 8.2.0 by @dependabot in https://github.com/music-assistant/server/pull/1258
+
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b142...2.0.0b143
+
+### Frontend 2.4.7
+
+- some small tweaks
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>3 changes</summary>
+
+- #475 - Bump vuetify from 3.5.16 to 3.5.17 (@dependabot)
+- #476 - Bump vite-plugin-webfont-dl from 3.9.3 to 3.9.4 (@dependabot)
+- #477 - Bump home-assistant-js-websocket from 9.2.1 to 9.3.0 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 142] - 29.04.2024
 
 This beta contains the final database structure before we stable release and will require a full rescan.
@@ -1321,6 +1360,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
