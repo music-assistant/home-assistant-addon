@@ -1,3 +1,30 @@
+# [2.0.0 BETA 144] - 04.05.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 144
+
+## What's Changed
+* Open Subsonic: Fix MediaImageItem constructor call by @khers in https://github.com/music-assistant/server/pull/1264
+* Fix duplicate entries in tracks and albums listings by @marcelveldt in https://github.com/music-assistant/server/pull/1265
+* Mark item played on Plex after playback finishes by @marcelveldt in https://github.com/music-assistant/server/pull/1266
+* frontend-2.5.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1269
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b143...2.0.0b144
+
+### Frontend 2.5.1
+
+
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 143] - 30.04.2024
 
 ## What’s Changed
@@ -1360,6 +1387,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
