@@ -1,3 +1,12 @@
+# [2.0.0 BETA 145] - 06.05.2024
+
+## What's Changed
+* Fix: Sanitize radio stream title by @sprocket-9 in https://github.com/music-assistant/server/pull/1267
+* Lot's of frontend optimizations and bugfixes
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b144...2.0.0b145
+
 # [2.0.0 BETA 144] - 04.05.2024
 
 ## What’s Changed
@@ -1387,6 +1396,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
