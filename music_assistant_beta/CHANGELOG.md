@@ -1,3 +1,47 @@
+# [2.0.0 BETA 146] - 07.05.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 146
+
+## What's Changed
+* Better handling of Jellyfin metadata missing by @lokiberra in https://github.com/music-assistant/server/pull/1253
+* lower throttler log level to info by @OzGav in https://github.com/music-assistant/server/pull/1277
+* Bump orjson from 3.9.15 to 3.10.3 by @dependabot in https://github.com/music-assistant/server/pull/1272
+* Bump soco from 0.30.3 to 0.30.4 by @dependabot in https://github.com/music-assistant/server/pull/1275
+* Bump cryptography from 42.0.5 to 42.0.7 by @dependabot in https://github.com/music-assistant/server/pull/1274
+* Make client library feature complete by @marcelveldt in https://github.com/music-assistant/server/pull/1278
+* Bump ytmusicapi from 1.6.0 to 1.7.0 by @dependabot in https://github.com/music-assistant/server/pull/1276
+* Bump ruff from 0.3.7 to 0.4.3 by @dependabot in https://github.com/music-assistant/server/pull/1273
+* Various small bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1279
+* frontend-2.5.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1280
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b145...2.0.0b146
+
+### Frontend 2.5.3
+
+- #487 - Fix PlayerTimeline stopDragging (@githrdw)
+- several UI improvements and fixes
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>5 changes</summary>
+
+- #485 - Bump vuetify from 3.5.17 to 3.6.3 (@dependabot)
+- #483 - Bump vite-plugin-pwa from 0.19.8 to 0.20.0 (@dependabot)
+- #482 - Bump sass from 1.75.0 to 1.76.0 (@dependabot)
+- #481 - Bump vue-tsc from 2.0.14 to 2.0.16 (@dependabot)
+- #486 - Bump @types/node from 20.12.7 to 20.12.8 (@dependabot)
+</details>
+
+
+
 # [2.0.0 BETA 145] - 06.05.2024
 
 ## What's Changed
@@ -1396,6 +1440,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
