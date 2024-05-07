@@ -1,3 +1,10 @@
+# [2.0.0 BETA 147] - 07.05.2024
+
+- Fix playback of playlists
+- Fix sync/unsync of players
+- Fix playback on Airplay players
+
+
 # [2.0.0 BETA 146] - 07.05.2024
 
 ## What’s Changed
@@ -1440,6 +1447,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
