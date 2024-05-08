@@ -1,3 +1,36 @@
+# [2.0.0 BETA 148] - 08.05.2024
+
+## What’s Changed
+
+### Server 2.0.0 BETA 148
+
+**FINAL BETA BEFORE RELEASE CANDIDATE OF 2.0 !**
+
+## What's Changed
+
+* Fix: Deezer albums by @arctixdev in https://github.com/music-assistant/server/pull/1281
+* Fix call to _get_provider_playlist_tracks by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1282
+* Fix several issues with playlists edits by @marcelveldt in https://github.com/music-assistant/server/pull/1283
+* Fix access to the queue items listing in the frontend
+* frontend-2.5.4 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1284
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.0b147...2.0.0b148
+
+### Frontend 2.5.4
+
+- #489 - Lokalise: Translations update (@marcelveldt)
+- #488 - Fix: Search ignores last press sometimes (@arctixdev)
+- Fix access to queue items
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.0.0 BETA 147] - 07.05.2024
 
 - Fix playback of playlists
@@ -1447,6 +1480,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
