@@ -1,3 +1,7 @@
+# [1.8.7.3] - 09.05.2024
+
+bump requirements in an attempt to fix compatibility with recent HA versions
+
 # [2.0.0 BETA 148] - 08.05.2024
 
 ## What’s Changed
@@ -1480,6 +1484,8 @@ Warning: this is an early beta, features are still missing.
 - Meet us on discord to report and discuss feedback 
 
 Thanks for testing!
+
+
 
 
 
