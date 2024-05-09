@@ -1,0 +1,33 @@
+name: Music Assistant
+version: 2.0.0rc1
+slug: music_assistant
+description: STABLE version of Music Assistant.
+url: https://music-assistant.io
+arch:
+  - amd64
+  - aarch64
+homeassistant_api: true
+auth_api: true
+host_network: true
+ingress: true
+ingress_port: 8095
+panel_icon: mdi:bookshelf
+panel_title: Music Assistant
+panel_admin: false
+uart: false
+map:
+  - media:rw
+init: false
+advanced: false
+stage: stable
+image: ghcr.io/music-assistant/server
+tmpfs: true
+options:
+  log_level: info
+  safe_mode: false
+schema:
+  log_level: list(debug|info|warning|error)
+  safe_mode: bool
+privileged:
+  - SYS_ADMIN
+  - DAC_READ_SEARCH
