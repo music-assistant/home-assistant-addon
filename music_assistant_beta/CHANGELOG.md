@@ -1,3 +1,10 @@
+## 2.0.2
+
+Several bugfixes for the 2.0 release
+
+- Fix Home redirecting to settings
+- Fix builtin playlists limited to 50 items
+
 ## 2.0.1
 
 Several bugfixes for the 2.0.0 release
