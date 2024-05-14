@@ -2,6 +2,26 @@
 
 Several bugfixes again for the 2.0 release
 
+- #1307 - frontend bugfixes:
+
+  - Fix various issues with listings and sorting
+  - Fix some alignment issues on the fullscreen player
+  - Fix queue tracks listing
+  - Make all item click actions consistent + add play button
+  - Updated translations
+
+- #1305 - A collection of small bugfixes and tweaks:
+
+  - Fix for browse listings
+  - Fix random sort for builtin playlists
+  - Catch some parse errors on JellyFin
+
+- #1304 - Subsonic: Set Track.disc_number to 0 for now (@khers)
+
+## 2.0.3
+
+Several bugfixes again for the 2.0 release
+
 - #1303 - Remove Requirement for Password for Jellyfin (@lokiberra)
 - #1302 - Do not use ISRC or barcode for lookups on MusicBrainz (@marcelveldt)
 - #1301 - A collection of small bugfixes (@marcelveldt)

@@ -1,7 +1,7 @@
 name: Music Assistant
-version: 2.0.3
+version: 2.0.4
 slug: music_assistant
-description: STABLE version of Music Assistant.
+description: The Music Assistant server is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers.
 url: https://music-assistant.io
 arch:
   - amd64
