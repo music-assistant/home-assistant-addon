@@ -1,14 +1,13 @@
 name: Music Assistant BETA
-version: 2.0.3
+version: 2.1.0b0
 slug: music_assistant_beta
-description:
-  BETA version of Music Assistant. Install this version if you want to
+description: BETA version of Music Assistant. Install this version if you want to
   keep up with the latest and greatest and don't mind some beta testing. Follow us
   on discord to report and discuss feedback!
 url: https://music-assistant.io
 arch:
-  - amd64
-  - aarch64
+- amd64
+- aarch64
 homeassistant_api: true
 auth_api: true
 host_network: true
@@ -19,7 +18,7 @@ panel_title: Music Assistant
 panel_admin: false
 uart: false
 map:
-  - media:rw
+- media:rw
 init: false
 advanced: false
 stage: stable
@@ -32,5 +31,5 @@ schema:
   log_level: list(debug|info|warning|error)
   safe_mode: bool
 privileged:
-  - SYS_ADMIN
-  - DAC_READ_SEARCH
+- SYS_ADMIN
+- DAC_READ_SEARCH

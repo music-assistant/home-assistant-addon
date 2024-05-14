@@ -1,3 +1,10 @@
+# [2.1.0 BETA 0] - 14.05.2024
+
+The first beta for the 2.1.0 milestone !
+
+No new features yet but this pulls in the bugfixes from the stable release (2.0.4).
+Once most important bugfixes are done for 2.0, you will start seeing new features in the beta releases again.
+
 ## 2.0.3
 
 Several bugfixes again for the 2.0 release
@@ -49,3 +56,5 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
