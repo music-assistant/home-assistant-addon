@@ -1,3 +1,25 @@
+# [2.1.0 BETA 1] - 22.05.2024
+
+## What’s Changed
+
+- #1315 - Apple music provider (@MarvinSchenkel)
+- #1314 - Fix owner id mismatch bug in Spotify create playlist API (@sprocket-9)
+- #1312 - Fix typo in sample rate config options (@OzGav)
+- #1311 - Fixes the spotify json decode mime-type errors (@sprocket-9)
+- #1309 - Fix add to Tidal Library  (@jozefKruszynski)
+- #1308 - Fix for missing Artist Metadata in Jellyfin (@lokiberra)
+
+## ⬆️ Dependencies
+
+<details>
+<summary>3 changes</summary>
+
+- #1310 - Adjust release script to account for both beta and stable releases (@jozefKruszynski)
+- #1297 - Bump ruff from 0.4.3 to 0.4.4 (@dependabot)
+- #1300 - Bump pylint from 3.1.0 to 3.1.1 (@dependabot)
+</details>
+
+
 # [2.1.0 BETA 0] - 14.05.2024
 
 The first beta for the 2.1.0 milestone !
@@ -56,5 +78,7 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
