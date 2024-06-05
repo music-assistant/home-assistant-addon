@@ -1,3 +1,29 @@
+# [2.1.0 BETA 2] - 05.06.2024
+
+## What’s Changed
+
+- #1330 - Fix: apple music playlists (@MarvinSchenkel)
+- #1323 - Fix cleanup of orphaned artists and albums on local file provider (@nldroid)
+- #1322 - Fix snapcast players ids (@SantiagoSotoC)
+- #1318 - Slimproto: Turn off Display and visualization by default (@cociweb)
+- #1319 - Apple Music: Add a few guards for cases where related MediaItems are unavailable. (@MarvinSchenkel)
+
+
+## ⬆️ Dependencies
+
+<details>
+<summary>6 changes</summary>
+
+- #1327 - Bump ytmusicapi from 1.7.2 to 1.7.3 (@dependabot)
+- #1320 - Bump ytmusicapi from 1.7.0 to 1.7.2 (@dependabot)
+- #1316 - Bump pre-commit from 3.7.0 to 3.7.1 (@dependabot)
+- #1296 - Bump mashumaro from 3.12 to 3.13 (@dependabot)
+- #1298 - Bump aiorun from 2023.7.2 to 2024.5.1 (@dependabot)
+- #1321 - Bump docker/login-action from 3.1.0 to 3.2.0 (@dependabot)
+
+</details>
+
+
 # [2.1.0 BETA 1] - 22.05.2024
 
 ## What’s Changed
@@ -78,6 +104,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
