@@ -1,8 +1,6 @@
 Music Assistant
 ==================================
 
-[![pypi_badge](https://img.shields.io/pypi/v/music_assistant.svg)](https://pypi.python.org/pypi/music_assistant)
-
 **Music Assistant**
 
 This is the Home Assistant add-on repository for Music Assistant for a convenient way to run the [Music Assistant Server](https://github.com/music-assistant/core)
