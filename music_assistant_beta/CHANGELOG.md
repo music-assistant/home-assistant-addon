@@ -1,3 +1,26 @@
+# [2.1.0 BETA 4] - 11.06.2024
+
+## What's Changed
+
+- Jellyfin: Fix regression importing track artist mapping by @Jc2k in https://github.com/music-assistant/server/pull/1339
+- Jellyfin: Don't fail entire sync if a single track or album have an invalid mbid by @Jc2k in https://github.com/music-assistant/server/pull/1338
+- Refactor SnapCastProvider cmd_volume_set method by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1324
+- Fix Snapcast types by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1346
+- Fix snapcast player unsync when master off by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1347
+- Several small bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1348
+- frontend-2.5.12 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1349
+
+# [2.1.0 BETA 3] - 10.06.2024
+
+## What's Changed
+
+- Jellyfin: Don't fail entire sync if artist mbid is corrupt by @Jc2k in https://github.com/music-assistant/server/pull/1332
+- Add Plex Connect Locally by @lordbah in https://github.com/music-assistant/server/pull/1313
+- Make Jellyfin provider compatible with Emby by @kingy444 in https://github.com/music-assistant/server/pull/1325
+- Add playlist create/edit support to the Subsonic provider by @khers in https://github.com/music-assistant/server/pull/1335
+- frontend-2.5.11 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1337
+- Several small bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1336
+
 # [2.1.0 BETA 2] - 05.06.2024
 
 ## What’s Changed
