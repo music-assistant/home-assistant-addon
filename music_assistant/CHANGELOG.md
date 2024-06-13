@@ -1,3 +1,9 @@
+# [2.0.6] - 13.06.2024
+
+Bugfixes, stability improvements and small tweaks.
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.4...2.0.6
+
 ## 2.0.3
 
 Several bugfixes again for the 2.0 release
@@ -67,3 +73,5 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
