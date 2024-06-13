@@ -1,3 +1,15 @@
+# [2.1.0 BETA 5] - 14.06.2024
+
+* Revert "Fix snapcast player unsync when master off" by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1350
+* Apple Music: Fixed lots of metadata related issues by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1351
+* Subsonic: Extend favorites to tracks, and podcast channels and episodes by @khers in https://github.com/music-assistant/server/pull/1352
+* Jellyfin: Don't adjust logging level of unrelated providers dependencies by @Jc2k in https://github.com/music-assistant/server/pull/1354
+* Jellyfin: Fetch favorite userdata into library by @Jc2k in https://github.com/music-assistant/server/pull/1353
+* Fix issues with paged listings by @marcelveldt in https://github.com/music-assistant/server/pull/1356
+* Playback/enqueue fixes by @marcelveldt in https://github.com/music-assistant/server/pull/1355
+* Enforce line endings by @Jc2k in https://github.com/music-assistant/server/pull/1357
+* frontend-2.5.13 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1358
+
 # [2.1.0 BETA 4] - 11.06.2024
 
 ## What's Changed
