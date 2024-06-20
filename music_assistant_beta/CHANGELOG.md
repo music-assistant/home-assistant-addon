@@ -1,3 +1,79 @@
+# [2.1.0 BETA 7] - 20.06.2024
+
+## What’s Changed
+
+### Server 2.1.0 BETA 7
+
+## What's Changed
+
+* Jellyfin: Drop all synchronous HTTP and use aiohttp instread by @Jc2k in https://github.com/music-assistant/server/pull/1362
+* Fix a typing issue in the client. by @jozefKruszynski in https://github.com/music-assistant/server/pull/1368
+* Jellyfin: Typing improvements by @Jc2k in https://github.com/music-assistant/server/pull/1371
+* Force comparison of MBID by @MelHarbour in https://github.com/music-assistant/server/pull/1370
+* Jellyfin: Make less http requests by @Jc2k in https://github.com/music-assistant/server/pull/1379
+* Add index on timestamp_added by @MelHarbour in https://github.com/music-assistant/server/pull/1381
+* Jellyfin: Make SSL verification optional, but on by default by @Jc2k in https://github.com/music-assistant/server/pull/1382
+* Jellyfin: Add pagination for get_library_albums and get_library_artists by @Jc2k in https://github.com/music-assistant/server/pull/1380
+* Prevent overwriting album_tracks table by @MelHarbour in https://github.com/music-assistant/server/pull/1388
+* Fix unsync when master off by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1386
+* Improve library performance by @marcelveldt in https://github.com/music-assistant/server/pull/1389
+* Jellyfin: Faster track fetching by @Jc2k in https://github.com/music-assistant/server/pull/1383
+* Jellyfin: Stricter typing by @Jc2k in https://github.com/music-assistant/server/pull/1390
+* frontend-2.5.15 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1391
+* A collection of small bugfixes and tweaks by @marcelveldt in https://github.com/music-assistant/server/pull/1392
+* Snapcast fix sync and unsync many by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1385
+* Jellyfin: Get more artwork from the Jellyfin instance by @Jc2k in https://github.com/music-assistant/server/pull/1393
+
+## New Contributors
+* @MelHarbour made their first contribution in https://github.com/music-assistant/server/pull/1370
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0b6...2.1.0b7
+
+### Frontend 2.5.15
+
+- #545 - Lokalise: Translations update (@marcelveldt)
+- #544 - Revert "Lokalise: Translations update" (@jozefKruszynski)
+- #541 - Lokalise: Translations update (@marcelveldt)
+- #532 - Update languages (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>8 changes</summary>
+
+- #533 - Bump vue-router from 4.3.2 to 4.3.3 (@dependabot)
+- #534 - Bump vue from 3.4.27 to 3.4.29 (@dependabot)
+- #535 - Bump sass from 1.77.4 to 1.77.5 (@dependabot)
+- #536 - Bump prettier from 3.3.1 to 3.3.2 (@dependabot)
+- #537 - Bump marked from 12.0.2 to 13.0.0 (@dependabot)
+- #538 - Bump vuetify from 3.6.8 to 3.6.9 (@dependabot)
+- #539 - Bump home-assistant-js-websocket from 9.3.0 to 9.4.0 (@dependabot)
+- #540 - Bump pypa/gh-action-pypi-publish from 1.8.14 to 1.9.0 (@dependabot)
+</details>
+
+# [2.1.0 BETA 6] - 15.06.2024
+
+## What’s Changed
+
+- #1366 - frontend-2.5.14 (@music-assistant-machine)
+- #1365 - Fixed volume fixes (@marcelveldt)
+- #1364 - Auto retry provider load if its unavailable or the connection gets lost (@marcelveldt)
+- #1363 - Snapcast add guard for sync_many on cmd_sync (@SantiagoSotoC)
+- #1361 - Fix race condition causing a (potential) endless loop (@marcelveldt)
+- #1360 - Fix snapcast group child  (@SantiagoSotoC)
+
+## ⬆️ Dependencies
+
+<details>
+<summary>2 changes</summary>
+
+- #1343 - Bump ruff from 0.4.4 to 0.4.8 (@dependabot)
+</details>
+
 # [2.1.0 BETA 5] - 14.06.2024
 
 * Revert "Fix snapcast player unsync when master off" by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1350
