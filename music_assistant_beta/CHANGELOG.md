@@ -2,9 +2,6 @@
 
 ## What’s Changed
 
-### Server 2.1.0 BETA 8
-## What’s Changed
-
 - #1404 - Deezer: Fix Playback (@micha91)
 - #1387 - YT Music: Switch from unmaintained pytube to yt-dlp. Check user is subscribed to YTM premium (@tronikos)
 - #1401 - Fix radio for playlists < 5 items. (@MarvinSchenkel)
