@@ -1,9 +1,3 @@
-# [2.0.7] - 24.06.2024
-
-A collection of bugfixes for issues reported on Github.
-
-**Full Changelog**: https://github.com/music-assistant/server/compare/2.0.6...2.0.7
-
 # [2.0.7] - 15.06.2024
 
 A collection of bugfixes for issues reported on Github.
