@@ -1,3 +1,19 @@
+# [2.1.0 BETA 8] - 24.06.2024
+
+## What’s Changed
+
+### Server 2.1.0 BETA 8
+## What’s Changed
+
+- #1404 - Deezer: Fix Playback (@micha91)
+- #1387 - YT Music: Switch from unmaintained pytube to yt-dlp. Check user is subscribed to YTM premium (@tronikos)
+- #1401 - Fix radio for playlists < 5 items. (@MarvinSchenkel)
+- #1402 - YT Music: Fix playback for video based songs without artist info. (@MarvinSchenkel)
+- #1399 - Snapcast add config built in server (@SantiagoSotoC)
+- #1395 - Snapcast:  re-add update all clients on sync and unsync (@SantiagoSotoC)
+- #1394 - Update Locales (@OzGav)
+
+
 # [2.1.0 BETA 7] - 20.06.2024
 
 ## What’s Changed
