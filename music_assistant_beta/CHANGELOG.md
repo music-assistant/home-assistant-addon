@@ -1,3 +1,47 @@
+# [2.1.0 BETA 9] - 04.07.2024
+
+## What's Changed
+* Remove some unnecessary async and await in ytmusic by @tronikos in https://github.com/music-assistant/server/pull/1405
+* YTMusic: Update YT DLP options to improve speed for resolving stream urls by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1417
+* Some Typos in locales by @OzGav in https://github.com/music-assistant/server/pull/1420
+* Bump docker/build-push-action from 6.1.0 to 6.2.0 by @dependabot in https://github.com/music-assistant/server/pull/1424
+* Snapcast fix sync to by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1423
+* Fix unload on snapcast by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1415
+* Bump aiofiles from 23.2.1 to 24.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1407
+* Bump ruff from 0.4.9 to 0.4.10 by @dependabot in https://github.com/music-assistant/server/pull/1408
+* Bump ytmusicapi from 1.7.0 to 1.7.3 by @dependabot in https://github.com/music-assistant/server/pull/1406
+* Jellyfin: Add more test scaffolding. by @Jc2k in https://github.com/music-assistant/server/pull/1403
+* Avoid subshells when using check_output by @Jc2k in https://github.com/music-assistant/server/pull/1412
+* Mypy: Get mypy passing on music_assistant.client by @Jc2k in https://github.com/music-assistant/server/pull/1416
+* Apple Music: Fix tracks that are unavailable in the catalog + Fix tracks with no album data by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1425
+* Bump async-upnp-client from 0.38.3 to 0.39.0 by @dependabot in https://github.com/music-assistant/server/pull/1409
+* Double check external ID comparison by @MelHarbour in https://github.com/music-assistant/server/pull/1411
+* Jellyfin: add similar tracks by @Jc2k in https://github.com/music-assistant/server/pull/1414
+* Run mypy on CI by @Jc2k in https://github.com/music-assistant/server/pull/1413
+* Carefully handle redirect from players to queue controller by @marcelveldt in https://github.com/music-assistant/server/pull/1427
+* Bump mypy from 1.10.0 to 1.10.1 by @dependabot in https://github.com/music-assistant/server/pull/1433
+* Fetch larger version of Soundcloud artwork by @MelHarbour in https://github.com/music-assistant/server/pull/1426
+* Bump pillow from 10.3.0 to 10.4.0 by @dependabot in https://github.com/music-assistant/server/pull/1429
+* Bump pylint from 3.2.3 to 3.2.5 by @dependabot in https://github.com/music-assistant/server/pull/1432
+* Mypy: Add music_assistant.common by @Jc2k in https://github.com/music-assistant/server/pull/1428
+* Bump python-fullykiosk from 0.0.12 to 0.0.14 by @dependabot in https://github.com/music-assistant/server/pull/1431
+* Snapcast: Add delay, before so that the stream does not idle immediately by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1434
+* Bump py-opensonic to 5.1.1 by @khers in https://github.com/music-assistant/server/pull/1437
+* Bump ruff from 0.4.10 to 0.5.0 by @dependabot in https://github.com/music-assistant/server/pull/1430
+* Snapcast remove check for 0.27 by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1419
+* Bump yt-dlp from 2024.5.27 to 2024.7.1 by @dependabot in https://github.com/music-assistant/server/pull/1435
+* Snapcast remove unused code by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1441
+* Automatically repair configs broken by the last_error retry glitch by @Jc2k in https://github.com/music-assistant/server/pull/1443
+* Add Setup Script by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1438
+* Bump docker/build-push-action from 6.2.0 to 6.3.0 by @dependabot in https://github.com/music-assistant/server/pull/1439
+* Don't load_provider if provider already deleted by @Jc2k in https://github.com/music-assistant/server/pull/1436
+* Bump docker/setup-buildx-action from 3.3.0 to 3.4.0 by @dependabot in https://github.com/music-assistant/server/pull/1444
+* Snapcast: Reload built-in server in case of connection loss by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1442
+* Better handling of album directory for local files by @marcelveldt in https://github.com/music-assistant/server/pull/1445
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0b8...2.1.0b9
+
 # [2.1.0 BETA 8] - 24.06.2024
 
 ## What’s Changed
@@ -228,6 +272,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
