@@ -1,3 +1,7 @@
+# [2.1.0 BETA 10] - 05.07.2024
+
+Bugfix for several commands failing (including smb mounts and airplay playback) + Optimize RadioBrowser browsing
+
 # [2.1.0 BETA 9] - 04.07.2024
 
 ## What's Changed
@@ -272,6 +276,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
