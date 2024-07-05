@@ -1,3 +1,16 @@
+# [2.1.0 BETA 11] - 05.07.2024
+
+## What's Changed
+* Reload Snapcast provider when connection to the server gets lost by @marcelveldt in https://github.com/music-assistant/server/pull/1447
+* Better handle of SMB mount with special characters in username/password by @marcelveldt in https://github.com/music-assistant/server/pull/1448
+* Add typing for radiobrowser by @Jc2k in https://github.com/music-assistant/server/pull/1449
+* A collection of small bugfixes and optimizations by @marcelveldt in https://github.com/music-assistant/server/pull/1451
+* Bump hass client to 1.2.0 by @marcelveldt in https://github.com/music-assistant/server/pull/1452
+* Bump certifi from 2024.6.2 to 2024.7.4 by @dependabot in https://github.com/music-assistant/server/pull/1453
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0b10...2.1.0b11
+
 # [2.1.0 BETA 10] - 05.07.2024
 
 Bugfix for several commands failing (including smb mounts and airplay playback) + Optimize RadioBrowser browsing
@@ -276,6 +289,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
