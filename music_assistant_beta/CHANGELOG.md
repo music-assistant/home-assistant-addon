@@ -1,3 +1,10 @@
+# [2.1.0 BETA 13] - 06.07.2024
+
+## What’s Changed
+
+- #1459 - Fix: Add guard for taskmanager aexit. (@MarvinSchenkel)
+
+
 # [2.1.0 BETA 12] - 06.07.2024
 
 ## What’s Changed
@@ -300,6 +307,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
