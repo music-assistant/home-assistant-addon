@@ -1,3 +1,14 @@
+# [2.1.0 BETA 12] - 06.07.2024
+
+## What’s Changed
+
+- #1458 - Fix album tracks (@marcelveldt)
+- #1457 - Apple Music: Ensure Albums have an artist for custom music. (@MarvinSchenkel)
+- #1456 - Use TaskManager instead of TaskGroup (@marcelveldt)
+- #1455 - Fix provider load at startup (@marcelveldt)
+- #1454 - Protect artist retrieval in Subsonic get_artist_toptracks() (@khers)
+
+
 # [2.1.0 BETA 11] - 05.07.2024
 
 ## What's Changed
@@ -289,6 +300,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
