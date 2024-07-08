@@ -1,3 +1,77 @@
+# [2.1.0 BETA 14] - 08.07.2024
+
+## What’s Changed
+
+### Server 2.1.0 BETA 14
+
+## What's Changed
+* Apple Music: Fix albums without name, increase cooldown periode on 504 gateway timeouts. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1462
+* Apple Music: Fix edge case for album parsing by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1463
+* apple_music: Fix creation of dummy albums by @xmirakulix in https://github.com/music-assistant/server/pull/1466
+* Snapcast: revert dryout and set state by hand by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1460
+* Add file extension for log by @MelHarbour in https://github.com/music-assistant/server/pull/1467
+* Add typing for builtin by @Jc2k in https://github.com/music-assistant/server/pull/1450
+* Add typing for filesystem_local by @Jc2k in https://github.com/music-assistant/server/pull/1461
+* Fix Jellyfin similar tracks by @Jc2k in https://github.com/music-assistant/server/pull/1468
+* Jellyfin: Skip tracks with no MediaStreams by @Jc2k in https://github.com/music-assistant/server/pull/1469
+* Subsonic: UNKNOWN_ARTIST handling by @khers in https://github.com/music-assistant/server/pull/1464
+* Replace windows separators in m3u by @MelHarbour in https://github.com/music-assistant/server/pull/1471
+* Cleanup Matching logic + add tests by @marcelveldt in https://github.com/music-assistant/server/pull/1472
+* Bump yt-dlp from 2024.7.1 to 2024.7.7 by @dependabot in https://github.com/music-assistant/server/pull/1473
+* Add type checking for filesystem_smb by @Jc2k in https://github.com/music-assistant/server/pull/1470
+* Bump orjson from 3.10.5 to 3.10.6 by @dependabot in https://github.com/music-assistant/server/pull/1475
+* Add typing for test provider by @Jc2k in https://github.com/music-assistant/server/pull/1474
+* Bump ruff from 0.5.0 to 0.5.1 by @dependabot in https://github.com/music-assistant/server/pull/1477
+* Refactor/cleanup the get/add logic for mediaitems + metadata retrieval by @marcelveldt in https://github.com/music-assistant/server/pull/1480
+* Bump ytmusicapi from 1.7.3 to 1.7.4 by @dependabot in https://github.com/music-assistant/server/pull/1476
+* Bump plexapi from 4.15.13 to 4.15.15 by @dependabot in https://github.com/music-assistant/server/pull/1478
+* Add typing for Plex by @Jc2k in https://github.com/music-assistant/server/pull/1479
+* frontend-2.6.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1481
+
+## New Contributors
+* @xmirakulix made their first contribution in https://github.com/music-assistant/server/pull/1466
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0b13...2.1.0b14
+
+### Frontend 2.6.0
+
+- #578 - Update lokalise-download.yml (@jozefKruszynski)
+- #570 - Add Spanish and add missing key (@OzGav)
+- #561 - Add file extension for log (@MelHarbour)
+- #569 - Fix favicon in index.html (@ulflulfl)
+- #563 - Remove languages not mostly translated (@OzGav)
+- #560 - Tiny tidying (@MelHarbour)
+- #559 - Lokalise-cron-download (@jozefKruszynski)
+- #548 - Various minor improvements (@OzGav)
+- #547 - Natural order sorting (@MelHarbour)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>14 changes</summary>
+
+- #566 - Bump marked from 13.0.0 to 13.0.1 (@dependabot)
+- #565 - Bump vue-tsc from 2.0.22 to 2.0.24 (@dependabot)
+- #564 - Bump vue from 3.4.30 to 3.4.31 (@dependabot)
+- #562 - Bump replace-in-file from 7.2.0 to 8.0.1 (@dependabot)
+- #551 - Bump vuetify from 3.6.9 to 3.6.10 (@dependabot)
+- #567 - Bump @types/node from 20.14.8 to 20.14.9 (@dependabot)
+- #568 - Bump actions/checkout from 3 to 4 (@dependabot)
+- #553 - Bump @types/node from 20.14.2 to 20.14.8 (@dependabot)
+- #554 - Bump vue-tsc from 2.0.21 to 2.0.22 (@dependabot)
+- #555 - Bump typescript from 5.4.5 to 5.5.2 (@dependabot)
+- #556 - Bump vue-router from 4.3.3 to 4.4.0 (@dependabot)
+- #550 - Bump sass from 1.77.5 to 1.77.6 (@dependabot)
+- #549 - Bump softprops/action-gh-release from 2.0.5 to 2.0.6 (@dependabot)
+- #557 - Bump vue from 3.4.29 to 3.4.30 (@dependabot)
+</details>
+
+
+
 # [2.1.0 BETA 13] - 06.07.2024
 
 ## What’s Changed
@@ -307,6 +381,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
