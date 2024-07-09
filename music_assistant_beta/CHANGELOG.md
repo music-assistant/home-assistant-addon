@@ -1,3 +1,43 @@
+# [2.1.0 BETA 15] - 09.07.2024
+
+## What’s Changed
+
+### Server 2.1.0 BETA 15
+
+## What's Changed
+* Silence the logger for Airplay DACP commands by @marcelveldt in https://github.com/music-assistant/server/pull/1483
+* Jellyfin: More logging of tracks without media streams by @Jc2k in https://github.com/music-assistant/server/pull/1484
+* Add typing for fullykiosk by @Jc2k in https://github.com/music-assistant/server/pull/1482
+* Fix MusicBrainz external ID match by @marcelveldt in https://github.com/music-assistant/server/pull/1485
+* frontend-2.6.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1486
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0b14...2.1.0b15
+
+### Frontend 2.6.1
+
+- #579 - Lokalise: Translations update (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>7 changes</summary>
+
+- #574 - Bump @types/node from 20.14.9 to 20.14.10 (@dependabot)
+- #575 - Bump vuetify from 3.6.10 to 3.6.11 (@dependabot)
+- #573 - Bump eslint-plugin-vue from 9.26.0 to 9.27.0 (@dependabot)
+- #572 - Bump replace-in-file from 8.0.1 to 8.1.0 (@dependabot)
+- #571 - Bump vue-tsc from 2.0.24 to 2.0.26 (@dependabot)
+- #576 - Bump marked from 13.0.1 to 13.0.2 (@dependabot)
+- #577 - Bump typescript from 5.5.2 to 5.5.3 (@dependabot)
+</details>
+
+
+
 # [2.1.0 BETA 14] - 08.07.2024
 
 ## What’s Changed
@@ -381,6 +421,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
