@@ -1,4 +1,4 @@
-name: Music Assistant
+name: Music Assistant Server
 version: 2.0.7
 slug: music_assistant_server
 description: The Music Assistant server is a free, opensource Media library manager
@@ -13,7 +13,7 @@ host_network: true
 ingress: true
 ingress_port: 8095
 panel_icon: mdi:bookshelf
-panel_title: Music Assistant
+panel_title: Music Assistant Server
 panel_admin: false
 uart: false
 map:
