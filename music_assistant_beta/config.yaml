@@ -1,4 +1,4 @@
-name: Music Assistant BETA
+name: Music Assistant Server BETA
 version: 2.1.0b15
 slug: music_assistant_beta
 description: BETA version of Music Assistant. Install this version if you want to
@@ -14,7 +14,7 @@ host_network: true
 ingress: true
 ingress_port: 8095
 panel_icon: mdi:play-circle
-panel_title: Music Assistant
+panel_title: Music Assistant Server
 panel_admin: false
 uart: false
 map:
