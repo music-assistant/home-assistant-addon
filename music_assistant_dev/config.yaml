@@ -1,4 +1,4 @@
-name: Music Assistant DEV
+name: Music Assistant Server DEV
 version: 1.0.5
 slug: music_assistant_dev
 description: DEV version of Music Assistant.
@@ -14,7 +14,7 @@ host_network: true
 ingress: true
 ingress_port: 8095
 panel_icon: mdi:play-circle
-panel_title: Music Assistant
+panel_title: Music Assistant Server
 panel_admin: false
 uart: false
 map:
