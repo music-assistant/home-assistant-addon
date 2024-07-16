@@ -1,3 +1,63 @@
+# [2.1.0 Release Candidate 2] - 14.07.2024
+
+## What’s Changed
+
+### Server 2.1.0 Release Candidate 2
+
+## What's Changed
+* Snapcast: Fix call _can_sync_with by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1496
+* YTMusic: Rewrite YTM auth to ytdlp access token plugin by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1497
+* Apple Music: Fix playlist page size for Apple music. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1498
+* Fix issue in playlist metadata retrieval by @xmirakulix in https://github.com/music-assistant/server/pull/1499
+* frontend-2.6.4 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1500
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0rc1...2.1.0rc2
+
+### Frontend 2.6.4
+
+* small tweaks
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
+# [2.1.0 Release Candidate 1] - 13.07.2024
+
+## What’s Changed
+
+### Server 2.1.0 Release Candidate 1
+
+## What's Changed
+* Bump actions/setup-python from 5.1.0 to 5.1.1 by @dependabot in https://github.com/music-assistant/server/pull/1487
+* Revert ytmusicapi to 1.7.3 by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1488
+* Apple Music: (Hopefully) fix time out issues + fix handling of missing artist details by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1489
+* Subsonic: Workaround for Navidrome Various Artists track handling by @khers in https://github.com/music-assistant/server/pull/1490
+* YT Music: Fix token expiration on reboot by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1493
+* Update name to clarify difference with the integration by @OzGav in https://github.com/music-assistant/server/pull/1492
+* Various small bugfixes and optimizations by @marcelveldt in https://github.com/music-assistant/server/pull/1494
+* Snapcast: Fix sync methods by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1491
+* frontend-2.6.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1495
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0b15...2.1.0rc1
+
+### Frontend 2.6.3
+
+* No changes
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.1.0 BETA 15] - 09.07.2024
 
 ## What’s Changed
@@ -421,6 +481,10 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
+
+
 
 
 
