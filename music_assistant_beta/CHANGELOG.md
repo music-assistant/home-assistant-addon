@@ -1,3 +1,16 @@
+# [2.1.0 Release Candidate 3] - 20.07.2024
+
+## What's Changed
+* Bump ruff from 0.5.1 to 0.5.2 by @dependabot in https://github.com/music-assistant/server/pull/1502
+* Bump docker/build-push-action from 6.3.0 to 6.4.0 by @dependabot in https://github.com/music-assistant/server/pull/1501
+* YTMusic: Change to pypi package + dependency updates by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1505
+* Bump docker/build-push-action from 6.4.0 to 6.4.1 by @dependabot in https://github.com/music-assistant/server/pull/1506
+* Snapcast: Fix unsync master by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1507
+* Possible fix for weird Airplay mashup issue
+* Fix issue with artists tag scanner
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0rc2...2.1.0rc3
+
 # [2.1.0 Release Candidate 2] - 14.07.2024
 
 ## What’s Changed
@@ -481,6 +494,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
