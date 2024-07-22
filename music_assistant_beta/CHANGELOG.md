@@ -1,3 +1,12 @@
+# [2.2.0 BETA 0] - 22.07.2024
+
+## What’s Changed
+
+## ⚠ Breaking Changes
+
+- #1509 - Tidal PKCE login (@jozefKruszynski)
+
+
 # [2.1.0 Release Candidate 3] - 20.07.2024
 
 ## What's Changed
@@ -494,6 +503,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
