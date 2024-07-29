@@ -1,3 +1,28 @@
+# [2.2.0 BETA 1] - 29.07.2024
+
+## What's Changed
+* Jellyfin: Fix artist enumeration by @Jc2k in https://github.com/music-assistant/server/pull/1520
+* Guard against eyed3 misread by @MelHarbour in https://github.com/music-assistant/server/pull/1511
+* Bump pylint from 3.2.5 to 3.2.6 by @dependabot in https://github.com/music-assistant/server/pull/1517
+* Bump cryptography from 42.0.8 to 43.0.0 by @dependabot in https://github.com/music-assistant/server/pull/1516
+* Bump docker/build-push-action from 6.4.1 to 6.5.0 by @dependabot in https://github.com/music-assistant/server/pull/1512
+* Bump docker/login-action from 3.2.0 to 3.3.0 by @dependabot in https://github.com/music-assistant/server/pull/1513
+* Bump pytest from 8.2.2 to 8.3.1 by @dependabot in https://github.com/music-assistant/server/pull/1515
+* Bump docker/setup-buildx-action from 3.4.0 to 3.5.0 by @dependabot in https://github.com/music-assistant/server/pull/1514
+* Typing: Add mypy for theaudiodb by @Jc2k in https://github.com/music-assistant/server/pull/1522
+* Add limit to tracks by @OzGav in https://github.com/music-assistant/server/pull/1530
+* Jellyfin: Use aiojellyfin 0.10.0 for stricter typing and more speed by @Jc2k in https://github.com/music-assistant/server/pull/1521
+* Add Japanese to locales by @OzGav in https://github.com/music-assistant/server/pull/1527
+* Subsonic: Add debug level logging around stream start, end, and details by @khers in https://github.com/music-assistant/server/pull/1523
+* Spotify: remove deprecated user-read-birthdate scope by @chatziko in https://github.com/music-assistant/server/pull/1524
+* Throttler: sleep without busy wait, log delayed calls by @chatziko in https://github.com/music-assistant/server/pull/1526
+* Bump docker/setup-buildx-action from 3.5.0 to 3.6.1 by @dependabot in https://github.com/music-assistant/server/pull/1535
+
+## New Contributors
+* @chatziko made their first contribution in https://github.com/music-assistant/server/pull/1524
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b0...2.2.0b1
+
 # [2.2.0 BETA 0] - 22.07.2024
 
 ## What’s Changed
@@ -503,6 +528,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
