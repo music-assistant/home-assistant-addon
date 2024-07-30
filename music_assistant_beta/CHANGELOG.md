@@ -1,3 +1,13 @@
+# [2.2.0b2] - 30.07.2024
+
+## What's Changed
+* Allow use of a personal client id for Spotify by @marcelveldt in https://github.com/music-assistant/server/pull/1536
+* Prevent items get marked as unavailable during metadata scan by @marcelveldt in https://github.com/music-assistant/server/pull/1537
+* Bump pytest from 8.3.1 to 8.3.2 by @dependabot in https://github.com/music-assistant/server/pull/1531
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b1...2.2.0b2
+
 # [2.2.0 BETA 1] - 29.07.2024
 
 ## What's Changed
@@ -528,6 +538,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
