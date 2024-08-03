@@ -1,3 +1,27 @@
+# [2.1.1] - 03.08.2024
+
+## What's Changed
+* Ensure sort_name makes it to cache by @MelHarbour in https://github.com/music-assistant/server/pull/1538
+* Fix global cache key and YTMusic playlist edge case by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1540
+* Allow use of a personal client id for Spotify by @marcelveldt in https://github.com/music-assistant/server/pull/1536
+* Prevent items get marked as unavailable during metadata scan by @marcelveldt in https://github.com/music-assistant/server/pull/1537
+* Jellyfin: Fix artist enumeration by @Jc2k in https://github.com/music-assistant/server/pull/1520
+* Guard against eyed3 misread by @MelHarbour in https://github.com/music-assistant/server/pull/1511
+* Add limit to tracks by @OzGav in https://github.com/music-assistant/server/pull/1530
+* Add Japanese to locales by @OzGav in https://github.com/music-assistant/server/pull/1527
+* Spotify: remove deprecated user-read-birthdate scope by @chatziko in https://github.com/music-assistant/server/pull/1524
+
+## ⬆️ Dependencies
+
+<details>
+<summary>1 change</summary>
+
+- Bump YTM dependencies + add url to provider mappings by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1539
+
+</details>
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.1.0...2.1.1
+
 # [2.1.0] - 22.07.2024
 
 ## What’s Changed
@@ -253,6 +277,8 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
 
 
 
