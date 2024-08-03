@@ -1,3 +1,24 @@
+# [2.2.0 BETA 3] - 03.08.2024
+
+## What’s Changed
+
+- #1538 - Ensure sort_name makes it to cache (@MelHarbour)
+- #1540 - Fix global cache key and YTMusic playlist edge case. (@MarvinSchenkel)
+
+## ⚠ Breaking Changes
+
+- #1509 - Tidal PKCE login (@jozefKruszynski)
+
+## ⬆️ Dependencies
+
+<details>
+<summary>1 change</summary>
+
+- #1539 - Bump YTM dependencies + add url to provider mappings. (@MarvinSchenkel)
+
+</details>
+
+
 # [2.2.0b2] - 30.07.2024
 
 ## What's Changed
@@ -538,6 +559,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
