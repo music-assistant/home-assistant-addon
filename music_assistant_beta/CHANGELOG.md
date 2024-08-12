@@ -1,3 +1,59 @@
+# [2.2.0 BETA 5] - 12.08.2024
+
+## What’s Changed
+
+### Server 2.2.0 BETA 5
+
+## What's Changed
+* Bump docker/build-push-action from 6.5.0 to 6.6.0 by @dependabot in https://github.com/music-assistant/server/pull/1547
+* YTMusic: Use instance name as playlist owner as fallback. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1546
+* Remove artist_id not album_id by @MelHarbour in https://github.com/music-assistant/server/pull/1541
+* Bump docker/build-push-action from 6.6.0 to 6.6.1 by @dependabot in https://github.com/music-assistant/server/pull/1548
+* Bump pre-commit from 3.7.1 to 3.8.0 by @dependabot in https://github.com/music-assistant/server/pull/1543
+* Bump async-upnp-client from 0.39.0 to 0.40.0 by @dependabot in https://github.com/music-assistant/server/pull/1532
+* Fix issue with track linking by @marcelveldt in https://github.com/music-assistant/server/pull/1549
+* Bump mypy from 1.10.1 to 1.11.1 by @dependabot in https://github.com/music-assistant/server/pull/1545
+* Bump ruff from 0.5.2 to 0.5.7 by @dependabot in https://github.com/music-assistant/server/pull/1550
+* Bump aiohttp from 3.9.5 to 3.10.2 by @dependabot in https://github.com/music-assistant/server/pull/1551
+* Improve metadata handling by @marcelveldt in https://github.com/music-assistant/server/pull/1552
+* Bump yt-dlp from 2024.7.25 to 2024.8.1 by @dependabot in https://github.com/music-assistant/server/pull/1544
+* Improve metadata handling by @marcelveldt in https://github.com/music-assistant/server/pull/1553
+* Fixes for global search by @marcelveldt in https://github.com/music-assistant/server/pull/1554
+* Fix AirPlay playback gets mangled up between different streams by @marcelveldt in https://github.com/music-assistant/server/pull/1555
+* Cleanup database from wrong matched info by @marcelveldt in https://github.com/music-assistant/server/pull/1556
+* frontend-2.8.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1557
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b3...2.2.0b5
+
+### Frontend 2.8.0
+
+- #608 - Add (basic) Image editor (@marcelveldt)
+- #605 - Lokalise translations update (@github-actions)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>10 changes</summary>
+
+- #589 - Bump eslint-plugin-prettier from 5.1.3 to 5.2.1 (@dependabot)
+- #595 - Bump typescript from 5.5.3 to 5.5.4 (@dependabot)
+- #587 - Bump jsdom from 24.1.0 to 24.1.1 (@dependabot)
+- #592 - Bump softprops/action-gh-release from 2.0.6 to 2.0.8 (@dependabot)
+- #598 - Bump vite-plugin-pwa from 0.20.0 to 0.20.1 (@dependabot)
+- #601 - Bump @types/node from 20.14.10 to 22.1.0 (@dependabot)
+- #603 - Bump vuetify from 3.6.12 to 3.6.14 (@dependabot)
+- #604 - Bump swiper from 11.1.4 to 11.1.9 (@dependabot)
+- #607 - Bump marked from 13.0.2 to 14.0.0 (@dependabot)
+- #606 - Bump vue from 3.4.31 to 3.4.37 (@dependabot)
+</details>
+
+
+
 # [2.2.0 BETA 4] - 12.08.2024
 
 ## What’s Changed
@@ -615,6 +671,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
