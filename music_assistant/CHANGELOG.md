@@ -1,3 +1,13 @@
+# [2.1.4] - 13.08.2024
+
+## What’s Changed
+
+**Fix Spotify Authentication** (now that Spotify has phased out username/password auth)
+Attention: You need to re-authenticate spotify with Music Assistant once.
+
+</details>
+
+
 # [2.1.3] - 12.08.2024
 
 ## What’s Changed
@@ -415,6 +425,8 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
 
 
 
