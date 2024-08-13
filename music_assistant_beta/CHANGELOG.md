@@ -1,3 +1,32 @@
+# [2.2.0 BETA 6] - 13.08.2024
+
+## What’s Changed
+
+### Server 2.2.0 BETA 6
+
+## What's Changed
+* Implement Spotify Connect Auth by @marcelveldt in https://github.com/music-assistant/server/pull/1562
+
+* Bump orjson from 3.10.6 to 3.10.7 by @dependabot in https://github.com/music-assistant/server/pull/1558
+* Bump aiohttp from 3.10.2 to 3.10.3 by @dependabot in https://github.com/music-assistant/server/pull/1559
+* Bump aiorun from 2024.5.1 to 2024.8.1 by @dependabot in https://github.com/music-assistant/server/pull/1560
+* frontend-2.8.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1563
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b5...2.2.0b6
+
+### Frontend 2.8.1
+
+* Don't disable unavailable items
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.2.0 BETA 5] - 12.08.2024
 
 ## What’s Changed
@@ -671,6 +700,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
