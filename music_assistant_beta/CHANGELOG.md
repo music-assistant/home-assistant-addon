@@ -1,3 +1,20 @@
+# [2.2.0 BETA 7] - 16.08.2024
+
+**ATTENTION SPOTIFY USERS:**
+This release requires you (again) to authenticate but the good news is that we managed to get a full (official/recommended) PKCE login flow going for both library management and playback. 
+
+
+## What's Changed
+
+* Add demo/template providers by @marcelveldt in https://github.com/music-assistant/server/pull/1566
+* Fix issues with items become unavailable by @marcelveldt in https://github.com/music-assistant/server/pull/1567
+* Apple Music: Change log level to avoid chatty logs. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1568
+* Various optimizations to filesystem metadata retrieval by @marcelveldt in https://github.com/music-assistant/server/pull/1569
+* Implement Spotify (oauth) PKCE Login flow by @marcelveldt in https://github.com/music-assistant/server/pull/1570
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b6...2.2.0b7
+
 # [2.2.0 BETA 6] - 13.08.2024
 
 ## What’s Changed
@@ -700,6 +717,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
