@@ -1,3 +1,16 @@
+# [2.2.0 BETA 8] - 17.08.2024
+
+## What's Changed
+
+- Fix playback of PLS based radio stations
+- Fix playback of HLS (radio) streams
+- Fix several issues with Soundcloud provider
+- Fix auto reload/retry of providers that have dependencies (e.g. HA provider)
+- Be a little bit more forgiving in db migrations
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b7...2.2.0b8
+
 # [2.2.0 BETA 7] - 16.08.2024
 
 **ATTENTION SPOTIFY USERS:**
@@ -717,6 +730,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
