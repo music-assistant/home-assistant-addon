@@ -1,3 +1,9 @@
+# [2.2.0 BETA 9] - 17.08.2024
+
+Fixes some issues with database migration reported by users after the beta 7 and 8 releases.
+
+Fix a race condition with refreshing the spotify token too fast after it has been requested, causing it to be revoked.
+
 # [2.2.0 BETA 8] - 17.08.2024
 
 ## What's Changed
@@ -730,6 +736,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
