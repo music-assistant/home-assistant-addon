@@ -1,3 +1,13 @@
+# [2.2.0 BETA 10] - 18.08.2024
+
+## What's Changed
+* Apple Music: Fix condition for hls substream optimization. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1574
+* Fix Spotify token gets invalidated every hour by @marcelveldt in https://github.com/music-assistant/server/pull/1575
+* Change logger used for provider by @khers in https://github.com/music-assistant/server/pull/1573
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b9...2.2.0b10
+
 # [2.2.0 BETA 9] - 17.08.2024
 
 Fixes some issues with database migration reported by users after the beta 7 and 8 releases.
@@ -736,6 +746,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
