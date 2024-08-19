@@ -1,3 +1,32 @@
+# [2.2.0 BETA 11] - 19.08.2024
+
+## What’s Changed
+
+### Server 2.2.0 BETA 11
+
+## What's Changed
+* Remove the handle_async_init() call from provider __init__.py by @khers in https://github.com/music-assistant/server/pull/1576
+* Improve (local) metadata retrieval by @marcelveldt in https://github.com/music-assistant/server/pull/1577
+* Subsonic: Correct the final entry that uses a non-MA logger by @khers in https://github.com/music-assistant/server/pull/1578
+* Bump aiohttp from 3.10.3 to 3.10.4 by @dependabot in https://github.com/music-assistant/server/pull/1580
+* Typo by @OzGav in https://github.com/music-assistant/server/pull/1583
+* frontend-2.8.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1582
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b10...2.2.0b11
+
+### Frontend 2.8.3
+
+* Fix oauth redirect on ios devices
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.2.0 BETA 10] - 18.08.2024
 
 ## What's Changed
@@ -746,6 +775,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
