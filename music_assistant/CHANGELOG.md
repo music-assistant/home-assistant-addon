@@ -1,3 +1,58 @@
+# [2.2.0] - 21.08.2024
+
+## What’s Changed
+
+### Server 2.2.0
+
+## ATTENTION SPOTIFY USERS:
+This release requires you (again) to re-authenticate but the good news is that we managed to get a full (official/recommended) PKCE login flow going for both library management and playback. Simple username and password is no longer possible due to the fact Spotify removed support for that.
+
+
+
+
+- #1589 - frontend-2.8.7 (@music-assistant-machine)
+- #1588 - frontend-2.8.6 (@music-assistant-machine)
+- #1587 - Fix (radio) browse listings (@marcelveldt)
+- #1586 - Fix (album) images for track listings (@marcelveldt)
+- #1585 - frontend-2.8.4 (@music-assistant-machine)
+- #1584 - Database (performance) enhancements (@marcelveldt)
+- #1582 - frontend-2.8.3 (@music-assistant-machine)
+- #1583 - Typo (@OzGav)
+- #1578 - Subsonic: Correct the final entry that uses a non-MA logger (@khers)
+- #1577 - Improve (local) metadata retrieval (@marcelveldt)
+- #1576 - Remove the handle_async_init() call from provider __init__.py (@khers)
+- #1573 - Change logger used for provider (@khers)
+- #1575 - Fix Spotify token gets invalidated every hour (@marcelveldt)
+- #1574 - Apple Music: Fix condition for hls substream optimization. (@MarvinSchenkel)
+- #1572 - Various bugfixes and optimizations (@marcelveldt)
+- #1571 - frontend-2.8.2 (@music-assistant-machine)
+- #1570 - Implement Spotify (oauth) PKCE Login flow (@marcelveldt)
+- #1569 - Various optimizations to filesystem metadata retrieval (@marcelveldt)
+- #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
+- #1567 - Fix issues with items become unavailable (@marcelveldt)
+- #1566 - Add demo/template providers (@marcelveldt)
+
+### Frontend 2.8.7
+
+* Small fix for playlist dialog
+
+## ⬆️ Dependencies
+
+### Server
+
+<details>
+<summary>4 changes</summary>
+
+- #1579 - Bump ruff from 0.5.7 to 0.6.1 (@dependabot)
+- #1581 - Bump plexapi from 4.15.15 to 4.15.16 (@dependabot)
+- #1580 - Bump aiohttp from 3.10.3 to 3.10.4 (@dependabot)
+- #1565 - Bump docker/build-push-action from 6.6.1 to 6.7.0 (@dependabot)
+</details>
+
+### Frontend
+
+
+
 # [2.1.4] - 13.08.2024
 
 ## What’s Changed
@@ -425,6 +480,8 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
 
 
 
