@@ -1,3 +1,9 @@
+# [2.3.0 BETA 0] - 21.08.2024
+
+The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
+
+This version is on par with stable version 2.2.0
+
 # [2.2.0 Release Candidate 2] - 21.08.2024
 
 ## What’s Changed
@@ -843,6 +849,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
