@@ -1,3 +1,43 @@
+# [2.2.0 Release Candidate 2] - 21.08.2024
+
+## What’s Changed
+
+### Server 2.2.0 Release Candidate 2
+
+## What's Changed
+* Fix (album) images for track listings by @marcelveldt in https://github.com/music-assistant/server/pull/1586
+* Fix (radio) browse listings by @marcelveldt in https://github.com/music-assistant/server/pull/1587
+* frontend-2.8.6 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1588
+* Bump plexapi from 4.15.15 to 4.15.16 by @dependabot in https://github.com/music-assistant/server/pull/1581
+* Bump ruff from 0.5.7 to 0.6.1 by @dependabot in https://github.com/music-assistant/server/pull/1579
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0rc1...2.2.0rc2
+
+### Frontend 2.8.6
+
+- #614 - Add Portuguese (@OzGav)
+- #621 - Lokalise: Translations update (@marcelveldt)
+- Fix for large listings loading through HA ingress
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>5 changes</summary>
+
+- #615 - Bump @types/node from 22.2.0 to 22.4.1 (@dependabot)
+- #616 - Bump vue-i18n from 9.13.1 to 9.14.0 (@dependabot)
+- #617 - Bump vue from 3.4.37 to 3.4.38 (@dependabot)
+- #618 - Bump vuetify from 3.6.14 to 3.7.0 (@dependabot)
+- #619 - Bump vite-plugin-webfont-dl from 3.9.4 to 3.9.5 (@dependabot)
+</details>
+
+
+
 # [2.2.0 Release Candidate 1] - 21.08.2024
 
 ## What’s Changed
@@ -803,6 +843,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
