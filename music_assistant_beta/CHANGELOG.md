@@ -1,3 +1,31 @@
+# [2.2.0 Release Candidate 1] - 21.08.2024
+
+## What’s Changed
+
+### Server 2.2.0 Release Candidate 1
+
+## What's Changed
+* Database (performance) enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1584
+* frontend-2.8.4 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1585
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.0b11...2.2.0rc1
+
+### Frontend 2.8.4
+
+- Fix dialog to manually add a radio station
+- Fix artist sort on albums listing
+- Always use the imageproxy
+
+**Full Changelog**: https://github.com/music-assistant/frontend/compare/2.8.3...2.8.4
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.2.0 BETA 11] - 19.08.2024
 
 ## What’s Changed
@@ -775,6 +803,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
