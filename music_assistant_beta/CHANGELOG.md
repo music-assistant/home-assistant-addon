@@ -1,3 +1,12 @@
+# [2.3.0 BETA 2] - 22.08.2024
+
+## What's Changed
+
+* Fix removal of a provider by @marcelveldt in https://github.com/music-assistant/server/pull/1594
+* Fix Tidal login auth flow not showing by @marcelveldt in https://github.com/music-assistant/server/pull/1595
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b1...2.3.0b2
+
 # [2.3.0 BETA 1] - 22.08.2024
 
 ## What’s Changed
@@ -857,6 +866,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
