@@ -1,3 +1,11 @@
+# [2.2.1] - 22.08.2024
+
+## What’s Changed
+
+- #1591 - Fix Auth popup not showing
+- #1590 - Fix new playlists get corrupted (@marcelveldt)
+
+
 # [2.2.0] - 21.08.2024
 
 ## What’s Changed
@@ -480,6 +488,8 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
 
 
 
