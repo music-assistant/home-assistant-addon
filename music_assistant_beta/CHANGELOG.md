@@ -1,3 +1,11 @@
+# [2.3.0 BETA 1] - 22.08.2024
+
+## What’s Changed
+
+- #1591 - Fix Auth popup not showing
+- #1590 - Fix new playlists get corrupted (@marcelveldt)
+
+
 # [2.3.0 BETA 0] - 21.08.2024
 
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
@@ -849,6 +857,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
