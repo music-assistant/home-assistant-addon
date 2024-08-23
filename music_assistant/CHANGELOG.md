@@ -1,3 +1,14 @@
+# [2.2.2] - 23.08.2024
+
+## What’s Changed
+
+- #1598 - Fix track number gets mixed up with disc number (@marcelveldt)
+- #1597 - Small improvements to the spotify token auth (@marcelveldt)
+- #1596 - Prevent db migration when upgrading from 2.1 to 2.2 (@marcelveldt)
+- #1595 - Fix Tidal login auth flow not showing (@marcelveldt)
+- #1594 - Fix removal of a provider (@marcelveldt)
+
+
 # [2.2.1] - 22.08.2024
 
 ## What’s Changed
@@ -488,6 +499,8 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
 
 
 
