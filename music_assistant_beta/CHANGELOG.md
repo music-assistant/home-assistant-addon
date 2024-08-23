@@ -1,3 +1,20 @@
+# [2.3.0 BETA 3] - 23.08.2024
+
+## Breaking change!
+This (beta) release introduced a complete new Sonos provider which is only compatible with S1 generation Sonos hardware. To use S1 generation Sonos hardware we've refactored the old provider into the "Sonos S1" provider. 
+
+## What's Changed
+* Prevent db migration when upgrading from 2.1 to 2.2 by @marcelveldt in https://github.com/music-assistant/server/pull/1596
+* Small improvements to the spotify token auth by @marcelveldt in https://github.com/music-assistant/server/pull/1597
+* Fix track number gets mixed up with disc number by @marcelveldt in https://github.com/music-assistant/server/pull/1598
+* Guard against eyed3 returning None by @dmcc in https://github.com/music-assistant/server/pull/1599
+* New Sonos S2  player provider by @marcelveldt in https://github.com/music-assistant/server/pull/1600
+
+## New Contributors
+* @dmcc made their first contribution in https://github.com/music-assistant/server/pull/1599
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b2...2.3.0b3
+
 # [2.3.0 BETA 2] - 22.08.2024
 
 ## What's Changed
@@ -866,6 +883,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
