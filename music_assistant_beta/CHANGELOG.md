@@ -1,3 +1,33 @@
+# [2.3.0 BETA 4] - 25.08.2024
+
+## What’s Changed
+
+### Server 2.3.0 BETA 4
+
+## What's Changed
+* Jellyfin: Fix login for some instances by @Jc2k in https://github.com/music-assistant/server/pull/1601
+* A few minor follow-up fixes for the new Sonos provider by @marcelveldt in https://github.com/music-assistant/server/pull/1602
+* A collection of small tweaks and bugfixes by @marcelveldt in https://github.com/music-assistant/server/pull/1603
+* Add feature to transfer a queue by @marcelveldt in https://github.com/music-assistant/server/pull/1606
+* Add config option to specify the http content length header by @marcelveldt in https://github.com/music-assistant/server/pull/1607
+* Sonos S2 provider follow-up by @marcelveldt in https://github.com/music-assistant/server/pull/1608
+* frontend-2.8.10 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1609
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b3...2.3.0b4
+
+### Frontend 2.8.10
+
+* Add feature to transfer a queue
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.3.0 BETA 3] - 23.08.2024
 
 ## Breaking change!
@@ -883,6 +913,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
