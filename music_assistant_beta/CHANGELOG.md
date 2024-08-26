@@ -1,3 +1,13 @@
+# [2.3.0 BETA 5] - 26.08.2024
+
+## What's Changed
+* Fix playback of radio streams on Sonos S2 provider by @marcelveldt in https://github.com/music-assistant/server/pull/1610
+* Enforce default HTTP profile for slimproto players by @marcelveldt in https://github.com/music-assistant/server/pull/1611
+* More bugfixes for the new Sonos provider by @marcelveldt in https://github.com/music-assistant/server/pull/1612
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b4...2.3.0b5
+
 # [2.3.0 BETA 4] - 25.08.2024
 
 ## What’s Changed
@@ -913,6 +923,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
