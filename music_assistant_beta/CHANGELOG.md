@@ -1,3 +1,7 @@
+# [2.3.0 BETA 6] - 26.08.2024
+
+Fix playback issues due to missing http profile
+
 # [2.3.0 BETA 5] - 26.08.2024
 
 ## What's Changed
@@ -923,6 +927,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
