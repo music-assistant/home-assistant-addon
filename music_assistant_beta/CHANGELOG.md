@@ -1,3 +1,36 @@
+# [2.3.0b7] - 26.08.2024
+
+## What’s Changed
+
+### Server 2.3.0b7
+
+## What's Changed
+* Some more tweaks/fixes to the Sonos S2 provider by @marcelveldt in https://github.com/music-assistant/server/pull/1613
+* Refactor groups support by @marcelveldt in https://github.com/music-assistant/server/pull/1619
+
+* Bump aiohttp from 3.10.4 to 3.10.5 by @dependabot in https://github.com/music-assistant/server/pull/1615
+* Bump ruff from 0.6.1 to 0.6.2 by @dependabot in https://github.com/music-assistant/server/pull/1618
+* frontend-2.8.11 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1620
+
+* Bump mypy from 1.11.1 to 1.11.2 by @dependabot in https://github.com/music-assistant/server/pull/1614
+* Bump syrupy from 4.6.1 to 4.7.1 by @dependabot in https://github.com/music-assistant/server/pull/1617
+* Typing: Tidal by @Jc2k in https://github.com/music-assistant/server/pull/1525
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b6...2.3.0b7
+
+### Frontend 2.8.11
+
+* changes for group management
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.3.0 BETA 6] - 26.08.2024
 
 Fix playback issues due to missing http profile
@@ -927,6 +960,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
