@@ -1,3 +1,14 @@
+# [2.3.0 BETA 8] - 28.08.2024
+
+## What's Changed
+* Fixes and enhancements to syncgroups and UGP groups by @marcelveldt in https://github.com/music-assistant/server/pull/1621
+* Some fixes for unstable (HLS) radio streams by @marcelveldt in https://github.com/music-assistant/server/pull/1622
+* Bump ytmusicapi from 1.8.0 to 1.8.1 by @dependabot in https://github.com/music-assistant/server/pull/1616
+* Filesystem matching and metadata fixes by @marcelveldt in https://github.com/music-assistant/server/pull/1625
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b7...2.3.0b8
+
 # [2.3.0b7] - 26.08.2024
 
 ## What’s Changed
@@ -960,6 +971,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
