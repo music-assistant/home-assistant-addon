@@ -1,3 +1,21 @@
+# [2.3.0 BETA 11] - 30.08.2024
+
+## What's Changed
+
+* Fix snapcast state not updating by @marcelveldt in https://github.com/music-assistant/server/pull/1626
+* Add Korean to supported languages by @OzGav in https://github.com/music-assistant/server/pull/1623
+* Bump actions/setup-python from 5.1.1 to 5.2.0 by @dependabot in https://github.com/music-assistant/server/pull/1628
+* Fix a typo by @OzGav in https://github.com/music-assistant/server/pull/1627
+* Switch base image to Alpine  by @marcelveldt in https://github.com/music-assistant/server/pull/1629
+* Fix Album tracks connected to the wrong album in UI
+* Fix several small quirks with streaming
+* Bump ffmpeg to check if that helps with the BBC streams
+* Add a bit of retry logic if a stream fails
+
+NOTE: we skipped b9 and b10 due to issues with our image building
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b8...2.3.0b9
+
 # [2.3.0 BETA 8] - 28.08.2024
 
 ## What's Changed
@@ -971,6 +989,8 @@ Frontend
 Thanks to everyone contributed to this milestone!
 
 This beta add-on is now temporary on the same version as the stable release but will get the 2.1 beta soon.
+
+
 
 
 
