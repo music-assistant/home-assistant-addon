@@ -1,3 +1,8 @@
+# [2.3.0 BETA 16] - 30.08.2024
+
+- Fix mounting SMB shares in remote files provider
+- Fix HTTP playback issues
+
 # [2.3.0 BETA 15] - 30.08.2024
 
 ## What's Changed
@@ -144,4 +149,6 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
