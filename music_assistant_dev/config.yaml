@@ -1,5 +1,5 @@
 name: Music Assistant Server (dev)
-version: 1.0.8
+version: 1.0.9
 slug: music_assistant_dev
 description: Development (nightly) version of Music Assistant.
   Do not install this add-on unless you're specifically asked or a developer!
