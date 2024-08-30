@@ -1,70 +1,7 @@
-# FROM ghcr.io/music-assistant/server:beta
-
-# RUN set -x \
-#     && apt-get update \
-#     && apt-get install -y --no-install-recommends \
-#     jq htop
-
-# COPY entrypoint.sh /home
-# ENTRYPOINT ["/home/entrypoint.sh"]
-
-
-
-# syntax=docker/dockerfile:1
-
-FROM python:3.12-alpine3.20
-
-ARG MASS_VERSION=2.3.0b8
+FROM ghcr.io/music-assistant/server:beta
 
 RUN set -x \
-    && apk add --no-cache \
-        ca-certificates \
-        jemalloc \
-        curl \
-        git \
-        wget \
-        tzdata \
-        sox \
-        samba \
-    # install ffmpeg from community repo
-    && apk add ffmpeg --repository=https://dl-cdn.alpinelinux.org/alpine/v3.20/community \
-    # install snapcast from community repo
-    && apk add snapcast --repository=https://dl-cdn.alpinelinux.org/alpine/v3.20/community \
-    # install libnfs from community repo
-    && apk add libnfs --repository=https://dl-cdn.alpinelinux.org/alpine/v3.20/community
-
-
-# Upgrade pip + Install uv
-RUN pip install --upgrade pip \
-    && pip install uv==0.2.27
-
-# Install Music Assistant from published wheel on PyPi
-RUN uv pip install \
-    --system \
-    --no-cache \
-    --find-links "https://wheels.home-assistant.io/musllinux/" \
-    music-assistant[server]==${MASS_VERSION}
-
-# Enable jemalloc
-RUN export LD_PRELOAD="/usr/local/lib/libjemalloc.so.2"
-
-# Set some labels
-LABEL \
-    org.opencontainers.image.title="Music Assistant Server" \
-    org.opencontainers.image.description="Music Assistant Server/Core" \
-    org.opencontainers.image.source="https://github.com/music-assistant/server" \
-    org.opencontainers.image.authors="The Music Assistant Team" \
-    org.opencontainers.image.documentation="https://github.com/orgs/music-assistant/discussions" \
-    org.opencontainers.image.licenses="Apache License 2.0" \
-    io.hass.version="${MASS_VERSION}" \
-    io.hass.type="addon" \
-    io.hass.name="Music Assistant Server" \
-    io.hass.description="Music Assistant Server/Core" \
-    io.hass.platform="${TARGETPLATFORM}" \
-    io.hass.type="addon"
-
-VOLUME [ "/data" ]
-EXPOSE 8095
+    && apk add jq htop
 
 COPY entrypoint.sh /home
 ENTRYPOINT ["/home/entrypoint.sh"]
