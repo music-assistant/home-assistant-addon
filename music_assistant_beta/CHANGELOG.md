@@ -1,3 +1,14 @@
+# [2.3.0 BETA 17] - 30.08.2024
+
+## What's Changed
+
+* Introduce a HLS radio streams parser (for the BBC radio streams) by @marcelveldt in https://github.com/music-assistant/server/pull/1633
+
+--> This -should- fix issues with BBC/HLS radio streams stopping abruptly, but please extensively test!
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b16...2.3.0b17
+
 # [2.3.0 BETA 16] - 30.08.2024
 
 - Fix mounting SMB shares in remote files provider
@@ -149,6 +160,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
