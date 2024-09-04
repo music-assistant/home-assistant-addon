@@ -1,3 +1,11 @@
+# [2.3.0 BETA 18] - 04.09.2024
+
+## What's Changed
+* Use new release workflow
+* Some small bugfixes and tweaks by @marcelveldt in https://github.com/music-assistant/server/pull/1642
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b17...2.3.0b18
+
 # [2.3.0 BETA 17] - 30.08.2024
 
 ## What's Changed
@@ -160,6 +168,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
