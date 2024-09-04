@@ -1,3 +1,7 @@
+# [2.3.0 BETA 19] - 04.09.2024
+
+Fix for broken build
+
 # [2.3.0 BETA 18] - 04.09.2024
 
 ## What's Changed
@@ -168,6 +172,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
