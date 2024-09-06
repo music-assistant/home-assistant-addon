@@ -1,3 +1,15 @@
+# [2.2.3] - 06.09.2024
+
+### 2.2.3 - patch release
+
+- Various bugfixes for tags parsing from local files
+- Fix (builtin) playlists refresh
+- Some fixes for (sync)groups
+- Various fixes for metadata fetching
+- Use alpine as base image
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.2...2.2.3
+
 # [2.2.2] - 23.08.2024
 
 ## What’s Changed
@@ -499,6 +511,8 @@ Frontend
 2.0.0 (stable) Release of Music Assistant !
 
 Thanks to everyone contributed to this milestone!
+
+
 
 
 
