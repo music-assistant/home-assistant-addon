@@ -1,3 +1,14 @@
+# [2.3.0 BETA 20] - 09.09.2024
+
+## What's Changed
+* Add Ukrainian to supported (metadata) languages by @OzGav in https://github.com/music-assistant/server/pull/1650
+* Fix playback get stuck when there is a stream error on a single track by @marcelveldt in https://github.com/music-assistant/server/pull/1651
+* Apple Music: Various fixes by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1652
+* Fix several issues with enqueueing of next track by @marcelveldt in https://github.com/music-assistant/server/pull/1653
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b19...2.3.0b20
+
 # [2.3.0 BETA 19] - 04.09.2024
 
 Fix for broken build
@@ -172,6 +183,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
