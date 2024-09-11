@@ -1,3 +1,18 @@
+# [2.3.0 BETA 21] - 11.09.2024
+
+## What's Changed
+
+* Add Bluesound player provider by @Cyanogenbot in https://github.com/music-assistant/server/pull/1624
+* Feature: Radio mode enhancements by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1654
+* Volume normalization improvements by @marcelveldt in https://github.com/music-assistant/server/pull/1657
+* Fix cast/dlna player stops playing after 1 or 2 tracks of a playlist by @marcelveldt in https://github.com/music-assistant/server/pull/1658
+
+
+## New Contributors
+* @Cyanogenbot made their first contribution in https://github.com/music-assistant/server/pull/1624
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b20...2.3.0b21
+
 # [2.3.0 BETA 20] - 09.09.2024
 
 ## What's Changed
@@ -183,6 +198,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
