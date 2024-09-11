@@ -9,6 +9,7 @@ profile music_assistant_addon flags=(attach_disconnected,mediate_deleted) {
   network tcp,
   network dgram,
   network stream,
+  network seqpacket,
   network inet,
   network inet6,
   network netlink raw,
