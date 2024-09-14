@@ -1,3 +1,14 @@
+# [2.3.0 BETA 23] - 14.09.2024
+
+## What's Changed
+
+* Several bugfixes and enhancements to audio streaming
+* Some frontend tweaks
+* Add fine grained control for volume normalization
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b22...2.3.0b23
+
 # [2.3.0 BETA 22] - 12.09.2024
 
 ## What's Changed
@@ -206,6 +217,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
