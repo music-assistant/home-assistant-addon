@@ -1,3 +1,36 @@
+# [2.2.4] - 14.09.2024
+
+## What’s Changed
+
+### Server 2.2.4
+
+### 2.2.4 (patch release)
+
+Various bugfixes for the 2.2 release.
+
+* Fix Tidal login auth flow not showing by @marcelveldt in https://github.com/music-assistant/server/pull/1595
+* Fix several issues with enqueueing of next track by @marcelveldt in https://github.com/music-assistant/server/pull/1653
+* Feature: Radio mode enhancements by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1654
+* Volume normalization improvements by @marcelveldt in https://github.com/music-assistant/server/pull/1657
+* Fix cast/dlna player stops playing after 1 or 2 tracks of a playlist by @marcelveldt in https://github.com/music-assistant/server/pull/1658
+* Several bugfixes and enhancements to audio streaming by @marcelveldt in https://github.com/music-assistant/server/pull/1660
+* frontend-2.8.13 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1661
+* Fix API compatibility by @marcelveldt in https://github.com/music-assistant/server/pull/1662
+* Try parsing track number from the filename by @marcelveldt in https://github.com/music-assistant/server/pull/1663
+
+### Frontend 2.8.13
+
+* Fix some small glitches
+* Add translation definitions for volume normalization options
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 ### [2.2.3] - 06.09.2024
 
 - Various bugfixes for tags parsing from local files
@@ -50,4 +83,6 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
