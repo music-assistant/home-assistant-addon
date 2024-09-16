@@ -1,3 +1,20 @@
+# [2.2.5] - 16.09.2024
+
+## What's Changed
+
+* Fix API compatibility by @marcelveldt in https://github.com/music-assistant/server/pull/1662
+* Try parsing track number from the filename by @marcelveldt in https://github.com/music-assistant/server/pull/1663
+* Fix: Handle radio stations providing non utf-8 in streamtitle by @marcelveldt in https://github.com/music-assistant/server/pull/1664
+* Fix loading state from cache when connecting to slimproto players by @kepstin in https://github.com/music-assistant/server/pull/1666
+* Adding missing icon for the Soundcloud music provider by @robsonke in https://github.com/music-assistant/server/pull/1665
+* A few small bugfixes and enhancements to playback and enqueuing  by @marcelveldt in https://github.com/music-assistant/server/pull/1670
+
+## New Contributors
+* @kepstin made their first contribution in https://github.com/music-assistant/server/pull/1666
+* @robsonke made their first contribution in https://github.com/music-assistant/server/pull/1665
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.4...2.2.5
+
 # [2.2.4] - 14.09.2024
 
 ## What’s Changed
@@ -83,6 +100,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
