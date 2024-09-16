@@ -1,3 +1,20 @@
+# [2.3.0 BETA 24] - 16.09.2024
+
+## What's Changed
+
+* Fix API compatibility by @marcelveldt in https://github.com/music-assistant/server/pull/1662
+* Try parsing track number from the filename by @marcelveldt in https://github.com/music-assistant/server/pull/1663
+* Fix: Handle radio stations providing non utf-8 in streamtitle by @marcelveldt in https://github.com/music-assistant/server/pull/1664
+* Fix loading state from cache when connecting to slimproto players by @kepstin in https://github.com/music-assistant/server/pull/1666
+* Adding missing icon for the Soundcloud music provider by @robsonke in https://github.com/music-assistant/server/pull/1665
+* A few small bugfixes and enhancements to playback and enqueuing  by @marcelveldt in https://github.com/music-assistant/server/pull/1670
+
+## New Contributors
+* @kepstin made their first contribution in https://github.com/music-assistant/server/pull/1666
+* @robsonke made their first contribution in https://github.com/music-assistant/server/pull/1665
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b23...2.3.0b24
+
 # [2.3.0 BETA 23] - 14.09.2024
 
 ## What's Changed
@@ -217,6 +234,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
