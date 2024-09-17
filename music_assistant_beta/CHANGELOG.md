@@ -1,3 +1,13 @@
+# [2.3.0 BETA 25] - 17.09.2024
+
+## What's Changed
+
+* Fix: flow mode not being applied in all cases (while it should) by @marcelveldt in https://github.com/music-assistant/server/pull/1672
+
+This fixes the issue where a playlist would stop playing on some DLNA or HA based players
+
+
+
 # [2.3.0 BETA 24] - 16.09.2024
 
 ## What's Changed
@@ -234,6 +244,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
