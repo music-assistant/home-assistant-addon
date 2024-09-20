@@ -1,3 +1,14 @@
+# [2.3.0 BETA 26] - 20.09.2024
+
+## What's Changed
+* Bluesound: dynamic polling by @Cyanogenbot in https://github.com/music-assistant/server/pull/1671
+* Fix: Disable shuffle for radio mode by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1673
+* Fix keyerror in cache autocleanup by @marcelveldt in https://github.com/music-assistant/server/pull/1674
+* Better handling of Spotify stream error (due to token expiration) by @marcelveldt in https://github.com/music-assistant/server/pull/1676
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b25...2.3.0b26
+
 # [2.3.0 BETA 25] - 17.09.2024
 
 ## What's Changed
@@ -244,6 +255,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
