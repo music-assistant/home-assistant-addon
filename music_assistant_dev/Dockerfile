@@ -5,8 +5,8 @@ USER root
 RUN set -x \
     && apk add jq htop
 
-USER app
-
 COPY entrypoint.sh /home/app/
 RUN chmod +x /home/app/entrypoint.sh
+
+USER app
 ENTRYPOINT ["/home/app/entrypoint.sh"]
