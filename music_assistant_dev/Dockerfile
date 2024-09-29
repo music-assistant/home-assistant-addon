@@ -4,6 +4,6 @@ FROM ghcr.io/music-assistant/base:latest
 RUN set -x \
     && apk add jq htop
 
-COPY entrypoint.sh /home
-
-ENTRYPOINT ["/home/entrypoint.sh"]
+COPY entrypoint.sh /home/app/
+RUN chmod +x /home/app/entrypoint.sh
+ENTRYPOINT ["/home/app/entrypoint.sh"]
