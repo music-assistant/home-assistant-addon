@@ -1,3 +1,15 @@
+# [2.3.0 BETA 29] - 30.09.2024
+
+## What's Changed
+
+* Fix some playback issues by @marcelveldt in https://github.com/music-assistant/server/pull/1689
+* fix: album directory parsing with album versions by @skrobul in https://github.com/music-assistant/server/pull/1683
+
+## New Contributors
+* @skrobul made their first contribution in https://github.com/music-assistant/server/pull/1683
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b28...2.3.0b29
+
 # [2.3.0 BETA 28] - 29.09.2024
 
 ## What's Changed
@@ -272,6 +284,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
