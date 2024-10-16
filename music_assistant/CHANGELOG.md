@@ -1,3 +1,9 @@
+# [2.2.8] - 16.10.2024
+
+*2.2.8: patch release*
+Fix: Generate new dev token for Apple Music.
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.2.7...2.2.8
+
 # [2.2.7] - 03.10.2024
 
 **2.2.7: patch release**
@@ -114,6 +120,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
