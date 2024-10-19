@@ -1,3 +1,19 @@
+# [2.3.0 BETA 30] - 19.10.2024
+
+## What's Changed
+
+* Update to snapweb v0.8.0 by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1690
+* Snapcast: Add configuration options  by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1692
+* Snapcast: Ensures the default stream exists by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1702
+* Complete refactor of player groups logic by @marcelveldt in https://github.com/music-assistant/server/pull/1704
+* Snapcast update 0.29 by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1705
+* Add 'Don't stop the music' feature by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1681
+* Refactor SnapCastProvider cmd_volume_mute method by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1718
+
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b29...2.3.0b30
+
 # [2.3.0 BETA 29] - 30.09.2024
 
 ## What's Changed
@@ -284,6 +300,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
