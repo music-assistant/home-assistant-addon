@@ -1,15 +1,3 @@
-# [2.3.0 BETA 32] - 20.10.2024
-
-## What's Changed
-
-* Add SiriusXM Music Provider by @btoconnor in https://github.com/music-assistant/server/pull/1730
-* Bugfixes for Airplay and HLS streams by @marcelveldt in https://github.com/music-assistant/server/pull/1731
-
-## New Contributors
-* @btoconnor made their first contribution in https://github.com/music-assistant/server/pull/1730
-
-**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b31...2.3.0b32
-
 # [2.3.0 BETA 31] - 19.10.2024
 
 ## What's Changed
