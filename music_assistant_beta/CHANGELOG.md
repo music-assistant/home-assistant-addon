@@ -1,3 +1,39 @@
+# [2.3.0 RC 1] - 23.10.2024
+
+## What’s Changed
+
+### Server 2.3.0 RC 1
+
+## What's Changed
+* SiriusXM: live radio data in the stream title by @btoconnor in https://github.com/music-assistant/server/pull/1739
+* Fix for Spotify authentication expires mid-stream by @marcelveldt in https://github.com/music-assistant/server/pull/1741
+* Revert to snapweb v5 by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1742
+* Several improvements to the queue controller by @marcelveldt in https://github.com/music-assistant/server/pull/1744
+* Snapcast fix short announcements by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1743
+* frontend-v2.9.10 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1745
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0b34...2.3.0rc1
+
+### Frontend v2.9.10
+
+## [2.9.10](https://github.com/music-assistant/frontend/compare/v2.9.9...v2.9.10) (2024-10-23)
+
+
+### Bug Fixes
+
+* Correct check if image proxy should be used ([ce08d5d](https://github.com/music-assistant/frontend/commit/ce08d5d26593fc373c62278a1e0dae0263a941e6))
+* endless loop in queue items retrieval ([306314b](https://github.com/music-assistant/frontend/commit/306314b3702158692e4fd3e2bb04ad7fd42b4597))
+* Queue items list refresh issues ([138d5e4](https://github.com/music-assistant/frontend/commit/138d5e4297fe50ee19909ca0fc17b7213bffc504))
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.3.0 BETA 34] - 22.10.2024
 
 ## What's Changed
@@ -333,6 +369,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
