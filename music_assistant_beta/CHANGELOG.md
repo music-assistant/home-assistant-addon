@@ -1,3 +1,11 @@
+# [2.3.0 RC 2] - 24.10.2024
+
+## What's Changed
+* Several small fixes
+* Fix track enqueuing by @marcelveldt in https://github.com/music-assistant/server/pull/1747
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.0rc1...2.3.0rc2
+
 # [2.3.0 RC 1] - 23.10.2024
 
 ## What’s Changed
@@ -369,6 +377,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
