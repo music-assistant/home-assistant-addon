@@ -1,3 +1,9 @@
+# [2.4.0 BETA 2] - 25.10.2024
+
+Throttle metadata lookup to prevent it from taking all resources.
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.1...2.4.0b2
+
 # [2.4.0 BETA 1] - 25.10.2024
 
 - Fix cast players reporting (time) state updates.
@@ -400,6 +406,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
