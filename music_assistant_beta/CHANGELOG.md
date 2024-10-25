@@ -1,3 +1,9 @@
+# [2.4.0 BETA 0] - 25.10.2024
+
+Start of the 2.4 beta period.
+
+This version is on par with 2.3.0 stable, no additional features.
+
 # [2.3.0 RC3] - 24.10.2024
 
 ## What's Changed
@@ -386,6 +392,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
