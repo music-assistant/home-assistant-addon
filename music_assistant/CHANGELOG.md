@@ -8,7 +8,7 @@
 * Complete refactor of player groups in frontend and backend by @marcelveldt in https://github.com/music-assistant/server/pull/1704
 * New Sonos provider for speakers running S2 firmware by @marcelveldt in https://github.com/music-assistant/server/pull/1600
 
-### Breaking Changes
+### Attention SONOS users
 
 The Sonos provider has been rewritten from the ground up to support the new local, low latency API on Sonos speakers running the S2 firmware. If you have speakers running on S1 firmware, we have converted the old Sonos provider (with some tweaks and fixes) into the "Sonos S1" Provider. If your speakers are missing, make sure to uninstall the regular Sonos provider and install the S1 provider instead.
 
