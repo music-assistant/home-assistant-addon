@@ -1,3 +1,27 @@
+# [2.3.1] - 25.10.2024
+
+## What’s Changed
+
+- Fix cast players reporting (time) state updates.
+- Fix some local images not  showing in the UI.
+- Fix out of memory issues when handling metadata for large playlists.
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b0...2.4.0b1
+
+## ⬆️ Dependencies
+
+<details>
+<summary>6 changes</summary>
+
+- #1752 - Bump ruff from 0.6.9 to 0.7.1 (@dependabot)
+- #1749 - Bump actions/setup-python from 5.2.0 to 5.3.0 (@dependabot)
+- #1751 - Bump mashumaro from 3.13.1 to 3.14 (@dependabot)
+- #1750 - Bump xmltodict from 0.13.0 to 0.14.2 (@dependabot)
+- #1753 - Bump mypy from 1.11.2 to 1.13.0 (@dependabot)
+- #1754 - Bump tomli from 2.0.1 to 2.0.2 (@dependabot)
+</details>
+
+
 # [2.3.0] - 25.10.2024
 
 ## New features/providers
@@ -66,6 +90,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
