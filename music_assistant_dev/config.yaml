@@ -26,7 +26,7 @@ stage: experimental
 tmpfs: true
 options:
   log_level: info
-  branch: main
+  branch: dev
   safe_mode: false
 schema:
   log_level: list(debug|info|warning|error)
