@@ -1,3 +1,14 @@
+# [2.3.2] - 28.10.2024
+
+**Bug Fixes**
+
+- Do not retry Snapcast connection if we want to exit ([6ad7503](https://github.com/music-assistant/server/commit/6ad750347962d73a281a2cef4f88f95627aab32f))
+- Enqueue player feature not correctly set on cast groups and dlna players ([f9a855d](https://github.com/music-assistant/server/commit/f9a855de1f846de5c582c346d0cfbaa8394ba1e8))
+- Group volume up/down not implemented ([a1eede9](https://github.com/music-assistant/server/commit/a1eede9b1675a52bb8cc3e03a95a449754e2255b))
+- Prevent redundant lookup of full media item in queue controller ([734dc5b](https://github.com/music-assistant/server/commit/734dc5b99b705ed9ce6089d85ee72f4484836442))
+- Snapcast player in universal player group (https://github.com/music-assistant/server/pull/1756) ([f7ee100](https://github.com/music-assistant/server/commit/f7ee1007d79ab681c014e540da69d91e6457f4f1))
+- Prevent metadata lookup going into a loop, taking up all resources ([823bf60](https://github.com/music-assistant/server/commit/823bf60f5a1d2d3c54f3f044bc52ee8e0f21a155))
+
 # [2.3.1] - 25.10.2024
 
 ## What’s Changed
@@ -90,6 +101,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
