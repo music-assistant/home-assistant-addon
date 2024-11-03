@@ -23,6 +23,7 @@ advanced: false
 backup_exclude:
 - cache.db
 - collage_images/*
+- .cache/*
 stage: stable
 image: ghcr.io/music-assistant/server
 tmpfs: true
