@@ -24,6 +24,10 @@ init: false
 advanced: false
 stage: experimental
 tmpfs: true
+backup_exclude:
+- cache.db
+- collage_images/*
+- .cache/*
 options:
   log_level: info
   branch: dev
