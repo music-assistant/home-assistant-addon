@@ -1,3 +1,25 @@
+# [2.3.3] - 16.11.2024
+
+### Bug Fixes
+
+* Can't delete item in queue when queue is not active ([07df754](https://github.com/music-assistant/server/commit/07df754321468a3192b80bfcafa4f0252745eab1))
+* Check if metadata job exists before clearing it ([0b78ba0](https://github.com/music-assistant/server/commit/0b78ba05c9f7bc8e1b03ce28000c4d5e4cc44080))
+* leftover issues after repo split up ([cec5e7f](https://github.com/music-assistant/server/commit/cec5e7f7c55fbb18185c0e72c93492b00b574bf1))
+* use relative path for all default images and collages ([fdc942f](https://github.com/music-assistant/server/commit/fdc942fa3e853f5cd9c47ca42b3c1fe28ee623e6))
+* Don't Stop the Music for Subsonic and remove Podcast hacks ([#1774](https://github.com/music-assistant/server/issues/1774)) ([da42973](https://github.com/music-assistant/server/commit/da429731696e68770c2992837029810e58deeb6d))
+* Handle retry exception during authentication in Bluesound provider ([#1778](https://github.com/music-assistant/server/issues/1778)) ([4744d18](https://github.com/music-assistant/server/commit/4744d18d7325097d9ef51a7955f987b4fed042f2))
+* Ignore airplay for broken Sonos devices ([0d76599](https://github.com/music-assistant/server/commit/0d76599d1608c4c70274d9bd9ef293b8d0de5d04))
+* Sonos airplay mode infinite loop ([c710d9b](https://github.com/music-assistant/server/commit/c710d9bced22f38fb33663f16b6b24e3cb1567d6))
+
+### Chore/Maintenance
+
+* pre-install all requirements in the docker image ([7c69c66](https://github.com/music-assistant/server/commit/7c69c66af9ac488d5a2882cab1278bd662ba2ddf))
+* Reorganize repository to contain only the server code ([36a706f](https://github.com/music-assistant/server/commit/36a706fcdf7a5a16e04fef5fe0d599b1ef1d37d3))
+* Use dedicated directory for cache files ([5ab2d36](https://github.com/music-assistant/server/commit/5ab2d369f1a606b80a2c170df5c3218281c425cf))
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.2...2.3.3
+
 # [2.3.2] - 28.10.2024
 
 **Bug Fixes**
@@ -101,6 +123,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
