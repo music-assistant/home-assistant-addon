@@ -1,3 +1,22 @@
+# [2.4.0 BETA 6] - 21.11.2024
+
+### Features
+
+* Adjust code to changes in the models ([b1a67a4](https://github.com/music-assistant/server/commit/b1a67a46ae3b20b1cfa707bdbe9ffe0dd3d52bba))
+* Bump models to 1.1.2 ([b1a67a4](https://github.com/music-assistant/server/commit/b1a67a46ae3b20b1cfa707bdbe9ffe0dd3d52bba))
+* Refactor sync to group to make it more universal ([b1a67a4](https://github.com/music-assistant/server/commit/b1a67a46ae3b20b1cfa707bdbe9ffe0dd3d52bba))
+
+
+### Bug Fixes
+
+* announcements on HA players ([ec9c476](https://github.com/music-assistant/server/commit/ec9c4766037e47852a9a1b0141d41ad8eb1f8a1b))
+* Improve accuracy of matching album in directory structure for local filesystem ([#1779](https://github.com/music-assistant/server/issues/1779)) ([324d360](https://github.com/music-assistant/server/commit/324d360f53eafac7dfb793053734e8abc2596990))
+* Issues with player groups and airplay mode ([790c6aa](https://github.com/music-assistant/server/commit/790c6aaf0e5fdd044a91ff1c9e5f72dc4d5b2717))
+* Radio mode for Subsonic provider ([#1784](https://github.com/music-assistant/server/issues/1784)) ([c028d5c](https://github.com/music-assistant/server/commit/c028d5cb3ab385580120003b1d7bc7b832fd53e3))
+* Sonos Airplay mode ([2a90217](https://github.com/music-assistant/server/commit/2a9021764ef830fb0bbebc25f3d79a7af5959ae9))
+* Tweaks for ESPHome mediaplayers ([46fe6ab](https://github.com/music-assistant/server/commit/46fe6ab9f58e6ab84c9c77e7edb8323fb3b383a4))
+
+
 # [2.4.0 BETA 5] - 16.11.2024
 
 ### Bug Fixes
@@ -440,6 +459,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
