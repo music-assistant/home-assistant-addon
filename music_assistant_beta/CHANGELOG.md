@@ -1,3 +1,7 @@
+# [2.4.0 BETA 7] - 23.11.2024
+
+Small fix for search + play media by name
+
 # [2.4.0 BETA 6] - 21.11.2024
 
 ### Features
@@ -459,6 +463,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
