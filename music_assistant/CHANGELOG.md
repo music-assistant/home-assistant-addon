@@ -1,3 +1,37 @@
+# [2.3.4] - 20.12.2024
+
+## What’s Changed
+
+- #1796 - fix: Subsonic: Fix album art missing from playlist display (@khers)
+- #1808 - Fix: Rewrite YT stream resolver to use web formats. (@MarvinSchenkel)
+- #1797 - Fix: Add logging around Subsonic scrobble calls (@khers)
+- #1803 - fix: Solved a bug for applying genres in Soundcloud tracks (@robsonke)
+- #1805 - Fix: Correct maxsize of `MetadataLookupQueue` (@ijc)
+- #1798 - fix: Subsonic: Allow user to force player provider seek (@khers)
+- #1789 - Fix: Reauthenticate with SiriusXM when playing a station (@btoconnor)
+- #1779 - Fix: Improve accuracy of matching album in directory structure for local filesystem (@skrobul)
+- #1784 - Fix: Radio mode for Subsonic provider (@khers)
+
+## ⬆️ Dependencies
+
+<details>
+<summary>12 changes</summary>
+
+- #1793 - Chore(deps): Bump soco from 0.30.5 to 0.30.6 (@dependabot)
+- #1792 - Chore(deps): Bump orjson from 3.10.7 to 3.10.12 (@dependabot)
+- #1807 - Chore(deps): Bump docker/setup-buildx-action from 3.7.1 to 3.8.0 (@dependabot)
+- #1801 - Chore(deps): Bump pytest from 8.3.3 to 8.3.4 (@dependabot)
+- #1794 - Chore(deps): Bump docker/build-push-action from 6.9.0 to 6.10.0 (@dependabot)
+- #1791 - Chore(deps): Bump syrupy from 4.7.2 to 4.8.0 (@dependabot)
+- #1804 - Chore(deps): Bump pypa/gh-action-pypi-publish from 1.12.2 to 1.12.3 (@dependabot)
+- #1790 - Chore(deps): Bump zeroconf from 0.136.0 to 0.136.2 (@dependabot)
+- #1782 - Chore(deps): Bump tomli from 2.0.2 to 2.1.0 (@dependabot)
+- #1783 - Chore(deps): Bump tidalapi from 0.8.0 to 0.8.1 (@dependabot)
+- #1786 - Chore(deps): Bump aiohttp from 3.10.10 to 3.11.6 (@dependabot)
+- #1781 - Chore(deps): Bump ruff from 0.7.1 to 0.7.4 (@dependabot)
+</details>
+
+
 # [2.3.3] - 16.11.2024
 
 ### Bug Fixes
@@ -123,6 +157,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
