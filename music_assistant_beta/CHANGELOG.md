@@ -1,3 +1,19 @@
+# [2.4.0 BETA 8] - 23.12.2024
+
+## What’s Changed
+
+## 🐛 Bugfixes
+
+- #1806 - Allow Chromecast provider to handle/avoid images which are "too big" (@ijc)
+- #1811 - Fix group players: No players available to form sync group (@MarvinSchenkel)
+
+## 🚀 Features
+
+- #1806 - Allow Chromecast provider to handle/avoid images which are "too big" (@ijc)
+- #1795 - Add Configurable DSP with Parametric Equalizer (@maximmaxim345)
+- #1799 - Add support for iBroadcast as music provider (@robsonke)
+
+
 # [2.4.0 BETA 7] - 23.11.2024
 
 Small fix for search + play media by name
@@ -463,6 +479,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
