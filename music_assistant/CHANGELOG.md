@@ -1,3 +1,12 @@
+# [2.3.5] - 02.01.2025
+
+## What’s Changed
+
+* A couple of small bugfixes
+* Fix playback issues on Home Assistant Voice PE
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.3.4...2.3.5
+
 # [2.3.4] - 20.12.2024
 
 ## What’s Changed
@@ -157,6 +166,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
