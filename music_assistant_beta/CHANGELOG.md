@@ -1,3 +1,33 @@
+# [2.4.0 BETA 9] - 06.01.2025
+
+## What's Changed
+
+## New Features
+
+This beta brings core support for Podcasts and Audiobooks. Note that the individual providers still need to be adjusted to support this new media types. The first provider that received support for podcasts is Subsonic.
+
+We also welcome a brand new provider, which lets you add podcasts from an RSS feed.
+
+* Subsonic: Add Podcast Support by @khers in https://github.com/music-assistant/server/pull/1802
+* A bunch of fixes for the enqueue and radio mode logic by @marcelveldt in https://github.com/music-assistant/server/pull/1829
+* Add RSS Feed Podcast provider  by @saeugetier in https://github.com/music-assistant/server/pull/1817
+
+## Fixes and maintenance
+
+* Fix small typo in Subsonic provider by @OzGav in https://github.com/music-assistant/server/pull/1818
+* fix type of template player provider manifest by @AlCalzone in https://github.com/music-assistant/server/pull/1819
+* Podcast and audiobook support follow up by @marcelveldt in https://github.com/music-assistant/server/pull/1825
+* Fix support links by @chatziko in https://github.com/music-assistant/server/pull/1823
+* Fix: Disable the DSP by default by @maximmaxim345 in https://github.com/music-assistant/server/pull/1824
+* Remove the devcontainer because its unmaintained by @marcelveldt in https://github.com/music-assistant/server/pull/1830
+
+
+## New Contributors
+* @AlCalzone made their first contribution in https://github.com/music-assistant/server/pull/1819
+* @saeugetier made their first contribution in https://github.com/music-assistant/server/pull/1817
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b8...2.4.0b9
+
 # [2.4.0 BETA 8] - 23.12.2024
 
 ## What’s Changed
@@ -479,6 +509,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
