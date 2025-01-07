@@ -1,3 +1,11 @@
+# [2.3.6] - 07.01.2025
+
+## What’s Changed
+
+* A few (temporary) measurements to prevent too much load at startup and calls to streaming providers
+* Fix some streaming issues
+
+
 # [2.3.5] - 02.01.2025
 
 ## What’s Changed
@@ -166,6 +174,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
