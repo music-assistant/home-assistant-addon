@@ -1,3 +1,11 @@
+# [2.4.0 BETA 10] - 07.01.2025
+
+## What's Changed
+
+Various small issues resolved introduced in 2.4.0b9
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b9...2.4.0b10
+
 # [2.4.0 BETA 9] - 06.01.2025
 
 ## What's Changed
@@ -509,6 +517,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
