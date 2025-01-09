@@ -1,3 +1,35 @@
+# [2.4.0 BETA 11] - 09.01.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 11
+
+## What's Changed
+
+* Fix error on missing key in RSS Podcast data. by @saeugetier in https://github.com/music-assistant/server/pull/1832
+* frontend-2.10.4 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1838
+* Fix: Jellyfin login should use a stable device id to avoid leaking device records in Jellyfin backend by @Jc2k in https://github.com/music-assistant/server/pull/1840
+* Fix: Avoid extra call to get playlist metadata when fetching playlist tracks in Jellyfin by @Jc2k in https://github.com/music-assistant/server/pull/1843
+* Performance improvements for filesystem provider by @marcelveldt in https://github.com/music-assistant/server/pull/1844
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b10...2.4.0b11
+
+### Frontend 2.10.4
+
+- #807 - Lokalise translations update (@github-actions)
+
+## 🐛 Bugfixes
+
+- #808 - fix: Use a better solution to watch params (@felipetoffolo1)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.0 BETA 10] - 07.01.2025
 
 ## What's Changed
@@ -517,6 +549,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
