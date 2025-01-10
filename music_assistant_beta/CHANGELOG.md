@@ -1,3 +1,20 @@
+# [2.4.0 BETA 12] - 10.01.2025
+
+## What's Changed
+
+* Fix: Use of incorrect type for group_childs in player_group provider by @maximmaxim345 in https://github.com/music-assistant/server/pull/1845
+* chore: enable mypy for new modules by default by @Jc2k in https://github.com/music-assistant/server/pull/1849
+* fix: Make sure that Jellyfin playlists are sorted and paginated by @Jc2k in https://github.com/music-assistant/server/pull/1847
+* Small fix for checking playlist url by @ztripez in https://github.com/music-assistant/server/pull/1846
+* chore: mypy for airplay by @Jc2k in https://github.com/music-assistant/server/pull/1848
+* Mypy fixes by @Jc2k in https://github.com/music-assistant/server/pull/1851
+* Feat: Add multi device DSP support by @maximmaxim345 in https://github.com/music-assistant/server/pull/1839
+
+## New Contributors
+* @ztripez made their first contribution in https://github.com/music-assistant/server/pull/1846
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b11...2.4.0b12
+
 # [2.4.0 BETA 11] - 09.01.2025
 
 ## What’s Changed
@@ -549,6 +566,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
