@@ -1,6 +1,6 @@
 name: Music Assistant Server (dev)
 # version number gets updated only when the mass base image updates!
-version: 1.1.2
+version: 1.2.1
 slug: music_assistant_dev
 description: Development (nightly) version of Music Assistant.
   Do not install this add-on unless you're specifically asked or a developer!
@@ -25,9 +25,9 @@ advanced: false
 stage: experimental
 tmpfs: true
 backup_exclude:
-- cache.db
-- collage_images/*
-- .cache/*
+  - cache.db
+  - collage_images/*
+  - .cache/*
 options:
   log_level: info
   branch: dev
