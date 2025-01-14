@@ -1,6 +1,6 @@
 name: Music Assistant Server (dev)
 # version number gets updated only when the mass base image updates!
-version: 1.2.1
+version: 1.2.2
 slug: music_assistant_dev
 description: Development (nightly) version of Music Assistant.
   Do not install this add-on unless you're specifically asked or a developer!
