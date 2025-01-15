@@ -1,3 +1,65 @@
+# [2.4.0 BETA 13] - 15.01.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 13
+
+## What's Changed
+
+* Audible audiobook provider by @ztripez in https://github.com/music-assistant/server/pull/1842
+* Various fixes and enhancements for the Soundcloud provider by @robsonke in https://github.com/music-assistant/server/pull/1852
+* Add Spotify connect provider by @marcelveldt in https://github.com/music-assistant/server/pull/1858
+* Fix: Audio streaming hangs suddenly at the end of a track by @marcelveldt in https://github.com/music-assistant/server/pull/1872
+* chore: mypy for __main__ by @Jc2k in https://github.com/music-assistant/server/pull/1853
+* chore: mypy for sonos s1 by @Jc2k in https://github.com/music-assistant/server/pull/1854
+* chore: Subsonic: Enable mypy for subsonic provider by @khers in https://github.com/music-assistant/server/pull/1856
+* Implemented Mypy for the ibroadcast provider by @robsonke in https://github.com/music-assistant/server/pull/1855
+* fix: typo by @Jc2k in https://github.com/music-assistant/server/pull/1860
+* Opensubsonic tests for artist 'parsing' by @Jc2k in https://github.com/music-assistant/server/pull/1859
+* fix: Jellyfin should use the correct MA version instead of hardcoding an old one by @Jc2k in https://github.com/music-assistant/server/pull/1861
+* Chore(deps): Bump pillow from 11.0.0 to 11.1.0 by @dependabot in https://github.com/music-assistant/server/pull/1867
+* Chore(deps): Bump syrupy from 4.8.0 to 4.8.1 by @dependabot in https://github.com/music-assistant/server/pull/1869
+* Fix: Only PlayerGroups of supported players should enable MULTI_DEVICE_DSP by @maximmaxim345 in https://github.com/music-assistant/server/pull/1864
+* chore: add album parsing tests for opensubsonic by @Jc2k in https://github.com/music-assistant/server/pull/1865
+* chore: mypy for mass.py by @Jc2k in https://github.com/music-assistant/server/pull/1863
+* chore: mypy for fanart.tv by @Jc2k in https://github.com/music-assistant/server/pull/1862
+* chore: mypy for template music provider by @Jc2k in https://github.com/music-assistant/server/pull/1871
+* frontend-2.10.5 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1874
+* use the trixie-slim image by @chatziko in https://github.com/music-assistant/server/pull/1873
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b12...2.4.0b13
+
+### Frontend 2.10.5
+
+- #811 - Feat: Add a secondary Speaker button in the fullscreen player. (@maximmaxim345)
+- #810 - Display the used volume normalization mode/values instead of target (@maximmaxim345)
+- #809 - Fix: missing playername on webkit/safari (@maximmaxim345)
+
+## 🐛 Bugfixes
+
+- #819 - fix: Prevent racing condition to cause issue (@felipetoffolo1)
+- #821 - chore: Hide double scroll (@felipetoffolo1)
+- #820 - chore: Fix frameless for side menu (@felipetoffolo1)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>5 changes</summary>
+
+- #816 - Chore(deps-dev): Bump typescript from 5.7.2 to 5.7.3 (@dependabot)
+- #813 - Chore(deps): Bump softprops/action-gh-release from 2.0.8 to 2.2.1 (@dependabot)
+- #817 - Chore(deps): Bump swiper from 11.2.0 to 11.2.1 (@dependabot)
+- #815 - Chore(deps): Bump marked from 15.0.5 to 15.0.6 (@dependabot)
+- #818 - Chore(deps-dev): Bump vite-plugin-webfont-dl from 3.10.3 to 3.10.4 (@dependabot)
+</details>
+
+
+
 # [2.4.0 BETA 12] - 10.01.2025
 
 ## What's Changed
@@ -566,6 +628,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
