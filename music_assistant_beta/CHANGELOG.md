@@ -1,3 +1,9 @@
+# [2.4.0 BETA 15] - 15.01.2025
+
+- Fix Airplay playback
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b14...2.4.0b15
+
 # [2.4.0 BETA 14] - 15.01.2025
 
 ## What’s Changed
@@ -718,6 +724,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
