@@ -9,7 +9,7 @@ echo "-----------------------------------------------------------"
 echo ""
 echo "Installing latest version from $branch in $VIRTUAL_ENV"
 echo ""
-uv venv $VIRTUAL_ENV
+source $VIRTUAL_ENV/bin/activate
 uv pip install \
     --no-cache \
     --link-mode=copy \
@@ -17,5 +17,4 @@ uv pip install \
 
 echo ""
 echo ""
-source $VIRTUAL_ENV/bin/activate
 mass --config /data
