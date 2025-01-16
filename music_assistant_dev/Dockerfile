@@ -7,6 +7,9 @@ FROM ghcr.io/music-assistant/base:latest
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
+# ensure UV is installed
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 # add some additional packages that are useful for debugging
 RUN set -x \
     && apk update \
