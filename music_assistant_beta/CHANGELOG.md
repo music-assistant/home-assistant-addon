@@ -1,3 +1,38 @@
+# [2.4.0 BETA 16] - 16.01.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 16
+
+## What's Changed
+* Chore(deps): Bump docker/build-push-action from 6.11.0 to 6.12.0 by @dependabot in https://github.com/music-assistant/server/pull/1878
+* chore: mypy for template player provider by @Jc2k in https://github.com/music-assistant/server/pull/1876
+* Add Audiobookshelf audiobooks & podcast provider by @fmunkes in https://github.com/music-assistant/server/pull/1857
+* Feat: Add DSP pipeline details to stream information by @maximmaxim345 in https://github.com/music-assistant/server/pull/1875
+* Audible: fixed popup flow, disabled internal cache. by @ztripez in https://github.com/music-assistant/server/pull/1880
+* Fix: DSP edge cases around groups by @maximmaxim345 in https://github.com/music-assistant/server/pull/1879
+* frontend-2.10.6 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1881
+* Switch to ffmpeg 7.1 + other fixes for audio streaming by @marcelveldt in https://github.com/music-assistant/server/pull/1882
+
+## New Contributors
+* @fmunkes made their first contribution in https://github.com/music-assistant/server/pull/1857
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b15...2.4.0b16
+
+### Frontend 2.10.6
+
+## 🚀 Features
+
+- #822 - Feat: Add simple DSP indicator to Streamdetails to display the current DSP state (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.0 BETA 15] - 15.01.2025
 
 - Fix Airplay playback
@@ -724,6 +759,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
