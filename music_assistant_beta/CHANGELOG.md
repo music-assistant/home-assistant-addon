@@ -1,3 +1,26 @@
+# [2.4.0 BETA 19] - 22.01.2025
+
+## What's Changed
+
+* Feat: Allow for advanced networking in the Sonos provider. by @Icelk in https://github.com/music-assistant/server/pull/1885
+* Feat: Ability to use Audiobookshelf Sessions/ HLS Stream by @fmunkes in https://github.com/music-assistant/server/pull/1887
+* Fix: Check for Chromecast groups in DSP compatiblity check by @maximmaxim345 in https://github.com/music-assistant/server/pull/1886
+* Fix typo by @OzGav in https://github.com/music-assistant/server/pull/1889
+* fix: add missing AudioFormat metadata to Jellyfin provider by @Jc2k in https://github.com/music-assistant/server/pull/1890
+* chore: add mypy for hass by @Jc2k in https://github.com/music-assistant/server/pull/1891
+* chore: ruff 0.9.1 by @Jc2k in https://github.com/music-assistant/server/pull/1893
+* chore: update ci versions to match docker, pyproject.toml, etc by @Jc2k in https://github.com/music-assistant/server/pull/1899
+* Fix: Deezer tracks that have been replaced with a newer version fail to play by @awhiemstra in https://github.com/music-assistant/server/pull/1892
+* Fix: Provide a proper track number for Deezer tracks if available by @awhiemstra in https://github.com/music-assistant/server/pull/1900
+* Chore: Audiobookshelf - adapt schema to reflect the naming scheme used in the API docs by @fmunkes in https://github.com/music-assistant/server/pull/1898
+* Fix various issue in the player queue (such as resuming from flow mode)
+
+## New Contributors
+* @Icelk made their first contribution in https://github.com/music-assistant/server/pull/1885
+* @awhiemstra made their first contribution in https://github.com/music-assistant/server/pull/1892
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b18...2.4.0b19
+
 # [2.4.0 BETA 18] - 19.01.2025
 
 - Fix streaming on devices that require flow mode
@@ -791,6 +814,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
