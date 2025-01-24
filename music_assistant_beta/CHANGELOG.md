@@ -1,3 +1,36 @@
+# [2.4.0 BETA 20] - 24.01.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 20
+
+## What's Changed
+* Chore(deps): Bump plexapi from 4.15.16 to 4.16.1 by @dependabot in https://github.com/music-assistant/server/pull/1894
+* Chore: Audiobookshelf: Less API calls + more debugging messages by @fmunkes in https://github.com/music-assistant/server/pull/1906
+* Fix: Use Deezer record_type to set the album type of Deezer albums by @awhiemstra in https://github.com/music-assistant/server/pull/1905
+* Remove scrobble from Subsonic provider by @khers in https://github.com/music-assistant/server/pull/1904
+* fix: small refactor of tidal auth function by @jozefKruszynski in https://github.com/music-assistant/server/pull/1901
+* frontend-2.10.9 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1907
+* Various fixes for player groups
+* Various fixes for airplay playback
+* Various fixes for sonos playback
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b19...2.4.0b20
+
+### Frontend 2.10.9
+
+- #832 - Try and stop escaping line break (@OzGav)
+- Several changes to the player sidebar
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.0 BETA 19] - 22.01.2025
 
 ## What's Changed
@@ -814,6 +847,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
