@@ -1,3 +1,53 @@
+# [2.4.0 BETA 21] - 31.01.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 21
+
+## What's Changed
+
+* Switch the Soundcloud artist tracks to the full listing by @robsonke in https://github.com/music-assistant/server/pull/1913
+* Add monochrome SVG for providers by @OzGav in https://github.com/music-assistant/server/pull/1910
+* Fix: Incorrect DSPState with synchronized playback by @maximmaxim345 in https://github.com/music-assistant/server/pull/1912
+* Feat: add support for monochrome provider icons by @maximmaxim345 in https://github.com/music-assistant/server/pull/1911
+* feat: add missing file extensions for filesystem provider by @maximmaxim345 in https://github.com/music-assistant/server/pull/1922
+* feat: attach output format to the player by @maximmaxim345 in https://github.com/music-assistant/server/pull/1920
+* Feat: attach codec used in the input file to the streamdetails by @maximmaxim345 in https://github.com/music-assistant/server/pull/1921
+* Feat: Add support for PEQ preamp by @maximmaxim345 in https://github.com/music-assistant/server/pull/1923
+* YTMusic: Add podcast support by @MarvinSchenkel in https://github.com/music-assistant/server/pull/1924
+* Add Player Controls feature by @marcelveldt in https://github.com/music-assistant/server/pull/1925
+* frontend-2.10.10 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1927
+* Mypy and track fallback fixes for Tidal provider by @jozefKruszynski in https://github.com/music-assistant/server/pull/1926
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b20...2.4.0b21
+
+### Frontend 2.10.10
+
+## 🚀 Features
+
+- #833 - Feat: add support for monochrome provider icons (@maximmaxim345)
+- #841 - Handle player controls for power and volume (@marcelveldt)
+- #840 - feat: add preamp support for the Parametric Equalizer (@maximmaxim345)
+- #839 - Feat: Complete rework of the StreamDetails (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>4 changes</summary>
+- #838 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #837 - Chore(deps): Bump pypa/gh-action-pypi-publish from 1.12.3 to 1.12.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #836 - Chore(deps-dev): Bump vite from 6.0.7 to 6.0.11 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #835 - Chore(deps-dev): Bump @types/node from 22.10.7 to 22.10.10 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #834 - Chore(deps): Bump vuetify from 3.7.6 to 3.7.7 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.4.0 BETA 20] - 24.01.2025
 
 ## What’s Changed
@@ -847,6 +897,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
