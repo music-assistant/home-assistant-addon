@@ -1,3 +1,7 @@
+# [2.4.0 BETA 22] - 01.02.2025
+
+A couple of bugfixes for issues introduced in beta 21, most important fixes backwards compatibility with the HA integration.
+
 # [2.4.0 BETA 21] - 31.01.2025
 
 ## What’s Changed
@@ -897,6 +901,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
