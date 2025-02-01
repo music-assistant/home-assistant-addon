@@ -1,3 +1,33 @@
+# [2.4.0 BETA 23] - 01.02.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 23
+
+## What's Changed
+
+* fix: correctly refresh streamdetails in group/ungroup scenarios by @maximmaxim345 in https://github.com/music-assistant/server/pull/1929
+* chore: Clarify exception reason for similar tracks in Tidal provider by @jozefKruszynski in https://github.com/music-assistant/server/pull/1930
+* fix: show chapters in ABS audiobook view by @fmunkes in https://github.com/music-assistant/server/pull/1928
+* frontend-2.10.11 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1931
+* fix: import to HA fails on group volume key
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b22...2.4.0b23
+
+### Frontend 2.10.11
+
+## 🧰 Maintenance
+
+- #842 - feat: group players with identical DSPs together in the Audio Pipeline (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.0 BETA 22] - 01.02.2025
 
 A couple of bugfixes for issues introduced in beta 21, most important fixes backwards compatibility with the HA integration.
@@ -901,6 +931,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
