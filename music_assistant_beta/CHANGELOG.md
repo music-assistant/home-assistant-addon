@@ -1,3 +1,58 @@
+# [2.4.0 BETA 24] - 05.02.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 24
+
+## What's Changed
+* Replace fully kiosk SVGs by @OzGav in https://github.com/music-assistant/server/pull/1932
+* Add audiobooks and podcasts support to local filesystem provider by @marcelveldt in https://github.com/music-assistant/server/pull/1937
+* Add last couple of SVGs by @OzGav in https://github.com/music-assistant/server/pull/1938
+* fix: only show chromecast group leader in the audio pipeline by @maximmaxim345 in https://github.com/music-assistant/server/pull/1941
+* fix: remove `is_leader` for better grouping in the Audio Pipeline by @maximmaxim345 in https://github.com/music-assistant/server/pull/1940
+* fix: incorrect DSP in Audio Pipeline  of group leader or when disabled by @maximmaxim345 in https://github.com/music-assistant/server/pull/1939
+* frontend-2.11.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1942
+* Fix seeking
+* Fix stop reverts queue position
+* Several other small fixes
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b23...2.4.0b24
+
+### Frontend 2.11.0
+
+- #855 - Fix: Improve Audio Pipeline menu on phones (@maximmaxim345)
+- #854 - Lokalise: Translations update (@marcelveldt)
+- #847 - Fix: use the user set player name in the Audio Pipeline (@maximmaxim345)
+- #848 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #849 - Fix: Safari provider icon rendering (@maximmaxim345)
+
+## 🐛 Bugfixes
+
+- #853 - fix: increase Audio pipeline width (@maximmaxim345)
+- #851 - fix: remove `is_leader` from `DSPDetails` model (@maximmaxim345)
+
+## 🚀 Features
+
+- #852 - feat: make players list expandable in the Audio Pipeline (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>5 changes</summary>
+
+- #850 - Chore(deps): Bump vuetify from 3.7.9 to 3.7.11 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #843 - Chore(deps-dev): Bump @types/node from 22.10.10 to 22.13.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #844 - Chore(deps): Bump vuetify from 3.7.7 to 3.7.9 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #845 - Chore(deps): Bump vue-i18n from 11.0.1 to 11.1.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #846 - Chore(deps): Bump swiper from 11.2.1 to 11.2.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.4.0 BETA 23] - 01.02.2025
 
 ## What’s Changed
@@ -931,6 +986,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
