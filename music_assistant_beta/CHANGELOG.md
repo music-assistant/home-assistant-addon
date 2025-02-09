@@ -1,3 +1,14 @@
+# [2.4.0 BETA 26] - 09.02.2025
+
+## What's Changed
+
+* several tweaks to resume of audiobooks and podcasts
+* Fix group player power
+* A couple of other minor fixes and tweaks
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b25...2.4.0b26
+
 # [2.4.0 BETA 25] - 06.02.2025
 
 ## What's Changed
@@ -996,6 +1007,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
