@@ -1,3 +1,44 @@
+# [2.4.0 BETA 27] - 11.02.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 27
+
+## What's Changed
+* Fix: Delete DSPConfig when removing players by @maximmaxim345 in https://github.com/music-assistant/server/pull/1951
+* Feat: Use the player prefered (lossless) format in universal groups by @maximmaxim345 in https://github.com/music-assistant/server/pull/1949
+* Fix: several fixes related to enqueuing, seeking and skipping
+* Fix: improve in-progress reporting and resume state handling for audiobooks and podcasts
+* frontend-2.11.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1957
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b26...2.4.0b27
+
+### Frontend 2.11.2
+
+- #864 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- Several optimizations for audiobooks and podcasts media type
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>7 changes</summary>
+
+- #861 - Chore(deps-dev): Bump vite-plugin-vuetify from 2.0.4 to 2.1.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #860 - Chore(deps-dev): Bump sass from 1.83.4 to 1.84.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #862 - Chore(deps-dev): Bump @types/node from 22.13.0 to 22.13.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #859 - Chore(deps-dev): Bump vite from 6.0.11 to 6.1.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #863 - Chore(deps-dev): Bump prettier from 3.4.2 to 3.5.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #858 - Chore(deps): Bump vue-i18n from 11.1.0 to 11.1.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #857 - Chore(deps): Bump marked from 15.0.6 to 15.0.7 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.4.0 BETA 26] - 09.02.2025
 
 ## What's Changed
@@ -1007,6 +1048,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
