@@ -1,3 +1,35 @@
+# [2.4.0 BETA 28] - 14.02.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 28
+
+## What's Changed
+* Fix: Improve parsing of local files playlist lines by @OzGav in https://github.com/music-assistant/server/pull/1952
+* Fix: Correct codeowner username in Snapcast manifest by @SantiagoSotoC in https://github.com/music-assistant/server/pull/1958
+* frontend-2.11.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1960
+* ABS: Rewrite of provider, couple new features by @fmunkes in https://github.com/music-assistant/server/pull/1948
+* Several small bugfixes
+* Feat: Allow playback of browse folders
+* Feat: Introduce unified "play menu" experience in frontend
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b27...2.4.0b28
+
+### Frontend 2.11.3
+
+## 🧰 Maintenance
+
+- #865 - Implement consistent behavior for clicking an item or play button (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.0 BETA 27] - 11.02.2025
 
 ## What’s Changed
@@ -1048,6 +1080,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
