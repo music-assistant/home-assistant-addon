@@ -1,3 +1,30 @@
+# [2.4.0 BETA 29] - 16.02.2025
+
+## What’s Changed
+
+### Server 2.4.0 BETA 29
+
+## What's Changed
+* Fix: Double grouped players with Universal Groups by @maximmaxim345 in https://github.com/music-assistant/server/pull/1959
+* Chore: bump aioaudiobookshelf library to version 0.1.1 by @fmunkes in https://github.com/music-assistant/server/pull/1961
+* frontend-2.11.4 by @music-assistant-machine in https://github.com/music-assistant/server/pull/1962
+* Various small fixes
+* Feat: Improve spotify connect feature
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0b28...2.4.0b29
+
+### Frontend 2.11.4
+
+* Various small glitches resolves
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.0 BETA 28] - 14.02.2025
 
 ## What’s Changed
@@ -1080,6 +1107,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
