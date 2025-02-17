@@ -1,3 +1,11 @@
+# [2.4.0 RC1] - 17.02.2025
+
+**Release Candidate 1 for the 2.4.0 release**
+
+[feature freeze] only strictly needed bugfixing at this point
+
+- Contains several fixes for some last minute reported issues with b30
+
 # [2.4.0 BETA 30] - 17.02.2025
 
 Fix for not being abel to play any non-library tracks
@@ -1111,6 +1119,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
