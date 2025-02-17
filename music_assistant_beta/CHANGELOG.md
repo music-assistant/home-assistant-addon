@@ -1,3 +1,7 @@
+# [2.4.0 BETA 30] - 17.02.2025
+
+Fix for not being abel to play any non-library tracks
+
 # [2.4.0 BETA 29] - 16.02.2025
 
 ## What’s Changed
@@ -1107,6 +1111,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
