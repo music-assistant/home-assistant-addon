@@ -1,3 +1,7 @@
+# [2.4.0 RC4] - 18.02.2025
+
+Another round of fixes for the issues with (de)serializing of config values
+
 # [2.4.0 RC3] - 18.02.2025
 
 several bugfixes
@@ -1127,6 +1131,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
