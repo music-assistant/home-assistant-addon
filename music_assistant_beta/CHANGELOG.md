@@ -1,3 +1,10 @@
+# [2.4.0 RC5] - 19.02.2025
+
+## What's Changed
+* Many small bugfixes for various reported issues
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.0rc4...2.4.0rc5
+
 # [2.4.0 RC4] - 18.02.2025
 
 Another round of fixes for the issues with (de)serializing of config values
@@ -1131,6 +1138,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
