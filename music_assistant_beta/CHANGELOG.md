@@ -1,3 +1,7 @@
+# [2.4.0 RC6] - 20.02.2025
+
+More bugfixes 
+
 # [2.4.0 RC5] - 19.02.2025
 
 ## What's Changed
@@ -1138,6 +1142,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
