@@ -1,3 +1,9 @@
+# [2.5.0 BETA 0] - 25.02.2025
+
+**The start of the beta cycle for 2.5 !**
+
+This version is on-par with the 2.4.0 stable version
+
 # [2.4.0 RC9] - 24.02.2025
 
 Final RC before stable release of 2.4.0 - all high prio bugs fixed.
@@ -1162,6 +1168,8 @@ This (beta) release introduced a complete new Sonos provider which is only compa
 The begin of beta for 2.3 - some new features will land in this cycle so stay tuned.
 
 This version is on par with stable version 2.2.0
+
+
 
 
 
