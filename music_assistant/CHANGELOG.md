@@ -1,3 +1,55 @@
+# [2.4.0] - 25.02.2025
+
+## What’s Changed
+
+The 2.4 release is packed with new features, new providers and loads a huge amount of bugfixes and all kind of improvements overall. 
+Streaming should be better, smoother and more stable than ever!
+Thanks to all contributors, beta testers and everyone else involved with this release!
+
+
+**Some highlights:**
+
+- Music Assistant now has native support for Podcasts and Audiobooks.
+
+- Various new providers have been added to support podcasts and/or audiobooks.
+
+- Existing providers that now have support for Audiobooks are Subsonic, YouTube and the local files provider. 
+
+- Music Assistant now has a built-in, sophisticated DSP, which you can configure per player.
+
+- Music Assistant now has native support for "external audio sources", which can be provided either by players themselves (source control) or by plugins. The first plugin to deliver this functionality is Spotify Connect.
+
+- Music Assistant now has support for "Player Controls" which let you outsource e.g. the volume or power control for a player to a Home Assistant entity.
+
+
+[And much, much more!](https://github.com/music-assistant/server/compare/2.3.6...2.4.0)
+
+
+
+## 🐛 Bugfixes
+
+There have been countless bugfixes and (performance) improvements. Most important being that the streaming is now more robust to all kind of scenarios.
+
+
+## 🚀 Features
+
+- #1937 - Add audiobooks and podcasts support to local filesystem provider (@marcelveldt)
+- #1925 - Add Player Controls feature (@marcelveldt)
+- #1924 - YTMusic: Add podcast support (@MarvinSchenkel)
+- #1921 - Display complete "audio path" details in the frontend (@maximmaxim345)
+- #1922 - Add missing file extensions for filesystem provider (@maximmaxim345)
+- #1875 - Add DSP pipeline details to stream information (@maximmaxim345)
+- #1857 - Add Audiobookshelf audiobooks & podcast provider (@fmunkes)
+- #1858 - Add Spotify connect provider (@marcelveldt)
+- #1852 - Various fixes and enhancements for the Soundcloud provider (@robsonke)
+- #1842 - Add Audible audiobook provider (@ztripez)
+- #1839 - Add multi device DSP support (@maximmaxim345)
+- #1844 - Performance improvements for filesystem provider (@marcelveldt)
+
+
+
+
+
 # [2.3.6] - 07.01.2025
 
 ## What’s Changed
@@ -174,6 +226,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
