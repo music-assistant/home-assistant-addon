@@ -25,6 +25,10 @@ Thanks to all contributors, beta testers and everyone else involved with this re
 [And much, much more!](https://github.com/music-assistant/server/compare/2.3.6...2.4.0)
 
 
+## ⚠ Breaking Changes
+
+In previous versions, Music Assistant always used a power control (on/off) for every player, even if a player does not even exist power control natively. Now, with the new "Player controls" feature this has become a user choice. If you like to get the old behavior back where you can power on/off every player, go into the player settings and assign "fake power" in the player controls section.
+
 
 ## 🐛 Bugfixes
 
