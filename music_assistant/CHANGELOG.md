@@ -1,3 +1,41 @@
+# [2.4.1] - 26.02.2025
+
+## What’s Changed
+
+### Server 2.4.1
+
+## 🐛 Bugfixes
+
+- #1984 - fix(tidal): refresh access token correctly (@jozefKruszynski)
+- #1980 - Fix assertion error when trying to save a provider config (@marcelveldt)
+- Fix issues with creating playergroups (and migrating existing ones)
+- Fix: players with fake power should remember the power state between restarts
+
+## 🧰 Maintenance
+
+- #1987 - frontend-2.11.11 (@music-assistant-machine)
+
+### Frontend 2.11.11
+
+Fix creation of player groups
+
+**Full Changelog**: https://github.com/music-assistant/frontend/compare/2.11.10...2.11.11
+
+## ⬆️ Dependencies
+
+### Server
+
+<details>
+<summary>2 changes</summary>
+
+- #1985 - Chore(deps): Bump docker/build-push-action from 6.14.0 to 6.15.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1986 - Chore(deps): Bump docker/setup-buildx-action from 3.9.0 to 3.10.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+### Frontend
+
+
+
 # [2.4.0] - 25.02.2025
 
 ## What’s Changed
@@ -230,6 +268,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
