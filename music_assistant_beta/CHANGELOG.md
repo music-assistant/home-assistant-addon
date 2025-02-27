@@ -1,3 +1,7 @@
+# [2.5.0 Beta 2] - 27.02.2025
+
+Fix crash at startup for some people
+
 # [2.5.0 BETA 1] - 26.02.2025
 
 ## What’s Changed
@@ -32,6 +36,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
