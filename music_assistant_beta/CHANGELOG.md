@@ -1,3 +1,7 @@
+# [2.5.0 BETA 5] - 01.03.2025
+
+Fix audioerror (stream does not start) in some occasions
+
 # [2.5.0 BETA 4] - 01.03.2025
 
 Improvements to 
@@ -89,6 +93,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
