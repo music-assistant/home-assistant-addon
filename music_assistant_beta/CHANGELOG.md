@@ -1,3 +1,8 @@
+# [2.5.0 BETA 4] - 01.03.2025
+
+Improvements to 
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b3...2.5.0b4
+
 # [2.5.0 BETA 3] - 28.02.2025
 
 ## What’s Changed
@@ -84,6 +89,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
