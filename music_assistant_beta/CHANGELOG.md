@@ -1,3 +1,19 @@
+# [2.5.0 BETA 6] - 04.03.2025
+
+## What's Changed
+
+* Feat: Move the output limiter option from DSP to Player Settings by @maximmaxim345 in https://github.com/music-assistant/server/pull/1981
+* Chore(deps): Bump pytest from 8.3.4 to 8.3.5 by @dependabot in https://github.com/music-assistant/server/pull/1999
+* Chore(deps): Bump codespell from 2.3.0 to 2.4.1 by @dependabot in https://github.com/music-assistant/server/pull/1998
+* ABS: fix for another unexpected API response by @fmunkes in https://github.com/music-assistant/server/pull/1994
+* Add iTunes Podcast Search Provider by @fmunkes in https://github.com/music-assistant/server/pull/1977
+* Chore(deps): Bump syrupy from 4.8.1 to 4.8.2 by @dependabot in https://github.com/music-assistant/server/pull/1996
+* Audible provider: Fixes pagination and small cleanups by @ztripez in https://github.com/music-assistant/server/pull/1982
+* frontend-2.12.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2001
+* Add more robust caching when internet speed is slow
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b5...2.5.0b6
+
 # [2.5.0 BETA 5] - 01.03.2025
 
 Fix audioerror (stream does not start) in some occasions
@@ -93,6 +109,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
