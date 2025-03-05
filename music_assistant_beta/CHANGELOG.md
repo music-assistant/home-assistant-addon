@@ -1,3 +1,14 @@
+# [2.5.0 BETA 7] - 05.03.2025
+
+## What's Changed
+
+* iBroadcast: Correct disc numbers in case the album has a disc number provided by @robsonke in https://github.com/music-assistant/server/pull/2000
+* Adjust Tidal provider to a fully async implementation by @jozefKruszynski in https://github.com/music-assistant/server/pull/1995
+* Fix stream errors and player getting into a loop of playing just a few seconds of each track
+* Fix announcements
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b5...2.5.0b7
+
 # [2.5.0 BETA 6] - 04.03.2025
 
 ## What's Changed
@@ -109,6 +120,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
