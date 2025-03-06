@@ -1,3 +1,9 @@
+# [2.5.0 BETA 8] - 06.03.2025
+
+More fixes for streaming and announcements, especially on slower connections and better handling of super short audio clips.
+
+More fixes for Tidal provider
+
 # [2.5.0 BETA 7] - 05.03.2025
 
 ## What's Changed
@@ -120,6 +126,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
