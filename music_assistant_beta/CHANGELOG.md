@@ -1,3 +1,20 @@
+# [2.5.0 BETA 9] - 07.03.2025
+
+## What's Changed
+
+* Add LastFM Audio Scrobbler plugin provider by @wjzijderveld in https://github.com/music-assistant/server/pull/1850
+* Fix broken links in DEVELOPMENT.md by @jdelaney72 in https://github.com/music-assistant/server/pull/2006
+* Fix: Missing `MULTI_DEVICE_DSP` in player groups by @maximmaxim345 in https://github.com/music-assistant/server/pull/2007
+* Add advanced networking (list of IPs) to Sonos S1 provider by @mcblum in https://github.com/music-assistant/server/pull/1988
+* Various minor fixes to streaming
+* 
+## New Contributors
+* @wjzijderveld made their first contribution in https://github.com/music-assistant/server/pull/1850
+* @jdelaney72 made their first contribution in https://github.com/music-assistant/server/pull/2006
+* @mcblum made their first contribution in https://github.com/music-assistant/server/pull/1988
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b8...2.5.0b9
+
 # [2.5.0 BETA 8] - 06.03.2025
 
 More fixes for streaming and announcements, especially on slower connections and better handling of super short audio clips.
@@ -126,6 +143,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
