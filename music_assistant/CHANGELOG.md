@@ -1,3 +1,13 @@
+# [2.4.3] - 07.03.2025
+
+## What’s Changed
+
+* Various optimizations to streaming, especially for slower connections.
+* Fix several issues with announcements.
+* Fix several issues with short audio clips.
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.2...2.4.3
+
 # [2.4.2] - 27.02.2025
 
 Fix crash at startup with 2.4.1 for some people.
@@ -272,6 +282,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
