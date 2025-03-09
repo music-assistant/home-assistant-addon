@@ -1,3 +1,12 @@
+# [2.4.4] - 09.03.2025
+
+- Fix: ensure the source attribute gets restored after playback of announcements
+- Fix Subsonic: Use transcode metadata when present
+- Fix: always use fallback default supported samplerate for esphome player
+- Fix: prevent high cpu when filling cache
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.3...2.4.4
+
 # [2.4.3] - 07.03.2025
 
 ## What’s Changed
@@ -282,6 +291,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
