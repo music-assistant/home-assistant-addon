@@ -1,3 +1,43 @@
+# [2.5.0 BETA 10] - 09.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 10
+
+## What's Changed
+
+* Tidal provider maintenance: add tidaluser class by @jozefKruszynski in https://github.com/music-assistant/server/pull/2010
+* Fix Subsonic: Use transcode metadata when present by @khers in https://github.com/music-assistant/server/pull/2011
+* Add pkce to Tidal provider's manifest requirements by @jozefKruszynski in https://github.com/music-assistant/server/pull/2013
+* Add ListenBrainz scrobbler provider by @ijc in https://github.com/music-assistant/server/pull/2008
+* Rename the slimproto provider to squeezelite by @marcelveldt in https://github.com/music-assistant/server/pull/2015
+* Add Built-in (web) Player Provider by @maximmaxim345 in https://github.com/music-assistant/server/pull/2009
+* Fix: Subsonic: Catch DataNotFoundError for artwork by @khers in https://github.com/music-assistant/server/pull/2012
+* frontend-2.13.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2016
+* Various small bufixes
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b9...2.5.0b10
+
+### Frontend 2.13.0
+
+## 🐛 Bugfixes
+
+- #903 - fix: Missing options when adding a new PEQ band (@maximmaxim345)
+
+## 🚀 Features
+
+- #901 - Allow RTSP URLs for Builtin Provider (@jdelaney72)
+- #902 - Feat: Built-in Web Player Provider (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 9] - 07.03.2025
 
 ## What's Changed
@@ -143,6 +183,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
