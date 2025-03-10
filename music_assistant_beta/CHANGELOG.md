@@ -1,3 +1,57 @@
+# [2.5.0 BETA 11] - 10.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 11
+
+## What's Changed
+
+* Ignore playlists which are stored with album tracks by @marcelveldt in https://github.com/music-assistant/server/pull/2017
+* Fix playlist parsing with parent folder references by @marcelveldt in https://github.com/music-assistant/server/pull/2019
+* Fix: Subsonic: Bump py-opensonic to fix stupid typo by @khers in https://github.com/music-assistant/server/pull/2024
+* Various bugfixes for the LastFM provider by @wjzijderveld in https://github.com/music-assistant/server/pull/2018
+* frontend-2.13.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2025
+* Fix for new builtin (web) player in the frontend.
+* Various fixes for high cpu usage in some special conditions.
+* Fixes for stream error in some special conditions.
+
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b10...2.5.0b11
+
+### Frontend 2.13.1
+
+- #913 - Feat: Improve DSP Settings link in the Player Settings (@maximmaxim345)
+
+## 🐛 Bugfixes
+
+- #912 - Fix: Invalid URL with the built-in Web Player (@maximmaxim345)
+
+## 🚀 Features
+
+- #914 - Feat: Make the frequency slider behave logarithmically (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>8 changes</summary>
+
+- #904 - Chore(deps-dev): Bump nanoid from 5.1.2 to 5.1.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #905 - Chore(deps): Bump swiper from 11.2.4 to 11.2.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #906 - Chore(deps-dev): Bump eslint-config-prettier from 10.0.2 to 10.1.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #907 - Chore(deps-dev): Bump vite from 6.2.0 to 6.2.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #908 - Chore(deps): Bump vue-i18n from 11.1.1 to 11.1.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #909 - Chore(deps-dev): Bump @types/node from 22.13.9 to 22.13.10 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #910 - Chore(deps): Bump vuetify from 3.7.14 to 3.7.15 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #911 - Chore(deps-dev): Bump eslint-plugin-vue from 9.32.0 to 9.33.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.5.0 BETA 10] - 09.03.2025
 
 ## What’s Changed
@@ -183,6 +237,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
