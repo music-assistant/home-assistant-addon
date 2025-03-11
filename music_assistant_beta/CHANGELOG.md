@@ -1,3 +1,15 @@
+# [2.5.0 BETA 12] - 11.03.2025
+
+## What's Changed
+
+* Increase clarity of note by @OzGav in https://github.com/music-assistant/server/pull/2026
+* listenbrainz: Cross-port fixes from last.fm scrobbler by @ijc in https://github.com/music-assistant/server/pull/2027
+* Finalize stream caching + fix several bugs by @marcelveldt in https://github.com/music-assistant/server/pull/2029
+* [LastFM Scrobbler] Add some basic unit tests and fix a bug by @wjzijderveld in https://github.com/music-assistant/server/pull/2028
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b11...2.5.0b12
+
 # [2.5.0 BETA 11] - 10.03.2025
 
 ## What’s Changed
@@ -237,6 +249,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
