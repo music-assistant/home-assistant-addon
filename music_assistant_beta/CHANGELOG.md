@@ -1,3 +1,42 @@
+# [2.5.0 BETA 13] - 13.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 13
+
+## What's Changed
+
+* Some small improvements to the Airplay provider by @marcelveldt in https://github.com/music-assistant/server/pull/2032
+* Add base logic for recommendations by @marcelveldt in https://github.com/music-assistant/server/pull/2033
+* [Chore] Move podcastparser parse functions from itunes search provider to helpers by @fmunkes in https://github.com/music-assistant/server/pull/2034
+* Feat: Mutichannel Parametric Equalizer by @maximmaxim345 in https://github.com/music-assistant/server/pull/2031
+* Several optimizations to the Snapcast provider by @marcelveldt in https://github.com/music-assistant/server/pull/2037
+* Podcastfeed: Use helper functions by @fmunkes in https://github.com/music-assistant/server/pull/2035
+* frontend-2.14.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2038
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b12...2.5.0b13
+
+### Frontend 2.13.2
+
+- #915 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## 🚀 Features
+
+- #917 - Feat: Mutichannel Parametric Equalizer (@maximmaxim345)
+
+## 🧰 Maintenance
+
+- #916 - Various minor fixes (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 12] - 11.03.2025
 
 ## What's Changed
@@ -249,6 +288,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
