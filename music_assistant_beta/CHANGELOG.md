@@ -1,3 +1,19 @@
+# [2.5.0b14] - 15.03.2025
+
+## What's Changed
+
+* Add gPodder podcast provider by @fmunkes in https://github.com/music-assistant/server/pull/2036
+* Chore(deps): Bump yt-dlp from 2024.12.23 to 2025.2.19 by @dependabot in https://github.com/music-assistant/server/pull/2020
+* abs - fix: do not sync audiobooks without tracks by @fmunkes in https://github.com/music-assistant/server/pull/2041
+* Chore(deps): Bump docker/login-action from 3.3.0 to 3.4.0 by @dependabot in https://github.com/music-assistant/server/pull/2039
+* Add Recommendations to Tidal provider by @jozefKruszynski in https://github.com/music-assistant/server/pull/2040
+* Fix wrong state in HA integration due to model mismatch
+* Fix issues with radio streams
+* Some final touches to stream caching
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b13...2.5.0b14
+
 # [2.5.0 BETA 13] - 13.03.2025
 
 ## What’s Changed
@@ -288,6 +304,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
