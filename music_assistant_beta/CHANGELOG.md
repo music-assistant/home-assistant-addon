@@ -1,3 +1,12 @@
+# [2.5.0 BETA 15] - 16.03.2025
+
+## What's Changed
+
+* Refactor common code from listenbrainz and lastfm scrobblers by @ijc in https://github.com/music-assistant/server/pull/2042
+* Fix some issues with cache files not being found
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b14...2.5.0b15
+
 # [2.5.0b14] - 15.03.2025
 
 ## What's Changed
@@ -304,6 +313,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
