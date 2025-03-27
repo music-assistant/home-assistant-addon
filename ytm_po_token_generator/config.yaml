@@ -7,14 +7,8 @@ image: brainicism/bgutil-ytdlp-pot-provider:0.8.1
 arch:
   - amd64
   - aarch64
-homeassistant_api: false
-auth_api: false
-host_network: false
 ports:
   - 4416: 4416
-panel_icon: mdi:play-circle
-panel_title: YT Music PO Token Generator
-panel_admin: false
 init: false
 advanced: false
 stage: experimental
