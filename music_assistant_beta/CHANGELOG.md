@@ -1,3 +1,72 @@
+# [2.5.0 BETA 16] - 27.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 16
+
+## What's Changed
+
+* Fix snapcast using external snapserver by @marcelveldt in https://github.com/music-assistant/server/pull/2044
+* feat: Built-in Web Player Part 2 by @maximmaxim345 in https://github.com/music-assistant/server/pull/2043
+* YTM: Ignore GVS token message for now. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2050
+* Audible: fixes pagination logic error is a users library have sub 50 items by @ztripez in https://github.com/music-assistant/server/pull/2055
+* Tidal: lower cache ttl, add translation keys to folders by @jozefKruszynski in https://github.com/music-assistant/server/pull/2049
+* fix: gPodder not checking guid on playlog sync if it is present by @fmunkes in https://github.com/music-assistant/server/pull/2053
+* Add support for Spotify Connect volume control by @Nezz in https://github.com/music-assistant/server/pull/2051
+* Make airplay provider robust to empty dacp request by @Dvad in https://github.com/music-assistant/server/pull/2052
+* Fix Audible provider crash during library sync by @ztripez in https://github.com/music-assistant/server/pull/2060
+* Add artist and release mbids to listenbrainz scobbles by @ijc in https://github.com/music-assistant/server/pull/2048
+* FIx: Subsonic: Don't pass container type to StreamDetails by @khers in https://github.com/music-assistant/server/pull/2061
+* Abs + Feed Parsers: release_date as datetime by @fmunkes in https://github.com/music-assistant/server/pull/2064
+* frontend-2.13.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2065
+* Fix Sonos provider pause weirdness
+* Fix Airplay provider restart stream
+* Several final fixes for audio caching
+* Various small tweaks and bugfixes
+
+
+## New Contributors
+* @Nezz made their first contribution in https://github.com/music-assistant/server/pull/2051
+* @Dvad made their first contribution in https://github.com/music-assistant/server/pull/2052
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b15...2.5.0b16
+
+### Frontend 2.13.3
+
+- #936 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #924 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #923 - Fix: Show the web player on all tabs of MA (@maximmaxim345)
+
+## 🚀 Features
+
+- #918 - feat: Built-in Web Player Part 2 (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>13 changes</summary>
+
+- #932 - Chore(deps-dev): Bump unplugin from 2.2.0 to 2.2.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #931 - Chore(deps): Bump vuetify from 3.7.16 to 3.7.18 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #930 - Chore(deps): Bump @intlify/unplugin-vue-i18n from 6.0.3 to 6.0.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #929 - Chore(deps-dev): Bump sass from 1.85.1 to 1.86.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #934 - Chore(deps-dev): Bump @vitejs/plugin-vue from 5.2.2 to 5.2.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #928 - Chore(deps): Bump swiper from 11.2.5 to 11.2.6 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #927 - Chore(deps-dev): Bump @types/node from 22.13.10 to 22.13.11 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #926 - Chore(deps-dev): Bump vite-plugin-pwa from 0.21.1 to 0.21.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #925 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.2.3 to 5.2.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #919 - Chore(deps): Bump vuetify from 3.7.15 to 3.7.16 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #920 - Chore(deps-dev): Bump vite from 6.2.1 to 6.2.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #921 - Chore(deps-dev): Bump @vitejs/plugin-vue from 5.2.1 to 5.2.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #922 - Chore(deps-dev): Bump nanoid from 5.1.3 to 5.1.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.5.0 BETA 15] - 16.03.2025
 
 ## What's Changed
@@ -313,6 +382,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
