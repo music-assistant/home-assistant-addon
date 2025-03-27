@@ -1,3 +1,30 @@
+# [2.5.0 BETA 17] - 27.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 17
+
+## What's Changed
+
+* Subsonic: Set metadata.release_date when available by @khers in https://github.com/music-assistant/server/pull/2067
+* Soundcloud: Fallback to the track details for missing entries in playlists by @robsonke in https://github.com/music-assistant/server/pull/2063
+* frontend-2.14.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2068
+* Fix frontend not loading on HTTP address
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b16...2.5.0b17
+
+### Frontend 2.14.2
+
+Fix frontend when loaded as HTTP
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 16] - 27.03.2025
 
 ## What’s Changed
@@ -382,6 +409,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
