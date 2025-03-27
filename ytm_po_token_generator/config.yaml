@@ -8,4 +8,4 @@ arch:
   - amd64
   - aarch64
 ports:
-  - "4416/TCP": 4416
+  "4416/TCP": 4416
