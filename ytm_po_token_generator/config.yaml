@@ -1,0 +1,18 @@
+name: YT Music PO Token Generator
+version: 0.8.1
+slug: ytm_po_token_generator
+description: A HA addon wrapper for the BgUtils POT Provider that can generate PO tokens for Youtube Music.
+url: https://music-assistant.io
+image: brainicism/bgutil-ytdlp-pot-provider:0.8.1
+arch:
+  - amd64
+  - aarch64
+homeassistant_api: false
+auth_api: true
+host_network: true
+panel_icon: mdi:play-circle
+panel_title: YT Music PO Token Generator
+panel_admin: false
+init: false
+advanced: false
+stage: experimental
