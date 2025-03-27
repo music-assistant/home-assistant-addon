@@ -9,6 +9,3 @@ arch:
   - aarch64
 ports:
   - 4416: 4416
-init: false
-advanced: false
-stage: experimental
