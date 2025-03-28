@@ -1,3 +1,14 @@
+# [2.5.0 BETA 18] - 28.03.2025
+
+## What's Changed
+
+* YT Music: Auto generate PO tokens for stream urls by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2069
+* Chore(deps): Bump aioaudiobookshelf from 0.1.4 to 0.1.6 by @dependabot in https://github.com/music-assistant/server/pull/2059
+* Add configurable recommendation rows on home screen
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b17...2.5.0b18
+
 # [2.5.0 BETA 17] - 27.03.2025
 
 ## What’s Changed
@@ -409,6 +420,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
