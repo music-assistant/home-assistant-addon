@@ -1,3 +1,37 @@
+# [2.5.0 BETA 19] - 29.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 19
+
+## What's Changed
+
+* Tidal: fix images and add descriptions to mixes by @jozefKruszynski in https://github.com/music-assistant/server/pull/2071
+* fix: Built-in Web Player Part 3 by @maximmaxim345 in https://github.com/music-assistant/server/pull/2072
+* frontend-2.14.4 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2073
+* Possible fix for streamcache on docker installs
+* Fixes for recommendations
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b18...2.5.0b19
+
+### Frontend 2.14.4
+
+## 🐛 Bugfixes
+
+- #938 - fix: Built-in Web Player Part 3 (@maximmaxim345)
+
+## 🚀 Features and enhancements
+
+- Add some tweaks to the homescreen widgets
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 18] - 28.03.2025
 
 ## What's Changed
@@ -420,6 +454,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
