@@ -1,3 +1,34 @@
+# [2.5.0 BETA 20] - 30.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 20
+
+## What's Changed
+
+* ABS: Enhancement - support for recommendations by @fmunkes in https://github.com/music-assistant/server/pull/2074
+* Make Apple Music sync more reliable by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2075
+* Add recommendations to itunes_podcasts by @fmunkes in https://github.com/music-assistant/server/pull/2076
+* A few small bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/2078
+* frontend-2.14.5 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2077
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b19...2.5.0b20
+
+### Frontend 2.14.5
+
+## 🧰 Maintenance
+
+- #939 - Lokalise: Translations update (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 19] - 29.03.2025
 
 ## What’s Changed
@@ -454,6 +485,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
