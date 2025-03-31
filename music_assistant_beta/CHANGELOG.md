@@ -1,3 +1,43 @@
+# [2.5.0 BETA 22] - 31.03.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 22
+
+## What's Changed
+
+* feat: add DSP Config changed event by @maximmaxim345 in https://github.com/music-assistant/server/pull/2079
+* Revamped Crossfade support by @marcelveldt in https://github.com/music-assistant/server/pull/2087
+* frontend-2.14.6 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2088
+* fix: Recommendations for ABS and iTunes Podcasts by @fmunkes in https://github.com/music-assistant/server/pull/2086
+* Fix: enqueue next item by @marcelveldt in https://github.com/music-assistant/server/pull/2089
+
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b21...2.5.0b22
+
+### Frontend 2.14.6
+
+- #940 - feat: add DSP Config changed event (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>5 changes</summary>
+
+- #942 - Chore(deps-dev): Bump @types/node from 22.13.11 to 22.13.14 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #943 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.2.4 to 5.2.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #944 - Chore(deps-dev): Bump vite-plugin-pwa from 0.21.2 to 1.0.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #945 - Chore(deps): Bump vuetify from 3.7.18 to 3.7.19 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #946 - Chore(deps-dev): Bump vite from 6.2.2 to 6.2.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.5.0 BETA 21] - 31.03.2025
 
 ## What's Changed
@@ -495,6 +535,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
