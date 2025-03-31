@@ -1,3 +1,13 @@
+# [2.5.0 BETA 21] - 31.03.2025
+
+## What's Changed
+
+* abs: browse recommendation by @fmunkes in https://github.com/music-assistant/server/pull/2080
+* Fix issue with enqueuing of items
+* Add db migration for invalid releasedate in db.
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b20...2.5.0b21
+
 # [2.5.0 BETA 20] - 30.03.2025
 
 ## What’s Changed
@@ -485,6 +495,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
