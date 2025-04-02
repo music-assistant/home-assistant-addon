@@ -1,3 +1,37 @@
+# [2.5.0 BETA 23] - 02.04.2025
+
+## What’s Changed
+
+### Server 2.5.0 BETA 23
+
+## What's Changed
+
+* Fix radio stream playback by @marcelveldt in https://github.com/music-assistant/server/pull/2090
+* fix: Built-in Web Player Part 4 by @maximmaxim345 in https://github.com/music-assistant/server/pull/2091
+* YT Music: Fix missing track thumbs by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2092
+* fix: abs - recommendation, series handling by @fmunkes in https://github.com/music-assistant/server/pull/2093
+* frontend-2.14.7 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2094
+* Fix for enqueueing track(s) while the last (or only) track is playing
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b22...2.5.0b23
+
+### Frontend 2.14.7
+
+- #947 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## 🐛 Bugfixes
+
+- #948 - fix: Built-in Web Player Part 4 (@maximmaxim345)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 22] - 31.03.2025
 
 ## What’s Changed
@@ -535,6 +569,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
