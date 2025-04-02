@@ -1,3 +1,7 @@
+# [2.5.0 BETA 24] - 02.04.2025
+
+Fix playback when crossfade is enabled
+
 # [2.5.0 BETA 23] - 02.04.2025
 
 ## What’s Changed
@@ -569,6 +573,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
