@@ -1,3 +1,100 @@
+# [2.5.0] - 03.04.2025
+
+## What’s Changed
+
+### Server 2.5.0
+
+Time for yet another great release. We've had a bit shorter beta cycle this time but still the release is packed with new providers, awesome new features and tons of bugfixes and small enhancements. 
+
+My personal favorite of this release is the builtin player so you can take listen to your favorite tunes on the device you use to browse the webinterface. Subscribed to Home Assistant cloud and running the official Music Assistant add-on ? We have a treat for you: Using the builtin player will work (out of the box and completely secure) everywhere around the world! Oh and we now support recommendations on the homescreen (which is now also fully customizable btw).
+
+A HUGE thank you for all contributors, beta testers, volunteers providing support and everyone else involved, you're all amazing!
+
+Marcel
+
+
+
+## 🚀 New Providers
+
+* Add LastFM Audio Scrobbler plugin provider by @wjzijderveld in https://github.com/music-assistant/server/pull/1850
+* Add ListenBrainz scrobbler provider by @ijc in https://github.com/music-assistant/server/pull/2008
+* Add Built-in (web) Player Provider by @maximmaxim345 in https://github.com/music-assistant/server/pull/2009
+* Add gPodder podcast provider by @fmunkes in https://github.com/music-assistant/server/pull/2036
+
+
+## 🚀 New Features
+
+* Add (base) support for recommendations on the homescreen by @marcelveldt in https://github.com/music-assistant/server/pull/2033
+* Add support to login via API key on AudioBookShelf by @fmunkes in https://github.com/music-assistant/server/pull/1990
+* Add Multichannel support to Parametric Equalizer by @maximmaxim345 in https://github.com/music-assistant/server/pull/2031
+* Add Recommendations to Tidal provider by @jozefKruszynski in https://github.com/music-assistant/server/pull/2040
+* Add support for Spotify Connect volume control by @Nezz in https://github.com/music-assistant/server/pull/2051
+* Add support for enhancements to AudioBookshelf by @fmunkes in https://github.com/music-assistant/server/pull/2074
+* Add support for recommendations to itunes_podcasts by @fmunkes in https://github.com/music-assistant/server/pull/2076
+
+
+## 🐛 Bugfixes
+
+* Add caching of audio data to fix streams not starting fast enough by @marcelveldt in https://github.com/music-assistant/server/pull/1989
+* Fix Large PodcastEpisode listings not working by @marcelveldt in https://github.com/music-assistant/server/pull/1991
+* Various (very) small bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/1992
+* Fix Subsonic: Use transcode metadata when present by @khers in https://github.com/music-assistant/server/pull/2011
+* Fix: Subsonic: Catch DataNotFoundError for artwork by @khers in https://github.com/music-assistant/server/pull/2012
+* Fix playlist parsing with parent folder references by @marcelveldt in https://github.com/music-assistant/server/pull/2019
+* abs - fix: do not sync audiobooks without tracks by @fmunkes in https://github.com/music-assistant/server/pull/2041
+* Audible: fixes pagination logic error is a users library have sub 50 items by @ztripez in https://github.com/music-assistant/server/pull/2055
+* Make airplay provider robust to empty dacp request by @Dvad in https://github.com/music-assistant/server/pull/2052
+* Fix Audible provider crash during library sync by @ztripez in https://github.com/music-assistant/server/pull/2060
+* Fix: Subsonic: Don't pass container type to StreamDetails by @khers in https://github.com/music-assistant/server/pull/2061
+* Make Apple Music sync more reliable by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2075
+* Fix: enqueue next item by @marcelveldt in https://github.com/music-assistant/server/pull/2089
+* YT Music: Fix missing track thumbs by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2092
+
+
+## 🧰 Maintenance and small enhancements
+
+* Rename the slimproto provider to squeezelite by @marcelveldt in https://github.com/music-assistant/server/pull/2015
+* iBroadcast: Correct disc numbers in case the album has a disc number provided by @robsonke in https://github.com/music-assistant/server/pull/2000
+* Adjust Tidal provider to a fully async implementation by @jozefKruszynski in https://github.com/music-assistant/server/pull/1995
+* Fix broken links in DEVELOPMENT.md by @jdelaney72 in https://github.com/music-assistant/server/pull/2006
+* Add advanced networking (list of IPs) to Sonos S1 provider by @mcblum in https://github.com/music-assistant/server/pull/1988
+* Ignore playlists which are stored with album tracks by @marcelveldt in https://github.com/music-assistant/server/pull/2017
+* Some small improvements to the Airplay provider by @marcelveldt in https://github.com/music-assistant/server/pull/2032
+* Several optimizations to the Snapcast provider by @marcelveldt in https://github.com/music-assistant/server/pull/2037
+* Podcastfeed: Use helper functions by @fmunkes in https://github.com/music-assistant/server/pull/2035
+* Fix snapcast using external snapserver by @marcelveldt in https://github.com/music-assistant/server/pull/2044
+* Add artist and release mbids to listenbrainz scobbles by @ijc in https://github.com/music-assistant/server/pull/2048
+* Soundcloud: Fallback to the track details for missing entries in playlists by @robsonke in https://github.com/music-assistant/server/pull/2063
+* YT Music: Auto generate PO tokens for stream urls by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2069
+* Revamped Crossfade support by @marcelveldt in https://github.com/music-assistant/server/pull/2087
+* Snapserver v0.30.0 don't support add/remove stream by @SantiagoSotoC in https://github.com/music-assistant/server/pull/2098
+* Snapcast handle player config removed by @SantiagoSotoC in https://github.com/music-assistant/server/pull/2099
+* frontend-2.14.8 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2096
+
+
+## New Contributors
+* @wjzijderveld made their first contribution in https://github.com/music-assistant/server/pull/1850
+* @jdelaney72 made their first contribution in https://github.com/music-assistant/server/pull/2006
+* @mcblum made their first contribution in https://github.com/music-assistant/server/pull/1988
+* @Nezz made their first contribution in https://github.com/music-assistant/server/pull/2051
+* @Dvad made their first contribution in https://github.com/music-assistant/server/pull/2052
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.4.4...v2.5.0
+
+### Frontend 2.14.8
+
+## 🧰 Maintenance
+
+- #949 - Minor grammar tweaks (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.4.4] - 09.03.2025
 
 - Fix: ensure the source attribute gets restored after playback of announcements
@@ -291,6 +388,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
