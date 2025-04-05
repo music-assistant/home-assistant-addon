@@ -1,3 +1,40 @@
+# [2.6.0 BETA 0] - 05.04.2025
+
+## What’s Changed
+
+### Server 2.6.0 BETA 0
+
+**The start of a new beta cycle !**
+
+## What's Changed
+
+* fix: Remove unused Sample Rate config from the Web Player by @maximmaxim345 in https://github.com/music-assistant/server/pull/2095
+* Snapserver v0.30.0 don't support add/remove stream by @SantiagoSotoC in https://github.com/music-assistant/server/pull/2098
+* frontend-2.14.8 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2096
+* Snapcast re add on player config removed by @SantiagoSotoC in https://github.com/music-assistant/server/pull/2099
+* Bluesound provider: use ip_address not address by @bmatheny in https://github.com/music-assistant/server/pull/2102
+* Several small fixes for playback and enqueuing by @marcelveldt in https://github.com/music-assistant/server/pull/2105
+* Snapcast fix external server stream by @SantiagoSotoC in https://github.com/music-assistant/server/pull/2103
+
+## New Contributors
+* @bmatheny made their first contribution in https://github.com/music-assistant/server/pull/2102
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.0b24...2.6.0b0
+
+### Frontend 2.14.8
+
+## 🧰 Maintenance
+
+- #949 - Minor grammar tweaks (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+
+
 # [2.5.0 BETA 24] - 02.04.2025
 
 Fix playback when crossfade is enabled
@@ -573,6 +610,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
