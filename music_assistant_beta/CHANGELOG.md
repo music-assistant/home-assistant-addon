@@ -1,3 +1,17 @@
+# [2.6.0 BETA 1] - 07.04.2025
+
+## What's Changed
+
+* Fix usage of album loudness during playback by @cpaulik in https://github.com/music-assistant/server/pull/2107
+* Also use previous track to work out if an album is playing by @cpaulik in https://github.com/music-assistant/server/pull/2108
+* Audible: inverse of the suppoorted content type rule by @ztripez in https://github.com/music-assistant/server/pull/2106
+* Various small bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/2116
+
+## New Contributors
+* @cpaulik made their first contribution in https://github.com/music-assistant/server/pull/2107
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b0...2.6.0b1
+
 # [2.6.0 BETA 0] - 05.04.2025
 
 ## What’s Changed
@@ -610,6 +624,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
