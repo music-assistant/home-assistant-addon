@@ -1,3 +1,43 @@
+# [2.6.0 BETA 2] - 08.04.2025
+
+## What’s Changed
+
+### Server 2.6.0 BETA 2
+
+## What's Changed
+
+* fix: snapcast delete client by @SantiagoSotoC in https://github.com/music-assistant/server/pull/2117
+* frontend-2.14.9 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2119
+* Enhancement: gPodder - optional handling of delete action by @fmunkes in https://github.com/music-assistant/server/pull/2115
+* Various minor bugfixes and enhancements by @marcelveldt in https://github.com/music-assistant/server/pull/2120
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b1...2.6.0b2
+
+### Frontend 2.14.9
+
+- #959 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>7 changes</summary>
+
+- #952 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.2.5 to 5.2.6 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #953 - Chore(deps-dev): Bump vite from 6.2.3 to 6.2.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #954 - Chore(deps): Bump vue-i18n from 11.1.2 to 11.1.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #955 - Chore(deps-dev): Bump vite-plugin-vuetify from 2.1.0 to 2.1.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #956 - Chore(deps-dev): Bump sass from 1.86.0 to 1.86.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #957 - Chore(deps-dev): Bump @types/node from 22.13.14 to 22.14.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #950 - Chore(deps-dev): Bump typescript from 5.8.2 to 5.8.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.6.0 BETA 1] - 07.04.2025
 
 ## What's Changed
@@ -624,6 +664,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
