@@ -1,3 +1,16 @@
+# [2.6.0 BETA 3] - 09.04.2025
+
+## What's Changed
+
+* Tidal: Various playlist and mix changes by @jozefKruszynski in https://github.com/music-assistant/server/pull/2118
+* Fix cast players not available at startup by @marcelveldt in https://github.com/music-assistant/server/pull/2121
+* Make Zeroconf only bind to the default interface by @altserg in https://github.com/music-assistant/server/pull/2100
+
+## New Contributors
+* @altserg made their first contribution in https://github.com/music-assistant/server/pull/2100
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b2...2.6.0b3
+
 # [2.6.0 BETA 2] - 08.04.2025
 
 ## What’s Changed
@@ -664,6 +677,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
