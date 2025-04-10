@@ -1,3 +1,54 @@
+# [2.5.1] - 10.04.2025
+
+## What’s Changed
+
+### Server 2.5.1
+
+## 🐛 Bugfixes
+
+- #2121 - Fix cast players not available at startup (@marcelveldt)
+- #2120 - Various minor bugfixes and enhancements (@marcelveldt)
+- #2117 - fix: snapcast delete client (@SantiagoSotoC)
+- #2116 - Various small bugfixes and enhancements (@marcelveldt)
+- #2106 - Audible: inverse of the supported content type rule (@ztripez)
+- #2107 - Fix usage of album loudness during playback (@cpaulik)
+- #2103 - Snapcast fix external server stream (@SantiagoSotoC)
+- #2105 - Several small fixes for playback and enqueuing (@marcelveldt)
+- #2102 - Bluesound provider: use ip_address not address (@bmatheny)
+
+## 🧰 Maintenance
+
+- #2122 - Round loudness measurements to two digits (@cpaulik)
+- #2118 - Tidal: Various playlist and mix changes (@jozefKruszynski)
+- #2119 - frontend-2.14.9 (@music-assistant-machine)
+- #2100 - Make Zeroconf only bind to the default interface (@altserg)
+- #2115 - Enhancement: gPodder - optional handling of delete action (@fmunkes)
+- #2108 - Also use previous track to work out if an album is playing (@cpaulik)
+
+### Frontend 2.14.9
+
+- #959 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>7 changes</summary>
+
+- #952 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.2.5 to 5.2.6 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #953 - Chore(deps-dev): Bump vite from 6.2.3 to 6.2.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #954 - Chore(deps): Bump vue-i18n from 11.1.2 to 11.1.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #955 - Chore(deps-dev): Bump vite-plugin-vuetify from 2.1.0 to 2.1.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #956 - Chore(deps-dev): Bump sass from 1.86.0 to 1.86.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #957 - Chore(deps-dev): Bump @types/node from 22.13.14 to 22.14.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #950 - Chore(deps-dev): Bump typescript from 5.8.2 to 5.8.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.5.0] - 03.04.2025
 
 ## What’s Changed
@@ -388,6 +439,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
