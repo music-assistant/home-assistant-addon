@@ -1,3 +1,68 @@
+# [2.6.0 BETA 4] - 24.04.2025
+
+## What’s Changed
+
+### Server 2.6.0 BETA 4
+
+## What's Changed
+
+* fix: library items removed by music provider not removed in MA library by @fmunkes in https://github.com/music-assistant/server/pull/2124
+* Fix AirPlay branding by @lassebm in https://github.com/music-assistant/server/pull/2127
+* YTMusic: Add recommendations by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2128
+* Fix all lowercase display names for AirPlay players by @lassebm in https://github.com/music-assistant/server/pull/2126
+* Add lrc lyric parsing to tidal by @jozefKruszynski in https://github.com/music-assistant/server/pull/2081
+* Audible: fixes type error of release_date metadata by @ztripez in https://github.com/music-assistant/server/pull/2104
+* Add LRCLIB lyrics metadata provider by @jozefKruszynski in https://github.com/music-assistant/server/pull/2123
+* Suggested grammar change by @OzGav in https://github.com/music-assistant/server/pull/2134
+* Tidal: Add limits to certain api calls by @jozefKruszynski in https://github.com/music-assistant/server/pull/2135
+* Tidal: Modify recommendations setup by @jozefKruszynski in https://github.com/music-assistant/server/pull/2136
+* Audible: adding multipart audiobooks by @ztripez in https://github.com/music-assistant/server/pull/2143
+* Subsonic: Fix spelling and grammar by @OzGav in https://github.com/music-assistant/server/pull/2137
+* tidal: allow audio quality switching after authentication by @jozefKruszynski in https://github.com/music-assistant/server/pull/2144
+* Add nugs.net music provider by @brian10048 in https://github.com/music-assistant/server/pull/1974
+* frontend-2.15.0 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2148
+
+## New Contributors
+* @lassebm made their first contribution in https://github.com/music-assistant/server/pull/2127
+* @brian10048 made their first contribution in https://github.com/music-assistant/server/pull/1974
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.1...2.6.0b4
+
+### Frontend 2.15.0
+
+- #979 - Lokalise: Translations update (@marcelveldt)
+- #972 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## 🚀 Features
+
+- #960 - feat: Add lyrics viewer component (@jozefKruszynski)
+
+## 🧰 Maintenance
+
+- #962 - add open home badge (@jozefKruszynski)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>9 changes</summary>
+
+- #976 - Chore(deps): Bump @intlify/unplugin-vue-i18n from 6.0.5 to 6.0.8 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #975 - Chore(deps-dev): Bump vite from 6.2.5 to 6.3.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #969 - Chore(deps): Bump marked from 15.0.7 to 15.0.8 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #974 - Chore(deps): Bump softprops/action-gh-release from 2.2.1 to 2.2.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #971 - Chore(deps-dev): Bump eslint-config-prettier from 10.1.1 to 10.1.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #970 - Chore(deps-dev): Bump @types/node from 22.14.0 to 22.14.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #968 - Chore(deps-dev): Bump jsdom from 26.0.0 to 26.1.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #967 - Chore(deps-dev): Bump unplugin from 2.2.2 to 2.3.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #966 - Chore(deps): Bump home-assistant-js-websocket from 9.4.0 to 9.5.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.6.0 BETA 3] - 09.04.2025
 
 ## What's Changed
@@ -677,6 +742,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
