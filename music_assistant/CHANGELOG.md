@@ -1,3 +1,9 @@
+# [2.5.2] - 25.04.2025
+
+Various bugfixes
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.1...2.5.2
+
 # [2.5.1] - 10.04.2025
 
 ## What’s Changed
@@ -439,6 +445,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
