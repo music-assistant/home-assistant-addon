@@ -1,3 +1,16 @@
+# [2.6.0 BETA 5] - 27.04.2025
+
+## What's Changed
+
+* Several improvements to announcements by @chatziko in https://github.com/music-assistant/server/pull/2145
+* Volume fixes for native announcements by @chatziko in https://github.com/music-assistant/server/pull/2151
+* Add debug message about concatenating announcement stream by @chatziko in https://github.com/music-assistant/server/pull/2149
+* Some bugfixes to Sonos when playing through a group and/or with airplay mode
+* Fix stream error on group player with crossfade enabled.
+* Fix playback failing on esphome devices with only mp3 pipeline
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b4...2.6.0b5
+
 # [2.6.0 BETA 4] - 24.04.2025
 
 ## What’s Changed
@@ -742,6 +755,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
