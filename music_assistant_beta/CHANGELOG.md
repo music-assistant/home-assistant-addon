@@ -1,3 +1,20 @@
+# [2.6.0 BETA 6] - 02.05.2025
+
+## What's Changed
+
+* fix: more graceful episode handling for podcast parsers by @fmunkes in https://github.com/music-assistant/server/pull/2152
+* Add Yamaha MusicCast provider by @fmunkes in https://github.com/music-assistant/server/pull/2142
+* Support for Apple Music authentication in web UI by @maxlyth in https://github.com/music-assistant/server/pull/2150
+* Adjust file location and Add MusicCast icons by @OzGav in https://github.com/music-assistant/server/pull/2162
+* Add extra artist splitters in tag parser by @OzGav in https://github.com/music-assistant/server/pull/2163
+* [Airplay] Handle mDNS remove messages without service info by @poupounetjoyeux in https://github.com/music-assistant/server/pull/2154
+
+## New Contributors
+* @maxlyth made their first contribution in https://github.com/music-assistant/server/pull/2150
+* @poupounetjoyeux made their first contribution in https://github.com/music-assistant/server/pull/2154
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b5...2.6.0b6
+
 # [2.6.0 BETA 5] - 27.04.2025
 
 ## What's Changed
@@ -755,6 +772,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
