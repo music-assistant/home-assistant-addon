@@ -1,6 +1,6 @@
 name: Music Assistant Server (dev/nightly)
 # version number gets updated only when the mass base image updates!
-version: 1.2.3
+version: 1.3.0
 slug: music_assistant_dev
 description: Development (nightly) version of Music Assistant.
   This add-on installs the latest version from the (configurable) branch directly from git at startup.
