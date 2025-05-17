@@ -1,3 +1,76 @@
+# [2.6.0 BETA 7] - 17.05.2025
+
+## What’s Changed
+
+### Server 2.6.0 BETA 7
+
+## What's Changed
+
+* Always choose mp3 streaming format for the Soundcloud provider by @robsonke in https://github.com/music-assistant/server/pull/2169
+* Subsonic: Fix: Only lookup album for track when an id exists by @khers in https://github.com/music-assistant/server/pull/2167
+* fix: musiccast - volume level handling + device discovery + current track by @fmunkes in https://github.com/music-assistant/server/pull/2165
+* Subsonic: Move to new api library by @khers in https://github.com/music-assistant/server/pull/2160
+* Add local lrc lyrics parsing to filesystem provider by @fmunkes in https://github.com/music-assistant/server/pull/2166
+* Use webserver for auth helper by @marcelveldt in https://github.com/music-assistant/server/pull/2170
+* Grammar and additional text suggestion by @OzGav in https://github.com/music-assistant/server/pull/2171
+* chore: MusicCast player config improvements + friendly names by @fmunkes in https://github.com/music-assistant/server/pull/2178
+* chore: sonos - use upnp helpers by @fmunkes in https://github.com/music-assistant/server/pull/2179
+* Subsonic: Protect all list iteration from possible NoneType by @khers in https://github.com/music-assistant/server/pull/2180
+* Feature: Subsonic: Add bookmark tracking for podcast episodes by @khers in https://github.com/music-assistant/server/pull/2188
+* Add subsonic scrobbler plugin by @Clusters in https://github.com/music-assistant/server/pull/2168
+* Fix: Prevent NoneType error whenever the track or album name is empty in a Plex playlist by @cociweb in https://github.com/music-assistant/server/pull/2182
+* Chore: Add mypy for helpers by @fmunkes in https://github.com/music-assistant/server/pull/2097
+* chore/fix: Subsonic: Update parsers and tests by @khers in https://github.com/music-assistant/server/pull/2181
+* fix: unbound library_items by @fmunkes in https://github.com/music-assistant/server/pull/2191
+* Fix: Subsonic: Expose the conn object for use outside of Provider by @khers in https://github.com/music-assistant/server/pull/2192
+* Improve sync stability by adapting to diff trend shifts by @pmamak in https://github.com/music-assistant/server/pull/2189
+* safer get for optional chromecast param "queue_item_id" by @el in https://github.com/music-assistant/server/pull/2183
+* frontend-2.15.1 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2193
+
+## New Contributors
+* @Clusters made their first contribution in https://github.com/music-assistant/server/pull/2168
+* @pmamak made their first contribution in https://github.com/music-assistant/server/pull/2189
+* @el made their first contribution in https://github.com/music-assistant/server/pull/2183
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b6...2.6.0b7
+
+### Frontend 2.15.1
+
+- #998 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #990 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #985 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## 🧰 Maintenance
+
+- #973 - Add translation for builtin_playlists (@OzGav)
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>14 changes</summary>
+
+- #997 - Chore(deps-dev): Bump @types/node from 22.15.3 to 22.15.17 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #993 - Chore(deps-dev): Bump vite from 6.3.4 to 6.3.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #995 - Chore(deps-dev): Bump eslint-config-prettier from 10.1.2 to 10.1.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #994 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.3.1 to 5.4.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #992 - Chore(deps-dev): Bump @vitejs/plugin-vue from 5.2.3 to 5.2.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #991 - Chore(deps-dev): Bump sass from 1.87.0 to 1.88.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #988 - Chore(deps-dev): Bump @types/node from 22.15.2 to 22.15.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #987 - Chore(deps-dev): Bump vite from 6.3.3 to 6.3.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #986 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.2.6 to 5.3.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #981 - Chore(deps-dev): Bump sass from 1.86.3 to 1.87.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #980 - Chore(deps): Bump marked from 15.0.10 to 15.0.11 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #982 - Chore(deps): Bump vue-router from 4.5.0 to 4.5.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #983 - Chore(deps-dev): Bump @types/node from 22.14.1 to 22.15.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #984 - Chore(deps-dev): Bump vue-tsc from 2.2.8 to 2.2.10 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.6.0 BETA 6] - 02.05.2025
 
 ## What's Changed
@@ -772,6 +845,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
