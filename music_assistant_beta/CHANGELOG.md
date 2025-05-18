@@ -1,3 +1,7 @@
+# [2.6.0 BETA 8] - 18.05.2025
+
+Fix some enqueuing issues with Sonos (s2) 
+
 # [2.6.0 BETA 7] - 17.05.2025
 
 ## What’s Changed
@@ -845,6 +849,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
