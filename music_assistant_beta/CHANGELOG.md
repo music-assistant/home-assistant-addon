@@ -1,3 +1,14 @@
+# [2.6.0 BETA 9] - 21.05.2025
+
+## What's Changed
+
+* Fix error when enqueuing items while queue is already playing
+* Chore: Separate BrowseFolder from MediaItemType by @fmunkes in https://github.com/music-assistant/server/pull/2194
+* Fix: Chore: Subonsic: Fix strict typing errors by @khers in https://github.com/music-assistant/server/pull/2200
+* Chore(deps): Subsonic Update to libopensonic 7.0.2 by @khers in https://github.com/music-assistant/server/pull/2201
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b8...2.6.0b9
+
 # [2.6.0 BETA 8] - 18.05.2025
 
 Fix some enqueuing issues with Sonos (s2) 
@@ -849,6 +860,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
