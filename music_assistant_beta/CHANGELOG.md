@@ -1,3 +1,10 @@
+# [2.6.0 BETA 10] - 23.05.2025
+
+## What’s Changed
+
+* Bump YT Music dependencies by @MarvinSchenkel  in https://github.com/music-assistant/server/pull/2202
+
+
 # [2.6.0 BETA 9] - 21.05.2025
 
 ## What's Changed
@@ -860,6 +867,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
