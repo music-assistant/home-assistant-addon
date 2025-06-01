@@ -1,3 +1,10 @@
+# [2.5.4] - 01.06.2025
+
+## What’s Changed
+
+* Fix Sonos provider regression issue in 2.5.3
+
+
 # [2.5.3] - 01.06.2025
 
 ## What’s Changed
@@ -453,6 +460,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
