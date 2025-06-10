@@ -1,3 +1,20 @@
+# [2.6.0 BETA 11] - 10.06.2025
+
+## What's Changed
+* Fix: Subsonic Scrobble: Split the internal id for Podcast Episode by @khers in https://github.com/music-assistant/server/pull/2203
+* Update playlist correctly with deletion by @OzGav in https://github.com/music-assistant/server/pull/2205
+* Chore(deps): Bump pycryptodome from 3.22.0 to 3.23.0 by @dependabot in https://github.com/music-assistant/server/pull/2196
+* Search radio stations on tunein provider by @cociweb in https://github.com/music-assistant/server/pull/2204
+* Chore(deps): Bump mashumaro from 3.15 to 3.16 by @dependabot in https://github.com/music-assistant/server/pull/2208
+* Chore(deps): Bump cryptography from 45.0.2 to 45.0.3 by @dependabot in https://github.com/music-assistant/server/pull/2207
+* Chore(deps): Bump ruff from 0.11.10 to 0.11.11 by @dependabot in https://github.com/music-assistant/server/pull/2209
+* Chore(deps): Bump docker/build-push-action from 6.17.0 to 6.18.0 by @dependabot in https://github.com/music-assistant/server/pull/2211
+* Fix bug when using random order by @OzGav in https://github.com/music-assistant/server/pull/2206
+* YTMusic: Fix YTMusic playback by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2223
+
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b10...2.6.0b11
+
 # [2.6.0 BETA 10] - 23.05.2025
 
 ## What’s Changed
@@ -867,6 +884,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
