@@ -1,3 +1,10 @@
+# [2.5.5] - 23.06.2025
+
+## What’s Changed
+
+- Various bugfixes that were backported from 2.6 beta
+
+
 # [2.5.4] - 01.06.2025
 
 ## What’s Changed
@@ -460,6 +467,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
