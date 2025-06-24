@@ -1,3 +1,72 @@
+# [2.6.0 BETA 12] - 24.06.2025
+
+## What’s Changed
+
+### Server 2.6.0 BETA 12
+
+## What's Changed
+* Chore: Subsonic: Clean up last of the typing errors and add tests by @khers in https://github.com/music-assistant/server/pull/2225
+* Chore(deps): Bump aiohttp from 3.11.18 to 3.12.11 by @dependabot in https://github.com/music-assistant/server/pull/2222
+* Fix typo preventing translation by @OzGav in https://github.com/music-assistant/server/pull/2219
+* Chore(deps): Bump ruff from 0.11.11 to 0.11.13 by @dependabot in https://github.com/music-assistant/server/pull/2220
+* docs: add notes about developing on MA's models by @maximmaxim345 in https://github.com/music-assistant/server/pull/2224
+* Fix: Subsonic: Don't recreate deleted bookmark by @khers in https://github.com/music-assistant/server/pull/2227
+* Feat: Subsonic: Add configurable recommendations by @khers in https://github.com/music-assistant/server/pull/2226
+* Fix: Improvements to MusicKit auth workflow  by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2230
+* Chore(deps): Bump aiohttp-fast-zlib from 0.2.3 to 0.3.0 by @dependabot in https://github.com/music-assistant/server/pull/2221
+* Add Opus to audiobook extensions by @jmberg in https://github.com/music-assistant/server/pull/2216
+* Chore(deps): Bump pytest-cov from 6.1.1 to 6.2.1 by @dependabot in https://github.com/music-assistant/server/pull/2237
+* Chore(deps): Bump cryptography from 45.0.3 to 45.0.4 by @dependabot in https://github.com/music-assistant/server/pull/2236
+* Chore(deps): Bump aiohttp from 3.12.11 to 3.12.13 by @dependabot in https://github.com/music-assistant/server/pull/2235
+* Chore(deps): Bump docker/setup-buildx-action from 3.10.0 to 3.11.0 by @dependabot in https://github.com/music-assistant/server/pull/2233
+* Chore(deps): Bump certifi from 2025.4.26 to 2025.6.15 by @dependabot in https://github.com/music-assistant/server/pull/2232
+* Minor tweak due user confusion by @OzGav in https://github.com/music-assistant/server/pull/2241
+* Chore(deps): Bump docker/setup-buildx-action from 3.11.0 to 3.11.1 by @dependabot in https://github.com/music-assistant/server/pull/2239
+* Subsonic: Display the newest podcast episodes as front page recommendation by @khers in https://github.com/music-assistant/server/pull/2242
+* Ignore a guid containing spaces in podcasts parsing by @fmunkes in https://github.com/music-assistant/server/pull/2238
+* Fix Airplay not ungrouping properly by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2243
+* tidal: modify pagination function by @jozefKruszynski in https://github.com/music-assistant/server/pull/2231
+* Bump models to 1.1.46 by @fmunkes in https://github.com/music-assistant/server/pull/2244
+* frontend-2.15.2 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2247
+* Chore(deps): Bump pytest from 8.3.5 to 8.4.1 by @dependabot in https://github.com/music-assistant/server/pull/2246
+* Chore: Mypy for models by @fmunkes in https://github.com/music-assistant/server/pull/2195
+* Add Alexa player provider by @alams154 in https://github.com/music-assistant/server/pull/2210
+* Introduce (stability/development) stage on providers by @marcelveldt in https://github.com/music-assistant/server/pull/2248
+
+## New Contributors
+* @jmberg made their first contribution in https://github.com/music-assistant/server/pull/2216
+* @alams154 made their first contribution in https://github.com/music-assistant/server/pull/2210
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b11...2.6.0b12
+
+### Frontend 2.15.2
+
+- #1024 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #1004 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>10 changes</summary>
+
+- #1009 - Chore(deps): Bump swiper from 11.2.6 to 11.2.8 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1017 - Chore(deps-dev): Bump @fontsource/roboto from 5.2.5 to 5.2.6 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1020 - Chore(deps): Bump softprops/action-gh-release from 2.2.2 to 2.3.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1021 - Chore(deps-dev): Bump sass from 1.88.0 to 1.89.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1026 - Chore(deps-dev): Bump @types/node from 22.15.18 to 24.0.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1027 - Chore(deps): Bump vue-i18n from 11.1.3 to 11.1.7 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1014 - Chore(deps-dev): Bump unplugin from 2.3.2 to 2.3.5 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1028 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.4.0 to 5.5.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1029 - Chore(deps): Bump vue from 3.5.13 to 3.5.17 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1005 - Chore(deps): Bump marked from 15.0.11 to 15.0.12 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.6.0 BETA 11] - 10.06.2025
 
 ## What's Changed
@@ -884,6 +953,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
