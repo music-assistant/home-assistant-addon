@@ -1,3 +1,23 @@
+# [2.6.0 BETA 14] - 03.07.2025
+
+## What's Changed
+* Change online logo URL by @OzGav in https://github.com/music-assistant/server/pull/2252
+* Subsonic: Handle uninitialized port config value by @khers in https://github.com/music-assistant/server/pull/2263
+* Chore(deps): Bump pillow from 11.2.1 to 11.3.0 by @dependabot in https://github.com/music-assistant/server/pull/2262
+* Fix library query with random order by @maximmaxim345 in https://github.com/music-assistant/server/pull/2255
+* YTMusic: Fix extractor error by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2264
+* Implement pagination for plex provider by @chicco-carone in https://github.com/music-assistant/server/pull/2253
+* Fix Web Player playback on iOS and iPadOS by @maximmaxim345 in https://github.com/music-assistant/server/pull/2261
+* fix: non-ascii characters in didl_lite metadata by @fmunkes in https://github.com/music-assistant/server/pull/2256
+* Parallelize Recommendation creation in Subsonic provider by @khers in https://github.com/music-assistant/server/pull/2254
+* Fix Alexa player provider bugs during experimental testing by @alams154 in https://github.com/music-assistant/server/pull/2251
+* Fix the timestamp modified trigger on the db by @marcelveldt in https://github.com/music-assistant/server/pull/2266
+
+## New Contributors
+* @chicco-carone made their first contribution in https://github.com/music-assistant/server/pull/2253
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b13...2.6.0b14
+
 # [2.6.0 BETA 13] - 24.06.2025
 
 ## What’s Changed
@@ -1048,6 +1068,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
