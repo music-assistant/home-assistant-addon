@@ -12,7 +12,7 @@ homeassistant_api: true
 auth_api: true
 host_network: true
 ingress: true
-ingress_port: 8095
+ingress_port: 8094
 panel_icon: mdi:play-circle
 panel_title: Music Assistant
 panel_admin: false
