@@ -1,3 +1,7 @@
+# [2.6.0 BETA 16] - 10.08.2025
+
+Fixes for YouTube Music and Spotify playback
+
 # [2.6.0 BETA 15] - 10.08.2025
 
 **Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b14...2.6.0b15
@@ -1072,6 +1076,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
