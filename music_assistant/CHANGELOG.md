@@ -1,3 +1,9 @@
+# [2.5.8] - 11.08.2025
+
+Fixes for YouTube Music and Spotify playback
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.5...2.5.8
+
 # [2.5.7] - 10.08.2025
 
 ## What’s Changed
@@ -481,6 +487,8 @@ This release requires you (again) to re-authenticate but the good news is that w
 - #1568 - Apple Music: Change log level to avoid chatty logs. (@MarvinSchenkel)
 - #1567 - Fix issues with items become unavailable (@marcelveldt)
 - #1566 - Add demo/template providers (@marcelveldt)
+
+
 
 
 
