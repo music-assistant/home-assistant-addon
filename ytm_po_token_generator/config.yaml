@@ -1,5 +1,5 @@
 name: YT Music PO Token Generator
-version: 1.1.0
+version: 1.2.1
 slug: ytm_po_token_generator
 description: A HA addon wrapper for the BgUtils POT Provider that can generate PO tokens for Youtube Music.
 url: https://github.com/Brainicism/bgutil-ytdlp-pot-provider
