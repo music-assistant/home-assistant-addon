@@ -1,3 +1,7 @@
+# [2.6.0 BETA 18] - 11.08.2025
+
+Fixes for YouTube Music and Spotify playback
+
 # [2.6.0 BETA 17] - 10.08.2025
 
 Fixes for YouTube Music and Spotify playback
@@ -1084,6 +1088,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
