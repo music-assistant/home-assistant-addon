@@ -17,4 +17,4 @@ uv pip install \
 
 echo ""
 echo ""
-mass --config /data
+mass --data-dir /data --cache-dir /cache
