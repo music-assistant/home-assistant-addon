@@ -21,7 +21,7 @@ RUN set -x \
     --link-mode=copy \
     -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
 
-VOLUME [ "/data" ]
+VOLUME [ "/data", "/cache" ]
 EXPOSE 8095
 
 RUN chmod 777 -R /app && \
