@@ -1,3 +1,82 @@
+# [2.6.0 BETA 19] - 15.08.2025
+
+## What’s Changed
+
+### Server 2.6.0 BETA 19
+
+## What's Changed
+
+* Add DSP Presets by @math625f in https://github.com/music-assistant/server/pull/2309
+* Split up data and cache with XDG directories by @jamiethecat in https://github.com/music-assistant/server/pull/2304
+* Fix playback with the Web Player for iOS devices  by @maximmaxim345 in https://github.com/music-assistant/server/pull/2319
+* frontend-2.15.3 by @music-assistant-machine in https://github.com/music-assistant/server/pull/2333
+* Disable new PO token generation to avoid warnings in the logs. by @MarvinSchenkel in https://github.com/music-assistant/server/pull/2334
+* Fix album info being lost for non-library items by @OzGav in https://github.com/music-assistant/server/pull/2330
+
+## New Contributors
+* @jamiethecat made their first contribution in https://github.com/music-assistant/server/pull/2302
+* @math625f made their first contribution in https://github.com/music-assistant/server/pull/2309
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b18...2.6.0b19
+
+### Frontend 2.15.3
+
+- #1071 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #1044 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #1039 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## 🐛 Bugfixes
+
+- #1081 - Remove unused property (@stvncode)
+- #1082 - fix: DSP editing bugs with multiple players (@maximmaxim345)
+- #1073 - Fix: Prevent player cards from collapsing in slider (@FabionRabushja)
+
+## 🚀 Features
+
+- #1074 - DSP Presets (@math625f)
+- #1064 - Added 'Now Playing' styling to currently playing album/artist/track in all view modes (@uptimeZERO)
+- #1061 - Add interactive breadcrumb navigation to Browse section (@stvncode)
+
+## 🧰 Maintenance
+
+- #1030 - Add Greek and re-order (@OzGav)
+- #1062 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #1056 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+- #1048 - Lokalise translations update (@[github-actions[bot]](https://github.com/apps/github-actions))
+
+## ⬆️ Dependencies
+
+### Server
+
+### Frontend
+
+<details>
+<summary>20 changes</summary>
+
+- #1075 - Chore(deps-dev): Bump @types/node from 24.1.0 to 24.2.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1076 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.5.3 to 5.5.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1078 - Chore(deps-dev): Bump sass from 1.89.2 to 1.90.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1079 - Chore(deps): Bump vuetify from 3.9.3 to 3.9.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1067 - Chore(deps-dev): Bump vite-plugin-vuetify from 2.1.1 to 2.1.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1068 - Chore(deps): Bump vue from 3.5.17 to 3.5.18 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1069 - Chore(deps-dev): Bump eslint-config-prettier from 10.1.5 to 10.1.8 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1070 - Chore(deps): Bump marked from 16.1.1 to 16.1.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1066 - Chore(deps-dev): Bump typescript from 5.8.3 to 5.9.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1065 - Chore(deps-dev): Bump vite-plugin-pwa from 1.0.0 to 1.0.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1060 - Chore(deps-dev): Bump vue-tsc from 2.2.10 to 3.0.4 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1058 - Chore(deps-dev): Bump @vitejs/plugin-vue from 5.2.4 to 6.0.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1053 - Chore(deps): Bump marked from 15.0.12 to 16.1.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1052 - Chore(deps): Bump vuetify from 3.7.19 to 3.9.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1059 - Chore(deps-dev): Bump @types/node from 24.0.3 to 24.1.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1057 - Chore(deps): Bump vue-i18n from 11.1.7 to 11.1.11 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1051 - Chore(deps-dev): Bump vite-plugin-webfont-dl from 3.10.4 to 3.11.1 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1049 - Chore(deps-dev): Bump eslint-plugin-prettier from 5.5.0 to 5.5.3 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1036 - Chore(deps-dev): Bump prettier from 3.5.3 to 3.6.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #1035 - Chore(deps): Bump swiper from 11.2.8 to 11.2.10 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+
+
 # [2.6.0 BETA 18] - 11.08.2025
 
 Fixes for YouTube Music and Spotify playback
@@ -1074,6 +1153,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
