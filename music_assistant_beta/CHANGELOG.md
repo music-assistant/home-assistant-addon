@@ -1,3 +1,7 @@
+# [2.6.0 BETA 21] - 16.08.2025
+
+Fixes for the server not starting due to missing cache directory and models mismatch
+
 # [2.6.0 BETA 20] - 16.08.2025
 
 * Fix for default cache directory
@@ -1159,6 +1163,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
