@@ -1,3 +1,9 @@
+# [2.6.0 BETA 20] - 16.08.2025
+
+* Fix for default cache directory
+
+**Full Changelog**: https://github.com/music-assistant/server/compare/2.6.0b19...2.6.0b20
+
 # [2.6.0 BETA 19] - 15.08.2025
 
 ## What’s Changed
@@ -1153,6 +1159,8 @@ Fix creation of player groups
 **The start of the beta cycle for 2.5 !**
 
 This version is on-par with the 2.4.0 stable version
+
+
 
 
 
