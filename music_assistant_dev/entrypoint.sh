@@ -2,6 +2,12 @@
 
 branch=$(cat /data/options.json | jq -r .branch)
 
+# Sweet fades te remove
+export NPY_DISABLE_CPU_FEATURES="AVX2,FMA3"
+export TMPDIR="/data/tmp"
+mkdir -p /data/tmp
+# end to remove
+
 echo ""
 echo "-----------------------------------------------------------"
 echo "Music Assistant dev/nightly version"
