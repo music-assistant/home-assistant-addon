@@ -13,6 +13,7 @@ source $VIRTUAL_ENV/bin/activate
 uv pip install \
     --no-cache \
     --link-mode=copy \
+    --no-build-isolation \
     "music-assistant@git+https://github.com/music-assistant/server.git@$branch"
 
 echo ""
