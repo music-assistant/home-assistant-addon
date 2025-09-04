@@ -12,6 +12,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # SMARTFADES TO REMOVE
 RUN uv pip install --system "librosa>=0.10.0"
+RUN uv pip install --system "numpy>=1.24.0"
 # END SMARTFADES TO REMOVE
 
 # add some additional packages that are useful for debugging
