@@ -11,6 +11,7 @@ arch:
   - amd64
   - aarch64
 homeassistant_api: true
+full_access: true # Remove after Smart Fades test
 auth_api: true
 host_network: true
 ingress: true
