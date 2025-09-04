@@ -19,6 +19,7 @@ RUN set -x \
     # libsndfile needed for librosa audio file support (smartfades)
     libsndfile-dev
 ENV LLVM_CONFIG="/usr/bin/llvm-config-15"
+RUN which llvm-config-15 && llvm-config-15 --version
 # END SMART FADES TEST LIBS
 
 # add some additional packages that are useful for debugging
