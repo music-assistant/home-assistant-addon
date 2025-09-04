@@ -10,18 +10,6 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 # ensure UV is installed
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-# Librosa test for Smart Fades. TODO: REMOVE
-RUN set -x \
-    && apk add --no-cache \
-    # build tools and llvm support needed for librosa/numba/llvmlite (smartfades)
-    build-base \
-    llvm15-dev \
-    # libsndfile needed for librosa audio file support (smartfades)
-    libsndfile-dev
-ENV LLVM_CONFIG="/usr/bin/llvm-config-15"
-RUN which llvm-config-15 && llvm-config-15 --version
-# END SMART FADES TEST LIBS
-
 # add some additional packages that are useful for debugging
 RUN set -x \
     && apk update \
