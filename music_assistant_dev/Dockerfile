@@ -19,13 +19,9 @@ RUN set -x \
     uv pip install \
     --no-cache \
     --link-mode=copy \
+    "numpy>=1.24.0" \
+    "librosa>=0.10.0" \
     -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
-
-# SMARTFADES TO REMOVE
-RUN source /app/venv/bin/activate
-RUN uv pip install --no-cache --link-mode=copy --find-links "https://wheels.home-assistant.io/musllinux/" "librosa>=0.10.0"
-RUN uv pip install --no-cache --link-mode=copy --find-links "https://wheels.home-assistant.io/musllinux/" "numpy>=1.24.0"
-# END SMARTFADES TO REMOVE
 
 VOLUME [ "/data", "/cache" ]
 EXPOSE 8095
