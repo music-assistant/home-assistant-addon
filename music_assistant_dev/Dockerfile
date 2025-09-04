@@ -10,11 +10,6 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 # ensure UV is installed
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-# SMARTFADES TO REMOVE
-RUN uv pip install --system "librosa>=0.10.0"
-RUN uv pip install --system "numpy>=1.24.0"
-# END SMARTFADES TO REMOVE
-
 # add some additional packages that are useful for debugging
 RUN set -x \
     && apk update \
@@ -25,6 +20,12 @@ RUN set -x \
     --no-cache \
     --link-mode=copy \
     -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
+
+# SMARTFADES TO REMOVE
+RUN source /app/venv/bin/activate
+RUN uv pip install --no-cache --link-mode=copy "librosa>=0.10.0"
+RUN uv pip install --no-cache --link-mode=copy "numpy>=1.24.0"
+# END SMARTFADES TO REMOVE
 
 VOLUME [ "/data", "/cache" ]
 EXPOSE 8095
