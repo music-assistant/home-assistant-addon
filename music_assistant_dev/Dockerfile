@@ -10,6 +10,11 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 # ensure UV is installed
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
+# SMARTFADES TO REMOVE
+RUN apk add --no-cache build-base llvm15-dev libsndfile-dev
+ENV LLVM_CONFIG="/usr/bin/llvm-config-15"
+# END SMARTFADES TO REMOVE
+
 # add some additional packages that are useful for debugging
 RUN set -x \
     && apk update \
