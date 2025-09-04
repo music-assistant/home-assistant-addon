@@ -2,10 +2,6 @@
 
 branch=$(cat /data/options.json | jq -r .branch)
 
-# Smart Fades to remove
-apk add --no-cache build-base llvm15-dev libsndfile-dev
-export LLVM_CONFIG="/usr/bin/llvm-config-15"
-
 echo ""
 echo "-----------------------------------------------------------"
 echo "Music Assistant dev/nightly version"
