@@ -23,8 +23,8 @@ RUN set -x \
 
 # SMARTFADES TO REMOVE
 RUN source /app/venv/bin/activate
-RUN uv pip install --no-cache --link-mode=copy "librosa>=0.10.0"
-RUN uv pip install --no-cache --link-mode=copy "numpy>=1.24.0"
+RUN uv pip install --no-cache --link-mode=copy --find-links "https://wheels.home-assistant.io/musllinux/" "librosa>=0.10.0"
+RUN uv pip install --no-cache --link-mode=copy--find-links "https://wheels.home-assistant.io/musllinux/" "numpy>=1.24.0"
 # END SMARTFADES TO REMOVE
 
 VOLUME [ "/data", "/cache" ]
