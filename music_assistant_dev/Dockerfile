@@ -23,8 +23,8 @@ RUN set -x \
   # pre-install librosa to avoid runtime build issues
   && uv pip install \
   --no-cache \
-  --no-build-isolation \
   --link-mode=copy \
+  --only-binary=:all: \
   "librosa>=0.11.0"
 
 VOLUME [ "/data", "/cache" ]
