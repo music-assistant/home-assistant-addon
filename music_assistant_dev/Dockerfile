@@ -20,11 +20,14 @@ RUN set -x \
   --no-cache \
   --link-mode=copy \
   -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt" \
-  # pre-install librosa to avoid runtime build issues
+  # pre-install librosa (for smart fades) to avoid runtime build issues
+  # TODO: Move this to base image before beta release
+  && export LLVM_CONFIG="/usr/bin/llvm-config-15" \
+  && export CC=gcc \
+  && export CXX=g++ \
   && uv pip install \
   --no-cache \
   --link-mode=copy \
-  --only-binary=:all: \
   "librosa>=0.11.0"
 
 VOLUME [ "/data", "/cache" ]
