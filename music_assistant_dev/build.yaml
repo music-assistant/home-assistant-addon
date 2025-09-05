@@ -1,0 +1,5 @@
+build_from:
+  amd64: ghcr.io/music-assistant/base:latest
+  aarch64: ghcr.io/music-assistant/base:latest
+  armhf: ghcr.io/music-assistant/base:latest
+  armv7: ghcr.io/music-assistant/base:latest
