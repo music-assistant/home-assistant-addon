@@ -19,8 +19,6 @@ RUN set -x \
     uv pip install \
     --no-cache \
     --link-mode=copy \
-    "numpy>=1.24.0" \
-    "librosa>=0.10.0" \
     -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
 
 VOLUME [ "/data", "/cache" ]
