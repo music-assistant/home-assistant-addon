@@ -28,7 +28,7 @@ RUN set -x \
   && uv pip install \
   --no-cache \
   --link-mode=copy \
-  "librosa>=0.11.0"
+  "librosa>=0.11.0" "llvmlite<0.45.0" 
 
 VOLUME [ "/data", "/cache" ]
 EXPOSE 8095
