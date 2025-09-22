@@ -2,8 +2,7 @@
 #
 # DEV MASS image: base image + MASS installed from prebuilt wheel
 #
-#FROM ghcr.io/music-assistant/base:latest
-FROM ghcr.io/music-assistant/base:1.3.1
+FROM ghcr.io/music-assistant/base:latest
 
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
@@ -23,13 +22,13 @@ RUN set -x \
   -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt" \
   # pre-install librosa (for smart fades) to avoid runtime build issues
   # TODO: Move this to base image before beta release
-  # && export LLVM_CONFIG="/usr/bin/llvm-config-15" \
-  # && export CC=gcc \
-  # && export CXX=g++ \
-  # && uv pip install \
-  # --no-cache \
-  # --link-mode=copy \
-  # "librosa>=0.11.0" "llvmlite<0.45.0" 
+  && export LLVM_CONFIG="/usr/bin/llvm-config-15" \
+  && export CC=gcc \
+  && export CXX=g++ \
+  && uv pip install \
+  --no-cache \
+  --link-mode=copy \
+  "librosa>=0.11.0" "llvmlite<0.45.0" 
 
 VOLUME [ "/data", "/cache" ]
 EXPOSE 8095
