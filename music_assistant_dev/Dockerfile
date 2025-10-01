@@ -16,19 +16,14 @@ RUN set -x \
   && apk add -f jq htop git && \
   # pre-install base requirements to save a bit of startup time
   uv venv $VIRTUAL_ENV && \
+  # Build vars for librosa (for smart fades) to avoid runtime build issues
+  export LLVM_CONFIG="/usr/bin/llvm-config-15" && \
+  export CC=gcc && \
+  export CXX=g++ && \
   uv pip install \
   --no-cache \
   --link-mode=copy \
-  -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt" \
-  # pre-install librosa (for smart fades) to avoid runtime build issues
-  # TODO: Move this to base image before beta release
-  && export LLVM_CONFIG="/usr/bin/llvm-config-15" \
-  && export CC=gcc \
-  && export CXX=g++ \
-  && uv pip install \
-  --no-cache \
-  --link-mode=copy \
-  "librosa>=0.11.0" "llvmlite<0.45.0" 
+  -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
 
 VOLUME [ "/data", "/cache" ]
 EXPOSE 8095
