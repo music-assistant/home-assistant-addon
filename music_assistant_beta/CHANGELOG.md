@@ -14,6 +14,7 @@
 
 **Full Changelog**: https://github.com/music-assistant/server/compare/2.7.0b0...2.7.0b1
 
+---
 
 
 # [2.7.0 BETA 0] - 02.10.2025
@@ -349,6 +350,7 @@ A huge thank you to all our contributors for their dedication, creativity, and h
 
 We're excited for you to try these new features and improvements! 
 Remember to backup your data before updating and report any issues you encounter. Happy listening! 🎵
+
 
 
 
