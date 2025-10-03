@@ -1,3 +1,86 @@
+# [2.7.0.b0] - 03.10.2025
+
+## What’s Changed
+
+### Server 2.7.0.b0
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@ChrisBkt, @MarvinSchenkel, @MedievalApple, @OzGav, @TheJulianJES, @benklop, @dependabot[bot], @fmunkes, @marcelveldt, @maximmaxim345, @music-assistant-machine and [dependabot[bot]](https://github.com/apps/dependabot)
+
+## Full Changelog
+
+- #2470 - Fix release drafter workflow `latest` value (@TheJulianJES)
+- #2461 - Revert "mypy fixes for webserver.py" (@MarvinSchenkel)
+
+## 🐛 Bugfixes
+
+- #2469 - Fix playergroup migration (@marcelveldt)
+- #2468 - Fix current track not updating correctly (@marcelveldt)
+- #2466 - Various follow up bugfixes regarding the players refactor (@marcelveldt)
+- #2464 - YTMusic: Limit dynamic playlist to avoid memory leak (@MarvinSchenkel)
+- #2444 - Various Playergroup fixes (@marcelveldt)
+- #2455 - Fix 403 error on podcast playback (@OzGav)
+- #2433 - Several improvements to the Smartfades feature (@marcelveldt)
+- #2429 - More grouping fixes after the player refactor (@maximmaxim345)
+- #2425 - gpodder/ itunes/ rssfeed: fix bad header for certain podcasts (@fmunkes)
+
+## 🚀 Features
+
+- #2419 - Add DI.fm radio network provider (@benklop)
+- #2457 - Smart fades tweaks (@MarvinSchenkel)
+- #2435 - Podcastfeed Handle images no longer at URL (@OzGav)
+- #2432 - Adding alexa language config value (@ChrisBkt)
+- #2442 - Few smart fades fixes (@MarvinSchenkel)
+- #2441 - Adjust smart fades filters from testing (@maximmaxim345)
+- #2433 - Several improvements to the Smartfades feature (@marcelveldt)
+- #2411 - Add Internet Archive Provider (@OzGav)
+- #2407 - Add Smart fades feature (@MarvinSchenkel)
+- #2430 - Refactor caching (@marcelveldt)
+- #2348 - Add Resonate Provider (@maximmaxim345)
+- #2410 - Add Audiobook Support to Spotify provider (@OzGav)
+- #2332 - Add (Roku) Media Assistant provider (@MedievalApple)
+
+## 🧰 Maintenance
+
+- #2471 - frontend-2.16.4 (@music-assistant-machine)
+- #2467 - frontend-2.16.3 (@music-assistant-machine)
+- #2444 - Various Playergroup fixes (@marcelveldt)
+- #2459 - frontend-2.16.2 (@music-assistant-machine)
+- #2437 - mypy fixes for webserver.py (@OzGav)
+- #2449 - mypy fixes for TuneIn (@OzGav)
+- #2436 - mypy fixes for Spotify provider (@OzGav)
+- #2438 - mypy fixes for Deezer (@OzGav)
+- #2439 - mypy fixes for webserver helper (@OzGav)
+- #2440 - Remove unsupported library methods (@OzGav)
+- #2431 - Add or update stage key in manifest.json (@OzGav)
+- #2428 - Update Provider descriptions (@OzGav)
+- #2430 - Refactor caching (@marcelveldt)
+
+### Frontend 2.16.4
+
+## 🐛 Bugfixes
+
+- #1164 - Some very small fixes and tweaks after beta testing (@marcelveldt)
+
+## ⬆️ Dependencies
+
+### Server
+
+<details>
+<summary>3 changes</summary>
+
+- #2454 - Chore(deps): Bump syrupy from 4.9.1 to 5.0.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #2447 - Chore(deps): Bump xmltodict from 0.14.2 to 1.0.2 (@[dependabot[bot]](https://github.com/apps/dependabot))
+- #2443 - Chore(deps): Bump docker/login-action from 3.5.0 to 3.6.0 (@[dependabot[bot]](https://github.com/apps/dependabot))
+</details>
+
+### Frontend
+
+
+
 # [2.7.0 BETA 0] - 02.10.2025
 
 # Music Assistant 2.7.0 BETA 0 Release Notes 🎵
@@ -331,3 +414,5 @@ A huge thank you to all our contributors for their dedication, creativity, and h
 
 We're excited for you to try these new features and improvements! 
 Remember to backup your data before updating and report any issues you encounter. Happy listening! 🎵
+
+
