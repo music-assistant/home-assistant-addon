@@ -1,3 +1,16 @@
+# [] - 03.10.2025
+
+
+- ARD Audiothek: Introduce filter of not published episodes to reduce loading times (by @jfeil in #2478)
+
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@jfeil
+
+
 # [2.7.0 BETA 1] - 03.10.2025
 
 ## What's Changed
@@ -350,6 +363,8 @@ A huge thank you to all our contributors for their dedication, creativity, and h
 
 We're excited for you to try these new features and improvements! 
 Remember to backup your data before updating and report any issues you encounter. Happy listening! 🎵
+
+
 
 
 
