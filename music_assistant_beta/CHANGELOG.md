@@ -1,3 +1,27 @@
+# [2.7.0 BETA 3] - 05.10.2025
+
+- ARD Audiothek: Introduce filter of not published episodes to reduce loading times (by @jfeil in #2478)
+
+## 🐛 Bugfixes
+
+- Various small fixes for the Sonos provider (by @marcelveldt in #2485)
+- Some small fixes for issues found in beta testing (by @marcelveldt in #2482)
+- Fix cache data not persisting cross restarts/updates (by @marcelveldt in #2479)
+
+## 🧰 Maintenance and dependency bumps
+
+- mypy fixes for Hass Players (by @OzGav in #2452)
+- Rework audio cache/buffering (by @marcelveldt in #2483)
+- Fix typo in Spotify Config (by @OzGav in #2481)
+
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @jfeil and @marcelveldt
+
+
 # [] - 03.10.2025
 
 
@@ -363,6 +387,8 @@ A huge thank you to all our contributors for their dedication, creativity, and h
 
 We're excited for you to try these new features and improvements! 
 Remember to backup your data before updating and report any issues you encounter. Happy listening! 🎵
+
+
 
 
 
