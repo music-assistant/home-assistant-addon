@@ -1,10 +1,9 @@
-name: Music Assistant (beta)
+name: Music Assistant (NIGHTLY)
 version: 2.7.0b4
-slug: music_assistant_beta
-description:
-  BETA version of Music Assistant. Install this version if you want to
-  keep up with the latest and greatest and don't mind some beta testing. Follow us
-  on discord to report and discuss feedback!
+slug: music_assistant_nightly
+description: NIGHTLY version of Music Assistant.
+  Install this version if you want to keep up with the latest bleeding edge development but use it at your own risk,
+  maybe not recomended for daily use because it can be unstable.
 url: https://music-assistant.io
 arch:
   - amd64
@@ -26,7 +25,7 @@ backup_exclude:
   - cache.db
   - collage_images/*
   - .cache/*
-stage: stable
+stage: experimental
 image: ghcr.io/music-assistant/server
 tmpfs: true
 options:

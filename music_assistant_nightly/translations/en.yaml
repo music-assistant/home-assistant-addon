@@ -1,0 +1,7 @@
+configuration:
+  log_level:
+    name: Log Level
+    description: "Set the (global) log level (NOTE: only enable debug when needed)."
+  safe_mode:
+    name: Safe mode
+    description: "Start the Music Assistant server in safe mode where only the core controllers are started without any providers, to troubleshoot issues"
