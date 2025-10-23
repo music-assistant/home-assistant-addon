@@ -1,9 +1,9 @@
 name: Music Assistant (NIGHTLY)
-version: 2.7.0b4
+version: 2.7.0.dev20251001
 slug: music_assistant_nightly
 description: NIGHTLY version of Music Assistant.
-  Install this version if you want to keep up with the latest bleeding edge development but use it at your own risk,
-  maybe not recomended for daily use because it can be unstable.
+  Install this version if you want to keep up with the latest bleeding edge development of Music Assistant!
+  Use it at your own risk, it might not be recommended for daily/production use because it can be unstable.
 url: https://music-assistant.io
 arch:
   - amd64

@@ -12,14 +12,12 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # add some additional packages that are useful for debugging
 RUN set -x \
-  && apk update \
-  && apk add -f jq htop git && \
+  && apt-get update \
+  && apt-get install -y --no-install-recommends jq htop git npm nodejs && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* && \
   # pre-install base requirements to save a bit of startup time
   uv venv $VIRTUAL_ENV && \
-  # Build vars for librosa (for smart fades) to avoid runtime build issues
-  export LLVM_CONFIG="/usr/bin/llvm-config-15" && \
-  export CC=gcc && \
-  export CXX=g++ && \
   uv pip install \
   --no-cache \
   --link-mode=copy \
@@ -29,7 +27,7 @@ VOLUME [ "/data" ]
 EXPOSE 8095
 
 RUN chmod 777 -R /app && \
-    chmod 777 -R /tmp
+  chmod 777 -R /tmp
 
 COPY entrypoint.sh /app/entrypoint.sh
 

@@ -1,6 +1,6 @@
 name: Music Assistant DEV SERVER
 # version number gets updated only when the mass base image updates!
-version: 1.3.2
+version: 1.4.0
 slug: music_assistant_dev
 description: Development (nightly) version of Music Assistant. For developers only.
 url: https://music-assistant.io
@@ -28,11 +28,13 @@ backup_exclude:
   - .cache/*
 options:
   log_level: info
-  branch: dev
+  server_repo: dev
+  frontend_repo: main
   safe_mode: false
 schema:
   log_level: list(debug|info|warning|error)
-  branch: str
+  server_repo: str
+  frontend_repo: str
   safe_mode: bool
 privileged:
   - SYS_ADMIN
