@@ -1,10 +1,7 @@
 name: Music Assistant (BETA)
 version: 2.7.0b4
 slug: music_assistant_beta
-description:
-  BETA version of Music Assistant. Install this version if you want to
-  keep up with the latest and greatest and don't mind some beta testing. Follow us
-  on discord to report and discuss feedback!
+description: BETA version of the Music Assistant Server.
 url: https://music-assistant.io
 arch:
   - amd64
