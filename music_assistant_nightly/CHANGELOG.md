@@ -1,3 +1,18 @@
+# [2.7.0.dev2025102801] - 28.10.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025102723](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025102723)_
+
+### 🎨 Frontend Changes
+
+* No changes
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.5 (by @music-assistant-machine in #2563)
+
+
 # [2.7.0.dev2025102723] - 28.10.2025
 
 ## 📦 Nightly Release
@@ -71,10 +86,5 @@ _Changes since [2.7.0.dev2025102603](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @stvncode
-
-
-# [2.7.0.dev2025102603] - 26.10.2025
-
-* No changes
 
 
