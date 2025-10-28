@@ -1,3 +1,20 @@
+# [2.7.0b8] - 28.10.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b7](https://github.com/music-assistant/server/releases/tag/2.7.0b7)_
+
+### 🐛 Bugfixes
+
+- Fix recursion when grouping players (by @MarvinSchenkel in #2564)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel
+
+
 # [2.7.0b7] - 28.10.2025
 
 ## 📦 Beta Release
@@ -73,68 +90,5 @@ _Changes since [2.7.0b5](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @stvncode
-
-
-# [2.7.0b5] - 26.10.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b4](https://github.com/music-assistant/server/releases/tag/2.7.0b4)_
-
-### 🚀 Features and enhancements
-
-- Plex: Add real-time playback state reporting and timeline updates (by @anatosun in #2512)
-- Plex: Add configurable bidirectional favorite sync with ratings (by @anatosun in #2519)
-- Plex: Add support for importing collections as playlists (by @anatosun in #2521)
-- Plex: Add artist top tracks and similar tracks support (by @anatosun in #2522)
-- Fix album track order in playlist (by @OzGav in #2539)
-- Add extra buffering to queue stream to create backpressure (by @marcelveldt in #2544)
-- Plugin source improvements (by @marcelveldt in #2548)
-
-### 🐛 Bugfixes
-
-- Support multiple accounts in the home screen recommendations for Tidal (by @jozefKruszynski in #2496)
-- Fix for Bluesound multizone devices (by @marcelveldt in #2511)
-- Add dynamic chapter url retrieval solution to ABS (by @marcelveldt in #2513)
-- Plex: Use container_start and container_size for pagination (by @ferges123 in #2520)
-- Fix Sonos S1 provider after player refactor (by @MarvinSchenkel in #2523)
-- Fix recursion loop in fake volume mute control (by @OzGav in #2530)
-- YTM: Also install default ytdlp dependencies (by @MarvinSchenkel in #2534)
-- Fix various issues with streaming (e.g. on Sonos devices) (by @marcelveldt in #2536)
-- Fix various issues with Sonos and AirPlay playback (by @marcelveldt in #2543)
-- MusicCast: Fix ungroup & discovery (by @fmunkes in #2545)
-- Fix several edge cases for streaming (with crossfade enabled) (by @marcelveldt in #2547)
-
-### 🎨 Frontend Changes
-
-- Add the provider type on items on search (by @stvncode in [#1174](https://github.com/music-assistant/frontend/pull/1174))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1185](https://github.com/music-assistant/frontend/pull/1185))
-
-### Other Changes
-
-- Switch docker base images to Debian (by @marcelveldt in #2542)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- Chore(deps): Bump pychromecast from 14.0.7 to 14.0.9 (by @dependabot[bot] in #2489)
-- Chore(deps): Bump aiohttp from 3.12.15 to 3.13.1 (by @dependabot[bot] in #2515)
-- Chore(deps): Bump cryptography from 46.0.2 to 46.0.3 (by @dependabot[bot] in #2516)
-- ⬆️ Update music-assistant-frontend to 2.17.2 (by @music-assistant-machine in #2529)
-- Plex: Add anatosun as codeowner and change stage to alpha (by @anatosun in #2532)
-- ⬆️ Update music-assistant-models to 1.1.63 (by @music-assistant-machine in #2533)
-- Chore(deps): Bump actions/checkout from 4 to 5 (by @dependabot[bot] in #2535)
-- Update 'Oops' label to 'Page Not Found' in Tidal auth (by @OzGav in #2538)
-- Chore(deps): Bump actions/checkout from 4 to 5 (by @dependabot[bot] in #2541)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @anatosun, @ferges123, @fmunkes, @jozefKruszynski, @marcelveldt, @stvncode
 
 
