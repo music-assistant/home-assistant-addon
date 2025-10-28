@@ -112,13 +112,13 @@ if [ ! -f "package.json" ]; then
 fi
 
 echo "Installing frontend dependencies..."
-npm ci --prefer-offline --no-audit
+yarn install --frozen-lockfile --prefer-offline
 
 echo "✓ Dependencies installed"
 echo ""
 
 echo "Building frontend..."
-npm run build
+yarn build
 
 echo "✓ Frontend build complete"
 echo ""
