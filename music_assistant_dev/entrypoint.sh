@@ -111,8 +111,12 @@ if [ ! -f "package.json" ]; then
     exit 1
 fi
 
-echo "Installing frontend dependencies..."
-chmod 755 -R "$frontend_dir"
+echo "Installing frontend dependencies...1"
+# Try to remount /tmp with exec if it's mounted noexec
+if mount | grep -q "on /tmp.*noexec"; then
+  echo "Detected /tmp mounted with noexec, attempting to remount..."
+  mount -o remount,exec /tmp 2>/dev/null || echo "Warning: Could not remount /tmp"
+fi
 yarn install --frozen-lockfile --prefer-offline
 
 echo "✓ Dependencies installed"
