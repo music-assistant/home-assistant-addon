@@ -112,6 +112,7 @@ if [ ! -f "package.json" ]; then
 fi
 
 echo "Installing frontend dependencies..."
+chmod 755 -R "$frontend_dir"
 yarn install --frozen-lockfile --prefer-offline
 
 echo "✓ Dependencies installed"
