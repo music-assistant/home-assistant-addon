@@ -55,7 +55,7 @@ echo "Server URL: $server_url"
 echo ""
 
 # Activate virtual environment
-source $VIRTUAL_ENV/bin/activate
+. $VIRTUAL_ENV/bin/activate
 
 echo "-----------------------------------------------------------"
 echo "Step 1: Installing Music Assistant Server"
