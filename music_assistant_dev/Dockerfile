@@ -14,6 +14,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 RUN set -x \
   && apt-get update \
   && apt-get install -y --no-install-recommends jq htop git npm nodejs && \
+  npm install -g yarn && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
   # pre-install base requirements to save a bit of startup time
