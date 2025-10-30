@@ -1,6 +1,6 @@
 name: Music Assistant DEV SERVER
 # version number gets updated only when the mass base image updates!
-version: 1.4.0
+version: 1.4.1
 slug: music_assistant_dev
 description: Development add-on for Music Assistant. For developers only.
 url: https://music-assistant.io
@@ -8,6 +8,7 @@ arch:
   - amd64
   - aarch64
 homeassistant_api: true
+audio: true
 auth_api: true
 host_network: true
 ingress: true
