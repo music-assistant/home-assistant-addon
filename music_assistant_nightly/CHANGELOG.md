@@ -1,3 +1,24 @@
+# [2.7.0.dev2025103003] - 30.10.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025102903](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025102903)_
+
+### 🚀 Features and enhancements
+
+- Add support for actions flow in Player config entries (by @marcelveldt in #2572)
+
+### 🧰 Maintenance and dependency bumps
+
+- mypy fix for metadata.py (by @OzGav in #2573)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt
+
+
 # [2.7.0.dev2025102903] - 29.10.2025
 
 ## 📦 Nightly Release
@@ -38,10 +59,5 @@ _Changes since [2.7.0.dev2025102803](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel
-
-
-# [2.7.0.dev2025102803] - 28.10.2025
-
-* No changes
 
 
