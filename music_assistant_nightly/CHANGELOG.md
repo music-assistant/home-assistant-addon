@@ -1,3 +1,24 @@
+# [2.7.0.dev2025103103] - 31.10.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025103003](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025103003)_
+
+### 🚀 Features and enhancements
+
+- Update Resonate Provider (by @maximmaxim345 in #2575)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.66 (by @music-assistant-machine in #2576)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@maximmaxim345
+
+
 # [2.7.0.dev2025103003] - 30.10.2025
 
 ## 📦 Nightly Release
@@ -42,22 +63,5 @@ _Changes since [2.7.0.dev2025102809](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @maximmaxim345
-
-
-# [2.7.0.dev2025102809] - 28.10.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025102803](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025102803)_
-
-### 🐛 Bugfixes
-
-- Fix recursion when grouping players (by @MarvinSchenkel in #2564)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
