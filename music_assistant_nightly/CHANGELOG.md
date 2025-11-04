@@ -1,3 +1,24 @@
+# [2.7.0.dev2025110400] - 04.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025110301](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110301)_
+
+### 🚀 Features and enhancements
+
+- Subsonic: Use loudness tags when present (by @khers in #2580)
+
+### 🐛 Bugfixes
+
+- Add missing enforced flow mode config entry for Resonate (by @maximmaxim345 in #2587)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@khers, @maximmaxim345
+
+
 # [2.7.0.dev2025110301] - 03.11.2025
 
 ## 📦 Nightly Release
@@ -37,10 +58,5 @@ _Changes since [2.7.0.dev2025110113](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav
-
-
-# [2.7.0.dev2025110113] - 01.11.2025
-
-* No changes
 
 
