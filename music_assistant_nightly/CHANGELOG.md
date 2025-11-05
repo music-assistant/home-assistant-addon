@@ -1,3 +1,27 @@
+# [2.7.0.dev2025110503] - 05.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025110400](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110400)_
+
+### 🐛 Bugfixes
+
+- Enforce flow mode when player does not support enqueueing (by @MarvinSchenkel in #2595)
+- fix: abs - discarded progress (by @fmunkes in #2598)
+- Fix japanese language code (by @MarvinSchenkel in #2599)
+- Fixed various issues with (plugin)sources (by @marcelveldt in #2600)
+
+### 🧰 Maintenance and dependency bumps
+
+- Phish.in Remove erroneous provider feature (by @OzGav in #2596)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes, @marcelveldt
+
+
 # [2.7.0.dev2025110400] - 04.11.2025
 
 ## 📦 Nightly Release
@@ -35,23 +59,6 @@ _Changes since [2.7.0.dev2025110203](https://github.com/music-assistant/server/r
 
 - Typing fixes for the Radio media controller (by @OzGav in #2574)
 - ⬆️ Update music-assistant-models to 1.1.68 (by @music-assistant-machine in #2578)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav
-
-
-# [2.7.0.dev2025110203] - 02.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025110113](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110113)_
-
-### 🧰 Maintenance and dependency bumps
-
-- AirPlay Fix line too long (by @OzGav in #2581)
 
 ## :bow: Thanks to our contributors
 
