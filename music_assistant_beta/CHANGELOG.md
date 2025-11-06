@@ -1,3 +1,21 @@
+# [2.7.0b11] - 06.11.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b10](https://github.com/music-assistant/server/releases/tag/2.7.0b10)_
+
+### 🐛 Bugfixes
+
+- Fix deadlock when trying to join a paused Airplay player to a group (by @MarvinSchenkel in #2602)
+- Fix Spotify streaming (by @marcelveldt in #2603)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt
+
+
 # [2.7.0b10] - 06.11.2025
 
 ## 📦 Beta Release
@@ -80,22 +98,5 @@ _Changes since [2.7.0b8](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @khers, @marcelveldt, @maximmaxim345
-
-
-# [2.7.0b8] - 28.10.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b7](https://github.com/music-assistant/server/releases/tag/2.7.0b7)_
-
-### 🐛 Bugfixes
-
-- Fix recursion when grouping players (by @MarvinSchenkel in #2564)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
