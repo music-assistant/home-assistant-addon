@@ -1,3 +1,20 @@
+# [2.6.2] - 06.11.2025
+
+## 📦 Stable Release
+
+_Changes since [2.6.1](https://github.com/music-assistant/server/releases/tag/2.6.1)_
+
+### 🐛 Bugfixes
+
+- Fix Spotify streaming (by @marcelveldt in #2603)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.6.1] - 28.10.2025
 
 ## 📦 Stable Release
@@ -85,11 +102,4 @@ Welcome to our new contributors who helped make this release possible:
 **Full Changelog**: [2.5.8...2.6.0](https://github.com/music-assistant/server/compare/2.5.8...2.6.0)
 
 We hope you enjoy these new features and improvements! As always, please report any issues on our GitHub repository.
-
-# [2.5.8] - 11.08.2025
-
-Fixes for YouTube Music and Spotify playback
-
-**Full Changelog**: https://github.com/music-assistant/server/compare/2.5.5...2.5.8
-
 
