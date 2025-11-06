@@ -30,13 +30,13 @@ backup_exclude:
   - .cache/*
 options:
   log_level: info
-  server_repo: dev
-  frontend_repo: main
+  server_repo: ""
+  frontend_repo: ""
   safe_mode: false
 schema:
   log_level: list(debug|info|warning|error)
-  server_repo: str
-  frontend_repo: str
+  server_repo: str?
+  frontend_repo: str?
   safe_mode: bool
 privileged:
   - SYS_ADMIN

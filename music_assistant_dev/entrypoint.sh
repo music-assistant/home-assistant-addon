@@ -11,6 +11,16 @@ echo "Music Assistant Developer Add-on"
 echo "-----------------------------------------------------------"
 echo ""
 
+# Check if server_repo is empty or null
+if [ -z "$server_repo" ] || [ "$server_repo" = "null" ]; then
+    build_from_source=false
+    echo "No server_repo specified - using latest nightly release from GitHub"
+else
+    build_from_source=true
+    echo "Building from source using server_repo: $server_repo"
+fi
+echo ""
+
 # Function to parse repository reference and return owner/repo@ref
 parse_repo_ref() {
     local input="$1"
@@ -46,14 +56,6 @@ build_git_url() {
     echo "git+https://github.com/${parsed}"
 }
 
-# Parse server repository reference
-server_ref=$(parse_repo_ref "$server_repo" "music-assistant" "server")
-server_url=$(build_git_url "$server_ref")
-
-echo "Server repository: $server_ref"
-echo "Server URL: $server_url"
-echo ""
-
 # Activate virtual environment
 . $VIRTUAL_ENV/bin/activate
 
@@ -62,25 +64,86 @@ echo "Step 1: Installing Music Assistant Server"
 echo "-----------------------------------------------------------"
 echo ""
 
-# Install server from specified repository
-uv pip install \
-    --no-cache \
-    --link-mode=copy \
-    "$server_url"
+if [ "$build_from_source" = true ]; then
+    # Parse server repository reference
+    server_ref=$(parse_repo_ref "$server_repo" "music-assistant" "server")
+    server_url=$(build_git_url "$server_ref")
+
+    echo "Server repository: $server_ref"
+    echo "Server URL: $server_url"
+    echo ""
+
+    # Install server from specified repository
+    uv pip install \
+        --no-cache \
+        --link-mode=copy \
+        "$server_url"
+else
+    # Install latest nightly wheel from GitHub releases
+    echo "Fetching latest nightly release from GitHub..."
+    echo ""
+
+    # Get the latest pre-release info from GitHub API
+    latest_release=$(curl -s https://api.github.com/repos/music-assistant/server/releases | jq -r '[.[] | select(.prerelease == true)] | first')
+    release_tag=$(echo "$latest_release" | jq -r '.tag_name')
+    wheel_url=$(echo "$latest_release" | jq -r '.assets[] | select(.name | endswith(".whl")) | .browser_download_url')
+
+    if [ -z "$wheel_url" ] || [ "$wheel_url" = "null" ]; then
+        echo "ERROR: Could not find wheel in latest nightly release"
+        echo "Falling back to stable PyPI release..."
+        uv pip install \
+            --no-cache \
+            --link-mode=copy \
+            music-assistant
+    else
+        echo "Found nightly release: $release_tag"
+        echo "Wheel URL: $wheel_url"
+        echo ""
+        echo "Downloading and installing nightly wheel..."
+        uv pip install \
+            --no-cache \
+            --link-mode=copy \
+            "$wheel_url"
+    fi
+fi
 
 echo ""
 echo "✓ Server installation complete"
 echo ""
 
-# Parse frontend repository reference
-frontend_ref=$(parse_repo_ref "$frontend_repo" "music-assistant" "frontend")
+# Check if we should build frontend
+build_frontend=false
+if [ "$build_from_source" = true ]; then
+    # Building server from source - check if frontend_repo is specified
+    if [ -n "$frontend_repo" ] && [ "$frontend_repo" != "null" ]; then
+        build_frontend=true
+        # Parse frontend repository reference
+        frontend_ref=$(parse_repo_ref "$frontend_repo" "music-assistant" "frontend")
 
-echo "-----------------------------------------------------------"
-echo "Step 2: Building and Installing Music Assistant Frontend"
-echo "-----------------------------------------------------------"
-echo ""
-echo "Frontend repository: $frontend_ref"
-echo ""
+        echo "-----------------------------------------------------------"
+        echo "Step 2: Building and Installing Music Assistant Frontend"
+        echo "-----------------------------------------------------------"
+        echo ""
+        echo "Frontend repository: $frontend_ref"
+        echo ""
+    else
+        echo "-----------------------------------------------------------"
+        echo "Step 2: Skipping Frontend Build"
+        echo "-----------------------------------------------------------"
+        echo ""
+        echo "No frontend_repo specified - using frontend bundled with server"
+        echo ""
+    fi
+else
+    echo "-----------------------------------------------------------"
+    echo "Step 2: Skipping Frontend Build"
+    echo "-----------------------------------------------------------"
+    echo ""
+    echo "Frontend build skipped - using frontend bundled with PyPI release"
+    echo ""
+fi
+
+if [ "$build_frontend" = true ]; then
 
 # Extract owner, repo, and ref from parsed reference
 frontend_owner=$(echo "$frontend_ref" | cut -d'/' -f1)
@@ -145,6 +208,8 @@ echo ""
 # Cleanup
 cd /
 rm -rf "$frontend_dir"
+
+fi  # End of build_frontend check
 
 echo "-----------------------------------------------------------"
 echo "Starting Music Assistant"

@@ -45,11 +45,15 @@ Use the `server_repo` option to specify which version of the Music Assistant ser
 - **Pull Request**: `pr-123` (will checkout PR #123)
 - **Fork**: `username/server@branch-name`
 - **Commit**: Full commit SHA
+- **Empty/blank**: Use latest nightly release from GitHub (fast mode - no build required)
 
 **Examples**:
 
 ```yaml
-# Use the dev branch (default)
+# Use latest nightly release (FAST - no build required)
+server_repo: ""
+
+# Use the dev branch
 server_repo: dev
 
 # Use a specific branch
@@ -65,7 +69,9 @@ server_repo: someuser/server@experimental-feature
 server_repo: abc123def456...
 ```
 
-**Default**: `dev` (uses `music-assistant/server@dev`)
+**Default**: `""` (empty - uses latest nightly release from GitHub)
+
+> **Note**: When `server_repo` is left empty or blank, the add-on will install the latest nightly release wheel from GitHub releases. This is the fastest option as no server build is required.
 
 ### Frontend Repository Configuration
 
@@ -73,10 +79,19 @@ Use the `frontend_repo` option to specify which version of the Music Assistant f
 
 **Format**: Same as server_repo - `owner/repo@reference` or just `reference`
 
+- **Branch**: `main`, `dev`, or any branch name
+- **Pull Request**: `pr-789` (will checkout PR #789)
+- **Fork**: `username/frontend@branch-name`
+- **Commit**: Full commit SHA
+- **Empty/blank**: Skip frontend build (use bundled frontend)
+
 **Examples**:
 
 ```yaml
-# Use the main branch (default)
+# Skip frontend build (FAST - use bundled frontend)
+frontend_repo: ""
+
+# Use the main branch
 frontend_repo: main
 
 # Use a specific branch
@@ -92,24 +107,49 @@ frontend_repo: someuser/frontend@redesign
 frontend_repo: abc123def456...
 ```
 
-**Default**: `main` (uses `music-assistant/frontend@main`)
+**Default**: `""` (empty - uses bundled frontend, no build)
 
-## Full Configuration Example
+> **Note**: When `frontend_repo` is left empty or blank, the frontend build will be **skipped entirely**. This significantly reduces startup time and is ideal when you only need to test backend features. The frontend bundled with the server installation will be used instead.
 
+## Full Configuration Examples
+
+### Fast Mode (Backend Testing Only)
+```yaml
+log_level: info
+safe_mode: false
+server_repo: ""
+frontend_repo: ""
+```
+Uses latest nightly release from GitHub, no builds required. Fastest startup time.
+
+### Backend Development Mode
+```yaml
+log_level: debug
+safe_mode: false
+server_repo: dev
+frontend_repo: ""
+```
+Builds server from the `dev` branch, skips frontend build. Good for testing backend changes quickly.
+
+### Full Development Mode
 ```yaml
 log_level: debug
 safe_mode: false
 server_repo: pr-456
-frontend_repo: someuser/frontend@custom-ui
+frontend_repo: pr-789
 ```
-
-This would test PR #456 of the server with a custom UI from a fork.
+Builds both server (PR #456) and frontend (PR #789) from source. Full control for comprehensive testing.
 
 ## Important Notes
 
 ### Build Time
 
-- The startup will take a while as the code needs to be built
+Build time varies depending on your configuration:
+- **Both empty** (`server_repo: ""` and `frontend_repo: ""`): Fastest - no builds, uses latest nightly release
+- **Only `server_repo` specified**: Medium - builds server only, skips frontend (ideal for backend testing)
+- **Both specified**: Slowest - builds both server and frontend from source (full development mode)
+
+**Tip**: Leave `frontend_repo` empty when only testing backend features to significantly reduce startup time!
 
 ### Safe Mode
 
@@ -176,10 +216,16 @@ This is a developer tool and is not supported for regular users. If you encounte
 
 ## Differences from Regular Add-on
 
-| Feature      | Regular Add-on    | DEV Add-on             |
-| ------------ | ----------------- | ---------------------- |
-| Installation | Pre-built release | Built from source      |
-| Startup time | Fast              | Slower (build time)    |
-| Stability    | Stable releases   | Development code       |
-| Updates      | Automatic         | Manual (change config) |
-| Use case     | Production        | Development/Testing    |
+| Feature      | Regular Add-on    | DEV Add-on (Nightly mode) | DEV Add-on (Source mode) |
+| ------------ | ----------------- | ------------------------- | ------------------------ |
+| Installation | Pre-built release | Latest nightly wheel      | Built from source        |
+| Startup time | Fast              | Fast                      | Slower (build time)      |
+| Stability    | Stable releases   | Nightly builds            | Development code         |
+| Frontend     | Bundled           | Bundled                   | Built from source        |
+| Updates      | Automatic         | Manual (restart)          | Manual (change config)   |
+| Use case     | Production        | Quick backend testing     | Full development/testing |
+
+**Configuration Modes:**
+- **Fast mode**: Both repos empty - Uses latest nightly release, no builds
+- **Backend dev mode**: Only `server_repo` specified - Builds server, uses bundled frontend
+- **Full dev mode**: Both repos specified - Builds everything from source
