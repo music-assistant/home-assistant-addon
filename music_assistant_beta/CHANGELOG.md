@@ -1,3 +1,39 @@
+# [2.7.0b10] - 06.11.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b9](https://github.com/music-assistant/server/releases/tag/2.7.0b9)_
+
+### 🚀 Features and enhancements
+
+- Don't stop the music improvements (by @MarvinSchenkel in #2597)
+
+### 🐛 Bugfixes
+
+- Enforce flow mode when player does not support enqueueing (by @MarvinSchenkel in #2595)
+- fix: abs - discarded progress (by @fmunkes in #2598)
+- Fix japanese language code (by @MarvinSchenkel in #2599)
+- Fixed various issues with (plugin)sources (by @marcelveldt in #2600)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Chore(deps-dev): Bump ruff from 0.13.2 to 0.14.3 (by @dependabot[bot] in #2591)
+- Fix CoreController init signature to match model (by @OzGav in #2594)
+- Phish.in Remove erroneous provider feature (by @OzGav in #2596)
+- Spotify: Refactor search method to reduce complexity (by @OzGav in #2601)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes, @marcelveldt
+
+
 # [2.7.0b9] - 04.11.2025
 
 ## 📦 Beta Release
@@ -61,53 +97,5 @@ _Changes since [2.7.0b7](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel
-
-
-# [2.7.0b7] - 28.10.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b6](https://github.com/music-assistant/server/releases/tag/2.7.0b6)_
-
-### 🚀 Features and enhancements
-
-- Plex: implement recommendations with configurable hub limit (by @anatosun in #2531)
-- Qobuz: Add playlist creation (by @OzGav in #2554)
-- Add automatically generated API documentation (by @marcelveldt in #2559)
-
-### 🐛 Bugfixes
-
-- Squeezelite: Remove volume mute PlayerFeature (by @OzGav in #2537)
-
-### 🎨 Frontend Changes
-
-- Implement control of other sources playing on a player (by @marcelveldt in [#1195](https://github.com/music-assistant/frontend/pull/1195))
-- Volume slider tweaks (by @stvncode in [#1194](https://github.com/music-assistant/frontend/pull/1194))
-* No changes
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>11 changes</summary>
-
-- Player controller mypy fixes (by @OzGav in #2546)
-- ⬆️ Update music-assistant-models to 1.1.64 (by @music-assistant-machine in #2550)
-- ⬆️ Update music-assistant-models to 1.1.65 (by @music-assistant-machine in #2553)
-- Chore(deps): Bump tomli from 2.2.1 to 2.3.0 (by @dependabot[bot] in #2555)
-- Chore(deps): Bump actions/upload-artifact from 4 to 5 (by @dependabot[bot] in #2556)
-- Chore(deps): Bump orjson from 3.11.3 to 3.11.4 (by @dependabot[bot] in #2557)
-- Chore(deps): Bump actions/download-artifact from 5 to 6 (by @dependabot[bot] in #2558)
-- Chore(deps): Bump colorlog from 6.9.0 to 6.10.1 (by @dependabot[bot] in #2560)
-- ⬆️ Update music-assistant-frontend to 2.17.4 (by @music-assistant-machine in #2561)
-- Bluos default config tweaks (by @Cyanogenbot in #2562)
-- ⬆️ Update music-assistant-frontend to 2.17.5 (by @music-assistant-machine in #2563)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Cyanogenbot, @OzGav, @anatosun, @marcelveldt, @stvncode
 
 
