@@ -1,6 +1,6 @@
 name: Music Assistant DEV SERVER
 # version number gets updated only when the mass base image updates!
-version: 1.4.9f
+version: 1.4.9g
 slug: music_assistant_dev
 description: Development add-on for Music Assistant. For developers only.
 url: https://music-assistant.io
@@ -17,7 +17,6 @@ panel_icon: mdi:play-circle
 panel_title: Music Assistant
 panel_admin: false
 uart: false
-host_dbus: true
 apparmor: true
 map:
   - media:rw
