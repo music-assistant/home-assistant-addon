@@ -1,9 +1,4 @@
-#include <tunables/global>
-
-profile music_assistant_dev flags=(attach_disconnected,mediate_deleted) {
-  #include <abstractions/base>
-  #include <abstractions/dbus-strict>
-
+profile music_assistant_addon flags=(attach_disconnected,mediate_deleted) {
   capability,
   file,
   signal,
@@ -19,6 +14,7 @@ profile music_assistant_dev flags=(attach_disconnected,mediate_deleted) {
   network inet6,
   network netlink raw,
   network unix dgram,
+  network unix stream,
 
   capability setgid,
   capability setuid,
@@ -32,10 +28,15 @@ profile music_assistant_dev flags=(attach_disconnected,mediate_deleted) {
   /data/** rw,
   /media/** rw,
 
-  # D-Bus system bus access (required for shairport-sync remote control)
-  dbus bus=system,
-  unix (send, receive) type=stream addr=none peer=(label=unconfined),
-  /run/dbus/system_bus_socket rw,
+  # D-Bus system bus access - Allow ALL D-Bus operations
+  dbus,
+
+  # Unix sockets for D-Bus
+  unix,
+
+  # D-Bus socket access
+  /run/dbus/** rw,
+  /var/run/dbus/** rw,
 
   # docker daemon confinement requires explict allow rule for signal
   signal (receive) set=(kill,term) peer=/usr/bin/docker,
