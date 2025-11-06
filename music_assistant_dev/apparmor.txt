@@ -1,4 +1,9 @@
+#include <tunables/global>
+
 profile music_assistant_addon flags=(attach_disconnected,mediate_deleted) {
+  #include <abstractions/base>
+  #include <abstractions/dbus-strict>
+
   capability,
   file,
   signal,
@@ -28,13 +33,8 @@ profile music_assistant_addon flags=(attach_disconnected,mediate_deleted) {
   /media/** rw,
 
   # D-Bus system bus access (required for shairport-sync remote control)
-  dbus (send, receive) bus=system,
-  dbus (bind) bus=system name=org.gnome.ShairportSync,
-  dbus (bind) bus=system name="org.gnome.ShairportSync.i*",
-  dbus (bind) bus=system name=org.mpris.MediaPlayer2.ShairportSync,
-  dbus (bind) bus=system name="org.mpris.MediaPlayer2.ShairportSync.i*",
-
-  # D-Bus socket access
+  dbus bus=system,
+  unix (send, receive) type=stream addr=none peer=(label=unconfined),
   /run/dbus/system_bus_socket rw,
 
   # docker daemon confinement requires explict allow rule for signal
