@@ -1,3 +1,32 @@
+# [2.7.0.dev2025110716] - 07.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025110701](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110701)_
+
+### 🚀 Features and enhancements
+
+- Refactor Smart fades (by @MarvinSchenkel in #2582)
+- Apple music improvements (by @MarvinSchenkel in #2607)
+
+### 🐛 Bugfixes
+
+- fix: abs: another in progress fix (by @fmunkes in #2605)
+- fix: MusicCast - non-existing player in zone handling (by @fmunkes in #2606)
+
+### 🧰 Maintenance and dependency bumps
+
+- Typing fixes for the config controller (by @OzGav in #2570)
+- Typing fixes for the Webserver controller (by @OzGav in #2586)
+- Typing fixes for the squeezelite provider (by @OzGav in #2589)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes
+
+
 # [2.7.0.dev2025110701] - 07.11.2025
 
 ## 📦 Nightly Release
@@ -41,29 +70,5 @@ _Changes since [2.7.0.dev2025110503](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav
-
-
-# [2.7.0.dev2025110503] - 05.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025110400](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110400)_
-
-### 🐛 Bugfixes
-
-- Enforce flow mode when player does not support enqueueing (by @MarvinSchenkel in #2595)
-- fix: abs - discarded progress (by @fmunkes in #2598)
-- Fix japanese language code (by @MarvinSchenkel in #2599)
-- Fixed various issues with (plugin)sources (by @marcelveldt in #2600)
-
-### 🧰 Maintenance and dependency bumps
-
-- Phish.in Remove erroneous provider feature (by @OzGav in #2596)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @fmunkes, @marcelveldt
 
 
