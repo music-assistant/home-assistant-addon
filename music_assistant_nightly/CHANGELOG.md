@@ -1,3 +1,8 @@
+# [2.7.0.dev2025110717] - 07.11.2025
+
+* No changes
+
+
 # [2.7.0.dev2025110716] - 07.11.2025
 
 ## 📦 Nightly Release
@@ -47,28 +52,5 @@ _Changes since [2.7.0.dev2025110603](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt
-
-
-# [2.7.0.dev2025110603] - 06.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025110503](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110503)_
-
-### 🚀 Features and enhancements
-
-- Don't stop the music improvements (by @MarvinSchenkel in #2597)
-
-### 🧰 Maintenance and dependency bumps
-
-- Chore(deps-dev): Bump ruff from 0.13.2 to 0.14.3 (by @dependabot[bot] in #2591)
-- Fix CoreController init signature to match model (by @OzGav in #2594)
-- Spotify: Refactor search method to reduce complexity (by @OzGav in #2601)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav
 
 
