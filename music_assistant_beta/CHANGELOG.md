@@ -1,3 +1,37 @@
+# [2.7.0b12] - 08.11.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b11](https://github.com/music-assistant/server/releases/tag/2.7.0b11)_
+
+### 🚀 New Providers
+
+- Add Airport Receiver Plugin provider (by @marcelveldt in #2604)
+
+### 🚀 Features and enhancements
+
+- Refactor Smart fades (by @MarvinSchenkel in #2582)
+- Apple music improvements (by @MarvinSchenkel in #2607)
+- Apple Music: Add remaining favourite parsing + custom music token config (by @MarvinSchenkel in #2609)
+
+### 🐛 Bugfixes
+
+- fix: abs: another in progress fix (by @fmunkes in #2605)
+- fix: MusicCast - non-existing player in zone handling (by @fmunkes in #2606)
+
+### 🧰 Maintenance and dependency bumps
+
+- Typing fixes for the config controller (by @OzGav in #2570)
+- Typing fixes for the Webserver controller (by @OzGav in #2586)
+- Typing fixes for the squeezelite provider (by @OzGav in #2589)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes, @marcelveldt
+
+
 # [2.7.0b11] - 06.11.2025
 
 ## 📦 Beta Release
@@ -50,53 +84,5 @@ _Changes since [2.7.0b9](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @fmunkes, @marcelveldt
-
-
-# [2.7.0b9] - 04.11.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b8](https://github.com/music-assistant/server/releases/tag/2.7.0b8)_
-
-### 🚀 Features and enhancements
-
-- Add support for actions flow in Player config entries (by @marcelveldt in #2572)
-- Update Resonate Provider (by @maximmaxim345 in #2575)
-- Use system version of FFmpeg for Resonate (by @maximmaxim345 in #2577)
-- Subsonic: Use loudness tags when present (by @khers in #2580)
-
-### 🐛 Bugfixes
-
-- Fix Squeezelite sample rate for multi client streams (by @OzGav in #2565)
-- Fix buffered generator hang by ensuring None sentinel delivery (by @maximmaxim345 in #2566)
-- Fix custom name & image for manually added radio URL's (by @OzGav in #2583)
--  Fix for some HLS radio streams playback (by @OzGav in #2585)
-- Add missing enforced flow mode config entry for Resonate (by @maximmaxim345 in #2587)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1196](https://github.com/music-assistant/frontend/pull/1196))
-* No changes
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- ⬆️ Update music-assistant-frontend to 2.17.6 (by @music-assistant-machine in #2568)
-- mypy fix for metadata.py (by @OzGav in #2573)
-- Typing fixes for the Radio media controller (by @OzGav in #2574)
-- ⬆️ Update music-assistant-models to 1.1.66 (by @music-assistant-machine in #2576)
-- ⬆️ Update music-assistant-models to 1.1.68 (by @music-assistant-machine in #2578)
-- ⬆️ Update music-assistant-frontend to 2.17.7 (by @music-assistant-machine in #2579)
-- AirPlay Fix line too long (by @OzGav in #2581)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @khers, @marcelveldt, @maximmaxim345
 
 
