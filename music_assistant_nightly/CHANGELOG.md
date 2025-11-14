@@ -1,3 +1,20 @@
+# [2.7.0.dev2025111403] - 14.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025111103](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111103)_
+
+### 🐛 Bugfixes
+
+- Added deno for YTMusic Provider (by @Dnny44 in #2636)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Dnny44
+
+
 # [2.7.0.dev2025111103] - 11.11.2025
 
 ## 📦 Nightly Release
@@ -38,22 +55,5 @@ _Changes since [2.7.0.dev2025110903](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @mtdcr
-
-
-# [2.7.0.dev2025110903] - 09.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025110717](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110717)_
-
-### 🚀 Features and enhancements
-
-- Apple Music: Add remaining favourite parsing + custom music token config (by @MarvinSchenkel in #2609)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
