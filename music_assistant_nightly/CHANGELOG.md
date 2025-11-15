@@ -1,3 +1,24 @@
+# [2.7.0.dev2025111503] - 15.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025111403](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111403)_
+
+### 🚀 Features and enhancements
+
+- Update Resonate provider with `MULTI_DEVICE_DSP` support and other improvements (by @maximmaxim345 in #2616)
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix CI by installing all provider's dependencies when linting (by @maximmaxim345 in #2619)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@maximmaxim345
+
+
 # [2.7.0.dev2025111403] - 14.11.2025
 
 ## 📦 Nightly Release
@@ -38,22 +59,5 @@ _Changes since [2.7.0.dev2025111003](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @maximmaxim345
-
-
-# [2.7.0.dev2025111003] - 10.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025110903](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025110903)_
-
-### 🚀 Features and enhancements
-
-- Use secure connection to MusicBrainz API (by @mtdcr in #2615)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@mtdcr
 
 
