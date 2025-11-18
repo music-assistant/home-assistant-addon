@@ -1,3 +1,21 @@
+# [2.7.0.dev2025111803] - 18.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025111703](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111703)_
+
+### 🧰 Maintenance and dependency bumps
+
+- Add type hints to config controller functions (by @marcelveldt in #2639)
+- Minor AirPlay tweaks (by @OzGav in #2646)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt
+
+
 # [2.7.0.dev2025111703] - 17.11.2025
 
 ## 📦 Nightly Release
@@ -41,22 +59,5 @@ _Changes since [2.7.0.dev2025111403](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @maximmaxim345
-
-
-# [2.7.0.dev2025111403] - 14.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025111103](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111103)_
-
-### 🐛 Bugfixes
-
-- Added deno for YTMusic Provider (by @Dnny44 in #2636)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Dnny44
 
 
