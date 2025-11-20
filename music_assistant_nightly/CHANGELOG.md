@@ -1,3 +1,8 @@
+# [2.7.0.dev2025112003] - 20.11.2025
+
+* No changes
+
+
 # [2.7.0.dev2025111903] - 19.11.2025
 
 ## 📦 Nightly Release
@@ -57,29 +62,5 @@ _Changes since [2.7.0.dev2025111703](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt
-
-
-# [2.7.0.dev2025111703] - 17.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025111503](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111503)_
-
-### 🚀 Features and enhancements
-
-- Add (initial) support for AirPlay 2 (by @bradkeifer in #2571)
-
-### 🐛 Bugfixes
-
-- fix: tracks tab not being populated (by @anatosun in #2637)
-- Fix: Handle non-UTF8 .lrc files gracefully to prevent playback blocking (by @OzGav in #2640)
-- fix: abs progress (again!) (by @fmunkes in #2641)
-- Fix squeezelite sync group source selection (by @OzGav in #2642)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @anatosun, @bradkeifer, @fmunkes
 
 
