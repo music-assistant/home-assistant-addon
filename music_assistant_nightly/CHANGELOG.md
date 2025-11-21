@@ -1,3 +1,25 @@
+# [2.7.0.dev2025112103] - 21.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025112003](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112003)_
+
+### 🚀 New Providers
+
+- Add VBAN Receiver plugin provider (by @sprocket-9 in #2498)
+
+### 🧰 Maintenance and dependency bumps
+
+- Update alexapy requirement to version 1.29.9 (by @michaelansel in #2647)
+- Enable disabled lint rules (by @OzGav in #2658)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @michaelansel, @sprocket-9
+
+
 # [2.7.0.dev2025112003] - 20.11.2025
 
 * No changes
@@ -44,23 +66,5 @@ _Changes since [2.7.0.dev2025111803](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav
-
-
-# [2.7.0.dev2025111803] - 18.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025111703](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111703)_
-
-### 🧰 Maintenance and dependency bumps
-
-- Add type hints to config controller functions (by @marcelveldt in #2639)
-- Minor AirPlay tweaks (by @OzGav in #2646)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt
 
 
