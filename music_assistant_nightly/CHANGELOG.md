@@ -1,3 +1,41 @@
+# [2.7.0.dev2025112202] - 22.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025112103](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112103)_
+
+### 🚀 Features and enhancements
+
+- Add TLS options with fingerprint support to Fully Kiosk provider (by @miguelangel-nubla in #2649)
+
+### 🐛 Bugfixes
+
+- Disable Zone Handling if needed for MusicCast players (by @fmunkes in #2650)
+- fix(tidal): auth refresh time diff (by @jozefKruszynski in #2653)
+- Fix Chromecast volume rounding bug (by @OzGav in #2656)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Chore(deps): Bump pywidevine from 1.8.0 to 1.9.0 (by @dependabot[bot] in #2590)
+- Chore(deps): Bump liblistenbrainz from 0.6.0 to 0.6.1 (by @dependabot[bot] in #2592)
+- Chore(deps): Bump aiohttp from 3.13.1 to 3.13.2 (by @dependabot[bot] in #2620)
+- Typing fixes for artists controller (by @OzGav in #2625)
+- Typing fixes for the audiobooks controller (by @OzGav in #2626)
+- Some typing fixes for the music controller (by @OzGav in #2629)
+- Types fixes for the Albums Controller (by @OzGav in #2632)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @fmunkes, @jozefKruszynski, @miguelangel-nubla
+
+
 # [2.7.0.dev2025112103] - 21.11.2025
 
 ## 📦 Nightly Release
@@ -23,48 +61,5 @@ Special thanks to the following contributors who helped with this release:
 # [2.7.0.dev2025112003] - 20.11.2025
 
 * No changes
-
-
-# [2.7.0.dev2025111903] - 19.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025111803](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025111803)_
-
-### 🚀 Features and enhancements
-
-- Fix Spotify audiobook instance routing (by @OzGav in #2502)
-- Refactor streams controller + smart fades  (by @MarvinSchenkel in #2613)
-- Improve lyrics lookup failure visibility (by @OzGav in #2651)
-
-### 🐛 Bugfixes
-
-- Fix DLNA player showing external source instead of MA queue (by @OzGav in #2648)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1209](https://github.com/music-assistant/frontend/pull/1209))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1208](https://github.com/music-assistant/frontend/pull/1208))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1202](https://github.com/music-assistant/frontend/pull/1202))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Typing fixes for the stream controller (by @OzGav in #2540)
-- Typing fixes for the Cache controller (by @OzGav in #2569)
-- Chore(deps-dev): Bump ruff from 0.14.3 to 0.14.4 (by @dependabot[bot] in #2621)
-- Typing fix for SiriusXM (by @OzGav in #2623)
-- Typing fixes for snapcast (by @OzGav in #2624)
-- ⬆️ Update music-assistant-frontend to 2.17.8 (by @music-assistant-machine in #2655)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav
 
 
