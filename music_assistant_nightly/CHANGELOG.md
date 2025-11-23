@@ -1,3 +1,14 @@
+# [2.7.0.dev2025112303] - 23.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025112202](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112202)_
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.69 (by @music-assistant-machine in #2664)
+
+
 # [2.7.0.dev2025112202] - 22.11.2025
 
 ## 📦 Nightly Release
@@ -56,10 +67,5 @@ _Changes since [2.7.0.dev2025112003](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @michaelansel, @sprocket-9
-
-
-# [2.7.0.dev2025112003] - 20.11.2025
-
-* No changes
 
 
