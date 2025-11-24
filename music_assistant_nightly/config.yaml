@@ -9,6 +9,8 @@ arch:
   - amd64
   - aarch64
 homeassistant_api: true
+discovery:
+  - music_assistant
 auth_api: true
 host_network: true
 ingress: true
@@ -20,7 +22,7 @@ uart: false
 map:
   - media:rw
 init: false
-advanced: false
+advanced: true
 backup_exclude:
   - cache.db
   - collage_images/*

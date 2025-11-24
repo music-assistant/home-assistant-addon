@@ -8,6 +8,8 @@ arch:
   - amd64
   - aarch64
 homeassistant_api: true
+discovery:
+  - music_assistant
 audio: true
 auth_api: true
 host_network: true
@@ -21,7 +23,7 @@ apparmor: true
 map:
   - media:rw
 init: false
-advanced: false
+advanced: true
 stage: experimental
 tmpfs: true
 backup_exclude:

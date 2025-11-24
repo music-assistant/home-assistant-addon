@@ -7,6 +7,8 @@ arch:
   - amd64
   - aarch64
 homeassistant_api: true
+discovery:
+  - music_assistant
 auth_api: true
 host_network: true
 ingress: true
@@ -15,6 +17,7 @@ panel_icon: mdi:play-circle
 panel_title: Music Assistant
 panel_admin: false
 uart: false
+apparmor: true
 map:
   - media:rw
 init: false
