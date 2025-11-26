@@ -1,3 +1,54 @@
+# [2.7.0.dev2025112619] - 26.11.2025
+
+## ⚠️ Important Notes
+
+This release adds mandatory authentication to the Music Assistant webserver.\n\n  At first startup you will be greeted with a setup screen to create the (first) admin account, your data will be reserved. You need this account to login to Music Assistant directly from now on.\n\n   Running as Home Assistant add-on? We will automatically log you in when using the built-in (Ingress) panel to access Music Assistant.
+
+---
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025112603](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112603)_
+
+### 🚀 Features and enhancements
+
+- Add APEv2 image support (by @OzGav in #2668)
+- Add (mandatory) authentication to the webserver (by @marcelveldt in #2684)
+- BBC Sounds: Improve title metadata (by @kieranhogg in #2688)
+
+### 🐛 Bugfixes
+
+- Fix TypeError when caching browse results with Sequence return type (by @OzGav in #2657)
+- fix(bbc_sounds): Fix error when fetching podcast episodes (by @kieranhogg in #2677)
+- Fix squeezelite UnboundLocalError exception when playing a plugin source. (by @sprocket-9 in #2678)
+- Plex Connect: fixed group volume report (by @anatosun in #2683)
+- fix(bbc_sounds): Handle library exception more gracefully (by @kieranhogg in #2686)
+- fix(bbc_sounds): Reorder menu API calls so only used by auth users (by @kieranhogg in #2687)
+
+### 🎨 Frontend Changes
+
+- Fix validation for dropdowns when the selection value is 0 (by @OzGav in [#1225](https://github.com/music-assistant/frontend/pull/1225))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Tidal: maintenance improvements (by @jozefKruszynski in #2654)
+- Chore(deps): Bump actions/setup-python from 6.0.0 to 6.1.0 (by @dependabot[bot] in #2676)
+- Add Plex Connect monochrome icon (by @OzGav in #2679)
+- ⬆️ Update music-assistant-frontend to 2.17.10 (by @music-assistant-machine in #2680)
+- Pre-build PyAV wheel in base image to speed up release builds (by @maximmaxim345 in #2682)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @anatosun, @jozefKruszynski, @kieranhogg, @marcelveldt, @maximmaxim345, @sprocket-9
+
+
 # [2.7.0.dev2025112603] - 26.11.2025
 
 ## 📦 Nightly Release
@@ -55,30 +106,5 @@ _Changes since [2.7.0.dev2025112503](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Shi-553, @anatosun, @khers
-
-
-# [2.7.0.dev2025112503] - 25.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025112403](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112403)_
-
-### 🚀 Features and enhancements
-
-- Subsonic: Add ProviderFeature for Favorites (by @khers in #2667)
-
-### 🎨 Frontend Changes
-
-- Last update for the slider (by @stvncode in [#1210](https://github.com/music-assistant/frontend/pull/1210))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.9 (by @music-assistant-machine in #2674)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@khers, @stvncode
 
 
