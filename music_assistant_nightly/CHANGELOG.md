@@ -1,3 +1,18 @@
+# [2.7.0.dev2025112904] - 29.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025112903](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112903)_
+
+### 🎨 Frontend Changes
+
+* No changes
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.16 (by @music-assistant-machine in #2713)
+
+
 # [2.7.0.dev2025112903] - 29.11.2025
 
 ## 📦 Nightly Release
@@ -71,31 +86,5 @@ _Changes since [2.7.0.dev2025112703](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes, @kieranhogg, @marcelveldt, @stvncode, @theomega
-
-
-# [2.7.0.dev2025112703] - 27.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025112620](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112620)_
-
-### 🚀 Features and enhancements
-
-- Add extra info to scrobble data (by @OzGav in #2669)
-- Update Spotify (librespot) binaries (by @marcelveldt in #2692)
-
-### 🐛 Bugfixes
-
-- Plex: Fix collision in cache keys (by @anatosun in #2638)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.72 (by @music-assistant-machine in #2693)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @anatosun, @marcelveldt
 
 
