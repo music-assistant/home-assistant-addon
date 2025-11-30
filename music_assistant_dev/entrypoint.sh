@@ -84,10 +84,12 @@ else
     echo ""
 
     # Get the latest pre-release info from GitHub API
-    # Use per_page=10 to limit response size and avoid control character issues in large responses
-    release_info=$(curl -s "https://api.github.com/repos/music-assistant/server/releases?per_page=10")
-    release_tag=$(echo "$release_info" | jq -r '[.[] | select(.prerelease == true)] | first | .tag_name')
-    wheel_url=$(echo "$release_info" | jq -r '[.[] | select(.prerelease == true)] | first | .assets[] | select(.name | endswith(".whl")) | .browser_download_url')
+    # Write to temp file to avoid control character issues when passing through shell variables
+    tmp_releases="/tmp/releases.json"
+    curl -s "https://api.github.com/repos/music-assistant/server/releases?per_page=10" > "$tmp_releases"
+    release_tag=$(jq -r '[.[] | select(.prerelease == true)] | first | .tag_name' < "$tmp_releases")
+    wheel_url=$(jq -r '[.[] | select(.prerelease == true)] | first | .assets[] | select(.name | endswith(".whl")) | .browser_download_url' < "$tmp_releases")
+    rm -f "$tmp_releases"
 
     if [ -z "$wheel_url" ] || [ "$wheel_url" = "null" ]; then
         echo "ERROR: Could not find wheel in latest nightly release"
