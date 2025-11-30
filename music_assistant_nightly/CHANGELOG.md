@@ -1,3 +1,20 @@
+# [2.7.0.dev2025113003] - 30.11.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025112904](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112904)_
+
+### 🐛 Bugfixes
+
+- Fix for GET /all RTSP response handler in AirPlay (by @bradkeifer in #2714)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@bradkeifer
+
+
 # [2.7.0.dev2025112904] - 29.11.2025
 
 ## 📦 Nightly Release
@@ -49,42 +66,5 @@ _Changes since [2.7.0.dev2025112803](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @bradkeifer, @jozefKruszynski, @marcelveldt, @wjzijderveld
-
-
-# [2.7.0.dev2025112803] - 28.11.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025112703](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025112703)_
-
-### 🚀 Features and enhancements
-
-- Some follow-up additions and fixes for the Authentication support (by @marcelveldt in #2699)
-- Add recently added tracks and albums playlist + recommendation (by @theomega in #2700)
-
-### 🐛 Bugfixes
-
-- BBC Sounds: Fix Radio 4 station (by @kieranhogg in #2696)
-- ABS: fix for schema issue (by @fmunkes in #2701)
-
-### 🎨 Frontend Changes
-
-* No changes
-- Implement new toaster and remove the old one (by @stvncode in [#1229](https://github.com/music-assistant/frontend/pull/1229))
-- Add a way to copy the token after his creation (by @stvncode in [#1230](https://github.com/music-assistant/frontend/pull/1230))
-- Remove sync button for media items (by @stvncode in [#1227](https://github.com/music-assistant/frontend/pull/1227))
-- Fix content hidden for core settings server information (by @stvncode in [#1228](https://github.com/music-assistant/frontend/pull/1228))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.12 (by @music-assistant-machine in #2694)
-- ⬆️ Update music-assistant-models to 1.1.73 (by @music-assistant-machine in #2697)
-- ⬆️ Update music-assistant-frontend to 2.17.13 (by @music-assistant-machine in #2703)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @kieranhogg, @marcelveldt, @stvncode, @theomega
 
 
