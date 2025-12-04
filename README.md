@@ -3,7 +3,7 @@ Music Assistant
 
 **Music Assistant**
 
-This is the Home Assistant add-on repository for Music Assistant for a convenient way to run the [Music Assistant Server](https://github.com/music-assistant/core)
+This is the Home Assistant add-on repository for Music Assistant for a convenient way to run the [Music Assistant Server](https://github.com/music-assistant/server)
 
 Music Assistant is a music library manager for your offline and online music sources, combined with the power of Home Assistant to easily stream your favourite music to a wide range of supported players.
 
