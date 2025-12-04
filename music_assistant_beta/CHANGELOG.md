@@ -1,3 +1,31 @@
+# [2.7.0b18] - 04.12.2025
+
+## ⚠️ Important Notes
+
+Read the B17 release notes about mandatory auth!
+
+---
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b17](https://github.com/music-assistant/server/releases/tag/2.7.0b17)_
+
+### 🐛 Bugfixes
+
+- A few bugfixes to auth manager after beta reports (by @marcelveldt in #2744)
+
+### 🧰 Maintenance and dependency bumps
+
+- Chore(deps): Bump plexapi from 4.17.1 to 4.17.2 (by @dependabot[bot] in #2727)
+- ⬆️ Update music-assistant-frontend to 2.17.25 (by @music-assistant-machine in #2745)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.7.0b17] - 03.12.2025
 
 ## ⚠️ Important Notes
@@ -207,26 +235,5 @@ _Changes since [2.7.0b15](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Shi-553, @anatosun, @bradkeifer, @fmunkes, @jozefKruszynski, @khers, @kieranhogg, @marcelveldt, @michaelansel, @miguelangel-nubla, @sprocket-9, @stvncode
-
-
-# [2.7.0b15] - 14.11.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b14](https://github.com/music-assistant/server/releases/tag/2.7.0b14)_
-
-### 🚀 Features and enhancements
-
-- Update Resonate provider with `MULTI_DEVICE_DSP` support and other improvements (by @maximmaxim345 in #2616)
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix CI by installing all provider's dependencies when linting (by @maximmaxim345 in #2619)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@maximmaxim345
 
 
