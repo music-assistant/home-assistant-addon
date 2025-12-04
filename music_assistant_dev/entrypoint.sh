@@ -114,35 +114,25 @@ echo ""
 echo "✓ Server installation complete"
 echo ""
 
-# Check if we should build frontend
+# Check if we should build frontend - this is independent of server source
 build_frontend=false
-if [ "$build_from_source" = true ]; then
-    # Building server from source - check if frontend_repo is specified
-    if [ -n "$frontend_repo" ] && [ "$frontend_repo" != "null" ]; then
-        build_frontend=true
-        # Parse frontend repository reference
-        frontend_ref=$(parse_repo_ref "$frontend_repo" "music-assistant" "frontend")
+if [ -n "$frontend_repo" ] && [ "$frontend_repo" != "null" ]; then
+    build_frontend=true
+    # Parse frontend repository reference
+    frontend_ref=$(parse_repo_ref "$frontend_repo" "music-assistant" "frontend")
 
-        echo "-----------------------------------------------------------"
-        echo "Step 2: Building and Installing Music Assistant Frontend"
-        echo "-----------------------------------------------------------"
-        echo ""
-        echo "Frontend repository: $frontend_ref"
-        echo ""
-    else
-        echo "-----------------------------------------------------------"
-        echo "Step 2: Skipping Frontend Build"
-        echo "-----------------------------------------------------------"
-        echo ""
-        echo "No frontend_repo specified - using frontend bundled with server"
-        echo ""
-    fi
+    echo "-----------------------------------------------------------"
+    echo "Step 2: Building and Installing Music Assistant Frontend"
+    echo "-----------------------------------------------------------"
+    echo ""
+    echo "Frontend repository: $frontend_ref"
+    echo ""
 else
     echo "-----------------------------------------------------------"
     echo "Step 2: Skipping Frontend Build"
     echo "-----------------------------------------------------------"
     echo ""
-    echo "Frontend build skipped - using frontend bundled with PyPI release"
+    echo "No frontend_repo specified - using frontend bundled with server"
     echo ""
 fi
 
