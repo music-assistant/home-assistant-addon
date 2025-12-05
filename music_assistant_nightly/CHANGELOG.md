@@ -1,3 +1,34 @@
+# [2.7.0.dev2025120516] - 05.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025120503](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120503)_
+
+### 🚀 Features and enhancements
+
+- Add Experimental Sendspin over Cast Support (by @maximmaxim345 in #2737)
+- Add volume control to Spotify connect (by @MarvinSchenkel in #2750)
+
+### 🎨 Frontend Changes
+
+- refactor: remove builtin player (in favor of sendspin) (by @maximmaxim345 in [#1257](https://github.com/music-assistant/frontend/pull/1257))
+- Replace the builtin player with Sendspin (by @elialbert in [#1212](https://github.com/music-assistant/frontend/pull/1212))
+- Open player group with an icon instead of the card (by @stvncode in [#1255](https://github.com/music-assistant/frontend/pull/1255))
+- Handle persisting user pref if they are not present on laod (by @stvncode in [#1256](https://github.com/music-assistant/frontend/pull/1256))
+
+### 🧰 Maintenance and dependency bumps
+
+- Phase out lookup key (by @marcelveldt in #2751)
+- refactor: remove builtin player (in favor of sendspin) (by @maximmaxim345 in #2752)
+- ⬆️ Update music-assistant-frontend to 2.17.28 (by @music-assistant-machine in #2753)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @elialbert, @marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.7.0.dev2025120503] - 05.12.2025
 
 ## 📦 Nightly Release
@@ -70,34 +101,5 @@ _Changes since [2.7.0.dev2025120303](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt, @stvncode
-
-
-# [2.7.0.dev2025120303] - 03.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025120203](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120203)_
-
-### 🐛 Bugfixes
-
-- Spotify connect improvements (by @MarvinSchenkel in #2733)
-- Add stub for GenreController (by @MarvinSchenkel in #2734)
-- Fix sync group losing child member across MA restarts (by @MarvinSchenkel in #2736)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1245](https://github.com/music-assistant/frontend/pull/1245))
-- Refactor the player settings page (by @stvncode in [#1247](https://github.com/music-assistant/frontend/pull/1247))
-- Fix login loop caused by authentication race condition (by @maximmaxim345 in [#1246](https://github.com/music-assistant/frontend/pull/1246))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.23 (by @music-assistant-machine in #2739)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @maximmaxim345, @stvncode
 
 
