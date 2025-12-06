@@ -1,3 +1,22 @@
+# [2.7.0b21] - 06.12.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b20](https://github.com/music-assistant/server/releases/tag/2.7.0b20)_
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- ⬆️ Update music-assistant-models to 1.1.77 (by @music-assistant-machine in #2755)
+- ⬆️ Update music-assistant-frontend to 2.17.30 (by @music-assistant-machine in #2756)
+- ⬆️ Update music-assistant-models to 1.1.78 (by @music-assistant-machine in #2757)
+- ⬆️ Update music-assistant-frontend to 2.17.31 (by @music-assistant-machine in #2759)
+
+</details>
+
+
 # [2.7.0b20] - 06.12.2025
 
 ## 📦 Beta Release
@@ -70,33 +89,5 @@ _Changes since [2.7.0b18](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @maximmaxim345, @sethbrammer, @stvncode
-
-
-# [2.7.0b18] - 04.12.2025
-
-## ⚠️ Important Notes
-
-Read the B17 release notes about mandatory auth!
-
----
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b17](https://github.com/music-assistant/server/releases/tag/2.7.0b17)_
-
-### 🐛 Bugfixes
-
-- A few bugfixes to auth manager after beta reports (by @marcelveldt in #2744)
-
-### 🧰 Maintenance and dependency bumps
-
-- Chore(deps): Bump plexapi from 4.17.1 to 4.17.2 (by @dependabot[bot] in #2727)
-- ⬆️ Update music-assistant-frontend to 2.17.25 (by @music-assistant-machine in #2745)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
