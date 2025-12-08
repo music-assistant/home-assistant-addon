@@ -1,3 +1,29 @@
+# [2.7.0b23] - 08.12.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b22](https://github.com/music-assistant/server/releases/tag/2.7.0b22)_
+
+### 🐛 Bugfixes
+
+- Fixes for multiple instances of the same provider (by @marcelveldt in #2765)
+
+### 🎨 Frontend Changes
+
+- Add the possibility to switch from listview to thumbs for players and providers (by @stvncode in [#1259](https://github.com/music-assistant/frontend/pull/1259))
+- Fix race condition with loading user preferences at startup (by @marcelveldt in [#1260](https://github.com/music-assistant/frontend/pull/1260))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.33 (by @music-assistant-machine in #2766)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @stvncode
+
+
 # [2.7.0b22] - 07.12.2025
 
 ## 📦 Beta Release
@@ -42,47 +68,5 @@ _Changes since [2.7.0b20](https://github.com/music-assistant/server/releases/tag
 - ⬆️ Update music-assistant-frontend to 2.17.31 (by @music-assistant-machine in #2759)
 
 </details>
-
-
-# [2.7.0b20] - 06.12.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b19](https://github.com/music-assistant/server/releases/tag/2.7.0b19)_
-
-### 🚀 Features and enhancements
-
-- Add Experimental Sendspin over Cast Support (by @maximmaxim345 in #2737)
-- Add volume control to Spotify connect (by @MarvinSchenkel in #2750)
-
-### 🐛 Bugfixes
-
-- Fix queue not proceeding to next track for squeezelite groups (by @MarvinSchenkel in #2749)
-
-### 🎨 Frontend Changes
-
-- refactor: remove builtin player (in favor of sendspin) (by @maximmaxim345 in [#1257](https://github.com/music-assistant/frontend/pull/1257))
-- Replace the builtin player with Sendspin (by @elialbert in [#1212](https://github.com/music-assistant/frontend/pull/1212))
-- Open player group with an icon instead of the card (by @stvncode in [#1255](https://github.com/music-assistant/frontend/pull/1255))
-- Handle persisting user pref if they are not present on laod (by @stvncode in [#1256](https://github.com/music-assistant/frontend/pull/1256))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- ⬆️ Update music-assistant-frontend to 2.17.27 (by @music-assistant-machine in #2748)
-- Phase out lookup key (by @marcelveldt in #2751)
-- refactor: remove builtin player (in favor of sendspin) (by @maximmaxim345 in #2752)
-- ⬆️ Update music-assistant-frontend to 2.17.28 (by @music-assistant-machine in #2753)
-- ⬆️ Update music-assistant-frontend to 2.17.29 (by @music-assistant-machine in #2754)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @elialbert, @marcelveldt, @maximmaxim345, @stvncode
 
 
