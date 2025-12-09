@@ -1,3 +1,26 @@
+# [2.7.0.dev2025120903] - 09.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025120812](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120812)_
+
+### 🐛 Bugfixes
+
+- Remove unused Sendspin Player Options (by @maximmaxim345 in #2771)
+- Fix race condition when Sendspin player reconnect (by @maximmaxim345 in #2772)
+
+### 🧰 Maintenance and dependency bumps
+
+- Chore(deps): Bump orjson from 3.11.4 to 3.11.5 (by @dependabot[bot] in #2776)
+- ⬆️ Update music-assistant-frontend to 2.17.34 (by @music-assistant-machine in #2777)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@maximmaxim345
+
+
 # [2.7.0.dev2025120812] - 08.12.2025
 
 ## 📦 Nightly Release
@@ -44,32 +67,5 @@ _Changes since [2.7.0.dev2025120703](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @stvncode
-
-
-# [2.7.0.dev2025120703] - 07.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025120614](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120614)_
-
-### 🐛 Bugfixes
-
-- Fix race condition when transitioning from plugin source (by @sprocket-9 in #2758)
-- Handle more cases of instance steering (by @marcelveldt in #2762)
-
-### 🎨 Frontend Changes
-
-- Lokalise: Translations update (by @marcelveldt in [#1258](https://github.com/music-assistant/frontend/pull/1258))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.79 (by @music-assistant-machine in #2760)
-- ⬆️ Update music-assistant-frontend to 2.17.32 (by @music-assistant-machine in #2761)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @sprocket-9
 
 
