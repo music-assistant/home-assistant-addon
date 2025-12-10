@@ -1,3 +1,34 @@
+# [2.7.0.dev2025121003] - 10.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025120913](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120913)_
+
+### 🐛 Bugfixes
+
+- fix(jellyfin): Add defensive checks for missing audio metadata (by @ericmammolenti in #2728)
+- Bump `aiosendspin` to fix radio playback (by @maximmaxim345 in #2779)
+- Fix race condition in Airplay stream cleanup (by @MarvinSchenkel in #2780)
+- Add timeout parameter to ABS Provider connection (by @fmunkes in #2782)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1266](https://github.com/music-assistant/frontend/pull/1266))
+- Update onboarding flow (by @stvncode in [#1267](https://github.com/music-assistant/frontend/pull/1267))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.35 (by @music-assistant-machine in #2781)
+- ⬆️ Update music-assistant-frontend to 2.17.36 (by @music-assistant-machine in #2783)
+- ⬆️ Update music-assistant-frontend to 2.17.37 (by @music-assistant-machine in #2784)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @ericmammolenti, @fmunkes, @maximmaxim345, @stvncode
+
+
 # [2.7.0.dev2025120913] - 09.12.2025
 
 ## 📦 Nightly Release
@@ -40,27 +71,5 @@ _Changes since [2.7.0.dev2025120812](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @maximmaxim345
-
-
-# [2.7.0.dev2025120812] - 08.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025120803](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120803)_
-
-### 🐛 Bugfixes
-
-- Use `aiosendspin` for finding the `PyAV` version in the base image (by @maximmaxim345 in #2767)
-- Add static group members on every `play_media` call (by @maximmaxim345 in #2769)
-
-### 🧰 Maintenance and dependency bumps
-
-- Potential fix for code injection in github action (by @marcelveldt in #2768)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @maximmaxim345
 
 
