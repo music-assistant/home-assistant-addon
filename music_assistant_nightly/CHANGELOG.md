@@ -1,3 +1,8 @@
+# [2.7.0.dev2025121108] - 11.12.2025
+
+* No changes
+
+
 # [2.7.0.dev2025121103] - 11.12.2025
 
 ## 📦 Nightly Release
@@ -54,26 +59,5 @@ _Changes since [2.7.0.dev2025120913](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @ericmammolenti, @fmunkes, @maximmaxim345, @stvncode
-
-
-# [2.7.0.dev2025120913] - 09.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025120903](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120903)_
-
-### 🐛 Bugfixes
-
-- Fix metadata hanging when flow mode is enforced. (by @MarvinSchenkel in #2778)
-
-### 🧰 Maintenance and dependency bumps
-
-- Chore(deps): Bump podcastparser from 0.6.10 to 0.6.11 (by @dependabot[bot] in #2774)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
