@@ -1,3 +1,30 @@
+# [2.7.0.dev2025121103] - 11.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025121003](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025121003)_
+
+### 🐛 Bugfixes
+
+- BBC Sounds: Fix duplicated stations in listen live menu (by @kieranhogg in #2788)
+
+### 🎨 Frontend Changes
+
+- Add flac and opus support to the Sendspin Web Player (by @maximmaxim345 in [#1268](https://github.com/music-assistant/frontend/pull/1268))
+- Hide unavailable Sendspin web players from settings (by @maximmaxim345 in [#1269](https://github.com/music-assistant/frontend/pull/1269))
+
+### 🧰 Maintenance and dependency bumps
+
+- abs: remove use_cache decorator (by @fmunkes in #2786)
+- ⬆️ Update music-assistant-frontend to 2.17.38 (by @music-assistant-machine in #2787)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@fmunkes, @kieranhogg, @maximmaxim345
+
+
 # [2.7.0.dev2025121003] - 10.12.2025
 
 ## 📦 Nightly Release
@@ -48,28 +75,5 @@ _Changes since [2.7.0.dev2025120903](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel
-
-
-# [2.7.0.dev2025120903] - 09.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025120812](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120812)_
-
-### 🐛 Bugfixes
-
-- Remove unused Sendspin Player Options (by @maximmaxim345 in #2771)
-- Fix race condition when Sendspin player reconnect (by @maximmaxim345 in #2772)
-
-### 🧰 Maintenance and dependency bumps
-
-- Chore(deps): Bump orjson from 3.11.4 to 3.11.5 (by @dependabot[bot] in #2776)
-- ⬆️ Update music-assistant-frontend to 2.17.34 (by @music-assistant-machine in #2777)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@maximmaxim345
 
 
