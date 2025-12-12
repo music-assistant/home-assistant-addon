@@ -1,3 +1,35 @@
+# [2.7.0.dev2025121203] - 12.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025121108](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025121108)_
+
+### 🚀 Features and enhancements
+
+- Add codec setting for Sendspin over Cast (by @maximmaxim345 in #2790)
+
+### 🐛 Bugfixes
+
+- Fix changing of Sendspin over Cast settings (by @maximmaxim345 in #2791)
+- Error when Sendspin over Cast fails (by @maximmaxim345 in #2792)
+- Fix AirPlay playback cuts of last few seconds of playback (by @marcelveldt in #2793)
+
+### 🎨 Frontend Changes
+
+- Sendspin Web Player and notification fixes (by @maximmaxim345 in [#1270](https://github.com/music-assistant/frontend/pull/1270))
+
+### 🧰 Maintenance and dependency bumps
+
+- Remove obsolete builtin_player configurations (by @maximmaxim345 in #2789)
+- ⬆️ Update music-assistant-frontend to 2.17.39 (by @music-assistant-machine in #2794)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @maximmaxim345
+
+
 # [2.7.0.dev2025121108] - 11.12.2025
 
 * No changes
@@ -28,36 +60,5 @@ _Changes since [2.7.0.dev2025121003](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes, @kieranhogg, @maximmaxim345
-
-
-# [2.7.0.dev2025121003] - 10.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025120913](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025120913)_
-
-### 🐛 Bugfixes
-
-- fix(jellyfin): Add defensive checks for missing audio metadata (by @ericmammolenti in #2728)
-- Bump `aiosendspin` to fix radio playback (by @maximmaxim345 in #2779)
-- Fix race condition in Airplay stream cleanup (by @MarvinSchenkel in #2780)
-- Add timeout parameter to ABS Provider connection (by @fmunkes in #2782)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1266](https://github.com/music-assistant/frontend/pull/1266))
-- Update onboarding flow (by @stvncode in [#1267](https://github.com/music-assistant/frontend/pull/1267))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.35 (by @music-assistant-machine in #2781)
-- ⬆️ Update music-assistant-frontend to 2.17.36 (by @music-assistant-machine in #2783)
-- ⬆️ Update music-assistant-frontend to 2.17.37 (by @music-assistant-machine in #2784)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @ericmammolenti, @fmunkes, @maximmaxim345, @stvncode
 
 
