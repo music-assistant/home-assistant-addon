@@ -1,3 +1,8 @@
+# [2.7.0.dev2025121303] - 13.12.2025
+
+* No changes
+
+
 # [2.7.0.dev2025121300] - 13.12.2025
 
 ## ⚠️ Important Notes
@@ -76,10 +81,5 @@ _Changes since [2.7.0.dev2025121108](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @maximmaxim345
-
-
-# [2.7.0.dev2025121108] - 11.12.2025
-
-* No changes
 
 
