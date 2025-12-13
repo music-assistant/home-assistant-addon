@@ -1,3 +1,51 @@
+# [2.7.0b26] - 13.12.2025
+
+## ⚠️ Important Notes
+
+The remote ID (for remote access) is changed!
+
+---
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b25](https://github.com/music-assistant/server/releases/tag/2.7.0b25)_
+
+### 🚀 Features and enhancements
+
+- Add DTLS pinning (by @arturpragacz in #2796)
+
+### 🐛 Bugfixes
+
+- Fix race condition for resume after announcements (by @MarvinSchenkel in #2798)
+- Sendspin fixes and improvements (by @maximmaxim345 in #2800)
+- Require HA admin user to finish setup on Ingress (by @marcelveldt in #2801)
+
+### 🎨 Frontend Changes
+
+- Add DTLS pinning (by @arturpragacz in [#1271](https://github.com/music-assistant/frontend/pull/1271))
+- Implement new ui-lib (shadcn-vue) and replace the slider (by @stvncode in [#1272](https://github.com/music-assistant/frontend/pull/1272))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Chore(deps-dev): Bump mypy from 1.18.2 to 1.19.0 (by @dependabot[bot] in #2725)
+- Chore(deps): Bump lyricsgenius from 3.7.2 to 3.7.5 (by @dependabot[bot] in #2775)
+- Update the Sendspin logo to a new placeholder (by @maximmaxim345 in #2795)
+- BBC Sounds: Bump auntie-sounds to 1.1.7 (by @kieranhogg in #2797)
+- BBC Sounds: Remove some old NP task cancellation code (by @kieranhogg in #2799)
+- ⬆️ Update music-assistant-frontend to 2.17.40 (by @music-assistant-machine in #2802)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @arturpragacz, @kieranhogg, @marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.7.0b25] - 12.12.2025
 
 ## 📦 Beta Release
@@ -78,31 +126,5 @@ _Changes since [2.7.0b23](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @ericmammolenti, @fmunkes, @kieranhogg, @marcelveldt, @maximmaxim345, @stvncode
-
-
-# [2.7.0b23] - 08.12.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b22](https://github.com/music-assistant/server/releases/tag/2.7.0b22)_
-
-### 🐛 Bugfixes
-
-- Fixes for multiple instances of the same provider (by @marcelveldt in #2765)
-
-### 🎨 Frontend Changes
-
-- Add the possibility to switch from listview to thumbs for players and providers (by @stvncode in [#1259](https://github.com/music-assistant/frontend/pull/1259))
-- Fix race condition with loading user preferences at startup (by @marcelveldt in [#1260](https://github.com/music-assistant/frontend/pull/1260))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.33 (by @music-assistant-machine in #2766)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @stvncode
 
 
