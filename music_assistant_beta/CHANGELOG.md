@@ -1,3 +1,32 @@
+# [2.7.0b27] - 15.12.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b26](https://github.com/music-assistant/server/releases/tag/2.7.0b26)_
+
+### 🐛 Bugfixes
+
+- Adjust duration match with ISRC (by @OzGav in #2806)
+
+### 🎨 Frontend Changes
+
+- Lokalise: Translations update (by @marcelveldt in [#1275](https://github.com/music-assistant/frontend/pull/1275))
+- Use new sidebar component and update icons related to this (by @stvncode in [#1274](https://github.com/music-assistant/frontend/pull/1274))
+- Add all needed components from shadcn (by @stvncode in [#1273](https://github.com/music-assistant/frontend/pull/1273))
+
+### 🧰 Maintenance and dependency bumps
+
+- adapt get_playlog_provider_item_ids method of music controller (by @fmunkes in #2804)
+- Subsonic: Update py-opensonic (by @khers in #2807)
+- ⬆️ Update music-assistant-frontend to 2.17.41 (by @music-assistant-machine in #2808)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @fmunkes, @khers, @marcelveldt, @stvncode
+
+
 # [2.7.0b26] - 13.12.2025
 
 ## ⚠️ Important Notes
@@ -76,55 +105,5 @@ _Changes since [2.7.0b24](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @maximmaxim345
-
-
-# [2.7.0b24] - 10.12.2025
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b23](https://github.com/music-assistant/server/releases/tag/2.7.0b23)_
-
-### 🐛 Bugfixes
-
-- fix(jellyfin): Add defensive checks for missing audio metadata (by @ericmammolenti in #2728)
-- Use `aiosendspin` for finding the `PyAV` version in the base image (by @maximmaxim345 in #2767)
-- Add static group members on every `play_media` call (by @maximmaxim345 in #2769)
-- Remove unused Sendspin Player Options (by @maximmaxim345 in #2771)
-- Fix race condition when Sendspin player reconnect (by @maximmaxim345 in #2772)
-- Fix metadata hanging when flow mode is enforced. (by @MarvinSchenkel in #2778)
-- Bump `aiosendspin` to fix radio playback (by @maximmaxim345 in #2779)
-- Fix race condition in Airplay stream cleanup (by @MarvinSchenkel in #2780)
-- Add timeout parameter to ABS Provider connection (by @fmunkes in #2782)
-- BBC Sounds: Fix duplicated stations in listen live menu (by @kieranhogg in #2788)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1266](https://github.com/music-assistant/frontend/pull/1266))
-- Update onboarding flow (by @stvncode in [#1267](https://github.com/music-assistant/frontend/pull/1267))
-- Add flac and opus support to the Sendspin Web Player (by @maximmaxim345 in [#1268](https://github.com/music-assistant/frontend/pull/1268))
-- Hide unavailable Sendspin web players from settings (by @maximmaxim345 in [#1269](https://github.com/music-assistant/frontend/pull/1269))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- Potential fix for code injection in github action (by @marcelveldt in #2768)
-- Chore(deps): Bump podcastparser from 0.6.10 to 0.6.11 (by @dependabot[bot] in #2774)
-- Chore(deps): Bump orjson from 3.11.4 to 3.11.5 (by @dependabot[bot] in #2776)
-- ⬆️ Update music-assistant-frontend to 2.17.34 (by @music-assistant-machine in #2777)
-- ⬆️ Update music-assistant-frontend to 2.17.35 (by @music-assistant-machine in #2781)
-- ⬆️ Update music-assistant-frontend to 2.17.36 (by @music-assistant-machine in #2783)
-- ⬆️ Update music-assistant-frontend to 2.17.37 (by @music-assistant-machine in #2784)
-- abs: remove use_cache decorator (by @fmunkes in #2786)
-- ⬆️ Update music-assistant-frontend to 2.17.38 (by @music-assistant-machine in #2787)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @ericmammolenti, @fmunkes, @kieranhogg, @marcelveldt, @maximmaxim345, @stvncode
 
 
