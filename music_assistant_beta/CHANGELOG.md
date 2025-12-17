@@ -1,3 +1,39 @@
+# [2.7.0b29] - 17.12.2025
+
+## 📦 Beta Release
+
+_Changes since [2.7.0b28](https://github.com/music-assistant/server/releases/tag/2.7.0b28)_
+
+### 🚀 Features and enhancements
+
+- Enable immediate Sendspin sync delay changes for Cast players (by @maximmaxim345 in #2823)
+- Add a more smarter way to resume a player with empty queue (by @marcelveldt in #2827)
+
+### 🐛 Bugfixes
+
+- Bump aiosendspin to fix metadata clear edge case (by @maximmaxim345 in #2824)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1298](https://github.com/music-assistant/frontend/pull/1298))
+- Show warning when a provider needs to be reconfigured (by @marcelveldt in [#1304](https://github.com/music-assistant/frontend/pull/1304))
+- New input number + reorganize for mobile (by @stvncode in [#1303](https://github.com/music-assistant/frontend/pull/1303))
+- Make web player delay option apply immediately on changes  (by @maximmaxim345 in [#1302](https://github.com/music-assistant/frontend/pull/1302))
+- Fix slider for players drawer drag (by @stvncode in [#1301](https://github.com/music-assistant/frontend/pull/1301))
+- Center music title and music name in player fullscreen (by @stvncode in [#1299](https://github.com/music-assistant/frontend/pull/1299))
+
+### 🧰 Maintenance and dependency bumps
+
+- Streamline Plugin Source behavior (by @marcelveldt in #2826)
+- ⬆️ Update music-assistant-frontend to 2.17.43 (by @music-assistant-machine in #2829)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.7.0b28] - 16.12.2025
 
 ## 📦 Beta Release
@@ -76,53 +112,5 @@ _Changes since [2.7.0b26](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @fmunkes, @khers, @marcelveldt, @stvncode
-
-
-# [2.7.0b26] - 13.12.2025
-
-## ⚠️ Important Notes
-
-The remote ID (for remote access) is changed!
-
----
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b25](https://github.com/music-assistant/server/releases/tag/2.7.0b25)_
-
-### 🚀 Features and enhancements
-
-- Add DTLS pinning (by @arturpragacz in #2796)
-
-### 🐛 Bugfixes
-
-- Fix race condition for resume after announcements (by @MarvinSchenkel in #2798)
-- Sendspin fixes and improvements (by @maximmaxim345 in #2800)
-- Require HA admin user to finish setup on Ingress (by @marcelveldt in #2801)
-
-### 🎨 Frontend Changes
-
-- Add DTLS pinning (by @arturpragacz in [#1271](https://github.com/music-assistant/frontend/pull/1271))
-- Implement new ui-lib (shadcn-vue) and replace the slider (by @stvncode in [#1272](https://github.com/music-assistant/frontend/pull/1272))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Chore(deps-dev): Bump mypy from 1.18.2 to 1.19.0 (by @dependabot[bot] in #2725)
-- Chore(deps): Bump lyricsgenius from 3.7.2 to 3.7.5 (by @dependabot[bot] in #2775)
-- Update the Sendspin logo to a new placeholder (by @maximmaxim345 in #2795)
-- BBC Sounds: Bump auntie-sounds to 1.1.7 (by @kieranhogg in #2797)
-- BBC Sounds: Remove some old NP task cancellation code (by @kieranhogg in #2799)
-- ⬆️ Update music-assistant-frontend to 2.17.40 (by @music-assistant-machine in #2802)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @arturpragacz, @kieranhogg, @marcelveldt, @maximmaxim345, @stvncode
 
 
