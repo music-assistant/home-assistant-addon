@@ -20,6 +20,7 @@ uart: false
 apparmor: true
 map:
   - media:rw
+  - ssl:ro
 init: false
 advanced: false
 backup_exclude:

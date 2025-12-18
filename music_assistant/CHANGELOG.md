@@ -4,11 +4,11 @@
 
 This release adds mandatory authentication to the Music Assistant webserver.
 
- At first startup you will be greeted with a setup screen to create the (first) admin account, your data will be reserved. You need this account to login to Music Assistant directly from now on.
+At first startup you will be greeted with a setup screen to create the (first) admin account, your data will be reserved. You need this account to login to Music Assistant directly from now on.
 
- Running as Home Assistant add-on? We will automatically log you in when using the built-in (Ingress) panel to access Music Assistant. The Home Assistant integration should also reconnect automatically, just ensure you run at least HA 2025.12.
+Running as Home Assistant add-on? We will automatically log you in when using the built-in (Ingress) panel to access Music Assistant. The Home Assistant integration should also reconnect automatically, just ensure you run at least HA 2025.12.
 
- When you are not running the Music Assistant Server as an Home Assistant add-on, you will need to authenticate the Home Assistant integration - a button will show up in the Home Asssistant Settings/Integrations page.
+When you are not running the Music Assistant Server as an Home Assistant add-on, you will need to authenticate the Home Assistant integration - a button will show up in the Home Asssistant Settings/Integrations page.
 
 ---
 
@@ -45,7 +45,7 @@ _Changes since [2.6.3](https://github.com/music-assistant/server/releases/tag/2.
 - DSP Presets (by @math625f in #2309)
 - YTMusic: Auto update dependencies for frequently breaking packages (by @MarvinSchenkel in #2311)
 - Use separate ingress TCP site for HA add-on (by @marcelveldt in #2314)
-- Some follow-up fixes (esp. for groups) after the Player refactor  (by @marcelveldt in #2335)
+- Some follow-up fixes (esp. for groups) after the Player refactor (by @marcelveldt in #2335)
 - audiobookshelf: Implement more efficient multi-file seeking (by @tsipinakis in #2342)
 - Add podcast support to Spotify provider (by @OzGav in #2349)
 - Improve Lyrics Availability (by @OzGav in #2357)
@@ -95,7 +95,7 @@ _Changes since [2.6.3](https://github.com/music-assistant/server/releases/tag/2.
 - Apple music improvements (by @MarvinSchenkel in #2607)
 - Plex: added remote control feature (by @anatosun in #2608)
 - Apple Music: Add remaining favourite parsing + custom music token config (by @MarvinSchenkel in #2609)
-- Refactor streams controller + smart fades  (by @MarvinSchenkel in #2613)
+- Refactor streams controller + smart fades (by @MarvinSchenkel in #2613)
 - Use secure connection to MusicBrainz API (by @mtdcr in #2615)
 - Update Resonate provider with `MULTI_DEVICE_DSP` support and other improvements (by @maximmaxim345 in #2616)
 - Use `get_stream` helper in builtin player (by @maximmaxim345 in #2618)
@@ -140,7 +140,7 @@ _Changes since [2.6.3](https://github.com/music-assistant/server/releases/tag/2.
 - Fallback to standard pip for package installs (by @marcelveldt in #2316)
 - Fix Spotify CDN issues on playback (by @marcelveldt in #2317)
 - Fix issues with dynamically installing packages into the running server (by @marcelveldt in #2318)
-- Fix playback with the Web Player for iOS devices  (by @maximmaxim345 in #2319)
+- Fix playback with the Web Player for iOS devices (by @maximmaxim345 in #2319)
 - Fix album info being lost for non-library items (by @OzGav in #2330)
 - Disable new PO token generation to avoid warnings in the logs. (by @MarvinSchenkel in #2334)
 - Fix stop command on some Home Assistant players (by @jeblair in #2336)
@@ -199,7 +199,7 @@ _Changes since [2.6.3](https://github.com/music-assistant/server/releases/tag/2.
 - Fix Squeezelite sample rate for multi client streams (by @OzGav in #2565)
 - Fix buffered generator hang by ensuring None sentinel delivery (by @maximmaxim345 in #2566)
 - Fix custom name & image for manually added radio URL's (by @OzGav in #2583)
--  Fix for some HLS radio streams playback (by @OzGav in #2585)
+- Fix for some HLS radio streams playback (by @OzGav in #2585)
 - Add missing enforced flow mode config entry for Resonate (by @maximmaxim345 in #2587)
 - Enforce flow mode when player does not support enqueueing (by @MarvinSchenkel in #2595)
 - fix: abs - discarded progress (by @fmunkes in #2598)
@@ -570,40 +570,3 @@ _Changes since [2.6.3](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @ChrisBkt, @Crooked-Krokr, @Cyanogenbot, @Dnny44, @JoProbst, @MarvinSchenkel, @MedievalApple, @OzGav, @Shi-553, @TheJulianJES, @alams154, @anatosun, @arturpragacz, @benklop, @bradkeifer, @brian10048, @cr7pt0gr4ph7, @ericmammolenti, @ferges123, @fmunkes, @jamiethecat, @jaymunro, @jeblair, @jfeil, @jozefKruszynski, @khers, @kieranhogg, @marcelveldt, @math625f, @maximmaxim345, @michaelansel, @miguelangel-nubla, @mtdcr, @robert-alfaro, @robsonke, @sprocket-9, @stvncode, @tavva, @theomega, @tsipinakis, @wjzijderveld
-
-
-# [2.6.3] - 14.11.2025
-
-## 📦 Stable Release
-
-_Changes since [2.6.2](https://github.com/music-assistant/server/releases/tag/2.6.2)_
-
-### 🐛 Bugfixes
-
-- YTM: Also install default ytdlp dependencies (by @MarvinSchenkel in #2534)
-- Added deno for YTMusic Provider (by @Dnny44 in #2636)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Dnny44, @MarvinSchenkel
-
-
-# [2.6.2] - 06.11.2025
-
-## 📦 Stable Release
-
-_Changes since [2.6.1](https://github.com/music-assistant/server/releases/tag/2.6.1)_
-
-### 🐛 Bugfixes
-
-- Fix Spotify streaming (by @marcelveldt in #2603)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
-
-

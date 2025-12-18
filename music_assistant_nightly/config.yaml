@@ -21,6 +21,7 @@ panel_admin: false
 uart: false
 map:
   - media:rw
+  - ssl:ro
 init: false
 advanced: true
 backup_exclude:
