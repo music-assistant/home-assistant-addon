@@ -1,3 +1,20 @@
+# [2.8.0.dev2025121803] - 18.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.7.0.dev2025121718](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025121718)_
+
+### 🐛 Bugfixes
+
+- Fix SSL configuration (by @marcelveldt in #2836)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.7.0.dev2025121710] - 17.12.2025
 
 ## 📦 Nightly Release
@@ -47,31 +64,5 @@ _Changes since [2.7.0.dev2025121621](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @maximmaxim345, @stvncode
-
-
-# [2.7.0.dev2025121621] - 16.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025121601](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025121601)_
-
-### 🚀 Features and enhancements
-
-- Enable immediate Sendspin sync delay changes for Cast players (by @maximmaxim345 in #2823)
-- Add a more smarter way to resume a player with empty queue (by @marcelveldt in #2827)
-
-### 🐛 Bugfixes
-
-- Bump aiosendspin to fix metadata clear edge case (by @maximmaxim345 in #2824)
-
-### 🧰 Maintenance and dependency bumps
-
-- Streamline Plugin Source behavior (by @marcelveldt in #2826)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @maximmaxim345
 
 
