@@ -209,6 +209,10 @@ echo "Starting Music Assistant"
 echo "-----------------------------------------------------------"
 echo ""
 
+# export jemalloc path
+for path in /usr/lib/*/libjemalloc.so.2; do
+    [ -f "$path" ] && export LD_PRELOAD="$path" && break
+done
 # Start Music Assistant
 exec mass --data-dir /data --cache-dir /data/.cache
 
