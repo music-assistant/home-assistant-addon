@@ -1,3 +1,8 @@
+# [2.8.0.dev2025121907] - 19.12.2025
+
+* No changes
+
+
 # [2.8.0.dev2025121906] - 19.12.2025
 
 ## 📦 Nightly Release
@@ -51,30 +56,5 @@ _Changes since [2.7.0.dev2025121718](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt
-
-
-# [2.7.0.dev2025121710] - 17.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.7.0.dev2025121703](https://github.com/music-assistant/server/releases/tag/2.7.0.dev2025121703)_
-
-### 🐛 Bugfixes
-
-- (Roku) Media Assistant provider: bug fixes / cleanup (by @MedievalApple in #2828)
-
-### 🎨 Frontend Changes
-
-- Refacto user avatar and dropdown (by @stvncode in [#1305](https://github.com/music-assistant/frontend/pull/1305))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.44 (by @music-assistant-machine in #2830)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MedievalApple, @stvncode
 
 
