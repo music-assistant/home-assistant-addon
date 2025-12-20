@@ -73,7 +73,7 @@ For advanced automation and control, you can optionally install the **Music Assi
 
 **To install the integration:**
 
-The Music Assistant server should be auto detected by Home Assistant onc eyou install the add-on (or any Music Assistant server in your network). On the Devices & services page, you should be greeted with a card for the discovered server to simply setup the integration.
+The Music Assistant server should be auto detected by Home Assistant once you install the add-on (or any Music Assistant server in your network). On the Devices & services page, you should be greeted with a card for the discovered server to simply setup the integration.
 
 **Note**: The add-on provides the Music Assistant server, while the integration provides the Home Assistant entities and automation capabilities. The add-on works perfectly fine without the integration if you only want to use the web interface.
 
