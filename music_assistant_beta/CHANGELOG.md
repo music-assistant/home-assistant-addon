@@ -1,3 +1,26 @@
+# [2.8.0b3] - 21.12.2025
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b2](https://github.com/music-assistant/server/releases/tag/2.8.0b2)_
+
+### 🎨 Frontend Changes
+
+- Adjust PlayerSelect to always show all players, sorted on priority (by @marcelveldt in [#1300](https://github.com/music-assistant/frontend/pull/1300))
+- Various small usability fixes (by @marcelveldt in [#1317](https://github.com/music-assistant/frontend/pull/1317))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.55 (by @music-assistant-machine in #2864)
+- ⬆️ Update music-assistant-frontend to 2.17.56 (by @music-assistant-machine in #2865)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.8.0b2] - 20.12.2025
 
 ## 📦 Beta Release
@@ -73,28 +96,5 @@ _Changes since [2.8.0b0](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @maximmaxim345
-
-
-# [2.8.0b0] - 18.12.2025
-
-## ⚠️ Important Notes
-
-Start of the 2.8 beta cycle!
-
----
-
-## 📦 Beta Release
-
-_Changes since [2.7.0b31](https://github.com/music-assistant/server/releases/tag/2.7.0b31)_
-
-### 🐛 Bugfixes
-
-- Fix SSL configuration (by @marcelveldt in #2836)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
