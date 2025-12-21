@@ -1,3 +1,24 @@
+# [2.8.0.dev2025122104] - 21.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2025122101](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2025122101)_
+
+### 🎨 Frontend Changes
+
+- Various small usability fixes (by @marcelveldt in [#1317](https://github.com/music-assistant/frontend/pull/1317))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.56 (by @music-assistant-machine in #2865)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.8.0.dev2025122101] - 21.12.2025
 
 ## 📦 Nightly Release
@@ -22,23 +43,5 @@ Special thanks to the following contributors who helped with this release:
 # [2.8.0.dev2025122012] - 20.12.2025
 
 * No changes
-
-
-# [2.8.0.dev2025122011] - 20.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2025122001](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2025122001)_
-
-### 🐛 Bugfixes
-
-- fix: podcast parser helpers not handling exception (by @fmunkes in #2861)
-- Fix thread safety issue in Subsonic streaming (by @marcelveldt in #2863)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @marcelveldt
 
 
