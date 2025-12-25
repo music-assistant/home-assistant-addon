@@ -1,3 +1,25 @@
+# [2.8.0.dev2025122504] - 25.12.2025
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2025122404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2025122404)_
+
+### 🎨 Frontend Changes
+
+- Refacto User management page (by @stvncode in [#1336](https://github.com/music-assistant/frontend/pull/1336))
+- Refacto Profile settings page with new ui components (by @stvncode in [#1333](https://github.com/music-assistant/frontend/pull/1333))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.59 (by @music-assistant-machine in #2888)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@stvncode
+
+
 # [2.8.0.dev2025122404] - 24.12.2025
 
 ## 📦 Nightly Release
@@ -46,26 +68,5 @@ _Changes since [2.8.0.dev2025122104](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav
-
-
-# [2.8.0.dev2025122104] - 21.12.2025
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2025122101](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2025122101)_
-
-### 🎨 Frontend Changes
-
-- Various small usability fixes (by @marcelveldt in [#1317](https://github.com/music-assistant/frontend/pull/1317))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.56 (by @music-assistant-machine in #2865)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
