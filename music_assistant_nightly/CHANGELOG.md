@@ -1,3 +1,36 @@
+# [2.8.0.dev2026010604] - 06.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026010504](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010504)_
+
+### 🚀 Features and enhancements
+
+- Plex Connect: Ungroup player before starting playback (by @anatosun in #2877)
+
+### 🐛 Bugfixes
+
+- Fix webserver base url not persisting (by @MarvinSchenkel in #2935)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump pytest-cov from 2.11.1 to 2.12.1 (by @dependabot[bot] in #117)
+- Bump aiosendspin to 2.0.0 (by @balloob in #2925)
+- Chore(deps): Bump aiohttp from 3.13.2 to 3.13.3 (by @dependabot[bot] in #2940)
+- ⬆️ Update music-assistant-frontend to 2.17.64 (by @music-assistant-machine in #2942)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @anatosun, @balloob
+
+
 # [2.8.0.dev2026010504] - 05.01.2026
 
 ## 📦 Nightly Release
@@ -63,42 +96,5 @@ _Changes since [2.8.0.dev2026010303](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Bonusbartus, @OzGav, @fmunkes, @khers, @marcelveldt, @mtdcr, @mweinelt
-
-
-# [2.8.0.dev2026010303] - 03.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026010104](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010104)_
-
-### 🚀 Features and enhancements
-
-- Add configuration for Zeroconf discovery interfaces (by @vossim in #2880)
-
-### 🐛 Bugfixes
-
-- Prevent cache with media_item=None (by @balloob in #2886)
-- Disconnect sendspin clients to allow clean shutdown (by @balloob in #2887)
-- Fix track name stripping too agressive (by @OzGav in #2901)
-- Fix multiple spotify connect instances reporting to the latest registered webservice callback (by @kneirinck in #2905)
-- fix: MusicCast Pause (by @fmunkes in #2907)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Chore(deps): Bump pillow from 11.3.0 to 12.0.0 (by @dependabot[bot] in #2869)
-- Chore(deps-dev): Bump mypy from 1.19.0 to 1.19.1 (by @dependabot[bot] in #2897)
-- Bump aioslimproto to 3.1.3 (by @MarvinSchenkel in #2906)
-- Bump aioslimproto to 3.1.4 (by @MarvinSchenkel in #2909)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @balloob, @fmunkes, @kneirinck, @vossim
 
 
