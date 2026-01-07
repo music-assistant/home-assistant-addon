@@ -1,3 +1,31 @@
+# [2.8.0.dev2026010704] - 07.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026010604](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010604)_
+
+### 🐛 Bugfixes
+
+- Fix Music Assistant playlist not being removed (by @OzGav in #2931)
+- fix: MusicCast: Handle a failed poll more gracefully (by @fmunkes in #2944)
+
+### 🎨 Frontend Changes
+
+- Add debug logging to debug the imageproxy 404 issues (by @MarvinSchenkel in [#1355](https://github.com/music-assistant/frontend/pull/1355))
+
+### 🧰 Maintenance and dependency bumps
+
+- Add ISC001 PYI036 SIM113 mypy rules (by @OzGav in #2936)
+- Chore(deps-dev): Bump pytest from 8.4.2 to 9.0.2 (by @dependabot[bot] in #2939)
+- ⬆️ Update music-assistant-frontend to 2.17.65 (by @music-assistant-machine in #2948)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes
+
+
 # [2.8.0.dev2026010604] - 06.01.2026
 
 ## 📦 Nightly Release
@@ -51,50 +79,5 @@ _Changes since [2.8.0.dev2026010404](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes, @marcelveldt
-
-
-# [2.8.0.dev2026010404] - 04.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026010303](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010303)_
-
-### 🚀 New Providers
-
-- Add Pandora provider (by @OzGav in #2503)
-
-### 🚀 Features and enhancements
-
-- Enhanced Skip previous behavior (by @Bonusbartus in #2915)
-- Change radio items order to play count descending (by @OzGav in #2918)
-
-### 🐛 Bugfixes
-
-- Fix invalid timeout value for TLS connections (by @mtdcr in #2908)
-- Subsonic: Update Subsonic library and use new AsyncConnection (by @khers in #2910)
-- Fix sql injection vulnerability (by @marcelveldt in #2916)
-
-### 🎨 Frontend Changes
-
-- add translation keys for abs and itunes podcasts (by @fmunkes in [#1345](https://github.com/music-assistant/frontend/pull/1345))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Chore(deps): Bump aiosqlite from 0.21.0 to 0.22.1 (by @dependabot[bot] in #2898)
-- Bump get-mac 0.9.2 to getmac 0.9.5 (by @mweinelt in #2912)
-- ABS/ iTunes podcasts: allow translation of folders (by @fmunkes in #2913)
-- ⬆️ Update music-assistant-models to 1.1.87 (by @music-assistant-machine in #2919)
-- ⬆️ Update music-assistant-frontend to 2.17.63 (by @music-assistant-machine in #2921)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Bonusbartus, @OzGav, @fmunkes, @khers, @marcelveldt, @mtdcr, @mweinelt
 
 
