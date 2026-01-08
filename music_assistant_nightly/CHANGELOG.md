@@ -1,3 +1,18 @@
+# [2.8.0.dev2026010804] - 08.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026010704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010704)_
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1354](https://github.com/music-assistant/frontend/pull/1354))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.66 (by @music-assistant-machine in #2952)
+
+
 # [2.8.0.dev2026010704] - 07.01.2026
 
 ## 📦 Nightly Release
@@ -57,27 +72,5 @@ _Changes since [2.8.0.dev2026010504](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @anatosun, @balloob
-
-
-# [2.8.0.dev2026010504] - 05.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026010404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010404)_
-
-### 🚀 Features and enhancements
-
-- Allow music providers to provide the "date_added" field to library items (by @marcelveldt in #2920)
-- abs: parse "date added" into the MA library (by @fmunkes in #2923)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.88 (by @music-assistant-machine in #2927)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @marcelveldt
 
 
