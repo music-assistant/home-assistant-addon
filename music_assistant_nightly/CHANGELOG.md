@@ -1,3 +1,20 @@
+# [2.8.0.dev2026010904] - 09.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026010804](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010804)_
+
+### 🧰 Maintenance and dependency bumps
+
+- Add and update provider icons (by @OzGav in #2950)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav
+
+
 # [2.8.0.dev2026010804] - 08.01.2026
 
 ## 📦 Nightly Release
@@ -39,38 +56,5 @@ _Changes since [2.8.0.dev2026010604](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @fmunkes
-
-
-# [2.8.0.dev2026010604] - 06.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026010504](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026010504)_
-
-### 🚀 Features and enhancements
-
-- Plex Connect: Ungroup player before starting playback (by @anatosun in #2877)
-
-### 🐛 Bugfixes
-
-- Fix webserver base url not persisting (by @MarvinSchenkel in #2935)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Bump pytest-cov from 2.11.1 to 2.12.1 (by @dependabot[bot] in #117)
-- Bump aiosendspin to 2.0.0 (by @balloob in #2925)
-- Chore(deps): Bump aiohttp from 3.13.2 to 3.13.3 (by @dependabot[bot] in #2940)
-- ⬆️ Update music-assistant-frontend to 2.17.64 (by @music-assistant-machine in #2942)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @anatosun, @balloob
 
 
