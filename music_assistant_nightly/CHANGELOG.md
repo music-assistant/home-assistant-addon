@@ -1,3 +1,28 @@
+# [2.8.0.dev2026011604] - 16.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026011504](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026011504)_
+
+### 🚀 New Providers
+
+- Add Bandcamp Music Provider (by @ALERTua in #2871)
+
+### 🐛 Bugfixes
+
+- Fallback to stream.url if url_resolved is missing (by @MarvinSchenkel in #2972)
+
+### 🧰 Maintenance and dependency bumps
+
+- Make pre-commit configuration cross-platform compatible using uv (by @ALERTua in #2971)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@ALERTua, @MarvinSchenkel
+
+
 # [2.8.0.dev2026011504] - 15.01.2026
 
 ## 📦 Nightly Release
@@ -62,10 +87,5 @@ _Changes since [2.8.0.dev2026011308](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @maximmaxim345
-
-
-# [2.8.0.dev2026011308] - 13.01.2026
-
-* No changes
 
 
