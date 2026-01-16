@@ -1,3 +1,47 @@
+# [2.7.4] - 16.01.2026
+
+## 📦 Stable Release
+
+_Changes since [2.7.3](https://github.com/music-assistant/server/releases/tag/2.7.3)_
+
+### 🚀 Features and enhancements
+
+- Change radio items order to play count descending (by @OzGav in #2918)
+
+### 🐛 Bugfixes
+
+- Fix invalid timeout value for TLS connections (by @mtdcr in #2908)
+- Subsonic: Update Subsonic library and use new AsyncConnection (by @khers in #2910)
+- Fix sql injection vulnerability (by @marcelveldt in #2916)
+- Fix Music Assistant playlist not being removed (by @OzGav in #2931)
+- Fix webserver base url not persisting (by @MarvinSchenkel in #2935)
+- fix: MusicCast: Handle a failed poll more gracefully (by @fmunkes in #2944)
+- Sendspin web player race condition losing `client/hello` (by @maximmaxim345 in #2946)
+- Subsonic Scrobble: Fix Subsonic interactions after the async change (by @khers in #2953)
+- fix: Ensure playlist ID is a string in Soundcloud provider (by @robsonke in #2957)
+- Fix content type for Sqeezelite multiclient streams (by @MarvinSchenkel in #2967)
+- Fallback to stream.url if url_resolved is missing (by @MarvinSchenkel in #2972)
+- Do not report progress on ffmpeg streaming error  (by @fmunkes in #2973)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump pytest-cov from 2.11.1 to 2.12.1 (by @dependabot[bot] in #117)
+- Bump aiosendspin to 2.0.0 (by @balloob in #2925)
+- use instance_id instead of domain on provider level logging (by @fmunkes in #2943)
+- Pin `av` to 16.1.0 for sendspin provider (by @maximmaxim345 in #2966)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @balloob, @fmunkes, @khers, @marcelveldt, @maximmaxim345, @mtdcr, @robsonke
+
+
 # [2.7.3] - 02.01.2026
 
 ## 📦 Stable Release
@@ -73,45 +117,5 @@ _Changes since [2.7.1](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @anatosun, @fmunkes, @jfeil, @kieranhogg, @marcelveldt
-
-
-# [2.7.1] - 19.12.2025
-
-## 📦 Stable Release
-
-_Changes since [2.7.0](https://github.com/music-assistant/server/releases/tag/2.7.0)_
-
-### 🚀 Features and enhancements
-
-- Add Sendspin proxy for web player (by @marcelveldt in #2840)
-- Improve login with Home Assistant flow (by @marcelveldt in #2847)
-
-### 🐛 Bugfixes
-
-- Fix SSL configuration (by @marcelveldt in #2836)
-- Fix config values not persisting when making changes (by @marcelveldt in #2839)
-- Various small (bug)fixes (by @marcelveldt in #2846)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- Speed up test/lint workflow with uv and caching (by @maximmaxim345 in #2838)
-- Chore(deps): Bump actions/cache from 4 to 5 (by @dependabot[bot] in #2841)
-- ⬆️ Update music-assistant-models to 1.1.85 (by @music-assistant-machine in #2843)
-- ⬆️ Update music-assistant-models to 1.1.86 (by @music-assistant-machine in #2844)
-- ⬆️ Update music-assistant-frontend to 2.17.50 (by @music-assistant-machine in #2845)
-- ⬆️ Update music-assistant-frontend to 2.17.51 (by @music-assistant-machine in #2848)
-- ⬆️ Update music-assistant-frontend to 2.17.52 (by @music-assistant-machine in #2849)
-- ⬆️ Update music-assistant-frontend to 2.17.53 (by @music-assistant-machine in #2850)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @maximmaxim345
 
 
