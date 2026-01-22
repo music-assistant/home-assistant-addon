@@ -73,6 +73,26 @@ if [ "$build_from_source" = true ]; then
     echo "Server URL: $server_url"
     echo ""
 
+    # Build requirements URL from the same reference
+    # Convert git reference to raw GitHub URL for requirements file
+    # Format: owner/repo@ref -> https://raw.githubusercontent.com/owner/repo/ref/requirements_all.txt
+    req_owner=$(echo "$server_ref" | cut -d'/' -f1)
+    req_repo=$(echo "$server_ref" | cut -d'/' -f2 | cut -d'@' -f1)
+    req_ref=$(echo "$server_ref" | cut -d'@' -f2)
+    requirements_url="https://raw.githubusercontent.com/${req_owner}/${req_repo}/${req_ref}/requirements_all.txt"
+
+    echo "Installing dependencies from: $requirements_url"
+    echo ""
+
+    # Install dependencies from the branch's requirements_all.txt
+    uv pip install \
+        --no-cache \
+        --link-mode=copy \
+        -r "$requirements_url"
+
+    echo "✓ Dependencies installed"
+    echo ""
+
     # Install server from specified repository
     uv pip install \
         --no-cache \
