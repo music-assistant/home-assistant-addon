@@ -1,3 +1,31 @@
+# [2.8.0.dev2026012404] - 24.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026012304](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012304)_
+
+### 🐛 Bugfixes
+
+- Fix chime validation for player groups (by @MarvinSchenkel in #3013)
+- Fixes for the AirPlay provider (by @marcelveldt in #3014)
+
+### 🎨 Frontend Changes
+
+- Add helpers/logic to handle companion app(s) (by @marcelveldt in [#1380](https://github.com/music-assistant/frontend/pull/1380))
+- Auto-reload on stale chunks after frontend update (by @marcelveldt in [#1382](https://github.com/music-assistant/frontend/pull/1382))
+
+### 🧰 Maintenance and dependency bumps
+
+- Chore(deps): Bump actions/setup-python from 6.1.0 to 6.2.0 (by @dependabot[bot] in #3010)
+- ⬆️ Update music-assistant-frontend to 2.17.73 (by @music-assistant-machine in #3012)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt
+
+
 # [2.8.0.dev2026012304] - 23.01.2026
 
 ## 📦 Nightly Release
@@ -70,38 +98,5 @@ _Changes since [2.8.0.dev2026012004](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @anatosun, @arturpragacz, @balloob, @fmunkes, @maximmaxim345
-
-
-# [2.8.0.dev2026012004] - 20.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026011804](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026011804)_
-
-### 🚀 New Providers
-
-- orf radiothek provider (by @DButter in #2968)
-- Add SomaFM Radio provider (by @macegr in #2981)
-
-### 🐛 Bugfixes
-
-- Use bind ip of the stream server for Sendspin url (by @MarvinSchenkel in #2930)
-- fix(alexa): Fix issue with language on alexa skills for french and germany (by @vlacour97 in #2982)
-
-### 🎨 Frontend Changes
-
-- Fix: Auto re-sync remote mode when the sw is restarted (by @MarvinSchenkel in [#1377](https://github.com/music-assistant/frontend/pull/1377))
-
-### 🧰 Maintenance and dependency bumps
-
-- Update old template references (by @dmcc in #2928)
-- Audiobookshelf: Use a direct stream if configured with an API token. (by @fmunkes in #2989)
-- ⬆️ Update music-assistant-frontend to 2.17.71 (by @music-assistant-machine in #2991)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@DButter, @MarvinSchenkel, @dmcc, @fmunkes, @macegr, @vlacour97
 
 
