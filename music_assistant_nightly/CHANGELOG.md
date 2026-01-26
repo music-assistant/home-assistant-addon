@@ -1,3 +1,14 @@
+# [2.8.0.dev2026012604] - 26.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026012404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012404)_
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.91 (by @music-assistant-machine in #3016)
+
+
 # [2.8.0.dev2026012404] - 24.01.2026
 
 ## 📦 Nightly Release
@@ -53,50 +64,5 @@ _Changes since [2.8.0.dev2026012104](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @alams154, @gnumpi, @jozefKruszynski, @prydie, @rccoleman
-
-
-# [2.8.0.dev2026012104] - 21.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026012004](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012004)_
-
-### 🚀 Features and enhancements
-
-- Plex connect: Improve queue loading performance (by @anatosun in #2735)
-- Add 24 and 32-bit audio support for Sendspin (by @maximmaxim345 in #2977)
-
-### 🐛 Bugfixes
-
-- Fix pre announce typing (by @arturpragacz in #2998)
-
-### 🎨 Frontend Changes
-
-- Cache isRemote to avoid race when tab is being resumed (by @MarvinSchenkel in [#1378](https://github.com/music-assistant/frontend/pull/1378))
-- Reduce audio distortion with the Sendspin web player (by @maximmaxim345 in [#1370](https://github.com/music-assistant/frontend/pull/1370))
-
-### Other Changes
-
-- Revert "use instance_id instead of domain on provider level logging" (by @MarvinSchenkel in #3000)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Bump aiosendspin to 3.0 (by @balloob in #2924)
-- use instance_id instead of domain on provider level logging (by @fmunkes in #2943)
-- Add RET505 mypy rule (by @OzGav in #2962)
-- Chore(deps-dev): Bump ruff from 0.14.9 to 0.14.13 (by @dependabot[bot] in #2995)
-- ⬆️ Update music-assistant-frontend to 2.17.72 (by @music-assistant-machine in #3001)
-- ⬆️ Update music-assistant-models to 1.1.89 (by @music-assistant-machine in #3003)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @anatosun, @arturpragacz, @balloob, @fmunkes, @maximmaxim345
 
 
