@@ -1,3 +1,36 @@
+# [2.8.0b9] - 27.01.2026
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b8](https://github.com/music-assistant/server/releases/tag/2.8.0b8)_
+
+### 🐛 Bugfixes
+
+- Fix player lifecycle (enabling/disabling and config updates) (by @marcelveldt in #3024)
+- Fix players unavailable of cast and bluesound provider (by @marcelveldt in #3027)
+
+### 🎨 Frontend Changes
+
+- Revert "Add debug logging to debug the imageproxy 404 issues" (by @MarvinSchenkel in [#1397](https://github.com/music-assistant/frontend/pull/1397))
+- Use Player current media for Browser Media Session API to support non-track media types (by @tamwahba in [#1386](https://github.com/music-assistant/frontend/pull/1386))
+- EditPlayer: If player is not available hide save button and show a banner instead (by @gnumpi in [#1376](https://github.com/music-assistant/frontend/pull/1376))
+- Reorder settings sections (by @arturpragacz in [#1385](https://github.com/music-assistant/frontend/pull/1385))
+- Implement the removal of ha sidebar and navbar when entering MA from the app panel (by @stvncode in [#1379](https://github.com/music-assistant/frontend/pull/1379))
+- EditPlayer: Fix typo in configEntry/translation key (by @gnumpi in [#1383](https://github.com/music-assistant/frontend/pull/1383))
+
+### 🧰 Maintenance and dependency bumps
+
+- Config handling improvements (by @marcelveldt in #3021)
+- Auto whitelist sendspin webplayer (jnstead of modifying player fiter) (by @marcelveldt in #3026)
+- ⬆️ Update music-assistant-frontend to 2.17.74 (by @music-assistant-machine in #3028)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @arturpragacz, @gnumpi, @marcelveldt, @stvncode, @tamwahba
+
+
 # [2.8.0b8] - 26.01.2026
 
 ## 📦 Beta Release
@@ -129,29 +162,5 @@ _Changes since [2.8.0b6](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @ALERTua, @DButter, @MarvinSchenkel, @OzGav, @anatosun, @arturpragacz, @balloob, @dmcc, @fmunkes, @kdkavanagh, @macegr, @maximmaxim345, @stvncode, @vlacour97, @ztripez
-
-
-# [2.8.0b6] - 13.01.2026
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b5](https://github.com/music-assistant/server/releases/tag/2.8.0b5)_
-
-### 🎨 Frontend Changes
-
-- Add ability to add radio stations to playlists (by @OzGav in [#1356](https://github.com/music-assistant/frontend/pull/1356))
-- Navigate from Now Playing View to detailed view if available otherwise search (by @OzGav in [#1357](https://github.com/music-assistant/frontend/pull/1357))
-- Fix Heart Icon overlapping with the Menu Button (by @stvncode in [#1358](https://github.com/music-assistant/frontend/pull/1358))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.67 (by @music-assistant-machine in #2964)
-- Pin `av` to 16.1.0 for sendspin provider (by @maximmaxim345 in #2966)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @maximmaxim345, @stvncode
 
 
