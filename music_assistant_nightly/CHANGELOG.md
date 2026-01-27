@@ -1,3 +1,45 @@
+# [2.8.0.dev2026012719] - 27.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026012704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012704)_
+
+### 🚀 Features and enhancements
+
+- YTMusic: Implement more aggressive caching (by @MarvinSchenkel in #3029)
+
+### 🐛 Bugfixes
+
+- Fix player sources in Sonos S1 (by @MarvinSchenkel in #3030)
+- Don't filter unavailable player configs by default (by @marcelveldt in #3031)
+- Fix Sonos looping announcements (by @MarvinSchenkel in #3032)
+- Raise AudioException if ffmpeg encounters a demuxing error (by @fmunkes in #3035)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1398](https://github.com/music-assistant/frontend/pull/1398))
+- Filter out unavailable players from player settings (by @marcelveldt in [#1399](https://github.com/music-assistant/frontend/pull/1399))
+- Change position of the toggle HA button (by @stvncode in [#1402](https://github.com/music-assistant/frontend/pull/1402))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Chore(deps): Bump alexapy from 1.29.14 to 1.29.15 (by @dependabot[bot] in #3022)
+- Chore(deps): Bump py-opensonic from 8.0.1 to 8.1.1 (by @dependabot[bot] in #3023)
+- ⬆️ Update music-assistant-frontend to 2.17.75 (by @music-assistant-machine in #3033)
+- ⬆️ Update music-assistant-frontend to 2.17.76 (by @music-assistant-machine in #3036)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @fmunkes, @marcelveldt, @stvncode
+
+
 # [2.8.0.dev2026012704] - 27.01.2026
 
 ## 📦 Nightly Release
@@ -57,33 +99,5 @@ _Changes since [2.8.0.dev2026012404](https://github.com/music-assistant/server/r
 ### 🧰 Maintenance and dependency bumps
 
 - ⬆️ Update music-assistant-models to 1.1.91 (by @music-assistant-machine in #3016)
-
-
-# [2.8.0.dev2026012404] - 24.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026012304](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012304)_
-
-### 🐛 Bugfixes
-
-- Fix chime validation for player groups (by @MarvinSchenkel in #3013)
-- Fixes for the AirPlay provider (by @marcelveldt in #3014)
-
-### 🎨 Frontend Changes
-
-- Add helpers/logic to handle companion app(s) (by @marcelveldt in [#1380](https://github.com/music-assistant/frontend/pull/1380))
-- Auto-reload on stale chunks after frontend update (by @marcelveldt in [#1382](https://github.com/music-assistant/frontend/pull/1382))
-
-### 🧰 Maintenance and dependency bumps
-
-- Chore(deps): Bump actions/setup-python from 6.1.0 to 6.2.0 (by @dependabot[bot] in #3010)
-- ⬆️ Update music-assistant-frontend to 2.17.73 (by @music-assistant-machine in #3012)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @marcelveldt
 
 
