@@ -1,3 +1,53 @@
+# [2.8.0.dev2026012704] - 27.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026012604](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012604)_
+
+### 🚀 New Providers
+
+- Add HEOS Player provider (by @Tommatheussen in #2986)
+
+### 🚀 Features and enhancements
+
+- Add AAC/M4A support to tag parsing (by @OzGav in #3004)
+
+### 🐛 Bugfixes
+
+- Fix Pandora authentication failures (by @OzGav in #2949)
+- Increase cache for local playlist tracks (by @MarvinSchenkel in #3007)
+- Sqeezelite: Only use low latency threshold values when a plugin is active (by @MarvinSchenkel in #3018)
+- Fix player lifecycle (enabling/disabling and config updates) (by @marcelveldt in #3024)
+- Fix players unavailable of cast and bluesound provider (by @marcelveldt in #3027)
+
+### 🎨 Frontend Changes
+
+- Revert "Add debug logging to debug the imageproxy 404 issues" (by @MarvinSchenkel in [#1397](https://github.com/music-assistant/frontend/pull/1397))
+- Use Player current media for Browser Media Session API to support non-track media types (by @tamwahba in [#1386](https://github.com/music-assistant/frontend/pull/1386))
+- EditPlayer: If player is not available hide save button and show a banner instead (by @gnumpi in [#1376](https://github.com/music-assistant/frontend/pull/1376))
+- Reorder settings sections (by @arturpragacz in [#1385](https://github.com/music-assistant/frontend/pull/1385))
+- Implement the removal of ha sidebar and navbar when entering MA from the app panel (by @stvncode in [#1379](https://github.com/music-assistant/frontend/pull/1379))
+- EditPlayer: Fix typo in configEntry/translation key (by @gnumpi in [#1383](https://github.com/music-assistant/frontend/pull/1383))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- ⬆️ Update music-assistant-models to 1.1.92 (by @music-assistant-machine in #3019)
+- Config handling improvements (by @marcelveldt in #3021)
+- Auto whitelist sendspin webplayer (jnstead of modifying player fiter) (by @marcelveldt in #3026)
+- ⬆️ Update music-assistant-frontend to 2.17.74 (by @music-assistant-machine in #3028)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Tommatheussen, @arturpragacz, @gnumpi, @marcelveldt, @stvncode, @tamwahba
+
+
 # [2.8.0.dev2026012604] - 26.01.2026
 
 ## 📦 Nightly Release
@@ -35,34 +85,5 @@ _Changes since [2.8.0.dev2026012304](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt
-
-
-# [2.8.0.dev2026012304] - 23.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026012104](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012104)_
-
-### 🚀 Features and enhancements
-
-- SyncGroupPlayer: Inherit MULTI_DEVICE_DSP feature from group members (by @gnumpi in #2999)
-
-### 🐛 Bugfixes
-
-- fix(spotify_connect): ignore trailing sink event to prevent playback thrashing (by @prydie in #2976)
-- fix: Add support for AAC streaming route for universal groups (by @rccoleman in #2990)
-- fix(Tidal): Remove unnecessary deduping of recomendation rows (by @jozefKruszynski in #3006)
-- Fix announcement for Sonos Play:1's (by @MarvinSchenkel in #3009)
-
-### 🧰 Maintenance and dependency bumps
-
-- Add Spanish and Italian to Alexa language commands (by @alams154 in #3005)
-- ⬆️ Update music-assistant-models to 1.1.90 (by @music-assistant-machine in #3011)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @alams154, @gnumpi, @jozefKruszynski, @prydie, @rccoleman
 
 
