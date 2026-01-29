@@ -1,3 +1,36 @@
+# [2.8.0.dev2026012904] - 29.01.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026012719](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012719)_
+
+### 🚀 New Providers
+
+- Add Yandex Music provider (by @trudenboy in #3002)
+
+### 🚀 Features and enhancements
+
+- Add JWT-based authentication with backward compatibility (by @ztripez in #2891)
+- Use streams server bind ip as spotify connect zeroconf bind interface (by @MarvinSchenkel in #3042)
+- Don't force reload on all config changes (by @apophisnow in #3045)
+
+### 🐛 Bugfixes
+
+- Fix IndexError when Deezer track has no media available (by @sfortis in #3038)
+- Fix Sqeezelite playing next enqueued song after announcement. (by @MarvinSchenkel in #3039)
+- Fix not being able to ungroup dynamic group members (by @MarvinSchenkel in #3040)
+
+### 🧰 Maintenance and dependency bumps
+
+- Chore(deps): Bump docker/login-action from 3.6.0 to 3.7.0 (by @dependabot[bot] in #3044)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @apophisnow, @sfortis, @trudenboy, @ztripez
+
+
 # [2.8.0.dev2026012719] - 27.01.2026
 
 ## 📦 Nightly Release
@@ -88,16 +121,5 @@ _Changes since [2.8.0.dev2026012604](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @arturpragacz, @gnumpi, @marcelveldt, @stvncode, @tamwahba
-
-
-# [2.8.0.dev2026012604] - 26.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026012404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026012404)_
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.91 (by @music-assistant-machine in #3016)
 
 
