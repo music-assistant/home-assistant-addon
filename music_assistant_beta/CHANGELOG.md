@@ -1,3 +1,57 @@
+# [2.8.0b11] - 30.01.2026
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b10](https://github.com/music-assistant/server/releases/tag/2.8.0b10)_
+
+### 🚀 New Providers
+
+- Add Yandex Music provider (by @trudenboy in #3002)
+- Add YouSee Musik provider (by @math625f in #3043)
+
+### 🚀 Features and enhancements
+
+- Add JWT-based authentication with backward compatibility (by @ztripez in #2891)
+- Adds date_added field to Tidal provider (by @FL550 in #2969)
+- Implement Apple Music playlist browsing with folders (by @MizterB in #3008)
+- Use streams server bind ip as spotify connect zeroconf bind interface (by @MarvinSchenkel in #3042)
+- Don't force reload on all config changes (by @apophisnow in #3045)
+
+### 🐛 Bugfixes
+
+- Raise AudioException if ffmpeg encounters a demuxing error (by @fmunkes in #3035)
+- Fix IndexError when Deezer track has no media available (by @sfortis in #3038)
+- Fix Sqeezelite playing next enqueued song after announcement. (by @MarvinSchenkel in #3039)
+- Fix not being able to ungroup dynamic group members (by @MarvinSchenkel in #3040)
+- Radio Paradise. Switch to simple API (by @OzGav in #3046)
+- Improvements and bugfixes for player and provider config entry handling (by @marcelveldt in #3049)
+- Remove corrupt player configurations (by @marcelveldt in #3051)
+- Fix announcement loops for Sonos S1 (by @MarvinSchenkel in #3053)
+
+### 🎨 Frontend Changes
+
+- Change position of the toggle HA button (by @stvncode in [#1402](https://github.com/music-assistant/frontend/pull/1402))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- ⬆️ Update music-assistant-frontend to 2.17.76 (by @music-assistant-machine in #3036)
+- Chore(deps): Bump docker/login-action from 3.6.0 to 3.7.0 (by @dependabot[bot] in #3044)
+- ⬆️ Update music-assistant-models to 1.1.93 (by @music-assistant-machine in #3047)
+- ⬆️ Update music-assistant-models to 1.1.94 (by @music-assistant-machine in #3048)
+- ⬆️ Update music-assistant-models to 1.1.95 (by @music-assistant-machine in #3059)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@FL550, @MarvinSchenkel, @MizterB, @OzGav, @apophisnow, @fmunkes, @marcelveldt, @math625f, @sfortis, @stvncode, @trudenboy, @ztripez
+
+
 # [2.8.0b10] - 27.01.2026
 
 ## 📦 Beta Release
@@ -63,59 +117,5 @@ _Changes since [2.8.0b8](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @arturpragacz, @gnumpi, @marcelveldt, @stvncode, @tamwahba
-
-
-# [2.8.0b8] - 26.01.2026
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b7](https://github.com/music-assistant/server/releases/tag/2.8.0b7)_
-
-### 🚀 New Providers
-
-- Add HEOS Player provider (by @Tommatheussen in #2986)
-
-### 🚀 Features and enhancements
-
-- SyncGroupPlayer: Inherit MULTI_DEVICE_DSP feature from group members (by @gnumpi in #2999)
-- Add AAC/M4A support to tag parsing (by @OzGav in #3004)
-
-### 🐛 Bugfixes
-
-- Fix Pandora authentication failures (by @OzGav in #2949)
-- fix(spotify_connect): ignore trailing sink event to prevent playback thrashing (by @prydie in #2976)
-- fix: Add support for AAC streaming route for universal groups (by @rccoleman in #2990)
-- fix(Tidal): Remove unnecessary deduping of recomendation rows (by @jozefKruszynski in #3006)
-- Increase cache for local playlist tracks (by @MarvinSchenkel in #3007)
-- Fix announcement for Sonos Play:1's (by @MarvinSchenkel in #3009)
-- Fix chime validation for player groups (by @MarvinSchenkel in #3013)
-- Fixes for the AirPlay provider (by @marcelveldt in #3014)
-- Sqeezelite: Only use low latency threshold values when a plugin is active (by @MarvinSchenkel in #3018)
-
-### 🎨 Frontend Changes
-
-- Add helpers/logic to handle companion app(s) (by @marcelveldt in [#1380](https://github.com/music-assistant/frontend/pull/1380))
-- Auto-reload on stale chunks after frontend update (by @marcelveldt in [#1382](https://github.com/music-assistant/frontend/pull/1382))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- ⬆️ Update music-assistant-models to 1.1.89 (by @music-assistant-machine in #3003)
-- Add Spanish and Italian to Alexa language commands (by @alams154 in #3005)
-- Chore(deps): Bump actions/setup-python from 6.1.0 to 6.2.0 (by @dependabot[bot] in #3010)
-- ⬆️ Update music-assistant-models to 1.1.90 (by @music-assistant-machine in #3011)
-- ⬆️ Update music-assistant-frontend to 2.17.73 (by @music-assistant-machine in #3012)
-- ⬆️ Update music-assistant-models to 1.1.91 (by @music-assistant-machine in #3016)
-- ⬆️ Update music-assistant-models to 1.1.92 (by @music-assistant-machine in #3019)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Tommatheussen, @alams154, @gnumpi, @jozefKruszynski, @marcelveldt, @prydie, @rccoleman
 
 
