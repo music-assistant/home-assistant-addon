@@ -1,5 +1,11 @@
 # [2.7.6] - 30.01.2026
 
+## ⚠️ Important Notes
+
+As of this release, when running Music Assistant in combination with Home Assistant 2026.2+, the Home Assistant sidebar will now automatically hide. To go back to Home Assistant, click the HA icon on the bottom left of the screen.
+
+---
+
 ## 📦 Stable Release
 
 _Changes since [2.7.5](https://github.com/music-assistant/server/releases/tag/2.7.5)_
