@@ -1,3 +1,42 @@
+# [2.7.6] - 30.01.2026
+
+## 📦 Stable Release
+
+_Changes since [2.7.5](https://github.com/music-assistant/server/releases/tag/2.7.5)_
+
+### 🐛 Bugfixes
+
+- Prevent duplicate airplay player creation leaving player in invalid state (by @kdkavanagh in #2955)
+- Fix issues with progress bar jumps and time overflow  (by @MarvinSchenkel in #2959)
+- fix(spotify_connect): ignore trailing sink event to prevent playback thrashing (by @prydie in #2976)
+- fix(alexa): Fix issue with language on alexa skills for french and germany (by @vlacour97 in #2982)
+- fix: Add support for AAC streaming route for universal groups (by @rccoleman in #2990)
+- fix(Tidal): Remove unnecessary deduping of recomendation rows (by @jozefKruszynski in #3006)
+- Increase cache for local playlist tracks (by @MarvinSchenkel in #3007)
+- Fix announcement for Sonos Play:1's (by @MarvinSchenkel in #3009)
+- Fix chime validation for player groups (by @MarvinSchenkel in #3013)
+- Fixes for the AirPlay provider (by @marcelveldt in #3014)
+- Fix player sources in Sonos S1 (by @MarvinSchenkel in #3030)
+- Fix Sonos looping announcements (by @MarvinSchenkel in #3032)
+- Fix IndexError when Deezer track has no media available (by @sfortis in #3038)
+- Fix Sqeezelite playing next enqueued song after announcement. (by @MarvinSchenkel in #3039)
+- Fix not being able to ungroup dynamic group members (by @MarvinSchenkel in #3040)
+- Radio Paradise. Switch to simple API (by @OzGav in #3046)
+- Remove corrupt player configurations (by @marcelveldt in #3051)
+- Fix announcement loops for Sonos S1 (by @MarvinSchenkel in #3053)
+
+### 🧰 Maintenance and dependency bumps
+
+- Add PTH107 mypy rule (by @OzGav in #2933)
+- Add Spanish and Italian to Alexa language commands (by @alams154 in #3005)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @alams154, @jozefKruszynski, @kdkavanagh, @marcelveldt, @prydie, @rccoleman, @sfortis, @vlacour97
+
+
 # [2.7.5] - 17.01.2026
 
 ## 📦 Stable Release
@@ -57,42 +96,5 @@ _Changes since [2.7.3](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @balloob, @fmunkes, @khers, @marcelveldt, @maximmaxim345, @mtdcr, @robsonke
-
-
-# [2.7.3] - 02.01.2026
-
-## 📦 Stable Release
-
-_Changes since [2.7.2](https://github.com/music-assistant/server/releases/tag/2.7.2)_
-
-### 🐛 Bugfixes
-
-- Fix link in Roku manifest (by @OzGav in #2866)
-- Fix items not showing up in the library (filtering still not right) (by @arturpragacz in #2873)
-- Fix Sonos S1 not reconnecting after having gone offline. (by @MarvinSchenkel in #2874)
-- Audible: Fix authentication for new API token format (by @ztripez in #2875)
-- Plex Connect: Fix Plex Connect timeline reporting (by @anatosun in #2876)
-- Fix issue with remote_progress if user not logged in (by @jfeil in #2882)
-- Add 2 guards for queue missing after client disconnect (by @balloob in #2884)
-- Fix spotify podcast thumb image quality (by @OzGav in #2885)
-- Prevent cache with media_item=None (by @balloob in #2886)
-- Disconnect sendspin clients to allow clean shutdown (by @balloob in #2887)
-- Fix OpenSubsonic ReplayGain loudness calculation (by @OzGav in #2893)
-- Improve single artist detection when splitting (by @OzGav in #2899)
-- Fix base queries to work with provider mapping filters (by @MarvinSchenkel in #2900)
-- Fix track name stripping too agressive (by @OzGav in #2901)
-- Fix multiple spotify connect instances reporting to the latest registered webservice callback (by @kneirinck in #2905)
-- fix: MusicCast Pause (by @fmunkes in #2907)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump aioslimproto to 3.1.3 (by @MarvinSchenkel in #2906)
-- Bump aioslimproto to 3.1.4 (by @MarvinSchenkel in #2909)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @anatosun, @arturpragacz, @balloob, @fmunkes, @jfeil, @kneirinck, @ztripez
 
 
