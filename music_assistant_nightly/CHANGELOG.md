@@ -1,3 +1,44 @@
+# [2.8.0.dev2026020304] - 03.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026020205](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020205)_
+
+### 🚀 Features and enhancements
+
+- hass_players: Show now playing info from external playback (by @ulilicht in #3015)
+- Add auto discovery to HEOS (by @Tommatheussen in #3056)
+- Bandcamp Rate Limiting (by @ALERTua in #3069)
+
+### 🐛 Bugfixes
+
+- Fix players/get_by_name not always returning a result (by @OzGav in #2945)
+- Fix track import with multiple artists and mixed separators (by @OzGav in #3065)
+- chore: update bandcamp API library dependency (by @ALERTua in #3066)
+- fix(tidal): ensure no @ symbol in tidal recommendation rows (by @jozefKruszynski in #3070)
+- Allow Emoji in folder names (by @OzGav in #3071)
+- Allow all special characters in passwords (by @OzGav in #3072)
+- Fix type error in load_provider_config (by @OzGav in #3073)
+
+### 🎨 Frontend Changes
+
+- Change font weight for menu + Change artist icon in toolbar (by @stvncode in [#1424](https://github.com/music-assistant/frontend/pull/1424))
+- Fix small margin error for artist item menu (by @stvncode in [#1423](https://github.com/music-assistant/frontend/pull/1423))
+- Update Apple PWA icon (by @OzGav in [#1412](https://github.com/music-assistant/frontend/pull/1412))
+
+### 🧰 Maintenance and dependency bumps
+
+- Chore(deps): Bump pylast from 6.0.0 to 7.0.2 (by @dependabot[bot] in #2994)
+- Remove legacy logic for radiobrowser item copying (by @OzGav in #3058)
+- ⬆️ Update music-assistant-frontend to 2.17.78 (by @music-assistant-machine in #3075)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@ALERTua, @OzGav, @Tommatheussen, @jozefKruszynski, @stvncode, @ulilicht
+
+
 # [2.8.0.dev2026020205] - 02.02.2026
 
 ## 📦 Nightly Release
@@ -46,31 +87,5 @@ _Changes since [2.8.0.dev2026013104](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @sfortis, @stvncode
-
-
-# [2.8.0.dev2026013104] - 31.01.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026013004](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026013004)_
-
-### 🚀 New Providers
-
-- Add YouSee Musik provider (by @math625f in #3043)
-
-### 🐛 Bugfixes
-
-- Fix issue where Sonos would sometimes skip a smart fade (by @MarvinSchenkel in #3057)
-- Fix AirPlay devices that need pairing not visible in the config (by @marcelveldt in #3060)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.95 (by @music-assistant-machine in #3059)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @marcelveldt, @math625f
 
 
