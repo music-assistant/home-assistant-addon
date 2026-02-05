@@ -1,3 +1,27 @@
+# [2.8.0.dev2026020504] - 05.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026020404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020404)_
+
+### 🎨 Frontend Changes
+
+- Fix playing indicator for playlist, album, and artist tracks (by @sfortis in [#1425](https://github.com/music-assistant/frontend/pull/1425))
+- Add WAV icon to Audio Pipeline (by @OzGav in [#1428](https://github.com/music-assistant/frontend/pull/1428))
+- Prepare the frontend for upcoming (multi)protocol support (by @marcelveldt in [#1409](https://github.com/music-assistant/frontend/pull/1409))
+- Fix Refresh Item not updating tracks for provider playlists (by @sfortis in [#1426](https://github.com/music-assistant/frontend/pull/1426))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.80 (by @music-assistant-machine in #3097)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt, @sfortis
+
+
 # [2.8.0.dev2026020404] - 04.02.2026
 
 ## 📦 Nightly Release
@@ -60,22 +84,5 @@ _Changes since [2.8.0.dev2026020205](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @ALERTua, @OzGav, @Tommatheussen, @jozefKruszynski, @stvncode, @ulilicht
-
-
-# [2.8.0.dev2026020205] - 02.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026020105](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020105)_
-
-### 🧰 Maintenance and dependency bumps
-
-- Add update_provider_mapping function (by @jozefKruszynski in #3037)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@jozefKruszynski
 
 
