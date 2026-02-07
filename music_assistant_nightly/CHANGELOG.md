@@ -1,3 +1,47 @@
+# [2.8.0.dev2026020704] - 07.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026020604](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020604)_
+
+### 🚀 Features and enhancements
+
+- Add group volume mute support (by @scyto in #3034)
+- Fix local file system audiobook edge cases (by @OzGav in #3080)
+- Enable IPv6 support for zeroconf, stream server and AirPlay DACP (by @fmurodov in #3086)
+
+### 🐛 Bugfixes
+
+- Fix squeezelite WAV playback (by @OzGav in #3084)
+- Use RAOP protocol for Juke Audio devices (by @kenyonj in #3102)
+- Revert "Fix squeezelite WAV playback" (by @MarvinSchenkel in #3103)
+
+### 🎨 Frontend Changes
+
+- Add the possibility to choose the side of the sidebar (by @stvncode in [#1432](https://github.com/music-assistant/frontend/pull/1432))
+- Remove bun lock (by @stvncode in [#1437](https://github.com/music-assistant/frontend/pull/1437))
+- Remove bottom navigation and replace it by a sidebar like in HA (by @stvncode in [#1431](https://github.com/music-assistant/frontend/pull/1431))
+- Replace vuetify-sonner by vue-sonner (by @stvncode in [#1430](https://github.com/music-assistant/frontend/pull/1430))
+- Remove timeout on loading state (by @stvncode in [#1429](https://github.com/music-assistant/frontend/pull/1429))
+- Add year/release date display for albums and tracks (by @sfortis in [#1411](https://github.com/music-assistant/frontend/pull/1411))
+- add context menu item to move item to end of the queue to the frontend (by @Bonusbartus in [#1353](https://github.com/music-assistant/frontend/pull/1353))
+- Add back bottom nav (by @stvncode in [#1443](https://github.com/music-assistant/frontend/pull/1443))
+- Swipe sidebar (by @stvncode in [#1439](https://github.com/music-assistant/frontend/pull/1439))
+- Come back to the scrollable list and not at the top (by @stvncode in [#1438](https://github.com/music-assistant/frontend/pull/1438))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.81 (by @music-assistant-machine in #3101)
+- Chore(deps): Bump actions/github-script from 7 to 8 (by @dependabot[bot] in #3105)
+- ⬆️ Update music-assistant-frontend to 2.17.82 (by @music-assistant-machine in #3107)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Bonusbartus, @MarvinSchenkel, @OzGav, @fmurodov, @kenyonj, @scyto, @sfortis, @stvncode
+
+
 # [2.8.0.dev2026020604] - 06.02.2026
 
 ## 📦 Nightly Release
@@ -49,28 +93,5 @@ _Changes since [2.8.0.dev2026020404](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt, @sfortis
-
-
-# [2.8.0.dev2026020404] - 04.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026020304](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020304)_
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1427](https://github.com/music-assistant/frontend/pull/1427))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Chore(deps): Bump ytmusicapi from 1.11.3 to 1.11.5 (by @dependabot[bot] in #3081)
-- Chore(deps-dev): Bump pre-commit from 4.5.0 to 4.5.1 (by @dependabot[bot] in #3082)
-- Chore(deps): Bump mashumaro from 3.17 to 3.18 (by @dependabot[bot] in #3083)
-- ⬆️ Update music-assistant-frontend to 2.17.79 (by @music-assistant-machine in #3089)
-
-</details>
 
 
