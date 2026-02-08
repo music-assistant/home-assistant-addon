@@ -1,3 +1,20 @@
+# [2.8.0.dev2026020805] - 08.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026020704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020704)_
+
+### 🚀 Features and enhancements
+
+- Support multiple artist and other tags in FLAC/OGG files (by @OzGav in #3076)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav
+
+
 # [2.8.0.dev2026020704] - 07.02.2026
 
 ## 📦 Nightly Release
@@ -69,29 +86,5 @@ _Changes since [2.8.0.dev2026020504](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MizterB, @MonkeyDo, @OzGav, @gnumpi, @relic664, @sfortis, @trudenboy
-
-
-# [2.8.0.dev2026020504] - 05.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026020404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020404)_
-
-### 🎨 Frontend Changes
-
-- Fix playing indicator for playlist, album, and artist tracks (by @sfortis in [#1425](https://github.com/music-assistant/frontend/pull/1425))
-- Add WAV icon to Audio Pipeline (by @OzGav in [#1428](https://github.com/music-assistant/frontend/pull/1428))
-- Prepare the frontend for upcoming (multi)protocol support (by @marcelveldt in [#1409](https://github.com/music-assistant/frontend/pull/1409))
-- Fix Refresh Item not updating tracks for provider playlists (by @sfortis in [#1426](https://github.com/music-assistant/frontend/pull/1426))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.80 (by @music-assistant-machine in #3097)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt, @sfortis
 
 
