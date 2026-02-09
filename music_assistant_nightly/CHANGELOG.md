@@ -1,3 +1,29 @@
+# [2.8.0.dev2026020905] - 09.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026020805](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020805)_
+
+### 🚀 Features and enhancements
+
+- Snapcast: Fix player availability issues and align state with server truth (by @gnumpi in #3104)
+
+### 🐛 Bugfixes
+
+- Fix IPv6 address handling in bind config and ifaddr parsing (by @fmurodov in #3111)
+- Sanitize queue_item.name in icy headers (by @fmunkes in #3112)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.97 (by @music-assistant-machine in #3114)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@fmunkes, @fmurodov, @gnumpi
+
+
 # [2.8.0.dev2026020805] - 08.02.2026
 
 ## 📦 Nightly Release
@@ -57,34 +83,5 @@ _Changes since [2.8.0.dev2026020604](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Bonusbartus, @MarvinSchenkel, @OzGav, @fmurodov, @kenyonj, @scyto, @sfortis, @stvncode
-
-
-# [2.8.0.dev2026020604] - 06.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026020504](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020504)_
-
-### 🚀 Features and enhancements
-
-- Add album year to track SQL query (by @sfortis in #3085)
-- Fix Yandex Music provider for lossless streaming support (by @trudenboy in #3093)
-
-### 🐛 Bugfixes
-
-- Fix squeezelite WAV playback (by @OzGav in #3084)
-- fix: cache check for expire (by @relic664 in #3087)
-- Snapcast: Stop the control scripts gracefully before shutting down the built-in snapcast server (by @gnumpi in #3092)
-- Apple Music: Limit get_library_tracks to 150 songs per batch (by @MizterB in #3094)
-
-### 🧰 Maintenance and dependency bumps
-
-- Add debug logging for scrobbled tracks (by @MonkeyDo in #3091)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MizterB, @MonkeyDo, @OzGav, @gnumpi, @relic664, @sfortis, @trudenboy
 
 
