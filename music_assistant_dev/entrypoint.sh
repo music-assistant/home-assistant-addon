@@ -191,12 +191,14 @@ if [ ! -f "package.json" ]; then
     exit 1
 fi
 
-echo "Installing frontend dependencies...1"
+echo "Installing frontend dependencies..."
 # Try to remount /tmp with exec if it's mounted noexec
 if mount | grep -q "on /tmp.*noexec"; then
   echo "Detected /tmp mounted with noexec, attempting to remount..."
   mount -o remount,exec /tmp 2>/dev/null || echo "Warning: Could not remount /tmp"
 fi
+# Use persistent cache dir so yarn doesn't re-download packages on every restart
+yarn config set cache-folder /data/.yarn-cache
 yarn install --frozen-lockfile --network-timeout 300000
 
 echo "✓ Dependencies installed"
