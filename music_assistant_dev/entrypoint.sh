@@ -174,10 +174,14 @@ cd "$frontend_dir"
 # Clone the repository
 git clone --depth 1 --branch "$frontend_branch" \
     "https://github.com/${frontend_owner}/${frontend_repo_name}.git" . 2>/dev/null || \
-    git clone "https://github.com/${frontend_owner}/${frontend_repo_name}.git" . && \
-    git checkout "$frontend_branch"
+    (git clone "https://github.com/${frontend_owner}/${frontend_repo_name}.git" . && \
+     git checkout "$frontend_branch")
 
-echo "✓ Frontend cloned"
+# Ensure we have the absolute latest changes from the remote
+git fetch --depth 1 origin "$frontend_branch"
+git reset --hard FETCH_HEAD
+
+echo "✓ Frontend cloned ($(git rev-parse --short HEAD))"
 echo ""
 
 # Check if package.json exists (verify it's a valid frontend repo)
