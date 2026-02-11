@@ -197,7 +197,7 @@ if mount | grep -q "on /tmp.*noexec"; then
   echo "Detected /tmp mounted with noexec, attempting to remount..."
   mount -o remount,exec /tmp 2>/dev/null || echo "Warning: Could not remount /tmp"
 fi
-yarn install --frozen-lockfile --prefer-offline
+yarn install --frozen-lockfile --network-timeout 300000
 
 echo "✓ Dependencies installed"
 echo ""
