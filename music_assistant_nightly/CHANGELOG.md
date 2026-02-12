@@ -1,3 +1,32 @@
+# [2.8.0.dev2026021205] - 12.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026021105](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026021105)_
+
+### 🎨 Frontend Changes
+
+- Fix HA Button not showing HA sidebar (by @stvncode in [#1450](https://github.com/music-assistant/frontend/pull/1450))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Chore(deps): Bump cryptography from 46.0.4 to 46.0.5 (by @dependabot[bot] in #3134)
+- ⬆️ Update music-assistant-frontend to 2.17.85 (by @music-assistant-machine in #3136)
+- Chore(deps): Bump pillow from 12.1.0 to 12.1.1 (by @dependabot[bot] in #3137)
+- Chore(deps): Bump docker/build-push-action from 6.18.0 to 6.19.1 (by @dependabot[bot] in #3138)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@stvncode
+
+
 # [2.8.0.dev2026021105] - 11.02.2026
 
 ## 📦 Nightly Release
@@ -80,31 +109,5 @@ _Changes since [2.8.0.dev2026020905](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @MizterB, @OzGav, @fmunkes, @gnumpi, @trudenboy
-
-
-# [2.8.0.dev2026020905] - 09.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026020805](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020805)_
-
-### 🚀 Features and enhancements
-
-- Snapcast: Fix player availability issues and align state with server truth (by @gnumpi in #3104)
-
-### 🐛 Bugfixes
-
-- Fix IPv6 address handling in bind config and ifaddr parsing (by @fmurodov in #3111)
-- Sanitize queue_item.name in icy headers (by @fmunkes in #3112)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.97 (by @music-assistant-machine in #3114)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @fmurodov, @gnumpi
 
 
