@@ -1,3 +1,25 @@
+# [2.8.0.dev2026021305] - 13.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026021205](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026021205)_
+
+### 🚀 Features and enhancements
+
+- Add save_as_playlist command to player queue controller (by @chrisuthe in #3149)
+
+### 🐛 Bugfixes
+
+- Fix sync groups with dynamic option losing members on power off (by @OzGav in #3118)
+- Fix sync group toggle (by @OzGav in #3142)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @chrisuthe
+
+
 # [2.8.0.dev2026021205] - 12.02.2026
 
 ## 📦 Nightly Release
@@ -72,42 +94,5 @@ _Changes since [2.8.0.dev2026021005](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Thyraz, @fmunkes, @gnumpi, @hatharry, @sfortis, @stvncode, @trudenboy
-
-
-# [2.8.0.dev2026021005] - 10.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026020905](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026020905)_
-
-### 🚀 Features and enhancements
-
-- Allow radio stations to be added to playlists (by @OzGav in #2951)
-- Add PlayerOptions to backend and MusicCast (by @fmunkes in #3064)
-
-### 🐛 Bugfixes
-
-- Apple Music: Fix syncing shared playlists (by @MizterB in #3095)
-- fix(yandex_music): fix playlist loading and missing album cover art (by @trudenboy in #3099)
-- Add back pressure to radio streams (by @MarvinSchenkel in #3116)
-- Fix sync groups with dynamic option losing members on power off (by @OzGav in #3118)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Snapcast: Introduce fallback Snapcast setup for dev environments (by @gnumpi in #3108)
-- Print provider name in logging output (by @fmunkes in #3113)
-- ⬆️ Update music-assistant-models to 1.1.98 (by @music-assistant-machine in #3117)
-- ⬆️ Update music-assistant-frontend to 2.17.83 (by @music-assistant-machine in #3129)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @MizterB, @OzGav, @fmunkes, @gnumpi, @trudenboy
 
 
