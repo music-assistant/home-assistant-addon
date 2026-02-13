@@ -1,3 +1,52 @@
+# [2.7.7] - 13.02.2026
+
+## ⚠️ Important Notes
+
+We unfortunately had to rollback the feature that auto-hides the HA menu bar due to some issues when running inside the HA Companion app. This will be reintroduced in a later version, but for now, the HA menu bar will not automatically hide anymore.
+
+---
+
+## 📦 Stable Release
+
+_Changes since [2.7.6](https://github.com/music-assistant/server/releases/tag/2.7.6)_
+
+### 🐛 Bugfixes
+
+- Fix players/get_by_name not always returning a result (by @OzGav in #2945)
+- Fix track import with multiple artists and mixed separators (by @OzGav in #3065)
+- fix(tidal): ensure no @ symbol in tidal recommendation rows (by @jozefKruszynski in #3070)
+- Allow Emoji in folder names (by @OzGav in #3071)
+- Allow all special characters in passwords (by @OzGav in #3072)
+- Fix squeezelite WAV playback (by @OzGav in #3084)
+- fix: cache check for expire (by @relic664 in #3087)
+- Apple Music: Limit get_library_tracks to 150 songs per batch (by @MizterB in #3094)
+- Apple Music: Fix syncing shared playlists (by @MizterB in #3095)
+- Use RAOP protocol for Juke Audio devices (by @kenyonj in #3102)
+- Fix IPv6 address handling in bind config and ifaddr parsing (by @fmurodov in #3111)
+- Sanitize queue_item.name in icy headers (by @fmunkes in #3112)
+- Add back pressure to radio streams (by @MarvinSchenkel in #3116)
+- Fix sync groups with dynamic option losing members on power off (by @OzGav in #3118)
+- Fix adding an item to library from browse results (by @MarvinSchenkel in #3120)
+- Airplay stability fixes (by @MarvinSchenkel in #3121)
+- Fix filtering and sorting within Artist, Album and Track views (by @MarvinSchenkel in #3131)
+- Fix DLNA players not reconnecting (by @MarvinSchenkel in #3132)
+- Fix sync group toggle (by @OzGav in #3142)
+- Always cleanup smart fades tmp files (by @MarvinSchenkel in #3143)
+- Fix M3U parser truncating EXTINF duration to single character (by @teancom in #3152)
+- Fix operator precedence and inverted dedup logic in audiobooks playlog (by @teancom in #3153)
+- Fix for Spotify returning endless tracks from playlist (by @MarvinSchenkel in #3155)
+
+### 🧰 Maintenance and dependency bumps
+
+- Add debug logging for scrobbled tracks (by @MonkeyDo in #3091)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @MizterB, @MonkeyDo, @OzGav, @fmunkes, @fmurodov, @jozefKruszynski, @kenyonj, @relic664, @teancom
+
+
 # [2.7.6] - 30.01.2026
 
 ## ⚠️ Important Notes
@@ -58,49 +107,5 @@ _Changes since [2.7.4](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes
-
-
-# [2.7.4] - 16.01.2026
-
-## 📦 Stable Release
-
-_Changes since [2.7.3](https://github.com/music-assistant/server/releases/tag/2.7.3)_
-
-### 🚀 Features and enhancements
-
-- Change radio items order to play count descending (by @OzGav in #2918)
-
-### 🐛 Bugfixes
-
-- Fix invalid timeout value for TLS connections (by @mtdcr in #2908)
-- Subsonic: Update Subsonic library and use new AsyncConnection (by @khers in #2910)
-- Fix sql injection vulnerability (by @marcelveldt in #2916)
-- Fix Music Assistant playlist not being removed (by @OzGav in #2931)
-- Fix webserver base url not persisting (by @MarvinSchenkel in #2935)
-- fix: MusicCast: Handle a failed poll more gracefully (by @fmunkes in #2944)
-- Sendspin web player race condition losing `client/hello` (by @maximmaxim345 in #2946)
-- Subsonic Scrobble: Fix Subsonic interactions after the async change (by @khers in #2953)
-- fix: Ensure playlist ID is a string in Soundcloud provider (by @robsonke in #2957)
-- Fix content type for Sqeezelite multiclient streams (by @MarvinSchenkel in #2967)
-- Fallback to stream.url if url_resolved is missing (by @MarvinSchenkel in #2972)
-- Do not report progress on ffmpeg streaming error  (by @fmunkes in #2973)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Bump pytest-cov from 2.11.1 to 2.12.1 (by @dependabot[bot] in #117)
-- Bump aiosendspin to 2.0.0 (by @balloob in #2925)
-- use instance_id instead of domain on provider level logging (by @fmunkes in #2943)
-- Pin `av` to 16.1.0 for sendspin provider (by @maximmaxim345 in #2966)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @balloob, @fmunkes, @khers, @marcelveldt, @maximmaxim345, @mtdcr, @robsonke
 
 
