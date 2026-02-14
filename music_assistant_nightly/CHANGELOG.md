@@ -1,3 +1,8 @@
+# [2.8.0.dev2026021407] - 14.02.2026
+
+* No changes
+
+
 # [2.8.0.dev2026021404] - 14.02.2026
 
 ## 📦 Nightly Release
@@ -44,34 +49,5 @@ _Changes since [2.8.0.dev2026021205](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @chrisuthe
-
-
-# [2.8.0.dev2026021205] - 12.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026021105](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026021105)_
-
-### 🎨 Frontend Changes
-
-- Fix HA Button not showing HA sidebar (by @stvncode in [#1450](https://github.com/music-assistant/frontend/pull/1450))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Chore(deps): Bump cryptography from 46.0.4 to 46.0.5 (by @dependabot[bot] in #3134)
-- ⬆️ Update music-assistant-frontend to 2.17.85 (by @music-assistant-machine in #3136)
-- Chore(deps): Bump pillow from 12.1.0 to 12.1.1 (by @dependabot[bot] in #3137)
-- Chore(deps): Bump docker/build-push-action from 6.18.0 to 6.19.1 (by @dependabot[bot] in #3138)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@stvncode
 
 
