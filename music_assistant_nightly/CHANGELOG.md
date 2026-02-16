@@ -1,3 +1,32 @@
+# [2.8.0.dev2026021605] - 16.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026021407](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026021407)_
+
+### ⚠ Breaking Changes
+
+- Merge players with multiple protocols together (by @marcelveldt in #3150)
+
+### 🐛 Bugfixes
+
+- Fix HTTP proxy URL parsing for wss:// WebSocket URLs (by @chrisuthe in #3168)
+
+### 🎨 Frontend Changes
+
+- fix: enable scrolling on login page (by @claude-goomba in [#1460](https://github.com/music-assistant/frontend/pull/1460))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.87 (by @music-assistant-machine in #3172)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@chrisuthe, @claude-goomba, @marcelveldt
+
+
 # [2.8.0.dev2026021407] - 14.02.2026
 
 * No changes
@@ -27,27 +56,5 @@ _Changes since [2.8.0.dev2026021305](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @teancom
-
-
-# [2.8.0.dev2026021305] - 13.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026021205](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026021205)_
-
-### 🚀 Features and enhancements
-
-- Add save_as_playlist command to player queue controller (by @chrisuthe in #3149)
-
-### 🐛 Bugfixes
-
-- Fix sync groups with dynamic option losing members on power off (by @OzGav in #3118)
-- Fix sync group toggle (by @OzGav in #3142)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe
 
 
