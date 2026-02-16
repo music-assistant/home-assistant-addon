@@ -1,3 +1,26 @@
+# [2.7.8] - 16.02.2026
+
+## 📦 Stable Release
+
+_Changes since [2.7.7](https://github.com/music-assistant/server/releases/tag/2.7.7)_
+
+### 🐛 Bugfixes
+
+- Fix AttributeError when provider is temporarily unavailable (by @teancom in #3157)
+- Fix HTTP proxy URL parsing for wss:// WebSocket URLs (by @chrisuthe in #3168)
+- Auto cleanup cache db when it grows >= 2GB (by @MarvinSchenkel in #3174)
+
+### Other Changes
+
+- [Backport to stable] 2.7.8 (by @github-actions[bot] in #3173)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @teancom
+
+
 # [2.7.7] - 13.02.2026
 
 ## ⚠️ Important Notes
@@ -90,22 +113,5 @@ _Changes since [2.7.5](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @alams154, @jozefKruszynski, @kdkavanagh, @marcelveldt, @prydie, @rccoleman, @sfortis, @vlacour97
-
-
-# [2.7.5] - 17.01.2026
-
-## 📦 Stable Release
-
-_Changes since [2.7.4](https://github.com/music-assistant/server/releases/tag/2.7.4)_
-
-### 🧰 Maintenance and dependency bumps
-
-- use instance_id instead of domain on provider level logging (by @fmunkes in #2943)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes
 
 
