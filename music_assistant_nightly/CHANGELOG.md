@@ -1,3 +1,8 @@
+# [2.8.0.dev2026022220] - 22.02.2026
+
+* No changes
+
+
 # [2.8.0.dev2026022215] - 22.02.2026
 
 * No changes
@@ -34,31 +39,5 @@ _Changes since [2.8.0.dev2026022111](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @OzGav, @andykelk, @bradkeifer, @chrisuthe, @gnumpi, @rjbutler
-
-
-# [2.8.0.dev2026022111] - 21.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026022104](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022104)_
-
-### 🚀 Features and enhancements
-
-- Expand PIN based auth in airplay 2 (by @hmonteiro in #3165)
-
-### 🐛 Bugfixes
-
-- Fix group mute for protocol-synced players (by @scyto in #3205)
-- Fix HEOS source switching back to Local Music after starting stream (by @Tommatheussen in #3206)
-
-### 🧰 Maintenance and dependency bumps
-
-- Handle HEAD requests on root route (by @teancom in #3204)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Tommatheussen, @hmonteiro, @scyto, @teancom
 
 
