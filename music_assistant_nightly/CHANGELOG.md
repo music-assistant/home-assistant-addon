@@ -1,3 +1,8 @@
+# [2.8.0.dev2026022215] - 22.02.2026
+
+* No changes
+
+
 # [2.8.0.dev2026022204] - 22.02.2026
 
 ## 📦 Nightly Release
@@ -55,33 +60,5 @@ _Changes since [2.8.0.dev2026022104](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Tommatheussen, @hmonteiro, @scyto, @teancom
-
-
-# [2.8.0.dev2026022104] - 21.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026022010](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022010)_
-
-### 🚀 Features and enhancements
-
-- Feat/genres-v2-implementation (by @jozefKruszynski in #3164)
-
-### 🐛 Bugfixes
-
-- Fix DSP not applying for AirPlay and Sendspin players (by @maximmaxim345 in #3191)
-- OpenSubsonic: Use server provided version tag if present (by @khers in #3200)
-- abs: fix: do not add cover url if no cover present (by @fmunkes in #3202)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.99 (by @music-assistant-machine in #3201)
-- ⬆️ Update music-assistant-frontend to 2.17.92 (by @music-assistant-machine in #3203)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @jozefKruszynski, @khers, @maximmaxim345
 
 
