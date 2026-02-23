@@ -1,3 +1,27 @@
+# [2.8.0.dev2026022311] - 23.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026022305](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022305)_
+
+### 🚀 Features and enhancements
+
+- Update Alexa player provider (by @alams154 in #3167)
+- Bandcamp: validate login on init when credentials are configured (by @teancom in #3215)
+- Clear internal HEOS queue before playing (by @Tommatheussen in #3219)
+
+### 🐛 Bugfixes
+
+- Fix inverted track_number condition in Bandcamp converter (by @teancom in #3211)
+- Use ImageType.THUMB for Bandcamp artwork images (by @teancom in #3212)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Tommatheussen, @alams154, @teancom
+
+
 # [2.8.0.dev2026022305] - 23.02.2026
 
 ## 📦 Nightly Release
@@ -20,11 +44,6 @@ Special thanks to the following contributors who helped with this release:
 
 
 # [2.8.0.dev2026022220] - 22.02.2026
-
-* No changes
-
-
-# [2.8.0.dev2026022215] - 22.02.2026
 
 * No changes
 
