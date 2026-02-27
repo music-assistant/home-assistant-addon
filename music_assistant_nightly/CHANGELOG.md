@@ -1,3 +1,38 @@
+# [2.8.0.dev2026022704] - 27.02.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026022602](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022602)_
+
+### 🚀 Features and enhancements
+
+- Add Sendspin to AirPlay bridge (by @marcelveldt in #3188)
+- Set audio format on Bandcamp track ProviderMapping (by @teancom in #3213)
+- Fix Qobuz provider using HTTP instead of HTTPS for all API calls (by @teancom in #3246)
+- Add manual mediaitem linking to genre (by @jozefKruszynski in #3248)
+
+### 🐛 Bugfixes
+
+- Update to `aiosendspin` 4.2.0 and fix a couple of issues (by @maximmaxim345 in #3249)
+- Fix sendspin metadata sending wrong progress when paused (by @balloob in #3250)
+- Notify UI when DLNA player has gone offline to mark it unavailable. (by @MarvinSchenkel in #3251)
+
+### 🎨 Frontend Changes
+
+- Disable podcasts and audiobooks in main menu when library is empty (by @OzGav in [#1499](https://github.com/music-assistant/frontend/pull/1499))
+- Add manual media item to genre linking (by @jozefKruszynski in [#1501](https://github.com/music-assistant/frontend/pull/1501))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.100 (by @music-assistant-machine in #3256)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @balloob, @jozefKruszynski, @marcelveldt, @maximmaxim345, @teancom
+
+
 # [2.8.0.dev2026022602] - 26.02.2026
 
 ## 📦 Nightly Release
@@ -88,63 +123,5 @@ _Changes since [2.8.0.dev2026022505](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @MarvinSchenkel, @OzGav, @Tommatheussen, @alams154, @andykelk, @apophisnow, @bradkeifer, @chrisuthe, @gnumpi, @hmonteiro, @jozefKruszynski, @khers, @maximmaxim345, @rjbutler, @scyto, @stvncode, @teancom
-
-
-# [2.8.0.dev2026022505] - 25.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026022404](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022404)_
-
-### 🚀 Features and enhancements
-
-- Yandex_music: Add FLAC lossless playback refactor, Lyrics support, Сurated collections, Extended recommendations etc (by @trudenboy in #3147)
-- Subsonic: Reorder image metadata for artists (by @khers in #3227)
-- Add custom URL endpoint for listenbrainz scrobble (by @relic664 in #3228)
-
-### 🐛 Bugfixes
-
-- Fix multi disc audiobook (by @OzGav in #3182)
-- Updated Artwork handling on AriaCast Receiver (by @AirPlr in #3226)
-- Treat narrators as a distinguishing field to prevent merging different recordings (by @hayupadhyaya in #3230)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1490](https://github.com/music-assistant/frontend/pull/1490))
-- Remove focus on select when entering players drawer (by @stvncode in [#1492](https://github.com/music-assistant/frontend/pull/1492))
-- Make slider more consistent (by @stvncode in [#1493](https://github.com/music-assistant/frontend/pull/1493))
-- Update sendspin-js from 2.0.0 to 2.0.1 (by @maximmaxim345 in [#1491](https://github.com/music-assistant/frontend/pull/1491))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>18 changes</summary>
-
-- Bump actions/stale from v3.0.11 to v3.0.12 (by @dependabot[bot] in #29)
-- Bump pillow from 7.2.0 to 8.0.1 (by @dependabot[bot] in #34)
-- Bump aiorun from 2020.6.1 to 2020.11.1 (by @dependabot[bot] in #41)
-- Bump cryptography from 3.2 to 3.2.1 (by @dependabot[bot] in #44)
-- Bump pychromecast from 7.5.1 to 7.6.0 (by @dependabot[bot] in #56)
-- Bump unidecode from 1.1.1 to 1.1.2 (by @dependabot[bot] in #57)
-- Bump cryptography from 3.3.2 to 3.4.6 (by @dependabot[bot] in #81)
-- Bump aiosqlite from 0.16.0 to 0.17.0 (by @dependabot[bot] in #82)
-- Bump mypy from 0.790 to 0.812 (by @dependabot[bot] in #83)
-- Bump actions/stale from v3.0.16 to v3.0.17 (by @dependabot[bot] in #84)
-- Bump mashumaro from 1.24 to 2.0 (by @dependabot[bot] in #85)
-- Bump pytest from 6.2.1 to 6.2.2 (by @dependabot[bot] in #86)
-- Bump pytest-cov from 2.10.1 to 2.11.1 (by @dependabot[bot] in #87)
-- Bump tox from 3.20.1 to 3.23.0 (by @dependabot[bot] in #88)
-- Bump aiohttp[speedups] from 3.7.3 to 3.7.4 (by @dependabot[bot] in #89)
-- Bump pillow from 8.1.0 to 8.2.0 (by @dependabot[bot] in #99)
-- Bump mashumaro from 2.0 to 2.5 (by @dependabot[bot] in #104)
-- ⬆️ Update music-assistant-frontend to 2.17.97 (by @music-assistant-machine in #3238)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@AirPlr, @OzGav, @hayupadhyaya, @khers, @maximmaxim345, @relic664, @stvncode, @trudenboy
 
 
