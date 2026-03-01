@@ -1,3 +1,14 @@
+# [2.8.0.dev2026030109] - 01.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030105](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030105)_
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.106 (by @music-assistant-machine in #3272)
+
+
 # [2.8.0.dev2026030105] - 01.03.2026
 
 ## 📦 Nightly Release
@@ -66,40 +77,5 @@ _Changes since [2.8.0.dev2026022704](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @alams154, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345
-
-
-# [2.8.0.dev2026022704] - 27.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026022602](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022602)_
-
-### 🚀 Features and enhancements
-
-- Add Sendspin to AirPlay bridge (by @marcelveldt in #3188)
-- Set audio format on Bandcamp track ProviderMapping (by @teancom in #3213)
-- Fix Qobuz provider using HTTP instead of HTTPS for all API calls (by @teancom in #3246)
-- Add manual mediaitem linking to genre (by @jozefKruszynski in #3248)
-
-### 🐛 Bugfixes
-
-- Update to `aiosendspin` 4.2.0 and fix a couple of issues (by @maximmaxim345 in #3249)
-- Fix sendspin metadata sending wrong progress when paused (by @balloob in #3250)
-- Notify UI when DLNA player has gone offline to mark it unavailable. (by @MarvinSchenkel in #3251)
-
-### 🎨 Frontend Changes
-
-- Disable podcasts and audiobooks in main menu when library is empty (by @OzGav in [#1499](https://github.com/music-assistant/frontend/pull/1499))
-- Add manual media item to genre linking (by @jozefKruszynski in [#1501](https://github.com/music-assistant/frontend/pull/1501))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.100 (by @music-assistant-machine in #3256)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @balloob, @jozefKruszynski, @marcelveldt, @maximmaxim345, @teancom
 
 
