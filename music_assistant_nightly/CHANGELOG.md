@@ -1,3 +1,26 @@
+# [2.8.0.dev2026030117] - 01.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030109](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030109)_
+
+### 🎨 Frontend Changes
+
+- Add search to bottom navigation (by @marcelveldt in [#1510](https://github.com/music-assistant/frontend/pull/1510))
+- Unify volume controls + add group popover (by @marcelveldt in [#1508](https://github.com/music-assistant/frontend/pull/1508))
+- Hide fullscreen player & player menu when player settings button clicked (by @radiohe4d in [#1507](https://github.com/music-assistant/frontend/pull/1507))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.103 (by @music-assistant-machine in #3273)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @radiohe4d
+
+
 # [2.8.0.dev2026030109] - 01.03.2026
 
 ## 📦 Nightly Release
@@ -45,37 +68,5 @@ _Changes since [2.8.0.dev2026022804](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes, @jozefKruszynski, @radiohe4d, @teancom
-
-
-# [2.8.0.dev2026022804] - 28.02.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026022704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026022704)_
-
-### 🚀 Features and enhancements
-
-- Add Sendspin bridge for chromecast devices (by @marcelveldt in #3255)
-
-### 🐛 Bugfixes
-
-- Handle empty stream URL in metadata refresh for Alexa player provider (by @alams154 in #3252)
-- Use floating point for `aiosendspin`'s internal audio data (by @maximmaxim345 in #3258)
-
-### 🎨 Frontend Changes
-
-- Replace genre and alias icons with Compass and Route (by @jozefKruszynski in [#1502](https://github.com/music-assistant/frontend/pull/1502))
-
-### 🧰 Maintenance and dependency bumps
-
-- Remove HLS streams from the Audiobookshelf provider based on user feedback (by @fmunkes in #3254)
-- ⬆️ Update music-assistant-models to 1.1.103 (by @music-assistant-machine in #3262)
-- ⬆️ Update music-assistant-frontend to 2.17.101 (by @music-assistant-machine in #3263)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@alams154, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345
 
 
