@@ -1,3 +1,24 @@
+# [2.8.0.dev2026030219] - 02.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030216](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030216)_
+
+### 🎨 Frontend Changes
+
+- Add support for multiple media types in playlist (by @fmunkes in [#1504](https://github.com/music-assistant/frontend/pull/1504))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.106 (by @music-assistant-machine in #3280)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@fmunkes
+
+
 # [2.8.0.dev2026030216] - 02.03.2026
 
 ## 📦 Nightly Release
@@ -58,28 +79,5 @@ _Changes since [2.8.0.dev2026030117](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @apophisnow, @radiohe4d, @stvncode, @teancom
-
-
-# [2.8.0.dev2026030117] - 01.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030109](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030109)_
-
-### 🎨 Frontend Changes
-
-- Add search to bottom navigation (by @marcelveldt in [#1510](https://github.com/music-assistant/frontend/pull/1510))
-- Unify volume controls + add group popover (by @marcelveldt in [#1508](https://github.com/music-assistant/frontend/pull/1508))
-- Hide fullscreen player & player menu when player settings button clicked (by @radiohe4d in [#1507](https://github.com/music-assistant/frontend/pull/1507))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.103 (by @music-assistant-machine in #3273)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @radiohe4d
 
 
