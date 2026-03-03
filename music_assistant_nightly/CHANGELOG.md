@@ -1,3 +1,54 @@
+# [2.8.0.dev2026030323] - 03.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030304](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030304)_
+
+### 🚀 Features and enhancements
+
+- Enhance SoundCloud streams for better seeking/resuming support (by @robsonke in #3298)
+
+### 🐛 Bugfixes
+
+- Fix audiobooks controller's set playlog function if user context missing (by @fmunkes in #3253)
+- Fix group member recursion for Squeezelite devices (by @MarvinSchenkel in #3287)
+- Fix race condition in transfer queue feature (by @marcelveldt in #3289)
+- Fix active source detection (by @marcelveldt in #3290)
+- Guard eventdata snapcast (by @MarvinSchenkel in #3291)
+- Make Snapcast type player instead of protocol (by @marcelveldt in #3292)
+- Improve protocol linking reliability and restart resilience (by @marcelveldt in #3294)
+- Check if HEOS queue exists before clearing (by @Tommatheussen in #3295)
+- Ensure soundcloud playlist genre is added as a list (by @jozefKruszynski in #3296)
+- Fix Google Cast Groups not visible/controllable (by @marcelveldt in #3300)
+
+### 🎨 Frontend Changes
+
+- Align the players controls so they are in more consistent positions (by @radiohe4d in [#1529](https://github.com/music-assistant/frontend/pull/1529))
+- Revert work on the reload toast for chunks (by @stvncode in [#1528](https://github.com/music-assistant/frontend/pull/1528))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1527](https://github.com/music-assistant/frontend/pull/1527))
+- Do not inline the PlayerMenu on desktop (by @marcelveldt in [#1531](https://github.com/music-assistant/frontend/pull/1531))
+- Few UI scale fixes + fix 1 thumb shown on large screens (by @MarvinSchenkel in [#1530](https://github.com/music-assistant/frontend/pull/1530))
+- Few UI scale fixes + fix 1 thumb shown on large screens (by @MarvinSchenkel in [#1530](https://github.com/music-assistant/frontend/pull/1530))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump aiosendspin to 4.3.1 (by @Copilot in #3286)
+- Bump aioslimproto to 3.1.7 (by @MarvinSchenkel in #3288)
+- Optimize musiccast device identifieres after player merging (by @fmunkes in #3297)
+- ⬆️ Update music-assistant-frontend to 2.17.107 (by @music-assistant-machine in #3299)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Copilot, @MarvinSchenkel, @Tommatheussen, @fmunkes, @jozefKruszynski, @marcelveldt, @radiohe4d, @robsonke, @stvncode
+
+
 # [2.8.0.dev2026030304] - 03.03.2026
 
 ## 📦 Nightly Release
@@ -40,38 +91,5 @@ _Changes since [2.8.0.dev2026030216](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes
-
-
-# [2.8.0.dev2026030216] - 02.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030204](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030204)_
-
-### 🐛 Bugfixes
-
-- Fix podcast episode retrieval in builtin playlist tracks (by @OzGav in #3184)
-- Fix MA not starting on some older CPU models (by @MarvinSchenkel in #3257)
-- Make Smart Fades respect the PCM format (by @MarvinSchenkel in #3259)
-- Apple Music: Fix playlists sometimes not loading (by @MarvinSchenkel in #3275)
-- Fix volume_up / down for group players (by @MarvinSchenkel in #3277)
-
-### 🎨 Frontend Changes
-
-- Change username min required characters to 2 instead of 3 (by @MarvinSchenkel in [#1526](https://github.com/music-assistant/frontend/pull/1526))
-- Rounded style for overlayed menus (by @marcelveldt in [#1525](https://github.com/music-assistant/frontend/pull/1525))
-- Adapt the column counts when the player menu is open or closed (by @radiohe4d in [#1514](https://github.com/music-assistant/frontend/pull/1514))
-- Temporary fix so the user doesnt get stuck on the players menu (by @radiohe4d in [#1515](https://github.com/music-assistant/frontend/pull/1515))
-
-### 🧰 Maintenance and dependency bumps
-
-- Qobuz provider tidy up and add tests (by @teancom in #3247)
-- ⬆️ Update music-assistant-frontend to 2.17.105 (by @music-assistant-machine in #3278)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @marcelveldt, @radiohe4d, @teancom
 
 
