@@ -1,3 +1,44 @@
+# [2.8.0b16] - 03.03.2026
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b15](https://github.com/music-assistant/server/releases/tag/2.8.0b15)_
+
+### 🚀 Features and enhancements
+
+- Enhance SoundCloud streams for better seeking/resuming support (by @robsonke in #3298)
+
+### 🐛 Bugfixes
+
+- Guard eventdata snapcast (by @MarvinSchenkel in #3291)
+- Make Snapcast type player instead of protocol (by @marcelveldt in #3292)
+- Improve protocol linking reliability and restart resilience (by @marcelveldt in #3294)
+- Check if HEOS queue exists before clearing (by @Tommatheussen in #3295)
+- Ensure soundcloud playlist genre is added as a list (by @jozefKruszynski in #3296)
+- Fix Google Cast Groups not visible/controllable (by @marcelveldt in #3300)
+
+### 🎨 Frontend Changes
+
+- Align the players controls so they are in more consistent positions (by @radiohe4d in [#1529](https://github.com/music-assistant/frontend/pull/1529))
+- Revert work on the reload toast for chunks (by @stvncode in [#1528](https://github.com/music-assistant/frontend/pull/1528))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1527](https://github.com/music-assistant/frontend/pull/1527))
+- Do not inline the PlayerMenu on desktop (by @marcelveldt in [#1531](https://github.com/music-assistant/frontend/pull/1531))
+- Few UI scale fixes + fix 1 thumb shown on large screens (by @MarvinSchenkel in [#1530](https://github.com/music-assistant/frontend/pull/1530))
+- Few UI scale fixes + fix 1 thumb shown on large screens (by @MarvinSchenkel in [#1530](https://github.com/music-assistant/frontend/pull/1530))
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump aiosendspin to 4.3.1 (by @Copilot in #3286)
+- Optimize musiccast device identifieres after player merging (by @fmunkes in #3297)
+- ⬆️ Update music-assistant-frontend to 2.17.107 (by @music-assistant-machine in #3299)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Copilot, @MarvinSchenkel, @Tommatheussen, @fmunkes, @jozefKruszynski, @marcelveldt, @radiohe4d, @robsonke, @stvncode
+
+
 # [2.8.0b15] - 03.03.2026
 
 ## ⚠️ Important Notes
@@ -233,117 +274,5 @@ _Changes since [2.8.0b13](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @AirPlr, @Copilot, @MarvinSchenkel, @OzGav, @SimeonAT, @Tommatheussen, @alams154, @andykelk, @apophisnow, @balloob, @bradkeifer, @chrisuthe, @claude-goomba, @davidanthoff, @fmunkes, @gnumpi, @hayupadhyaya, @hmonteiro, @jdaberkow, @jozefKruszynski, @khers, @lukaszwawrzyk, @marcelveldt, @maximmaxim345, @radiohe4d, @relic664, @rjbutler, @scyto, @stvncode, @teancom, @trudenboy
-
-
-# [2.8.0b13] - 11.02.2026
-
-## ⚠️ Important Notes
-
-We unfortunately had to rollback the feature that auto-hides the HA menu bar due to some issues when running inside the HA Companion app. This will be fixed in a future update, but for now, the HA menu bar will not automatically hide anymore.
-
----
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b12](https://github.com/music-assistant/server/releases/tag/2.8.0b12)_
-
-### 🚀 New Providers
-
-- Add Zvuk Music provider (by @trudenboy in #3090)
-- Add Emby Music Provider (by @hatharry in #3096)
-- Add KION Music (MTS Music) provider (by @trudenboy in #3100)
-
-### 🚀 Features and enhancements
-
-- Allow radio stations to be added to playlists (by @OzGav in #2951)
-- Add group volume mute support (by @scyto in #3034)
-- Add PlayerOptions to backend and MusicCast (by @fmunkes in #3064)
-- Support multiple artist and other tags in FLAC/OGG files (by @OzGav in #3076)
-- feat(deezer): add Flow, Radios and Top Charts as recommendations (by @sfortis in #3077)
-- ABS: Use playback sessions, and optionally allow HLS stream (by @fmunkes in #3079)
-- Fix local file system audiobook edge cases (by @OzGav in #3080)
-- Add album year to track SQL query (by @sfortis in #3085)
-- Enable IPv6 support for zeroconf, stream server and AirPlay DACP (by @fmurodov in #3086)
-- Fix Yandex Music provider for lossless streaming support (by @trudenboy in #3093)
-- Snapcast: Fix player availability issues and align state with server truth (by @gnumpi in #3104)
-- Yandex Music: My Wave Browse folder and locale-based names (by @trudenboy in #3122)
-- Radio Paradise revert to using enriched API endpoint (by @OzGav in #3130)
-
-### 🐛 Bugfixes
-
-- Fix squeezelite WAV playback (by @OzGav in #3084)
-- fix: cache check for expire (by @relic664 in #3087)
-- Snapcast: Stop the control scripts gracefully before shutting down the built-in snapcast server (by @gnumpi in #3092)
-- Apple Music: Limit get_library_tracks to 150 songs per batch (by @MizterB in #3094)
-- Apple Music: Fix syncing shared playlists (by @MizterB in #3095)
-- fix(yandex_music): fix playlist loading and missing album cover art (by @trudenboy in #3099)
-- Use RAOP protocol for Juke Audio devices (by @kenyonj in #3102)
-- Revert "Fix squeezelite WAV playback" (by @MarvinSchenkel in #3103)
-- Fix IPv6 address handling in bind config and ifaddr parsing (by @fmurodov in #3111)
-- Sanitize queue_item.name in icy headers (by @fmunkes in #3112)
-- Add back pressure to radio streams (by @MarvinSchenkel in #3116)
-- Fix sync groups with dynamic option losing members on power off (by @OzGav in #3118)
-- Snapcast: Fix elapsed time not updated issue (by @gnumpi in #3119)
-- Fix adding an item to library from browse results (by @MarvinSchenkel in #3120)
-- Airplay stability fixes (by @MarvinSchenkel in #3121)
-- Fix filtering and sorting within Artist, Album and Track views (by @MarvinSchenkel in #3131)
-- Fix DLNA players not reconnecting (by @MarvinSchenkel in #3132)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1427](https://github.com/music-assistant/frontend/pull/1427))
-- Fix playing indicator for playlist, album, and artist tracks (by @sfortis in [#1425](https://github.com/music-assistant/frontend/pull/1425))
-- Add WAV icon to Audio Pipeline (by @OzGav in [#1428](https://github.com/music-assistant/frontend/pull/1428))
-- Prepare the frontend for upcoming (multi)protocol support (by @marcelveldt in [#1409](https://github.com/music-assistant/frontend/pull/1409))
-- Fix Refresh Item not updating tracks for provider playlists (by @sfortis in [#1426](https://github.com/music-assistant/frontend/pull/1426))
-- Add the possibility to choose the side of the sidebar (by @stvncode in [#1432](https://github.com/music-assistant/frontend/pull/1432))
-- Remove bun lock (by @stvncode in [#1437](https://github.com/music-assistant/frontend/pull/1437))
-- Remove bottom navigation and replace it by a sidebar like in HA (by @stvncode in [#1431](https://github.com/music-assistant/frontend/pull/1431))
-- Replace vuetify-sonner by vue-sonner (by @stvncode in [#1430](https://github.com/music-assistant/frontend/pull/1430))
-- Remove timeout on loading state (by @stvncode in [#1429](https://github.com/music-assistant/frontend/pull/1429))
-- Add year/release date display for albums and tracks (by @sfortis in [#1411](https://github.com/music-assistant/frontend/pull/1411))
-- add context menu item to move item to end of the queue to the frontend (by @Bonusbartus in [#1353](https://github.com/music-assistant/frontend/pull/1353))
-- Add back bottom nav (by @stvncode in [#1443](https://github.com/music-assistant/frontend/pull/1443))
-- Swipe sidebar (by @stvncode in [#1439](https://github.com/music-assistant/frontend/pull/1439))
-- Come back to the scrollable list and not at the top (by @stvncode in [#1438](https://github.com/music-assistant/frontend/pull/1438))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1452](https://github.com/music-assistant/frontend/pull/1452))
-- Fix searchbar in players also write in other search and replace it by a new component (by @stvncode in [#1453](https://github.com/music-assistant/frontend/pull/1453))
-- Apply styles to the new volume sliders to match the rest of the UI (by @Thyraz in [#1343](https://github.com/music-assistant/frontend/pull/1343))
-- Fix searchbar in players also write in other search and replace it by a new component (by @stvncode in [#1453](https://github.com/music-assistant/frontend/pull/1453))
-- Fix HA Button not showing HA sidebar (by @stvncode in [#1450](https://github.com/music-assistant/frontend/pull/1450))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>20 changes</summary>
-
-- Chore(deps): Bump ytmusicapi from 1.11.3 to 1.11.5 (by @dependabot[bot] in #3081)
-- Chore(deps-dev): Bump pre-commit from 4.5.0 to 4.5.1 (by @dependabot[bot] in #3082)
-- Chore(deps): Bump mashumaro from 3.17 to 3.18 (by @dependabot[bot] in #3083)
-- ⬆️ Update music-assistant-frontend to 2.17.79 (by @music-assistant-machine in #3089)
-- Add debug logging for scrobbled tracks (by @MonkeyDo in #3091)
-- ⬆️ Update music-assistant-frontend to 2.17.80 (by @music-assistant-machine in #3097)
-- ⬆️ Update music-assistant-frontend to 2.17.81 (by @music-assistant-machine in #3101)
-- Chore(deps): Bump actions/github-script from 7 to 8 (by @dependabot[bot] in #3105)
-- ⬆️ Update music-assistant-frontend to 2.17.82 (by @music-assistant-machine in #3107)
-- Snapcast: Introduce fallback Snapcast setup for dev environments (by @gnumpi in #3108)
-- Print provider name in logging output (by @fmunkes in #3113)
-- ⬆️ Update music-assistant-models to 1.1.97 (by @music-assistant-machine in #3114)
-- ⬆️ Update music-assistant-models to 1.1.98 (by @music-assistant-machine in #3117)
-- Chore(deps): Bump cryptography from 46.0.3 to 46.0.4 (by @dependabot[bot] in #3124)
-- Chore(deps): Bump soco from 0.30.12 to 0.30.14 (by @dependabot[bot] in #3125)
-- ⬆️ Update music-assistant-frontend to 2.17.83 (by @music-assistant-machine in #3129)
-- Chore(deps): Bump cryptography from 46.0.4 to 46.0.5 (by @dependabot[bot] in #3134)
-- ⬆️ Update music-assistant-frontend to 2.17.84 (by @music-assistant-machine in #3135)
-- ⬆️ Update music-assistant-frontend to 2.17.85 (by @music-assistant-machine in #3136)
-- Chore(deps): Bump pillow from 12.1.0 to 12.1.1 (by @dependabot[bot] in #3137)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Bonusbartus, @MarvinSchenkel, @MizterB, @MonkeyDo, @OzGav, @Thyraz, @fmunkes, @fmurodov, @gnumpi, @hatharry, @kenyonj, @marcelveldt, @relic664, @scyto, @sfortis, @stvncode, @trudenboy
 
 
