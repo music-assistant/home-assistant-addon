@@ -1,3 +1,26 @@
+# [2.8.0.dev2026030304] - 03.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030219](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030219)_
+
+### 🐛 Bugfixes
+
+- Fix userid missing in player queue controller's resolve media item method (by @fmunkes in #3283)
+- Some follow-up fixes for the merged protocols players (by @marcelveldt in #3284)
+- Accept alternative genre tag separators (by @marcelveldt in #3285)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump xmltodict from 1.0.2 to 1.0.4 (by @dependabot[bot] in #3281)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@fmunkes, @marcelveldt
+
+
 # [2.8.0.dev2026030219] - 02.03.2026
 
 ## 📦 Nightly Release
@@ -50,34 +73,5 @@ _Changes since [2.8.0.dev2026030204](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @marcelveldt, @radiohe4d, @teancom
-
-
-# [2.8.0.dev2026030204] - 02.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030117](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030117)_
-
-### 🐛 Bugfixes
-
-- Handle connection errors in the Audiobookshelf provider gracefully during provider unload (by @teancom in #3267)
-- Fix helper for safe type evaluation (by @apophisnow in #3271)
-
-### 🎨 Frontend Changes
-
-- Allow access to the BottomNavigation when the PlayerMenu is open (by @radiohe4d in [#1513](https://github.com/music-assistant/frontend/pull/1513))
-- Fix refresh on new version and replace it with a toast (by @stvncode in [#1511](https://github.com/music-assistant/frontend/pull/1511))
-- Improve player popover responsive layout + refactor event handling (by @radiohe4d in [#1509](https://github.com/music-assistant/frontend/pull/1509))
-- Fix "This player is disabled" banner flash (by @apophisnow in [#1512](https://github.com/music-assistant/frontend/pull/1512))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.104 (by @music-assistant-machine in #3274)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@apophisnow, @radiohe4d, @stvncode, @teancom
 
 
