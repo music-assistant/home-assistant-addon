@@ -1,3 +1,29 @@
+# [2.8.0.dev2026030510] - 05.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030504](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030504)_
+
+### 🚀 Features and enhancements
+
+- Add support for playlist syncing to the Audiobookshelf provider (by @fmunkes in #3207)
+
+### 🐛 Bugfixes
+
+- Fix MA hanging on announcement failure (by @MarvinSchenkel in #3293)
+- Fix some small issues with AirPlay and sendspin bridging (by @marcelveldt in #3313)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump docker/login-action from 3.7.0 to 4.0.0 (by @dependabot[bot] in #3307)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @fmunkes, @marcelveldt
+
+
 # [2.8.0.dev2026030504] - 05.03.2026
 
 ## 📦 Nightly Release
@@ -87,28 +113,5 @@ _Changes since [2.8.0.dev2026030304](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @MarvinSchenkel, @Tommatheussen, @fmunkes, @jozefKruszynski, @marcelveldt, @radiohe4d, @robsonke, @stvncode
-
-
-# [2.8.0.dev2026030304] - 03.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030219](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030219)_
-
-### 🐛 Bugfixes
-
-- Fix userid missing in player queue controller's resolve media item method (by @fmunkes in #3283)
-- Some follow-up fixes for the merged protocols players (by @marcelveldt in #3284)
-- Accept alternative genre tag separators (by @marcelveldt in #3285)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump xmltodict from 1.0.2 to 1.0.4 (by @dependabot[bot] in #3281)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @marcelveldt
 
 
