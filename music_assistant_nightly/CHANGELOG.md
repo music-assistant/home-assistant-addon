@@ -1,3 +1,25 @@
+# [2.8.0.dev2026030804] - 08.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030704)_
+
+### 🎨 Frontend Changes
+
+- Fix unable to scroll on the add to playlist dialog (by @radiohe4d in [#1546](https://github.com/music-assistant/frontend/pull/1546))
+- Stop sidebar showing when mobile layout forced (by @OzGav in [#1545](https://github.com/music-assistant/frontend/pull/1545))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.111 (by @music-assistant-machine in #3330)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @radiohe4d
+
+
 # [2.8.0.dev2026030704] - 07.03.2026
 
 ## 📦 Nightly Release
@@ -79,10 +101,5 @@ _Changes since [2.8.0.dev2026030514](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @apophisnow
-
-
-# [2.8.0.dev2026030514] - 05.03.2026
-
-* No changes
 
 
