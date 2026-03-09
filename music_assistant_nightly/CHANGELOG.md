@@ -1,3 +1,25 @@
+# [2.8.0.dev2026030904] - 09.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026030804](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030804)_
+
+### 🎨 Frontend Changes
+
+- Improve 'Now playing' screen for other resolutions as well (by @MarvinSchenkel in [#1548](https://github.com/music-assistant/frontend/pull/1548))
+- Improve now playing screen phone (by @MarvinSchenkel in [#1543](https://github.com/music-assistant/frontend/pull/1543))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.112 (by @music-assistant-machine in #3336)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel
+
+
 # [2.8.0.dev2026030804] - 08.03.2026
 
 ## 📦 Nightly Release
@@ -79,27 +101,5 @@ _Changes since [2.8.0.dev2026030604](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @MarvinSchenkel, @OzGav, @Tommatheussen, @alams154, @andykelk, @apophisnow, @bradkeifer, @chrisuthe, @gnumpi, @hmonteiro, @jozefKruszynski, @khers, @maximmaxim345, @rjbutler, @scyto, @teancom
-
-
-# [2.8.0.dev2026030604] - 06.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030514](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030514)_
-
-### 🎨 Frontend Changes
-
-- Optimize NowPlaying badge animation to minimize CPU usage (by @apophisnow in [#1539](https://github.com/music-assistant/frontend/pull/1539))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump aiosendspin to 4.3.2 (by @Copilot in #3312)
-- ⬆️ Update music-assistant-frontend to 2.17.109 (by @music-assistant-machine in #3317)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Copilot, @apophisnow
 
 
