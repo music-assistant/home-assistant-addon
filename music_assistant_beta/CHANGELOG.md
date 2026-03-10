@@ -1,3 +1,70 @@
+# [2.8.0b19] - 10.03.2026
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b18](https://github.com/music-assistant/server/releases/tag/2.8.0b18)_
+
+### 🚀 Features and enhancements
+
+- Add configurable in-library podcast feeds syncing time to the iTunes Podcast Provider (by @fmunkes in #3308)
+- Add bit_rate to radio browser stream details (by @OzGav in #3318)
+- Enable multi instance for scrobblers (by @OzGav in #3320)
+- Add genre exclusion feature to media items (by @jozefKruszynski in #3327)
+- Add derived genres for local and smb providers (by @jozefKruszynski in #3349)
+- Party mode enhancements (by @apophisnow in #3350)
+
+### 🐛 Bugfixes
+
+- Fix error when MA shutsdown (by @teancom in #3315)
+- Add guard to NFO file scanning (by @OzGav in #3335)
+- Fix 'Invalid PlayerMedia data' error when playing announcements (by @MarvinSchenkel in #3338)
+- Pin VBAN dependency (by @MarvinSchenkel in #3339)
+- Fix 'Invalid PlayerMedia data' for plugin sources (by @MarvinSchenkel in #3341)
+- Fix YT Music not being able to resolve stream urls (by @MarvinSchenkel in #3342)
+- Fix Sync group not being able to play to a group of cast devices (by @MarvinSchenkel in #3343)
+- Prevent StreamDetails unnecessarily being loaded twice (by @MarvinSchenkel in #3351)
+- Fix queue state loss on player re-register (by @maximmaxim345 in #3352)
+
+### 🎨 Frontend Changes
+
+- Fix unable to scroll on the add to playlist dialog (by @radiohe4d in [#1546](https://github.com/music-assistant/frontend/pull/1546))
+- Stop sidebar showing when mobile layout forced (by @OzGav in [#1545](https://github.com/music-assistant/frontend/pull/1545))
+- Improve 'Now playing' screen for other resolutions as well (by @MarvinSchenkel in [#1548](https://github.com/music-assistant/frontend/pull/1548))
+- Improve now playing screen phone (by @MarvinSchenkel in [#1543](https://github.com/music-assistant/frontend/pull/1543))
+- More improvements to the now playing screen (by @MarvinSchenkel in [#1562](https://github.com/music-assistant/frontend/pull/1562))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1563](https://github.com/music-assistant/frontend/pull/1563))
+- Party mode enhancements (by @apophisnow in [#1544](https://github.com/music-assistant/frontend/pull/1544))
+- Add genre exclusion feature to UI (by @jozefKruszynski in [#1547](https://github.com/music-assistant/frontend/pull/1547))
+- Improve Sendspin Web Player syncing (by @maximmaxim345 in [#1561](https://github.com/music-assistant/frontend/pull/1561))
+- Fix for disabling the web player on party mode routes (by @maximmaxim345 in [#1560](https://github.com/music-assistant/frontend/pull/1560))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>12 changes</summary>
+
+- yandex_music: windowed FLAC streaming, API throttling, stream hardening (by @trudenboy in #3237)
+- Bump docker/setup-buildx-action from 3.12.0 to 4.0.0 (by @dependabot[bot] in #3314)
+- Increase 'restart listening time' in session reporting in Audiobookshelf (by @fmunkes in #3321)
+- Bump docker/build-push-action from 6.19.2 to 7.0.0 (by @dependabot[bot] in #3322)
+- Add build-system so uv run mass works on fresh checkouts (by @balloob-travel in #3328)
+- Downgrade DLNA SSDP discovery socket errors to a warning (by @balloob-travel in #3329)
+- ⬆️ Update music-assistant-frontend to 2.17.111 (by @music-assistant-machine in #3330)
+- ⬆️ Update music-assistant-frontend to 2.17.112 (by @music-assistant-machine in #3336)
+- Bump syrupy from 5.0.0 to 5.1.0 (by @dependabot[bot] in #3344)
+- ⬆️ Update music-assistant-frontend to 2.17.113 (by @music-assistant-machine in #3348)
+- Bump `aiosendspin` to 4.3.3 (by @maximmaxim345 in #3353)
+- ⬆️ Update music-assistant-frontend to 2.17.114 (by @music-assistant-machine in #3355)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @apophisnow, @balloob-travel, @fmunkes, @jozefKruszynski, @maximmaxim345, @radiohe4d, @teancom, @trudenboy
+
+
 # [2.8.0b18] - 06.03.2026
 
 ## 📦 Beta Release
@@ -104,46 +171,5 @@ _Changes since [2.8.0b16](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @fmunkes, @jozefKruszynski, @jwlerch78, @marcelveldt, @mericon, @robsonke, @stvncode
-
-
-# [2.8.0b16] - 03.03.2026
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b15](https://github.com/music-assistant/server/releases/tag/2.8.0b15)_
-
-### 🚀 Features and enhancements
-
-- Enhance SoundCloud streams for better seeking/resuming support (by @robsonke in #3298)
-
-### 🐛 Bugfixes
-
-- Guard eventdata snapcast (by @MarvinSchenkel in #3291)
-- Make Snapcast type player instead of protocol (by @marcelveldt in #3292)
-- Improve protocol linking reliability and restart resilience (by @marcelveldt in #3294)
-- Check if HEOS queue exists before clearing (by @Tommatheussen in #3295)
-- Ensure soundcloud playlist genre is added as a list (by @jozefKruszynski in #3296)
-- Fix Google Cast Groups not visible/controllable (by @marcelveldt in #3300)
-
-### 🎨 Frontend Changes
-
-- Align the players controls so they are in more consistent positions (by @radiohe4d in [#1529](https://github.com/music-assistant/frontend/pull/1529))
-- Revert work on the reload toast for chunks (by @stvncode in [#1528](https://github.com/music-assistant/frontend/pull/1528))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1527](https://github.com/music-assistant/frontend/pull/1527))
-- Do not inline the PlayerMenu on desktop (by @marcelveldt in [#1531](https://github.com/music-assistant/frontend/pull/1531))
-- Few UI scale fixes + fix 1 thumb shown on large screens (by @MarvinSchenkel in [#1530](https://github.com/music-assistant/frontend/pull/1530))
-- Few UI scale fixes + fix 1 thumb shown on large screens (by @MarvinSchenkel in [#1530](https://github.com/music-assistant/frontend/pull/1530))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump aiosendspin to 4.3.1 (by @Copilot in #3286)
-- Optimize musiccast device identifieres after player merging (by @fmunkes in #3297)
-- ⬆️ Update music-assistant-frontend to 2.17.107 (by @music-assistant-machine in #3299)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Copilot, @MarvinSchenkel, @Tommatheussen, @fmunkes, @jozefKruszynski, @marcelveldt, @radiohe4d, @robsonke, @stvncode
 
 
