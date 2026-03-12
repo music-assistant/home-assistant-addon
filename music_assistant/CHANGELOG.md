@@ -1,3 +1,30 @@
+# [2.7.11] - 12.03.2026
+
+## 📦 Stable Release
+
+_Changes since [2.7.10](https://github.com/music-assistant/server/releases/tag/2.7.10)_
+
+### 🐛 Bugfixes
+
+- Improve track retrieval for Soundcloud artists with fallback (by @robsonke in #3166)
+- Fix MA hanging on announcement failure (by @MarvinSchenkel in #3293)
+- Add guard to NFO file scanning (by @OzGav in #3335)
+- Pin VBAN dependency (by @MarvinSchenkel in #3339)
+- Fix YT Music not being able to resolve stream urls (by @MarvinSchenkel in #3342)
+- Prevent StreamDetails unnecessarily being loaded twice (by @MarvinSchenkel in #3351)
+- Fix queue state loss on player re-register (by @maximmaxim345 in #3352)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump aioslimproto to 3.1.7 (by @MarvinSchenkel in #3288)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @maximmaxim345, @robsonke
+
+
 # [2.7.10] - 03.03.2026
 
 ## 📦 Stable Release
@@ -41,28 +68,5 @@ _Changes since [2.7.8](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @OzGav, @fmunkes, @hayupadhyaya, @khers
-
-
-# [2.7.8] - 16.02.2026
-
-## 📦 Stable Release
-
-_Changes since [2.7.7](https://github.com/music-assistant/server/releases/tag/2.7.7)_
-
-### 🐛 Bugfixes
-
-- Fix AttributeError when provider is temporarily unavailable (by @teancom in #3157)
-- Fix HTTP proxy URL parsing for wss:// WebSocket URLs (by @chrisuthe in #3168)
-- Auto cleanup cache db when it grows >= 2GB (by @MarvinSchenkel in #3174)
-
-### Other Changes
-
-- [Backport to stable] 2.7.8 (by @github-actions[bot] in #3173)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @chrisuthe, @teancom
 
 
