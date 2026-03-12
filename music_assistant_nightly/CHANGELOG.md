@@ -1,3 +1,36 @@
+# [2.8.0.dev2026031204] - 12.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031104](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031104)_
+
+### 🚀 Features and enhancements
+
+- Feature: Bandcamp Browse support (by @teancom in #3311)
+
+### 🐛 Bugfixes
+
+- Retry sendspin proxy connection during startup race condition (by @teancom in #3316)
+- Adjust musicbranz log message formatting (by @teancom in #3356)
+- Fix db migration for second run of supported_mediatypes (by @fmunkes in #3357)
+- Handle HEOS internal queue timeouts (by @Tommatheussen in #3358)
+- Fix possible race conditions during HEOS startup (by @Tommatheussen in #3359)
+
+### 🎨 Frontend Changes
+
+- Fix titles overlapping on the Now Playing screen on Ultrawide resolutions (by @MarvinSchenkel in [#1566](https://github.com/music-assistant/frontend/pull/1566))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.115 (by @music-assistant-machine in #3361)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Tommatheussen, @fmunkes, @teancom
+
+
 # [2.8.0.dev2026031104] - 11.03.2026
 
 ## 📦 Nightly Release
@@ -79,27 +112,5 @@ _Changes since [2.8.0.dev2026030904](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav
-
-
-# [2.8.0.dev2026030904] - 09.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030804](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030804)_
-
-### 🎨 Frontend Changes
-
-- Improve 'Now playing' screen for other resolutions as well (by @MarvinSchenkel in [#1548](https://github.com/music-assistant/frontend/pull/1548))
-- Improve now playing screen phone (by @MarvinSchenkel in [#1543](https://github.com/music-assistant/frontend/pull/1543))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.112 (by @music-assistant-machine in #3336)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
