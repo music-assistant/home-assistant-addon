@@ -1,3 +1,35 @@
+# [2.8.0.dev2026031314] - 13.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031304](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031304)_
+
+### 🚀 Features and enhancements
+
+- Narrow down genre linking during scan (by @jozefKruszynski in #3372)
+- Extract date_added from Deezer API for library items (by @sfortis in #3377)
+- Rename the last party mode things (by @apophisnow in #3381)
+
+### 🎨 Frontend Changes
+
+- Final tweaks now playing resolutions (by @MarvinSchenkel in [#1575](https://github.com/music-assistant/frontend/pull/1575))
+- Party mode lyrics and karaoke (by @apophisnow in [#1565](https://github.com/music-assistant/frontend/pull/1565))
+- Update Readme with new guidelines (by @stvncode in [#1574](https://github.com/music-assistant/frontend/pull/1574))
+- fix: revert unneeded word by word feature (by @apophisnow in [#1576](https://github.com/music-assistant/frontend/pull/1576))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.107 (by @music-assistant-machine in #3379)
+- ⬆️ Update music-assistant-frontend to 2.17.117 (by @music-assistant-machine in #3380)
+- ⬆️ Update music-assistant-frontend to 2.17.118 (by @music-assistant-machine in #3383)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @apophisnow, @jozefKruszynski, @sfortis, @stvncode
+
+
 # [2.8.0.dev2026031304] - 13.03.2026
 
 ## 📦 Nightly Release
@@ -69,58 +101,5 @@ _Changes since [2.8.0.dev2026031104](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @Tommatheussen, @fmunkes, @teancom
-
-
-# [2.8.0.dev2026031104] - 11.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031004](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031004)_
-
-### 🚀 Features and enhancements
-
-- Add configurable in-library podcast feeds syncing time to the iTunes Podcast Provider (by @fmunkes in #3308)
-- Add bit_rate to radio browser stream details (by @OzGav in #3318)
-- Enable multi instance for scrobblers (by @OzGav in #3320)
-- Add genre exclusion feature to media items (by @jozefKruszynski in #3327)
-- Add derived genres for local and smb providers (by @jozefKruszynski in #3349)
-- Party mode enhancements (by @apophisnow in #3350)
-
-### 🐛 Bugfixes
-
-- Fix error when MA shutsdown (by @teancom in #3315)
-- Prevent StreamDetails unnecessarily being loaded twice (by @MarvinSchenkel in #3351)
-- Fix queue state loss on player re-register (by @maximmaxim345 in #3352)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1563](https://github.com/music-assistant/frontend/pull/1563))
-- Party mode enhancements (by @apophisnow in [#1544](https://github.com/music-assistant/frontend/pull/1544))
-- Add genre exclusion feature to UI (by @jozefKruszynski in [#1547](https://github.com/music-assistant/frontend/pull/1547))
-- Improve Sendspin Web Player syncing (by @maximmaxim345 in [#1561](https://github.com/music-assistant/frontend/pull/1561))
-- Fix for disabling the web player on party mode routes (by @maximmaxim345 in [#1560](https://github.com/music-assistant/frontend/pull/1560))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- yandex_music: windowed FLAC streaming, API throttling, stream hardening (by @trudenboy in #3237)
-- Bump docker/setup-buildx-action from 3.12.0 to 4.0.0 (by @dependabot[bot] in #3314)
-- Increase 'restart listening time' in session reporting in Audiobookshelf (by @fmunkes in #3321)
-- Bump docker/build-push-action from 6.19.2 to 7.0.0 (by @dependabot[bot] in #3322)
-- Add build-system so uv run mass works on fresh checkouts (by @balloob-travel in #3328)
-- Downgrade DLNA SSDP discovery socket errors to a warning (by @balloob-travel in #3329)
-- Bump syrupy from 5.0.0 to 5.1.0 (by @dependabot[bot] in #3344)
-- Bump `aiosendspin` to 4.3.3 (by @maximmaxim345 in #3353)
-- ⬆️ Update music-assistant-frontend to 2.17.114 (by @music-assistant-machine in #3355)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @apophisnow, @balloob-travel, @fmunkes, @jozefKruszynski, @maximmaxim345, @teancom, @trudenboy
 
 
