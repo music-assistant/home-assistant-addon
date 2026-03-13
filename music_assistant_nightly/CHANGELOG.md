@@ -1,3 +1,43 @@
+# [2.8.0.dev2026031304] - 13.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031204](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031204)_
+
+### 🚀 New Providers
+
+- Add NFS Filesystem Provider (by @OzGav in #3276)
+
+### 🚀 Features and enhancements
+
+- Add Lyrics and Karaoke to Party Mode (by @apophisnow in #3363)
+
+### 🐛 Bugfixes
+
+- Fix in progress items recommendation for multi-user setups (by @fmunkes in #3324)
+- Add user awareness to podcast controller (by @fmunkes in #3333)
+- Guard against trailing spaces in auth URLs (by @OzGav in #3362)
+- Fix changing the Sendspin audio format to Automatic (by @maximmaxim345 in #3365)
+
+### 🎨 Frontend Changes
+
+- Add additional padding to volume popup (by @MarvinSchenkel in [#1573](https://github.com/music-assistant/frontend/pull/1573))
+- Add new custom icon and modify others (by @jozefKruszynski in [#1568](https://github.com/music-assistant/frontend/pull/1568))
+- Add alternate view options in genre overview (by @jozefKruszynski in [#1567](https://github.com/music-assistant/frontend/pull/1567))
+- (Hopefully) Fix party mode tab opening from within HA Companion app (by @MarvinSchenkel in [#1572](https://github.com/music-assistant/frontend/pull/1572))
+
+### 🧰 Maintenance and dependency bumps
+
+- Improve SMB error and shutdown handling (by @OzGav in #3367)
+- ⬆️ Update music-assistant-frontend to 2.17.116 (by @music-assistant-machine in #3375)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345
+
+
 # [2.8.0.dev2026031204] - 12.03.2026
 
 ## 📦 Nightly Release
@@ -82,35 +122,5 @@ _Changes since [2.8.0.dev2026031004](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @balloob-travel, @fmunkes, @jozefKruszynski, @maximmaxim345, @teancom, @trudenboy
-
-
-# [2.8.0.dev2026031004] - 10.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026030904](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026030904)_
-
-### 🐛 Bugfixes
-
-- Add guard to NFO file scanning (by @OzGav in #3335)
-- Fix 'Invalid PlayerMedia data' error when playing announcements (by @MarvinSchenkel in #3338)
-- Pin VBAN dependency (by @MarvinSchenkel in #3339)
-- Fix 'Invalid PlayerMedia data' for plugin sources (by @MarvinSchenkel in #3341)
-- Fix YT Music not being able to resolve stream urls (by @MarvinSchenkel in #3342)
-- Fix Sync group not being able to play to a group of cast devices (by @MarvinSchenkel in #3343)
-
-### 🎨 Frontend Changes
-
-- More improvements to the now playing screen (by @MarvinSchenkel in [#1562](https://github.com/music-assistant/frontend/pull/1562))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.113 (by @music-assistant-machine in #3348)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav
 
 
