@@ -1,3 +1,43 @@
+# [2.8.0.dev2026031704] - 17.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031314](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031314)_
+
+### 🚀 Features and enhancements
+
+- Lyrics Viewer karaoke option for Party (by @apophisnow in #3404)
+
+### 🐛 Bugfixes
+
+- Fix _transitioning_players leak causing frozen queue state (by @chrisuthe in #3368)
+- Rewrite tidal stream behaviour to avoid premature cutoff (by @jozefKruszynski in #3369)
+- Fix: don't reassign the metadata callback for HLS streams, if already set (by @kieranhogg in #3370)
+- Fix Sendspin playback stability issues (by @maximmaxim345 in #3382)
+- Fix albums not being able to be added to playlists during playlist creation (by @fmunkes in #3385)
+- Include nfs-common in Dockerfile.base (by @OzGav in #3389)
+- Emby music provider fix album track order (by @hatharry in #3400)
+- Fix PyAV version detection when building the base image Dockerfile (by @maximmaxim345 in #3402)
+
+### 🎨 Frontend Changes
+
+- Remove Party show_player_controls (by @apophisnow in [#1579](https://github.com/music-assistant/frontend/pull/1579))
+- Hide sidebar navigation in frameless mode (by @OzGav in [#1593](https://github.com/music-assistant/frontend/pull/1593))
+- Fix albums not being able to be added to playlists anymore. (by @fmunkes in [#1577](https://github.com/music-assistant/frontend/pull/1577))
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump orjson from 3.11.5 to 3.11.6 (by @dependabot[bot] in #3373)
+- Remove Party show_player_controls (by @apophisnow in #3391)
+- ⬆️ Update music-assistant-frontend to 2.17.119 (by @music-assistant-machine in #3409)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @apophisnow, @chrisuthe, @fmunkes, @hatharry, @jozefKruszynski, @kieranhogg, @maximmaxim345
+
+
 # [2.8.0.dev2026031314] - 13.03.2026
 
 ## 📦 Nightly Release
@@ -68,38 +108,5 @@ _Changes since [2.8.0.dev2026031204](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345
-
-
-# [2.8.0.dev2026031204] - 12.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031104](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031104)_
-
-### 🚀 Features and enhancements
-
-- Feature: Bandcamp Browse support (by @teancom in #3311)
-
-### 🐛 Bugfixes
-
-- Retry sendspin proxy connection during startup race condition (by @teancom in #3316)
-- Adjust musicbranz log message formatting (by @teancom in #3356)
-- Fix db migration for second run of supported_mediatypes (by @fmunkes in #3357)
-- Handle HEOS internal queue timeouts (by @Tommatheussen in #3358)
-- Fix possible race conditions during HEOS startup (by @Tommatheussen in #3359)
-
-### 🎨 Frontend Changes
-
-- Fix titles overlapping on the Now Playing screen on Ultrawide resolutions (by @MarvinSchenkel in [#1566](https://github.com/music-assistant/frontend/pull/1566))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.115 (by @music-assistant-machine in #3361)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @Tommatheussen, @fmunkes, @teancom
 
 
