@@ -1,3 +1,60 @@
+# [2.8.0b21] - 17.03.2026
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b20](https://github.com/music-assistant/server/releases/tag/2.8.0b20)_
+
+### 🚀 Features and enhancements
+
+- Add password pairing support for Airplay 2 devices (by @hmonteiro in #3325)
+- Support id3v2.4 multi value tags (by @OzGav in #3395)
+- Lyrics Viewer karaoke option for Party (by @apophisnow in #3404)
+- Add three way genre visibility toggle (by @jozefKruszynski in #3408)
+- Sync player elapsed time to frontend after significant drift. (by @MarvinSchenkel in #3411)
+
+### 🐛 Bugfixes
+
+- Fix _transitioning_players leak causing frozen queue state (by @chrisuthe in #3368)
+- Rewrite tidal stream behaviour to avoid premature cutoff (by @jozefKruszynski in #3369)
+- Fix: don't reassign the metadata callback for HLS streams, if already set (by @kieranhogg in #3370)
+- Fix Sendspin playback stability issues (by @maximmaxim345 in #3382)
+- Fix albums not being able to be added to playlists during playlist creation (by @fmunkes in #3385)
+- Include nfs-common in Dockerfile.base (by @OzGav in #3389)
+- Emby music provider fix album track order (by @hatharry in #3400)
+- Fix PyAV version detection when building the base image Dockerfile (by @maximmaxim345 in #3402)
+
+### 🎨 Frontend Changes
+
+- Remove Party show_player_controls (by @apophisnow in [#1579](https://github.com/music-assistant/frontend/pull/1579))
+- Hide sidebar navigation in frameless mode (by @OzGav in [#1593](https://github.com/music-assistant/frontend/pull/1593))
+- Fix albums not being able to be added to playlists anymore. (by @fmunkes in [#1577](https://github.com/music-assistant/frontend/pull/1577))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1598](https://github.com/music-assistant/frontend/pull/1598))
+- Add three way genre visibility toggle (by @jozefKruszynski in [#1597](https://github.com/music-assistant/frontend/pull/1597))
+- LyricsViewer fixes/refactor (by @apophisnow in [#1581](https://github.com/music-assistant/frontend/pull/1581))
+- Fix missing genre filter options with pagination addition (by @jozefKruszynski in [#1595](https://github.com/music-assistant/frontend/pull/1595))
+- Improve title screen logic for intro and rewind (by @apophisnow in [#1600](https://github.com/music-assistant/frontend/pull/1600))
+- Change Discover page icon to compass (by @MarvinSchenkel in [#1599](https://github.com/music-assistant/frontend/pull/1599))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Bump orjson from 3.11.5 to 3.11.6 (by @dependabot[bot] in #3373)
+- Remove Party show_player_controls (by @apophisnow in #3391)
+- ⬆️ Update music-assistant-frontend to 2.17.119 (by @music-assistant-machine in #3409)
+- ⬆️ Update music-assistant-frontend to 2.17.120 (by @music-assistant-machine in #3412)
+- ⬆️ Update music-assistant-frontend to 2.17.121 (by @music-assistant-machine in #3414)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @apophisnow, @chrisuthe, @fmunkes, @hatharry, @hmonteiro, @jozefKruszynski, @kieranhogg, @maximmaxim345
+
+
 # [2.8.0b20] - 13.03.2026
 
 ## ⚠️ Important Notes
@@ -132,69 +189,5 @@ _Changes since [2.8.0b18](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @balloob-travel, @fmunkes, @jozefKruszynski, @maximmaxim345, @radiohe4d, @teancom, @trudenboy
-
-
-# [2.8.0b18] - 06.03.2026
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b17](https://github.com/music-assistant/server/releases/tag/2.8.0b17)_
-
-### 🚀 Features and enhancements
-
-- Party mode  (by @apophisnow in #2911)
-- Expand PIN based auth in airplay 2 (by @hmonteiro in #3165)
-- Update Alexa player provider (by @alams154 in #3167)
-- Add API to handle playback speed (by @andykelk in #3198)
-- Airplay2-configurable-latency (by @bradkeifer in #3210)
-- Bandcamp: validate login on init when credentials are configured (by @teancom in #3215)
-- Clear internal HEOS queue before playing (by @Tommatheussen in #3219)
-- Add genre icons and SVG handling to imageproxy (by @MarvinSchenkel in #3223)
-
-### 🐛 Bugfixes
-
-- Gracefully skip files/folders with emoji names on SMB mounts (by @OzGav in #3183)
-- Fix DSP not applying for AirPlay and Sendspin players (by @maximmaxim345 in #3191)
-- Validate queue item ID in Sonos pause path (by @rjbutler in #3194)
-- OpenSubsonic: Use server provided version tag if present (by @khers in #3200)
-- Fix group mute for protocol-synced players (by @scyto in #3205)
-- Fix HEOS source switching back to Local Music after starting stream (by @Tommatheussen in #3206)
-- Fix Sonos S2 announcement 404 error on cloud queue context endpoint (by @Copilot in #3208)
-- Snapcast: Fixes for hard switching of group leaders (by @gnumpi in #3209)
-- Fix inverted track_number condition in Bandcamp converter (by @teancom in #3211)
-- Use ImageType.THUMB for Bandcamp artwork images (by @teancom in #3212)
-- Fix Radioparadise image URL (by @OzGav in #3220)
-
-### 🎨 Frontend Changes
-
-- Save current queue to playlist feature (by @chrisuthe in [#1456](https://github.com/music-assistant/frontend/pull/1456))
-- Show ADD TO PLAYLIST for podcast episodes and audiobooks (by @OzGav in [#1474](https://github.com/music-assistant/frontend/pull/1474))
-- feat(genres): Genre frontend implementation (by @jozefKruszynski in [#1459](https://github.com/music-assistant/frontend/pull/1459))
-- Optimize NowPlaying badge animation to minimize CPU usage (by @apophisnow in [#1539](https://github.com/music-assistant/frontend/pull/1539))
-- Feature: Party mode (by @apophisnow in [#1344](https://github.com/music-assistant/frontend/pull/1344))
-- Optimize more animations (by @apophisnow in [#1540](https://github.com/music-assistant/frontend/pull/1540))
-- Fix bottom player bottom not showing on phones now playing screen (by @MarvinSchenkel in [#1541](https://github.com/music-assistant/frontend/pull/1541))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- ⬆️ Update music-assistant-frontend to 2.17.92 (by @music-assistant-machine in #3203)
-- Handle HEAD requests on root route (by @teancom in #3204)
-- ⬆️ Update music-assistant-frontend to 2.17.93 (by @music-assistant-machine in #3214)
-- ⬆️ Update music-assistant-frontend to 2.17.94 (by @music-assistant-machine in #3218)
-- ⬆️ Update music-assistant-frontend to 2.17.95 (by @music-assistant-machine in #3222)
-- Bump aiosendspin to 4.3.2 (by @Copilot in #3312)
-- ⬆️ Update music-assistant-frontend to 2.17.109 (by @music-assistant-machine in #3317)
-- ⬆️ Update music-assistant-frontend to 2.17.110 (by @music-assistant-machine in #3323)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Copilot, @MarvinSchenkel, @OzGav, @Tommatheussen, @alams154, @andykelk, @apophisnow, @bradkeifer, @chrisuthe, @gnumpi, @hmonteiro, @jozefKruszynski, @khers, @maximmaxim345, @rjbutler, @scyto, @teancom
 
 
