@@ -1,3 +1,37 @@
+# [2.8.0.dev2026031805] - 18.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031704)_
+
+### 🚀 Features and enhancements
+
+- Add password pairing support for Airplay 2 devices (by @hmonteiro in #3325)
+- Support id3v2.4 multi value tags (by @OzGav in #3395)
+- Add three way genre visibility toggle (by @jozefKruszynski in #3408)
+- Sync player elapsed time to frontend after significant drift. (by @MarvinSchenkel in #3411)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1598](https://github.com/music-assistant/frontend/pull/1598))
+- Add three way genre visibility toggle (by @jozefKruszynski in [#1597](https://github.com/music-assistant/frontend/pull/1597))
+- LyricsViewer fixes/refactor (by @apophisnow in [#1581](https://github.com/music-assistant/frontend/pull/1581))
+- Fix missing genre filter options with pagination addition (by @jozefKruszynski in [#1595](https://github.com/music-assistant/frontend/pull/1595))
+- Improve title screen logic for intro and rewind (by @apophisnow in [#1600](https://github.com/music-assistant/frontend/pull/1600))
+- Change Discover page icon to compass (by @MarvinSchenkel in [#1599](https://github.com/music-assistant/frontend/pull/1599))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.120 (by @music-assistant-machine in #3412)
+- ⬆️ Update music-assistant-frontend to 2.17.121 (by @music-assistant-machine in #3414)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @apophisnow, @hmonteiro, @jozefKruszynski
+
+
 # [2.8.0.dev2026031704] - 17.03.2026
 
 ## 📦 Nightly Release
@@ -68,45 +102,5 @@ _Changes since [2.8.0.dev2026031304](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @apophisnow, @jozefKruszynski, @sfortis, @stvncode
-
-
-# [2.8.0.dev2026031304] - 13.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031204](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031204)_
-
-### 🚀 New Providers
-
-- Add NFS Filesystem Provider (by @OzGav in #3276)
-
-### 🚀 Features and enhancements
-
-- Add Lyrics and Karaoke to Party Mode (by @apophisnow in #3363)
-
-### 🐛 Bugfixes
-
-- Fix in progress items recommendation for multi-user setups (by @fmunkes in #3324)
-- Add user awareness to podcast controller (by @fmunkes in #3333)
-- Guard against trailing spaces in auth URLs (by @OzGav in #3362)
-- Fix changing the Sendspin audio format to Automatic (by @maximmaxim345 in #3365)
-
-### 🎨 Frontend Changes
-
-- Add additional padding to volume popup (by @MarvinSchenkel in [#1573](https://github.com/music-assistant/frontend/pull/1573))
-- Add new custom icon and modify others (by @jozefKruszynski in [#1568](https://github.com/music-assistant/frontend/pull/1568))
-- Add alternate view options in genre overview (by @jozefKruszynski in [#1567](https://github.com/music-assistant/frontend/pull/1567))
-- (Hopefully) Fix party mode tab opening from within HA Companion app (by @MarvinSchenkel in [#1572](https://github.com/music-assistant/frontend/pull/1572))
-
-### 🧰 Maintenance and dependency bumps
-
-- Improve SMB error and shutdown handling (by @OzGav in #3367)
-- ⬆️ Update music-assistant-frontend to 2.17.116 (by @music-assistant-machine in #3375)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345
 
 
