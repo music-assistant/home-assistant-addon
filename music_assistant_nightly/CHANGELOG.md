@@ -1,3 +1,32 @@
+# [2.8.0.dev2026031905] - 19.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031805](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031805)_
+
+### 🐛 Bugfixes
+
+- Ensure genre tables are populated at initial setup (by @jozefKruszynski in #3413)
+- Improve Sendspin progress bar accuracy (by @maximmaxim345 in #3420)
+
+### 🎨 Frontend Changes
+
+- Remove players and stable badge and sizing for lists (by @stvncode in [#1605](https://github.com/music-assistant/frontend/pull/1605))
+- Add MA logo below qr code for party mode (by @stvncode in [#1604](https://github.com/music-assistant/frontend/pull/1604))
+- Genre management UI update (by @jozefKruszynski in [#1603](https://github.com/music-assistant/frontend/pull/1603))
+- Split provider directly in the settings page and remove providers filter (by @stvncode in [#1602](https://github.com/music-assistant/frontend/pull/1602))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.122 (by @music-assistant-machine in #3425)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@jozefKruszynski, @maximmaxim345, @stvncode
+
+
 # [2.8.0.dev2026031805] - 18.03.2026
 
 ## 📦 Nightly Release
@@ -70,37 +99,5 @@ _Changes since [2.8.0.dev2026031314](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @apophisnow, @chrisuthe, @fmunkes, @hatharry, @jozefKruszynski, @kieranhogg, @maximmaxim345
-
-
-# [2.8.0.dev2026031314] - 13.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031304](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031304)_
-
-### 🚀 Features and enhancements
-
-- Narrow down genre linking during scan (by @jozefKruszynski in #3372)
-- Extract date_added from Deezer API for library items (by @sfortis in #3377)
-- Rename the last party mode things (by @apophisnow in #3381)
-
-### 🎨 Frontend Changes
-
-- Final tweaks now playing resolutions (by @MarvinSchenkel in [#1575](https://github.com/music-assistant/frontend/pull/1575))
-- Party mode lyrics and karaoke (by @apophisnow in [#1565](https://github.com/music-assistant/frontend/pull/1565))
-- Update Readme with new guidelines (by @stvncode in [#1574](https://github.com/music-assistant/frontend/pull/1574))
-- fix: revert unneeded word by word feature (by @apophisnow in [#1576](https://github.com/music-assistant/frontend/pull/1576))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.107 (by @music-assistant-machine in #3379)
-- ⬆️ Update music-assistant-frontend to 2.17.117 (by @music-assistant-machine in #3380)
-- ⬆️ Update music-assistant-frontend to 2.17.118 (by @music-assistant-machine in #3383)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @apophisnow, @jozefKruszynski, @sfortis, @stvncode
 
 
