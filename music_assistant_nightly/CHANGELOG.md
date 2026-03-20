@@ -1,3 +1,38 @@
+# [2.8.0.dev2026032012] - 20.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026032004](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032004)_
+
+### 🚀 Features and enhancements
+
+- Add support for OGG Vorbis radio streams (by @OzGav in #3326)
+- Fix Sendspin reconnect races and add initial visualizer role support (by @maximmaxim345 in #3431)
+
+### 🐛 Bugfixes
+
+- Update dynamic attributes during setup in MusicCast (by @fmunkes in #3415)
+- Fix volume and mute control for Sendspin bridges (by @MarvinSchenkel in #3430)
+- Move HA announcement to Discovery controller (by @MarvinSchenkel in #3442)
+
+### 🎨 Frontend Changes
+
+- Only show non empty genres for media type in library views (by @jozefKruszynski in [#1601](https://github.com/music-assistant/frontend/pull/1601))
+- Remove provider icon in settings pages (by @stvncode in [#1610](https://github.com/music-assistant/frontend/pull/1610))
+- Align card with select and the rest (by @stvncode in [#1611](https://github.com/music-assistant/frontend/pull/1611))
+
+### 🧰 Maintenance and dependency bumps
+
+- Optimize NFS provider and localfilesystem for faster import speed (by @apophisnow in #3439)
+- ⬆️ Update music-assistant-frontend to 2.17.124 (by @music-assistant-machine in #3443)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345, @stvncode
+
+
 # [2.8.0.dev2026032004] - 20.03.2026
 
 ## 📦 Nightly Release
@@ -71,39 +106,5 @@ _Changes since [2.8.0.dev2026031805](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @jozefKruszynski, @maximmaxim345, @stvncode
-
-
-# [2.8.0.dev2026031805] - 18.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031704](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031704)_
-
-### 🚀 Features and enhancements
-
-- Add password pairing support for Airplay 2 devices (by @hmonteiro in #3325)
-- Support id3v2.4 multi value tags (by @OzGav in #3395)
-- Add three way genre visibility toggle (by @jozefKruszynski in #3408)
-- Sync player elapsed time to frontend after significant drift. (by @MarvinSchenkel in #3411)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1598](https://github.com/music-assistant/frontend/pull/1598))
-- Add three way genre visibility toggle (by @jozefKruszynski in [#1597](https://github.com/music-assistant/frontend/pull/1597))
-- LyricsViewer fixes/refactor (by @apophisnow in [#1581](https://github.com/music-assistant/frontend/pull/1581))
-- Fix missing genre filter options with pagination addition (by @jozefKruszynski in [#1595](https://github.com/music-assistant/frontend/pull/1595))
-- Improve title screen logic for intro and rewind (by @apophisnow in [#1600](https://github.com/music-assistant/frontend/pull/1600))
-- Change Discover page icon to compass (by @MarvinSchenkel in [#1599](https://github.com/music-assistant/frontend/pull/1599))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.120 (by @music-assistant-machine in #3412)
-- ⬆️ Update music-assistant-frontend to 2.17.121 (by @music-assistant-machine in #3414)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @apophisnow, @hmonteiro, @jozefKruszynski
 
 
