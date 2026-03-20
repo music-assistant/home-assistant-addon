@@ -1,3 +1,49 @@
+# [2.8.0.dev2026032004] - 20.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026031905](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031905)_
+
+### 🚀 Features and enhancements
+
+- Only show non empty genres for media type in library views (by @jozefKruszynski in #3418)
+- Improve player drift detection + Airplay elapsed time improvements (by @MarvinSchenkel in #3422)
+
+### 🐛 Bugfixes
+
+- Fix Airplay session stopping when a single group member goes offline (by @MarvinSchenkel in #3417)
+- Fix timeouts and slowdowns on play_media action for HEOS  (by @Tommatheussen in #3421)
+- Fix glitch where the UI and the flow are out of sync (by @teancom in #3423)
+- Fix sync group members not hiding in UI (by @maximmaxim345 in #3428)
+
+### 🎨 Frontend Changes
+
+- Remove unsued properties from party mode (by @stvncode in [#1609](https://github.com/music-assistant/frontend/pull/1609))
+- Updates for party mode feature (by @stvncode in [#1607](https://github.com/music-assistant/frontend/pull/1607))
+- Add settings view for background tasks (by @marcelveldt-traveling in [#1606](https://github.com/music-assistant/frontend/pull/1606))
+- Reduce unsued paddings and replace settings element (by @stvncode in [#1608](https://github.com/music-assistant/frontend/pull/1608))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Use internal time in socket based progress updates in Audiobookshelf. (by @fmunkes in #3374)
+- Add core controller for discovery (by @marcelveldt-traveling in #3378)
+- Add background task controller (by @marcelveldt-traveling in #3426)
+- ⬆️ Update music-assistant-models to 1.1.108 (by @music-assistant-machine in #3427)
+- Update party config (by @apophisnow in #3437)
+- ⬆️ Update music-assistant-frontend to 2.17.123 (by @music-assistant-machine in #3441)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Tommatheussen, @apophisnow, @fmunkes, @jozefKruszynski, @marcelveldt-traveling, @maximmaxim345, @stvncode, @teancom
+
+
 # [2.8.0.dev2026031905] - 19.03.2026
 
 ## 📦 Nightly Release
@@ -59,45 +105,5 @@ _Changes since [2.8.0.dev2026031704](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @hmonteiro, @jozefKruszynski
-
-
-# [2.8.0.dev2026031704] - 17.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031314](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031314)_
-
-### 🚀 Features and enhancements
-
-- Lyrics Viewer karaoke option for Party (by @apophisnow in #3404)
-
-### 🐛 Bugfixes
-
-- Fix _transitioning_players leak causing frozen queue state (by @chrisuthe in #3368)
-- Rewrite tidal stream behaviour to avoid premature cutoff (by @jozefKruszynski in #3369)
-- Fix: don't reassign the metadata callback for HLS streams, if already set (by @kieranhogg in #3370)
-- Fix Sendspin playback stability issues (by @maximmaxim345 in #3382)
-- Fix albums not being able to be added to playlists during playlist creation (by @fmunkes in #3385)
-- Include nfs-common in Dockerfile.base (by @OzGav in #3389)
-- Emby music provider fix album track order (by @hatharry in #3400)
-- Fix PyAV version detection when building the base image Dockerfile (by @maximmaxim345 in #3402)
-
-### 🎨 Frontend Changes
-
-- Remove Party show_player_controls (by @apophisnow in [#1579](https://github.com/music-assistant/frontend/pull/1579))
-- Hide sidebar navigation in frameless mode (by @OzGav in [#1593](https://github.com/music-assistant/frontend/pull/1593))
-- Fix albums not being able to be added to playlists anymore. (by @fmunkes in [#1577](https://github.com/music-assistant/frontend/pull/1577))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump orjson from 3.11.5 to 3.11.6 (by @dependabot[bot] in #3373)
-- Remove Party show_player_controls (by @apophisnow in #3391)
-- ⬆️ Update music-assistant-frontend to 2.17.119 (by @music-assistant-machine in #3409)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @apophisnow, @chrisuthe, @fmunkes, @hatharry, @jozefKruszynski, @kieranhogg, @maximmaxim345
 
 
