@@ -1,3 +1,66 @@
+# [2.8.0b22] - 20.03.2026
+
+## 📦 Beta Release
+
+_Changes since [2.8.0b21](https://github.com/music-assistant/server/releases/tag/2.8.0b21)_
+
+### 🚀 Features and enhancements
+
+- Add support for OGG Vorbis radio streams (by @OzGav in #3326)
+- Only show non empty genres for media type in library views (by @jozefKruszynski in #3418)
+- Improve player drift detection + Airplay elapsed time improvements (by @MarvinSchenkel in #3422)
+- Fix Sendspin reconnect races and add initial visualizer role support (by @maximmaxim345 in #3431)
+
+### 🐛 Bugfixes
+
+- Ensure genre tables are populated at initial setup (by @jozefKruszynski in #3413)
+- Update dynamic attributes during setup in MusicCast (by @fmunkes in #3415)
+- Fix Airplay session stopping when a single group member goes offline (by @MarvinSchenkel in #3417)
+- Improve Sendspin progress bar accuracy (by @maximmaxim345 in #3420)
+- Fix timeouts and slowdowns on play_media action for HEOS  (by @Tommatheussen in #3421)
+- Fix glitch where the UI and the flow are out of sync (by @teancom in #3423)
+- Fix sync group members not hiding in UI (by @maximmaxim345 in #3428)
+- Fix volume and mute control for Sendspin bridges (by @MarvinSchenkel in #3430)
+- Move HA announcement to Discovery controller (by @MarvinSchenkel in #3442)
+
+### 🎨 Frontend Changes
+
+- Remove players and stable badge and sizing for lists (by @stvncode in [#1605](https://github.com/music-assistant/frontend/pull/1605))
+- Add MA logo below qr code for party mode (by @stvncode in [#1604](https://github.com/music-assistant/frontend/pull/1604))
+- Genre management UI update (by @jozefKruszynski in [#1603](https://github.com/music-assistant/frontend/pull/1603))
+- Split provider directly in the settings page and remove providers filter (by @stvncode in [#1602](https://github.com/music-assistant/frontend/pull/1602))
+- Remove unsued properties from party mode (by @stvncode in [#1609](https://github.com/music-assistant/frontend/pull/1609))
+- Updates for party mode feature (by @stvncode in [#1607](https://github.com/music-assistant/frontend/pull/1607))
+- Add settings view for background tasks (by @marcelveldt-traveling in [#1606](https://github.com/music-assistant/frontend/pull/1606))
+- Reduce unsued paddings and replace settings element (by @stvncode in [#1608](https://github.com/music-assistant/frontend/pull/1608))
+- Only show non empty genres for media type in library views (by @jozefKruszynski in [#1601](https://github.com/music-assistant/frontend/pull/1601))
+- Remove provider icon in settings pages (by @stvncode in [#1610](https://github.com/music-assistant/frontend/pull/1610))
+- Align card with select and the rest (by @stvncode in [#1611](https://github.com/music-assistant/frontend/pull/1611))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>9 changes</summary>
+
+- Use internal time in socket based progress updates in Audiobookshelf. (by @fmunkes in #3374)
+- Add core controller for discovery (by @marcelveldt-traveling in #3378)
+- ⬆️ Update music-assistant-frontend to 2.17.122 (by @music-assistant-machine in #3425)
+- Add background task controller (by @marcelveldt-traveling in #3426)
+- ⬆️ Update music-assistant-models to 1.1.108 (by @music-assistant-machine in #3427)
+- Update party config (by @apophisnow in #3437)
+- Optimize NFS provider and localfilesystem for faster import speed (by @apophisnow in #3439)
+- ⬆️ Update music-assistant-frontend to 2.17.123 (by @music-assistant-machine in #3441)
+- ⬆️ Update music-assistant-frontend to 2.17.124 (by @music-assistant-machine in #3443)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Tommatheussen, @apophisnow, @fmunkes, @jozefKruszynski, @marcelveldt-traveling, @maximmaxim345, @stvncode, @teancom
+
+
 # [2.8.0b21] - 17.03.2026
 
 ## 📦 Beta Release
@@ -122,72 +185,5 @@ _Changes since [2.8.0b19](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345, @sfortis, @stvncode, @teancom
-
-
-# [2.8.0b19] - 10.03.2026
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b18](https://github.com/music-assistant/server/releases/tag/2.8.0b18)_
-
-### 🚀 Features and enhancements
-
-- Add configurable in-library podcast feeds syncing time to the iTunes Podcast Provider (by @fmunkes in #3308)
-- Add bit_rate to radio browser stream details (by @OzGav in #3318)
-- Enable multi instance for scrobblers (by @OzGav in #3320)
-- Add genre exclusion feature to media items (by @jozefKruszynski in #3327)
-- Add derived genres for local and smb providers (by @jozefKruszynski in #3349)
-- Party mode enhancements (by @apophisnow in #3350)
-
-### 🐛 Bugfixes
-
-- Fix error when MA shutsdown (by @teancom in #3315)
-- Add guard to NFO file scanning (by @OzGav in #3335)
-- Fix 'Invalid PlayerMedia data' error when playing announcements (by @MarvinSchenkel in #3338)
-- Pin VBAN dependency (by @MarvinSchenkel in #3339)
-- Fix 'Invalid PlayerMedia data' for plugin sources (by @MarvinSchenkel in #3341)
-- Fix YT Music not being able to resolve stream urls (by @MarvinSchenkel in #3342)
-- Fix Sync group not being able to play to a group of cast devices (by @MarvinSchenkel in #3343)
-- Prevent StreamDetails unnecessarily being loaded twice (by @MarvinSchenkel in #3351)
-- Fix queue state loss on player re-register (by @maximmaxim345 in #3352)
-
-### 🎨 Frontend Changes
-
-- Fix unable to scroll on the add to playlist dialog (by @radiohe4d in [#1546](https://github.com/music-assistant/frontend/pull/1546))
-- Stop sidebar showing when mobile layout forced (by @OzGav in [#1545](https://github.com/music-assistant/frontend/pull/1545))
-- Improve 'Now playing' screen for other resolutions as well (by @MarvinSchenkel in [#1548](https://github.com/music-assistant/frontend/pull/1548))
-- Improve now playing screen phone (by @MarvinSchenkel in [#1543](https://github.com/music-assistant/frontend/pull/1543))
-- More improvements to the now playing screen (by @MarvinSchenkel in [#1562](https://github.com/music-assistant/frontend/pull/1562))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1563](https://github.com/music-assistant/frontend/pull/1563))
-- Party mode enhancements (by @apophisnow in [#1544](https://github.com/music-assistant/frontend/pull/1544))
-- Add genre exclusion feature to UI (by @jozefKruszynski in [#1547](https://github.com/music-assistant/frontend/pull/1547))
-- Improve Sendspin Web Player syncing (by @maximmaxim345 in [#1561](https://github.com/music-assistant/frontend/pull/1561))
-- Fix for disabling the web player on party mode routes (by @maximmaxim345 in [#1560](https://github.com/music-assistant/frontend/pull/1560))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>12 changes</summary>
-
-- yandex_music: windowed FLAC streaming, API throttling, stream hardening (by @trudenboy in #3237)
-- Bump docker/setup-buildx-action from 3.12.0 to 4.0.0 (by @dependabot[bot] in #3314)
-- Increase 'restart listening time' in session reporting in Audiobookshelf (by @fmunkes in #3321)
-- Bump docker/build-push-action from 6.19.2 to 7.0.0 (by @dependabot[bot] in #3322)
-- Add build-system so uv run mass works on fresh checkouts (by @balloob-travel in #3328)
-- Downgrade DLNA SSDP discovery socket errors to a warning (by @balloob-travel in #3329)
-- ⬆️ Update music-assistant-frontend to 2.17.111 (by @music-assistant-machine in #3330)
-- ⬆️ Update music-assistant-frontend to 2.17.112 (by @music-assistant-machine in #3336)
-- Bump syrupy from 5.0.0 to 5.1.0 (by @dependabot[bot] in #3344)
-- ⬆️ Update music-assistant-frontend to 2.17.113 (by @music-assistant-machine in #3348)
-- Bump `aiosendspin` to 4.3.3 (by @maximmaxim345 in #3353)
-- ⬆️ Update music-assistant-frontend to 2.17.114 (by @music-assistant-machine in #3355)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @apophisnow, @balloob-travel, @fmunkes, @jozefKruszynski, @maximmaxim345, @radiohe4d, @teancom, @trudenboy
 
 
