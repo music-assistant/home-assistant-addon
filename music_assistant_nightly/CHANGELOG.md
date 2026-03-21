@@ -1,3 +1,25 @@
+# [2.8.0.dev2026032104] - 21.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026032012](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032012)_
+
+### 🎨 Frontend Changes
+
+- Also use compass icon in phone menu (by @MarvinSchenkel in [#1613](https://github.com/music-assistant/frontend/pull/1613))
+
+### 🧰 Maintenance and dependency bumps
+
+- Some small follow-up fixes for Task manager controller (by @marcelveldt in #3445)
+- ⬆️ Update music-assistant-frontend to 2.17.125 (by @music-assistant-machine in #3446)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt
+
+
 # [2.8.0.dev2026032012] - 20.03.2026
 
 ## 📦 Nightly Release
@@ -77,34 +99,5 @@ _Changes since [2.8.0.dev2026031905](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @Tommatheussen, @apophisnow, @fmunkes, @jozefKruszynski, @marcelveldt-traveling, @maximmaxim345, @stvncode, @teancom
-
-
-# [2.8.0.dev2026031905] - 19.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026031805](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026031805)_
-
-### 🐛 Bugfixes
-
-- Ensure genre tables are populated at initial setup (by @jozefKruszynski in #3413)
-- Improve Sendspin progress bar accuracy (by @maximmaxim345 in #3420)
-
-### 🎨 Frontend Changes
-
-- Remove players and stable badge and sizing for lists (by @stvncode in [#1605](https://github.com/music-assistant/frontend/pull/1605))
-- Add MA logo below qr code for party mode (by @stvncode in [#1604](https://github.com/music-assistant/frontend/pull/1604))
-- Genre management UI update (by @jozefKruszynski in [#1603](https://github.com/music-assistant/frontend/pull/1603))
-- Split provider directly in the settings page and remove providers filter (by @stvncode in [#1602](https://github.com/music-assistant/frontend/pull/1602))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.122 (by @music-assistant-machine in #3425)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@jozefKruszynski, @maximmaxim345, @stvncode
 
 
