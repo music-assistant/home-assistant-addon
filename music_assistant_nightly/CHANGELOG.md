@@ -1,3 +1,34 @@
+# [2.8.0.dev2026032405] - 24.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026032204](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032204)_
+
+### 🐛 Bugfixes
+
+- Fix 'mark item played' in music controller (by @fmunkes in #3449)
+- Fix corrupt players config when player deleted (by @OzGav in #3450)
+- Optimize playlist tracks handling for builtin provider (by @marcelveldt in #3451)
+
+### 🎨 Frontend Changes
+
+- Update settings ui like settings (by @stvncode in [#1634](https://github.com/music-assistant/frontend/pull/1634))
+- Update icons for player controls and player fullscreen (by @stvncode in [#1632](https://github.com/music-assistant/frontend/pull/1632))
+- Fix some members not showing up in Sync group creation. (by @MarvinSchenkel in [#1631](https://github.com/music-assistant/frontend/pull/1631))
+- Improve default Sendspin sync delays (by @maximmaxim345 in [#1633](https://github.com/music-assistant/frontend/pull/1633))
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix background task lifecycle test (by @jozefKruszynski in #3454)
+- ⬆️ Update music-assistant-frontend to 2.17.128 (by @music-assistant-machine in #3462)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.8.0.dev2026032204] - 22.03.2026
 
 ## 📦 Nightly Release
@@ -43,40 +74,5 @@ _Changes since [2.8.0.dev2026032012](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt
-
-
-# [2.8.0.dev2026032012] - 20.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026032004](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032004)_
-
-### 🚀 Features and enhancements
-
-- Add support for OGG Vorbis radio streams (by @OzGav in #3326)
-- Fix Sendspin reconnect races and add initial visualizer role support (by @maximmaxim345 in #3431)
-
-### 🐛 Bugfixes
-
-- Update dynamic attributes during setup in MusicCast (by @fmunkes in #3415)
-- Fix volume and mute control for Sendspin bridges (by @MarvinSchenkel in #3430)
-- Move HA announcement to Discovery controller (by @MarvinSchenkel in #3442)
-
-### 🎨 Frontend Changes
-
-- Only show non empty genres for media type in library views (by @jozefKruszynski in [#1601](https://github.com/music-assistant/frontend/pull/1601))
-- Remove provider icon in settings pages (by @stvncode in [#1610](https://github.com/music-assistant/frontend/pull/1610))
-- Align card with select and the rest (by @stvncode in [#1611](https://github.com/music-assistant/frontend/pull/1611))
-
-### 🧰 Maintenance and dependency bumps
-
-- Optimize NFS provider and localfilesystem for faster import speed (by @apophisnow in #3439)
-- ⬆️ Update music-assistant-frontend to 2.17.124 (by @music-assistant-machine in #3443)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345, @stvncode
 
 
