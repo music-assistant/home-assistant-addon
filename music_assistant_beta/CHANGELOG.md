@@ -1,3 +1,61 @@
+# [2.8.0rc1] - 24.03.2026
+
+## 📦 RC Release
+
+_Changes since [2.8.0b22](https://github.com/music-assistant/server/releases/tag/2.8.0b22)_
+
+### 🚀 Features and enhancements
+
+- Fix artist name splitting with semicolons and Vorbis multi-field handling (by @OzGav in #3390)
+- Global genre exclusion (by @jozefKruszynski in #3453)
+
+### 🐛 Bugfixes
+
+- Audiobookshelf: handle errors gracefully during provider unload (by @teancom in #3435)
+- Fix 'mark item played' in music controller (by @fmunkes in #3449)
+- Fix corrupt players config when player deleted (by @OzGav in #3450)
+- Optimize playlist tracks handling for builtin provider (by @marcelveldt in #3451)
+- Standardise radio provider library behaviour across all sources (by @OzGav in #3459)
+- Fix merged player protocol reparenting (by @marcelveldt in #3463)
+
+### 🎨 Frontend Changes
+
+- Also use compass icon in phone menu (by @MarvinSchenkel in [#1613](https://github.com/music-assistant/frontend/pull/1613))
+- Update server logs and frontend config (by @stvncode in [#1616](https://github.com/music-assistant/frontend/pull/1616))
+- Update settings ui like settings (by @stvncode in [#1634](https://github.com/music-assistant/frontend/pull/1634))
+- Update icons for player controls and player fullscreen (by @stvncode in [#1632](https://github.com/music-assistant/frontend/pull/1632))
+- Fix some members not showing up in Sync group creation. (by @MarvinSchenkel in [#1631](https://github.com/music-assistant/frontend/pull/1631))
+- Improve default Sendspin sync delays (by @maximmaxim345 in [#1633](https://github.com/music-assistant/frontend/pull/1633))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1635](https://github.com/music-assistant/frontend/pull/1635))
+- Global genre exclusion (by @jozefKruszynski in [#1620](https://github.com/music-assistant/frontend/pull/1620))
+- Fade icon for play button (by @stvncode in [#1639](https://github.com/music-assistant/frontend/pull/1639))
+- Refacto list icon size and gap with text (by @stvncode in [#1638](https://github.com/music-assistant/frontend/pull/1638))
+- Play button and volume slider now listen to album art cover color (by @stvncode in [#1637](https://github.com/music-assistant/frontend/pull/1637))
+- Change default library view to panel_compact (by @jozefKruszynski in [#1636](https://github.com/music-assistant/frontend/pull/1636))
+- Add missing Radio Browser strings (by @OzGav in [#1640](https://github.com/music-assistant/frontend/pull/1640))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Some small follow-up fixes for Task manager controller (by @marcelveldt in #3445)
+- ⬆️ Update music-assistant-frontend to 2.17.125 (by @music-assistant-machine in #3446)
+- ⬆️ Update music-assistant-frontend to 2.17.126 (by @music-assistant-machine in #3452)
+- Fix background task lifecycle test (by @jozefKruszynski in #3454)
+- Schedule task to fix protocol ids > native ids in SyncGroups (by @MarvinSchenkel in #3460)
+- ⬆️ Update music-assistant-frontend to 2.17.128 (by @music-assistant-machine in #3462)
+- ⬆️ Update music-assistant-frontend to 2.17.129 (by @music-assistant-machine in #3465)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @stvncode, @teancom
+
+
 # [2.8.0b22] - 20.03.2026
 
 ## 📦 Beta Release
@@ -116,74 +174,5 @@ _Changes since [2.8.0b20](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @chrisuthe, @fmunkes, @hatharry, @hmonteiro, @jozefKruszynski, @kieranhogg, @maximmaxim345
-
-
-# [2.8.0b20] - 13.03.2026
-
-## ⚠️ Important Notes
-
-Due to the rename from "Party Mode" to "Party" you will need to re-add the provider again
-
----
-
-## 📦 Beta Release
-
-_Changes since [2.8.0b19](https://github.com/music-assistant/server/releases/tag/2.8.0b19)_
-
-### 🚀 New Providers
-
-- Add NFS Filesystem Provider (by @OzGav in #3276)
-
-### 🚀 Features and enhancements
-
-- Feature: Bandcamp Browse support (by @teancom in #3311)
-- Add Lyrics and Karaoke to Party Mode (by @apophisnow in #3363)
-- Narrow down genre linking during scan (by @jozefKruszynski in #3372)
-- Extract date_added from Deezer API for library items (by @sfortis in #3377)
-- Rename the last party mode things (by @apophisnow in #3381)
-
-### 🐛 Bugfixes
-
-- Retry sendspin proxy connection during startup race condition (by @teancom in #3316)
-- Fix in progress items recommendation for multi-user setups (by @fmunkes in #3324)
-- Add user awareness to podcast controller (by @fmunkes in #3333)
-- Adjust musicbranz log message formatting (by @teancom in #3356)
-- Fix db migration for second run of supported_mediatypes (by @fmunkes in #3357)
-- Handle HEOS internal queue timeouts (by @Tommatheussen in #3358)
-- Fix possible race conditions during HEOS startup (by @Tommatheussen in #3359)
-- Guard against trailing spaces in auth URLs (by @OzGav in #3362)
-- Fix changing the Sendspin audio format to Automatic (by @maximmaxim345 in #3365)
-
-### 🎨 Frontend Changes
-
-- Fix titles overlapping on the Now Playing screen on Ultrawide resolutions (by @MarvinSchenkel in [#1566](https://github.com/music-assistant/frontend/pull/1566))
-- Add additional padding to volume popup (by @MarvinSchenkel in [#1573](https://github.com/music-assistant/frontend/pull/1573))
-- Add new custom icon and modify others (by @jozefKruszynski in [#1568](https://github.com/music-assistant/frontend/pull/1568))
-- Add alternate view options in genre overview (by @jozefKruszynski in [#1567](https://github.com/music-assistant/frontend/pull/1567))
-- (Hopefully) Fix party mode tab opening from within HA Companion app (by @MarvinSchenkel in [#1572](https://github.com/music-assistant/frontend/pull/1572))
-- Final tweaks now playing resolutions (by @MarvinSchenkel in [#1575](https://github.com/music-assistant/frontend/pull/1575))
-- Party mode lyrics and karaoke (by @apophisnow in [#1565](https://github.com/music-assistant/frontend/pull/1565))
-- Update Readme with new guidelines (by @stvncode in [#1574](https://github.com/music-assistant/frontend/pull/1574))
-- fix: revert unneeded word by word feature (by @apophisnow in [#1576](https://github.com/music-assistant/frontend/pull/1576))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- ⬆️ Update music-assistant-frontend to 2.17.115 (by @music-assistant-machine in #3361)
-- Improve SMB error and shutdown handling (by @OzGav in #3367)
-- ⬆️ Update music-assistant-frontend to 2.17.116 (by @music-assistant-machine in #3375)
-- ⬆️ Update music-assistant-models to 1.1.107 (by @music-assistant-machine in #3379)
-- ⬆️ Update music-assistant-frontend to 2.17.117 (by @music-assistant-machine in #3380)
-- ⬆️ Update music-assistant-frontend to 2.17.118 (by @music-assistant-machine in #3383)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Tommatheussen, @apophisnow, @fmunkes, @jozefKruszynski, @maximmaxim345, @sfortis, @stvncode, @teancom
 
 
