@@ -1,3 +1,29 @@
+# [2.8.0.dev2026032511] - 25.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.8.0.dev2026032508](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032508)_
+
+### 🐛 Bugfixes
+
+- Fix DLNA not always updating mute and volume state. (by @MarvinSchenkel in #3474)
+
+### 🎨 Frontend Changes
+
+- Multiple small fixes for the release (by @stvncode in [#1643](https://github.com/music-assistant/frontend/pull/1643))
+
+### 🧰 Maintenance and dependency bumps
+
+- Make ADD_COLUMN migrations idempotent to avoid db crashes (by @MarvinSchenkel in #3473)
+- ⬆️ Update music-assistant-frontend to 2.17.131 (by @music-assistant-machine in #3475)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @stvncode
+
+
 # [2.8.0.dev2026032508] - 25.03.2026
 
 ## 📦 Nightly Release
@@ -94,36 +120,5 @@ _Changes since [2.8.0.dev2026032405](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @fmunkes, @jozefKruszynski, @marcelveldt, @stvncode
-
-
-# [2.8.0.dev2026032405] - 24.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026032204](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032204)_
-
-### 🐛 Bugfixes
-
-- Fix 'mark item played' in music controller (by @fmunkes in #3449)
-- Fix corrupt players config when player deleted (by @OzGav in #3450)
-- Optimize playlist tracks handling for builtin provider (by @marcelveldt in #3451)
-
-### 🎨 Frontend Changes
-
-- Update settings ui like settings (by @stvncode in [#1634](https://github.com/music-assistant/frontend/pull/1634))
-- Update icons for player controls and player fullscreen (by @stvncode in [#1632](https://github.com/music-assistant/frontend/pull/1632))
-- Fix some members not showing up in Sync group creation. (by @MarvinSchenkel in [#1631](https://github.com/music-assistant/frontend/pull/1631))
-- Improve default Sendspin sync delays (by @maximmaxim345 in [#1633](https://github.com/music-assistant/frontend/pull/1633))
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix background task lifecycle test (by @jozefKruszynski in #3454)
-- ⬆️ Update music-assistant-frontend to 2.17.128 (by @music-assistant-machine in #3462)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @stvncode
 
 
