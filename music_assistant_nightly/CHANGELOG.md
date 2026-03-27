@@ -1,3 +1,25 @@
+# [2.9.0.dev2026032705] - 27.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026032605](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026032605)_
+
+### 🐛 Bugfixes
+
+- Fix race condition when calling stop/pause on an already stopped Universal Player (by @MarvinSchenkel in #3481)
+- Emby Music Provider: fix artist endpoint, image remote accessibility and album artwork (by @hatharry in #3482)
+
+### 🧰 Maintenance and dependency bumps
+
+- Rename music provider to source (by @OzGav in #3480)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @hatharry
+
+
 # [2.9.0.dev2026032605] - 26.03.2026
 
 ## 📦 Nightly Release
@@ -48,31 +70,5 @@ _Changes since [2.8.0.dev2026032511](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt, @stvncode
-
-
-# [2.8.0.dev2026032511] - 25.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026032508](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032508)_
-
-### 🐛 Bugfixes
-
-- Fix DLNA not always updating mute and volume state. (by @MarvinSchenkel in #3474)
-
-### 🎨 Frontend Changes
-
-- Multiple small fixes for the release (by @stvncode in [#1643](https://github.com/music-assistant/frontend/pull/1643))
-
-### 🧰 Maintenance and dependency bumps
-
-- Make ADD_COLUMN migrations idempotent to avoid db crashes (by @MarvinSchenkel in #3473)
-- ⬆️ Update music-assistant-frontend to 2.17.131 (by @music-assistant-machine in #3475)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @stvncode
 
 
