@@ -1,3 +1,8 @@
+# [2.9.0.dev2026033014] - 30.03.2026
+
+* No changes
+
+
 # [2.9.0.dev2026033005] - 30.03.2026
 
 ## 📦 Nightly Release
@@ -69,27 +74,5 @@ _Changes since [2.9.0.dev2026032705](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @khers, @marcelveldt, @neurocis, @teancom
-
-
-# [2.9.0.dev2026032705] - 27.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026032605](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026032605)_
-
-### 🐛 Bugfixes
-
-- Fix race condition when calling stop/pause on an already stopped Universal Player (by @MarvinSchenkel in #3481)
-- Emby Music Provider: fix artist endpoint, image remote accessibility and album artwork (by @hatharry in #3482)
-
-### 🧰 Maintenance and dependency bumps
-
-- Rename music provider to source (by @OzGav in #3480)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @hatharry
 
 
