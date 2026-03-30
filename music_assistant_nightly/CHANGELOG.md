@@ -1,3 +1,27 @@
+# [2.9.0.dev2026033005] - 30.03.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026032905](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026032905)_
+
+### 🚀 Features and enhancements
+
+- Add musicbrainz get_release_group functions (by @OzGav in #3384)
+- Add optional timestamp to get_resume_position (by @fmunkes in #3505)
+
+### 🐛 Bugfixes
+
+- Fix Bandcamp provider not having pagination (by @teancom in #3496)
+- Fix player controls configuration (by @marcelveldt in #3503)
+- Improve audio buffering in streams controller (by @marcelveldt in #3507)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @fmunkes, @marcelveldt, @teancom
+
+
 # [2.9.0.dev2026032905] - 29.03.2026
 
 ## 📦 Nightly Release
@@ -67,27 +91,5 @@ _Changes since [2.9.0.dev2026032605](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @hatharry
-
-
-# [2.9.0.dev2026032605] - 26.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.8.0.dev2026032516](https://github.com/music-assistant/server/releases/tag/2.8.0.dev2026032516)_
-
-### 🎨 Frontend Changes
-
-- Lokalise: Translations update (by @marcelveldt in [#1645](https://github.com/music-assistant/frontend/pull/1645))
-- Skip provider lookup when saving queue as playlist (by @chrisuthe in [#1582](https://github.com/music-assistant/frontend/pull/1582))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.133 (by @music-assistant-machine in #3479)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@chrisuthe, @marcelveldt
 
 
