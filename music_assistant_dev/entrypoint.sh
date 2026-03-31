@@ -7,7 +7,7 @@ frontend_repo=$(cat /data/options.json | jq -r .frontend_repo)
 
 echo ""
 echo "-----------------------------------------------------------"
-echo "Music Assistant Developer Add-on"
+echo "Music Assistant Developer App"
 echo "-----------------------------------------------------------"
 echo ""
 
@@ -241,4 +241,3 @@ for path in /usr/lib/*/libjemalloc.so.2; do
 done
 # Start Music Assistant
 exec mass --data-dir /data --cache-dir /data/.cache
-
