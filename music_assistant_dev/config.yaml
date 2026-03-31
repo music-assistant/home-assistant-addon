@@ -24,7 +24,6 @@ map:
   - media:rw
   - ssl:ro
 init: false
-advanced: true
 stage: experimental
 tmpfs: true
 backup_exclude:
