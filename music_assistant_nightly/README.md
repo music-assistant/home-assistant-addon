@@ -1,4 +1,4 @@
-# Music Assistant (NIGHTLY) Add-on
+# Music Assistant (NIGHTLY) App
 
 Bleeding edge development builds of Music Assistant.
 
@@ -8,7 +8,7 @@ This is a **NIGHTLY** (development) version of Music Assistant. It contains the 
 
 ### 🔴 Critical Information
 
-**This add-on is:**
+**This App is:**
 
 - ❌ **NOT stable** - Can break at any time
 - ❌ **NOT tested** - Changes are pushed directly from development
@@ -76,7 +76,7 @@ NIGHTLY builds are automatic builds from the `dev` branch of Music Assistant. Th
 
 ### If Things Break
 
-1. **Stop the add-on**
+1. **Stop the App**
 2. **Restore from backup** (you made one, right?)
 3. **Report the issue**
 

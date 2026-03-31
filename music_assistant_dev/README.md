@@ -1,10 +1,10 @@
-# Music Assistant DEV Add-on
+# Music Assistant DEV App
 
-This is a special development add-on for Music Assistant that allows developers to quickly test specific branches, pull requests, or even forks of Music Assistant directly in Home Assistant.
+This is a special development App for Music Assistant that allows developers to quickly test specific branches, pull requests, or even forks of Music Assistant directly in Home Assistant.
 
 ## Purpose
 
-This add-on is designed for:
+This App is designed for:
 
 - Testing pull requests before merging
 - Developing and debugging new features
@@ -13,7 +13,7 @@ This add-on is designed for:
 
 ## How It Works
 
-Unlike the regular Music Assistant add-on which uses pre-built releases, this dev add-on:
+Unlike the regular Music Assistant App which uses pre-built releases, this Dev App:
 
 1. Builds and installs the server from a specified Git source (branch, PR, or fork)
 2. Builds and installs the frontend from a specified Git source (branch, PR, or fork)
@@ -71,7 +71,7 @@ server_repo: abc123def456...
 
 **Default**: `""` (empty - uses latest nightly release from GitHub)
 
-> **Note**: When `server_repo` is left empty or blank, the add-on will install the latest nightly release wheel from GitHub releases. This is the fastest option as no server build is required.
+> **Note**: When `server_repo` is left empty or blank, the App will install the latest nightly release wheel from GitHub releases. This is the fastest option as no server build is required.
 
 ### Frontend Repository Configuration
 
@@ -158,13 +158,13 @@ Build time varies depending on your configuration:
 
 ### Pull Request Syntax
 
-When specifying a pull request, use `pr-NUMBER` (e.g., `pr-123`, `pr-456`). The add-on will automatically fetch and checkout the PR for you.
+When specifying a pull request, use `pr-NUMBER` (e.g., `pr-123`, `pr-456`). The App will automatically fetch and checkout the PR for you.
 
 ## Troubleshooting
 
-### Add-on won't start
+### App won't start
 
-1. Check the add-on logs for build errors
+1. Check the App logs for build errors
 2. Verify the branch/PR/fork exists and is accessible
 3. Try using a known-good branch like `dev` or `main`
 4. Enable `safe_mode: true` to bypass provider loading
@@ -178,7 +178,7 @@ When specifying a pull request, use `pr-NUMBER` (e.g., `pr-123`, `pr-456`). The 
 ### Performance issues
 
 - Building from source uses more resources
-- Only use this add-on for development testing, not as a daily driver
+- Only use this App for development testing, not as a daily driver
 
 ## Developer Workflow
 
@@ -186,14 +186,14 @@ When specifying a pull request, use `pr-NUMBER` (e.g., `pr-123`, `pr-456`). The 
 
 1. Find the PR number (e.g., #456)
 2. Configure: `server_repo: pr-456`
-3. Restart the add-on
+3. Restart the App
 4. Test the changes
 
 ### Developing Features
 
 1. Push your branch to your fork
 2. Configure: `server_repo: yourusername/server@your-branch`
-3. Restart the add-on
+3. Restart the App
 4. Test and iterate
 
 ### Testing Both Server and Frontend Changes
@@ -209,14 +209,14 @@ This allows you to test coordinated changes across both repositories.
 
 This is a developer tool and is not supported for regular users. If you encounter issues:
 
-- Check the add-on logs
+- Check the App logs
 - Verify your Git references are correct
 - Test with the default branches first
 - Ask in the Music Assistant developer Discord channel
 
-## Differences from Regular Add-on
+## Differences from Regular App
 
-| Feature      | Regular Add-on    | DEV Add-on (Nightly mode) | DEV Add-on (Source mode) |
+| Feature      | Regular App       | DEV App (Nightly mode)    | DEV App (Source mode)    |
 | ------------ | ----------------- | ------------------------- | ------------------------ |
 | Installation | Pre-built release | Latest nightly wheel      | Built from source        |
 | Startup time | Fast              | Fast                      | Slower (build time)      |
