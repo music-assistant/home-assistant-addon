@@ -23,7 +23,6 @@ map:
   - media:rw
   - ssl:ro
 init: false
-advanced: true
 backup_exclude:
   - cache.db
   - collage_images/*
