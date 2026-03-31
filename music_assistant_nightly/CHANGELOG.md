@@ -1,3 +1,8 @@
+# [2.9.0.dev2026033107] - 31.03.2026
+
+* No changes
+
+
 # [2.9.0.dev2026033105] - 31.03.2026
 
 ## 📦 Nightly Release
@@ -35,10 +40,5 @@ _Changes since [2.9.0.dev2026033014](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @fmurodov
-
-
-# [2.9.0.dev2026033014] - 30.03.2026
-
-* No changes
 
 
