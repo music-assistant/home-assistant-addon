@@ -1,3 +1,24 @@
+# [2.9.0.dev2026040105] - 01.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026033123](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026033123)_
+
+### 🎨 Frontend Changes
+
+- Add export playlist feature (by @chrisuthe in [#1661](https://github.com/music-assistant/frontend/pull/1661))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.138 (by @music-assistant-machine in #3524)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@chrisuthe
+
+
 # [2.9.0.dev2026033123] - 31.03.2026
 
 ## 📦 Nightly Release
@@ -36,27 +57,5 @@ Special thanks to the following contributors who helped with this release:
 # [2.9.0.dev2026033107] - 31.03.2026
 
 * No changes
-
-
-# [2.9.0.dev2026033105] - 31.03.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026033019](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026033019)_
-
-### 🚀 Features and enhancements
-
-- Create Services for Playlist Export / Import (by @chrisuthe in #3387)
-
-### 🧰 Maintenance and dependency bumps
-
-- Add support for dynamic playlists to the Queue controller (by @dmoo500 in #3432)
-- ⬆️ Update music-assistant-frontend to 2.17.137 (by @music-assistant-machine in #3517)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@chrisuthe, @dmoo500
 
 
