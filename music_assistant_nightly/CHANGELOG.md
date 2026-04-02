@@ -1,3 +1,34 @@
+# [2.9.0.dev2026040205] - 02.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026040105](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040105)_
+
+### 🐛 Bugfixes
+
+- Fix Sonos not unmuting when playing via Airplay (by @MarvinSchenkel in #3529)
+- Bump aioslimproto to 3.1.8. (by @MarvinSchenkel in #3530)
+- Subsonic: Include bookmark creation date if available (by @khers in #3531)
+- Fix player controls for non-native players (by @marcelveldt in #3532)
+- Fix: select_source should ungroup a player if its grouped/synced (by @marcelveldt in #3534)
+
+### 🎨 Frontend Changes
+
+- Add import playlist feature (by @chrisuthe in [#1662](https://github.com/music-assistant/frontend/pull/1662))
+
+### 🧰 Maintenance and dependency bumps
+
+- Remaintain jellyfin (by @staticdev in #3528)
+- Bump aiohttp from 3.13.3 to 3.13.4 (by @dependabot[bot] in #3533)
+- ⬆️ Update music-assistant-frontend to 2.17.139 (by @music-assistant-machine in #3536)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @khers, @marcelveldt, @staticdev
+
+
 # [2.9.0.dev2026040105] - 01.04.2026
 
 ## 📦 Nightly Release
@@ -52,10 +83,5 @@ _Changes since [2.9.0.dev2026033107](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @SuperSandro2000, @lukaszwawrzyk, @marcelveldt, @teancom
-
-
-# [2.9.0.dev2026033107] - 31.03.2026
-
-* No changes
 
 
