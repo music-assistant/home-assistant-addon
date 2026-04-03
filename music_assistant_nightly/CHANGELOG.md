@@ -1,3 +1,43 @@
+# [2.9.0.dev2026040305] - 03.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026040219](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040219)_
+
+### 🚀 Features and enhancements
+
+- Dynamic playlist queue support for is_dynamic playlists (by @dmoo500 in #3527)
+- Fix group volume balance drift with interpolation-based scaling (by @marcelveldt in #3548)
+
+### 🐛 Bugfixes
+
+- Apple Music: Various fixes (by @MarvinSchenkel in #1652)
+- Fix cast/dlna player stops playing after 1 or 2 tracks of a playlist (by @marcelveldt in #1658)
+- Bluesound: fixed deprecated enqueue next issue, announcements removed (by @Cyanogenbot in #1659)
+
+### Other Changes
+
+- Adding missing icon for the Soundcloud music provider (by @robsonke in #1665)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Split up build workflow to use intermediate base image (by @marcelveldt in #1647)
+- Bump zeroconf from 0.133.0 to 0.134.0 (by @dependabot[bot] in #1656)
+- Add PTH119 and PTH116 mypy rules (by @OzGav in #3526)
+- ⬆️ Update music-assistant-frontend to 2.17.140 (by @music-assistant-machine in #3553)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Cyanogenbot, @MarvinSchenkel, @OzGav, @dmoo500, @marcelveldt, @robsonke
+
+
 # [2.9.0.dev2026040219] - 02.04.2026
 
 ## 📦 Nightly Release
@@ -94,26 +134,5 @@ _Changes since [2.9.0.dev2026040105](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @chrisuthe, @khers, @marcelveldt, @staticdev
-
-
-# [2.9.0.dev2026040105] - 01.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026033123](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026033123)_
-
-### 🎨 Frontend Changes
-
-- Add export playlist feature (by @chrisuthe in [#1661](https://github.com/music-assistant/frontend/pull/1661))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.138 (by @music-assistant-machine in #3524)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@chrisuthe
 
 
