@@ -1,3 +1,60 @@
+# [2.9.0b3] - 04.04.2026
+
+## 📦 Beta Release
+
+_Changes since [2.9.0b2](https://github.com/music-assistant/server/releases/tag/2.9.0b2)_
+
+### 🚀 Features and enhancements
+
+- Allow use of a personal client id for Spotify (by @marcelveldt in #1536)
+- Try parsing track number from the filename (by @marcelveldt in #1663)
+- A few small bugfixes and enhancements to playback and enqueuing  (by @marcelveldt in #1670)
+- Add Canada in UI for Alexa provider (by @EricLabranche in #3568)
+- Add duplicate track prevention and empty default for party name/QR text (by @apophisnow in #3576)
+
+### 🐛 Bugfixes
+
+- Fix audio analysis version gating for non-track media (by @marcelveldt in #3566)
+- Fix high CPU usage during audio streaming on low-power devices (by @marcelveldt in #3567)
+- Fix external source reporting on Universal Players (by @marcelveldt in #3571)
+- Fix sync group player features not available when idle (by @marcelveldt in #3572)
+- Fix scheduled sync task settings not persisting across restarts (by @marcelveldt in #3574)
+
+### 🎨 Frontend Changes
+
+- Add progress bar for current track in party mode (by @Awashcard0 in [#1664](https://github.com/music-assistant/frontend/pull/1664))
+- Disable shuffle and repeat buttons for dynamic playlists (by @dmoo500 in [#1667](https://github.com/music-assistant/frontend/pull/1667))
+- Add favorite button to player bar (by @dmoo500 in [#1666](https://github.com/music-assistant/frontend/pull/1666))
+- Player menu enhancements (by @radiohe4d in [#1536](https://github.com/music-assistant/frontend/pull/1536))
+- Add translation strings for player options (by @fmunkes in [#1663](https://github.com/music-assistant/frontend/pull/1663))
+- Add track action menu to player bar (by @dmoo500 in [#1669](https://github.com/music-assistant/frontend/pull/1669))
+- Party duplicate prevention (by @apophisnow in [#1670](https://github.com/music-assistant/frontend/pull/1670))
+- Party duplicate prevention (by @apophisnow in [#1670](https://github.com/music-assistant/frontend/pull/1670))
+
+### Other Changes
+
+- Fix: Handle radio stations providing non utf-8 in streamtitle (by @marcelveldt in #1664)
+- Fix loading state from cache when connecting to slimproto players (by @kepstin in #1666)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump ruff from 0.6.4 to 0.6.5 (by @dependabot[bot] in #1667)
+- Bump pyblu from 0.4.0 to 1.0.2 (by @dependabot[bot] in #1669)
+- ⬆️ Update music-assistant-frontend to 2.17.141 (by @music-assistant-machine in #3565)
+- ⬆️ Update music-assistant-frontend to 2.17.142 (by @music-assistant-machine in #3578)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Awashcard0, @EricLabranche, @apophisnow, @dmoo500, @fmunkes, @kepstin, @marcelveldt, @radiohe4d
+
+
 # [2.9.0b2] - 04.04.2026
 
 ## 📦 Beta Release
@@ -174,35 +231,5 @@ _Changes since [2.8.0rc3](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @EricLabranche, @MarvinSchenkel, @OzGav, @SuperSandro2000, @TastyPi, @TermeHansen, @Thyraz, @apophisnow, @chrisuthe, @dmoo500, @fmunkes, @fmurodov, @hatharry, @jwlerch78, @khers, @lukaszwawrzyk, @marcelveldt, @neurocis, @staticdev, @stvncode, @teancom, @trudenboy
-
-
-# [2.8.0rc3] - 25.03.2026
-
-## 📦 RC Release
-
-_Changes since [2.8.0rc2](https://github.com/music-assistant/server/releases/tag/2.8.0rc2)_
-
-### 🚀 Features and enhancements
-
-- Extend Party mode configuration (by @marcelveldt in #3471)
-
-### 🐛 Bugfixes
-
-- Fix image proxy handling pointing at ourselves (by @marcelveldt in #3052)
-
-### 🎨 Frontend Changes
-
-- Party mode updates (by @stvncode in [#1644](https://github.com/music-assistant/frontend/pull/1644))
-
-### 🧰 Maintenance and dependency bumps
-
-- Upgrade stages of various providers for 2.8 (by @OzGav in #3476)
-- ⬆️ Update music-assistant-frontend to 2.17.132 (by @music-assistant-machine in #3478)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt, @stvncode
 
 
