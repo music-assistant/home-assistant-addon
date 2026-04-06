@@ -1,3 +1,14 @@
+# [2.9.0.dev2026040605] - 06.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026040523](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040523)_
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.143 (by @music-assistant-machine in #3592)
+
+
 # [2.9.0.dev2026040523] - 05.04.2026
 
 ## 📦 Nightly Release
@@ -43,23 +54,5 @@ _Changes since [2.9.0.dev2026040505](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @teancom
-
-
-# [2.9.0.dev2026040505] - 05.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026040422](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040422)_
-
-### 🐛 Bugfixes
-
-- Fix plugin source players stuck in PLAYING state after disconnect (by @marcelveldt in #3579)
-- Fix AirPlay late-join timing and remove oversized pipe buffers (by @marcelveldt in #3581)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
