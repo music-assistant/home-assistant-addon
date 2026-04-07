@@ -1,3 +1,30 @@
+# [2.9.0.dev2026040712] - 07.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026040705](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040705)_
+
+### 🚀 New Providers
+
+- Add QQ Music provider (by @xiasi0 in #3511)
+
+### 🚀 Features and enhancements
+
+- Add dynamic leader switching support for Sendspin sync groups (by @marcelveldt in #3603)
+
+### 🐛 Bugfixes
+
+- YT Music: Fix syncing 'Episodes for later' in podcast library sync (by @teancom in #3582)
+- Include missing description in automatic artist metadata scan (by @OzGav in #3595)
+- Add protocol awareness and transition guards to sync group player (by @marcelveldt in #3600)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt, @teancom, @xiasi0
+
+
 # [2.9.0.dev2026040705] - 07.04.2026
 
 ## 📦 Nightly Release
@@ -37,28 +64,5 @@ _Changes since [2.9.0.dev2026040523](https://github.com/music-assistant/server/r
 ### 🧰 Maintenance and dependency bumps
 
 - ⬆️ Update music-assistant-frontend to 2.17.143 (by @music-assistant-machine in #3592)
-
-
-# [2.9.0.dev2026040523] - 05.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026040517](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040517)_
-
-### 🐛 Bugfixes
-
-- Fix flow stream playlog pre-count and use 50/50 crossfade split (by @marcelveldt in #3587)
-- Fix sync group player desynchronization and add dynamic leader switching (by @marcelveldt in #3591)
-
-### 🧰 Maintenance and dependency bumps
-
-- Consolidate smart fades analyzer thread calls to fix asyncio slow-task warning (by @marcelveldt in #3588)
-- Bump base image to 1.4.13 (by @marcelveldt in #3590)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
