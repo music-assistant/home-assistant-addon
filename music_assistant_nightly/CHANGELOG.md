@@ -1,3 +1,33 @@
+# [2.9.0.dev2026040705] - 07.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026040605](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040605)_
+
+### 🐛 Bugfixes
+
+- Rewrite tidal stream behaviour to avoid premature cutoff (by @jozefKruszynski in #3369)
+- Revert "Rewrite tidal stream behaviour to avoid premature cutoff (#3369)" (by @jozefKruszynski in #3593)
+- Fix sync group regressions: proper locking and dynamic leader switch (by @marcelveldt in #3594)
+
+### Other Changes
+
+- Add support for m4a audio container (by @marcelveldt in #303)
+- Improve filesystem sync (by @marcelveldt in #304)
+- Add support for volume muting (by @marcelveldt in #305)
+- Add media_item to queue_item (by @marcelveldt in #306)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump mashumaro from 3.18 to 3.20 (by @dependabot[bot] in #3596)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@jozefKruszynski, @marcelveldt
+
+
 # [2.9.0.dev2026040605] - 06.04.2026
 
 ## 📦 Nightly Release
@@ -30,29 +60,5 @@ _Changes since [2.9.0.dev2026040517](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt
-
-
-# [2.9.0.dev2026040517] - 05.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026040505](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040505)_
-
-### 🚀 New Providers
-
-- Add Local Audio Out player provider (by @marcelveldt in #3585)
-
-### 🐛 Bugfixes
-
-- Fix filesystem provider sync config checkboxes not being respected (by @teancom in #3550)
-- Fix AirPlay late-join sync: start_at must match first byte stream position (by @marcelveldt in #3583)
-- Restore flow stream buffering for smart fades headroom (by @marcelveldt in #3584)
-- Fix flow stream UI showing next track too early during crossfade (by @marcelveldt in #3586)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @teancom
 
 
