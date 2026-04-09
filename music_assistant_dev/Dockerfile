@@ -7,6 +7,10 @@ FROM ghcr.io/music-assistant/base:1.4.8
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
+# Required to build Beat This!
+RUN echo "setuptools>=77.0.0" > /app/build-constraints.txt
+ENV UV_BUILD_CONSTRAINT=/app/build-constraints.txt
+
 # ensure UV is installed
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
