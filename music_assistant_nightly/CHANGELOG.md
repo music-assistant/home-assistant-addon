@@ -1,3 +1,40 @@
+# [2.9.0.dev2026040916] - 09.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026040805](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040805)_
+
+### 🚀 New Providers
+
+- Add Mother Earth Radio music provider (by @FlorianReiterer in #3599)
+
+### 🚀 Features and enhancements
+
+- Apple Music: Add support for radio stations  (by @dmoo500 in #3433)
+- Dynamic playlist queue support for is_dynamic playlists (by @dmoo500 in #3527)
+- Add audio quality option for Pandora provider (by @cryptk in #3617)
+- Add secondary sort by year for album artist sorting (by @OzGav in #3619)
+- Propagate now-playing info to Chromecast media_player (by @robtpaton in #3621)
+- Implement metadata provider priority (by @OzGav in #3623)
+
+### 🐛 Bugfixes
+
+- Fix party duplicate prevention race (by @marcelveldt in #3601)
+- Subsonic: Fix structured lyrics yet again (by @khers in #3604)
+- Fix local audio seg fault and hide unavailable players (by @OzGav in #3613)
+- Fix player/queue deadlock on multiple simultane (play) actions (by @marcelveldt in #3624)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump cryptography from 46.0.6 to 46.0.7 (by @dependabot[bot] in #3618)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@FlorianReiterer, @OzGav, @cryptk, @dmoo500, @khers, @marcelveldt, @robtpaton
+
+
 # [2.9.0.dev2026040805] - 08.04.2026
 
 ## 📦 Nightly Release
@@ -75,35 +112,5 @@ _Changes since [2.9.0.dev2026040705](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt, @teancom, @xiasi0
-
-
-# [2.9.0.dev2026040705] - 07.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026040605](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040605)_
-
-### 🐛 Bugfixes
-
-- Rewrite tidal stream behaviour to avoid premature cutoff (by @jozefKruszynski in #3369)
-- Revert "Rewrite tidal stream behaviour to avoid premature cutoff (#3369)" (by @jozefKruszynski in #3593)
-- Fix sync group regressions: proper locking and dynamic leader switch (by @marcelveldt in #3594)
-
-### Other Changes
-
-- Add support for m4a audio container (by @marcelveldt in #303)
-- Improve filesystem sync (by @marcelveldt in #304)
-- Add support for volume muting (by @marcelveldt in #305)
-- Add media_item to queue_item (by @marcelveldt in #306)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump mashumaro from 3.18 to 3.20 (by @dependabot[bot] in #3596)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@jozefKruszynski, @marcelveldt
 
 
