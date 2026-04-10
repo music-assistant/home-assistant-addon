@@ -1,3 +1,25 @@
+# [2.9.0.dev2026041020] - 10.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041016](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041016)_
+
+### 🚀 Features and enhancements
+
+- Add AI_QUERY and TTS to HA Plugin (by @MarvinSchenkel in #3607)
+
+### 🐛 Bugfixes
+
+- Preserve builtin playlist cover images on M3U rewrites (by @marcelveldt in #3633)
+- Fix AirPlay late joiner sync on Linux (by @marcelveldt in #3643)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt
+
+
 # [2.9.0.dev2026041016] - 10.04.2026
 
 ## 📦 Nightly Release
@@ -71,42 +93,5 @@ _Changes since [2.9.0.dev2026040916](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @SantiagoSotoC, @a2hill, @apophisnow, @marcelveldt, @teancom, @whc2001, @xiasi0
-
-
-# [2.9.0.dev2026040916] - 09.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026040805](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026040805)_
-
-### 🚀 New Providers
-
-- Add Mother Earth Radio music provider (by @FlorianReiterer in #3599)
-
-### 🚀 Features and enhancements
-
-- Apple Music: Add support for radio stations  (by @dmoo500 in #3433)
-- Dynamic playlist queue support for is_dynamic playlists (by @dmoo500 in #3527)
-- Add audio quality option for Pandora provider (by @cryptk in #3617)
-- Add secondary sort by year for album artist sorting (by @OzGav in #3619)
-- Propagate now-playing info to Chromecast media_player (by @robtpaton in #3621)
-- Implement metadata provider priority (by @OzGav in #3623)
-
-### 🐛 Bugfixes
-
-- Fix party duplicate prevention race (by @marcelveldt in #3601)
-- Subsonic: Fix structured lyrics yet again (by @khers in #3604)
-- Fix local audio seg fault and hide unavailable players (by @OzGav in #3613)
-- Fix player/queue deadlock on multiple simultane (play) actions (by @marcelveldt in #3624)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump cryptography from 46.0.6 to 46.0.7 (by @dependabot[bot] in #3618)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@FlorianReiterer, @OzGav, @cryptk, @dmoo500, @khers, @marcelveldt, @robtpaton
 
 
