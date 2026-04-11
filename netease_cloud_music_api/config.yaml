@@ -1,5 +1,5 @@
 name: NetEase Cloud Music API
-version: "0.1.0"
+version: "0.1.1"
 slug: netease_cloud_music_api
 description: NetEase Cloud Music API service for Music Assistant.
 url: https://github.com/NeteaseCloudMusicApiEnhanced/api-enhanced
@@ -16,9 +16,3 @@ ports:
   3000/tcp: 3000
 ports_description:
   3000/tcp: NetEase API HTTP
-options:
-  port: 3000
-  host: ""
-schema:
-  port: "port"
-  host: "str?"
