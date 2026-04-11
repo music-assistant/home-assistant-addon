@@ -1,3 +1,20 @@
+# [2.9.0.dev2026041105] - 11.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041023](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041023)_
+
+### 🐛 Bugfixes
+
+- Fix group member players reporting idle instead of playing (by @marcelveldt in #3646)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.9.0.dev2026041023] - 10.04.2026
 
 ## 📦 Nightly Release
@@ -41,27 +58,5 @@ _Changes since [2.9.0.dev2026041016](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt
-
-
-# [2.9.0.dev2026041016] - 10.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041005](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041005)_
-
-### 🚀 Features and enhancements
-
-- Add Apple Music station recommendations to Discover page (by @dmoo500 in #3622)
-
-### 🐛 Bugfixes
-
-- Fix Sendspin bridge race causing Chromecast player to disappear (by @maximmaxim345 in #3632)
-- Fix AirPlay RAOP sync and disable AP2 grouping (by @marcelveldt in #3637)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@dmoo500, @marcelveldt, @maximmaxim345
 
 
