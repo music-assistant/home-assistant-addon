@@ -1,3 +1,42 @@
+# [2.9.0.dev2026041205] - 12.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041105](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041105)_
+
+### 🚀 New Providers
+
+- Add Hue Light Sync plugin provider (by @marcelveldt in #3627)
+
+### 🐛 Bugfixes
+
+- Add controller startup retry to HEOS (by @Tommatheussen in #3635)
+- Prevent filesystem unavailability from removing all associated library items (by @OzGav in #3647)
+- Fix Nugs.net get_track NotImplementedError (by @marcelveldt in #3649)
+- Use original stream for ibroadcast (by @robsonke in #3650)
+- Use PluginSource elapsed_time for player progress (by @trudenboy in #3652)
+- Fix AirPlay DACP volume control for Sonos speakers (by @marcelveldt in #3654)
+- Fix muted player in group unmuting on group volume change (by @marcelveldt in #3655)
+
+### 🎨 Frontend Changes
+
+- Add right-click context menu to player cards on home screen (by @thrunkmo in [#1617](https://github.com/music-assistant/frontend/pull/1617))
+- Add artist track list sort by album sort name (by @OzGav in [#1694](https://github.com/music-assistant/frontend/pull/1694))
+- Fix confirm password field not appearing (by @OzGav in [#1695](https://github.com/music-assistant/frontend/pull/1695))
+
+### 🧰 Maintenance and dependency bumps
+
+- Correct link to liblistenbrainz (by @ijc in #3651)
+- ⬆️ Update music-assistant-frontend to 2.17.146 (by @music-assistant-machine in #3657)
+- Update py-opensonic to latest version (by @khers in #3658)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @Tommatheussen, @ijc, @khers, @marcelveldt, @robsonke, @thrunkmo, @trudenboy
+
+
 # [2.9.0.dev2026041105] - 11.04.2026
 
 ## 📦 Nightly Release
@@ -36,27 +75,5 @@ _Changes since [2.9.0.dev2026041020](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @fmunkes, @marcelveldt
-
-
-# [2.9.0.dev2026041020] - 10.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041016](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041016)_
-
-### 🚀 Features and enhancements
-
-- Add AI_QUERY and TTS to HA Plugin (by @MarvinSchenkel in #3607)
-
-### 🐛 Bugfixes
-
-- Preserve builtin playlist cover images on M3U rewrites (by @marcelveldt in #3633)
-- Fix AirPlay late joiner sync on Linux (by @marcelveldt in #3643)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @marcelveldt
 
 
