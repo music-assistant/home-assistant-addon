@@ -1,3 +1,30 @@
+# [2.9.0.dev2026041223] - 13.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041205](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041205)_
+
+### 🚀 Features and enhancements
+
+- Subsonic: Cache requests (by @khers in #3662)
+
+### 🐛 Bugfixes
+
+- Fix 30-second auth delay on startup (HA provider race condition) (by @marcelveldt in #3656)
+- Remove protocol player power control forwarding (by @marcelveldt in #3659)
+- Fix AirPlay late joiner sync issues from insufficient buffer headroom (by @marcelveldt in #3660)
+- Fix sync group members lost after dynamic leader switch (by @marcelveldt in #3665)
+- Fix sync group not resetting active protocol on stop (by @marcelveldt in #3666)
+- Reduce radio stream startup delay on Squeezelite players (by @marcelveldt in #3667)
+- Fix queue items showing zero/unknown duration (by @marcelveldt in #3668)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@khers, @marcelveldt
+
+
 # [2.9.0.dev2026041205] - 12.04.2026
 
 ## 📦 Nightly Release
@@ -52,28 +79,5 @@ _Changes since [2.9.0.dev2026041023](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt
-
-
-# [2.9.0.dev2026041023] - 10.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041020](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041020)_
-
-### 🐛 Bugfixes
-
-- Small fixes for flow stream buffering and crossfade yielding (by @marcelveldt in #3645)
-
-### 🧰 Maintenance and dependency bumps
-
-- Mypy fixes for the Sonos provider (by @OzGav in #3538)
-- Remove player_options. from translation key in MusicCast. (by @fmunkes in #3642)
-- ⬆️ Update music-assistant-models to 1.1.115 (by @music-assistant-machine in #3644)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @fmunkes, @marcelveldt
 
 
