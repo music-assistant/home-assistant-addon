@@ -1,3 +1,14 @@
+# [2.8.4] - 13.04.2026
+
+## 📦 Stable Release
+
+_Changes since [2.8.3](https://github.com/music-assistant/server/releases/tag/2.8.3)_
+
+### Other Changes
+
+- [Backport to stable] 2.8.4 (by @github-actions[bot] in #3634)
+
+
 # [2.8.3] - 10.04.2026
 
 ## 📦 Stable Release
@@ -164,36 +175,5 @@ _Changes since [2.8.1](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @Awashcard0, @Cyanogenbot, @EricLabranche, @MarvinSchenkel, @OzGav, @SuperSandro2000, @TastyPi, @TermeHansen, @anatosun, @apophisnow, @chrisuthe, @dmoo500, @fmunkes, @fmurodov, @kepstin, @khers, @marcelveldt, @radiohe4d, @robsonke, @staticdev, @teancom
-
-
-# [2.8.1] - 27.03.2026
-
-## 📦 Stable Release
-
-_Changes since [2.8.0](https://github.com/music-assistant/server/releases/tag/2.8.0)_
-
-### 🐛 Bugfixes
-
-- Fix race condition when calling stop/pause on an already stopped Universal Player (by @MarvinSchenkel in #3481)
-- Emby Music Provider: fix artist endpoint, image remote accessibility and album artwork (by @hatharry in #3482)
-- Fix plex SSL warning polluting the log (by @MarvinSchenkel in #3486)
-- Fix filesystem playlists not showing up in the library (by @MarvinSchenkel in #3487)
-- Fix not being able to edit Apple Music playlist tracks (by @MarvinSchenkel in #3488)
-- Fix tracks from Sonos not being reported as played (by @MarvinSchenkel in #3489)
-- Fix dlna not playing on some devices (by @MarvinSchenkel in #3490)
-
-### 🎨 Frontend Changes
-
-- Fix widget rows reloading when toggling the player bar (by @MarvinSchenkel in [#1646](https://github.com/music-assistant/frontend/pull/1646))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.134 (by @music-assistant-machine in #3491)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @hatharry
 
 
