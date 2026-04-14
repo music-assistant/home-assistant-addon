@@ -1,3 +1,33 @@
+# [2.9.0.dev2026041414] - 14.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041405](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041405)_
+
+### 🚀 Features and enhancements
+
+- Add per-player delay configuration for Sendspin players (by @maximmaxim345 in #3689)
+
+### 🐛 Bugfixes
+
+- Filter stale podcast episodes (by @OzGav in #3673)
+- Sendspin: guard against negative track_progress in metadata (by @marcelveldt in #3681)
+- Fix sync group session lifecycle and AirPlay late joiner sync (by @marcelveldt in #3682)
+- Automatically clean up loudness measurements on media item deletion (by @MarvinSchenkel in #3687)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump pyblu from 2.0.5 to 2.0.6 (by @dependabot[bot] in #3678)
+- Bump pillow from 12.1.1 to 12.2.0 (by @dependabot[bot] in #3684)
+- Allow Pipewire devices to be detected by Local Audio when using docker (by @apophisnow in #3686)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @apophisnow, @marcelveldt, @maximmaxim345
+
+
 # [2.9.0.dev2026041405] - 14.04.2026
 
 ## 📦 Nightly Release
@@ -55,32 +85,5 @@ _Changes since [2.9.0.dev2026041223](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @FL550, @LosCV29, @MarvinSchenkel, @OzGav, @cryptk, @dmoo500, @jasonhollis, @marcelveldt, @xiasi0
-
-
-# [2.9.0.dev2026041223] - 13.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041205](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041205)_
-
-### 🚀 Features and enhancements
-
-- Subsonic: Cache requests (by @khers in #3662)
-
-### 🐛 Bugfixes
-
-- Fix 30-second auth delay on startup (HA provider race condition) (by @marcelveldt in #3656)
-- Remove protocol player power control forwarding (by @marcelveldt in #3659)
-- Fix AirPlay late joiner sync issues from insufficient buffer headroom (by @marcelveldt in #3660)
-- Fix sync group members lost after dynamic leader switch (by @marcelveldt in #3665)
-- Fix sync group not resetting active protocol on stop (by @marcelveldt in #3666)
-- Reduce radio stream startup delay on Squeezelite players (by @marcelveldt in #3667)
-- Fix queue items showing zero/unknown duration (by @marcelveldt in #3668)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@khers, @marcelveldt
 
 
