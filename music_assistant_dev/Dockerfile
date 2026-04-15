@@ -2,15 +2,10 @@
 #
 # DEV MASS image: base image + MASS installed from prebuilt wheel
 #
-FROM ghcr.io/music-assistant/base:1.4.10
+FROM ghcr.io/music-assistant/base:1.5.0
 
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-
-# Required to build Beat This!
-RUN echo "setuptools>=77.0.0" > /etc/uv-build-constraints.txt
-ENV UV_BUILD_CONSTRAINT=/etc/uv-build-constraints.txt
-ENV UV_INDEX_STRATEGY=unsafe-best-match
 
 # ensure UV is installed
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
