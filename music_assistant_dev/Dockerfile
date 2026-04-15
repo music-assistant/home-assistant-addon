@@ -28,6 +28,7 @@ RUN set -x \
   uv pip install \
   --no-cache \
   --link-mode=copy \
+  --index-strategy unsafe-best-match \
   -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
 
 VOLUME [ "/data" ]
