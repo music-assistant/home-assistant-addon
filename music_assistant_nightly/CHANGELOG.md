@@ -1,3 +1,44 @@
+# [2.9.0.dev2026041504] - 15.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041415](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041415)_
+
+### 🚀 Features and enhancements
+
+- Play from here respects user's sort order (by @philjackson in #3663)
+
+### 🐛 Bugfixes
+
+- Fix multiple (virtual) devices on the same host being merged. (by @MarvinSchenkel in #3688)
+- Fix Volume control for Bluesound native devices (by @MarvinSchenkel in #3693)
+- AudioBuffer: Only fire cancel callbacks when stream has not ended naturally (by @MarvinSchenkel in #3694)
+- Fix race condition in AirPlay stream session client removal (by @marcelveldt in #3698)
+
+### 🎨 Frontend Changes
+
+- Move Sendspin delay configuration to player settings (by @maximmaxim345 in [#1712](https://github.com/music-assistant/frontend/pull/1712))
+- Fix clipping of last player cards on the Players widget of the Discover view (by @BQPVegas in [#1690](https://github.com/music-assistant/frontend/pull/1690))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Add devenv Configuration for Consistent Developer Environments (by @staticdev in #3641)
+- Update base image versions to 1.4.14 (by @apophisnow in #3695)
+- Add diagnostics for AirPlay stream stalls and increase flow buffer (by @marcelveldt in #3696)
+- ⬆️ Update music-assistant-frontend to 2.17.148 (by @music-assistant-machine in #3700)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@BQPVegas, @MarvinSchenkel, @apophisnow, @marcelveldt, @maximmaxim345, @philjackson, @staticdev
+
+
 # [2.9.0.dev2026041415] - 14.04.2026
 
 ## 📦 Nightly Release
@@ -52,27 +93,5 @@ _Changes since [2.9.0.dev2026041405](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @apophisnow, @marcelveldt, @maximmaxim345
-
-
-# [2.9.0.dev2026041405] - 14.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041315](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041315)_
-
-### 🎨 Frontend Changes
-
-- Fix single provider stale filter bug (by @OzGav in [#1698](https://github.com/music-assistant/frontend/pull/1698))
-- Fix typo (by @OzGav in [#1696](https://github.com/music-assistant/frontend/pull/1696))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.147 (by @music-assistant-machine in #3685)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav
 
 
