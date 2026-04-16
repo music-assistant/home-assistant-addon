@@ -1,3 +1,32 @@
+# [2.9.0.dev2026041620] - 16.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041604](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041604)_
+
+### 🚀 Features and enhancements
+
+- Add setting to replace Pause with Stop for DLNA (by @peteS-UK in #3704)
+- Subsonic: Add option to always request stream of raw file (by @khers in #3710)
+- Forward Sendspin Cast app logs to Music Assistant (by @maximmaxim345 in #3713)
+
+### 🐛 Bugfixes
+
+- Improve loudness measurement robustness (by @marcelveldt in #3703)
+- Bump aiohttp to 3.13.5 and ibroadcastaio to 0.6.0 (by @staticdev in #3707)
+- Fix duration parsing for M3U playlist items (by @marcelveldt in #3714)
+
+### 🧰 Maintenance and dependency bumps
+
+- Update beta and nightly image versions to 1.5.1 (by @apophisnow in #3712)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@apophisnow, @khers, @marcelveldt, @maximmaxim345, @peteS-UK, @staticdev
+
+
 # [2.9.0.dev2026041604] - 16.04.2026
 
 ## 📦 Nightly Release
@@ -70,31 +99,5 @@ _Changes since [2.9.0.dev2026041415](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @BQPVegas, @MarvinSchenkel, @apophisnow, @marcelveldt, @maximmaxim345, @philjackson, @staticdev
-
-
-# [2.9.0.dev2026041415] - 14.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041414](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041414)_
-
-### 🚀 New Providers
-
-- Smart fades Audio Analysis provider (by @MarvinSchenkel in #3636)
-
-### 🐛 Bugfixes
-
-- Fix sync group dissolve+reform race with async providers (by @marcelveldt in #3691)
-- Fix Jellyfin multidisc albums with same named tracks (by @MarvinSchenkel in #3692)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump softprops/action-gh-release from 2 to 3 (by @dependabot[bot] in #3677)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @marcelveldt
 
 
