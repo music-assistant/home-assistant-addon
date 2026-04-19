@@ -2,7 +2,7 @@
 #
 # DEV MASS image: base image + MASS installed from prebuilt wheel
 #
-FROM ghcr.io/music-assistant/base:1.5.0
+FROM ghcr.io/music-assistant/base:1.5.2
 
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
