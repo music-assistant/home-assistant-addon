@@ -1,3 +1,26 @@
+# [2.9.0.dev2026042005] - 20.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026041905](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041905)_
+
+### 🚀 Features and enhancements
+
+- Add artist artwork display for radio streams (by @OzGav in #3110)
+- Add min and max volume functionality per player (by @OzGav in #3360)
+- Smart crossfade: Add gradual timestretching (by @MarvinSchenkel in #3737)
+
+### 🐛 Bugfixes
+
+- Adjust Spotify endpoints post deprecation notice (by @OzGav in #3303)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav
+
+
 # [2.9.0.dev2026041905] - 19.04.2026
 
 ## 📦 Nightly Release
@@ -44,26 +67,5 @@ _Changes since [2.9.0.dev2026041704](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt
-
-
-# [2.9.0.dev2026041704] - 17.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041620](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041620)_
-
-### 🐛 Bugfixes
-
-- Fix MPD player removal reappearing after reload (by @marcelveldt in #3697)
-- Fix AirPlay cleanup idling re-added clients (by @marcelveldt in #3716)
-- Fix sync leader child state forwarding (by @marcelveldt in #3717)
-- Forward syncgroup join/unjoin to the syncgroup player (by @marcelveldt in #3718)
-- Fix audiobook controller not using userid in library_items call (by @fmunkes in #3719)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @marcelveldt
 
 
