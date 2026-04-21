@@ -1,3 +1,24 @@
+# [2.9.0.dev2026042115] - 21.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026042114](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042114)_
+
+### 🎨 Frontend Changes
+
+- Revert "Improve performance with GPU compositing and lyrics guard" (by @MarvinSchenkel in [#1724](https://github.com/music-assistant/frontend/pull/1724))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.151 (by @music-assistant-machine in #3760)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel
+
+
 # [2.9.0.dev2026042114] - 21.04.2026
 
 ## 📦 Nightly Release
@@ -78,28 +99,5 @@ _Changes since [2.9.0.dev2026042005](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @JulienDeveaux, @OzGav, @dmoo500, @duanyutong, @fionn-r, @kieranhogg, @trudenboy, @xiasi0
-
-
-# [2.9.0.dev2026042005] - 20.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026041905](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041905)_
-
-### 🚀 Features and enhancements
-
-- Add artist artwork display for radio streams (by @OzGav in #3110)
-- Add min and max volume functionality per player (by @OzGav in #3360)
-- Smart crossfade: Add gradual timestretching (by @MarvinSchenkel in #3737)
-
-### 🐛 Bugfixes
-
-- Adjust Spotify endpoints post deprecation notice (by @OzGav in #3303)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav
 
 
