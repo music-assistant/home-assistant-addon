@@ -1,3 +1,30 @@
+# [2.9.0.dev2026042304] - 23.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026042115](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042115)_
+
+### 🐛 Bugfixes
+
+- Force imageproxy over streamserver for Airplay artwork (by @MarvinSchenkel in #3763)
+- Fix tidal recommendations (by @jozefKruszynski in #3767)
+- Change heartbeat of websocket and sendspin proxy socket to 25s (by @MarvinSchenkel in #3769)
+
+### 🎨 Frontend Changes
+
+- Remove size restriction for volume slider + refacto old ui for player controls (by @stvncode in [#1726](https://github.com/music-assistant/frontend/pull/1726))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.152 (by @music-assistant-machine in #3775)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @jozefKruszynski, @stvncode
+
+
 # [2.9.0.dev2026042115] - 21.04.2026
 
 ## 📦 Nightly Release
@@ -56,48 +83,5 @@ _Changes since [2.9.0.dev2026042104](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @SimeonAT, @apophisnow, @bradkeifer, @davidanthoff, @dmoo500, @maximmaxim345
-
-
-# [2.9.0.dev2026042104] - 21.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026042005](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042005)_
-
-### 🚀 New Providers
-
-- Add MusicMe music provider (by @JulienDeveaux in #3393)
-- Add Yandex Smart Home plugin provider (by @trudenboy in #3615)
-- Add NetEase Cloud Music provider (by @xiasi0 in #3640)
-- Add iTunes artwork metadata provider (by @OzGav in #3740)
-
-### 🚀 Features and enhancements
-
-- Last FM: Add one-click auth (by @duanyutong in #3739)
-
-### 🐛 Bugfixes
-
-- Fix ORF Radiothek browse reverting to top level (by @OzGav in #3733)
-- Preserve multi-value album type across all tag parsers (by @OzGav in #3743)
-- QQ Music: persist full credential and refresh state (by @xiasi0 in #3744)
-- [Soundcloud]: improving search (by @fionn-r in #3745)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Split Apple Music provider into modular structure (by @dmoo500 in #3715)
-- Bump auntie-sounds to 1.1.8 (by @kieranhogg in #3723)
-- Add an opt-out config entry for radio artwork lookup (by @OzGav in #3741)
-- Add docs link to MusicMe manifest (by @OzGav in #3742)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@JulienDeveaux, @OzGav, @dmoo500, @duanyutong, @fionn-r, @kieranhogg, @trudenboy, @xiasi0
 
 
