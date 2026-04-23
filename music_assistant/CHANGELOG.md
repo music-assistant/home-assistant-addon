@@ -1,3 +1,38 @@
+# [2.8.6] - 23.04.2026
+
+## 📦 Stable Release
+
+_Changes since [2.8.5](https://github.com/music-assistant/server/releases/tag/2.8.5)_
+
+### 🐛 Bugfixes
+
+- Fix ffmpeg process leak in smart fades mixer on aborted playback (by @marcelveldt in #3725)
+- Harden AirPlay STOP command delivery and add teardown logging (by @marcelveldt in #3729)
+- Prevent concurrent flow-stream producers from corrupting the playlog (by @marcelveldt in #3731)
+- Guard Sonos volume attribute update against uninitialized state (by @marcelveldt in #3732)
+- Fix ORF Radiothek browse reverting to top level (by @OzGav in #3733)
+- Preserve multi-value album type across all tag parsers (by @OzGav in #3743)
+- [Soundcloud]: improving search (by @fionn-r in #3745)
+- Fix enqueue action 'replace' stopping the music (by @MarvinSchenkel in #3753)
+- Qobuz: fix credential leak on 401 and populate date_added (by @OzGav in #3754)
+- Implement power control function for squeezelite (by @MarvinSchenkel in #3755)
+- Fix manual genres disappearing after a cleanup run (by @MarvinSchenkel in #3757)
+- Force imageproxy over streamserver for Airplay artwork (by @MarvinSchenkel in #3763)
+- Fix tidal recommendations (by @jozefKruszynski in #3767)
+- Change heartbeat of websocket and sendspin proxy socket to 25s (by @MarvinSchenkel in #3769)
+- Fix 30s delay after switching tracks on Sendspin (by @maximmaxim345 in #3777)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump auntie-sounds to 1.1.8 (by @kieranhogg in #3723)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @fionn-r, @jozefKruszynski, @kieranhogg, @marcelveldt, @maximmaxim345
+
+
 # [2.8.5] - 17.04.2026
 
 ## 📦 Stable Release
@@ -63,38 +98,5 @@ _Changes since [2.8.3](https://github.com/music-assistant/server/releases/tag/2.
 ### Other Changes
 
 - [Backport to stable] 2.8.4 (by @github-actions[bot] in #3634)
-
-
-# [2.8.3] - 10.04.2026
-
-## 📦 Stable Release
-
-_Changes since [2.8.2](https://github.com/music-assistant/server/releases/tag/2.8.2)_
-
-### 🐛 Bugfixes
-
-- Rewrite tidal stream behaviour to avoid premature cutoff (by @jozefKruszynski in #3369)
-- YT Music: Fix syncing 'Episodes for later' in podcast library sync (by @teancom in #3582)
-- Fix flow stream playlog pre-count and use 50/50 crossfade split (by @marcelveldt in #3587)
-- Fix sync group player desynchronization and add dynamic leader switching (by @marcelveldt in #3591)
-- Revert "Rewrite tidal stream behaviour to avoid premature cutoff (#3369)" (by @jozefKruszynski in #3593)
-- Fix sync group regressions: proper locking and dynamic leader switch (by @marcelveldt in #3594)
-- Include missing description in automatic artist metadata scan (by @OzGav in #3595)
-- Add protocol awareness and transition guards to sync group player (by @marcelveldt in #3600)
-- Fix party duplicate prevention race (by @marcelveldt in #3601)
-- Subsonic: Fix structured lyrics yet again (by @khers in #3604)
-- Fix player/queue deadlock on multiple simultane (play) actions (by @marcelveldt in #3624)
-- Fix AirPlay late joiner out-of-sync when joining a sync group (by @marcelveldt in #3625)
-- Fix flow mode queue tracking drift on AirPlay dynamic leader switch (by @marcelveldt in #3628)
-
-### 🧰 Maintenance and dependency bumps
-
-- Consolidate smart fades analyzer thread calls to fix asyncio slow-task warning (by @marcelveldt in #3588)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @jozefKruszynski, @khers, @marcelveldt, @teancom
 
 
