@@ -1,3 +1,38 @@
+# [2.9.0.dev2026042405] - 24.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026042304](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042304)_
+
+### 🚀 Features and enhancements
+
+- Improve TuneIn browse, search and add recommendations (by @dmoo500 in #3764)
+- Add recommendation translation keys for QQ and NetEase (by @xiasi0 in #3778)
+- Revert "AirPlay 2 provider now supports sync" (by @MarvinSchenkel in #3780)
+
+### 🐛 Bugfixes
+
+- Fix 30s delay after switching tracks on Sendspin (by @maximmaxim345 in #3777)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump ya-passport-auth to 1.3.0 for Yandex Smart Home provider (by @trudenboy in #3746)
+- Consolidate tidal constants for urls and paths (by @jozefKruszynski in #3768)
+- Resolve TODOs in metadata controller (by @OzGav in #3771)
+- Remove code in the config controller commented for removal post the 2.8 release  (by @OzGav in #3772)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @dmoo500, @jozefKruszynski, @maximmaxim345, @trudenboy, @xiasi0
+
+
 # [2.9.0.dev2026042304] - 23.04.2026
 
 ## 📦 Nightly Release
@@ -44,44 +79,5 @@ _Changes since [2.9.0.dev2026042114](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel
-
-
-# [2.9.0.dev2026042114] - 21.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026042104](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042104)_
-
-### 🚀 New Providers
-
-- WiiM provider (by @davidanthoff in #2947)
-
-### 🐛 Bugfixes
-
-- AirPlay 2 provider now supports sync (by @bradkeifer in #3750)
-- Fix enqueue action 'replace' stopping the music (by @MarvinSchenkel in #3753)
-- Qobuz: fix credential leak on 401 and populate date_added (by @OzGav in #3754)
-- Implement power control function for squeezelite (by @MarvinSchenkel in #3755)
-- Bump `aiosendspin` to 5.1.1 to fix audio stuttering (by @maximmaxim345 in #3756)
-- Fix manual genres disappearing after a cleanup run (by @MarvinSchenkel in #3757)
-- Fix Chromecast player disappearing after MA restart (by @maximmaxim345 in #3758)
-- Fix HLS EXTINF metadata parsing for standard format radio streams (by @OzGav in #3759)
-
-### 🎨 Frontend Changes
-
-- Extend player bar track menu to also show for radio stations (by @dmoo500 in [#1674](https://github.com/music-assistant/frontend/pull/1674))
-- Improve performance with GPU compositing and lyrics guard (by @apophisnow in [#1671](https://github.com/music-assistant/frontend/pull/1671))
-- Fix issue "checkbox are not aligned with text when multi-selecting" (by @SimeonAT in [#1500](https://github.com/music-assistant/frontend/pull/1500))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump tomli from 2.3.0 to 2.4.1 (by @dependabot[bot] in #3749)
-- ⬆️ Update music-assistant-frontend to 2.17.150 (by @music-assistant-machine in #3752)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @SimeonAT, @apophisnow, @bradkeifer, @davidanthoff, @dmoo500, @maximmaxim345
 
 
