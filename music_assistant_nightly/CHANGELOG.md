@@ -1,3 +1,20 @@
+# [2.9.0.dev2026042505] - 25.04.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026042405](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042405)_
+
+### 🐛 Bugfixes
+
+- Fix YTMusic stream format selection (by @greenmansuperhero in #3784)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@greenmansuperhero
+
+
 # [2.9.0.dev2026042405] - 24.04.2026
 
 ## 📦 Nightly Release
@@ -58,26 +75,5 @@ _Changes since [2.9.0.dev2026042115](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @jozefKruszynski, @stvncode
-
-
-# [2.9.0.dev2026042115] - 21.04.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026042114](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026042114)_
-
-### 🎨 Frontend Changes
-
-- Revert "Improve performance with GPU compositing and lyrics guard" (by @MarvinSchenkel in [#1724](https://github.com/music-assistant/frontend/pull/1724))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.151 (by @music-assistant-machine in #3760)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
