@@ -1,0 +1,11 @@
+build_from:
+  aarch64: ghcr.io/home-assistant/aarch64-base:3.20
+  amd64: ghcr.io/home-assistant/amd64-base:3.20
+  armhf: ghcr.io/home-assistant/armhf-base:3.20
+  armv7: ghcr.io/home-assistant/armv7-base:3.20
+  i386: ghcr.io/home-assistant/i386-base:3.20
+labels:
+  org.opencontainers.image.title: "Home Assistant Add-on: NetEase Cloud Music API"
+  org.opencontainers.image.description: "Run NeteaseCloudMusicApiEnhanced API service for Music Assistant."
+  org.opencontainers.image.source: "https://github.com/xiasi0/ha-addon-netease-cloud-music-api"
+  org.opencontainers.image.licenses: "MIT"
