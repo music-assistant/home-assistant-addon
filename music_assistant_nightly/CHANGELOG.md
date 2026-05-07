@@ -1,3 +1,20 @@
+# [2.9.0.dev2026050706] - 07.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026050614](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026050614)_
+
+### 🐛 Bugfixes
+
+- Allow AirPlay2 devices to be selected for synchronised playback (by @bradkeifer in #3847)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@bradkeifer
+
+
 # [2.9.0.dev2026050614] - 06.05.2026
 
 ## 📦 Nightly Release
@@ -63,22 +80,5 @@ _Changes since [2.9.0.dev2026050406](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @PeterPalenik, @chrisuthe, @dmoo500, @sprocket-9
-
-
-# [2.9.0.dev2026050406] - 04.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026050205](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026050205)_
-
-### 🐛 Bugfixes
-
-- Fix Spotify playlists failing when track count is a multiple of 50 (by @gitviola in #3818)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@gitviola
 
 
