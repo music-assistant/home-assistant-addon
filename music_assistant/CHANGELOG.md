@@ -1,3 +1,40 @@
+# [2.8.7] - 08.05.2026
+
+## 📦 Stable Release
+
+_Changes since [2.8.6](https://github.com/music-assistant/server/releases/tag/2.8.6)_
+
+### 🚀 Features and enhancements
+
+- Emby Music Provider: add audio format to stream details (by @hatharry in #3796)
+
+### 🐛 Bugfixes
+
+- Workaround for "Youtube Music playlist stalls on uploaded music" music-assistant/support#4469 (by @whitty in #3156)
+- Fix volume of Sendspin bridge players defaulting to 100% (by @maximmaxim345 in #3782)
+- Suppress `StreamStoppedError` when skipping tracks with Sendspin (by @maximmaxim345 in #3783)
+- Fix YTMusic stream format selection (by @greenmansuperhero in #3784)
+- Update MASS_LOGO_ONLINE URL to raw GitHub link (by @h4de5 in #3797)
+- Fix library sync deletion for non-streaming providers (by @OzGav in #3806)
+- bbc_sounds: use LiveStation.id for station identifier (by @MacTheFork in #3807)
+- YTMusic: Add auto mixes to recommendations. (by @MarvinSchenkel in #3816)
+- Airplay: Add debounce to prevent-playback=1 commands (by @MarvinSchenkel in #3817)
+- Fix Spotify playlists failing when track count is a multiple of 50 (by @gitviola in #3818)
+- Snapcast: Adopt orphaned snapserver streams on name collision instead of misreporting as no-free-port (by @PeterPalenik in #3830)
+- Fix output bit depth ignoring supported sample-rate/bit-depth pairs in player settings (by @OzGav in #3842)
+
+### 🧰 Maintenance and dependency bumps
+
+- Use /playlists/{id}/items endpoint (Spotify Feb 2026 API change) (by @Yipsh in #3436)
+- Spotify: Update get_artist_albums limit, log error messages, guard methods (by @delatt in #3762)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MacTheFork, @MarvinSchenkel, @OzGav, @PeterPalenik, @Yipsh, @delatt, @gitviola, @greenmansuperhero, @h4de5, @hatharry, @maximmaxim345, @whitty
+
+
 # [2.8.6] - 23.04.2026
 
 ## 📦 Stable Release
@@ -87,16 +124,5 @@ _Changes since [2.8.4](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @LosCV29, @MarvinSchenkel, @OzGav, @fmunkes, @jasonhollis, @marcelveldt, @staticdev
-
-
-# [2.8.4] - 13.04.2026
-
-## 📦 Stable Release
-
-_Changes since [2.8.3](https://github.com/music-assistant/server/releases/tag/2.8.3)_
-
-### Other Changes
-
-- [Backport to stable] 2.8.4 (by @github-actions[bot] in #3634)
 
 
