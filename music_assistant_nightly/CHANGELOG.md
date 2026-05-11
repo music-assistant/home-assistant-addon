@@ -1,3 +1,20 @@
+# [2.9.0.dev2026051106] - 11.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026050905](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026050905)_
+
+### 🚀 Features and enhancements
+
+- TuneIn: add translation_key to trending recommendations folder (by @dmoo500 in #3865)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@dmoo500
+
+
 # [2.9.0.dev2026050905] - 09.05.2026
 
 ## 📦 Nightly Release
@@ -43,22 +60,5 @@ _Changes since [2.9.0.dev2026050706](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @mike-sheppard, @staticdev, @whitty
-
-
-# [2.9.0.dev2026050706] - 07.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026050614](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026050614)_
-
-### 🐛 Bugfixes
-
-- Allow AirPlay2 devices to be selected for synchronised playback (by @bradkeifer in #3847)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@bradkeifer
 
 
