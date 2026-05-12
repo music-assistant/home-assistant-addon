@@ -1,3 +1,54 @@
+# [2.9.0b11] - 12.05.2026
+
+## 📦 Beta Release
+
+_Changes since [2.9.0b10](https://github.com/music-assistant/server/releases/tag/2.9.0b10)_
+
+### 🚀 Features and enhancements
+
+- Add player filter to scrobble providers (by @Tommatheussen in #3823)
+- Add manual IP addresses setting to the Sendspin provider (by @staticdev in #3846)
+- Detect Sendspin Cast Receiver failures and show them in the frontend (by @maximmaxim345 in #3853)
+- TuneIn: add translation_key to trending recommendations folder (by @dmoo500 in #3865)
+- TuneIn: store image URLs as HTTPS instead of HTTP (by @dmoo500 in #3868)
+
+### 🐛 Bugfixes
+
+- Workaround for "Youtube Music playlist stalls on uploaded music" music-assistant/support#4469 (by @whitty in #3156)
+- Fix protocol recovery with missing cached parent (by @prydie in #3829)
+- Set NTS stations + mixtape images to square aspect (by @mike-sheppard in #3850)
+- Fix imageproxy URL encoding for paths containing only spaces (by @OzGav in #3863)
+- Tolerate non-UTF-8 metadata in DLNA SOAP/NOTIFY responses (by @OzGav in #3864)
+- Fix event loop blocks when building the crossfade buffer (by @MarvinSchenkel in #3867)
+- Emby Music Provider: scrobble tracks only (by @hatharry in #3871)
+- Disable zone handling for a disabled player in MusicCast (by @fmunkes in #3872)
+- Fix AA Background Processing to not Monopolize CPU (by @chrisuthe in #3873)
+- Fix media progress retrieval for open sessions in Audiobookshelf (by @fmunkes in #3879)
+- Fix silence after warmup buffer period (by @MarvinSchenkel in #3880)
+
+### 🎨 Frontend Changes
+
+- Add trending_stations translation key for TuneIn recommendations (by @dmoo500 in [#1765](https://github.com/music-assistant/frontend/pull/1765))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Eliminate unused referencs to sync adjust.  (by @bradkeifer in #3852)
+- Bump python-fullykiosk from 0.0.14 to 0.0.15 (by @dependabot[bot] in #3876)
+- Bump mypy from 1.19.1 to 2.1.0 (by @dependabot[bot] in #3877)
+- ⬆️ Update music-assistant-frontend to 2.17.155 (by @music-assistant-machine in #3878)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Tommatheussen, @bradkeifer, @chrisuthe, @dmoo500, @fmunkes, @hatharry, @maximmaxim345, @mike-sheppard, @prydie, @staticdev, @whitty
+
+
 # [2.9.0b10] - 07.05.2026
 
 ## 📦 Beta Release
@@ -127,78 +178,5 @@ _Changes since [2.9.0b8](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @dmoo500, @jozefKruszynski, @maximmaxim345, @stvncode, @trudenboy, @xiasi0
-
-
-# [2.9.0b8] - 21.04.2026
-
-## 📦 Beta Release
-
-_Changes since [2.9.0b7](https://github.com/music-assistant/server/releases/tag/2.9.0b7)_
-
-### 🚀 New Providers
-
-- WiiM provider (by @davidanthoff in #2947)
-- Add MusicMe music provider (by @JulienDeveaux in #3393)
-- Add Yandex Smart Home plugin provider (by @trudenboy in #3615)
-- Add NetEase Cloud Music provider (by @xiasi0 in #3640)
-- Add iTunes artwork metadata provider (by @OzGav in #3740)
-
-### 🚀 Features and enhancements
-
-- Add artist artwork display for radio streams (by @OzGav in #3110)
-- Add min and max volume functionality per player (by @OzGav in #3360)
-- Smart crossfade: Add gradual timestretching (by @MarvinSchenkel in #3737)
-- Last FM: Add one-click auth (by @duanyutong in #3739)
-
-### 🐛 Bugfixes
-
-- Adjust Spotify endpoints post deprecation notice (by @OzGav in #3303)
-- Fix ffmpeg process leak in smart fades mixer on aborted playback (by @marcelveldt in #3725)
-- Raise smart fades chunk timeout to 1s and log block duration (by @marcelveldt in #3728)
-- Harden AirPlay STOP command delivery and add teardown logging (by @marcelveldt in #3729)
-- Prevent concurrent flow-stream producers from corrupting the playlog (by @marcelveldt in #3731)
-- Guard Sonos volume attribute update against uninitialized state (by @marcelveldt in #3732)
-- Fix ORF Radiothek browse reverting to top level (by @OzGav in #3733)
-- Preserve multi-value album type across all tag parsers (by @OzGav in #3743)
-- QQ Music: persist full credential and refresh state (by @xiasi0 in #3744)
-- [Soundcloud]: improving search (by @fionn-r in #3745)
-- AirPlay 2 provider now supports sync (by @bradkeifer in #3750)
-- Fix enqueue action 'replace' stopping the music (by @MarvinSchenkel in #3753)
-- Qobuz: fix credential leak on 401 and populate date_added (by @OzGav in #3754)
-- Implement power control function for squeezelite (by @MarvinSchenkel in #3755)
-- Bump `aiosendspin` to 5.1.1 to fix audio stuttering (by @maximmaxim345 in #3756)
-- Fix manual genres disappearing after a cleanup run (by @MarvinSchenkel in #3757)
-- Fix Chromecast player disappearing after MA restart (by @maximmaxim345 in #3758)
-- Fix HLS EXTINF metadata parsing for standard format radio streams (by @OzGav in #3759)
-
-### 🎨 Frontend Changes
-
-- Extend player bar track menu to also show for radio stations (by @dmoo500 in [#1674](https://github.com/music-assistant/frontend/pull/1674))
-- Improve performance with GPU compositing and lyrics guard (by @apophisnow in [#1671](https://github.com/music-assistant/frontend/pull/1671))
-- Fix issue "checkbox are not aligned with text when multi-selecting" (by @SimeonAT in [#1500](https://github.com/music-assistant/frontend/pull/1500))
-- Revert "Improve performance with GPU compositing and lyrics guard" (by @MarvinSchenkel in [#1724](https://github.com/music-assistant/frontend/pull/1724))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- Split Apple Music provider into modular structure (by @dmoo500 in #3715)
-- Bump auntie-sounds to 1.1.8 (by @kieranhogg in #3723)
-- Migrate loudness analyzer to audio analysis provider (by @marcelveldt in #3727)
-- Add pactl to base Docker file (by @iVolt1 in #3734)
-- Add an opt-out config entry for radio artwork lookup (by @OzGav in #3741)
-- Add docs link to MusicMe manifest (by @OzGav in #3742)
-- Bump tomli from 2.3.0 to 2.4.1 (by @dependabot[bot] in #3749)
-- ⬆️ Update music-assistant-frontend to 2.17.150 (by @music-assistant-machine in #3752)
-- ⬆️ Update music-assistant-frontend to 2.17.151 (by @music-assistant-machine in #3760)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@JulienDeveaux, @MarvinSchenkel, @OzGav, @SimeonAT, @apophisnow, @bradkeifer, @davidanthoff, @dmoo500, @duanyutong, @fionn-r, @iVolt1, @kieranhogg, @marcelveldt, @maximmaxim345, @trudenboy, @xiasi0
 
 
