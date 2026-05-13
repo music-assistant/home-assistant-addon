@@ -1,3 +1,29 @@
+# [2.9.0.dev2026051306] - 13.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026051213](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051213)_
+
+### 🚀 Features and enhancements
+
+- Allow Plugin Providers and Metadata providers to implement music related ProviderFeatures (by @MarvinSchenkel in #3811)
+- Support German radio station metadata (by @OzGav in #3881)
+
+### 🎨 Frontend Changes
+
+- Enable asynchronous download in lokalise workflow (by @OzGav in [#1766](https://github.com/music-assistant/frontend/pull/1766))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.156 (by @music-assistant-machine in #3884)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav
+
+
 # [2.9.0.dev2026051213] - 12.05.2026
 
 ## 📦 Nightly Release
@@ -52,22 +78,5 @@ _Changes since [2.9.0.dev2026051106](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @dmoo500, @hatharry, @maximmaxim345
-
-
-# [2.9.0.dev2026051106] - 11.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026050905](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026050905)_
-
-### 🚀 Features and enhancements
-
-- TuneIn: add translation_key to trending recommendations folder (by @dmoo500 in #3865)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@dmoo500
 
 
