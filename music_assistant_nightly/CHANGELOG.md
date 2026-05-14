@@ -1,3 +1,28 @@
+# [2.9.0.dev2026051406] - 14.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026051306](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051306)_
+
+### 🚀 Features and enhancements
+
+- Apple Music similar artists via views=similar-artists API (by @dmoo500 in #3861)
+
+### 🐛 Bugfixes
+
+- Yandex music: captcha-aware 429 handling, per-kind throttling, file-info cache (v3.5.4) (by @trudenboy in #3882)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.118 (by @music-assistant-machine in #3888)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@dmoo500, @trudenboy
+
+
 # [2.9.0.dev2026051306] - 13.05.2026
 
 ## 📦 Nightly Release
@@ -51,32 +76,5 @@ _Changes since [2.9.0.dev2026051207](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @dmoo500, @fmunkes
-
-
-# [2.9.0.dev2026051207] - 12.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026051106](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051106)_
-
-### 🚀 Features and enhancements
-
-- Add player filter to scrobble providers (by @Tommatheussen in #3823)
-- Detect Sendspin Cast Receiver failures and show them in the frontend (by @maximmaxim345 in #3853)
-- TuneIn: store image URLs as HTTPS instead of HTTP (by @dmoo500 in #3868)
-
-### 🐛 Bugfixes
-
-- Fix imageproxy URL encoding for paths containing only spaces (by @OzGav in #3863)
-- Tolerate non-UTF-8 metadata in DLNA SOAP/NOTIFY responses (by @OzGav in #3864)
-- Fix event loop blocks when building the crossfade buffer (by @MarvinSchenkel in #3867)
-- Emby Music Provider: scrobble tracks only (by @hatharry in #3871)
-- Fix AA Background Processing to not Monopolize CPU (by @chrisuthe in #3873)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @dmoo500, @hatharry, @maximmaxim345
 
 
