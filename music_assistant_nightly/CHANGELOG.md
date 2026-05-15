@@ -1,3 +1,20 @@
+# [2.9.0.dev2026051506] - 15.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026051406](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051406)_
+
+### 🚀 New Providers
+
+- Add Sonic Analysis audio-analysis provider (CLAP-driven scalars + embedding) (by @chrisuthe in #3795)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@chrisuthe
+
+
 # [2.9.0.dev2026051406] - 14.05.2026
 
 ## 📦 Nightly Release
@@ -47,34 +64,5 @@ _Changes since [2.9.0.dev2026051213](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav
-
-
-# [2.9.0.dev2026051213] - 12.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026051207](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051207)_
-
-### 🐛 Bugfixes
-
-- Disable zone handling for a disabled player in MusicCast (by @fmunkes in #3872)
-- Fix media progress retrieval for open sessions in Audiobookshelf (by @fmunkes in #3879)
-- Fix silence after warmup buffer period (by @MarvinSchenkel in #3880)
-
-### 🎨 Frontend Changes
-
-- Add trending_stations translation key for TuneIn recommendations (by @dmoo500 in [#1765](https://github.com/music-assistant/frontend/pull/1765))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump python-fullykiosk from 0.0.14 to 0.0.15 (by @dependabot[bot] in #3876)
-- Bump mypy from 1.19.1 to 2.1.0 (by @dependabot[bot] in #3877)
-- ⬆️ Update music-assistant-frontend to 2.17.155 (by @music-assistant-machine in #3878)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @dmoo500, @fmunkes
 
 
