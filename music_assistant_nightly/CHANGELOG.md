@@ -1,3 +1,20 @@
+# [2.9.0.dev2026051706] - 17.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026051606](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051606)_
+
+### 🚀 Features and enhancements
+
+- Fix double sendspin bridges for devices with both Airplay and Cast (by @MarvinSchenkel in #3854)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel
+
+
 # [2.9.0.dev2026051606] - 16.05.2026
 
 ## 📦 Nightly Release
@@ -43,30 +60,5 @@ _Changes since [2.9.0.dev2026051406](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @chrisuthe
-
-
-# [2.9.0.dev2026051406] - 14.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026051306](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051306)_
-
-### 🚀 Features and enhancements
-
-- Apple Music similar artists via views=similar-artists API (by @dmoo500 in #3861)
-
-### 🐛 Bugfixes
-
-- Yandex music: captcha-aware 429 handling, per-kind throttling, file-info cache (v3.5.4) (by @trudenboy in #3882)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.118 (by @music-assistant-machine in #3888)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@dmoo500, @trudenboy
 
 
