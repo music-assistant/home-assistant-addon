@@ -1,3 +1,36 @@
+# [2.9.0b13] - 20.05.2026
+
+## 📦 Beta Release
+
+_Changes since [2.9.0b12](https://github.com/music-assistant/server/releases/tag/2.9.0b12)_
+
+### 🐛 Bugfixes
+
+- Remove initial_delay to fix duplicate lastfm recommendation rows (by @OzGav in #3920)
+- Fix server crash on non-RGB cover art in palette extractor (by @OzGav in #3921)
+- Sonos S1: Implement select_source for line-in support (by @MarvinSchenkel in #3925)
+- Streams: Handle empty supported_sample_rates in get_output_format (by @MarvinSchenkel in #3926)
+- Fix HEOS showing incorrect Now Playing (by @Tommatheussen in #3928)
+- Close coroutines when submitted in rapid succession (by @MarvinSchenkel in #3929)
+- Fix issues with M4B audiobooks (by @OzGav in #3930)
+
+### 🎨 Frontend Changes
+
+- Fix Audio Pipeline volume normalisation line (by @OzGav in [#1752](https://github.com/music-assistant/frontend/pull/1752))
+- Fix genre casing (by @OzGav in [#1744](https://github.com/music-assistant/frontend/pull/1744))
+
+### 🧰 Maintenance and dependency bumps
+
+- Improve lastfm recommendations (by @OzGav in #3922)
+- ⬆️ Update music-assistant-frontend to 2.17.160 (by @music-assistant-machine in #3927)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Tommatheussen
+
+
 # [2.9.0b12] - 19.05.2026
 
 ## 📦 Beta Release
@@ -125,93 +158,5 @@ _Changes since [2.9.0b10](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @bradkeifer, @chrisuthe, @dmoo500, @fmunkes, @hatharry, @maximmaxim345, @mike-sheppard, @prydie, @staticdev, @whitty
-
-
-# [2.9.0b10] - 07.05.2026
-
-## 📦 Beta Release
-
-_Changes since [2.9.0b9](https://github.com/music-assistant/server/releases/tag/2.9.0b9)_
-
-### 🚀 New Providers
-
-- Add Yandex Music Connect (Ynison) plugin provider (by @trudenboy in #3614)
-- Add NTS Radio (Music Provider) (by @mike-sheppard in #3722)
-
-### 🚀 Features and enhancements
-
-- kion_music: upgrade to yandex-music v3 - raw/enc FLAC, lyrics, similar artists, browse (by @trudenboy in #3234)
-- Yandex Music: rotor session API, Wave Modes, user presets, library sync improvements (by @trudenboy in #3606)
-- Update yandex_smarthome provider to v1.4.5 — auto-create skill flow (by @trudenboy in #3785)
-- Enrich Sendspin metadata with track number, year, album artist, and artist artwork (by @OnFreund in #3788)
-- Set PlayerFeature.SELECT_SOURCE when the FINAL source list is multi-entry (by @rnewman in #3789)
-- Add custom playlist image functionality to local file provider (by @OzGav in #3794)
-- Emby Music Provider: add audio format to stream details (by @hatharry in #3796)
-- Emby Music Provider: add on played event handler (by @hatharry in #3805)
-- Throttle torch to max 25% of CPU to prevent spikes during analysis (by @MarvinSchenkel in #3808)
-- Add option to use local genre metadata only when available (by @OzGav in #3815)
-
-### 🐛 Bugfixes
-
-- Neteasecloudmusic: Stabilize login, recommendations, and dynamic radio playback (by @xiasi0 in #3761)
-- Handle syncing for cases where session establishment is both early and late for adhering to required ntpstart value (by @bradkeifer in #3776)
-- Fix volume of Sendspin bridge players defaulting to 100% (by @maximmaxim345 in #3782)
-- Suppress `StreamStoppedError` when skipping tracks with Sendspin (by @maximmaxim345 in #3783)
-- Fix YTMusic stream format selection (by @greenmansuperhero in #3784)
-- Nicovideo: Fix watch history API endpoint (v1 → v2) (by @Shi-553 in #3791)
-- Update MASS_LOGO_ONLINE URL to raw GitHub link (by @h4de5 in #3797)
-- WiiM: Set the default max sample rate to 96kHz (by @teancom in #3798)
-- Bump wiim SDK to 0.1.4 to fix track transition tracking (by @teancom in #3801)
-- Fix library sync deletion for non-streaming providers (by @OzGav in #3806)
-- bbc_sounds: use LiveStation.id for station identifier (by @MacTheFork in #3807)
-- Decrease buffer warmup duration to 8s (by @MarvinSchenkel in #3814)
-- YTMusic: Add auto mixes to recommendations. (by @MarvinSchenkel in #3816)
-- Airplay: Add debounce to prevent-playback=1 commands (by @MarvinSchenkel in #3817)
-- Fix Spotify playlists failing when track count is a multiple of 50 (by @gitviola in #3818)
-- Fix queue restore: call from_cache to reconstruct radio_source and enqueued_media_items (by @dmoo500 in #3827)
-- Snapcast: Adopt orphaned snapserver streams on name collision instead of misreporting as no-free-port (by @PeterPalenik in #3830)
-- Fix sync issues with Sendspin players (by @maximmaxim345 in #3840)
-- Fix Sendspin Cast bridge silently failing to set up (by @maximmaxim345 in #3841)
-- Fix output bit depth ignoring supported sample-rate/bit-depth pairs in player settings (by @OzGav in #3842)
-- Bump `aiosendspin` to 5.2.0 to fix slow desyncing at some player sample rates (by @maximmaxim345 in #3845)
-- Allow AirPlay2 devices to be selected for synchronised playback (by @bradkeifer in #3847)
-
-### Other Changes
-
-- Stream PCM to audio analysis providers during background scan (by @chrisuthe in #3821)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>20 changes</summary>
-
-- Spotify: Update get_artist_albums limit, log error messages, guard methods (by @delatt in #3762)
-- Rename icon in audio analysis manifest.json (by @OzGav in #3781)
-- Add comments to demo player provider for sound modes and player options (by @fmunkes in #3790)
-- Add description for "Hide player in UI" setting (by @OzGav in #3792)
-- Bump deno from 2.7.4 to 2.7.12 (by @dependabot[bot] in #3799)
-- ⬆️ Update music-assistant-frontend to 2.17.153 (by @music-assistant-machine in #3802)
-- Bump pytest from 9.0.2 to 9.0.3 (by @dependabot[bot] in #3803)
-- Maintenance: sort provider dirs in gen_requirements_all for deterministic output (by @trudenboy in #3804)
-- Refine description for 'Hide in UI' config entry (by @OzGav in #3809)
-- ⬆️ Update music-assistant-models to 1.1.116 (by @music-assistant-machine in #3810)
-- ⬆️ Update music-assistant-frontend to 2.17.154 (by @music-assistant-machine in #3812)
-- Bump actions/download-artifact from 4 to 8 (by @dependabot[bot] in #3819)
-- Bump actions/upload-artifact from 4 to 7 (by @dependabot[bot] in #3820)
-- Revert "Remaintain jellyfin (#3528)" (by @staticdev in #3822)
-- VBAN Receiver update (by @sprocket-9 in #3825)
-- Radio Paradise small cleanup (by @teancom in #3826)
-- Change Snapcast stage from stable to unmaintained (by @OzGav in #3835)
-- Enhance warning for Spotify top tracks fetch failure (by @OzGav in #3837)
-- Bump soco from 0.30.14 to 0.31.0 (by @dependabot[bot] in #3838)
-- ⬆️ Update music-assistant-models to 1.1.117 (by @music-assistant-machine in #3839)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MacTheFork, @MarvinSchenkel, @OnFreund, @OzGav, @PeterPalenik, @Shi-553, @bradkeifer, @chrisuthe, @delatt, @dmoo500, @fmunkes, @gitviola, @greenmansuperhero, @h4de5, @hatharry, @maximmaxim345, @mike-sheppard, @rnewman, @sprocket-9, @staticdev, @teancom, @trudenboy, @xiasi0
 
 
