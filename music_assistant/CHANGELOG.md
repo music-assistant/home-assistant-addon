@@ -1,3 +1,36 @@
+# [2.8.8] - 22.05.2026
+
+## 📦 Stable Release
+
+_Changes since [2.8.7](https://github.com/music-assistant/server/releases/tag/2.8.7)_
+
+### 🚀 Features and enhancements
+
+- Support German radio station metadata (by @OzGav in #3881)
+
+### 🐛 Bugfixes
+
+- Fix protocol recovery with missing cached parent (by @prydie in #3829)
+- Fix output bit depth ignoring supported sample-rate/bit-depth pairs in player settings (by @OzGav in #3842)
+- Fix imageproxy URL encoding for paths containing only spaces (by @OzGav in #3863)
+- Tolerate non-UTF-8 metadata in DLNA SOAP/NOTIFY responses (by @OzGav in #3864)
+- Disable zone handling for a disabled player in MusicCast (by @fmunkes in #3872)
+- Fix media progress retrieval for open sessions in Audiobookshelf (by @fmunkes in #3879)
+- Fix Airplay not stopping stream on some devices. (by @MarvinSchenkel in #3903)
+- Squeezelite: Honor per-player output_codec in multi-client sync URL (by @MarvinSchenkel in #3924)
+- Sonos S1: Implement select_source for line-in support (by @MarvinSchenkel in #3925)
+- Streams: Handle empty supported_sample_rates in get_output_format (by @MarvinSchenkel in #3926)
+- Fix HEOS showing incorrect Now Playing (by @Tommatheussen in #3928)
+- Close coroutines when submitted in rapid succession (by @MarvinSchenkel in #3929)
+- Fix HEOS queue cleanup slowing down other commands (by @Tommatheussen in #3932)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Tommatheussen, @fmunkes, @prydie
+
+
 # [2.8.7] - 08.05.2026
 
 ## 📦 Stable Release
@@ -68,61 +101,5 @@ _Changes since [2.8.5](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @fionn-r, @jozefKruszynski, @kieranhogg, @marcelveldt, @maximmaxim345
-
-
-# [2.8.5] - 17.04.2026
-
-## 📦 Stable Release
-
-_Changes since [2.8.4](https://github.com/music-assistant/server/releases/tag/2.8.4)_
-
-### 🚀 Features and enhancements
-
-- Apple Music: Add Unicode NFC normalization for artist/album/track names (by @jasonhollis in #2631)
-- Apple Music: Add content rating check for explicit tracks (by @LosCV29 in #3514)
-- Apple Music: Add content rating check for explicit tracks (by @LosCV29 in #3669)
-
-### 🐛 Bugfixes
-
-- Fix AirPlay DACP volume control for Sonos speakers (by @marcelveldt in #3654)
-- Fix queue items showing zero/unknown duration (by @marcelveldt in #3668)
-- Tweak imageproxy (by @MarvinSchenkel in #3671)
-- Several fixes for synced playback stability (by @marcelveldt in #3672)
-- Filter stale podcast episodes (by @OzGav in #3673)
-- Sendspin: guard against negative track_progress in metadata (by @marcelveldt in #3681)
-- Fix sync group session lifecycle and AirPlay late joiner sync (by @marcelveldt in #3682)
-- Automatically clean up loudness measurements on media item deletion (by @MarvinSchenkel in #3687)
-- Fix multiple (virtual) devices on the same host being merged. (by @MarvinSchenkel in #3688)
-- Fix sync group dissolve+reform race with async providers (by @marcelveldt in #3691)
-- Fix Jellyfin multidisc albums with same named tracks (by @MarvinSchenkel in #3692)
-- Fix Volume control for Bluesound native devices (by @MarvinSchenkel in #3693)
-- Fix race condition in AirPlay stream session client removal (by @marcelveldt in #3698)
-- Improve loudness measurement robustness (by @marcelveldt in #3703)
-- Fix smart fades mixer sometimes choking up the flow stream + Smart Fades provider not starting on ARM (by @MarvinSchenkel in #3706)
-- Bump aiohttp to 3.13.5 and ibroadcastaio to 0.6.0 (by @staticdev in #3707)
-- Fix syncgroup state derivation and tighten lifecycle handling (by @marcelveldt in #3709)
-- Fix duration parsing for M3U playlist items (by @marcelveldt in #3714)
-- Fix AirPlay cleanup idling re-added clients (by @marcelveldt in #3716)
-- Fix sync leader child state forwarding (by @marcelveldt in #3717)
-- Forward syncgroup join/unjoin to the syncgroup player (by @marcelveldt in #3718)
-- Fix audiobook controller not using userid in library_items call (by @fmunkes in #3719)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- [Backport to stable] 2.8.2 (by @marcelveldt in #3564)
-- Add diagnostics for AirPlay stream stalls and increase flow buffer (by @marcelveldt in #3696)
-- Remove temporary airplay diagnostics (by @marcelveldt in #3720)
-- Fix power control for squeezelite (by @marcelveldt in #3721)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@LosCV29, @MarvinSchenkel, @OzGav, @fmunkes, @jasonhollis, @marcelveldt, @staticdev
 
 
