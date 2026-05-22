@@ -1,3 +1,20 @@
+# [2.9.0.dev2026052206] - 22.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026052106](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052106)_
+
+### 🐛 Bugfixes
+
+- Fix HEOS queue cleanup slowing down other commands (by @Tommatheussen in #3932)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Tommatheussen
+
+
 # [2.9.0.dev2026052106] - 21.05.2026
 
 ## 📦 Nightly Release
@@ -50,50 +67,5 @@ _Changes since [2.9.0.dev2026052006](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen
-
-
-# [2.9.0.dev2026052006] - 20.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026051906](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026051906)_
-
-### 🚀 Features and enhancements
-
-- Implement the `color@v1` Sendspin role (by @maximmaxim345 in #3917)
-- Fix WiiM external source reporting (by @MarvinSchenkel in #3918)
-
-### 🐛 Bugfixes
-
-- Fix Airplay not stopping stream on some devices. (by @MarvinSchenkel in #3903)
-- Fix Hue sync bridge not being able to join to players with a sendspin bridge (by @MarvinSchenkel in #3904)
-- Remove initial_delay to fix duplicate lastfm recommendation rows (by @OzGav in #3920)
-- Fix server crash on non-RGB cover art in palette extractor (by @OzGav in #3921)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1781](https://github.com/music-assistant/frontend/pull/1781))
-- Show similar artists section on artist detail view (by @dmoo500 in [#1760](https://github.com/music-assistant/frontend/pull/1760))
-- Show similar tracks section on TrackDetails view (by @dmoo500 in [#1776](https://github.com/music-assistant/frontend/pull/1776))
-- Add Lyrics offset functionality (by @OzGav in [#1755](https://github.com/music-assistant/frontend/pull/1755))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Fix support for `Literal` handling in OpenAPI generation (by @loopj in #3908)
-- Remove Sonos from mypy excludes (by @OzGav in #3914)
-- Compute the artwork-derived color palette in the backend (by @maximmaxim345 in #3915)
-- ⬆️ Update music-assistant-models to 1.1.119 (by @music-assistant-machine in #3916)
-- ⬆️ Update music-assistant-frontend to 2.17.159 (by @music-assistant-machine in #3919)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @dmoo500, @loopj, @maximmaxim345
 
 
