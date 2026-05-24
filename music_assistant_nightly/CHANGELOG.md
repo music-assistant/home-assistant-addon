@@ -1,3 +1,47 @@
+# [2.9.0.dev2026052406] - 24.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026052304](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052304)_
+
+### 🚀 Features and enhancements
+
+- audio_analysis: add coverage endpoint + bulk merged accessor for sonic_similarity (by @chrisuthe in #3851)
+- Add Flow Mode sample-rate selection and per-player declared rates (by @marcelveldt in #3951)
+- Improve imageproxy (by @marcelveldt in #3960)
+
+### 🐛 Bugfixes
+
+- Fix stale Sonos cloud queue items and idle radio prebuffer (by @marcelveldt in #3957)
+
+### 🎨 Frontend Changes
+
+- Support new opaque-id imageproxy endpoint (by @marcelveldt in [#1792](https://github.com/music-assistant/frontend/pull/1792))
+- Add "hide fully-played episodes" toggle to podcast details (by @teancom in [#1743](https://github.com/music-assistant/frontend/pull/1743))
+
+### Other Changes
+
+- Add PR template and auto-label from Types of changes checkbox (by @MarvinSchenkel in #3959)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Revert "Resolve universal_player wrappers in UGP stream handler" (by @OzGav in #3956)
+- ⬆️ Update music-assistant-models to 1.1.122 (by @music-assistant-machine in #3958)
+- ⬆️ Update music-assistant-models to 1.1.124 (by @music-assistant-machine in #3962)
+- ⬆️ Update music-assistant-frontend to 2.17.163 (by @music-assistant-machine in #3963)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt, @teancom
+
+
 # [2.9.0.dev2026052304] - 23.05.2026
 
 ## 📦 Nightly Release
@@ -64,28 +108,5 @@ _Changes since [2.9.0.dev2026052106](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @Tommatheussen
-
-
-# [2.9.0.dev2026052106] - 21.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026052010](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052010)_
-
-### 🎨 Frontend Changes
-
-- Fix auto-refresh toggle on server logs page (by @OzGav in [#1784](https://github.com/music-assistant/frontend/pull/1784))
-- Use server-derived color palette via `MediaItemPalette` (by @maximmaxim345 in [#1782](https://github.com/music-assistant/frontend/pull/1782))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.120 (by @music-assistant-machine in #3937)
-- ⬆️ Update music-assistant-frontend to 2.17.161 (by @music-assistant-machine in #3940)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @maximmaxim345
 
 
