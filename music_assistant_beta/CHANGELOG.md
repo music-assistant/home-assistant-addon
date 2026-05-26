@@ -1,3 +1,115 @@
+# [2.9.0b14] - 26.05.2026
+
+## 📦 Beta Release
+
+_Changes since [2.9.0b13](https://github.com/music-assistant/server/releases/tag/2.9.0b13)_
+
+### ⚠ Breaking Changes
+
+- Refactor plugin sources to first-class AudioSource MediaItems (by @marcelveldt in #3938)
+
+### 🚀 New Providers
+
+- Smart playlist plugin (by @dmoo500 in #3630)
+- Add MCP-spec-compliant FastMCP server provider v0.3.20 (by @trudenboy in #3858)
+- Add Acoustid audio analysis provider (by @OzGav in #3892)
+
+### 🚀 Features and enhancements
+
+- Add support for legacy Shoutcast servers using ICY protocol (by @OzGav in #3386)
+- audio_analysis: add coverage endpoint + bulk merged accessor for sonic_similarity (by @chrisuthe in #3851)
+- Set PlayerQueue.is_dynamic when radio_source changes (by @dmoo500 in #3886)
+- Add variable playback speed for audiobooks and podcasts (by @OzGav in #3939)
+- Add stale-while-revalidate option to @use_cache (by @MarvinSchenkel in #3946)
+- Stabilize group players: session-lifecycle instead of mandatory power (by @marcelveldt in #3947)
+- Detect source audio format from ffmpeg log output (by @marcelveldt in #3950)
+- Add Flow Mode sample-rate selection and per-player declared rates (by @marcelveldt in #3951)
+- Improve imageproxy (by @marcelveldt in #3960)
+- AudioSource follow-up (by @marcelveldt in #3964)
+- Use passthrough PCM format for realtime AudioSource items (by @marcelveldt in #3969)
+- Allow scrobble providers to filter by media_type (by @Tommatheussen in #3975)
+- Allow Plugin Providers to implement ProviderFeature.SEARCH (by @MarvinSchenkel in #3978)
+
+### 🐛 Bugfixes
+
+- Fix genre movements when genres are promoted or deleted (by @OzGav in #3923)
+- Squeezelite: Honor per-player output_codec in multi-client sync URL (by @MarvinSchenkel in #3924)
+- Fix HEOS queue cleanup slowing down other commands (by @Tommatheussen in #3932)
+- Fix browse and recommendations not applying user filters (by @MarvinSchenkel in #3934)
+- Restore PlayerQueue.is_dynamic after loading queue from cache (by @dmoo500 in #3948)
+- Resolve universal_player wrappers in UGP stream handler (by @OzGav in #3952)
+- Fix stale Sonos cloud queue items and idle radio prebuffer (by @marcelveldt in #3957)
+- Fix invalid imageproxy size on PlayerMedia URLs (by @marcelveldt in #3966)
+- Prevent server crash on malformed player config entries (by @marcelveldt in #3967)
+- Musiccast stability fixes (by @jhbruhn in #3977)
+- Skip DSP-triggered playback restart when DSP was and remains disabled (by @MarvinSchenkel in #3988)
+- Avoid KeyError when prefetching next-item palette for a player without a queue (by @marcelveldt in #3992)
+- Disable linked protocol players when their parent is disabled (by @marcelveldt in #3993)
+- Emby Music Provider: fix album art (by @hatharry in #3995)
+- Scale background audio-analysis timeout to track duration (by @chrisuthe in #3997)
+
+### 🎨 Frontend Changes
+
+- Fix auto-refresh toggle on server logs page (by @OzGav in [#1784](https://github.com/music-assistant/frontend/pull/1784))
+- Use server-derived color palette via `MediaItemPalette` (by @maximmaxim345 in [#1782](https://github.com/music-assistant/frontend/pull/1782))
+- i18n: add 'inspired_by_recently_played' recommendations key (by @chrisuthe in [#1791](https://github.com/music-assistant/frontend/pull/1791))
+- Add AudioSource media type for plugin sources (by @marcelveldt in [#1786](https://github.com/music-assistant/frontend/pull/1786))
+- Fix copy to clipboard (by @OzGav in [#1742](https://github.com/music-assistant/frontend/pull/1742))
+- Support new opaque-id imageproxy endpoint (by @marcelveldt in [#1792](https://github.com/music-assistant/frontend/pull/1792))
+- Add "hide fully-played episodes" toggle to podcast details (by @teancom in [#1743](https://github.com/music-assistant/frontend/pull/1743))
+- AudioSource follow-up: treat as in-queue infinite stream (by @marcelveldt in [#1793](https://github.com/music-assistant/frontend/pull/1793))
+- Use PlayerQueue.is_dynamic directly (by @dmoo500 in [#1773](https://github.com/music-assistant/frontend/pull/1773))
+- Add audio-analysis page with coverage information to system-> settings (by @chrisuthe in [#1783](https://github.com/music-assistant/frontend/pull/1783))
+- Add sidebar shortcuts for playlists, artists, albums, tracks, radios, podcasts and audiobooks (by @dmoo500 in [#1780](https://github.com/music-assistant/frontend/pull/1780))
+- Add support for variable playback speed (by @OzGav in [#1787](https://github.com/music-assistant/frontend/pull/1787))
+- Hide group count badge on standalone players when not synced (by @KealanAU in [#1790](https://github.com/music-assistant/frontend/pull/1790))
+- Reduce items-per-row at large screen widths (by @MarvinSchenkel in [#1806](https://github.com/music-assistant/frontend/pull/1806))
+- Proposition for menu sections (by @stvncode in [#1808](https://github.com/music-assistant/frontend/pull/1808))
+- Smart playlist UI (by @dmoo500 in [#1693](https://github.com/music-assistant/frontend/pull/1693))
+
+### Other Changes
+
+- Add PR template and auto-label from Types of changes checkbox (by @MarvinSchenkel in #3959)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>24 changes</summary>
+
+- Add DTZ006 mypy rule (by @OzGav in #3525)
+- Surface MusicBrainz artist URL relations as MediaItemLinks (by @OzGav in #3899)
+- ⬆️ Update music-assistant-models to 1.1.120 (by @music-assistant-machine in #3937)
+- ⬆️ Update music-assistant-frontend to 2.17.161 (by @music-assistant-machine in #3940)
+- Bump docker/build-push-action from 7.1.0 to 7.2.0 (by @dependabot[bot] in #3941)
+- ⬆️ Update music-assistant-models to 1.1.121 (by @music-assistant-machine in #3944)
+- Add multiroom transition debug logs to WiiM provider (by @MarvinSchenkel in #3949)
+- ⬆️ Update music-assistant-frontend to 2.17.162 (by @music-assistant-machine in #3954)
+- Revert "Resolve universal_player wrappers in UGP stream handler" (by @OzGav in #3956)
+- ⬆️ Update music-assistant-models to 1.1.122 (by @music-assistant-machine in #3958)
+- ⬆️ Update music-assistant-models to 1.1.124 (by @music-assistant-machine in #3962)
+- ⬆️ Update music-assistant-frontend to 2.17.163 (by @music-assistant-machine in #3963)
+- Use Protocol-bounded TypeVar for @use_cache decorator (by @jdaberkow in #3965)
+- ⬆️ Update music-assistant-frontend to 2.17.164 (by @music-assistant-machine in #3968)
+- audiobookshelf: use from_utc_timestamp helper for ms-epoch conversions (by @OzGav in #3970)
+- ⬆️ Update music-assistant-models to 1.1.125 (by @music-assistant-machine in #3973)
+- Fix audio analysis documentation links (by @SuperSandro2000 in #3981)
+- Bump docker/login-action from 4.1.0 to 4.2.0 (by @dependabot[bot] in #3982)
+- Bump docker/setup-buildx-action from 4.0.0 to 4.1.0 (by @dependabot[bot] in #3983)
+- Bump bandcamp-async-api from 0.1.1 to 0.2.1 (by @dependabot[bot] in #3984)
+- Bump py-opensonic from 9.1.0 to 9.2.0 (by @dependabot[bot] in #3985)
+- Bump pychromecast from 14.0.9 to 14.0.10 (by @dependabot[bot] in #3986)
+- ⬆️ Update music-assistant-frontend to 2.17.165 (by @music-assistant-machine in #3987)
+- ⬆️ Update music-assistant-frontend to 2.17.166 (by @music-assistant-machine in #3998)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@KealanAU, @MarvinSchenkel, @OzGav, @SuperSandro2000, @Tommatheussen, @chrisuthe, @dmoo500, @hatharry, @jdaberkow, @jhbruhn, @marcelveldt, @maximmaxim345, @stvncode, @teancom, @trudenboy
+
+
 # [2.9.0b13] - 20.05.2026
 
 ## 📦 Beta Release
@@ -107,56 +219,5 @@ _Changes since [2.9.0b11](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @Oliver-Stevens, @OzGav, @Tommatheussen, @bartbunting, @chrisuthe, @dmoo500, @khers, @loopj, @marcelveldt, @maximmaxim345, @remon1496, @trudenboy, @xiasi0
-
-
-# [2.9.0b11] - 12.05.2026
-
-## 📦 Beta Release
-
-_Changes since [2.9.0b10](https://github.com/music-assistant/server/releases/tag/2.9.0b10)_
-
-### 🚀 Features and enhancements
-
-- Add player filter to scrobble providers (by @Tommatheussen in #3823)
-- Add manual IP addresses setting to the Sendspin provider (by @staticdev in #3846)
-- Detect Sendspin Cast Receiver failures and show them in the frontend (by @maximmaxim345 in #3853)
-- TuneIn: add translation_key to trending recommendations folder (by @dmoo500 in #3865)
-- TuneIn: store image URLs as HTTPS instead of HTTP (by @dmoo500 in #3868)
-
-### 🐛 Bugfixes
-
-- Workaround for "Youtube Music playlist stalls on uploaded music" music-assistant/support#4469 (by @whitty in #3156)
-- Fix protocol recovery with missing cached parent (by @prydie in #3829)
-- Set NTS stations + mixtape images to square aspect (by @mike-sheppard in #3850)
-- Fix imageproxy URL encoding for paths containing only spaces (by @OzGav in #3863)
-- Tolerate non-UTF-8 metadata in DLNA SOAP/NOTIFY responses (by @OzGav in #3864)
-- Fix event loop blocks when building the crossfade buffer (by @MarvinSchenkel in #3867)
-- Emby Music Provider: scrobble tracks only (by @hatharry in #3871)
-- Disable zone handling for a disabled player in MusicCast (by @fmunkes in #3872)
-- Fix AA Background Processing to not Monopolize CPU (by @chrisuthe in #3873)
-- Fix media progress retrieval for open sessions in Audiobookshelf (by @fmunkes in #3879)
-- Fix silence after warmup buffer period (by @MarvinSchenkel in #3880)
-
-### 🎨 Frontend Changes
-
-- Add trending_stations translation key for TuneIn recommendations (by @dmoo500 in [#1765](https://github.com/music-assistant/frontend/pull/1765))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Eliminate unused referencs to sync adjust.  (by @bradkeifer in #3852)
-- Bump python-fullykiosk from 0.0.14 to 0.0.15 (by @dependabot[bot] in #3876)
-- Bump mypy from 1.19.1 to 2.1.0 (by @dependabot[bot] in #3877)
-- ⬆️ Update music-assistant-frontend to 2.17.155 (by @music-assistant-machine in #3878)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Tommatheussen, @bradkeifer, @chrisuthe, @dmoo500, @fmunkes, @hatharry, @maximmaxim345, @mike-sheppard, @prydie, @staticdev, @whitty
 
 
