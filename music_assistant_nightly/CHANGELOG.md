@@ -1,3 +1,22 @@
+# [2.9.0.dev2026052710] - 27.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026052707](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052707)_
+
+### 🐛 Bugfixes
+
+- Fix lyrics out-of-sync after smart crossfade (by @MarvinSchenkel in #3990)
+- Skip non-music providers in library update callback dispatch (by @dmoo500 in #3999)
+- Keep plugin playlist items visible for users with provider filters (by @dmoo500 in #4002)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @dmoo500
+
+
 # [2.9.0.dev2026052707] - 27.05.2026
 
 ## 📦 Nightly Release
@@ -65,31 +84,5 @@ _Changes since [2.9.0.dev2026052606](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @chrisuthe, @dmoo500, @hatharry, @marcelveldt, @stvncode, @trudenboy
-
-
-# [2.9.0.dev2026052606] - 26.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026052507](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052507)_
-
-### 🚀 Features and enhancements
-
-- Allow scrobble providers to filter by media_type (by @Tommatheussen in #3975)
-
-### 🐛 Bugfixes
-
-- Musiccast stability fixes (by @jhbruhn in #3977)
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix audio analysis documentation links (by @SuperSandro2000 in #3981)
-- ⬆️ Update music-assistant-frontend to 2.17.165 (by @music-assistant-machine in #3987)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@SuperSandro2000, @Tommatheussen, @jhbruhn
 
 
