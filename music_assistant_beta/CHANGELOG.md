@@ -1,3 +1,65 @@
+# [2.9.0b15] - 28.05.2026
+
+## 📦 Beta Release
+
+_Changes since [2.9.0b14](https://github.com/music-assistant/server/releases/tag/2.9.0b14)_
+
+### 🚀 New Providers
+
+- Add Yandex Music Connect (Ynison) (by @trudenboy in #3856)
+- Add Wikipedia provider and associated plumbing (by @OzGav in #3972)
+
+### 🚀 Features and enhancements
+
+- Use MB lookup to resolve ambiguous artist names (by @OzGav in #3862)
+- Sonic Similarity Plugin (by @chrisuthe in #3943)
+- Return a track sample for dynamic playlists when browsing (by @MarvinSchenkel in #4004)
+- Emby Music Provider: add genres (by @hatharry in #4005)
+- Smart Playlist: multi-seed support with album/playlist seeds (by @MarvinSchenkel in #4012)
+
+### 🐛 Bugfixes
+
+- Fix AirPlay receiver album artwork stuck after first track (by @MarvinSchenkel in #3945)
+- Fix lyrics out-of-sync after smart crossfade (by @MarvinSchenkel in #3990)
+- Yandex Music: bump to v3.5.14 — rate-limit mitigation, resilience hardening, security hygiene (by @trudenboy in #3996)
+- Skip non-music providers in library update callback dispatch (by @dmoo500 in #3999)
+- Fix Spotify Connect playback control reliability and error reporting (by @marcelveldt in #4001)
+- Keep plugin playlist items visible for users with provider filters (by @dmoo500 in #4002)
+- Improve Apple Music library album mapping and recommendation fallback (by @dmoo500 in #4006)
+- fastMCP Server: sync 0.3.20→0.3.33 (security, fixes, tests) (by @trudenboy in #4007)
+- Yandex Music: bump to v3.5.15 — captcha mitigation, faster recovery, datacenter safe-mode (by @trudenboy in #4011)
+- fastMCP Server : sync 0.3.33→0.3.35 (synced state + group_volume) (by @trudenboy in #4013)
+
+### 🎨 Frontend Changes
+
+- Fix Smart Playlist seed picker dropping all results when only plugin providers supply SIMILAR_TRACKS (by @chrisuthe in [#1813](https://github.com/music-assistant/frontend/pull/1813))
+- Fix config key default enqueue option radio (by @stvncode in [#1814](https://github.com/music-assistant/frontend/pull/1814))
+- Add confirmation dialog for remove from library (by @stvncode in [#1812](https://github.com/music-assistant/frontend/pull/1812))
+- Smart playlist: Let the user add multiple seeds (by @stvncode in [#1818](https://github.com/music-assistant/frontend/pull/1818))
+- Refactor smart playlist (by @stvncode in [#1817](https://github.com/music-assistant/frontend/pull/1817))
+- Update dynamic playlist overview (by @stvncode in [#1815](https://github.com/music-assistant/frontend/pull/1815))
+- Update modal for add item from URL (by @stvncode in [#1816](https://github.com/music-assistant/frontend/pull/1816))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Refactor Fully Kiosk to single-instance (by @OzGav in #3849)
+- Update log messages (by @OzGav in #4000)
+- Title-case the default genre aliases (by @OzGav in #4003)
+- ⬆️ Update music-assistant-frontend to 2.17.167 (by @music-assistant-machine in #4008)
+- ⬆️ Update music-assistant-frontend to 2.17.168 (by @music-assistant-machine in #4014)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @dmoo500, @hatharry, @marcelveldt, @stvncode, @trudenboy
+
+
 # [2.9.0b14] - 26.05.2026
 
 ## 📦 Beta Release
@@ -141,83 +203,5 @@ _Changes since [2.9.0b12](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen
-
-
-# [2.9.0b12] - 19.05.2026
-
-## 📦 Beta Release
-
-_Changes since [2.9.0b11](https://github.com/music-assistant/server/releases/tag/2.9.0b11)_
-
-### 🚀 New Providers
-
-- Add Last.fm Recommendations metadata provider (by @OzGav in #3020)
-- Add Samsung WAM player provider (by @Oliver-Stevens in #3334)
-- Add Sonic Analysis audio-analysis provider (CLAP-driven scalars + embedding) (by @chrisuthe in #3795)
-
-### 🚀 Features and enhancements
-
-- Allow Plugin Providers and Metadata providers to implement music related ProviderFeatures (by @MarvinSchenkel in #3811)
-- Fix double sendspin bridges for devices with both Airplay and Cast (by @MarvinSchenkel in #3854)
-- Apple Music similar artists via views=similar-artists API (by @dmoo500 in #3861)
-- Support German radio station metadata (by @OzGav in #3881)
-- Improve Listenbrainz multi-artist track scrobbles (by @Tommatheussen in #3887)
-- Improve UX of Sync groups (by @MarvinSchenkel in #3897)
-- Subsonic: Provide close implementation that cleans up (by @khers in #3906)
-- Implement the `color@v1` Sendspin role (by @maximmaxim345 in #3917)
-- Fix WiiM external source reporting (by @MarvinSchenkel in #3918)
-
-### 🐛 Bugfixes
-
-- Yandex music: captcha-aware 429 handling, per-kind throttling, file-info cache (v3.5.4) (by @trudenboy in #3882)
-- Preserve propagated artist / album genres across refreshes (by @OzGav in #3883)
-- Apple Music: fix rotating IDs for recommendation folders and personal stations (by @dmoo500 in #3895)
-- Fix Airplay not stopping stream on some devices. (by @MarvinSchenkel in #3903)
-- Fix Hue sync bridge not being able to join to players with a sendspin bridge (by @MarvinSchenkel in #3904)
-- Fix Apple Music library_add errors (by @dmoo500 in #3907)
-
-### 🎨 Frontend Changes
-
-- Enable asynchronous download in lokalise workflow (by @OzGav in [#1766](https://github.com/music-assistant/frontend/pull/1766))
-- Lokalise: Translations update (by @marcelveldt in [#1769](https://github.com/music-assistant/frontend/pull/1769))
-- Bump PWA precache limit to 5 MiB for larger translation bundle (by @OzGav in [#1772](https://github.com/music-assistant/frontend/pull/1772))
-- A11Y - Improve spoken search clear button label (by @bartbunting in [#1777](https://github.com/music-assistant/frontend/pull/1777))
-- Toggle homescreen edit mode label in user menu (by @dmoo500 in [#1768](https://github.com/music-assistant/frontend/pull/1768))
-- Remove border-radius from sidebar header logo (by @remon1496 in [#1758](https://github.com/music-assistant/frontend/pull/1758))
-- Add translation keys for Recommendations plugin provider (by @dmoo500 in [#1774](https://github.com/music-assistant/frontend/pull/1774))
-- Add Bulgarian translation (by @OzGav in [#1771](https://github.com/music-assistant/frontend/pull/1771))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1781](https://github.com/music-assistant/frontend/pull/1781))
-- Show similar artists section on artist detail view (by @dmoo500 in [#1760](https://github.com/music-assistant/frontend/pull/1760))
-- Show similar tracks section on TrackDetails view (by @dmoo500 in [#1776](https://github.com/music-assistant/frontend/pull/1776))
-- Add Lyrics offset functionality (by @OzGav in [#1755](https://github.com/music-assistant/frontend/pull/1755))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>15 changes</summary>
-
-- Bump plexapi from 4.17.2 to 4.18.1 (by @dependabot[bot] in #3598)
-- Add DTZ005 mypy rule (by @OzGav in #3770)
-- ⬆️ Update music-assistant-frontend to 2.17.156 (by @music-assistant-machine in #3884)
-- ⬆️ Update music-assistant-models to 1.1.118 (by @music-assistant-machine in #3888)
-- ⬆️ Update music-assistant-frontend to 2.17.157 (by @music-assistant-machine in #3889)
-- Add WeChat QR login for QQ Music (by @xiasi0 in #3898)
-- Fix support for `Literal` handling in OpenAPI generation (by @loopj in #3908)
-- Bump snapcast from 2.3.7 to 2.3.8 (by @dependabot[bot] in #3909)
-- Bump syrupy from 5.1.0 to 5.2.0 (by @dependabot[bot] in #3910)
-- Bump codespell from 2.4.1 to 2.4.2 (by @dependabot[bot] in #3911)
-- ⬆️ Update music-assistant-frontend to 2.17.158 (by @music-assistant-machine in #3912)
-- Remove Sonos from mypy excludes (by @OzGav in #3914)
-- Compute the artwork-derived color palette in the backend (by @maximmaxim345 in #3915)
-- ⬆️ Update music-assistant-models to 1.1.119 (by @music-assistant-machine in #3916)
-- ⬆️ Update music-assistant-frontend to 2.17.159 (by @music-assistant-machine in #3919)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @Oliver-Stevens, @OzGav, @Tommatheussen, @bartbunting, @chrisuthe, @dmoo500, @khers, @loopj, @marcelveldt, @maximmaxim345, @remon1496, @trudenboy, @xiasi0
 
 
