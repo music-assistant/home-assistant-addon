@@ -1,3 +1,24 @@
+# [2.9.0.dev2026052906] - 29.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026052818](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052818)_
+
+### 🐛 Bugfixes
+
+- Spotify Connect: clearer transport errors and automatic stall recovery (by @marcelveldt in #4010)
+
+### 🧰 Maintenance and dependency bumps
+
+- Subsonic: Update py-opensonic library (by @khers in #4018)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@khers, @marcelveldt
+
+
 # [2.9.0.dev2026052818] - 28.05.2026
 
 ## 📦 Nightly Release
@@ -74,24 +95,5 @@ _Changes since [2.9.0.dev2026052710](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @chrisuthe, @hatharry, @marcelveldt, @stvncode
-
-
-# [2.9.0.dev2026052710] - 27.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026052707](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052707)_
-
-### 🐛 Bugfixes
-
-- Fix lyrics out-of-sync after smart crossfade (by @MarvinSchenkel in #3990)
-- Skip non-music providers in library update callback dispatch (by @dmoo500 in #3999)
-- Keep plugin playlist items visible for users with provider filters (by @dmoo500 in #4002)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @dmoo500
 
 
