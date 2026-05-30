@@ -1,3 +1,32 @@
+# [2.9.0.dev2026053006] - 30.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026052906](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052906)_
+
+### 🐛 Bugfixes
+
+- Fix KeyError for CONF_SMART_FADES_MODE on protocol-type players (by @MarvinSchenkel in #4020)
+- Fix queue cleared prematurely when radio follows tracks in flow stream (by @marcelveldt in #4021)
+
+### 🎨 Frontend Changes
+
+- Fix smart playlist operator label after field switch (by @dmoo500 in [#1820](https://github.com/music-assistant/frontend/pull/1820))
+- Smart Playlist: search UX & dynamic playlist provider details (by @MarvinSchenkel in [#1821](https://github.com/music-assistant/frontend/pull/1821))
+
+### 🧰 Maintenance and dependency bumps
+
+- Drop redundant per-player throttler and harden the command lock (by @marcelveldt in #4024)
+- ⬆️ Update music-assistant-models to 1.1.127 (by @music-assistant-machine in #4026)
+- ⬆️ Update music-assistant-frontend to 2.17.169 (by @music-assistant-machine in #4031)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @dmoo500, @marcelveldt
+
+
 # [2.9.0.dev2026052906] - 29.05.2026
 
 ## 📦 Nightly Release
@@ -60,40 +89,5 @@ _Changes since [2.9.0.dev2026052806](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @dmoo500, @stvncode, @trudenboy
-
-
-# [2.9.0.dev2026052806] - 28.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026052710](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026052710)_
-
-### 🚀 Features and enhancements
-
-- Sonic Similarity Plugin (by @chrisuthe in #3943)
-- Return a track sample for dynamic playlists when browsing (by @MarvinSchenkel in #4004)
-- Emby Music Provider: add genres (by @hatharry in #4005)
-
-### 🐛 Bugfixes
-
-- Fix AirPlay receiver album artwork stuck after first track (by @MarvinSchenkel in #3945)
-- Fix Spotify Connect playback control reliability and error reporting (by @marcelveldt in #4001)
-
-### 🎨 Frontend Changes
-
-- Fix Smart Playlist seed picker dropping all results when only plugin providers supply SIMILAR_TRACKS (by @chrisuthe in [#1813](https://github.com/music-assistant/frontend/pull/1813))
-- Fix config key default enqueue option radio (by @stvncode in [#1814](https://github.com/music-assistant/frontend/pull/1814))
-- Add confirmation dialog for remove from library (by @stvncode in [#1812](https://github.com/music-assistant/frontend/pull/1812))
-
-### 🧰 Maintenance and dependency bumps
-
-- Title-case the default genre aliases (by @OzGav in #4003)
-- ⬆️ Update music-assistant-frontend to 2.17.167 (by @music-assistant-machine in #4008)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @hatharry, @marcelveldt, @stvncode
 
 
