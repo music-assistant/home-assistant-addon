@@ -1,3 +1,29 @@
+# [2.9.0.dev2026053107] - 31.05.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026053104](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026053104)_
+
+### 🐛 Bugfixes
+
+- Fix smart playlist GUID lookup when called with library IDs (by @dmoo500 in #4037)
+
+### 🎨 Frontend Changes
+
+- Remove padding for settings proivders on mobile (by @stvncode in [#1825](https://github.com/music-assistant/frontend/pull/1825))
+- Fix some mobile issues for smart playlist mobile (by @stvncode in [#1824](https://github.com/music-assistant/frontend/pull/1824))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.170 (by @music-assistant-machine in #4035)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@dmoo500, @stvncode
+
+
 # [2.9.0.dev2026053104] - 31.05.2026
 
 ## 📦 Nightly Release
@@ -42,26 +68,5 @@ _Changes since [2.9.0.dev2026053006](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @dmoo500
-
-
-# [2.9.0.dev2026053006] - 30.05.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026053006](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026053006)_
-
-### 🐛 Bugfixes
-
-- Fix KeyError for CONF_SMART_FADES_MODE in streams controller get_value calls (by @MarvinSchenkel in #4033)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump zeroconf from 0.148.0 to 0.149.7 (by @dependabot[bot] in #4030)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
