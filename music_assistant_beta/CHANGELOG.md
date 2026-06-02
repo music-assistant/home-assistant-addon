@@ -1,3 +1,79 @@
+# [2.9.0b16] - 02.06.2026
+
+## 📦 Beta Release
+
+_Changes since [2.9.0b15](https://github.com/music-assistant/server/releases/tag/2.9.0b15)_
+
+### 🚀 Features and enhancements
+
+- fast MCP server: debug & config namespaces, external-source playback, OpenClaw/Hermes presets (v0.7.1) (by @trudenboy in #4019)
+- Show real source format for piped AudioSource providers (by @marcelveldt in #4027)
+- Implement the Sendspin `visualizer@v1` role and rework Hue Lights Sync (by @maximmaxim345 in #4042)
+- Import album tracks when manually adding an album and Import Album Tracks setting enabled (by @OzGav in #4046)
+
+### 🐛 Bugfixes
+
+- Spotify Connect: clearer transport errors and automatic stall recovery (by @marcelveldt in #4010)
+- Sonic Similarity: relax depends_on timing check + document smart_fades requirement (by @chrisuthe in #4016)
+- Fix KeyError for CONF_SMART_FADES_MODE on protocol-type players (by @MarvinSchenkel in #4020)
+- Fix queue cleared prematurely when radio follows tracks in flow stream (by @marcelveldt in #4021)
+- AcoustID Skip processing if track has an ISRC (by @OzGav in #4022)
+- Optimize size of provider icons (by @MarvinSchenkel in #4023)
+- Fix smart playlist track evaluation from Discover and background queue context (by @dmoo500 in #4025)
+- Fix Apple music library album tracks not showing up (by @dmoo500 in #4028)
+- Fix Apple Music playlist add for catalog-backed library playlists (by @dmoo500 in #4032)
+- Fix KeyError for CONF_SMART_FADES_MODE in streams controller get_value calls (by @MarvinSchenkel in #4033)
+- Fix smart playlist GUID lookup when called with library IDs (by @dmoo500 in #4037)
+- Add error handling for provider search (by @OzGav in #4044)
+- Hide HTTP profile and ICY metadata config entries for Samsung WAM (by @Oliver-Stevens in #4045)
+- Fix Deezer playback stalling on tracks with insufficient rights (error 2002) (by @MarvinSchenkel in #4048)
+- Prevent duplicate songs in smart playlist dedup window (by @dmoo500 in #4052)
+- Fix loudness volume jumps: scope audio-analysis reads to the authoritative provider (by @MarvinSchenkel in #4057)
+
+### 🎨 Frontend Changes
+
+- Fix smart playlist operator label after field switch (by @dmoo500 in [#1820](https://github.com/music-assistant/frontend/pull/1820))
+- Smart Playlist: search UX & dynamic playlist provider details (by @MarvinSchenkel in [#1821](https://github.com/music-assistant/frontend/pull/1821))
+- Remove padding for settings proivders on mobile (by @stvncode in [#1825](https://github.com/music-assistant/frontend/pull/1825))
+- Fix some mobile issues for smart playlist mobile (by @stvncode in [#1824](https://github.com/music-assistant/frontend/pull/1824))
+- Skip getSmartPlaylistRules call for non-smart playlists (by @dmoo500 in [#1822](https://github.com/music-assistant/frontend/pull/1822))
+- Remove warning on dev (by @stvncode in [#1827](https://github.com/music-assistant/frontend/pull/1827))
+- Match now-playing typography to new discover tiles (by @MarvinSchenkel in [#1846](https://github.com/music-assistant/frontend/pull/1846))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1845](https://github.com/music-assistant/frontend/pull/1845))
+- Add shortcut ordering actions (by @dmoo500 in [#1826](https://github.com/music-assistant/frontend/pull/1826))
+- Remove redundant information from the Album overview page (by @MarvinSchenkel in [#1828](https://github.com/music-assistant/frontend/pull/1828))
+- Discover refactor (by @stvncode in [#1842](https://github.com/music-assistant/frontend/pull/1842))
+- Keep shortcuts in sync after delete and update events (by @dmoo500 in [#1819](https://github.com/music-assistant/frontend/pull/1819))
+- Hide player in more places (by @OzGav in [#1711](https://github.com/music-assistant/frontend/pull/1711))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>13 changes</summary>
+
+- Subsonic: Update py-opensonic library (by @khers in #4018)
+- Drop redundant per-player throttler and harden the command lock (by @marcelveldt in #4024)
+- ⬆️ Update music-assistant-models to 1.1.127 (by @music-assistant-machine in #4026)
+- Bump zeroconf from 0.148.0 to 0.149.7 (by @dependabot[bot] in #4030)
+- ⬆️ Update music-assistant-frontend to 2.17.169 (by @music-assistant-machine in #4031)
+- Improve icons (by @OzGav in #4034)
+- ⬆️ Update music-assistant-frontend to 2.17.170 (by @music-assistant-machine in #4035)
+- ⬆️ Update music-assistant-models to 1.1.128 (by @music-assistant-machine in #4038)
+- Bump aioaudiobookshelf to 0.1.21 (by @fmunkes in #4040)
+- ⬆️ Update music-assistant-frontend to 2.17.171 (by @music-assistant-machine in #4049)
+- Add checklist for documentation PR submissions (by @OzGav in #4051)
+- ⬆️ Update music-assistant-frontend to 2.17.172 (by @music-assistant-machine in #4056)
+- ⬆️ Update music-assistant-frontend to 2.17.173 (by @music-assistant-machine in #4060)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Oliver-Stevens, @OzGav, @chrisuthe, @dmoo500, @fmunkes, @khers, @marcelveldt, @maximmaxim345, @stvncode, @trudenboy
+
+
 # [2.9.0b15] - 28.05.2026
 
 ## 📦 Beta Release
@@ -170,38 +246,5 @@ _Changes since [2.9.0b13](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @KealanAU, @MarvinSchenkel, @OzGav, @SuperSandro2000, @Tommatheussen, @chrisuthe, @dmoo500, @hatharry, @jdaberkow, @jhbruhn, @marcelveldt, @maximmaxim345, @stvncode, @teancom, @trudenboy
-
-
-# [2.9.0b13] - 20.05.2026
-
-## 📦 Beta Release
-
-_Changes since [2.9.0b12](https://github.com/music-assistant/server/releases/tag/2.9.0b12)_
-
-### 🐛 Bugfixes
-
-- Remove initial_delay to fix duplicate lastfm recommendation rows (by @OzGav in #3920)
-- Fix server crash on non-RGB cover art in palette extractor (by @OzGav in #3921)
-- Sonos S1: Implement select_source for line-in support (by @MarvinSchenkel in #3925)
-- Streams: Handle empty supported_sample_rates in get_output_format (by @MarvinSchenkel in #3926)
-- Fix HEOS showing incorrect Now Playing (by @Tommatheussen in #3928)
-- Close coroutines when submitted in rapid succession (by @MarvinSchenkel in #3929)
-- Fix issues with M4B audiobooks (by @OzGav in #3930)
-
-### 🎨 Frontend Changes
-
-- Fix Audio Pipeline volume normalisation line (by @OzGav in [#1752](https://github.com/music-assistant/frontend/pull/1752))
-- Fix genre casing (by @OzGav in [#1744](https://github.com/music-assistant/frontend/pull/1744))
-
-### 🧰 Maintenance and dependency bumps
-
-- Improve lastfm recommendations (by @OzGav in #3922)
-- ⬆️ Update music-assistant-frontend to 2.17.160 (by @music-assistant-machine in #3927)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Tommatheussen
 
 
