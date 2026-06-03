@@ -1,3 +1,28 @@
+# [2.8.9] - 03.06.2026
+
+## 📦 Stable Release
+
+_Changes since [2.8.8](https://github.com/music-assistant/server/releases/tag/2.8.8)_
+
+### 🐛 Bugfixes
+
+- Resolve universal_player wrappers in UGP stream handler (by @OzGav in #3952)
+- Skip DSP-triggered playback restart when DSP was and remains disabled (by @MarvinSchenkel in #3988)
+- Fix Deezer playback stalling on tracks with insufficient rights (error 2002) (by @MarvinSchenkel in #4048)
+- Phishin fixes and optimisations (by @OzGav in #4066)
+- Fix Bluesound ungroup crashing on non-existent pyblu client attributes (by @OzGav in #4072)
+
+### 🧰 Maintenance and dependency bumps
+
+- Revert "Resolve universal_player wrappers in UGP stream handler" (by @OzGav in #3956)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav
+
+
 # [2.8.8] - 22.05.2026
 
 ## 📦 Stable Release
@@ -66,40 +91,5 @@ _Changes since [2.8.6](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MacTheFork, @MarvinSchenkel, @OzGav, @PeterPalenik, @Yipsh, @delatt, @gitviola, @greenmansuperhero, @h4de5, @hatharry, @maximmaxim345, @whitty
-
-
-# [2.8.6] - 23.04.2026
-
-## 📦 Stable Release
-
-_Changes since [2.8.5](https://github.com/music-assistant/server/releases/tag/2.8.5)_
-
-### 🐛 Bugfixes
-
-- Fix ffmpeg process leak in smart fades mixer on aborted playback (by @marcelveldt in #3725)
-- Harden AirPlay STOP command delivery and add teardown logging (by @marcelveldt in #3729)
-- Prevent concurrent flow-stream producers from corrupting the playlog (by @marcelveldt in #3731)
-- Guard Sonos volume attribute update against uninitialized state (by @marcelveldt in #3732)
-- Fix ORF Radiothek browse reverting to top level (by @OzGav in #3733)
-- Preserve multi-value album type across all tag parsers (by @OzGav in #3743)
-- [Soundcloud]: improving search (by @fionn-r in #3745)
-- Fix enqueue action 'replace' stopping the music (by @MarvinSchenkel in #3753)
-- Qobuz: fix credential leak on 401 and populate date_added (by @OzGav in #3754)
-- Implement power control function for squeezelite (by @MarvinSchenkel in #3755)
-- Fix manual genres disappearing after a cleanup run (by @MarvinSchenkel in #3757)
-- Force imageproxy over streamserver for Airplay artwork (by @MarvinSchenkel in #3763)
-- Fix tidal recommendations (by @jozefKruszynski in #3767)
-- Change heartbeat of websocket and sendspin proxy socket to 25s (by @MarvinSchenkel in #3769)
-- Fix 30s delay after switching tracks on Sendspin (by @maximmaxim345 in #3777)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump auntie-sounds to 1.1.8 (by @kieranhogg in #3723)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @fionn-r, @jozefKruszynski, @kieranhogg, @marcelveldt, @maximmaxim345
 
 
