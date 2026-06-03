@@ -1,3 +1,41 @@
+# [2.9.0.dev2026060308] - 03.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026060218](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060218)_
+
+### 🚀 Features and enhancements
+
+- Add Bandcamp feed and wishlist recommendations (by @rnewman in #4047)
+
+### 🐛 Bugfixes
+
+- Phishin fixes and optimisations (by @OzGav in #4066)
+
+### 🎨 Frontend Changes
+
+- Fix: Mobile issues for discover page and bg for genre and placeholder (by @stvncode in [#1849](https://github.com/music-assistant/frontend/pull/1849))
+- Fix: Mobile issues for discover page and bg for genre and placeholder (by @stvncode in [#1849](https://github.com/music-assistant/frontend/pull/1849))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump usearch from 2.25.2 to 2.25.3 (by @dependabot[bot] in #4063)
+- Bump bandcamp-async-api from 0.2.1 to 0.2.2 (by @dependabot[bot] in #4064)
+- Bump soco from 0.31.0 to 0.31.1 (by @dependabot[bot] in #4065)
+- ⬆️ Update music-assistant-frontend to 2.17.174 (by @music-assistant-machine in #4069)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @rnewman, @stvncode
+
+
 # [2.9.0.dev2026060218] - 02.06.2026
 
 ## 📦 Nightly Release
@@ -55,42 +93,5 @@ _Changes since [2.9.0.dev2026060108](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @dmoo500, @maximmaxim345, @trudenboy
-
-
-# [2.9.0.dev2026060108] - 01.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026053107](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026053107)_
-
-### 🐛 Bugfixes
-
-- Sonic Similarity: relax depends_on timing check + document smart_fades requirement (by @chrisuthe in #4016)
-- Hide HTTP profile and ICY metadata config entries for Samsung WAM (by @Oliver-Stevens in #4045)
-- Fix Deezer playback stalling on tracks with insufficient rights (error 2002) (by @MarvinSchenkel in #4048)
-
-### 🎨 Frontend Changes
-
-- Skip getSmartPlaylistRules call for non-smart playlists (by @dmoo500 in [#1822](https://github.com/music-assistant/frontend/pull/1822))
-- Remove warning on dev (by @stvncode in [#1827](https://github.com/music-assistant/frontend/pull/1827))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Improve icons (by @OzGav in #4034)
-- ⬆️ Update music-assistant-models to 1.1.128 (by @music-assistant-machine in #4038)
-- Bump aioaudiobookshelf to 0.1.21 (by @fmunkes in #4040)
-- ⬆️ Update music-assistant-frontend to 2.17.171 (by @music-assistant-machine in #4049)
-- Add checklist for documentation PR submissions (by @OzGav in #4051)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @Oliver-Stevens, @OzGav, @chrisuthe, @dmoo500, @fmunkes, @stvncode
 
 
