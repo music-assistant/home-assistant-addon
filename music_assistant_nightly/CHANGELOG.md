@@ -1,3 +1,47 @@
+# [2.9.0.dev2026060507] - 05.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026060407](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060407)_
+
+### 🐛 Bugfixes
+
+- Plex Connect: refactor and fixes plugin (by @anatosun in #3510)
+- Fix smart playlist dedup for streaming (non-library) tracks (by @MarvinSchenkel in #4082)
+- Fix genre icons disappearing after install path changes (by @MarvinSchenkel in #4083)
+- Fix YouTube Music search() signature (by @OzGav in #4085)
+- Fix WiiM volume_set by using HTTP command instead of UPnP (by @MarvinSchenkel in #4086)
+
+### 🎨 Frontend Changes
+
+- Lower smart playlist dedup_hours max to 2160h (90 days) (by @MarvinSchenkel in [#1861](https://github.com/music-assistant/frontend/pull/1861))
+- Always show lights and visualisers in the group list (by @OzGav in [#1860](https://github.com/music-assistant/frontend/pull/1860))
+- Add link to background analysis Concurrency Setting (by @chrisuthe in [#1830](https://github.com/music-assistant/frontend/pull/1830))
+- Add back provider icon in discover pge + fix fanart (by @stvncode in [#1859](https://github.com/music-assistant/frontend/pull/1859))
+- Add back provider icon in discover pge + fix fanart (by @stvncode in [#1859](https://github.com/music-assistant/frontend/pull/1859))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Further typing fixes for Apple Music (by @OzGav in #4078)
+- Bump aiohttp from 3.13.5 to 3.14.0 (by @dependabot[bot] in #4079)
+- Remove ignore from Bluesound player.py (by @OzGav in #4080)
+- Type throttle_with_retries via Protocol instead of Provider bound (by @OzGav in #4081)
+- Final typing fixes for Apple Music (by @OzGav in #4084)
+- Some typing fixes for the YouTube Music provider (by @OzGav in #4087)
+- ⬆️ Update music-assistant-frontend to 2.17.176 (by @music-assistant-machine in #4096)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @stvncode
+
+
 # [2.9.0.dev2026060407] - 04.06.2026
 
 ## 📦 Nightly Release
@@ -83,36 +127,5 @@ _Changes since [2.9.0.dev2026060218](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @rnewman, @stvncode
-
-
-# [2.9.0.dev2026060218] - 02.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026060208](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060208)_
-
-### 🐛 Bugfixes
-
-- Fix loudness volume jumps: scope audio-analysis reads to the authoritative provider (by @MarvinSchenkel in #4057)
-
-### 🎨 Frontend Changes
-
-- Match now-playing typography to new discover tiles (by @MarvinSchenkel in [#1846](https://github.com/music-assistant/frontend/pull/1846))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1845](https://github.com/music-assistant/frontend/pull/1845))
-- Add shortcut ordering actions (by @dmoo500 in [#1826](https://github.com/music-assistant/frontend/pull/1826))
-- Remove redundant information from the Album overview page (by @MarvinSchenkel in [#1828](https://github.com/music-assistant/frontend/pull/1828))
-- Discover refactor (by @stvncode in [#1842](https://github.com/music-assistant/frontend/pull/1842))
-- Keep shortcuts in sync after delete and update events (by @dmoo500 in [#1819](https://github.com/music-assistant/frontend/pull/1819))
-- Hide player in more places (by @OzGav in [#1711](https://github.com/music-assistant/frontend/pull/1711))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.173 (by @music-assistant-machine in #4060)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @dmoo500, @stvncode
 
 
