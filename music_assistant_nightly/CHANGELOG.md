@@ -1,3 +1,29 @@
+# [2.9.0.dev2026060606] - 06.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026060510](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060510)_
+
+### 🐛 Bugfixes
+
+- Avoid event loop block in YouTube Music recommendations and skip SoundCloud default avatar (by @MarvinSchenkel in #4104)
+- Added None guard (by @anatosun in #4107)
+
+### 🎨 Frontend Changes
+
+- Fix erroneous underline on Audio Analysis concurrency link (by @chrisuthe in [#1872](https://github.com/music-assistant/frontend/pull/1872))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.178 (by @music-assistant-machine in #4111)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @anatosun, @chrisuthe
+
+
 # [2.9.0.dev2026060510] - 05.06.2026
 
 ## 📦 Nightly Release
@@ -84,54 +110,5 @@ _Changes since [2.9.0.dev2026060407](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @stvncode
-
-
-# [2.9.0.dev2026060407] - 04.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026060308](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060308)_
-
-### 🚀 Features and enhancements
-
-- Add Settings to allow Control of default similar_track action (by @chrisuthe in #4053)
-- Support changing audiobook covers (by @OzGav in #4055)
-
-### 🐛 Bugfixes
-
-- Fix dynamic smart playlist cache leaking across users with different provider filters (by @dmoo500 in #4061)
-- Fix Bluesound ungroup crashing on non-existent pyblu client attributes (by @OzGav in #4072)
-
-### 🎨 Frontend Changes
-
-- Show Smart Playlist provider in playlists provider filter (by @dmoo500 in [#1848](https://github.com/music-assistant/frontend/pull/1848))
-- Fanart for top picks (by @stvncode in [#1854](https://github.com/music-assistant/frontend/pull/1854))
-- Fix play button centering + banner behind tile (by @stvncode in [#1852](https://github.com/music-assistant/frontend/pull/1852))
-- Prune stale provider ids from stored listing filters (by @OzGav in [#1727](https://github.com/music-assistant/frontend/pull/1727))
-- Derive library membership from in_library flag (by @OzGav in [#1810](https://github.com/music-assistant/frontend/pull/1810))
-- fix(theme): fix dark-mode rendering (by @teancom in [#1811](https://github.com/music-assistant/frontend/pull/1811))
-- Show catalog providers in library provider filter (by @OzGav in [#1851](https://github.com/music-assistant/frontend/pull/1851))
-- Fix album/playlist track order when played directly from a list (by @OzGav in [#1850](https://github.com/music-assistant/frontend/pull/1850))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- Treat Retry-After as a floor for rate limits, not an exact target (by @rnewman in #4067)
-- Typing fixes for Bluesound provider.py (by @OzGav in #4071)
-- Some Typing fixes for Apple Music (by @OzGav in #4073)
-- Final Typing fixes for Bluesound provider (by @OzGav in #4074)
-- Add PGH003 mypy rule (by @OzGav in #4075)
-- ⬆️ Update music-assistant-models to 1.1.129 (by @music-assistant-machine in #4076)
-- ⬆️ Update music-assistant-frontend to 2.17.175 (by @music-assistant-machine in #4077)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe, @dmoo500, @rnewman, @stvncode, @teancom
 
 
