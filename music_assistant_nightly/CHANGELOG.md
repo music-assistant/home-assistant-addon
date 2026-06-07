@@ -1,3 +1,29 @@
+# [2.9.0.dev2026060708] - 07.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026060707](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060707)_
+
+### 🚀 Features and enhancements
+
+- Speed up YouTube Music recommendations loading (by @MarvinSchenkel in #4120)
+
+### 🐛 Bugfixes
+
+- Re-add configurable output buffer for AirPlay 1 (RAOP) players (by @MarvinSchenkel in #4118)
+- Fix version parsing for titles with nested parentheses (by @OzGav in #4119)
+
+### 🧰 Maintenance and dependency bumps
+
+- Final typing fixes for the Music controller (by @OzGav in #4114)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav
+
+
 # [2.9.0.dev2026060707] - 07.06.2026
 
 ## 📦 Nightly Release
@@ -43,31 +69,5 @@ _Changes since [2.9.0.dev2026060606](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @CodeCommander, @OzGav, @stvncode
-
-
-# [2.9.0.dev2026060606] - 06.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026060510](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060510)_
-
-### 🐛 Bugfixes
-
-- Avoid event loop block in YouTube Music recommendations and skip SoundCloud default avatar (by @MarvinSchenkel in #4104)
-- Added None guard (by @anatosun in #4107)
-
-### 🎨 Frontend Changes
-
-- Fix erroneous underline on Audio Analysis concurrency link (by @chrisuthe in [#1872](https://github.com/music-assistant/frontend/pull/1872))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.178 (by @music-assistant-machine in #4111)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @anatosun, @chrisuthe
 
 
