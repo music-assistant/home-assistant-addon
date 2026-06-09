@@ -1,3 +1,48 @@
+# [2.9.0.dev2026060914] - 09.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026060904](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060904)_
+
+### 🚀 Features and enhancements
+
+- Add get_artist_toptracks to lastfm recommendations provider (by @OzGav in #4141)
+- Enable WiiM and Last.fm Recommendations by default (by @MarvinSchenkel in #4142)
+- Smart playlists: optional AI-generated descriptions (by @MarvinSchenkel in #4144)
+
+### 🐛 Bugfixes
+
+- Fix AcoustID scan coverage stalling (by @OzGav in #4070)
+- Fix radio station logos rendering as black or failing to load (by @OzGav in #4094)
+- AirPlay: Ignore mDNS address updates that replace a routable IP with a Docker bridge address (by @MarvinSchenkel in #4117)
+- Send Sendspin album artwork for radio and Spotify Connect streams (by @maximmaxim345 in #4130)
+- Fix misleading smart-crossfade FFmpeg failure log message (by @MarvinSchenkel in #4139)
+- Separate Phish.in artist tracks from top tracks (by @OzGav in #4140)
+- Fix disappearing Sendspin Visualizer clients (by @maximmaxim345 in #4143)
+- Align MusicBrainz throttler with mirror rate limit (by @MarvinSchenkel in #4146)
+
+### 🎨 Frontend Changes
+
+- Fix: Update overflow menu on shortcuts change and album tracks on navigation (by @dmoo500 in [#1892](https://github.com/music-assistant/frontend/pull/1892))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1894](https://github.com/music-assistant/frontend/pull/1894))
+- Update `sendspin-js` to improve playback stability of radio streams for web players (by @maximmaxim345 in [#1899](https://github.com/music-assistant/frontend/pull/1899))
+- Enhance the height of the context menu dialog (by @stvncode in [#1898](https://github.com/music-assistant/frontend/pull/1898))
+- Improve listing empty states and declutter the action toolbar (by @marcelveldt in [#1897](https://github.com/music-assistant/frontend/pull/1897))
+- Align heart icon in list view (by @stvncode in [#1896](https://github.com/music-assistant/frontend/pull/1896))
+- Add more translations (by @OzGav in [#1895](https://github.com/music-assistant/frontend/pull/1895))
+
+### 🧰 Maintenance and dependency bumps
+
+- Add more translation keys (by @OzGav in #4138)
+- ⬆️ Update music-assistant-frontend to 2.17.183 (by @music-assistant-machine in #4145)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @dmoo500, @marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.9.0.dev2026060904] - 09.06.2026
 
 ## 📦 Nightly Release
@@ -77,31 +122,5 @@ _Changes since [2.9.0.dev2026060708](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @dmoo500, @marcelveldt
-
-
-# [2.9.0.dev2026060708] - 07.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026060707](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060707)_
-
-### 🚀 Features and enhancements
-
-- Speed up YouTube Music recommendations loading (by @MarvinSchenkel in #4120)
-
-### 🐛 Bugfixes
-
-- Re-add configurable output buffer for AirPlay 1 (RAOP) players (by @MarvinSchenkel in #4118)
-- Fix version parsing for titles with nested parentheses (by @OzGav in #4119)
-
-### 🧰 Maintenance and dependency bumps
-
-- Final typing fixes for the Music controller (by @OzGav in #4114)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav
 
 
