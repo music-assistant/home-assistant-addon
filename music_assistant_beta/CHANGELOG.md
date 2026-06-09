@@ -1,3 +1,50 @@
+# [2.9.0rc4] - 09.06.2026
+
+## 📦 RC Release
+
+_Changes since [2.9.0rc3](https://github.com/music-assistant/server/releases/tag/2.9.0rc3)_
+
+### 🚀 Features and enhancements
+
+- Spread metadata maintenance schedule across the day (by @MarvinSchenkel in #4126)
+- Add get_artist_toptracks to lastfm recommendations provider (by @OzGav in #4141)
+- Enable WiiM and Last.fm Recommendations by default (by @MarvinSchenkel in #4142)
+- Smart playlists: optional AI-generated descriptions (by @MarvinSchenkel in #4144)
+
+### 🐛 Bugfixes
+
+- Fix AcoustID scan coverage stalling (by @OzGav in #4070)
+- Fix radio station logos rendering as black or failing to load (by @OzGav in #4094)
+- AirPlay: Ignore mDNS address updates that replace a routable IP with a Docker bridge address (by @MarvinSchenkel in #4117)
+- Send Sendspin album artwork for radio and Spotify Connect streams (by @maximmaxim345 in #4130)
+- Fix misleading smart-crossfade FFmpeg failure log message (by @MarvinSchenkel in #4139)
+- Separate Phish.in artist tracks from top tracks (by @OzGav in #4140)
+- Fix disappearing Sendspin Visualizer clients (by @maximmaxim345 in #4143)
+- Align MusicBrainz throttler with mirror rate limit (by @MarvinSchenkel in #4146)
+- Fix Sendspin not playing when grouping ESPHome devices (by @maximmaxim345 in #4147)
+
+### 🎨 Frontend Changes
+
+- Fix: Update overflow menu on shortcuts change and album tracks on navigation (by @dmoo500 in [#1892](https://github.com/music-assistant/frontend/pull/1892))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1894](https://github.com/music-assistant/frontend/pull/1894))
+- Update `sendspin-js` to improve playback stability of radio streams for web players (by @maximmaxim345 in [#1899](https://github.com/music-assistant/frontend/pull/1899))
+- Enhance the height of the context menu dialog (by @stvncode in [#1898](https://github.com/music-assistant/frontend/pull/1898))
+- Improve listing empty states and declutter the action toolbar (by @marcelveldt in [#1897](https://github.com/music-assistant/frontend/pull/1897))
+- Align heart icon in list view (by @stvncode in [#1896](https://github.com/music-assistant/frontend/pull/1896))
+- Add more translations (by @OzGav in [#1895](https://github.com/music-assistant/frontend/pull/1895))
+
+### 🧰 Maintenance and dependency bumps
+
+- Add more translation keys (by @OzGav in #4138)
+- ⬆️ Update music-assistant-frontend to 2.17.183 (by @music-assistant-machine in #4145)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @dmoo500, @marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.9.0rc3] - 09.06.2026
 
 ## 📦 RC Release
@@ -134,62 +181,5 @@ _Changes since [2.9.0rc1](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @dmoo500, @rnewman, @stvncode, @teancom
-
-
-# [2.9.0rc1] - 03.06.2026
-
-## 📦 RC Release
-
-_Changes since [2.9.0b16](https://github.com/music-assistant/server/releases/tag/2.9.0b16)_
-
-### 🚀 Features and enhancements
-
-- Add Bandcamp feed and wishlist recommendations (by @rnewman in #4047)
-- Add Settings to allow Control of default similar_track action (by @chrisuthe in #4053)
-- Support changing audiobook covers (by @OzGav in #4055)
-
-### 🐛 Bugfixes
-
-- Fix dynamic smart playlist cache leaking across users with different provider filters (by @dmoo500 in #4061)
-- Phishin fixes and optimisations (by @OzGav in #4066)
-- Fix Bluesound ungroup crashing on non-existent pyblu client attributes (by @OzGav in #4072)
-
-### 🎨 Frontend Changes
-
-- Fix: Mobile issues for discover page and bg for genre and placeholder (by @stvncode in [#1849](https://github.com/music-assistant/frontend/pull/1849))
-- Fix: Mobile issues for discover page and bg for genre and placeholder (by @stvncode in [#1849](https://github.com/music-assistant/frontend/pull/1849))
-- Show Smart Playlist provider in playlists provider filter (by @dmoo500 in [#1848](https://github.com/music-assistant/frontend/pull/1848))
-- Fanart for top picks (by @stvncode in [#1854](https://github.com/music-assistant/frontend/pull/1854))
-- Fix play button centering + banner behind tile (by @stvncode in [#1852](https://github.com/music-assistant/frontend/pull/1852))
-- Prune stale provider ids from stored listing filters (by @OzGav in [#1727](https://github.com/music-assistant/frontend/pull/1727))
-- Derive library membership from in_library flag (by @OzGav in [#1810](https://github.com/music-assistant/frontend/pull/1810))
-- fix(theme): fix dark-mode rendering (by @teancom in [#1811](https://github.com/music-assistant/frontend/pull/1811))
-- Show catalog providers in library provider filter (by @OzGav in [#1851](https://github.com/music-assistant/frontend/pull/1851))
-- Fix album/playlist track order when played directly from a list (by @OzGav in [#1850](https://github.com/music-assistant/frontend/pull/1850))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>11 changes</summary>
-
-- Bump usearch from 2.25.2 to 2.25.3 (by @dependabot[bot] in #4063)
-- Bump bandcamp-async-api from 0.2.1 to 0.2.2 (by @dependabot[bot] in #4064)
-- Bump soco from 0.31.0 to 0.31.1 (by @dependabot[bot] in #4065)
-- Treat Retry-After as a floor for rate limits, not an exact target (by @rnewman in #4067)
-- ⬆️ Update music-assistant-frontend to 2.17.174 (by @music-assistant-machine in #4069)
-- Typing fixes for Bluesound provider.py (by @OzGav in #4071)
-- Some Typing fixes for Apple Music (by @OzGav in #4073)
-- Final Typing fixes for Bluesound provider (by @OzGav in #4074)
-- Add PGH003 mypy rule (by @OzGav in #4075)
-- ⬆️ Update music-assistant-models to 1.1.129 (by @music-assistant-machine in #4076)
-- ⬆️ Update music-assistant-frontend to 2.17.175 (by @music-assistant-machine in #4077)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe, @dmoo500, @rnewman, @stvncode, @teancom
 
 
