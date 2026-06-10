@@ -1,3 +1,33 @@
+# [2.9.0.dev2026061007] - 10.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026060914](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060914)_
+
+### 🚀 Features and enhancements
+
+- Spread metadata maintenance schedule across the day (by @MarvinSchenkel in #4126)
+- Lastfm improvements (by @OzGav in #4148)
+- Improve playlog for artists and albums (by @chrisuthe in #4149)
+- ACoustID Switch to shared API key by default (by @OzGav in #4154)
+
+### 🐛 Bugfixes
+
+- Fix Sendspin not playing when grouping ESPHome devices (by @maximmaxim345 in #4147)
+- end of queue results in track being reported as played twice (by @chrisuthe in #4150)
+- Cap concurrent MusicBrainz ISRC lookups in Last.fm recommendations (by @OzGav in #4155)
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix guard_single_request type-var bound so media controllers don't need ignores (by @OzGav in #4153)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @maximmaxim345
+
+
 # [2.9.0.dev2026060914] - 09.06.2026
 
 ## 📦 Nightly Release
@@ -94,33 +124,5 @@ _Changes since [2.9.0.dev2026060808](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt, @maximmaxim345, @mcaulifn, @stvncode
-
-
-# [2.9.0.dev2026060808] - 08.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026060708](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060708)_
-
-### 🐛 Bugfixes
-
-- Fix Apple Music library-only album artwork by caching blobstore URLs (by @dmoo500 in #4106)
-- Fix library-only tracks/albums showing as unavailable in shared playlists (by @dmoo500 in #4108)
-- Fix transfer_queue losing position when source queue is paused/idle (by @OzGav in #4115)
-
-### 🎨 Frontend Changes
-
-- Lokalise: Translations update (by @marcelveldt in [#1875](https://github.com/music-assistant/frontend/pull/1875))
-
-### 🧰 Maintenance and dependency bumps
-
-- Add translation_key to builtin playlists (by @OzGav in #4122)
-- ⬆️ Update music-assistant-frontend to 2.17.180 (by @music-assistant-machine in #4125)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @dmoo500, @marcelveldt
 
 
