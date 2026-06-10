@@ -1,3 +1,31 @@
+# [2.9.0rc6] - 10.06.2026
+
+## 📦 RC Release
+
+_Changes since [2.9.0rc5](https://github.com/music-assistant/server/releases/tag/2.9.0rc5)_
+
+### 🐛 Bugfixes
+
+- Last.fm provider search bug fixes (by @OzGav in #4159)
+- Fix 30s delay when grouping some Sendspin devices (by @maximmaxim345 in #4160)
+- Prevent out-of-memory crash when compacting the library database (by @MarvinSchenkel in #4161)
+
+### 🎨 Frontend Changes
+
+- Store some settings per user (by @OzGav in [#1335](https://github.com/music-assistant/frontend/pull/1335))
+- Fix heart icon spacing in list view and keep listing search visible (by @MarvinSchenkel in [#1903](https://github.com/music-assistant/frontend/pull/1903))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.185 (by @music-assistant-machine in #4162)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @maximmaxim345
+
+
 # [2.9.0rc5] - 10.06.2026
 
 ## 📦 RC Release
@@ -82,81 +110,5 @@ _Changes since [2.9.0rc3](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @dmoo500, @marcelveldt, @maximmaxim345, @stvncode
-
-
-# [2.9.0rc3] - 09.06.2026
-
-## 📦 RC Release
-
-_Changes since [2.9.0rc2](https://github.com/music-assistant/server/releases/tag/2.9.0rc2)_
-
-### 🚀 Features and enhancements
-
-- Separate library artist views from per-provider artist listings (by @marcelveldt in #4039)
-- Speed up YouTube Music recommendations loading (by @MarvinSchenkel in #4120)
-
-### 🐛 Bugfixes
-
-- Make universal player merge deterministic when link counts tie (by @sdhomecode in #4017)
-- Fix YTMusic provider not retrying when PO Token server is slow to start (by @CodeCommander in #4093)
-- Fix None handling in music controller track/resume lookups (by @OzGav in #4102)
-- Avoid event loop block in YouTube Music recommendations and skip SoundCloud default avatar (by @MarvinSchenkel in #4104)
-- Only advertise extended ICY headers on flow stream when ICY metadata is requested (by @mcaulifn in #4105)
-- Fix Apple Music library-only album artwork by caching blobstore URLs (by @dmoo500 in #4106)
-- Added None guard (by @anatosun in #4107)
-- Fix library-only tracks/albums showing as unavailable in shared playlists (by @dmoo500 in #4108)
-- Fix transfer_queue losing position when source queue is paused/idle (by @OzGav in #4115)
-- Re-add configurable output buffer for AirPlay 1 (RAOP) players (by @MarvinSchenkel in #4118)
-- Fix version parsing for titles with nested parentheses (by @OzGav in #4119)
-- Audio analysis: re-scan stale-version tracks in background scan (by @chrisuthe in #4123)
-- Don't enqueue next track onto a stopped queue (by @MarvinSchenkel in #4127)
-- Bump `aiosendspin` to 6.0.2 to fix spec conformance issues (by @maximmaxim345 in #4128)
-- Fix volume jump when crossfade intro and body normalize differently (by @MarvinSchenkel in #4129)
-- Adjust Chromecast playback defaults (HTTP Profile 3 + flow mode) (by @MarvinSchenkel in #4133)
-
-### 🎨 Frontend Changes
-
-- Fix erroneous underline on Audio Analysis concurrency link (by @chrisuthe in [#1872](https://github.com/music-assistant/frontend/pull/1872))
-- Only refetch recommendations on track end, not periodic progress (by @stvncode in [#1870](https://github.com/music-assistant/frontend/pull/1870))
-- Remove animation when changing volume for group player (by @stvncode in [#1871](https://github.com/music-assistant/frontend/pull/1871))
-- Fix background task copy (by @stvncode in [#1873](https://github.com/music-assistant/frontend/pull/1873))
-- Lokalise: Translations update (by @marcelveldt in [#1875](https://github.com/music-assistant/frontend/pull/1875))
-- Fix queue items disappearing in fullscreen player (by @MarvinSchenkel in [#1874](https://github.com/music-assistant/frontend/pull/1874))
-- Add translation key for now playing badge (by @MarvinSchenkel in [#1889](https://github.com/music-assistant/frontend/pull/1889))
-- Refactor heart icon and add it to the artist page (by @stvncode in [#1891](https://github.com/music-assistant/frontend/pull/1891))
-- Add back subtitle for discover page (by @stvncode in [#1890](https://github.com/music-assistant/frontend/pull/1890))
-- Bigger tiles on mobile (by @stvncode in [#1887](https://github.com/music-assistant/frontend/pull/1887))
-- Fix self-sustaining WebRTC reconnect storm in remote transport (by @MarvinSchenkel in [#1888](https://github.com/music-assistant/frontend/pull/1888))
-- Subtle placeholder for both dark and light mode (by @stvncode in [#1886](https://github.com/music-assistant/frontend/pull/1886))
-- Add built-in playlists for favorites and random tracks (by @OzGav in [#1876](https://github.com/music-assistant/frontend/pull/1876))
-- Single artist detail view with provider filter (by @marcelveldt in [#1829](https://github.com/music-assistant/frontend/pull/1829))
-- Single artist detail view with provider filter (by @marcelveldt in [#1829](https://github.com/music-assistant/frontend/pull/1829))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>13 changes</summary>
-
-- Bump stages on 2.9 release (by @OzGav in #3942)
-- Typing fixes for the music controller stage 2 (by @OzGav in #4101)
-- Enable ruff UP043 and drop unnecessary default type arguments (by @OzGav in #4103)
-- ⬆️ Update music-assistant-frontend to 2.17.178 (by @music-assistant-machine in #4111)
-- ⬆️ Update music-assistant-frontend to 2.17.179 (by @music-assistant-machine in #4113)
-- Final typing fixes for the Music controller (by @OzGav in #4114)
-- Add translation_key to builtin playlists (by @OzGav in #4122)
-- ⬆️ Update music-assistant-frontend to 2.17.180 (by @music-assistant-machine in #4125)
-- Pin Sendspin Cast app id to the frozen `ma-2.9` channel (by @maximmaxim345 in #4131)
-- ⬆️ Update music-assistant-frontend to 2.17.181 (by @music-assistant-machine in #4132)
-- Bump pyblu from 2.0.7 to 2.0.8 (by @dependabot[bot] in #4134)
-- Bump lyricsgenius from 3.11.0 to 3.12.2 (by @dependabot[bot] in #4136)
-- ⬆️ Update music-assistant-frontend to 2.17.182 (by @music-assistant-machine in #4137)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@CodeCommander, @MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @dmoo500, @marcelveldt, @maximmaxim345, @mcaulifn, @sdhomecode, @stvncode
 
 
