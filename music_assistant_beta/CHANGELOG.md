@@ -1,3 +1,42 @@
+# [2.9.0rc5] - 10.06.2026
+
+## 📦 RC Release
+
+_Changes since [2.9.0rc4](https://github.com/music-assistant/server/releases/tag/2.9.0rc4)_
+
+### 🚀 Features and enhancements
+
+- Lastfm improvements (by @OzGav in #4148)
+- Improve playlog for artists and albums (by @chrisuthe in #4149)
+- ACoustID Switch to shared API key by default (by @OzGav in #4154)
+
+### 🐛 Bugfixes
+
+- AirPlay: fix mDNS cross-match when device name is substring of another device name (by @MarvinSchenkel in #4098)
+- end of queue results in track being reported as played twice (by @chrisuthe in #4150)
+- Fix sendspin unmute (by @OzGav in #4151)
+- Cap concurrent MusicBrainz ISRC lookups in Last.fm recommendations (by @OzGav in #4155)
+- Fix cache cleanup missing most records and skip needless startup vacuum (by @MarvinSchenkel in #4156)
+
+### 🎨 Frontend Changes
+
+- Add refresh top picks + Fix two shorcut bugs (by @stvncode in [#1901](https://github.com/music-assistant/frontend/pull/1901))
+- Add refresh top picks + Fix two shorcut bugs (by @stvncode in [#1901](https://github.com/music-assistant/frontend/pull/1901))
+- Add back redirect to album/artist... from genre (by @stvncode in [#1900](https://github.com/music-assistant/frontend/pull/1900))
+
+### 🧰 Maintenance and dependency bumps
+
+- Use the standalone hue-entertainment library in the Hue Lights Sync plugin (by @marcelveldt in #4152)
+- Fix guard_single_request type-var bound so media controllers don't need ignores (by @OzGav in #4153)
+- ⬆️ Update music-assistant-frontend to 2.17.184 (by @music-assistant-machine in #4157)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt, @stvncode
+
+
 # [2.9.0rc4] - 09.06.2026
 
 ## 📦 RC Release
@@ -119,67 +158,5 @@ _Changes since [2.9.0rc2](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @CodeCommander, @MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @dmoo500, @marcelveldt, @maximmaxim345, @mcaulifn, @sdhomecode, @stvncode
-
-
-# [2.9.0rc2] - 05.06.2026
-
-## 📦 RC Release
-
-_Changes since [2.9.0rc1](https://github.com/music-assistant/server/releases/tag/2.9.0rc1)_
-
-### 🚀 Features and enhancements
-
-- Add album_type filter to smart playlist rules (by @dmoo500 in #4059)
-- Cache recommendations() for sonic_similarity and audiobookshelf (by @MarvinSchenkel in #4099)
-
-### 🐛 Bugfixes
-
-- Plex Connect: refactor and fixes plugin (by @anatosun in #3510)
-- Fix smart playlist dedup for streaming (non-library) tracks (by @MarvinSchenkel in #4082)
-- Fix genre icons disappearing after install path changes (by @MarvinSchenkel in #4083)
-- Fix YouTube Music search() signature (by @OzGav in #4085)
-- Fix WiiM volume_set by using HTTP command instead of UPnP (by @MarvinSchenkel in #4086)
-- Reconcile smart playlist library entries on load to recover after DB reset (by @dmoo500 in #4088)
-- Apple Music: stream library tracks and harden transient-error handling (by @teancom in #4089)
-- Phishin Change fallback album image URL (by @OzGav in #4097)
-
-### 🎨 Frontend Changes
-
-- Lower smart playlist dedup_hours max to 2160h (90 days) (by @MarvinSchenkel in [#1861](https://github.com/music-assistant/frontend/pull/1861))
-- Always show lights and visualisers in the group list (by @OzGav in [#1860](https://github.com/music-assistant/frontend/pull/1860))
-- Add link to background analysis Concurrency Setting (by @chrisuthe in [#1830](https://github.com/music-assistant/frontend/pull/1830))
-- Add back provider icon in discover pge + fix fanart (by @stvncode in [#1859](https://github.com/music-assistant/frontend/pull/1859))
-- Add back provider icon in discover pge + fix fanart (by @stvncode in [#1859](https://github.com/music-assistant/frontend/pull/1859))
-- Fix genre display in smart playlist rule picker (by @dmoo500 in [#1864](https://github.com/music-assistant/frontend/pull/1864))
-- Put play button to the right for consistency (by @stvncode in [#1868](https://github.com/music-assistant/frontend/pull/1868))
-- Hide/Show top picks and replace v-btn by shadcn one (by @stvncode in [#1867](https://github.com/music-assistant/frontend/pull/1867))
-- Add album type filter to smart playlist rules (by @dmoo500 in [#1847](https://github.com/music-assistant/frontend/pull/1847))
-- Fix server spam for fresh recommandation with debounce (by @stvncode in [#1869](https://github.com/music-assistant/frontend/pull/1869))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>12 changes</summary>
-
-- Treat Retry-After as a floor for rate limits, not an exact target (by @rnewman in #4067)
-- Further typing fixes for Apple Music (by @OzGav in #4078)
-- Bump aiohttp from 3.13.5 to 3.14.0 (by @dependabot[bot] in #4079)
-- Remove ignore from Bluesound player.py (by @OzGav in #4080)
-- Type throttle_with_retries via Protocol instead of Provider bound (by @OzGav in #4081)
-- Final typing fixes for Apple Music (by @OzGav in #4084)
-- Some typing fixes for the YouTube Music provider (by @OzGav in #4087)
-- Final typing fixes for YouTube Music (by @OzGav in #4090)
-- Type-check plex and plex_connect providers, treat plexapi as untyped (by @OzGav in #4091)
-- Typing fixes for the music controller - stage 1 (by @OzGav in #4092)
-- ⬆️ Update music-assistant-frontend to 2.17.176 (by @music-assistant-machine in #4096)
-- ⬆️ Update music-assistant-frontend to 2.17.177 (by @music-assistant-machine in #4100)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @dmoo500, @rnewman, @stvncode, @teancom
 
 
