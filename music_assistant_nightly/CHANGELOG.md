@@ -1,3 +1,20 @@
+# [2.10.0.dev2026061108] - 11.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061105](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061105)_
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix release notes for minor releases skipping most changes (by @MarvinSchenkel in #4171)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel
+
+
 # [2.10.0.dev2026061105] - 11.06.2026
 
 ## 📦 Nightly Release
@@ -54,34 +71,5 @@ _Changes since [2.9.0.dev2026061009](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @maximmaxim345
-
-
-# [2.9.0.dev2026061009] - 10.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026061007](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026061007)_
-
-### 🐛 Bugfixes
-
-- Fix sendspin unmute (by @OzGav in #4151)
-- Fix cache cleanup missing most records and skip needless startup vacuum (by @MarvinSchenkel in #4156)
-
-### 🎨 Frontend Changes
-
-- Add refresh top picks + Fix two shorcut bugs (by @stvncode in [#1901](https://github.com/music-assistant/frontend/pull/1901))
-- Add refresh top picks + Fix two shorcut bugs (by @stvncode in [#1901](https://github.com/music-assistant/frontend/pull/1901))
-- Add back redirect to album/artist... from genre (by @stvncode in [#1900](https://github.com/music-assistant/frontend/pull/1900))
-
-### 🧰 Maintenance and dependency bumps
-
-- Use the standalone hue-entertainment library in the Hue Lights Sync plugin (by @marcelveldt in #4152)
-- ⬆️ Update music-assistant-frontend to 2.17.184 (by @music-assistant-machine in #4157)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @marcelveldt, @stvncode
 
 
