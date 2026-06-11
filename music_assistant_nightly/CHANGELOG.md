@@ -1,3 +1,32 @@
+# [2.10.0.dev2026061105] - 11.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.9.0.dev2026061014](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026061014)_
+
+### 🚀 Features and enhancements
+
+- Improve smart crossfade audio quality: true frequency sweep and equal-power curves (by @MarvinSchenkel in #4158)
+- Default artist fix (by @chrisuthe in #4163)
+- Add unofficial-integration disclaimer to streaming provider settings (by @marcelveldt in #4164)
+
+### 🎨 Frontend Changes
+
+- Lokalise: Translations update (by @marcelveldt in [#1904](https://github.com/music-assistant/frontend/pull/1904))
+- fix: update artist enqueue-selection option labels (by @chrisuthe in [#1906](https://github.com/music-assistant/frontend/pull/1906))
+- Add per-provider listings and a provider selector to the artist page (by @marcelveldt in [#1905](https://github.com/music-assistant/frontend/pull/1905))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.186 (by @music-assistant-machine in #4165)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @marcelveldt
+
+
 # [2.9.0.dev2026061014] - 10.06.2026
 
 ## 📦 Nightly Release
@@ -54,35 +83,5 @@ _Changes since [2.9.0.dev2026061007](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @marcelveldt, @stvncode
-
-
-# [2.9.0.dev2026061007] - 10.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026060914](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026060914)_
-
-### 🚀 Features and enhancements
-
-- Spread metadata maintenance schedule across the day (by @MarvinSchenkel in #4126)
-- Lastfm improvements (by @OzGav in #4148)
-- Improve playlog for artists and albums (by @chrisuthe in #4149)
-- ACoustID Switch to shared API key by default (by @OzGav in #4154)
-
-### 🐛 Bugfixes
-
-- Fix Sendspin not playing when grouping ESPHome devices (by @maximmaxim345 in #4147)
-- end of queue results in track being reported as played twice (by @chrisuthe in #4150)
-- Cap concurrent MusicBrainz ISRC lookups in Last.fm recommendations (by @OzGav in #4155)
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix guard_single_request type-var bound so media controllers don't need ignores (by @OzGav in #4153)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @maximmaxim345
 
 
