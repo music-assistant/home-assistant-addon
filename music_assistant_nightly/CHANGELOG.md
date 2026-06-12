@@ -1,3 +1,28 @@
+# [2.10.0.dev2026061207] - 12.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061108](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061108)_
+
+### 🐛 Bugfixes
+
+- Fix Universal Group Player producing no audio on some members (by @OzGav in #4116)
+- Fix Sendspin grouping with Cast devices (by @maximmaxim345 in #4170)
+- Restore 'ignore volume reports' setting for AirPlay players (by @MarvinSchenkel in #4172)
+- Fix track duration shrinking when seeking near the end with smart crossfade (by @MarvinSchenkel in #4176)
+- Fix invalid scope error when adding a custom Spotify client ID (by @marcelveldt in #4182)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump zeroconf from 0.149.7 to 0.149.12 (by @dependabot[bot] in #4174)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @marcelveldt, @maximmaxim345
+
+
 # [2.10.0.dev2026061108] - 11.06.2026
 
 ## 📦 Nightly Release
@@ -42,34 +67,5 @@ _Changes since [2.9.0.dev2026061014](https://github.com/music-assistant/server/r
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @chrisuthe, @marcelveldt
-
-
-# [2.9.0.dev2026061014] - 10.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.9.0.dev2026061009](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026061009)_
-
-### 🐛 Bugfixes
-
-- AirPlay: fix mDNS cross-match when device name is substring of another device name (by @MarvinSchenkel in #4098)
-- Last.fm provider search bug fixes (by @OzGav in #4159)
-- Fix 30s delay when grouping some Sendspin devices (by @maximmaxim345 in #4160)
-- Prevent out-of-memory crash when compacting the library database (by @MarvinSchenkel in #4161)
-
-### 🎨 Frontend Changes
-
-- Store some settings per user (by @OzGav in [#1335](https://github.com/music-assistant/frontend/pull/1335))
-- Fix heart icon spacing in list view and keep listing search visible (by @MarvinSchenkel in [#1903](https://github.com/music-assistant/frontend/pull/1903))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.185 (by @music-assistant-machine in #4162)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @maximmaxim345
 
 
