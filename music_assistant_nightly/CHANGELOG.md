@@ -1,3 +1,20 @@
+# [2.10.0.dev2026061308] - 13.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061307](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061307)_
+
+### 🚀 Features and enhancements
+
+- Smart crossfade: transition on audible content instead of silent outros (by @MarvinSchenkel in #4178)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel
+
+
 # [2.10.0.dev2026061307] - 13.06.2026
 
 ## 📦 Nightly Release
@@ -56,22 +73,5 @@ _Changes since [2.10.0.dev2026061108](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @marcelveldt, @maximmaxim345
-
-
-# [2.10.0.dev2026061108] - 11.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061105](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061105)_
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix release notes for minor releases skipping most changes (by @MarvinSchenkel in #4171)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
