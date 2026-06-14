@@ -1,6 +1,6 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.20
-ARG NCM_API_REF=v4.35.1
 FROM ${BUILD_FROM}
+ARG NCM_API_REF=v4.35.1
 
 SHELL ["/bin/ash", "-o", "pipefail", "-c"]
 
