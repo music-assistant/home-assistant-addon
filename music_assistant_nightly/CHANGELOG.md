@@ -1,3 +1,38 @@
+# [2.10.0.dev2026061407] - 14.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061308](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061308)_
+
+### 🚀 Features and enhancements
+
+- Localize server-provided strings (by @marcelveldt in #4200)
+
+### 🐛 Bugfixes
+
+- Fix ISRC lookups failing for Last.fm track MBIDs (by @OzGav in #4185)
+- Fix Last.fm Discover rows showing owned tracks under a different version name (by @OzGav in #4186)
+- Derive Last.fm genre rows from listening history, not manual tags (by @OzGav in #4187)
+- Fix now-playing artwork showing a solid background for transparent logos (by @OzGav in #4188)
+- Drop per-track MusicBrainz ISRC lookups from Last.fm recommendations (by @OzGav in #4190)
+- Fix high idle memory usage (by @marcelveldt in #4198)
+
+### 🎨 Frontend Changes
+
+- Consume server-resolved translations for server-provided strings (by @marcelveldt in [#1911](https://github.com/music-assistant/frontend/pull/1911))
+
+### 🧰 Maintenance and dependency bumps
+
+- Use threading.get_ident() instead of asyncio's private _thread_id (by @marcelveldt in #4205)
+- ⬆️ Update music-assistant-frontend to 2.17.188 (by @music-assistant-machine in #4208)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt
+
+
 # [2.10.0.dev2026061308] - 13.06.2026
 
 ## 📦 Nightly Release
@@ -48,30 +83,5 @@ _Changes since [2.10.0.dev2026061207](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @chrisuthe, @croll83, @dmoo500, @marcelveldt
-
-
-# [2.10.0.dev2026061207] - 12.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061108](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061108)_
-
-### 🐛 Bugfixes
-
-- Fix Universal Group Player producing no audio on some members (by @OzGav in #4116)
-- Fix Sendspin grouping with Cast devices (by @maximmaxim345 in #4170)
-- Restore 'ignore volume reports' setting for AirPlay players (by @MarvinSchenkel in #4172)
-- Fix track duration shrinking when seeking near the end with smart crossfade (by @MarvinSchenkel in #4176)
-- Fix invalid scope error when adding a custom Spotify client ID (by @marcelveldt in #4182)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump zeroconf from 0.149.7 to 0.149.12 (by @dependabot[bot] in #4174)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @marcelveldt, @maximmaxim345
 
 
