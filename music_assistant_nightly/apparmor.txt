@@ -22,6 +22,8 @@ profile music_assistant_addon flags=(attach_disconnected,mediate_deleted) {
 
   /dev/* mrwkl,
   /tmp/** mrkwl,
+  /dev/snd/ rw,
+  /dev/snd/** rw,
 
   # Data access
   /data/** rw,

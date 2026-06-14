@@ -1,6 +1,6 @@
 name: Music Assistant DEV SERVER
 # version number gets updated only when the mass base image updates!
-version: 1.4.10h
+version: 1.5.2
 slug: music_assistant_dev
 description: Development App for Music Assistant. For developers only.
 url: https://music-assistant.io
@@ -15,7 +15,8 @@ auth_api: true
 host_network: true
 ingress: true
 ingress_port: 8094
-panel_icon: mdi:play-circle
+audio: true
+panel_icon: mdi:music-assistant
 panel_title: Music Assistant
 panel_admin: false
 uart: false

@@ -1,67 +1,87 @@
-# [2.9.0.dev2026041023] - 10.04.2026
+# [2.10.0.dev2026061407] - 14.06.2026
 
 ## 📦 Nightly Release
 
-_Changes since [2.9.0.dev2026041020](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041020)_
+_Changes since [2.10.0.dev2026061308](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061308)_
+
+### 🚀 Features and enhancements
+
+- Localize server-provided strings (by @marcelveldt in #4200)
 
 ### 🐛 Bugfixes
 
-- Small fixes for flow stream buffering and crossfade yielding (by @marcelveldt in #3645)
+- Fix ISRC lookups failing for Last.fm track MBIDs (by @OzGav in #4185)
+- Fix Last.fm Discover rows showing owned tracks under a different version name (by @OzGav in #4186)
+- Derive Last.fm genre rows from listening history, not manual tags (by @OzGav in #4187)
+- Fix now-playing artwork showing a solid background for transparent logos (by @OzGav in #4188)
+- Drop per-track MusicBrainz ISRC lookups from Last.fm recommendations (by @OzGav in #4190)
+- Fix high idle memory usage (by @marcelveldt in #4198)
+
+### 🎨 Frontend Changes
+
+- Consume server-resolved translations for server-provided strings (by @marcelveldt in [#1911](https://github.com/music-assistant/frontend/pull/1911))
 
 ### 🧰 Maintenance and dependency bumps
 
-- Mypy fixes for the Sonos provider (by @OzGav in #3538)
-- Remove player_options. from translation key in MusicCast. (by @fmunkes in #3642)
-- ⬆️ Update music-assistant-models to 1.1.115 (by @music-assistant-machine in #3644)
+- Use threading.get_ident() instead of asyncio's private _thread_id (by @marcelveldt in #4205)
+- ⬆️ Update music-assistant-frontend to 2.17.188 (by @music-assistant-machine in #4208)
 
 ## :bow: Thanks to our contributors
 
 Special thanks to the following contributors who helped with this release:
 
-@OzGav, @fmunkes, @marcelveldt
+@OzGav, @marcelveldt
 
 
-# [2.9.0.dev2026041020] - 10.04.2026
+# [2.10.0.dev2026061308] - 13.06.2026
 
 ## 📦 Nightly Release
 
-_Changes since [2.9.0.dev2026041016](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041016)_
+_Changes since [2.10.0.dev2026061307](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061307)_
 
 ### 🚀 Features and enhancements
 
-- Add AI_QUERY and TTS to HA Plugin (by @MarvinSchenkel in #3607)
-
-### 🐛 Bugfixes
-
-- Preserve builtin playlist cover images on M3U rewrites (by @marcelveldt in #3633)
-- Fix AirPlay late joiner sync on Linux (by @marcelveldt in #3643)
+- Smart crossfade: transition on audible content instead of silent outros (by @MarvinSchenkel in #4178)
 
 ## :bow: Thanks to our contributors
 
 Special thanks to the following contributors who helped with this release:
 
-@MarvinSchenkel, @marcelveldt
+@MarvinSchenkel
 
 
-# [2.9.0.dev2026041016] - 10.04.2026
+# [2.10.0.dev2026061307] - 13.06.2026
 
 ## 📦 Nightly Release
 
-_Changes since [2.9.0.dev2026041005](https://github.com/music-assistant/server/releases/tag/2.9.0.dev2026041005)_
+_Changes since [2.10.0.dev2026061207](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061207)_
 
 ### 🚀 Features and enhancements
 
-- Add Apple Music station recommendations to Discover page (by @dmoo500 in #3622)
+- Automatically check if CPU is supported for Audio Analysis (by @chrisuthe in #4166)
+- Add API command to get the color palette for any image (by @marcelveldt in #4193)
 
 ### 🐛 Bugfixes
 
-- Fix Sendspin bridge race causing Chromecast player to disappear (by @maximmaxim345 in #3632)
-- Fix AirPlay RAOP sync and disable AP2 grouping (by @marcelveldt in #3637)
+- fix(alexa): include track metadata in the initial play_media push (by @croll83 in #4168)
+- Remove local providers without wiping the entire library (by @marcelveldt in #4183)
+- Fix sync group member playing out of sync after concurrent group changes (by @marcelveldt in #4189)
+- Skip stale artist paths during filesystem track parsing (by @chrisuthe in #4191)
+
+### 🎨 Frontend Changes
+
+- Add scroll to description dialog for long descriptions (by @dmoo500 in [#1908](https://github.com/music-assistant/frontend/pull/1908))
+- Add field icons to smart playlist rules (by @dmoo500 in [#1866](https://github.com/music-assistant/frontend/pull/1866))
+- Fix settings breadcrumb for disabled provider instances (by @OzGav in [#1909](https://github.com/music-assistant/frontend/pull/1909))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.187 (by @music-assistant-machine in #4195)
 
 ## :bow: Thanks to our contributors
 
 Special thanks to the following contributors who helped with this release:
 
-@dmoo500, @marcelveldt, @maximmaxim345
+@OzGav, @chrisuthe, @croll83, @dmoo500, @marcelveldt
 
 
