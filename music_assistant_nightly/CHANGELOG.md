@@ -1,3 +1,24 @@
+# [2.10.0.dev2026061415] - 14.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061407](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061407)_
+
+### 🐛 Bugfixes
+
+- Plex: fix bugs, remove dead code and reduce repetition (by @anatosun in #4179)
+
+### 🧰 Maintenance and dependency bumps
+
+- Reduce idle memory usage by tuning jemalloc (by @marcelveldt in #4213)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@anatosun, @marcelveldt
+
+
 # [2.10.0.dev2026061407] - 14.06.2026
 
 ## 📦 Nightly Release
@@ -48,40 +69,5 @@ _Changes since [2.10.0.dev2026061307](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel
-
-
-# [2.10.0.dev2026061307] - 13.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061207](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061207)_
-
-### 🚀 Features and enhancements
-
-- Automatically check if CPU is supported for Audio Analysis (by @chrisuthe in #4166)
-- Add API command to get the color palette for any image (by @marcelveldt in #4193)
-
-### 🐛 Bugfixes
-
-- fix(alexa): include track metadata in the initial play_media push (by @croll83 in #4168)
-- Remove local providers without wiping the entire library (by @marcelveldt in #4183)
-- Fix sync group member playing out of sync after concurrent group changes (by @marcelveldt in #4189)
-- Skip stale artist paths during filesystem track parsing (by @chrisuthe in #4191)
-
-### 🎨 Frontend Changes
-
-- Add scroll to description dialog for long descriptions (by @dmoo500 in [#1908](https://github.com/music-assistant/frontend/pull/1908))
-- Add field icons to smart playlist rules (by @dmoo500 in [#1866](https://github.com/music-assistant/frontend/pull/1866))
-- Fix settings breadcrumb for disabled provider instances (by @OzGav in [#1909](https://github.com/music-assistant/frontend/pull/1909))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.187 (by @music-assistant-machine in #4195)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe, @croll83, @dmoo500, @marcelveldt
 
 
