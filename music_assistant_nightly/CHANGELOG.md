@@ -1,3 +1,42 @@
+# [2.10.0.dev2026061509] - 15.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061415](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061415)_
+
+### 🚀 Features and enhancements
+
+- Localized-name search for genres and playlists (by @marcelveldt in #4212)
+- Key media item translation names by media type (by @marcelveldt in #4216)
+
+### 🐛 Bugfixes
+
+- Alexa: Fix restore saved session after aiohttp update (by @Joshi425 in #4181)
+- Fix translations in Audiobookshelf and iTunes podcasts (by @fmunkes in #4210)
+- Translate RadioBrowser browse folder names (by @marcelveldt in #4223)
+
+### 🎨 Frontend Changes
+
+- Add explicit_only filter to smart playlist rules (by @dmoo500 in [#1865](https://github.com/music-assistant/frontend/pull/1865))
+- Remove server-resolved strings from the locale files (by @marcelveldt in [#1912](https://github.com/music-assistant/frontend/pull/1912))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #4219)
+
+### 🧰 Maintenance and dependency bumps
+
+- Lokalise translations update (by @github-actions[bot] in #4209)
+- Don't lint downloaded translation files for spelling/EOF (by @marcelveldt in #4215)
+- ⬆️ Update music-assistant-frontend to 2.17.189 (by @music-assistant-machine in #4222)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Joshi425, @dmoo500, @fmunkes, @marcelveldt
+
+
 # [2.10.0.dev2026061415] - 14.06.2026
 
 ## 📦 Nightly Release
@@ -52,22 +91,5 @@ _Changes since [2.10.0.dev2026061308](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt
-
-
-# [2.10.0.dev2026061308] - 13.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061307](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061307)_
-
-### 🚀 Features and enhancements
-
-- Smart crossfade: transition on audible content instead of silent outros (by @MarvinSchenkel in #4178)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
