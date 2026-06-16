@@ -1,3 +1,53 @@
+# [2.10.0.dev2026061608] - 16.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061509](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061509)_
+
+### 🚀 Features and enhancements
+
+- Localize genre descriptions server-side (by @marcelveldt in #4227)
+- Localize error messages sent to API clients (by @marcelveldt in #4228)
+- Localize provider-sync background-task names server-side (by @marcelveldt in #4238)
+- Wire up provider status reporting (structured errors + derived status) (by @marcelveldt in #4242)
+- Relax resource requirements for audio analysis providers (by @marcelveldt in #4249)
+
+### 🐛 Bugfixes
+
+- Skip multichannel files in AcoustID scan instead of crashing (by @OzGav in #4230)
+- Fix progress report when transitioning from idle or paused (by @fmunkes in #4236)
+- Fix Sonos abrupt track switches when reordering an active queue (by @marcelveldt in #4237)
+- Trim Provider.to_dict() to match the ProviderInstance schema (by @marcelveldt in #4239)
+
+### 🎨 Frontend Changes
+
+- Use ExplicitIcon for explicit content field in smart playlist rules (by @dmoo500 in [#1924](https://github.com/music-assistant/frontend/pull/1924))
+- Use server-provided genre descriptions (by @marcelveldt in [#1923](https://github.com/music-assistant/frontend/pull/1923))
+- Reconnect the built-in player after a dropped connection (by @marcelveldt in [#1910](https://github.com/music-assistant/frontend/pull/1910))
+- Use server-resolved background-task names (drop client-side translation) (by @marcelveldt in [#1925](https://github.com/music-assistant/frontend/pull/1925))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Lokalise translations update (by @github-actions[bot] in #4221)
+- Remove stale Deezer disc/track number TODO (by @OzGav in #4229)
+- Bump actions/checkout from 4 to 6 (by @dependabot[bot] in #4232)
+- Bump cryptography from 46.0.7 to 49.0.0 (by @dependabot[bot] in #4233)
+- ⬆️ Update music-assistant-models to 1.1.133 (by @music-assistant-machine in #4240)
+- Bump aiohttp from 3.14.0 to 3.14.1 (by @dependabot[bot] in #4241)
+- ⬆️ Update music-assistant-frontend to 2.17.190 (by @music-assistant-machine in #4248)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @dmoo500, @fmunkes, @marcelveldt
+
+
 # [2.10.0.dev2026061509] - 15.06.2026
 
 ## 📦 Nightly Release
@@ -56,40 +106,5 @@ _Changes since [2.10.0.dev2026061407](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @anatosun, @marcelveldt
-
-
-# [2.10.0.dev2026061407] - 14.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061308](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061308)_
-
-### 🚀 Features and enhancements
-
-- Localize server-provided strings (by @marcelveldt in #4200)
-
-### 🐛 Bugfixes
-
-- Fix ISRC lookups failing for Last.fm track MBIDs (by @OzGav in #4185)
-- Fix Last.fm Discover rows showing owned tracks under a different version name (by @OzGav in #4186)
-- Derive Last.fm genre rows from listening history, not manual tags (by @OzGav in #4187)
-- Fix now-playing artwork showing a solid background for transparent logos (by @OzGav in #4188)
-- Drop per-track MusicBrainz ISRC lookups from Last.fm recommendations (by @OzGav in #4190)
-- Fix high idle memory usage (by @marcelveldt in #4198)
-
-### 🎨 Frontend Changes
-
-- Consume server-resolved translations for server-provided strings (by @marcelveldt in [#1911](https://github.com/music-assistant/frontend/pull/1911))
-
-### 🧰 Maintenance and dependency bumps
-
-- Use threading.get_ident() instead of asyncio's private _thread_id (by @marcelveldt in #4205)
-- ⬆️ Update music-assistant-frontend to 2.17.188 (by @music-assistant-machine in #4208)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt
 
 
