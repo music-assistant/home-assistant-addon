@@ -1,3 +1,48 @@
+# [2.9.2] - 17.06.2026
+
+## 📦 Stable Release
+
+_Changes since [2.9.1](https://github.com/music-assistant/server/releases/tag/2.9.1)_
+
+### 🚀 Features and enhancements
+
+- Relax resource requirements for audio analysis providers (by @marcelveldt in #4249)
+- Relax 'Maximum' buffer tier to 7GB RAM (by @marcelveldt in #4268)
+
+### 🐛 Bugfixes
+
+- Alexa: Fix restore saved session after aiohttp update (by @Joshi425 in #4181)
+- Add correct playlog information when retrieving audiobooks in audiobooks controller (by @fmunkes in #4199)
+- Fix Cast Group mDNS for Nest Mini stereo pairs (cast_port/leader rename) (by @goodlucknow in #4224)
+- Skip multichannel files in AcoustID scan instead of crashing (by @OzGav in #4230)
+- Fix progress report when transitioning from idle or paused (by @fmunkes in #4236)
+- Fix image download from CDNs that reject our User-Agent (by @OzGav in #4243)
+- Backfill missing album on provider album tracks (by @OzGav in #4244)
+- Fix standard crossfade falling back to a hard cut on some tracks (by @marcelveldt in #4253)
+- Bound audio-analysis CPU usage and silence NNPACK spam on ARM (by @marcelveldt in #4257)
+- Record explicit album/artist/track plays as user-initiated (by @chrisuthe in #4260)
+- Release drained audio buffers in the inactivity monitor (by @marcelveldt in #4294)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Vectorize weighted distance in the sonic similarity provider (by @marcelveldt in #4203)
+- Bump aiohttp from 3.14.0 to 3.14.1 (by @dependabot[bot] in #4241)
+- Type ytmusic search filter as a Literal (unblock ytmusicapi 1.12.1 mypy) (by @OzGav in #4245)
+- Accept Python 3.14 syntax in backports without reformatting stable (by @marcelveldt in #4256)
+- Make SQLite page-cache and mmap RAM-aware (by @marcelveldt in #4293)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Joshi425, @OzGav, @chrisuthe, @fmunkes, @goodlucknow, @marcelveldt
+
+
 # [2.9.1] - 14.06.2026
 
 ## 📦 Stable Release
