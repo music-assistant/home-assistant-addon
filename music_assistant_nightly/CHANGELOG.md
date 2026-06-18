@@ -1,3 +1,78 @@
+# [2.10.0.dev2026061808] - 18.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026061708](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061708)_
+
+### 🚀 New Providers
+
+- feat(provider): Add Amplipi provider (by @mcaulifn in #4110)
+
+### 🚀 Features and enhancements
+
+- Add support for audiobook collections (by @fmunkes in #3569)
+- feat(audible): resume playback position from Audible Whispersync (by @scootaash in #3893)
+- Persist playback speed for audiobooks and podcast episodes (by @OzGav in #4270)
+- Localize Last.fm recommendation row titles and subtitles (by @marcelveldt in #4276)
+- Translate nugs recommendation folder names (by @marcelveldt in #4277)
+- Make NicoVideo recommendation labels translatable (by @marcelveldt in #4279)
+- Make Audible root browse-folder labels translatable (by @marcelveldt in #4281)
+- Make Bandcamp recommendation and collection folder labels translatable (by @marcelveldt in #4282)
+- Localize NetEase Cloud Music recommendation and playlist labels (by @marcelveldt in #4283)
+- Localize Deezer browse and virtual-playlist labels (by @marcelveldt in #4285)
+- Localize Yandex Music browse labels via the server translation system (by @marcelveldt in #4286)
+- Localize Podcast Index browse folder labels (by @marcelveldt in #4287)
+- Make Phish.in browse-folder labels translatable (by @marcelveldt in #4288)
+- KION Music: localize browse & recommendation labels via server translations (by @marcelveldt in #4289)
+- Lazy-import chardet to lower idle memory (by @marcelveldt in #4291)
+- Support common-string references in the translations build (by @marcelveldt in #4298)
+- Guard against hardcoded ConfigEntry strings (by @marcelveldt in #4304)
+
+### 🐛 Bugfixes
+
+- Fix Cast Group mDNS for Nest Mini stereo pairs (cast_port/leader rename) (by @goodlucknow in #4224)
+- Fix image download from CDNs that reject our User-Agent (by @OzGav in #4243)
+- Localize MusicMe browse and recommendation section labels (by @marcelveldt in #4278)
+- Translate Zvuk Music browse/recommendation labels (by @marcelveldt in #4280)
+- Localize hardcoded provider browse and recommendation labels (by @marcelveldt in #4290)
+- Release drained audio buffers in the inactivity monitor (by @marcelveldt in #4294)
+- Admit genuine 4GB hosts via a shared RAM reporting tolerance (by @marcelveldt in #4301)
+- Remove stale Cast players that are actually passive multichannel endpoints (by @marcelveldt in #4302)
+- Fix live metadata not refreshing for grouped AirPlay players (by @marcelveldt in #4303)
+
+### 🎨 Frontend Changes
+
+- Remove leftover and dead translation keys from the frontend (by @marcelveldt in [#1933](https://github.com/music-assistant/frontend/pull/1933))
+
+### Other Changes
+
+- Refactor metadata controller into a package (by @marcelveldt in #4265)
+- Refactor music controller into its own package (by @marcelveldt in #4266)
+- Lokalise translations update (by @github-actions[bot] in #4296)
+- Move core-owned strings out of the common translations (by @marcelveldt in #4299)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Vectorize weighted distance in the sonic similarity provider (by @marcelveldt in #4203)
+- Replace broad except in scrobbler with per-client exceptions (by @OzGav in #4226)
+- Type ytmusic search filter as a Literal (unblock ytmusicapi 1.12.1 mypy) (by @OzGav in #4245)
+- Avoid loading aiortc/PyAV when remote access is disabled (by @marcelveldt in #4292)
+- Make SQLite page-cache and mmap RAM-aware (by @marcelveldt in #4293)
+- Cut repeated reflection on hot cache-hit and event-dispatch paths (by @marcelveldt in #4295)
+- ⬆️ Update music-assistant-frontend to 2.17.192 (by @music-assistant-machine in #4309)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @fmunkes, @goodlucknow, @marcelveldt, @mcaulifn, @scootaash
+
+
 # [2.10.0.dev2026061708] - 17.06.2026
 
 ## 📦 Nightly Release
@@ -105,44 +180,5 @@ _Changes since [2.10.0.dev2026061509](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @dmoo500, @fmunkes, @marcelveldt
-
-
-# [2.10.0.dev2026061509] - 15.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061415](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061415)_
-
-### 🚀 Features and enhancements
-
-- Localized-name search for genres and playlists (by @marcelveldt in #4212)
-- Key media item translation names by media type (by @marcelveldt in #4216)
-
-### 🐛 Bugfixes
-
-- Alexa: Fix restore saved session after aiohttp update (by @Joshi425 in #4181)
-- Fix translations in Audiobookshelf and iTunes podcasts (by @fmunkes in #4210)
-- Translate RadioBrowser browse folder names (by @marcelveldt in #4223)
-
-### 🎨 Frontend Changes
-
-- Add explicit_only filter to smart playlist rules (by @dmoo500 in [#1865](https://github.com/music-assistant/frontend/pull/1865))
-- Remove server-resolved strings from the locale files (by @marcelveldt in [#1912](https://github.com/music-assistant/frontend/pull/1912))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4219)
-
-### 🧰 Maintenance and dependency bumps
-
-- Lokalise translations update (by @github-actions[bot] in #4209)
-- Don't lint downloaded translation files for spelling/EOF (by @marcelveldt in #4215)
-- ⬆️ Update music-assistant-frontend to 2.17.189 (by @music-assistant-machine in #4222)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Joshi425, @dmoo500, @fmunkes, @marcelveldt
 
 
