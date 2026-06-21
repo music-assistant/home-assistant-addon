@@ -1,3 +1,26 @@
+# [2.10.0.dev2026062108] - 21.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062011](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062011)_
+
+### 🚀 Features and enhancements
+
+- Enable multi-instance support for Pandora (by @mcaulifn in #4284)
+- Move volume normalization target level to streams global setting (by @marcelveldt in #4369)
+- Allow Bandcamp feed and wishlist to be playable. (by @rnewman in #4371)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.140 (by @music-assistant-machine in #4374)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @mcaulifn, @rnewman
+
+
 # [2.10.0.dev2026062011] - 20.06.2026
 
 ## 📦 Nightly Release
@@ -163,64 +186,5 @@ _Changes since [2.10.0.dev2026061708](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @fmunkes, @goodlucknow, @marcelveldt, @mcaulifn, @scootaash
-
-
-# [2.10.0.dev2026061708] - 17.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061608](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061608)_
-
-### 🚀 Features and enhancements
-
-- Localize UnsupportedSystemError messages (by @marcelveldt in #4255)
-- Localize user-facing provider error messages (by @marcelveldt in #4259)
-- Localize core module names & descriptions server-side (by @marcelveldt in #4261)
-- Localize player option labels server-side (by @marcelveldt in #4262)
-- Relax 'Maximum' buffer tier to 7GB RAM (by @marcelveldt in #4268)
-- Respect container cgroup memory limits when detecting system memory (by @marcelveldt in #4269)
-
-### 🐛 Bugfixes
-
-- Add correct playlog information when retrieving audiobooks in audiobooks controller (by @fmunkes in #4199)
-- Backfill missing album on provider album tracks (by @OzGav in #4244)
-- Fix standard crossfade falling back to a hard cut on some tracks (by @marcelveldt in #4253)
-- Bound audio-analysis CPU usage and silence NNPACK spam on ARM (by @marcelveldt in #4257)
-- Record explicit album/artist/track plays as user-initiated (by @chrisuthe in #4260)
-
-### 🎨 Frontend Changes
-
-- Render player option and sound mode labels localized by the server (by @marcelveldt in [#1932](https://github.com/music-assistant/frontend/pull/1932))
-- Use toast notifications for config flow errors instead of browser alerts (by @marcelveldt in [#1929](https://github.com/music-assistant/frontend/pull/1929))
-- Provider status indicator and clearer error reporting (by @marcelveldt in [#1927](https://github.com/music-assistant/frontend/pull/1927))
-- Drop server-stripped translation fields from frontend types (by @marcelveldt in [#1931](https://github.com/music-assistant/frontend/pull/1931))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4252)
-- Refactor player_queues controller into a package (by @marcelveldt in #4263)
-- Move player_queues config-entry strings into the controller's strings.json (by @marcelveldt in #4267)
-- Revert "Respect container cgroup memory limits" (#4269) (by @marcelveldt in #4274)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- Remove Dashie Kiosk player provider (by @jwlerch78 in #4192)
-- Adapt QQ Music provider to qqmusic-api 0.6 (by @xiasi0 in #4211)
-- Target Python 3.14 for lint and type-checking (by @marcelveldt in #4254)
-- ⬆️ Update music-assistant-models to 1.1.134 (by @music-assistant-machine in #4258)
-- ⬆️ Update music-assistant-models to 1.1.135 (by @music-assistant-machine in #4264)
-- ⬆️ Update music-assistant-frontend to 2.17.191 (by @music-assistant-machine in #4271)
-- ⬆️ Update music-assistant-models to 1.1.136 (by @music-assistant-machine in #4273)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe, @fmunkes, @jwlerch78, @marcelveldt, @xiasi0
 
 
