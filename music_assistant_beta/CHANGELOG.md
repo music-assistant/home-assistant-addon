@@ -1,3 +1,43 @@
+# [2.10.0b1] - 22.06.2026
+
+## 📦 Beta Release
+
+_Changes since [2.10.0b0](https://github.com/music-assistant/server/releases/tag/2.10.0b0)_
+
+### 🚀 Features and enhancements
+
+- Allow Bandcamp feed and wishlist to be playable. (by @rnewman in #4371)
+- Move queue-scoped settings (crossfade, volume normalization) to the queue (by @marcelveldt in #4373)
+- Use ICY StreamUrl cover art for radio streams when it is an image (by @OzGav in #4379)
+- Migrate Spotify Connect to go-librespot (by @marcelveldt in #4384)
+
+### 🐛 Bugfixes
+
+- Fix Party URL when webserver URL has trailing / (by @OzGav in #4375)
+- Fix white noise bug in Jellyfin (by @OzGav in #4378)
+- Fix next-track preload crash for fractional track durations (by @marcelveldt in #4380)
+- Fix elapsed time drift for live sources played to a sync group (by @marcelveldt in #4385)
+- Plex: fix track sync re-scanning the whole library on every page (by @marcelveldt in #4386)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- ⬆️ Update music-assistant-models to 1.1.140 (by @music-assistant-machine in #4374)
+- ⬆️ Update music-assistant-models to 1.1.141 (by @music-assistant-machine in #4381)
+- ⬆️ Update music-assistant-models to 1.1.142 (by @music-assistant-machine in #4382)
+- Update BASE_IMAGE_VERSION for beta and nightly (by @marcelveldt in #4387)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt, @rnewman
+
+
 # [2.10.0b0] - 20.06.2026
 
 ## 📦 Beta Release
@@ -443,33 +483,5 @@ _Changes since [2.9.0rc7](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @Joshi425, @MarvinSchenkel, @OzGav, @anatosun, @chrisuthe, @croll83, @dmoo500, @fmunkes, @goodlucknow, @ijc, @jwlerch78, @kissu, @lebdim, @libre-7, @marcelveldt, @maximmaxim345, @mcaulifn, @scootaash, @xiasi0
-
-
-# [2.9.0rc7] - 10.06.2026
-
-## 📦 RC Release
-
-_Changes since [2.9.0rc6](https://github.com/music-assistant/server/releases/tag/2.9.0rc6)_
-
-### 🚀 Features and enhancements
-
-- Default artist fix (by @chrisuthe in #4163)
-- Add unofficial-integration disclaimer to streaming provider settings (by @marcelveldt in #4164)
-
-### 🎨 Frontend Changes
-
-- Lokalise: Translations update (by @marcelveldt in [#1904](https://github.com/music-assistant/frontend/pull/1904))
-- fix: update artist enqueue-selection option labels (by @chrisuthe in [#1906](https://github.com/music-assistant/frontend/pull/1906))
-- Add per-provider listings and a provider selector to the artist page (by @marcelveldt in [#1905](https://github.com/music-assistant/frontend/pull/1905))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.186 (by @music-assistant-machine in #4165)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@chrisuthe, @marcelveldt
 
 
