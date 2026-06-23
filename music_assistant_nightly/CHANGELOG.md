@@ -1,3 +1,57 @@
+# [2.10.0.dev2026062306] - 23.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062108](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062108)_
+
+### 🚀 Features and enhancements
+
+- Move queue-scoped settings (crossfade, volume normalization) to the queue (by @marcelveldt in #4373)
+- Use ICY StreamUrl cover art for radio streams when it is an image (by @OzGav in #4379)
+- Migrate Spotify Connect to go-librespot (by @marcelveldt in #4384)
+- Rename 'don't stop the music' to 'autoplay' (by @marcelveldt in #4404)
+
+### 🐛 Bugfixes
+
+- Fix Party URL when webserver URL has trailing / (by @OzGav in #4375)
+- Fix white noise bug in Jellyfin (by @OzGav in #4378)
+- Fix next-track preload crash for fractional track durations (by @marcelveldt in #4380)
+- Fix elapsed time drift for live sources played to a sync group (by @marcelveldt in #4385)
+- Plex: fix track sync re-scanning the whole library on every page (by @marcelveldt in #4386)
+- Fix Spotify playback failing on broken Spotify CDN URLs (by @marcelveldt in #4398)
+- Pause external sources instead of stopping them (by @marcelveldt in #4401)
+
+### 🎨 Frontend Changes
+
+- Always expand players when clicking the player button from the 'now playing' screen ([#60](https://github.com/music-assistant/frontend/pull/60)) (by @joperafe in [#1944](https://github.com/music-assistant/frontend/pull/1944))
+- Add crossfade control to the player and a per-queue settings page (by @marcelveldt in [#1942](https://github.com/music-assistant/frontend/pull/1942))
+- Pnpm switch (by @stvncode in [#1951](https://github.com/music-assistant/frontend/pull/1951))
+- Revamp the fullscreen player header controls (by @marcelveldt in [#1945](https://github.com/music-assistant/frontend/pull/1945))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>9 changes</summary>
+
+- ⬆️ Update music-assistant-models to 1.1.141 (by @music-assistant-machine in #4381)
+- ⬆️ Update music-assistant-models to 1.1.142 (by @music-assistant-machine in #4382)
+- Update BASE_IMAGE_VERSION for beta and nightly (by @marcelveldt in #4387)
+- Enable RUF006 and fix unstored asyncio tasks (by @OzGav in #4393)
+- Enable RUF012 (by @OzGav in #4394)
+- Enable PYI034 (return Self from __aenter__/__new__) (by @OzGav in #4395)
+- ⬆️ Update music-assistant-frontend to 2.17.195 (by @music-assistant-machine in #4396)
+- Enable S307 rule - possibly insecure function (by @OzGav in #4397)
+- ⬆️ Update music-assistant-frontend to 2.17.196 (by @music-assistant-machine in #4407)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @joperafe, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026062108] - 21.06.2026
 
 ## 📦 Nightly Release
@@ -111,80 +165,5 @@ _Changes since [2.10.0.dev2026061808](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Copilot, @OzGav, @chrisuthe, @dmoo500, @fmunkes, @ijc, @kissu, @lebdim, @libre-7, @marcelveldt, @mcaulifn
-
-
-# [2.10.0.dev2026061808] - 18.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061708](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061708)_
-
-### 🚀 New Providers
-
-- feat(provider): Add Amplipi provider (by @mcaulifn in #4110)
-
-### 🚀 Features and enhancements
-
-- Add support for audiobook collections (by @fmunkes in #3569)
-- feat(audible): resume playback position from Audible Whispersync (by @scootaash in #3893)
-- Persist playback speed for audiobooks and podcast episodes (by @OzGav in #4270)
-- Localize Last.fm recommendation row titles and subtitles (by @marcelveldt in #4276)
-- Translate nugs recommendation folder names (by @marcelveldt in #4277)
-- Make NicoVideo recommendation labels translatable (by @marcelveldt in #4279)
-- Make Audible root browse-folder labels translatable (by @marcelveldt in #4281)
-- Make Bandcamp recommendation and collection folder labels translatable (by @marcelveldt in #4282)
-- Localize NetEase Cloud Music recommendation and playlist labels (by @marcelveldt in #4283)
-- Localize Deezer browse and virtual-playlist labels (by @marcelveldt in #4285)
-- Localize Yandex Music browse labels via the server translation system (by @marcelveldt in #4286)
-- Localize Podcast Index browse folder labels (by @marcelveldt in #4287)
-- Make Phish.in browse-folder labels translatable (by @marcelveldt in #4288)
-- KION Music: localize browse & recommendation labels via server translations (by @marcelveldt in #4289)
-- Lazy-import chardet to lower idle memory (by @marcelveldt in #4291)
-- Support common-string references in the translations build (by @marcelveldt in #4298)
-- Guard against hardcoded ConfigEntry strings (by @marcelveldt in #4304)
-
-### 🐛 Bugfixes
-
-- Fix Cast Group mDNS for Nest Mini stereo pairs (cast_port/leader rename) (by @goodlucknow in #4224)
-- Fix image download from CDNs that reject our User-Agent (by @OzGav in #4243)
-- Localize MusicMe browse and recommendation section labels (by @marcelveldt in #4278)
-- Translate Zvuk Music browse/recommendation labels (by @marcelveldt in #4280)
-- Localize hardcoded provider browse and recommendation labels (by @marcelveldt in #4290)
-- Release drained audio buffers in the inactivity monitor (by @marcelveldt in #4294)
-- Admit genuine 4GB hosts via a shared RAM reporting tolerance (by @marcelveldt in #4301)
-- Remove stale Cast players that are actually passive multichannel endpoints (by @marcelveldt in #4302)
-- Fix live metadata not refreshing for grouped AirPlay players (by @marcelveldt in #4303)
-
-### 🎨 Frontend Changes
-
-- Remove leftover and dead translation keys from the frontend (by @marcelveldt in [#1933](https://github.com/music-assistant/frontend/pull/1933))
-
-### Other Changes
-
-- Refactor metadata controller into a package (by @marcelveldt in #4265)
-- Refactor music controller into its own package (by @marcelveldt in #4266)
-- Lokalise translations update (by @github-actions[bot] in #4296)
-- Move core-owned strings out of the common translations (by @marcelveldt in #4299)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- Vectorize weighted distance in the sonic similarity provider (by @marcelveldt in #4203)
-- Replace broad except in scrobbler with per-client exceptions (by @OzGav in #4226)
-- Type ytmusic search filter as a Literal (unblock ytmusicapi 1.12.1 mypy) (by @OzGav in #4245)
-- Avoid loading aiortc/PyAV when remote access is disabled (by @marcelveldt in #4292)
-- Make SQLite page-cache and mmap RAM-aware (by @marcelveldt in #4293)
-- Cut repeated reflection on hot cache-hit and event-dispatch paths (by @marcelveldt in #4295)
-- ⬆️ Update music-assistant-frontend to 2.17.192 (by @music-assistant-machine in #4309)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @fmunkes, @goodlucknow, @marcelveldt, @mcaulifn, @scootaash
 
 
