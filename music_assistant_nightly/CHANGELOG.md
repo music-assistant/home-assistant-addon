@@ -1,3 +1,58 @@
+# [2.10.0.dev2026062406] - 24.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062306](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062306)_
+
+### 🚀 New Providers
+
+- Add Sveriges Radio provider (by @romany in #2974)
+- Add Pocket Casts Provider (by @yfhyou in #3127)
+
+### 🚀 Features and enhancements
+
+- Add favorites support to Digitally Incorporated provider (by @benklop in #3458)
+- feat(spotify): add curated browse for new releases and genres (by @x-ingo in #4177)
+- Transfer playback to a new leader when unjoining a sync group leader (by @marcelveldt in #4412)
+- Support `seek` Sendspin controller commands (by @maximmaxim345 in #4417)
+
+### 🐛 Bugfixes
+
+- Handle deleted image files with a typed not-found error (by @OzGav in #4400)
+- Fix unjoining a syncgroup member that joined the leader externally (by @marcelveldt in #4405)
+- Keep universal player when its protocol links can't migrate to the native player (by @maximmaxim345 in #4413)
+- Prevent a player from linking to itself on player type change (by @maximmaxim345 in #4416)
+- Don't switch a playing group's output protocol when joining a player (by @marcelveldt in #4419)
+- Keep radio/live streams restartable after a mid-stream disconnect (by @marcelveldt in #4421)
+- Keep AirPlay sync group playing when the leader's stream process crashes (by @marcelveldt in #4424)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1955](https://github.com/music-assistant/frontend/pull/1955))
+- Possibility to hide/show browse by genre in discover page (by @stvncode in [#1957](https://github.com/music-assistant/frontend/pull/1957))
+- Allow unjoining the sync group leader to hand off playback (by @marcelveldt in [#1956](https://github.com/music-assistant/frontend/pull/1956))
+- Genre media type filtering (by @jozefKruszynski in [#1952](https://github.com/music-assistant/frontend/pull/1952))
+- Rename 'auto play' to 'autoplay' and use the new queue command (by @marcelveldt in [#1953](https://github.com/music-assistant/frontend/pull/1953))
+- Fix favorite heart state resetting on queue updates for radio and provider items (by @dmoo500 in [#1725](https://github.com/music-assistant/frontend/pull/1725))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #4411)
+- Extract library-sync config-entry building into a helper (by @zenibako in #4414)
+
+### 🧰 Maintenance and dependency bumps
+
+- Move private methods to the bottom in the PocketCasts provider (by @OzGav in #4418)
+- Bump actions/cache from 5 to 6 (by @dependabot[bot] in #4420)
+- ⬆️ Update music-assistant-frontend to 2.17.197 (by @music-assistant-machine in #4427)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @benklop, @dmoo500, @jozefKruszynski, @marcelveldt, @maximmaxim345, @romany, @stvncode, @x-ingo, @yfhyou, @zenibako
+
+
 # [2.10.0.dev2026062306] - 23.06.2026
 
 ## 📦 Nightly Release
@@ -73,97 +128,5 @@ _Changes since [2.10.0.dev2026062011](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @mcaulifn, @rnewman
-
-
-# [2.10.0.dev2026062011] - 20.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026061808](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026061808)_
-
-### 🚀 Features and enhancements
-
-- Adapt core methods to allow providing a username for item retrieval (by @fmunkes in #4015)
-- Add explicit filter to smart playlist rules (by @dmoo500 in #4095)
-- Extract CLAP scalar scoring into pure score_scalars() (by @chrisuthe in #4307)
-- Import genres from Plex into media item metadata (by @lebdim in #4312)
-- Skip dynamic playlists in refresh scan, sync provider-owned name/images (by @mcaulifn in #4326)
-- Persist localized playlist names so they survive the library (by @marcelveldt in #4341)
-- Fix config entry categories: use translation keys instead of raw English strings (by @marcelveldt in #4349)
-- Parse "Track" by Artist radio stream titles and use album for artwork (by @OzGav in #4364)
-
-### 🐛 Bugfixes
-
-- Fix Tidal DASH playback stuttering by serving manifests as HTTP routes (by @libre-7 in #4062)
-- Pace audio analysis and cap it to half the CPU cores (by @marcelveldt in #4311)
-- Fix protocol player settings not reverting to their default value (by @marcelveldt in #4314)
-- Fix WebDAV sync failing on folder names with special characters (by @marcelveldt in #4315)
-- Fix podcast episode lookup and a queue preload crash on a drained queue (by @marcelveldt in #4318)
-- Preserve percent-encoding when fetching radio/HTTP stream URLs (by @OzGav in #4319)
-- Localize injected protocol output config entries (by @marcelveldt in #4322)
-- Fix podcast episode lookup in gpodder (by @fmunkes in #4323)
-- Fix playback of multipart files with apostrophes in path (by @OzGav in #4329)
-- Fix WebDAV auth deprecation warning (by @OzGav in #4330)
-- Raise open-file soft limit at startup (by @OzGav in #4332)
-
-### 🎨 Frontend Changes
-
-- fix(i18n): replace edit by save (by @kissu in [#1856](https://github.com/music-assistant/frontend/pull/1856))
-- Move "refresh" button to the toolbar for playlists (by @ijc in [#1930](https://github.com/music-assistant/frontend/pull/1930))
-- Localize frontend-injected config entry categories (by @marcelveldt in [#1938](https://github.com/music-assistant/frontend/pull/1938))
-- Stop play button animation with external source (by @OzGav in [#1935](https://github.com/music-assistant/frontend/pull/1935))
-
-### Other Changes
-
-- Use bare keys for all translation_key overrides (ConfigEntry + media) (by @marcelveldt in #4310)
-- Deduplicate strings via common-string references (by @marcelveldt in #4327)
-- Lokalise translations update (by @github-actions[bot] in #4340)
-- Use the shared datetime helpers instead of calling datetime directly (by @marcelveldt in #4352)
-- Move private methods to the bottom of the class in a few small providers (by @marcelveldt in #4353)
-- Move private methods to the bottom of the class in the music media controllers (by @marcelveldt in #4354)
-- Lokalise translations update (by @github-actions[bot] in #4357)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>29 changes</summary>
-
-- ⬆️ Update music-assistant-models to 1.1.137 (by @music-assistant-machine in #4316)
-- Fix unreachable statement in player_queues controller (by @Copilot in #4320)
-- Bump actions/checkout from 6 to 7 (by @dependabot[bot] in #4321)
-- Remove ffmpeg install from lint CI job (by @marcelveldt in #4324)
-- Speed up CI test jobs (split ffmpeg tests + skip on non-code PRs) (by @marcelveldt in #4325)
-- Add Amplipi SVGs (by @OzGav in #4331)
-- ⬆️ Update music-assistant-frontend to 2.17.193 (by @music-assistant-machine in #4333)
-- Fix test suite hanging without ffmpeg + cap test jobs at 30min (by @marcelveldt in #4334)
-- Run only affected providers' tests on PRs (HA-style), with Codecov (by @marcelveldt in #4335)
-- Clarify the audio-analysis CPU requirement (AVX2 on x86, NEON on ARM) (by @marcelveldt in #4336)
-- Mirror the source tree in tests/ (controller tests → folders, utils → tests/helpers/) (by @marcelveldt in #4337)
-- Smarter CI test selection: scope coverage on partial runs + skip translation-only PRs (by @marcelveldt in #4339)
-- Add provider-focused lint checks to pre-commit and CI (by @marcelveldt in #4343)
-- ⬆️ Update music-assistant-models to 1.1.139 (by @music-assistant-machine in #4345)
-- Bump codecov/codecov-action from 5 to 7 (by @dependabot[bot] in #4346)
-- Enforce multi-line docstring summary on the second line (by @marcelveldt in #4347)
-- Enforce private methods at the bottom of a class (by @marcelveldt in #4350)
-- Validate ConfigEntry.category against strings.json in pre-commit check (by @marcelveldt in #4351)
-- Fix incorrect docstrings and comment in the music media controllers (by @marcelveldt in #4355)
-- Move private methods to the bottom of the class in the webserver controllers (by @marcelveldt in #4356)
-- Move private methods to the bottom of the class in the streams controllers (by @marcelveldt in #4358)
-- Move private methods to the bottom of the class in the music controller (by @marcelveldt in #4359)
-- Move private methods to the bottom of the class in the player queues controller (by @marcelveldt in #4360)
-- Move private methods to the bottom of the class in the players controller (by @marcelveldt in #4361)
-- Move private methods to the bottom of the class in the tasks controller (by @marcelveldt in #4362)
-- Move private methods to the bottom of the class in core misc files (by @marcelveldt in #4363)
-- Move private methods to the bottom of the class in team-maintained providers (by @marcelveldt in #4365)
-- ⬆️ Update music-assistant-frontend to 2.17.194 (by @music-assistant-machine in #4366)
-- Fix Auto Release workflow failing at startup due to missing PR permission (by @marcelveldt in #4368)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Copilot, @OzGav, @chrisuthe, @dmoo500, @fmunkes, @ijc, @kissu, @lebdim, @libre-7, @marcelveldt, @mcaulifn
 
 
