@@ -1,3 +1,47 @@
+# [2.10.0.dev2026062506] - 25.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062406](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062406)_
+
+### 🚀 Features and enhancements
+
+- Resolve player palette only on the media owner, not per grouped member (by @marcelveldt in #4425)
+- Make the demo player provider a groupable end-to-end test bed (by @marcelveldt in #4428)
+
+### 🐛 Bugfixes
+
+- Validate return_url before appending JWT token (by @s0yd4RK in #4272)
+- Reconnect ICY radio streams on disconnect (by @marcelveldt in #4422)
+
+### 🎨 Frontend Changes
+
+- Add Start Radio to the queue item menu and drop redundant move up/down (by @marcelveldt in [#1963](https://github.com/music-assistant/frontend/pull/1963))
+- Drag to reorder up next items in the fullscreen queue (by @marcelveldt in [#1961](https://github.com/music-assistant/frontend/pull/1961))
+- Redesign the fullscreen player queue as a single scrollable list (by @marcelveldt in [#1960](https://github.com/music-assistant/frontend/pull/1960))
+- Migrate timeline slider to reka-ui, fix tap not skipping correctly (by @pierosavi in [#1857](https://github.com/music-assistant/frontend/pull/1857))
+- Extract the fullscreen queue item context menu into a helper (by @marcelveldt in [#1962](https://github.com/music-assistant/frontend/pull/1962))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Bump zeroconf from 0.149.12 to 0.149.16 (by @dependabot[bot] in #4408)
+- Dynamically update group leader capability on a zone player in MusicCast (by @fmunkes in #4423)
+- Bump actions/setup-python from 6.2.0 to 6.3.0 (by @dependabot[bot] in #4431)
+- ⬆️ Update music-assistant-models to 1.1.144 (by @music-assistant-machine in #4433)
+- ⬆️ Update music-assistant-frontend to 2.17.198 (by @music-assistant-machine in #4437)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@fmunkes, @marcelveldt, @pierosavi, @s0yd4RK
+
+
 # [2.10.0.dev2026062406] - 24.06.2026
 
 ## 📦 Nightly Release
@@ -105,28 +149,5 @@ _Changes since [2.10.0.dev2026062108](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @joperafe, @marcelveldt, @stvncode
-
-
-# [2.10.0.dev2026062108] - 21.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062011](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062011)_
-
-### 🚀 Features and enhancements
-
-- Enable multi-instance support for Pandora (by @mcaulifn in #4284)
-- Move volume normalization target level to streams global setting (by @marcelveldt in #4369)
-- Allow Bandcamp feed and wishlist to be playable. (by @rnewman in #4371)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.140 (by @music-assistant-machine in #4374)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @mcaulifn, @rnewman
 
 
