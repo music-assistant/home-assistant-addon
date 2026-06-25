@@ -197,15 +197,35 @@ if mount | grep -q "on /tmp.*noexec"; then
   echo "Detected /tmp mounted with noexec, attempting to remount..."
   mount -o remount,exec /tmp 2>/dev/null || echo "Warning: Could not remount /tmp"
 fi
-# Use persistent cache dir so yarn doesn't re-download packages on every restart
-yarn config set cache-folder /data/.yarn-cache
-yarn install --frozen-lockfile --network-timeout 300000
+# Enable Corepack so the package manager pinned in package.json's "packageManager"
+# field (e.g. "pnpm@11.8.0") is used at the correct version. Persist Corepack's
+# download cache under /data so it isn't re-fetched on every restart.
+export COREPACK_HOME=/data/.corepack
+export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+
+# Detect the package manager from the lockfile present in the repo.
+if [ -f "pnpm-lock.yaml" ]; then
+    echo "Detected pnpm project"
+    # Persistent store dir so packages aren't re-downloaded on every restart.
+    corepack pnpm install --frozen-lockfile --store-dir /data/.pnpm-store
+    frontend_pm="corepack pnpm"
+elif [ -f "yarn.lock" ]; then
+    echo "Detected yarn project"
+    # Persistent cache dir so yarn doesn't re-download packages on every restart.
+    yarn config set cache-folder /data/.yarn-cache
+    yarn install --frozen-lockfile --network-timeout 300000
+    frontend_pm="yarn"
+else
+    echo "Detected npm project"
+    npm ci
+    frontend_pm="npm run"
+fi
 
 echo "✓ Dependencies installed"
 echo ""
 
 echo "Building frontend..."
-yarn build
+$frontend_pm build
 
 echo "✓ Frontend build complete"
 echo ""
