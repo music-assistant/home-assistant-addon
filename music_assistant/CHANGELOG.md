@@ -1,3 +1,35 @@
+# [2.9.4] - 25.06.2026
+
+## 📦 Stable Release
+
+_Changes since [2.9.3](https://github.com/music-assistant/server/releases/tag/2.9.3)_
+
+### 🐛 Bugfixes
+
+- Validate return_url before appending JWT token (by @s0yd4RK in #4272)
+- Fix Spotify playback failing on broken Spotify CDN URLs (by @marcelveldt in #4398)
+- Fix unjoining a syncgroup member that joined the leader externally (by @marcelveldt in #4405)
+- Recover flow stream restart on Cast groups (players that don't report idle) (by @OzGav in #4406)
+- Keep universal player when its protocol links can't migrate to the native player (by @maximmaxim345 in #4413)
+- Fix Home Assistant control of universal players running an external source (by @maximmaxim345 in #4415)
+- Keep radio/live streams restartable after a mid-stream disconnect (by @marcelveldt in #4421)
+- Reconnect ICY radio streams on disconnect (by @marcelveldt in #4422)
+- Fix WiiM UPnP event-callback binding on multi-homed / containerized hosts (by @rwlove in #4434)
+- fix(snapcast): fix ~65s stop delay caused by spurious inactivity timer (by @vintvinst in #4436)
+- Make live audio analysis a passive observer so it can never stall playback (by @chrisuthe in #4442)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump ytmusicapi from 1.11.5 to 1.12.1 (by @dependabot[bot] in #4235)
+- Bump zeroconf from 0.149.12 to 0.149.16 (by @dependabot[bot] in #4408)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @chrisuthe, @marcelveldt, @maximmaxim345, @rwlove, @s0yd4RK, @vintvinst
+
+
 # [2.9.3] - 22.06.2026
 
 ## 📦 Stable Release
@@ -70,45 +102,5 @@ _Changes since [2.9.1](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @Joshi425, @OzGav, @chrisuthe, @fmunkes, @goodlucknow, @marcelveldt
-
-
-# [2.9.1] - 14.06.2026
-
-## 📦 Stable Release
-
-_Changes since [2.9.0](https://github.com/music-assistant/server/releases/tag/2.9.0)_
-
-### 🚀 Features and enhancements
-
-- Improve smart crossfade audio quality: true frequency sweep and equal-power curves (by @MarvinSchenkel in #4158)
-- Automatically check if CPU is supported for Audio Analysis (by @chrisuthe in #4166)
-
-### 🐛 Bugfixes
-
-- Fix Universal Group Player producing no audio on some members (by @OzGav in #4116)
-- fix(alexa): include track metadata in the initial play_media push (by @croll83 in #4168)
-- Fix Sendspin grouping with Cast devices (by @maximmaxim345 in #4170)
-- Restore 'ignore volume reports' setting for AirPlay players (by @MarvinSchenkel in #4172)
-- Fix track duration shrinking when seeking near the end with smart crossfade (by @MarvinSchenkel in #4176)
-- Fix invalid scope error when adding a custom Spotify client ID (by @marcelveldt in #4182)
-- Remove local providers without wiping the entire library (by @marcelveldt in #4183)
-- Fix ISRC lookups failing for Last.fm track MBIDs (by @OzGav in #4185)
-- Fix Last.fm Discover rows showing owned tracks under a different version name (by @OzGav in #4186)
-- Derive Last.fm genre rows from listening history, not manual tags (by @OzGav in #4187)
-- Fix now-playing artwork showing a solid background for transparent logos (by @OzGav in #4188)
-- Fix sync group member playing out of sync after concurrent group changes (by @marcelveldt in #4189)
-- Drop per-track MusicBrainz ISRC lookups from Last.fm recommendations (by @OzGav in #4190)
-- Skip stale artist paths during filesystem track parsing (by @chrisuthe in #4191)
-- Fix high idle memory usage (by @marcelveldt in #4198)
-
-### 🧰 Maintenance and dependency bumps
-
-- Reduce idle memory usage by tuning jemalloc (by @marcelveldt in #4213)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @croll83, @marcelveldt, @maximmaxim345
 
 
