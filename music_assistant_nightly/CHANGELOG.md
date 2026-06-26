@@ -1,3 +1,20 @@
+# [2.10.0.dev2026062622] - 26.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062606](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062606)_
+
+### 🐛 Bugfixes
+
+- Give playback priority over realtime audio analysis (by @marcelveldt in #4449)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.10.0.dev2026062606] - 26.06.2026
 
 ## 📦 Nightly Release
@@ -98,60 +115,5 @@ _Changes since [2.10.0.dev2026062406](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes, @marcelveldt, @pierosavi, @s0yd4RK
-
-
-# [2.10.0.dev2026062406] - 24.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062306](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062306)_
-
-### 🚀 New Providers
-
-- Add Sveriges Radio provider (by @romany in #2974)
-- Add Pocket Casts Provider (by @yfhyou in #3127)
-
-### 🚀 Features and enhancements
-
-- Add favorites support to Digitally Incorporated provider (by @benklop in #3458)
-- feat(spotify): add curated browse for new releases and genres (by @x-ingo in #4177)
-- Transfer playback to a new leader when unjoining a sync group leader (by @marcelveldt in #4412)
-- Support `seek` Sendspin controller commands (by @maximmaxim345 in #4417)
-
-### 🐛 Bugfixes
-
-- Handle deleted image files with a typed not-found error (by @OzGav in #4400)
-- Fix unjoining a syncgroup member that joined the leader externally (by @marcelveldt in #4405)
-- Keep universal player when its protocol links can't migrate to the native player (by @maximmaxim345 in #4413)
-- Prevent a player from linking to itself on player type change (by @maximmaxim345 in #4416)
-- Don't switch a playing group's output protocol when joining a player (by @marcelveldt in #4419)
-- Keep radio/live streams restartable after a mid-stream disconnect (by @marcelveldt in #4421)
-- Keep AirPlay sync group playing when the leader's stream process crashes (by @marcelveldt in #4424)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1955](https://github.com/music-assistant/frontend/pull/1955))
-- Possibility to hide/show browse by genre in discover page (by @stvncode in [#1957](https://github.com/music-assistant/frontend/pull/1957))
-- Allow unjoining the sync group leader to hand off playback (by @marcelveldt in [#1956](https://github.com/music-assistant/frontend/pull/1956))
-- Genre media type filtering (by @jozefKruszynski in [#1952](https://github.com/music-assistant/frontend/pull/1952))
-- Rename 'auto play' to 'autoplay' and use the new queue command (by @marcelveldt in [#1953](https://github.com/music-assistant/frontend/pull/1953))
-- Fix favorite heart state resetting on queue updates for radio and provider items (by @dmoo500 in [#1725](https://github.com/music-assistant/frontend/pull/1725))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4411)
-- Extract library-sync config-entry building into a helper (by @zenibako in #4414)
-
-### 🧰 Maintenance and dependency bumps
-
-- Move private methods to the bottom in the PocketCasts provider (by @OzGav in #4418)
-- Bump actions/cache from 5 to 6 (by @dependabot[bot] in #4420)
-- ⬆️ Update music-assistant-frontend to 2.17.197 (by @music-assistant-machine in #4427)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @benklop, @dmoo500, @jozefKruszynski, @marcelveldt, @maximmaxim345, @romany, @stvncode, @x-ingo, @yfhyou, @zenibako
 
 
