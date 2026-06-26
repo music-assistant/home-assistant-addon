@@ -1,3 +1,61 @@
+# [2.10.0.dev2026062606] - 26.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062506](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062506)_
+
+### 🚀 Features and enhancements
+
+- Extend Local Audio Out provider with PulseAudio support (by @iVolt1 in #3724)
+- Plex: Add audiobook/podcast support with position sync (by @zenibako in #3748)
+- Add CUE sheet support for filesystem providers (by @OzGav in #3751)
+- Add content_type to Genre schema with migration (by @jozefKruszynski in #4435)
+- Configurable Autoplay with similar / library / playlist modes (by @marcelveldt in #4446)
+
+### 🐛 Bugfixes
+
+- Recover flow stream restart on Cast groups (players that don't report idle) (by @OzGav in #4406)
+- Fix Home Assistant control of universal players running an external source (by @maximmaxim345 in #4415)
+- Fix WiiM UPnP event-callback binding on multi-homed / containerized hosts (by @rwlove in #4434)
+- fix(snapcast): fix ~65s stop delay caused by spurious inactivity timer (by @vintvinst in #4436)
+- Make live audio analysis a passive observer so it can never stall playback (by @chrisuthe in #4442)
+- Pre-import numpy in scoped-coverage CI to avoid py3.14 reduction break (by @chrisuthe in #4445)
+
+### 🎨 Frontend Changes
+
+- Add Lucide icon picker with custom MA device icons for player settings (by @dmoo500 in [#1779](https://github.com/music-assistant/frontend/pull/1779))
+- Add a queue mode banner to surface radio and autoplay (by @marcelveldt in [#1966](https://github.com/music-assistant/frontend/pull/1966))
+- Update context menu with shadcn comp and lucide icons (by @stvncode in [#1964](https://github.com/music-assistant/frontend/pull/1964))
+- Streamline fullscreen player header controls (by @marcelveldt in [#1965](https://github.com/music-assistant/frontend/pull/1965))
+- Fix rectangle art album not well displayed in the now playing bottom ([#66](https://github.com/music-assistant/frontend/pull/66)) (by @joperafe in [#1940](https://github.com/music-assistant/frontend/pull/1940))
+- build: upgrade to vite v8 (rolldown) (by @kissu in [#1853](https://github.com/music-assistant/frontend/pull/1853))
+- Fix drodpdown offset + width (by @stvncode in [#1968](https://github.com/music-assistant/frontend/pull/1968))
+- Restore the player settings entry in the player menu (by @marcelveldt in [#1969](https://github.com/music-assistant/frontend/pull/1969))
+
+### Other Changes
+
+- Share UPnP source-IP resolution across AirPlay and WiiM (by @rwlove in #4443)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Bump ytmusicapi from 1.11.5 to 1.12.1 (by @dependabot[bot] in #4235)
+- ⬆️ Update music-assistant-frontend to 2.17.199 (by @music-assistant-machine in #4438)
+- ⬆️ Update music-assistant-frontend to 2.17.200 (by @music-assistant-machine in #4439)
+- Enhance Audio Analysis Logging (by @chrisuthe in #4440)
+- ⬆️ Update music-assistant-frontend to 2.17.201 (by @music-assistant-machine in #4448)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @chrisuthe, @dmoo500, @iVolt1, @joperafe, @jozefKruszynski, @kissu, @marcelveldt, @maximmaxim345, @rwlove, @stvncode, @vintvinst, @zenibako
+
+
 # [2.10.0.dev2026062506] - 25.06.2026
 
 ## 📦 Nightly Release
@@ -95,59 +153,5 @@ _Changes since [2.10.0.dev2026062306](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @benklop, @dmoo500, @jozefKruszynski, @marcelveldt, @maximmaxim345, @romany, @stvncode, @x-ingo, @yfhyou, @zenibako
-
-
-# [2.10.0.dev2026062306] - 23.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062108](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062108)_
-
-### 🚀 Features and enhancements
-
-- Move queue-scoped settings (crossfade, volume normalization) to the queue (by @marcelveldt in #4373)
-- Use ICY StreamUrl cover art for radio streams when it is an image (by @OzGav in #4379)
-- Migrate Spotify Connect to go-librespot (by @marcelveldt in #4384)
-- Rename 'don't stop the music' to 'autoplay' (by @marcelveldt in #4404)
-
-### 🐛 Bugfixes
-
-- Fix Party URL when webserver URL has trailing / (by @OzGav in #4375)
-- Fix white noise bug in Jellyfin (by @OzGav in #4378)
-- Fix next-track preload crash for fractional track durations (by @marcelveldt in #4380)
-- Fix elapsed time drift for live sources played to a sync group (by @marcelveldt in #4385)
-- Plex: fix track sync re-scanning the whole library on every page (by @marcelveldt in #4386)
-- Fix Spotify playback failing on broken Spotify CDN URLs (by @marcelveldt in #4398)
-- Pause external sources instead of stopping them (by @marcelveldt in #4401)
-
-### 🎨 Frontend Changes
-
-- Always expand players when clicking the player button from the 'now playing' screen ([#60](https://github.com/music-assistant/frontend/pull/60)) (by @joperafe in [#1944](https://github.com/music-assistant/frontend/pull/1944))
-- Add crossfade control to the player and a per-queue settings page (by @marcelveldt in [#1942](https://github.com/music-assistant/frontend/pull/1942))
-- Pnpm switch (by @stvncode in [#1951](https://github.com/music-assistant/frontend/pull/1951))
-- Revamp the fullscreen player header controls (by @marcelveldt in [#1945](https://github.com/music-assistant/frontend/pull/1945))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- ⬆️ Update music-assistant-models to 1.1.141 (by @music-assistant-machine in #4381)
-- ⬆️ Update music-assistant-models to 1.1.142 (by @music-assistant-machine in #4382)
-- Update BASE_IMAGE_VERSION for beta and nightly (by @marcelveldt in #4387)
-- Enable RUF006 and fix unstored asyncio tasks (by @OzGav in #4393)
-- Enable RUF012 (by @OzGav in #4394)
-- Enable PYI034 (return Self from __aenter__/__new__) (by @OzGav in #4395)
-- ⬆️ Update music-assistant-frontend to 2.17.195 (by @music-assistant-machine in #4396)
-- Enable S307 rule - possibly insecure function (by @OzGav in #4397)
-- ⬆️ Update music-assistant-frontend to 2.17.196 (by @music-assistant-machine in #4407)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @joperafe, @marcelveldt, @stvncode
 
 
