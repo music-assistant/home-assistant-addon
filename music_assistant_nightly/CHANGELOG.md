@@ -1,3 +1,28 @@
+# [2.10.0.dev2026062814] - 28.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062807](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062807)_
+
+### 🐛 Bugfixes
+
+- Audiobookshelf: tolerate out-of-range podcast episode dates (by @OzGav in #4458)
+- Fix min/max volume scaling lost on protocol/external volume redirect (by @Hopperpop in #4461)
+- Unsync a player when its power is turned off externally (by @marcelveldt in #4463)
+- Fix discover page not loading due to MusicBrainz recommendation scan (by @marcelveldt in #4470)
+- Prevent providers picking the same port when starting concurrently (by @marcelveldt in #4472)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.145 (by @music-assistant-machine in #4476)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Hopperpop, @OzGav, @marcelveldt
+
+
 # [2.10.0.dev2026062807] - 28.06.2026
 
 ## 📦 Nightly Release
@@ -80,22 +105,5 @@ _Changes since [2.10.0.dev2026062622](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Bonusbartus, @OzGav, @benklop, @chrisuthe, @dmoo500, @fmunkes, @jdaberkow, @marcelveldt, @teancom
-
-
-# [2.10.0.dev2026062622] - 26.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062606](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062606)_
-
-### 🐛 Bugfixes
-
-- Give playback priority over realtime audio analysis (by @marcelveldt in #4449)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
