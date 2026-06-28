@@ -1,3 +1,26 @@
+# [2.10.0.dev2026062815] - 28.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062814](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062814)_
+
+### 🚀 Features and enhancements
+
+- Enhance and fix podcast metadata (episode descriptions, chapters, parent-podcast name) in gPodder, iTunes Podcast and Podcast RSS Feed (by @chrisuthe in #4444)
+- Genre content-type awareness: create/edit safety + targeted restore (by @jozefKruszynski in #4474)
+- Smart shuffle for player queues (by @marcelveldt in #4475)
+
+### 🧰 Maintenance and dependency bumps
+
+- Replace obfuscated app_vars with build-time secret injection (by @marcelveldt in #4473)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@chrisuthe, @jozefKruszynski, @marcelveldt
+
+
 # [2.10.0.dev2026062814] - 28.06.2026
 
 ## 📦 Nightly Release
@@ -65,45 +88,5 @@ _Changes since [2.10.0.dev2026062706](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Odn0, @dmoo500, @iVolt1, @jyundt, @marcelveldt, @steamEngineer, @stvncode
-
-
-# [2.10.0.dev2026062706] - 27.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062622](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062622)_
-
-### 🚀 Features and enhancements
-
-- Improve stream URL handling with failover support (by @benklop in #2996)
-- Adapt artist / audiobook controller for authors and narrators (by @fmunkes in #3570)
-- Enhance play_media start_item parameter to allow latest podcast episode to be played and podcast/playlist to play from here (by @OzGav in #3832)
-- Rewrite Deezer provider with GraphQL client (by @jdaberkow in #3900)
-- Adjust Sonic Similarity base scoring and pools to allow for better matching and more meaningful presets (by @chrisuthe in #4429)
-- Improve Search results from Sonic Similarity Plugin (by @chrisuthe in #4430)
-- Add native player sleep timers (by @teancom in #4432)
-
-### 🐛 Bugfixes
-
-- Apple Music: Intelligent fallback for deprecated catalog tracks (by @dmoo500 in #4109)
-- Smart Playlist: Enrich library tracks with database genres for filtering (by @dmoo500 in #4175)
-- Cap concurrent realtime audio analysis sessions (by @marcelveldt in #4451)
-
-### 🎨 Frontend Changes
-
-- Lokalise: Translations update (by @marcelveldt in [#1971](https://github.com/music-assistant/frontend/pull/1971))
-- add bitrate information to the QualityDetailsBtn.vue screen (by @Bonusbartus in [#1754](https://github.com/music-assistant/frontend/pull/1754))
-- Add sleep timer support (by @marcelveldt in [#1970](https://github.com/music-assistant/frontend/pull/1970))
-
-### 🧰 Maintenance and dependency bumps
-
-- Refactor MusicBrainz provider into multi-file package (by @dmoo500 in #3905)
-- ⬆️ Update music-assistant-frontend to 2.17.202 (by @music-assistant-machine in #4455)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Bonusbartus, @OzGav, @benklop, @chrisuthe, @dmoo500, @fmunkes, @jdaberkow, @marcelveldt, @teancom
 
 
