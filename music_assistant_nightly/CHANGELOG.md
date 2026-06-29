@@ -1,3 +1,34 @@
+# [2.10.0.dev2026062908] - 29.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062815](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062815)_
+
+### 🚀 Features and enhancements
+
+- Add playlist metadata infrastructure to MetadataProvider (by @dmoo500 in #4460)
+- Add support for podcast chapters in Audiobookshelf (by @fmunkes in #4478)
+- Bounded managed pool for radio mode (by @marcelveldt in #4479)
+
+### 🐛 Bugfixes
+
+- Improve Hue entertainment start reliability for slow DTLS handshakes (by @steamEngineer in #4467)
+- Fix the podcast's title not being used in Audiobookshelf's episode parser (by @fmunkes in #4477)
+- iBroadcast mapping issue with album id's and possible other id's (by @robsonke in #4482)
+
+### 🧰 Maintenance and dependency bumps
+
+- Auto-sync provider manifests on Dependabot PRs (by @marcelveldt in #4471)
+- Clarify supported installation methods in README (by @marcelveldt in #4480)
+- Bump wiim from 0.1.4 to 0.1.5 (by @dependabot[bot] in #4481)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@dmoo500, @fmunkes, @marcelveldt, @robsonke, @steamEngineer
+
+
 # [2.10.0.dev2026062815] - 28.06.2026
 
 ## 📦 Nightly Release
@@ -44,49 +75,5 @@ _Changes since [2.10.0.dev2026062807](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Hopperpop, @OzGav, @marcelveldt
-
-
-# [2.10.0.dev2026062807] - 28.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062706](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062706)_
-
-### 🚀 New Providers
-
-- Add Bose SoundTouch player provider (by @Odn0 in #3891)
-
-### 🚀 Features and enhancements
-
-- Add birthday/memoriam recommendations via MusicBrainz (by @dmoo500 in #3833)
-- mcp: add set_repeat tool to queue controls (by @steamEngineer in #4377)
-- mcp: add explicit pause/resume playback tools (by @steamEngineer in #4390)
-- mcp: add players ungroup tool  (by @steamEngineer in #4391)
-- Unload idle audio-analysis models to reclaim memory (by @marcelveldt in #4452)
-
-### 🐛 Bugfixes
-
-- Avoid syncing native parent volume to AirPlay protocols (by @jyundt in #3980)
-- Fix Local Audio pulse audio syncing, silence, and volume on intial playback (by @iVolt1 in #4453)
-
-### 🎨 Frontend Changes
-
-- Include icon aliases in IconPicker search results (by @dmoo500 in [#1972](https://github.com/music-assistant/frontend/pull/1972))
-- Add missing aria labels (by @stvncode in [#1973](https://github.com/music-assistant/frontend/pull/1973))
-- Upgrade eslint + add oxlint (by @stvncode in [#1958](https://github.com/music-assistant/frontend/pull/1958))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4454)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.203 (by @music-assistant-machine in #4468)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Odn0, @dmoo500, @iVolt1, @jyundt, @marcelveldt, @steamEngineer, @stvncode
 
 
