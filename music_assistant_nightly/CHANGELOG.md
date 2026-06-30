@@ -1,3 +1,49 @@
+# [2.10.0.dev2026063006] - 30.06.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026062908](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062908)_
+
+### 🚀 Features and enhancements
+
+- Provide Tracking and UX for AA Failures and Retries (by @chrisuthe in #4167)
+
+### 🐛 Bugfixes
+
+- Prevent a crash when a CPU can't execute on-device analysis (by @marcelveldt in #4483)
+- Fix lrclib plain lyrics written to the synced-LRC field (by @chrisuthe in #4489)
+- Fix audiobook release_date parsed but never stored (by @chrisuthe in #4490)
+- Fix deezer parse_streamable returning Any from a bool function (by @chrisuthe in #4491)
+- Fix negative elapsed_time crashing clients (by @teancom in #4495)
+
+### 🎨 Frontend Changes
+
+- Add smart shuffle indicator to the player (by @marcelveldt in [#1987](https://github.com/music-assistant/frontend/pull/1987))
+- Provide Tracking and UX for AA Failures and Retries (by @chrisuthe in [#1907](https://github.com/music-assistant/frontend/pull/1907))
+
+### Other Changes
+
+- Split config controller into a package (by @MarvinSchenkel in #4484)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Update srptools requirement from >=1.0.0 to >=1.0.1 (by @dependabot[bot] in #4234)
+- Bump torch from 2.11.0 to 2.12.1+cpu (by @dependabot[bot] in #4403)
+- Document provider_mappings database structure (by @dmoo500 in #4466)
+- ⬆️ Update music-assistant-frontend to 2.17.204 (by @music-assistant-machine in #4496)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @dmoo500, @marcelveldt, @teancom
+
+
 # [2.10.0.dev2026062908] - 29.06.2026
 
 ## 📦 Nightly Release
@@ -50,30 +96,5 @@ _Changes since [2.10.0.dev2026062814](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @chrisuthe, @jozefKruszynski, @marcelveldt
-
-
-# [2.10.0.dev2026062814] - 28.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062807](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062807)_
-
-### 🐛 Bugfixes
-
-- Audiobookshelf: tolerate out-of-range podcast episode dates (by @OzGav in #4458)
-- Fix min/max volume scaling lost on protocol/external volume redirect (by @Hopperpop in #4461)
-- Unsync a player when its power is turned off externally (by @marcelveldt in #4463)
-- Fix discover page not loading due to MusicBrainz recommendation scan (by @marcelveldt in #4470)
-- Prevent providers picking the same port when starting concurrently (by @marcelveldt in #4472)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.145 (by @music-assistant-machine in #4476)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Hopperpop, @OzGav, @marcelveldt
 
 
