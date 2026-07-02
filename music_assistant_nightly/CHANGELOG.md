@@ -1,3 +1,33 @@
+# [2.10.0.dev2026070214] - 02.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026070206](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070206)_
+
+### 🚀 Features and enhancements
+
+- Import additional metadata from Plex into media items (by @lebdim in #4338)
+- Smart crossfade: DJ-style bass swap EQ (by @MarvinSchenkel in #4536)
+- Global defaults for queue settings with per-queue override (by @marcelveldt in #4537)
+
+### 🐛 Bugfixes
+
+- Preserve player queues and their settings across restarts (by @marcelveldt in #4529)
+- Fix Spotify connect playback on some Sendspin players (by @maximmaxim345 in #4530)
+- Fix complete config loss after power failure or unclean shutdown (by @MarvinSchenkel in #4534)
+- Fix smart fades falling back to a hard cut when the incoming track is short (by @MarvinSchenkel in #4535)
+
+### Other Changes
+
+- Refactor smart fades into a plan/render architecture (by @MarvinSchenkel in #4532)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @lebdim, @marcelveldt, @maximmaxim345
+
+
 # [2.10.0.dev2026070206] - 02.07.2026
 
 ## 📦 Nightly Release
@@ -103,51 +133,5 @@ _Changes since [2.10.0.dev2026063006](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Sawtaytoes, @chrisuthe, @dmoo500, @khers, @marcelveldt
-
-
-# [2.10.0.dev2026063006] - 30.06.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026062908](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026062908)_
-
-### 🚀 Features and enhancements
-
-- Provide Tracking and UX for AA Failures and Retries (by @chrisuthe in #4167)
-
-### 🐛 Bugfixes
-
-- Prevent a crash when a CPU can't execute on-device analysis (by @marcelveldt in #4483)
-- Fix lrclib plain lyrics written to the synced-LRC field (by @chrisuthe in #4489)
-- Fix audiobook release_date parsed but never stored (by @chrisuthe in #4490)
-- Fix deezer parse_streamable returning Any from a bool function (by @chrisuthe in #4491)
-- Fix negative elapsed_time crashing clients (by @teancom in #4495)
-
-### 🎨 Frontend Changes
-
-- Add smart shuffle indicator to the player (by @marcelveldt in [#1987](https://github.com/music-assistant/frontend/pull/1987))
-- Provide Tracking and UX for AA Failures and Retries (by @chrisuthe in [#1907](https://github.com/music-assistant/frontend/pull/1907))
-
-### Other Changes
-
-- Split config controller into a package (by @MarvinSchenkel in #4484)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Update srptools requirement from >=1.0.0 to >=1.0.1 (by @dependabot[bot] in #4234)
-- Bump torch from 2.11.0 to 2.12.1+cpu (by @dependabot[bot] in #4403)
-- Document provider_mappings database structure (by @dmoo500 in #4466)
-- ⬆️ Update music-assistant-frontend to 2.17.204 (by @music-assistant-machine in #4496)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @chrisuthe, @dmoo500, @marcelveldt, @teancom
 
 
