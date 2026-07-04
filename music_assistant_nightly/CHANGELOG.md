@@ -1,3 +1,41 @@
+# [2.10.0.dev2026070406] - 04.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026070306](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070306)_
+
+### 🚀 Features and enhancements
+
+- Expose album artist on player current media (by @MarvinSchenkel in #4560)
+
+### 🐛 Bugfixes
+
+- Stop exposing internal error details in Plex Connect responses (by @MarvinSchenkel in #4563)
+- Match NetEase image CDN hostname exactly when upgrading to https (by @MarvinSchenkel in #4564)
+- Fix open redirect on login page and requirements regex char range (by @MarvinSchenkel in #4565)
+- Pace background audio analysis to stop it saturating the CPU (by @oldrobotdev in #4568)
+
+### 🎨 Frontend Changes
+
+- Convert player protocol section to a shadcn accordion (by @marcelveldt in [#2011](https://github.com/music-assistant/frontend/pull/2011))
+- Convert config label and alert entries to shadcn (by @marcelveldt in [#2009](https://github.com/music-assistant/frontend/pull/2009))
+- Modernize settings config category sections (by @marcelveldt in [#2008](https://github.com/music-assistant/frontend/pull/2008))
+- Convert the audio quality details popover to shadcn (by @marcelveldt in [#2005](https://github.com/music-assistant/frontend/pull/2005))
+- Sanitize rendered markdown to prevent stored XSS (by @MarvinSchenkel in [#2007](https://github.com/music-assistant/frontend/pull/2007))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-models to 1.1.150 (by @music-assistant-machine in #4553)
+- ⬆️ Update music-assistant-models to 1.1.151 (by @music-assistant-machine in #4569)
+- ⬆️ Update music-assistant-frontend to 2.17.208 (by @music-assistant-machine in #4575)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt, @oldrobotdev
+
+
 # [2.10.0.dev2026070306] - 03.07.2026
 
 ## 📦 Nightly Release
@@ -75,57 +113,5 @@ _Changes since [2.10.0.dev2026070206](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @lebdim, @marcelveldt, @maximmaxim345
-
-
-# [2.10.0.dev2026070206] - 02.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070107](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070107)_
-
-### 🚀 Features and enhancements
-
-- Smart Playlist: Use library artwork from metadata providers (by @dmoo500 in #4447)
-- Add played_only parameter to library_items methods (by @dmoo500 in #4502)
-- Add AirPlay DACP replay tests and verbose traffic capture (by @MarvinSchenkel in #4507)
-- Turn a queue with any dynamic source into one bounded smart-shuffled pool (by @marcelveldt in #4513)
-- Add duration and last_played filters to Smart Playlist (by @dmoo500 in #4520)
-- Avoid back-to-back artists in dynamic queues (by @marcelveldt in #4528)
-
-### 🐛 Bugfixes
-
-- Convert HTML in media descriptions to markdown (by @MarvinSchenkel in #4225)
-- Fix startup crash from provider config entry missing 'domain' (by @chrisuthe in #4488)
-- Handle Spotify's refresh-token changes (by @OzGav in #4494)
-- Mark Snapcast players offline when abruptly powered off (by @MarvinSchenkel in #4506)
-- Fix first queued item being skipped when playing onto an idle queue (by @marcelveldt in #4514)
-- Revert squeezelite-local media_position workaround (#4504) (by @MarvinSchenkel in #4517)
-- Honour play-next under shuffle and set the current item when enqueuing onto an empty queue (by @marcelveldt in #4519)
-- Don't auto-start playback when an ADD/NEXT onto an idle queue enters dynamic mode (by @marcelveldt in #4521)
-- Keep the dynamic queue bounded when adding more sources (by @marcelveldt in #4522)
-- Dedupe the queue's sources list so a repeated source shows once (by @marcelveldt in #4524)
-
-### 🎨 Frontend Changes
-
-- Restore progress bar fill thickness and time-label spacing (by @MarvinSchenkel in [#1997](https://github.com/music-assistant/frontend/pull/1997))
-- Improve fullscreen player controls and lyrics/queue behavior (by @marcelveldt in [#1999](https://github.com/music-assistant/frontend/pull/1999))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Fix stale docs in the player-queues package (by @marcelveldt in #4518)
-- Bump docker/build-push-action from 7.2.0 to 7.3.0 (by @dependabot[bot] in #4523)
-- ⬆️ Update music-assistant-models to 1.1.147 (by @music-assistant-machine in #4525)
-- ⬆️ Update music-assistant-frontend to 2.17.206 (by @music-assistant-machine in #4527)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @dmoo500, @marcelveldt
 
 
