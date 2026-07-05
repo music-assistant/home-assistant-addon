@@ -1,3 +1,50 @@
+# [2.10.0.dev2026070506] - 05.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026070406](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070406)_
+
+### 🚀 Features and enhancements
+
+- Suppress per-item media item events during library sync (by @marcelveldt in #4578)
+- Make player state change detection exact and cheap (by @marcelveldt in #4579)
+- Emby Music Provider: add last played date (by @hatharry in #4582)
+- Reduce database commit overhead during library sync (by @marcelveldt in #4584)
+
+### 🐛 Bugfixes
+
+- Prevent path traversal outside the filesystem provider base directory (by @MarvinSchenkel in #4559)
+- Don't reinstall provider requirements with extras on every startup (by @marcelveldt in #4577)
+- Prevent Qobuz credentials leaking into logs on HTTP error responses (by @OzGav in #4587)
+
+### 🎨 Frontend Changes
+
+- Extract the player protocol section into a dedicated component (by @marcelveldt in [#2015](https://github.com/music-assistant/frontend/pull/2015))
+- Extract the config entry row into a dedicated component (by @marcelveldt in [#2013](https://github.com/music-assistant/frontend/pull/2013))
+- Genre taxonomy UX: add-genre, panel actions, management table, targeted restore (by @jozefKruszynski in [#1974](https://github.com/music-assistant/frontend/pull/1974))
+- Fix DSP parametric EQ layout on narrow and rotated displays (by @OzGav in [#2014](https://github.com/music-assistant/frontend/pull/2014))
+- Refresh library views as each media type finishes syncing (by @marcelveldt in [#2016](https://github.com/music-assistant/frontend/pull/2016))
+- Add subtle grey ring to unselected editorial card checkbox (by @OzGav in [#2012](https://github.com/music-assistant/frontend/pull/2012))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Validate auto-merge dependency PRs via GitHub API instead of checkout (by @MarvinSchenkel in #4566)
+- Bump docker/login-action from 4.3.0 to 4.4.0 (by @dependabot[bot] in #4574)
+- Isolate the hermetic e2e fixture from host audio devices (by @marcelveldt in #4583)
+- ⬆️ Update music-assistant-frontend to 2.17.209 (by @music-assistant-machine in #4590)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @hatharry, @jozefKruszynski, @marcelveldt
+
+
 # [2.10.0.dev2026070406] - 04.07.2026
 
 ## 📦 Nightly Release
@@ -83,35 +130,5 @@ _Changes since [2.10.0.dev2026070214](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @dmoo500, @marcelveldt
-
-
-# [2.10.0.dev2026070214] - 02.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070206](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070206)_
-
-### 🚀 Features and enhancements
-
-- Import additional metadata from Plex into media items (by @lebdim in #4338)
-- Smart crossfade: DJ-style bass swap EQ (by @MarvinSchenkel in #4536)
-- Global defaults for queue settings with per-queue override (by @marcelveldt in #4537)
-
-### 🐛 Bugfixes
-
-- Preserve player queues and their settings across restarts (by @marcelveldt in #4529)
-- Fix Spotify connect playback on some Sendspin players (by @maximmaxim345 in #4530)
-- Fix complete config loss after power failure or unclean shutdown (by @MarvinSchenkel in #4534)
-- Fix smart fades falling back to a hard cut when the incoming track is short (by @MarvinSchenkel in #4535)
-
-### Other Changes
-
-- Refactor smart fades into a plan/render architecture (by @MarvinSchenkel in #4532)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @lebdim, @marcelveldt, @maximmaxim345
 
 
