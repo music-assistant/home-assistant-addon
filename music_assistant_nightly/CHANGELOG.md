@@ -1,3 +1,64 @@
+# [2.10.0.dev2026070607] - 06.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026070506](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070506)_
+
+### 🚀 Features and enhancements
+
+- BBC Sounds: refactor for auntie-sounds 2.0 (by @kieranhogg in #4450)
+- Add support for authors and narrators to audiobookshelf (by @fmunkes in #4526)
+- Smart fades analyzer v2: frequency band envelopes, time signature and anti-aliased energy binning (by @MarvinSchenkel in #4580)
+- Remove per-track config rebuild overhead (by @marcelveldt in #4585)
+- Resolve publish IP at startup instead of baking it into config entry defaults (by @marcelveldt in #4588)
+- Add genre detection to playlist_metadata provider (by @dmoo500 in #4593)
+- Implement SQL-based explicit filter for smart playlists (by @dmoo500 in #4594)
+- Add explicit parameter to TracksController.library_items (by @dmoo500 in #4597)
+- Populate derived_from on output protocols (by @marcelveldt in #4609)
+
+### 🐛 Bugfixes
+
+- Prevent SSRF via attacker-controlled WebRTC HTTP proxy path (by @MarvinSchenkel in #4554)
+- Rate-limit join code exchange and lengthen join codes (by @MarvinSchenkel in #4558)
+- Fix builtin Snapserver failing to load on busy MA startup (by @OzGav in #4586)
+- Sanitize all control characters in icy-name stream header (by @OzGav in #4595)
+- Improve error presentation for folder playback resolution (by @OzGav in #4598)
+- Prevent duplicate versions of the same song in dynamic playlist queues (by @marcelveldt in #4603)
+
+### 🎨 Frontend Changes
+
+- Show the base protocol for bridged outputs and explain their locked toggle (by @marcelveldt in [#2017](https://github.com/music-assistant/frontend/pull/2017))
+
+### Other Changes
+
+- Make Sendspin bridges first-class derived transports (by @marcelveldt in #4596)
+- Add typed get_config_value helper to the config-owning base models (by @marcelveldt in #4606)
+- Local Audio: promote attribution stubs to regular visible players (by @marcelveldt in #4607)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>9 changes</summary>
+
+- Bump aiohttp-asyncmdnsresolver from 0.1.1 to 0.2.0 (by @dependabot[bot] in #4599)
+- Bump pre-commit from 4.5.1 to 4.6.0 (by @dependabot[bot] in #4600)
+- Bump huggingface-hub from 1.12.0 to 1.22.0 (by @dependabot[bot] in #4601)
+- Fix test-ordering flake caused by a leaked models global cache (by @marcelveldt in #4602)
+- Fix mypy no-any-return error in Plex lyrics fetch (by @marcelveldt in #4604)
+- ⬆️ Update music-assistant-models to 1.1.152 (by @music-assistant-machine in #4605)
+- Isolate the unit-test `mass` fixture from host audio and default providers (by @marcelveldt in #4608)
+- Add test coverage for local audio bridge-manager edge cases (by @marcelveldt in #4610)
+- ⬆️ Update music-assistant-frontend to 2.17.210 (by @music-assistant-machine in #4612)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @kieranhogg, @marcelveldt
+
+
 # [2.10.0.dev2026070506] - 05.07.2026
 
 ## 📦 Nightly Release
@@ -81,54 +142,5 @@ _Changes since [2.10.0.dev2026070306](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt, @oldrobotdev
-
-
-# [2.10.0.dev2026070306] - 03.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070214](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070214)_
-
-### 🚀 Features and enhancements
-
-- Explain the queue Global option via a per-option description (by @marcelveldt in #4540)
-- Only expose container items as player queue sources (by @marcelveldt in #4542)
-- Add per-option help text to config selects (by @marcelveldt in #4546)
-- Show unavailable player control and AirPlay protocol options as disabled (by @marcelveldt in #4551)
-
-### 🐛 Bugfixes
-
-- Fix AirPlay receiver advertising on the wrong network interface (by @marcelveldt in #4543)
-- Allow smart playlists through metadata enrichment (by @dmoo500 in #4545)
-- Remove Home Assistant musllinux wheel index from package install (by @MarvinSchenkel in #4549)
-- Restrict the image palette API to an opaque image id (by @marcelveldt in #4550)
-
-### 🎨 Frontend Changes
-
-- Show per-option description in config-entry select (by @marcelveldt in [#2003](https://github.com/music-assistant/frontend/pull/2003))
-- Add duration and last_played filters to Smart Playlist (by @dmoo500 in [#1998](https://github.com/music-assistant/frontend/pull/1998))
-- Add link to global queue settings from the queue settings page (by @marcelveldt in [#2002](https://github.com/music-assistant/frontend/pull/2002))
-- Restore the clear queue option in the player menu (by @marcelveldt in [#2006](https://github.com/music-assistant/frontend/pull/2006))
-- Fix stale and flickering queue list in the fullscreen player (by @marcelveldt in [#2001](https://github.com/music-assistant/frontend/pull/2001))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- ⬆️ Update music-assistant-models to 1.1.149 (by @music-assistant-machine in #4539)
-- Bump aioslimproto to 3.1.9 (by @MarvinSchenkel in #4541)
-- Remove the deprecated legacy image proxy endpoint (by @marcelveldt in #4544)
-- Bump docker/login-action from 4.2.0 to 4.3.0 (by @dependabot[bot] in #4547)
-- Bump docker/setup-buildx-action from 4.1.0 to 4.2.0 (by @dependabot[bot] in #4548)
-- ⬆️ Update music-assistant-frontend to 2.17.207 (by @music-assistant-machine in #4552)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @dmoo500, @marcelveldt
 
 
