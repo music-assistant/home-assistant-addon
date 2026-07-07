@@ -1,3 +1,51 @@
+# [2.10.0.dev2026070706] - 07.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026070607](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070607)_
+
+### 🚀 Features and enhancements
+
+- fastmcp_server: update provider to v0.13.3 (queue, library-URI, and playback tools + localizable config) (by @trudenboy in #4486)
+- Use radio playlists in the MCP play_media tool (by @marcelveldt in #4501)
+- Smart fades analyzer v2: frequency band envelopes, time signature and anti-aliased energy binning (by @MarvinSchenkel in #4580)
+- Smart crossfade: content-aware 3-band EQ from frequency band analysis (by @MarvinSchenkel in #4591)
+- Add taxonomy genre icons, update genre icon image resolver (by @jozefKruszynski in #4611)
+
+### 🐛 Bugfixes
+
+- Harden JWT token expiration and fix guest token revocation (by @MarvinSchenkel in #4556)
+- Fix smart playlist artwork not displaying in recommendations (by @dmoo500 in #4571)
+- Sample smart playlist seeds evenly in discover mode (by @MarvinSchenkel in #4621)
+- Fix media position exceeding duration on squeezelite players (by @MarvinSchenkel in #4623)
+- Shuffle smart playlist seed tracks before sampling (by @MarvinSchenkel in #4625)
+
+### 🎨 Frontend Changes
+
+- Exclude parent directory ("..") item from selection in browse mode (by @MarvinSchenkel in [#2029](https://github.com/music-assistant/frontend/pull/2029))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Scope based authorization for API commands and centralized user impersonation (by @marcelveldt in #4613)
+- Cache negative results in @use_cache and avoid the SWR double read (by @marcelveldt in #4616)
+- Slim cache indexes, upsert in place, and clean up stale SWR rows (by @marcelveldt in #4617)
+- Run dependency security checks without an untrusted privileged checkout (by @MarvinSchenkel in #4618)
+- Bump API schema version for scope based authorization (by @marcelveldt in #4622)
+- ⬆️ Update music-assistant-frontend to 2.17.211 (by @music-assistant-machine in #4635)
+- Auto-approve automated frontend/models bump PRs in dependency security gate (by @MarvinSchenkel in #4638)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @dmoo500, @jozefKruszynski, @marcelveldt, @trudenboy
+
+
 # [2.10.0.dev2026070607] - 06.07.2026
 
 ## 📦 Nightly Release
@@ -104,43 +152,5 @@ _Changes since [2.10.0.dev2026070406](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @hatharry, @jozefKruszynski, @marcelveldt
-
-
-# [2.10.0.dev2026070406] - 04.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070306](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070306)_
-
-### 🚀 Features and enhancements
-
-- Expose album artist on player current media (by @MarvinSchenkel in #4560)
-
-### 🐛 Bugfixes
-
-- Stop exposing internal error details in Plex Connect responses (by @MarvinSchenkel in #4563)
-- Match NetEase image CDN hostname exactly when upgrading to https (by @MarvinSchenkel in #4564)
-- Fix open redirect on login page and requirements regex char range (by @MarvinSchenkel in #4565)
-- Pace background audio analysis to stop it saturating the CPU (by @oldrobotdev in #4568)
-
-### 🎨 Frontend Changes
-
-- Convert player protocol section to a shadcn accordion (by @marcelveldt in [#2011](https://github.com/music-assistant/frontend/pull/2011))
-- Convert config label and alert entries to shadcn (by @marcelveldt in [#2009](https://github.com/music-assistant/frontend/pull/2009))
-- Modernize settings config category sections (by @marcelveldt in [#2008](https://github.com/music-assistant/frontend/pull/2008))
-- Convert the audio quality details popover to shadcn (by @marcelveldt in [#2005](https://github.com/music-assistant/frontend/pull/2005))
-- Sanitize rendered markdown to prevent stored XSS (by @MarvinSchenkel in [#2007](https://github.com/music-assistant/frontend/pull/2007))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.150 (by @music-assistant-machine in #4553)
-- ⬆️ Update music-assistant-models to 1.1.151 (by @music-assistant-machine in #4569)
-- ⬆️ Update music-assistant-frontend to 2.17.208 (by @music-assistant-machine in #4575)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @marcelveldt, @oldrobotdev
 
 
