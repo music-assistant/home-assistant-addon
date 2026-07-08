@@ -1,3 +1,61 @@
+# [2.10.0.dev2026070805] - 08.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026070706](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070706)_
+
+### 🚀 Features and enhancements
+
+- Expose bpm, musical key and RMS waveform to the frontend (by @MarvinSchenkel in #4626)
+- Speed up library matching with an indexed external ID lookup table (by @marcelveldt in #4628)
+- Speed up library listings by streaming from the sort index (by @marcelveldt in #4629)
+- Remove periodic garbage collection (by @marcelveldt in #4630)
+- Avoid threadsafe dispatch overhead when signalling events (by @marcelveldt in #4631)
+- Speed up library sync when nothing has changed (by @marcelveldt in #4632)
+- Raise transient provider errors instead of caching them as negatives (by @marcelveldt in #4636)
+- Fastmcp_server: Searchable log tail, whole-record tracebacks, log stats (by @trudenboy in #4640)
+- Reduce image proxy-id overhead when serializing media items (by @marcelveldt in #4642)
+- Make the external id lookup table the single source of truth (by @marcelveldt in #4645)
+
+### 🐛 Bugfixes
+
+- Sync groups: keep slaved followers in group member dropdown after removal (by @MarvinSchenkel in #4036)
+- Fix playlog unique constraint errors on long-lived databases (by @MarvinSchenkel in #4567)
+- Fix Home Assistant integration losing authentication after restart or over time (by @MarvinSchenkel in #4620)
+- Snapcast fixes (by @OzGav in #4633)
+- Preserve universal player settings during startup restore (by @SyntaxSawdust in #4634)
+- Prevent universal player settings loss on startup restore (by @marcelveldt in #4643)
+- Prevent syncgroup self-dissolve when recovering a stuck member (by @MarvinSchenkel in #4644)
+- Fix broken album artists filtering (by @OzGav in #4648)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2032](https://github.com/music-assistant/frontend/pull/2032))
+- Fix genre merge cross taxonomy (by @jozefKruszynski in [#2031](https://github.com/music-assistant/frontend/pull/2031))
+- Show a waveform progress bar in the fullscreen player (by @MarvinSchenkel in [#2035](https://github.com/music-assistant/frontend/pull/2035))
+- Enhance button in fullplayer screen + add animated icons (by @stvncode in [#2036](https://github.com/music-assistant/frontend/pull/2036))
+- Exit selection mode when the browse path changes (by @OzGav in [#2030](https://github.com/music-assistant/frontend/pull/2030))
+- Fix long-press context menus on touch devices (by @MarvinSchenkel in [#2004](https://github.com/music-assistant/frontend/pull/2004))
+- Fix audio pipeline line spacing (by @OzGav in [#2028](https://github.com/music-assistant/frontend/pull/2028))
+- Extract search input component (by @GiuliaPassoni in [#1959](https://github.com/music-assistant/frontend/pull/1959))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #4639)
+
+### 🧰 Maintenance and dependency bumps
+
+- Use dedicated encryption key (by @MarvinSchenkel in #4557)
+- ⬆️ Update music-assistant-models to 1.1.154 (by @music-assistant-machine in #4637)
+- ⬆️ Update music-assistant-frontend to 2.17.212 (by @music-assistant-machine in #4655)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GiuliaPassoni, @MarvinSchenkel, @OzGav, @SyntaxSawdust, @jozefKruszynski, @marcelveldt, @stvncode, @trudenboy
+
+
 # [2.10.0.dev2026070706] - 07.07.2026
 
 ## 📦 Nightly Release
@@ -105,52 +163,5 @@ _Changes since [2.10.0.dev2026070506](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @kieranhogg, @marcelveldt
-
-
-# [2.10.0.dev2026070506] - 05.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070406](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070406)_
-
-### 🚀 Features and enhancements
-
-- Suppress per-item media item events during library sync (by @marcelveldt in #4578)
-- Make player state change detection exact and cheap (by @marcelveldt in #4579)
-- Emby Music Provider: add last played date (by @hatharry in #4582)
-- Reduce database commit overhead during library sync (by @marcelveldt in #4584)
-
-### 🐛 Bugfixes
-
-- Prevent path traversal outside the filesystem provider base directory (by @MarvinSchenkel in #4559)
-- Don't reinstall provider requirements with extras on every startup (by @marcelveldt in #4577)
-- Prevent Qobuz credentials leaking into logs on HTTP error responses (by @OzGav in #4587)
-
-### 🎨 Frontend Changes
-
-- Extract the player protocol section into a dedicated component (by @marcelveldt in [#2015](https://github.com/music-assistant/frontend/pull/2015))
-- Extract the config entry row into a dedicated component (by @marcelveldt in [#2013](https://github.com/music-assistant/frontend/pull/2013))
-- Genre taxonomy UX: add-genre, panel actions, management table, targeted restore (by @jozefKruszynski in [#1974](https://github.com/music-assistant/frontend/pull/1974))
-- Fix DSP parametric EQ layout on narrow and rotated displays (by @OzGav in [#2014](https://github.com/music-assistant/frontend/pull/2014))
-- Refresh library views as each media type finishes syncing (by @marcelveldt in [#2016](https://github.com/music-assistant/frontend/pull/2016))
-- Add subtle grey ring to unselected editorial card checkbox (by @OzGav in [#2012](https://github.com/music-assistant/frontend/pull/2012))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Validate auto-merge dependency PRs via GitHub API instead of checkout (by @MarvinSchenkel in #4566)
-- Bump docker/login-action from 4.3.0 to 4.4.0 (by @dependabot[bot] in #4574)
-- Isolate the hermetic e2e fixture from host audio devices (by @marcelveldt in #4583)
-- ⬆️ Update music-assistant-frontend to 2.17.209 (by @music-assistant-machine in #4590)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @hatharry, @jozefKruszynski, @marcelveldt
 
 
