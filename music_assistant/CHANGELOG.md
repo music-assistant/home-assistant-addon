@@ -1,3 +1,35 @@
+# [2.9.6] - 10.07.2026
+
+## 📦 Stable Release
+
+_Changes since [2.9.5](https://github.com/music-assistant/server/releases/tag/2.9.5)_
+
+### 🐛 Bugfixes
+
+- Sync groups: keep slaved followers in group member dropdown after removal (by @MarvinSchenkel in #4036)
+- Improve global search reliability and database query parameter logic (by @SyedaAnshrahGillani in #4207)
+- Fix AirPlay receiver advertising on the wrong network interface (by @marcelveldt in #4543)
+- Remove Home Assistant musllinux wheel index from package install (by @MarvinSchenkel in #4549)
+- Pace background audio analysis to stop it saturating the CPU (by @oldrobotdev in #4568)
+- Fix builtin Snapserver failing to load on busy MA startup (by @OzGav in #4586)
+- Prevent Qobuz credentials leaking into logs on HTTP error responses (by @OzGav in #4587)
+- Snapcast fixes (by @OzGav in #4633)
+- Fix Plex artist albums not loading on servers without filter metadata (by @OzGav in #4657)
+- Don't auto-sync all Phish.in playlists to the library (by @OzGav in #4660)
+- Fix Spotify authentication failing after recent token changes (by @marcelveldt in #4692)
+
+### Other Changes
+
+- Allow the Home Assistant system user to filter listings by user and remove players (by @marcelveldt in #4641)
+- Add downloadable diagnostics report (backport) (by @marcelveldt in #4699)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @SyedaAnshrahGillani, @marcelveldt, @oldrobotdev
+
+
 # [2.9.5] - 01.07.2026
 
 ## 📦 Stable Release
@@ -64,34 +96,5 @@ _Changes since [2.9.3](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @chrisuthe, @marcelveldt, @maximmaxim345, @rwlove, @s0yd4RK, @vintvinst
-
-
-# [2.9.3] - 22.06.2026
-
-## 📦 Stable Release
-
-_Changes since [2.9.2](https://github.com/music-assistant/server/releases/tag/2.9.2)_
-
-### 🐛 Bugfixes
-
-- Fix Tidal DASH playback stuttering by serving manifests as HTTP routes (by @libre-7 in #4062)
-- Pace audio analysis and cap it to half the CPU cores (by @marcelveldt in #4311)
-- Fix protocol player settings not reverting to their default value (by @marcelveldt in #4314)
-- Fix WebDAV sync failing on folder names with special characters (by @marcelveldt in #4315)
-- Fix podcast episode lookup and a queue preload crash on a drained queue (by @marcelveldt in #4318)
-- Preserve percent-encoding when fetching radio/HTTP stream URLs (by @OzGav in #4319)
-- Fix podcast episode lookup in gpodder (by @fmunkes in #4323)
-- Fix playback of multipart files with apostrophes in path (by @OzGav in #4329)
-- Raise open-file soft limit at startup (by @OzGav in #4332)
-- Fix Party URL when webserver URL has trailing / (by @OzGav in #4375)
-- Fix white noise bug in Jellyfin (by @OzGav in #4378)
-- Fix elapsed time drift for live sources played to a sync group (by @marcelveldt in #4385)
-- Plex: fix track sync re-scanning the whole library on every page (by @marcelveldt in #4386)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @fmunkes, @libre-7, @marcelveldt
 
 
