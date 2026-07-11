@@ -1,3 +1,105 @@
+# [2.10.0b5] - 11.07.2026
+
+## 📦 Beta Release
+
+_Changes since [2.10.0b4](https://github.com/music-assistant/server/releases/tag/2.10.0b4)_
+
+### 🚀 New Providers
+
+- Add Rainy Mood provider (by @jlpouffier in #3844)
+- Add Music Quiz plugin: multiplayer guess-the-song game (by @TimoPtr in #4572)
+- Add Ambient Sounds provider with locally generated noise loops (by @marcelveldt in #4676)
+
+### 🚀 Features and enhancements
+
+- Add virtual player support to the Sendspin provider (by @marcelveldt in #4666)
+- Add convenience API for providers to send custom events to clients (by @marcelveldt in #4670)
+- Faster and more robust global search with per-provider timeouts and caching (by @marcelveldt in #4671)
+- Add audio overlay support to queue playback (by @marcelveldt in #4674)
+- Faster library browsing: slim summary mode for list endpoints (by @marcelveldt in #4679)
+- Library list endpoints return slim summary items by default (by @marcelveldt in #4693)
+- Expose party join URL and playback mode to guests (by @marcelveldt in #4694)
+- Persist auth token activity at most once per hour (by @marcelveldt in #4695)
+- Reduce memory usage of large play queues (by @marcelveldt in #4697)
+- Add difficulty levels and optional AI wrong answers to the Music Quiz (by @marcelveldt in #4705)
+- Reword the Music Quiz AI setting (by @marcelveldt in #4707)
+- Expose quiz type in game state (by @marcelveldt in #4713)
+- Add reusable Music Quiz answer types (by @marcelveldt in #4714)
+- Prepare Music Quiz rounds for more answer types (by @marcelveldt in #4718)
+- Add Music Quiz player presence (by @marcelveldt in #4723)
+
+### 🐛 Bugfixes
+
+- Fix stale active output protocol on sync group leader after group stop (by @MarvinSchenkel in #4650)
+- Don't crash DLNA player update on malformed device metadata XML (by @MarvinSchenkel in #4682)
+- Fix Spotify authentication failing after recent token changes (by @marcelveldt in #4688)
+- Fix guest listen-in race conditions in the party and quiz plugins (by @marcelveldt in #4700)
+- Fix Spotify authentication failing until server restart (by @marcelveldt in #4711)
+- Show re-authentication prompt when a provider's login fails (by @marcelveldt in #4717)
+- Prevent Music Quiz errors with no active game (by @marcelveldt in #4720)
+- Recover from corrupt audio analysis cache (by @marcelveldt in #4721)
+- Keep provider config values current (by @marcelveldt in #4725)
+- Prevent lost Podcast Index library changes (by @marcelveldt in #4726)
+
+### 🎨 Frontend Changes
+
+- Show track BPM and musical key on the track details page (by @MarvinSchenkel in [#2034](https://github.com/music-assistant/frontend/pull/2034))
+- Add issue chooser redirecting to the support repo (by @marcelveldt in [#2040](https://github.com/music-assistant/frontend/pull/2040))
+- Add diagnostics report download to settings (by @marcelveldt in [#2038](https://github.com/music-assistant/frontend/pull/2038))
+- Add Music Quiz game interface (by @TimoPtr in [#2010](https://github.com/music-assistant/frontend/pull/2010))
+- Add listen-in (shared audio) for party guests (by @marcelveldt in [#2041](https://github.com/music-assistant/frontend/pull/2041))
+- Make release workflows aware of stable patch builds (by @marcelveldt in [#2058](https://github.com/music-assistant/frontend/pull/2058))
+- Fix Music Quiz menu item icon and label (by @marcelveldt in [#2044](https://github.com/music-assistant/frontend/pull/2044))
+- Add flexible Music Quiz game routing (by @marcelveldt in [#2063](https://github.com/music-assistant/frontend/pull/2063))
+- Remove the blank space between the player and the party mode dashboard view (by @GiuliaPassoni in [#1937](https://github.com/music-assistant/frontend/pull/1937))
+- Improve the Discover page edit mode (by @marcelveldt in [#2062](https://github.com/music-assistant/frontend/pull/2062))
+- Support Music Quiz game types (by @marcelveldt in [#2061](https://github.com/music-assistant/frontend/pull/2061))
+- Customize the navigation menu with a new edit mode (by @marcelveldt in [#2060](https://github.com/music-assistant/frontend/pull/2060))
+- Add audio overlay controls (by @jlpouffier in [#1753](https://github.com/music-assistant/frontend/pull/1753))
+- Redesign the Music Quiz UI (by @marcelveldt in [#2054](https://github.com/music-assistant/frontend/pull/2054))
+- Add difficulty selector to Music Quiz setup (by @marcelveldt in [#2048](https://github.com/music-assistant/frontend/pull/2048))
+- Fix Music Quiz setup with no active game (by @marcelveldt in [#2064](https://github.com/music-assistant/frontend/pull/2064))
+- Remove the blank space between the player and the party mode dashboard view (by @GiuliaPassoni in [#1937](https://github.com/music-assistant/frontend/pull/1937))
+- Fix guest join links during frontend development (by @marcelveldt in [#2059](https://github.com/music-assistant/frontend/pull/2059))
+- Fix Music Quiz stray error on no active game (by @marcelveldt in [#2053](https://github.com/music-assistant/frontend/pull/2053))
+- Fix Music Quiz styling and menu icon (by @marcelveldt in [#2051](https://github.com/music-assistant/frontend/pull/2051))
+
+### Other Changes
+
+- Remove HTTP diagnostics download endpoint (by @marcelveldt in #4709)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>17 changes</summary>
+
+- Add shared playback session and guest access helpers for plugins (by @marcelveldt in #4672)
+- ⬆️ Update music-assistant-models to 1.1.157 (by @music-assistant-machine in #4673)
+- Add diagnostics sections for core controllers and common providers (by @marcelveldt in #4675)
+- ⬆️ Update music-assistant-frontend to 2.17.213 (by @music-assistant-machine in #4677)
+- ⬆️ Update music-assistant-models to 1.1.158 (by @music-assistant-machine in #4678)
+- ⬆️ Update music-assistant-models to 1.1.159 (by @music-assistant-machine in #4680)
+- Add full-text search index for search (by @marcelveldt in #4681)
+- Stabilize CodSpeed benchmark runs (by @marcelveldt in #4689)
+- Remove non-deterministic macro benchmarks from CodSpeed (by @marcelveldt in #4691)
+- Add issue chooser redirecting to the support repo (by @marcelveldt in #4696)
+- ⬆️ Update music-assistant-frontend to 2.17.214 (by @music-assistant-machine in #4701)
+- Reduce server startup time and memory usage (by @marcelveldt in #4702)
+- Speed up artwork loading and refresh artwork when local files change (by @marcelveldt in #4703)
+- ⬆️ Update music-assistant-frontend to 2.17.215 (by @music-assistant-machine in #4704)
+- Make audio overlays audible immediately (by @marcelveldt in #4715)
+- Lock in the provider config store/snapshot consistency guarantee (by @marcelveldt in #4716)
+- ⬆️ Update music-assistant-frontend to 2.17.216 (by @music-assistant-machine in #4724)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GiuliaPassoni, @MarvinSchenkel, @TimoPtr, @jlpouffier, @marcelveldt
+
+
 # [2.10.0b4] - 08.07.2026
 
 ## 📦 Beta Release
@@ -325,110 +427,5 @@ _Changes since [2.10.0b2](https://github.com/music-assistant/server/releases/tag
 Special thanks to the following contributors who helped with this release:
 
 @Bonusbartus, @Hopperpop, @MarvinSchenkel, @Odn0, @OzGav, @Sawtaytoes, @benklop, @chrisuthe, @dmoo500, @fmunkes, @iVolt1, @jdaberkow, @jozefKruszynski, @jyundt, @khers, @lebdim, @marcelveldt, @maximmaxim345, @oldrobotdev, @robsonke, @steamEngineer, @stvncode, @teancom, @zenibako
-
-
-# [2.10.0b2] - 25.06.2026
-
-## 📦 Beta Release
-
-_Changes since [2.10.0b1](https://github.com/music-assistant/server/releases/tag/2.10.0b1)_
-
-### 🚀 New Providers
-
-- Add Sveriges Radio provider (by @romany in #2974)
-- Add Pocket Casts Provider (by @yfhyou in #3127)
-
-### 🚀 Features and enhancements
-
-- Add favorites support to Digitally Incorporated provider (by @benklop in #3458)
-- feat(spotify): add curated browse for new releases and genres (by @x-ingo in #4177)
-- Rename 'don't stop the music' to 'autoplay' (by @marcelveldt in #4404)
-- Transfer playback to a new leader when unjoining a sync group leader (by @marcelveldt in #4412)
-- Support `seek` Sendspin controller commands (by @maximmaxim345 in #4417)
-- Resolve player palette only on the media owner, not per grouped member (by @marcelveldt in #4425)
-- Make the demo player provider a groupable end-to-end test bed (by @marcelveldt in #4428)
-- Add content_type to Genre schema with migration (by @jozefKruszynski in #4435)
-- Configurable Autoplay with similar / library / playlist modes (by @marcelveldt in #4446)
-
-### 🐛 Bugfixes
-
-- Validate return_url before appending JWT token (by @s0yd4RK in #4272)
-- Fix Spotify playback failing on broken Spotify CDN URLs (by @marcelveldt in #4398)
-- Handle deleted image files with a typed not-found error (by @OzGav in #4400)
-- Pause external sources instead of stopping them (by @marcelveldt in #4401)
-- Fix unjoining a syncgroup member that joined the leader externally (by @marcelveldt in #4405)
-- Recover flow stream restart on Cast groups (players that don't report idle) (by @OzGav in #4406)
-- Keep universal player when its protocol links can't migrate to the native player (by @maximmaxim345 in #4413)
-- Fix Home Assistant control of universal players running an external source (by @maximmaxim345 in #4415)
-- Prevent a player from linking to itself on player type change (by @maximmaxim345 in #4416)
-- Don't switch a playing group's output protocol when joining a player (by @marcelveldt in #4419)
-- Keep radio/live streams restartable after a mid-stream disconnect (by @marcelveldt in #4421)
-- Reconnect ICY radio streams on disconnect (by @marcelveldt in #4422)
-- Keep AirPlay sync group playing when the leader's stream process crashes (by @marcelveldt in #4424)
-- Fix WiiM UPnP event-callback binding on multi-homed / containerized hosts (by @rwlove in #4434)
-- fix(snapcast): fix ~65s stop delay caused by spurious inactivity timer (by @vintvinst in #4436)
-- Make live audio analysis a passive observer so it can never stall playback (by @chrisuthe in #4442)
-
-### 🎨 Frontend Changes
-
-- Always expand players when clicking the player button from the 'now playing' screen ([#60](https://github.com/music-assistant/frontend/pull/60)) (by @joperafe in [#1944](https://github.com/music-assistant/frontend/pull/1944))
-- Add crossfade control to the player and a per-queue settings page (by @marcelveldt in [#1942](https://github.com/music-assistant/frontend/pull/1942))
-- Pnpm switch (by @stvncode in [#1951](https://github.com/music-assistant/frontend/pull/1951))
-- Revamp the fullscreen player header controls (by @marcelveldt in [#1945](https://github.com/music-assistant/frontend/pull/1945))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1955](https://github.com/music-assistant/frontend/pull/1955))
-- Possibility to hide/show browse by genre in discover page (by @stvncode in [#1957](https://github.com/music-assistant/frontend/pull/1957))
-- Allow unjoining the sync group leader to hand off playback (by @marcelveldt in [#1956](https://github.com/music-assistant/frontend/pull/1956))
-- Genre media type filtering (by @jozefKruszynski in [#1952](https://github.com/music-assistant/frontend/pull/1952))
-- Rename 'auto play' to 'autoplay' and use the new queue command (by @marcelveldt in [#1953](https://github.com/music-assistant/frontend/pull/1953))
-- Fix favorite heart state resetting on queue updates for radio and provider items (by @dmoo500 in [#1725](https://github.com/music-assistant/frontend/pull/1725))
-- Add Start Radio to the queue item menu and drop redundant move up/down (by @marcelveldt in [#1963](https://github.com/music-assistant/frontend/pull/1963))
-- Drag to reorder up next items in the fullscreen queue (by @marcelveldt in [#1961](https://github.com/music-assistant/frontend/pull/1961))
-- Redesign the fullscreen player queue as a single scrollable list (by @marcelveldt in [#1960](https://github.com/music-assistant/frontend/pull/1960))
-- Migrate timeline slider to reka-ui, fix tap not skipping correctly (by @pierosavi in [#1857](https://github.com/music-assistant/frontend/pull/1857))
-- Extract the fullscreen queue item context menu into a helper (by @marcelveldt in [#1962](https://github.com/music-assistant/frontend/pull/1962))
-- Add Lucide icon picker with custom MA device icons for player settings (by @dmoo500 in [#1779](https://github.com/music-assistant/frontend/pull/1779))
-- Add a queue mode banner to surface radio and autoplay (by @marcelveldt in [#1966](https://github.com/music-assistant/frontend/pull/1966))
-- Update context menu with shadcn comp and lucide icons (by @stvncode in [#1964](https://github.com/music-assistant/frontend/pull/1964))
-- Streamline fullscreen player header controls (by @marcelveldt in [#1965](https://github.com/music-assistant/frontend/pull/1965))
-- Fix rectangle art album not well displayed in the now playing bottom ([#66](https://github.com/music-assistant/frontend/pull/66)) (by @joperafe in [#1940](https://github.com/music-assistant/frontend/pull/1940))
-- Fix drodpdown offset + width (by @stvncode in [#1968](https://github.com/music-assistant/frontend/pull/1968))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4411)
-- Extract library-sync config-entry building into a helper (by @zenibako in #4414)
-- Share UPnP source-IP resolution across AirPlay and WiiM (by @rwlove in #4443)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>18 changes</summary>
-
-- Bump ytmusicapi from 1.11.5 to 1.12.1 (by @dependabot[bot] in #4235)
-- Enable RUF006 and fix unstored asyncio tasks (by @OzGav in #4393)
-- Enable RUF012 (by @OzGav in #4394)
-- Enable PYI034 (return Self from __aenter__/__new__) (by @OzGav in #4395)
-- ⬆️ Update music-assistant-frontend to 2.17.195 (by @music-assistant-machine in #4396)
-- Enable S307 rule - possibly insecure function (by @OzGav in #4397)
-- ⬆️ Update music-assistant-frontend to 2.17.196 (by @music-assistant-machine in #4407)
-- Bump zeroconf from 0.149.12 to 0.149.16 (by @dependabot[bot] in #4408)
-- Move private methods to the bottom in the PocketCasts provider (by @OzGav in #4418)
-- Bump actions/cache from 5 to 6 (by @dependabot[bot] in #4420)
-- Dynamically update group leader capability on a zone player in MusicCast (by @fmunkes in #4423)
-- ⬆️ Update music-assistant-frontend to 2.17.197 (by @music-assistant-machine in #4427)
-- Bump actions/setup-python from 6.2.0 to 6.3.0 (by @dependabot[bot] in #4431)
-- ⬆️ Update music-assistant-models to 1.1.144 (by @music-assistant-machine in #4433)
-- ⬆️ Update music-assistant-frontend to 2.17.198 (by @music-assistant-machine in #4437)
-- ⬆️ Update music-assistant-frontend to 2.17.199 (by @music-assistant-machine in #4438)
-- ⬆️ Update music-assistant-frontend to 2.17.200 (by @music-assistant-machine in #4439)
-- Enhance Audio Analysis Logging (by @chrisuthe in #4440)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @benklop, @chrisuthe, @dmoo500, @fmunkes, @joperafe, @jozefKruszynski, @marcelveldt, @maximmaxim345, @pierosavi, @romany, @rwlove, @s0yd4RK, @stvncode, @vintvinst, @x-ingo, @yfhyou, @zenibako
 
 
