@@ -1,3 +1,74 @@
+# [2.10.0.dev2026071023] - 11.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071006](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071006)_
+
+### 🚀 Features and enhancements
+
+- Add difficulty levels and optional AI wrong answers to the Music Quiz (by @marcelveldt in #4705)
+- Reword the Music Quiz AI setting (by @marcelveldt in #4707)
+- Expose quiz type in game state (by @marcelveldt in #4713)
+- Add reusable Music Quiz answer types (by @marcelveldt in #4714)
+- Prepare Music Quiz rounds for more answer types (by @marcelveldt in #4718)
+- Add Music Quiz player presence (by @marcelveldt in #4723)
+
+### 🐛 Bugfixes
+
+- Fix stale active output protocol on sync group leader after group stop (by @MarvinSchenkel in #4650)
+- Fix Spotify authentication failing until server restart (by @marcelveldt in #4711)
+- Show re-authentication prompt when a provider's login fails (by @marcelveldt in #4717)
+- Prevent Music Quiz errors with no active game (by @marcelveldt in #4720)
+- Recover from corrupt audio analysis cache (by @marcelveldt in #4721)
+- Keep provider config values current (by @marcelveldt in #4725)
+
+### 🎨 Frontend Changes
+
+- Make release workflows aware of stable patch builds (by @marcelveldt in [#2058](https://github.com/music-assistant/frontend/pull/2058))
+- Fix Music Quiz menu item icon and label (by @marcelveldt in [#2044](https://github.com/music-assistant/frontend/pull/2044))
+- Add flexible Music Quiz game routing (by @marcelveldt in [#2063](https://github.com/music-assistant/frontend/pull/2063))
+- Remove the blank space between the player and the party mode dashboard view (by @GiuliaPassoni in [#1937](https://github.com/music-assistant/frontend/pull/1937))
+- Improve the Discover page edit mode (by @marcelveldt in [#2062](https://github.com/music-assistant/frontend/pull/2062))
+- Support Music Quiz game types (by @marcelveldt in [#2061](https://github.com/music-assistant/frontend/pull/2061))
+- Customize the navigation menu with a new edit mode (by @marcelveldt in [#2060](https://github.com/music-assistant/frontend/pull/2060))
+- Add audio overlay controls (by @jlpouffier in [#1753](https://github.com/music-assistant/frontend/pull/1753))
+- Redesign the Music Quiz UI (by @marcelveldt in [#2054](https://github.com/music-assistant/frontend/pull/2054))
+- Add difficulty selector to Music Quiz setup (by @marcelveldt in [#2048](https://github.com/music-assistant/frontend/pull/2048))
+- Fix Music Quiz setup with no active game (by @marcelveldt in [#2064](https://github.com/music-assistant/frontend/pull/2064))
+- Remove the blank space between the player and the party mode dashboard view (by @GiuliaPassoni in [#1937](https://github.com/music-assistant/frontend/pull/1937))
+- Fix guest join links during frontend development (by @marcelveldt in [#2059](https://github.com/music-assistant/frontend/pull/2059))
+- Fix Music Quiz stray error on no active game (by @marcelveldt in [#2053](https://github.com/music-assistant/frontend/pull/2053))
+- Fix Music Quiz styling and menu icon (by @marcelveldt in [#2051](https://github.com/music-assistant/frontend/pull/2051))
+- Fix Music Quiz guest recovery, lyrics state, and setup edge cases (by @marcelveldt in [#2049](https://github.com/music-assistant/frontend/pull/2049))
+- Fix Music Quiz screens showing raw text keys (by @marcelveldt in [#2047](https://github.com/music-assistant/frontend/pull/2047))
+- Fix music quiz listen-in audio on iOS and unify it with party (by @marcelveldt in [#2046](https://github.com/music-assistant/frontend/pull/2046))
+- Fix guest listen-in audio on iOS and refine the listen-in UI (by @marcelveldt in [#2045](https://github.com/music-assistant/frontend/pull/2045))
+- Show the Music Quiz item in the menu and surface newly added menu items (by @marcelveldt in [#2043](https://github.com/music-assistant/frontend/pull/2043))
+
+### Other Changes
+
+- Remove HTTP diagnostics download endpoint (by @marcelveldt in #4709)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Reduce server startup time and memory usage (by @marcelveldt in #4702)
+- Speed up artwork loading and refresh artwork when local files change (by @marcelveldt in #4703)
+- Make audio overlays audible immediately (by @marcelveldt in #4715)
+- Lock in the provider config store/snapshot consistency guarantee (by @marcelveldt in #4716)
+- ⬆️ Update music-assistant-frontend to 2.17.216 (by @music-assistant-machine in #4724)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GiuliaPassoni, @MarvinSchenkel, @jlpouffier, @marcelveldt
+
+
 # [2.10.0.dev2026071006] - 10.07.2026
 
 ## 📦 Nightly Release
@@ -117,63 +188,5 @@ _Changes since [2.10.0.dev2026070805](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @SyedaAnshrahGillani, @codspeed-hq[bot], @marcelveldt
-
-
-# [2.10.0.dev2026070805] - 08.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070706](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070706)_
-
-### 🚀 Features and enhancements
-
-- Expose bpm, musical key and RMS waveform to the frontend (by @MarvinSchenkel in #4626)
-- Speed up library matching with an indexed external ID lookup table (by @marcelveldt in #4628)
-- Speed up library listings by streaming from the sort index (by @marcelveldt in #4629)
-- Remove periodic garbage collection (by @marcelveldt in #4630)
-- Avoid threadsafe dispatch overhead when signalling events (by @marcelveldt in #4631)
-- Speed up library sync when nothing has changed (by @marcelveldt in #4632)
-- Raise transient provider errors instead of caching them as negatives (by @marcelveldt in #4636)
-- Fastmcp_server: Searchable log tail, whole-record tracebacks, log stats (by @trudenboy in #4640)
-- Reduce image proxy-id overhead when serializing media items (by @marcelveldt in #4642)
-- Make the external id lookup table the single source of truth (by @marcelveldt in #4645)
-
-### 🐛 Bugfixes
-
-- Sync groups: keep slaved followers in group member dropdown after removal (by @MarvinSchenkel in #4036)
-- Fix playlog unique constraint errors on long-lived databases (by @MarvinSchenkel in #4567)
-- Fix Home Assistant integration losing authentication after restart or over time (by @MarvinSchenkel in #4620)
-- Snapcast fixes (by @OzGav in #4633)
-- Preserve universal player settings during startup restore (by @SyntaxSawdust in #4634)
-- Prevent universal player settings loss on startup restore (by @marcelveldt in #4643)
-- Prevent syncgroup self-dissolve when recovering a stuck member (by @MarvinSchenkel in #4644)
-- Fix broken album artists filtering (by @OzGav in #4648)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2032](https://github.com/music-assistant/frontend/pull/2032))
-- Fix genre merge cross taxonomy (by @jozefKruszynski in [#2031](https://github.com/music-assistant/frontend/pull/2031))
-- Show a waveform progress bar in the fullscreen player (by @MarvinSchenkel in [#2035](https://github.com/music-assistant/frontend/pull/2035))
-- Enhance button in fullplayer screen + add animated icons (by @stvncode in [#2036](https://github.com/music-assistant/frontend/pull/2036))
-- Exit selection mode when the browse path changes (by @OzGav in [#2030](https://github.com/music-assistant/frontend/pull/2030))
-- Fix long-press context menus on touch devices (by @MarvinSchenkel in [#2004](https://github.com/music-assistant/frontend/pull/2004))
-- Fix audio pipeline line spacing (by @OzGav in [#2028](https://github.com/music-assistant/frontend/pull/2028))
-- Extract search input component (by @GiuliaPassoni in [#1959](https://github.com/music-assistant/frontend/pull/1959))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4639)
-
-### 🧰 Maintenance and dependency bumps
-
-- Use dedicated encryption key (by @MarvinSchenkel in #4557)
-- ⬆️ Update music-assistant-models to 1.1.154 (by @music-assistant-machine in #4637)
-- ⬆️ Update music-assistant-frontend to 2.17.212 (by @music-assistant-machine in #4655)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@GiuliaPassoni, @MarvinSchenkel, @OzGav, @SyntaxSawdust, @jozefKruszynski, @marcelveldt, @stvncode, @trudenboy
 
 
