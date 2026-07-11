@@ -1,3 +1,36 @@
+# [2.10.0.dev2026071105] - 11.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071023](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071023)_
+
+### 🚀 Features and enhancements
+
+- Add timeline music quiz game (by @marcelveldt in #4722)
+
+### 🐛 Bugfixes
+
+- Prevent lost Podcast Index library changes (by @marcelveldt in #4726)
+- Fix Music Quiz progress for late joiners (by @marcelveldt in #4728)
+- Restrict Music Quiz guest queue access (by @marcelveldt in #4729)
+
+### 🎨 Frontend Changes
+
+- Keep Music Quiz players connected (by @marcelveldt in [#2066](https://github.com/music-assistant/frontend/pull/2066))
+- Keep Music Quiz guest audio receive-only (by @marcelveldt in [#2069](https://github.com/music-assistant/frontend/pull/2069))
+- Fix Music Quiz guest and host experience (by @marcelveldt in [#2065](https://github.com/music-assistant/frontend/pull/2065))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.217 (by @music-assistant-machine in #4730)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.10.0.dev2026071023] - 11.07.2026
 
 ## 📦 Nightly Release
@@ -126,67 +159,5 @@ _Changes since [2.10.0.dev2026070906](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @TimoPtr, @jlpouffier, @marcelveldt
-
-
-# [2.10.0.dev2026070906] - 09.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026070805](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026070805)_
-
-### 🚀 New Providers
-
-- Add Profiler provider for on-demand performance diagnostics (by @marcelveldt in #4653)
-
-### 🚀 Features and enhancements
-
-- Add diagnostics feature (by @marcelveldt in #4652)
-- Add fixed genres to Phish.in tracks (by @OzGav in #4659)
-- Add join code expiry lookup to auth controller (by @marcelveldt in #4663)
-- Add virtual player support to the Sendspin provider (by @marcelveldt in #4666)
-- Add support for sound effect media items (by @marcelveldt in #4669)
-- Add convenience API for providers to send custom events to clients (by @marcelveldt in #4670)
-
-### 🐛 Bugfixes
-
-- Improve global search reliability and database query parameter logic (by @SyedaAnshrahGillani in #4207)
-- Fix XSS and cross-host request issues in MSX Bridge web player (by @MarvinSchenkel in #4562)
-- Advertise both IP families via mDNS and respect a specific bind IP when publishing (by @OzGav in #4646)
-- Prevent admin token leak to untrusted return_url during first-run setup (by @MarvinSchenkel in #4649)
-- Fix several bugs in the Jellyfin provider (by @OzGav in #4654)
-- Fix Plex artist albums not loading on servers without filter metadata (by @OzGav in #4657)
-- Don't auto-sync all Phish.in playlists to the library (by @OzGav in #4660)
-- Block long-lived token creation for guest accounts (by @MarvinSchenkel in #4661)
-- Harden MSX bridge against host-header XSS and cross-origin fetches (by @MarvinSchenkel in #4662)
-
-### 🎨 Frontend Changes
-
-- Show track BPM and musical key on the track details page (by @MarvinSchenkel in [#2034](https://github.com/music-assistant/frontend/pull/2034))
-
-### Other Changes
-
-- Add CodSpeed performance benchmarks and CI integration (by @codspeed-hq[bot] in #4656)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- Add performance benchmark suite (by @marcelveldt in #4651)
-- Update aiodns to 4.0.4 and remove pycares pin (by @MarvinSchenkel in #4658)
-- Improve Sendspin proxy error handling and quieter websocket command logging (by @marcelveldt in #4664)
-- ⬆️ Update music-assistant-models to 1.1.155 (by @music-assistant-machine in #4665)
-- ⬆️ Update music-assistant-models to 1.1.156 (by @music-assistant-machine in #4668)
-- Add shared playback session and guest access helpers for plugins (by @marcelveldt in #4672)
-- ⬆️ Update music-assistant-models to 1.1.157 (by @music-assistant-machine in #4673)
-- ⬆️ Update music-assistant-frontend to 2.17.213 (by @music-assistant-machine in #4677)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @SyedaAnshrahGillani, @codspeed-hq[bot], @marcelveldt
 
 
