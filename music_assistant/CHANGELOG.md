@@ -1,6 +1,6 @@
 # [2.9.8] - 12.07.2026
 
-* No changes
+* Bumped the base image to fix the Spotify Connect plugin
 
 
 # [2.9.7] - 12.07.2026
