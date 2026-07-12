@@ -1,3 +1,25 @@
+# [2.9.7] - 12.07.2026
+
+## 📦 Stable Release
+
+_Changes since [2.9.6](https://github.com/music-assistant/server/releases/tag/2.9.6)_
+
+### Other Changes
+
+- Remove HTTP diagnostics download endpoint (by @marcelveldt in #4710)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.186.post2 (by @music-assistant-machine in #4739)
+- ⬆️ Update music-assistant-frontend to 2.17.186.post3 (by @music-assistant-machine in #4752)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.9.6] - 10.07.2026
 
 ## 📦 Stable Release
@@ -64,37 +86,5 @@ _Changes since [2.9.4](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @Hopperpop, @MarvinSchenkel, @OzGav, @chrisuthe, @dmoo500, @fmunkes, @jyundt, @marcelveldt, @steamEngineer, @teancom
-
-
-# [2.9.4] - 25.06.2026
-
-## 📦 Stable Release
-
-_Changes since [2.9.3](https://github.com/music-assistant/server/releases/tag/2.9.3)_
-
-### 🐛 Bugfixes
-
-- Validate return_url before appending JWT token (by @s0yd4RK in #4272)
-- Fix Spotify playback failing on broken Spotify CDN URLs (by @marcelveldt in #4398)
-- Fix unjoining a syncgroup member that joined the leader externally (by @marcelveldt in #4405)
-- Recover flow stream restart on Cast groups (players that don't report idle) (by @OzGav in #4406)
-- Keep universal player when its protocol links can't migrate to the native player (by @maximmaxim345 in #4413)
-- Fix Home Assistant control of universal players running an external source (by @maximmaxim345 in #4415)
-- Keep radio/live streams restartable after a mid-stream disconnect (by @marcelveldt in #4421)
-- Reconnect ICY radio streams on disconnect (by @marcelveldt in #4422)
-- Fix WiiM UPnP event-callback binding on multi-homed / containerized hosts (by @rwlove in #4434)
-- fix(snapcast): fix ~65s stop delay caused by spurious inactivity timer (by @vintvinst in #4436)
-- Make live audio analysis a passive observer so it can never stall playback (by @chrisuthe in #4442)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump ytmusicapi from 1.11.5 to 1.12.1 (by @dependabot[bot] in #4235)
-- Bump zeroconf from 0.149.12 to 0.149.16 (by @dependabot[bot] in #4408)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe, @marcelveldt, @maximmaxim345, @rwlove, @s0yd4RK, @vintvinst
 
 
