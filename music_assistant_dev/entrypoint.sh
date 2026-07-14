@@ -59,6 +59,12 @@ build_git_url() {
 # Activate virtual environment
 . $VIRTUAL_ENV/bin/activate
 
+# Allow PyPI packages when the requirements file also uses the PyTorch extra index.
+# Without this, uv's default first-index strategy lets the PyTorch index "own" any
+# package it hosts (e.g. pillow), failing resolution when the pinned version only
+# exists on PyPI. Matches the server repo's Dockerfile/CI/setup.sh behavior.
+export UV_INDEX_STRATEGY=unsafe-best-match
+
 echo "-----------------------------------------------------------"
 echo "Step 1: Installing Music Assistant Server"
 echo "-----------------------------------------------------------"
