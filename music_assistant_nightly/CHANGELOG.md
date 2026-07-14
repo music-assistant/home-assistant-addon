@@ -1,3 +1,59 @@
+# [2.10.0.dev2026071405] - 14.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071222](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071222)_
+
+### 🚀 New Providers
+
+- Add Google Drive filesystem provider (by @OzGav in #4581)
+
+### 🚀 Features and enhancements
+
+- Yandex Music: update to v3.8.2 — shared auth layer, localized device-code login (by @trudenboy in #4690)
+- Return library tracks when browsing filesystem (by @teancom in #4792)
+
+### 🐛 Bugfixes
+
+- Show artwork for SiriusXM radio streams (by @MarvinSchenkel in #4684)
+- Unify and simplify deezer flow track fetching (by @jdaberkow in #4766)
+- Speed up Apple Music radio startup (by @marcelveldt in #4780)
+- Fix YouTube Music podcast shows being parsed as albums (by @MarvinSchenkel in #4781)
+- Fix Plex Connect selecting the wrong track in long queues (by @MarvinSchenkel in #4783)
+- Prepare Music Quiz before starting (by @marcelveldt in #4788)
+
+### 🎨 Frontend Changes
+
+- Improve Music Quiz playback flow (by @marcelveldt in [#2122](https://github.com/music-assistant/frontend/pull/2122))
+- Remember Music Quiz playback choice (by @marcelveldt in [#2110](https://github.com/music-assistant/frontend/pull/2110))
+- Fix Music Quiz setup screen (by @marcelveldt in [#2109](https://github.com/music-assistant/frontend/pull/2109))
+- Prioritize diagnostics downloads (by @MarvinSchenkel in [#2121](https://github.com/music-assistant/frontend/pull/2121))
+- Keep player menu above mobile navigation (by @marcelveldt in [#2108](https://github.com/music-assistant/frontend/pull/2108))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>9 changes</summary>
+
+- Align ya-passport-auth on 1.7.0[ma] across Yandex providers (by @trudenboy in #4712)
+- Add note about using server ID to validate servers (by @seadowg in #4742)
+- Bump torch from 2.12.1 to 2.13.0+cpu (by @dependabot[bot] in #4769)
+- Bump plexapi from 4.18.1 to 4.18.2 (by @dependabot[bot] in #4770)
+- Bump fastmcp from 3.3.1 to 3.4.4 (by @dependabot[bot] in #4771)
+- Bump deezer-python-gql from 0.17.0 to 0.17.1 (by @dependabot[bot] in #4772)
+- ⬆️ Update music-assistant-frontend to 2.17.222 (by @music-assistant-machine in #4789)
+- Bump pillow to 12.3.0 (by @MarvinSchenkel in #4790)
+- ⬆️ Update music-assistant-models to 1.1.161 (by @music-assistant-machine in #4794)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @jdaberkow, @marcelveldt, @seadowg, @teancom, @trudenboy
+
+
 # [2.10.0.dev2026071222] - 12.07.2026
 
 ## 📦 Nightly Release
@@ -114,38 +170,5 @@ _Changes since [2.10.0.dev2026071105](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @dmoo500, @joperafe, @marcelveldt
-
-
-# [2.10.0.dev2026071105] - 11.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071023](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071023)_
-
-### 🚀 Features and enhancements
-
-- Add timeline music quiz game (by @marcelveldt in #4722)
-
-### 🐛 Bugfixes
-
-- Prevent lost Podcast Index library changes (by @marcelveldt in #4726)
-- Fix Music Quiz progress for late joiners (by @marcelveldt in #4728)
-- Restrict Music Quiz guest queue access (by @marcelveldt in #4729)
-
-### 🎨 Frontend Changes
-
-- Keep Music Quiz players connected (by @marcelveldt in [#2066](https://github.com/music-assistant/frontend/pull/2066))
-- Keep Music Quiz guest audio receive-only (by @marcelveldt in [#2069](https://github.com/music-assistant/frontend/pull/2069))
-- Fix Music Quiz guest and host experience (by @marcelveldt in [#2065](https://github.com/music-assistant/frontend/pull/2065))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.217 (by @music-assistant-machine in #4730)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
 
 
