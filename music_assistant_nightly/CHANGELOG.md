@@ -1,3 +1,48 @@
+# [2.10.0.dev2026071505] - 15.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071405](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071405)_
+
+### 🚀 New Providers
+
+- Add OneDrive filesystem provider (by @OzGav in #4791)
+
+### 🚀 Features and enhancements
+
+- Preload lyrics in Music Quiz (by @marcelveldt in #4805)
+- Allow any authenticated user on party and music quiz guest routes (by @teancom in #4808)
+
+### 🐛 Bugfixes
+
+- Safely serialize OAuth callback values (by @MarvinSchenkel in #4796)
+- Decrypt stored Google Drive client secret when re-authorizing (by @OzGav in #4797)
+- Fix legacy Smart Fades centroid corruption (by @MarvinSchenkel in #4798)
+- Fix radio station image passed as raw provider path in stream metadata (by @OzGav in #4800)
+- Fix ORF Radiothek provider staying unloaded when startup coincides with network unavailable (by @OzGav in #4801)
+- Fix Music Quiz speaker selection for groups (by @marcelveldt in #4809)
+
+### 🎨 Frontend Changes
+
+- Share party and quiz invitations (by @marcelveldt in [#2125](https://github.com/music-assistant/frontend/pull/2125))
+- Show quiz results without scrolling (by @marcelveldt in [#2123](https://github.com/music-assistant/frontend/pull/2123))
+- Avoid opening the keyboard in the player menu (by @marcelveldt in [#2124](https://github.com/music-assistant/frontend/pull/2124))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #4795)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.223 (by @music-assistant-machine in #4811)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @marcelveldt, @teancom
+
+
 # [2.10.0.dev2026071405] - 14.07.2026
 
 ## 📦 Nightly Release
@@ -108,67 +153,5 @@ _Changes since [2.10.0.dev2026071206](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @fmunkes, @marcelveldt, @robsonke, @teancom
-
-
-# [2.10.0.dev2026071206] - 12.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071105](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071105)_
-
-### 🚀 Features and enhancements
-
-- Support more Music Quiz sources (by @marcelveldt in #4744)
-- Add Music Quiz replay countdown (by @marcelveldt in #4751)
-- Add language support to Music Trivia (by @marcelveldt in #4753)
-- Improve Music Quiz AI distractors (by @marcelveldt in #4759)
-
-### 🐛 Bugfixes
-
-- Hide Music Quiz answers until reveal (by @marcelveldt in #4733)
-- Remove Music Quiz core privacy changes (by @marcelveldt in #4735)
-- Let guests use the active experience (by @marcelveldt in #4737)
-- Prevent interrupted streams from corrupting audio analysis (by @marcelveldt in #4738)
-- Fix Hitster edge placement (by @marcelveldt in #4741)
-- Fix Home Assistant AI and TTS defaults (by @marcelveldt in #4747)
-- Fix Hitster answer and reveal flow (by @marcelveldt in #4748)
-- Fix Home Assistant startup deadlock (by @marcelveldt in #4749)
-- Speed up Music Timeline startup (by @marcelveldt in #4754)
-- Reduce Spotify playlist loading requests (by @marcelveldt in #4755)
-
-### 🎨 Frontend Changes
-
-- Lokalise: Translations update (by @marcelveldt in [#2093](https://github.com/music-assistant/frontend/pull/2093))
-- Move the progressive search logic into a reusable composable (by @marcelveldt in [#2073](https://github.com/music-assistant/frontend/pull/2073))
-- Make release workflows aware of stable patch builds (by @marcelveldt in [#2058](https://github.com/music-assistant/frontend/pull/2058))
-- Fix Music Quiz menu item icon and label (by @marcelveldt in [#2044](https://github.com/music-assistant/frontend/pull/2044))
-- Add issue chooser redirecting to the support repo (by @marcelveldt in [#2040](https://github.com/music-assistant/frontend/pull/2040))
-- Add diagnostics report download to settings (by @marcelveldt in [#2038](https://github.com/music-assistant/frontend/pull/2038))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2032](https://github.com/music-assistant/frontend/pull/2032))
-- Exclude parent directory ("..") item from selection in browse mode (by @MarvinSchenkel in [#2029](https://github.com/music-assistant/frontend/pull/2029))
-- Extract the player protocol section into a dedicated component (by @marcelveldt in [#2015](https://github.com/music-assistant/frontend/pull/2015))
-- Extract the config entry row into a dedicated component (by @marcelveldt in [#2013](https://github.com/music-assistant/frontend/pull/2013))
-- Restore progress bar fill thickness and time-label spacing (by @MarvinSchenkel in [#1997](https://github.com/music-assistant/frontend/pull/1997))
-- Restore timeline progress bar spacing in the player bar (by @MarvinSchenkel in [#1994](https://github.com/music-assistant/frontend/pull/1994))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1989](https://github.com/music-assistant/frontend/pull/1989))
-- Include icon aliases in IconPicker search results (by @dmoo500 in [#1972](https://github.com/music-assistant/frontend/pull/1972))
-- Lokalise: Translations update (by @marcelveldt in [#1971](https://github.com/music-assistant/frontend/pull/1971))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#1955](https://github.com/music-assistant/frontend/pull/1955))
-- Always expand players when clicking the player button from the 'now playing' screen ([#60](https://github.com/music-assistant/frontend/pull/60)) (by @joperafe in [#1944](https://github.com/music-assistant/frontend/pull/1944))
-- Render player option and sound mode labels localized by the server (by @marcelveldt in [#1932](https://github.com/music-assistant/frontend/pull/1932))
-- Add scroll to description dialog for long descriptions (by @dmoo500 in [#1908](https://github.com/music-assistant/frontend/pull/1908))
-- Improve Music Timeline presentation layout (by @marcelveldt in [#2096](https://github.com/music-assistant/frontend/pull/2096))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.160 (by @music-assistant-machine in #4731)
-- Rename quiz game to Music Timeline (by @marcelveldt in #4750)
-- ⬆️ Update music-assistant-frontend to 2.17.218 (by @music-assistant-machine in #4760)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @dmoo500, @joperafe, @marcelveldt
 
 
