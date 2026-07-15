@@ -1,3 +1,41 @@
+# [2.10.0.dev2026071509] - 15.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071505](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071505)_
+
+### 🚀 Features and enhancements
+
+- Add vocal activity detection to Smart Fades (by @MarvinSchenkel in #4786)
+- Show AI availability in Music Quiz (by @marcelveldt in #4810)
+- Vary songs when replaying Music Quiz (by @marcelveldt in #4817)
+
+### 🐛 Bugfixes
+
+- Offer fake mute control for players with protocol-provided volume (by @OzGav in #4802)
+- Fix Sonos S1 enqueue failing with UPnP error 701 (by @OzGav in #4813)
+- Allow adding players to a dynamic sync group when all members are offline (by @OzGav in #4814)
+
+### 🎨 Frontend Changes
+
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2138](https://github.com/music-assistant/frontend/pull/2138))
+- Clarify Music Timeline ordering (by @marcelveldt in [#2145](https://github.com/music-assistant/frontend/pull/2145))
+- Use the global i18n scope for the missing-players hint (by @teancom in [#2143](https://github.com/music-assistant/frontend/pull/2143))
+- Let signed-in users join guest experiences (by @marcelveldt in [#2126](https://github.com/music-assistant/frontend/pull/2126))
+- Fix guest api errors (by @teancom in [#2140](https://github.com/music-assistant/frontend/pull/2140))
+- Show this device in group controls (by @marcelveldt in [#2142](https://github.com/music-assistant/frontend/pull/2142))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.224 (by @music-assistant-machine in #4818)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @marcelveldt, @teancom
+
+
 # [2.10.0.dev2026071505] - 15.07.2026
 
 ## 📦 Nightly Release
@@ -97,61 +135,5 @@ _Changes since [2.10.0.dev2026071222](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @jdaberkow, @marcelveldt, @seadowg, @teancom, @trudenboy
-
-
-# [2.10.0.dev2026071222] - 12.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071206](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071206)_
-
-### 🚀 Features and enhancements
-
-- Add reveal flow to Music Trivia (by @marcelveldt in #4758)
-- Add similar music to Music Quiz (by @marcelveldt in #4765)
-- Choose Music Quiz playback for each game (by @marcelveldt in #4768)
-- Improve smart shuffle variety (by @marcelveldt in #4773)
-
-### 🐛 Bugfixes
-
-- Fix silent audio overlays (by @marcelveldt in #4757)
-- Fix cancelled shared playback sessions (by @marcelveldt in #4762)
-- Fix album artists for Apple Music compilations (by @MarvinSchenkel in #4764)
-- Fix Guess the Song answer choices (by @marcelveldt in #4767)
-- Improve Trivia question reliability (by @marcelveldt in #4774)
-- Keep Music Quiz listen-in active between songs (by @marcelveldt in #4777)
-- Improved SoundCloud artworks for playlists (by @robsonke in #4778)
-
-### 🎨 Frontend Changes
-
-- Fix diagnostics settings breadcrumb (by @MarvinSchenkel in [#2097](https://github.com/music-assistant/frontend/pull/2097))
-- Polish player selection (by @marcelveldt in [#2106](https://github.com/music-assistant/frontend/pull/2106))
-- Simplify player selection (by @marcelveldt in [#2095](https://github.com/music-assistant/frontend/pull/2095))
-- Add similar music to quizzes (by @marcelveldt in [#2100](https://github.com/music-assistant/frontend/pull/2100))
-- Improve Music Trivia reveal flow (by @marcelveldt in [#2099](https://github.com/music-assistant/frontend/pull/2099))
-- Improve Quiz QR scanning (by @marcelveldt in [#2105](https://github.com/music-assistant/frontend/pull/2105))
-- Improve mobile Quiz and Listen-in layout (by @marcelveldt in [#2104](https://github.com/music-assistant/frontend/pull/2104))
-- Fix home widget cleanup (by @teancom in [#2076](https://github.com/music-assistant/frontend/pull/2076))
-- Fix sleep timer menu alignment (by @MarvinSchenkel in [#2098](https://github.com/music-assistant/frontend/pull/2098))
-- Improve Music Quiz accessibility (by @marcelveldt in [#2102](https://github.com/music-assistant/frontend/pull/2102))
-- Prevent duplicate Quiz actions (by @marcelveldt in [#2101](https://github.com/music-assistant/frontend/pull/2101))
-- Choose where Music Quiz plays (by @marcelveldt in [#2107](https://github.com/music-assistant/frontend/pull/2107))
-- Fix waveform progress transitions and seeking (by @MarvinSchenkel in [#2103](https://github.com/music-assistant/frontend/pull/2103))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #4756)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump aioaudiobookshelf and use its typed marker (by @fmunkes in #4763)
-- ⬆️ Update music-assistant-frontend to 2.17.219 (by @music-assistant-machine in #4775)
-- ⬆️ Update music-assistant-frontend to 2.17.220 (by @music-assistant-machine in #4779)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @fmunkes, @marcelveldt, @robsonke, @teancom
 
 
