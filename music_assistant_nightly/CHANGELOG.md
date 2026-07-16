@@ -1,3 +1,22 @@
+# [2.10.0.dev2026071614] - 16.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071607](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071607)_
+
+### 🐛 Bugfixes
+
+- Bulk-resolve Sonic Similarity candidates to stop event-loop stalls (by @chrisuthe in #4804)
+- Fix smart fades cutting off the outgoing track when vocal analysis data is stale (by @MarvinSchenkel in #4825)
+- Fix album track order for YT Music tracks without disc info (by @MarvinSchenkel in #4826)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe
+
+
 # [2.10.0.dev2026071607] - 16.07.2026
 
 ## 📦 Nightly Release
@@ -43,26 +62,5 @@ _Changes since [2.10.0.dev2026071511](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @fmunkes, @yoyixms
-
-
-# [2.10.0.dev2026071511] - 15.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071509](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071509)_
-
-### 🚀 Features and enhancements
-
-- Smart Fades: vocal and energy aware transition planning (by @MarvinSchenkel in #4816)
-
-### 🐛 Bugfixes
-
-- Fix OOM in Smart Fades centroid repair migration (by @MarvinSchenkel in #4819)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
 
 
