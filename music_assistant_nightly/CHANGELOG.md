@@ -1,3 +1,24 @@
+# [2.10.0.dev2026071705] - 17.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071614](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071614)_
+
+### 🐛 Bugfixes
+
+- Fix album version parsing and album_versions for filesystem_local provider (by @allmazz in #4746)
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.225 (by @music-assistant-machine in #4832)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@allmazz
+
+
 # [2.10.0.dev2026071614] - 16.07.2026
 
 ## 📦 Nightly Release
@@ -37,30 +58,5 @@ _Changes since [2.10.0.dev2026071605](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Kyzcreig, @MarvinSchenkel, @OzGav
-
-
-# [2.10.0.dev2026071605] - 16.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071511](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071511)_
-
-### 🚀 New Providers
-
-- Add teddycloud provider (by @yoyixms in #4776)
-
-### 🐛 Bugfixes
-
-- Fix translations in browse view of Audiobookshelf (by @fmunkes in #4820)
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-models to 1.1.163 (by @music-assistant-machine in #4812)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @yoyixms
 
 
