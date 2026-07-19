@@ -1,3 +1,37 @@
+# [2.10.0.dev2026071905] - 19.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026071717](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071717)_
+
+### 🚀 Features and enhancements
+
+- Add complete audio processing details (by @marcelveldt in #4793)
+- Include track duration and played duration in ListenBrainz submissions (by @tesmerjg in #4843)
+
+### 🐛 Bugfixes
+
+- Fix sync group stopping playback when members are removed mid-regroup (by @MarvinSchenkel in #4815)
+- Ignore WiiM's false PLAYING report while no media is loaded (by @marcelveldt in #4844)
+- Improve webrtc key file creation (by @arturpragacz in #4847)
+
+### 🎨 Frontend Changes
+
+- Show complete audio processing details (by @marcelveldt in [#2127](https://github.com/music-assistant/frontend/pull/2127))
+- Add MiniEqualizer: waveform-driven now-playing indicator (by @dmoo500 in [#2147](https://github.com/music-assistant/frontend/pull/2147))
+
+### 🧰 Maintenance and dependency bumps
+
+- Remove redundant client disconnect loop from Sendspin provider unload (by @arturpragacz in #4848)
+- ⬆️ Update music-assistant-frontend to 2.17.227 (by @music-assistant-machine in #4851)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @arturpragacz, @dmoo500, @marcelveldt, @tesmerjg
+
+
 # [2.10.0.dev2026071717] - 17.07.2026
 
 ## 📦 Nightly Release
@@ -56,24 +90,5 @@ _Changes since [2.10.0.dev2026071614](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @allmazz
-
-
-# [2.10.0.dev2026071614] - 16.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071607](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071607)_
-
-### 🐛 Bugfixes
-
-- Bulk-resolve Sonic Similarity candidates to stop event-loop stalls (by @chrisuthe in #4804)
-- Fix smart fades cutting off the outgoing track when vocal analysis data is stale (by @MarvinSchenkel in #4825)
-- Fix album track order for YT Music tracks without disc info (by @MarvinSchenkel in #4826)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @chrisuthe
 
 
