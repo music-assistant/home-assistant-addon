@@ -1,3 +1,44 @@
+# [2.10.0.dev2026072105] - 21.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072006](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072006)_
+
+### 🚀 New Providers
+
+- Add Yandex Station player provider v1.5.1 — local Glagol control, Alice playback intercept (by @trudenboy in #3605)
+
+### 🚀 Features and enhancements
+
+- Yandex Smart Home: update v1.4.x → v2.2.4 — playlists as sources, skill auto-create, shared auth layer (by @trudenboy in #3834)
+- Yandex Music Connect (Ynison): update to v3.4.2 — shared auth layer, lossless-safe fallback, stable stage (by @trudenboy in #4827)
+- FastMCP server: queue curation tools, agent ergonomics, opt-in simplified tool discovery (v0.17.0) (by @trudenboy in #4833)
+
+### 🐛 Bugfixes
+
+- Sort filesystem browse results in natural order (by @OzGav in #4869)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Bump mutagen from 1.47.0 to 1.48.1 (by @dependabot[bot] in #4860)
+- Bump pyacoustid from 1.3.0 to 1.3.1 (by @dependabot[bot] in #4862)
+- Update music-assistant-models to 1.1.166 (by @MarvinSchenkel in #4868)
+- Add Traditional Chinese to locales (by @OzGav in #4870)
+- Deduplicate yandex_music device-code page strings into common (by @OzGav in #4873)
+- Bump actions/setup-python from 6.3.0 to 7.0.0 (by @dependabot[bot] in #4877)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @trudenboy
+
+
 # [2.10.0.dev2026072006] - 20.07.2026
 
 ## 📦 Nightly Release
@@ -67,44 +108,5 @@ _Changes since [2.10.0.dev2026071717](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @arturpragacz, @dmoo500, @marcelveldt, @tesmerjg
-
-
-# [2.10.0.dev2026071717] - 17.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071705](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071705)_
-
-### 🚀 Features and enhancements
-
-- Seed Last.fm personalized rows from recent plays (by @OzGav in #4457)
-- Normalise synced (LRC) lyrics before storing or serving them (by @OzGav in #4823)
-- Ask Music Timeline bonuses after every placement (by @marcelveldt in #4830)
-
-### 🐛 Bugfixes
-
-- Keep metadata scan tasks running when a library row has corrupt metadata JSON (by @OzGav in #4803)
-- Improve remote connection stability (by @marcelveldt in #4831)
-
-### 🎨 Frontend Changes
-
-- Also send updates when artist or title changes (by @joostlek in [#2152](https://github.com/music-assistant/frontend/pull/2152))
-- Improve Music Quiz host controls (by @marcelveldt in [#2151](https://github.com/music-assistant/frontend/pull/2151))
-- Improve Music Timeline answers (by @marcelveldt in [#2149](https://github.com/music-assistant/frontend/pull/2149))
-- Unify list row layout and refine play affordances (by @MarvinSchenkel in [#1862](https://github.com/music-assistant/frontend/pull/1862))
-- Use return values instead of deprecated next() in navigation guard (by @teancom in [#2144](https://github.com/music-assistant/frontend/pull/2144))
-- Fix media controls while playing along (by @marcelveldt in [#2150](https://github.com/music-assistant/frontend/pull/2150))
-- Use official Sendspin audio unlock (by @marcelveldt in [#2153](https://github.com/music-assistant/frontend/pull/2153))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.226 (by @music-assistant-machine in #4837)
-- Organize metadata controller methods (by @marcelveldt in #4838)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @joostlek, @marcelveldt, @teancom
 
 
