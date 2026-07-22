@@ -1,3 +1,43 @@
+# [2.10.0.dev2026072215] - 22.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072207](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072207)_
+
+### 🚀 Features and enhancements
+
+- MSX Bridge: Party Mode QR on TVs, direct streamserver delivery, playback and CSRF hardening (by @trudenboy in #4734)
+- Serve provider icons on demand instead of inlining them in the manifest (by @MarvinSchenkel in #4907)
+
+### 🐛 Bugfixes
+
+- Restore Siri Remote playback controls (by @marcelveldt in #4903)
+- Fix container build: pin numkong to 7.7.0 (7.7.1 ships no wheels) (by @MarvinSchenkel in #4904)
+- Fix next-track enqueue after delayed player start (by @MarvinSchenkel in #4906)
+
+### 🎨 Frontend Changes
+
+- Load provider icons on demand via the providers/icon command (by @MarvinSchenkel in [#2178](https://github.com/music-assistant/frontend/pull/2178))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Reuse cached AirPlay artwork (by @marcelveldt in #4880)
+- Remove the fixed output limiter (by @OzGav in #4901)
+- Update airplay-cli to v0.1.1 (by @music-assistant-machine in #4905)
+- ⬆️ Update music-assistant-frontend to 2.17.230 (by @music-assistant-machine in #4910)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @marcelveldt, @trudenboy
+
+
 # [2.10.0.dev2026072105] - 21.07.2026
 
 ## 📦 Nightly Release
@@ -74,39 +114,5 @@ _Changes since [2.10.0.dev2026071905](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @ajacobson, @arturpragacz, @jozefKruszynski, @khers, @marcelveldt, @zednotdead
-
-
-# [2.10.0.dev2026071905] - 19.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026071717](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026071717)_
-
-### 🚀 Features and enhancements
-
-- Add complete audio processing details (by @marcelveldt in #4793)
-- Include track duration and played duration in ListenBrainz submissions (by @tesmerjg in #4843)
-
-### 🐛 Bugfixes
-
-- Fix sync group stopping playback when members are removed mid-regroup (by @MarvinSchenkel in #4815)
-- Ignore WiiM's false PLAYING report while no media is loaded (by @marcelveldt in #4844)
-- Improve webrtc key file creation (by @arturpragacz in #4847)
-
-### 🎨 Frontend Changes
-
-- Show complete audio processing details (by @marcelveldt in [#2127](https://github.com/music-assistant/frontend/pull/2127))
-- Add MiniEqualizer: waveform-driven now-playing indicator (by @dmoo500 in [#2147](https://github.com/music-assistant/frontend/pull/2147))
-
-### 🧰 Maintenance and dependency bumps
-
-- Remove redundant client disconnect loop from Sendspin provider unload (by @arturpragacz in #4848)
-- ⬆️ Update music-assistant-frontend to 2.17.227 (by @music-assistant-machine in #4851)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @arturpragacz, @dmoo500, @marcelveldt, @tesmerjg
 
 
