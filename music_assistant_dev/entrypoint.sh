@@ -261,6 +261,12 @@ echo "Starting Music Assistant"
 echo "-----------------------------------------------------------"
 echo ""
 
+# Allow maintainer-supplied app variables to persist across source installs and restarts.
+if [ -f /data/app_vars.json ]; then
+    export MASS_APP_VARS_FILE=/data/app_vars.json
+    echo "Using app variables from /data/app_vars.json"
+fi
+
 # export jemalloc path
 for path in /usr/lib/*/libjemalloc.so.2; do
     [ -f "$path" ] && export LD_PRELOAD="$path" && break
