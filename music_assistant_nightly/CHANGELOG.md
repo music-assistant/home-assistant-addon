@@ -1,3 +1,50 @@
+# [2.10.0.dev2026072601] - 26.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072519](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072519)_
+
+### ⚠ Breaking Changes
+
+- Retire the AUTH_SESSION auth-popup mechanism (by @marcelveldt in #5030)
+
+### 🚀 Features and enhancements
+
+- Map Bose SoundTouch preset buttons on the provider instead of per player (by @marcelveldt in #5032)
+- Surface the player reconfigure flow (by @marcelveldt in #5034)
+
+### 🐛 Bugfixes
+
+- Strip trailing NUL from MusicBrainz UFID recording MBID (by @geofffranks in #5020)
+- Harden the setup flow engine (by @marcelveldt in #5022)
+- Complete setup flow translations for late-migrated providers (by @marcelveldt in #5024)
+- Fix AirPlay players being marked off while streaming (by @marcelveldt in #5029)
+- Keep AirPlay protocol selection automatic (by @marcelveldt in #5031)
+
+### 🎨 Frontend Changes
+
+- Config action buttons use the dedicated invoke_action commands (by @marcelveldt in [#2204](https://github.com/music-assistant/frontend/pull/2204))
+- Add a Reconfigure entry to the player context menu (by @marcelveldt in [#2206](https://github.com/music-assistant/frontend/pull/2206))
+- Polish setup flow dialog (field overlays + external step) (by @marcelveldt in [#2203](https://github.com/music-assistant/frontend/pull/2203))
+- Harden the setup flow dialog against reconnect and stale-response races (by @marcelveldt in [#2205](https://github.com/music-assistant/frontend/pull/2205))
+
+### Other Changes
+
+- Simplify config options contract after setup flows (by @marcelveldt in #5017)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump music-assistant-models to 1.1.171 (by @marcelveldt in #5025)
+- ⬆️ Update music-assistant-models to 1.1.171 (by @musicassistant-bot[bot] in #5026)
+- ⬆️ Update music-assistant-frontend to 2.17.242 (by @musicassistant-bot[bot] in #5027)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@geofffranks, @marcelveldt
+
+
 # [2.10.0.dev2026072519] - 25.07.2026
 
 ## 📦 Nightly Release
@@ -69,24 +116,3 @@ _Changes since [2.10.0.dev2026072509](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt
-
-
-# [2.10.0.dev2026072509] - 25.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072506](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072506)_
-
-### 🎨 Frontend Changes
-
-- Fix TV dashboard rendering (by @MarvinSchenkel in [#2194](https://github.com/music-assistant/frontend/pull/2194))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.237 (by @MarvinSchenkel in #4990)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel
