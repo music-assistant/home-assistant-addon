@@ -1,3 +1,27 @@
+# [2.10.0.dev2026072604] - 26.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072601](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072601)_
+
+### 🎨 Frontend Changes
+
+- Core config action buttons use the invoke_action command (by @marcelveldt in [#2209](https://github.com/music-assistant/frontend/pull/2209))
+- Neutral wording when a setup session ended during a disconnect (by @marcelveldt in [#2208](https://github.com/music-assistant/frontend/pull/2208))
+- Fix setup flow dialog stuck on spinner after launch (by @marcelveldt in [#2210](https://github.com/music-assistant/frontend/pull/2210))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.243 (by @musicassistant-bot[bot] in #5037)
+- ⬆️ Update music-assistant-frontend to 2.17.244 (by @musicassistant-bot[bot] in #5038)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.10.0.dev2026072601] - 26.07.2026
 
 ## 📦 Nightly Release
@@ -91,28 +115,3 @@ _Changes since [2.10.0.dev2026072510](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @Matthew-Kilpatrick, @fmunkes, @marcelveldt
-
-
-# [2.10.0.dev2026072510] - 25.07.2026
-
-## ⚠️ Important Notes
-
-Immutable release canary
-
----
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072509](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072509)_
-
-### 🧰 Maintenance and dependency bumps
-
-- Make server releases immutable-safe (by @marcelveldt in #4988)
-- Fix release startup permissions (by @marcelveldt in #4991)
-- Replace legacy GitHub credentials (by @marcelveldt in #4992)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
