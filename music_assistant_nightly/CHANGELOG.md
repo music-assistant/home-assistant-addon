@@ -1,3 +1,67 @@
+# [2.10.0.dev2026072700] - 27.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072613](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072613)_
+
+### 🚀 Features and enhancements
+
+- Make Open Subsonic provider use GET methods (by @khers in #4969)
+- Start the next Music Quiz song without a delay (by @MarvinSchenkel in #5015)
+- Name the token in the KION and Zvuk sign-in error (by @marcelveldt in #5058)
+- Expose whether a provider has a setup/reconfigure flow (by @marcelveldt in #5061)
+- Add support for synchronized lyrics ID3 tags (by @medusalix in #5063)
+- Reduce repeated discovery logging (by @marcelveldt in #5064)
+- Show why a device output can't be selected (by @marcelveldt in #5071)
+
+### 🐛 Bugfixes
+
+- Ignore removed library artists (by @marcelveldt in #5014)
+- Preserve HEOS now-playing metadata during MA-controlled playback (by @geofffranks in #5021)
+- Remove duplicate setup URL help (by @marcelveldt in #5046)
+- Fix duplicate setup instructions (by @marcelveldt in #5049)
+- Fix outdated Home Assistant token help text (by @marcelveldt in #5050)
+- Fix HomePods muting themselves and ignoring volume changes (by @marcelveldt in #5051)
+- Fix AirPlay speakers drifting out of sync in a group (by @marcelveldt in #5052)
+- Fix providers that could no longer be added (by @marcelveldt in #5053)
+- Fix playback on devices whose AirPlay output still needs pairing (by @marcelveldt in #5065)
+- Don't start playing music after an announcement when nothing was playing (by @marcelveldt in #5068)
+- Fix Spotify Connect multiple instances (by @marcelveldt in #5070)
+- Fix provider setup flows (by @marcelveldt in #5072)
+- Keep playback controls loading until the player really starts (by @marcelveldt in #5075)
+
+### 🎨 Frontend Changes
+
+- Fix login behind Home Assistant ingress (by @marcelveldt in [#2216](https://github.com/music-assistant/frontend/pull/2216))
+- Allow changing the sync group parent (by @marcelveldt in [#2214](https://github.com/music-assistant/frontend/pull/2214))
+- Make provider reconfiguration easier (by @marcelveldt in [#2215](https://github.com/music-assistant/frontend/pull/2215))
+- Show player setup actions consistently (by @marcelveldt in [#2213](https://github.com/music-assistant/frontend/pull/2213))
+- Handle unavailable browser storage safely (by @marcelveldt in [#2211](https://github.com/music-assistant/frontend/pull/2211))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>9 changes</summary>
+
+- Update airplay-cli to v0.3.6 (by @musicassistant-bot[bot] in #5048)
+- Bump alexapy from 1.29.17 to 1.30.0 (by @dependabot[bot] in #5054)
+- Bump codespell from 2.4.2 to 2.4.3 (by @dependabot[bot] in #5055)
+- Bump mypy from 2.1.0 to 2.3.0 (by @dependabot[bot] in #5056)
+- Bump transformers from 5.6.2 to 5.14.1 (by @dependabot[bot] in #5057)
+- ⬆️ Update music-assistant-models to 1.1.172 (by @musicassistant-bot[bot] in #5059)
+- Clean up a duplicated setting in the built-in provider (by @marcelveldt in #5060)
+- ⬆️ Update music-assistant-models to 1.1.173 (by @musicassistant-bot[bot] in #5069)
+- ⬆️ Update music-assistant-frontend to 2.17.246 (by @musicassistant-bot[bot] in #5074)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @geofffranks, @khers, @marcelveldt, @medusalix
+
+
 # [2.10.0.dev2026072613] - 26.07.2026
 
 ## 📦 Nightly Release
@@ -53,50 +117,3 @@ _Changes since [2.10.0.dev2026072601](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt
-
-
-# [2.10.0.dev2026072601] - 26.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072519](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072519)_
-
-### ⚠ Breaking Changes
-
-- Retire the AUTH_SESSION auth-popup mechanism (by @marcelveldt in #5030)
-
-### 🚀 Features and enhancements
-
-- Map Bose SoundTouch preset buttons on the provider instead of per player (by @marcelveldt in #5032)
-- Surface the player reconfigure flow (by @marcelveldt in #5034)
-
-### 🐛 Bugfixes
-
-- Strip trailing NUL from MusicBrainz UFID recording MBID (by @geofffranks in #5020)
-- Harden the setup flow engine (by @marcelveldt in #5022)
-- Complete setup flow translations for late-migrated providers (by @marcelveldt in #5024)
-- Fix AirPlay players being marked off while streaming (by @marcelveldt in #5029)
-- Keep AirPlay protocol selection automatic (by @marcelveldt in #5031)
-
-### 🎨 Frontend Changes
-
-- Config action buttons use the dedicated invoke_action commands (by @marcelveldt in [#2204](https://github.com/music-assistant/frontend/pull/2204))
-- Add a Reconfigure entry to the player context menu (by @marcelveldt in [#2206](https://github.com/music-assistant/frontend/pull/2206))
-- Polish setup flow dialog (field overlays + external step) (by @marcelveldt in [#2203](https://github.com/music-assistant/frontend/pull/2203))
-- Harden the setup flow dialog against reconnect and stale-response races (by @marcelveldt in [#2205](https://github.com/music-assistant/frontend/pull/2205))
-
-### Other Changes
-
-- Simplify config options contract after setup flows (by @marcelveldt in #5017)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump music-assistant-models to 1.1.171 (by @marcelveldt in #5025)
-- ⬆️ Update music-assistant-models to 1.1.171 (by @musicassistant-bot[bot] in #5026)
-- ⬆️ Update music-assistant-frontend to 2.17.242 (by @musicassistant-bot[bot] in #5027)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@geofffranks, @marcelveldt
