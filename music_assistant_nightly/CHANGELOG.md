@@ -1,3 +1,48 @@
+# [2.10.0.dev2026072715] - 27.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072700](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072700)_
+
+### 🚀 New Providers
+
+- Add AI Radio Plugin (by @swiftbird07 in #3407)
+
+### 🚀 Features and enhancements
+
+- ariacast_receiver: Add configurable Device Name (by @meiser79 in #4922)
+- Add transpose DSP filter (by @OzGav in #5005)
+- Disable Mac AirPlay players by default (by @marcelveldt in #5080)
+- Show Apple TV external playback artwork (by @marcelveldt in #5081)
+- Add tests for Open Subsonic provider (by @khers in #5082)
+
+### 🐛 Bugfixes
+
+- ariacast_receiver: fix tests (by @meiser79 in #5077)
+- Add icon for background tasks core module (by @stvncode in #5084)
+
+### 🎨 Frontend Changes
+
+- Larger now-playing dashboard text on small cast displays (by @MarvinSchenkel in [#2218](https://github.com/music-assistant/frontend/pull/2218))
+- Remove dead code from ai radio (by @stvncode in [#2220](https://github.com/music-assistant/frontend/pull/2220))
+- Add AI Radio Plugin to Frontend (by @swiftbird07 in [#1596](https://github.com/music-assistant/frontend/pull/1596))
+- Add plugins section in sidebar (by @stvncode in [#2219](https://github.com/music-assistant/frontend/pull/2219))
+- Add transpose DSP filter (by @OzGav in [#2195](https://github.com/music-assistant/frontend/pull/2195))
+- Fix missing cover art in fullscreen player on older browsers (by @MarvinSchenkel in [#2217](https://github.com/music-assistant/frontend/pull/2217))
+- Remove the horizontal scroll on discover page in mobile (by @stvncode in [#2221](https://github.com/music-assistant/frontend/pull/2221))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.247 (by @musicassistant-bot[bot] in #5085)
+- ⬆️ Update music-assistant-frontend to 2.17.248 (by @musicassistant-bot[bot] in #5086)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @khers, @marcelveldt, @meiser79, @stvncode, @swiftbird07
+
+
 # [2.10.0.dev2026072700] - 27.07.2026
 
 ## 📦 Nightly Release
@@ -93,27 +138,3 @@ _Changes since [2.10.0.dev2026072604](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @kiwipaulrob, @marcelveldt
-
-
-# [2.10.0.dev2026072604] - 26.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072601](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072601)_
-
-### 🎨 Frontend Changes
-
-- Core config action buttons use the invoke_action command (by @marcelveldt in [#2209](https://github.com/music-assistant/frontend/pull/2209))
-- Neutral wording when a setup session ended during a disconnect (by @marcelveldt in [#2208](https://github.com/music-assistant/frontend/pull/2208))
-- Fix setup flow dialog stuck on spinner after launch (by @marcelveldt in [#2210](https://github.com/music-assistant/frontend/pull/2210))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.243 (by @musicassistant-bot[bot] in #5037)
-- ⬆️ Update music-assistant-frontend to 2.17.244 (by @musicassistant-bot[bot] in #5038)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
