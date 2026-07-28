@@ -26,6 +26,10 @@ The build process:
 3. Installs the frontend as a Python package (overwriting the default frontend)
 4. Starts Music Assistant
 
+The App image is built on top of the nightly server image, so the dependency set, the bundled
+app variables and the cliairplay binary are already in place. Installing a branch only has to
+apply what actually differs from that nightly.
+
 ## Configuration
 
 ### Basic Configuration
@@ -45,12 +49,12 @@ Use the `server_repo` option to specify which version of the Music Assistant ser
 - **Pull Request**: `pr-123` (will checkout PR #123)
 - **Fork**: `username/server@branch-name`
 - **Commit**: Full commit SHA
-- **Empty/blank**: Use latest nightly release from GitHub (fast mode - no build required)
+- **Empty/blank**: Use the nightly build baked into the App image (fast mode - no install required)
 
 **Examples**:
 
 ```yaml
-# Use latest nightly release (FAST - no build required)
+# Use the nightly build from the App image (FAST - no install required)
 server_repo: ""
 
 # Use the dev branch
@@ -69,9 +73,9 @@ server_repo: someuser/server@experimental-feature
 server_repo: abc123def456...
 ```
 
-**Default**: `""` (empty - uses latest nightly release from GitHub)
+**Default**: `""` (empty - uses the nightly build baked into the App image)
 
-> **Note**: When `server_repo` is left empty or blank, the App will install the latest nightly release wheel from GitHub releases. This is the fastest option as no server build is required.
+> **Note**: When `server_repo` is left empty or blank, the App runs the nightly build that is already installed in its image, so nothing is downloaded at startup. Rebuild the App to move to a newer nightly.
 
 ### Frontend Repository Configuration
 
@@ -120,7 +124,7 @@ safe_mode: false
 server_repo: ""
 frontend_repo: ""
 ```
-Uses latest nightly release from GitHub, no builds required. Fastest startup time.
+Runs the nightly build from the App image, no installs required. Fastest startup time.
 
 ### Backend Development Mode
 ```yaml
@@ -145,7 +149,7 @@ Builds both server (PR #456) and frontend (PR #789) from source. Full control fo
 ### Build Time
 
 Build time varies depending on your configuration:
-- **Both empty** (`server_repo: ""` and `frontend_repo: ""`): Fastest - no builds, uses latest nightly release
+- **Both empty** (`server_repo: ""` and `frontend_repo: ""`): Fastest - no installs, runs the nightly build from the image
 - **Only `server_repo` specified**: Medium - builds server only, skips frontend (ideal for backend testing)
 - **Both specified**: Slowest - builds both server and frontend from source (full development mode)
 
@@ -218,7 +222,7 @@ This is a developer tool and is not supported for regular users. If you encounte
 
 | Feature      | Regular App       | DEV App (Nightly mode)    | DEV App (Source mode)    |
 | ------------ | ----------------- | ------------------------- | ------------------------ |
-| Installation | Pre-built release | Latest nightly wheel      | Built from source        |
+| Installation | Pre-built release | Nightly build in the image | Built from source        |
 | Startup time | Fast              | Fast                      | Slower (build time)      |
 | Stability    | Stable releases   | Nightly builds            | Development code         |
 | Frontend     | Bundled           | Bundled                   | Built from source        |
@@ -226,6 +230,6 @@ This is a developer tool and is not supported for regular users. If you encounte
 | Use case     | Production        | Quick backend testing     | Full development/testing |
 
 **Configuration Modes:**
-- **Fast mode**: Both repos empty - Uses latest nightly release, no builds
+- **Fast mode**: Both repos empty - Runs the nightly build from the image, no installs
 - **Backend dev mode**: Only `server_repo` specified - Builds server, uses bundled frontend
 - **Full dev mode**: Both repos specified - Builds everything from source
