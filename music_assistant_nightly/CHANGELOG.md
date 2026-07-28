@@ -1,3 +1,33 @@
+# [2.10.0.dev2026072804] - 28.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026072715](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072715)_
+
+### 🐛 Bugfixes
+
+- Fix bit-perfect status for lossy sources (by @marcelveldt in #5087)
+- Fix Audiobookshelf configuration loading (by @marcelveldt in #5088)
+- Play the track you selected when shuffle is on (by @marcelveldt in #5092)
+
+### 🎨 Frontend Changes
+
+- Revert "Add convolution DSP filter with impulse response library" (by @stvncode in [#2222](https://github.com/music-assistant/frontend/pull/2222))
+- Use vue-i18n pluralization for settings totals labels (by @geofffranks in [#2201](https://github.com/music-assistant/frontend/pull/2201))
+- Add convolution DSP filter with impulse response library (by @OzGav in [#2190](https://github.com/music-assistant/frontend/pull/2190))
+- Clarify the bit-perfect playback label (by @marcelveldt in [#2224](https://github.com/music-assistant/frontend/pull/2224))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.249 (by @musicassistant-bot[bot] in #5094)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @geofffranks, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026072715] - 27.07.2026
 
 ## 📦 Nightly Release
@@ -105,36 +135,3 @@ _Changes since [2.10.0.dev2026072613](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @geofffranks, @khers, @marcelveldt, @medusalix
-
-
-# [2.10.0.dev2026072613] - 26.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072604](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072604)_
-
-### 🚀 Features and enhancements
-
-- Automatically enable 24-bit AirPlay playback on devices that support it (by @marcelveldt in #5044)
-
-### 🐛 Bugfixes
-
-- Add priority flag to playlist import background task (by @kiwipaulrob in #4913)
-- Fix server hanging on startup (by @marcelveldt in #5040)
-- Clarify Spotify developer key setup (by @marcelveldt in #5041)
-- Fix bit-perfect AirPlay playback (by @marcelveldt in #5042)
-- Update players immediately after setup (by @marcelveldt in #5043)
-
-### 🎨 Frontend Changes
-
-- Keep setup-required players readable (by @marcelveldt in [#2212](https://github.com/music-assistant/frontend/pull/2212))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.245 (by @musicassistant-bot[bot] in #5045)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@kiwipaulrob, @marcelveldt
