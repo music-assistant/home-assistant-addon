@@ -14,7 +14,7 @@ echo ""
 # Check if server_repo is empty or null
 if [ -z "$server_repo" ] || [ "$server_repo" = "null" ]; then
     build_from_source=false
-    echo "No server_repo specified - using latest nightly release from GitHub"
+    echo "No server_repo specified - using the nightly build baked into this image"
 else
     build_from_source=true
     echo "Building from source using server_repo: $server_repo"
@@ -90,6 +90,13 @@ if [ "$build_from_source" = true ]; then
     echo "Installing dependencies from: $requirements_url"
     echo ""
 
+    # the bundled app vars live inside the package, so a source install removes them
+    site_packages=$(python -c 'import sysconfig; print(sysconfig.get_path("purelib"))')
+    bundled_app_secrets="${site_packages}/music_assistant/helpers/app_secrets.json"
+    if [ -f "$bundled_app_secrets" ]; then
+        cp "$bundled_app_secrets" /tmp/app_secrets.json
+    fi
+
     # Install dependencies from the branch's requirements_all.txt
     uv pip install \
         --no-cache \
@@ -104,36 +111,19 @@ if [ "$build_from_source" = true ]; then
         --no-cache \
         --link-mode=copy \
         "$server_url"
-else
-    # Install latest nightly wheel from GitHub releases
-    echo "Fetching latest nightly release from GitHub..."
-    echo ""
 
-    # Get the latest pre-release info from GitHub API
-    # Write to temp file to avoid control character issues when passing through shell variables
-    tmp_releases="/tmp/releases.json"
-    curl -s "https://api.github.com/repos/music-assistant/server/releases?per_page=10" > "$tmp_releases"
-    release_tag=$(jq -r '[.[] | select(.prerelease == true)] | first | .tag_name' < "$tmp_releases")
-    wheel_url=$(jq -r '[.[] | select(.prerelease == true)] | first | .assets[] | select(.name | endswith(".whl")) | .browser_download_url' < "$tmp_releases")
-    rm -f "$tmp_releases"
-
-    if [ -z "$wheel_url" ] || [ "$wheel_url" = "null" ]; then
-        echo "ERROR: Could not find wheel in latest nightly release"
-        echo "Falling back to stable PyPI release..."
-        uv pip install \
-            --no-cache \
-            --link-mode=copy \
-            music-assistant
-    else
-        echo "Found nightly release: $release_tag"
-        echo "Wheel URL: $wheel_url"
+    if [ -f /tmp/app_secrets.json ]; then
+        cp /tmp/app_secrets.json "$bundled_app_secrets"
+        rm -f /tmp/app_secrets.json
+        echo "✓ Bundled app variables restored"
         echo ""
-        echo "Downloading and installing nightly wheel..."
-        uv pip install \
-            --no-cache \
-            --link-mode=copy \
-            "$wheel_url"
     fi
+else
+    installed_version=$(python -c 'import importlib.metadata; print(importlib.metadata.version("music-assistant"))')
+    echo "Using the nightly build from this image: $installed_version"
+    echo ""
+    echo "Set server_repo to install a branch, PR or fork instead."
+    echo "Rebuild the add-on to pick up a newer nightly."
 fi
 
 echo ""
@@ -261,15 +251,6 @@ echo "Starting Music Assistant"
 echo "-----------------------------------------------------------"
 echo ""
 
-# Allow maintainer-supplied app variables to persist across source installs and restarts.
-if [ -f /data/app_vars.json ]; then
-    export MASS_APP_VARS_FILE=/data/app_vars.json
-    echo "Using app variables from /data/app_vars.json"
-fi
-
-# export jemalloc path
-for path in /usr/lib/*/libjemalloc.so.2; do
-    [ -f "$path" ] && export LD_PRELOAD="$path" && break
-done
-# Start Music Assistant
-exec mass --data-dir /data --cache-dir /data/.cache
+# Start Music Assistant via the server image's entrypoint, which preloads jemalloc
+# (that preload also pulls in libstdc++, which aiolibdatachannel's extension needs)
+exec /usr/local/bin/entrypoint.sh --data-dir /data --cache-dir /data/.cache

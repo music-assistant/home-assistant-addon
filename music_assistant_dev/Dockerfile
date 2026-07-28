@@ -1,8 +1,9 @@
 # syntax=docker/dockerfile:1
 #
-# DEV MASS image: base image + MASS installed from prebuilt wheel
+# DEV MASS image: the nightly server image + the tooling to install MASS from source
 #
-FROM ghcr.io/music-assistant/base:1.5.2
+ARG BUILD_FROM=ghcr.io/music-assistant/server:nightly
+FROM ${BUILD_FROM}
 
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
@@ -11,9 +12,10 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # add some additional packages that are useful for debugging
+# cmake/ninja are needed to build any dependency a branch pins to a git ref or an sdist
 RUN set -x \
   && apt-get update \
-  && apt-get install -y --no-install-recommends build-essential jq htop git curl ca-certificates gnupg libportaudio2 libasound2-plugins dbus && \
+  && apt-get install -y --no-install-recommends build-essential cmake ninja-build jq htop git curl ca-certificates gnupg libportaudio2 libasound2-plugins dbus && \
   # Install Node.js 22.x from NodeSource
   mkdir -p /etc/apt/keyrings && \
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
@@ -22,20 +24,13 @@ RUN set -x \
   apt-get install -y --no-install-recommends nodejs && \
   npm install -g yarn && \
   apt-get clean && \
-  rm -rf /var/lib/apt/lists/* && \
-  # pre-install base requirements to save a bit of startup time
-  uv venv $VIRTUAL_ENV && \
-  uv pip install \
-  --no-cache \
-  --link-mode=copy \
-  --index-strategy unsafe-best-match \
-  -r "https://raw.githubusercontent.com/music-assistant/server/refs/heads/dev/requirements_all.txt"
+  rm -rf /var/lib/apt/lists/*
 
 VOLUME [ "/data" ]
 EXPOSE 8095
 
-RUN chmod 777 -R /app && \
-  chmod 777 -R /tmp
+# /app is already world-writable here; a recursive chmod would copy the whole venv into a layer
+RUN chmod 777 -R /tmp
 
 COPY entrypoint.sh /app/entrypoint.sh
 
