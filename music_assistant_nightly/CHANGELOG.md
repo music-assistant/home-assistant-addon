@@ -1,3 +1,48 @@
+# [2.10.0.dev2026073104] - 31.07.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026073004](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026073004)_
+
+### 🚀 Features and enhancements
+
+- Rename Radio Playlists plugin to Endless Mix Playlists (by @MarvinSchenkel in #5128)
+- A finished queue keeps its tracks so you can play it again (by @marcelveldt in #5156)
+
+### 🐛 Bugfixes
+
+- Fix volume limit enforcement for players with redirected volume control (by @OzGav in #5102)
+- Measure true peak during loudness analysis (by @MarvinSchenkel in #5118)
+- Reduce WebRTC and WiiM log noise when debug logging is enabled (by @MarvinSchenkel in #5153)
+- Fix startup provider failures and show which provider needs attention (by @marcelveldt in #5162)
+- Pick a new go-librespot API port when the configured one is unavailable (by @OzGav in #5169)
+
+### 🎨 Frontend Changes
+
+- Show that a queue finished playing (by @marcelveldt in [#2234](https://github.com/music-assistant/frontend/pull/2234))
+- Stop lint and formatting reaching into nested git worktrees (by @marcelveldt in [#2233](https://github.com/music-assistant/frontend/pull/2233))
+- Stop the test suite picking up tests from nested git worktrees (by @marcelveldt in [#2232](https://github.com/music-assistant/frontend/pull/2232))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- ⬆️ Update music-assistant-models to 1.1.176 (by @musicassistant-bot[bot] in #5154)
+- Add CI checks for pull request titles and descriptions (by @MarvinSchenkel in #5155)
+- Align minimum ffmpeg version requirements in the codebase  (by @OzGav in #5159)
+- Check out the base branch, and never post a bare mention (by @chrisuthe in #5164)
+- ⬆️ Update music-assistant-frontend to 2.17.252 (by @musicassistant-bot[bot] in #5170)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt
+
+
 # [2.10.0.dev2026073004] - 30.07.2026
 
 ## 📦 Nightly Release
@@ -115,33 +160,3 @@ _Changes since [2.10.0.dev2026072804](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @marcelveldt
-
-
-# [2.10.0.dev2026072804] - 28.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072715](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072715)_
-
-### 🐛 Bugfixes
-
-- Fix bit-perfect status for lossy sources (by @marcelveldt in #5087)
-- Fix Audiobookshelf configuration loading (by @marcelveldt in #5088)
-- Play the track you selected when shuffle is on (by @marcelveldt in #5092)
-
-### 🎨 Frontend Changes
-
-- Revert "Add convolution DSP filter with impulse response library" (by @stvncode in [#2222](https://github.com/music-assistant/frontend/pull/2222))
-- Use vue-i18n pluralization for settings totals labels (by @geofffranks in [#2201](https://github.com/music-assistant/frontend/pull/2201))
-- Add convolution DSP filter with impulse response library (by @OzGav in [#2190](https://github.com/music-assistant/frontend/pull/2190))
-- Clarify the bit-perfect playback label (by @marcelveldt in [#2224](https://github.com/music-assistant/frontend/pull/2224))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.249 (by @musicassistant-bot[bot] in #5094)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @geofffranks, @marcelveldt, @stvncode
