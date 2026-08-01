@@ -1,3 +1,53 @@
+# [2.10.0.dev2026080101] - 01.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026073104](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026073104)_
+
+### 🚀 Features and enhancements
+
+- Add Dutch to Alexa language commands (by @R3inoudR in #5166)
+- Gapless seeks and reliable group sync on AirPlay players (by @marcelveldt in #5181)
+- Add external_until for poll-completed external steps (by @jozefKruszynski in #5184)
+- Let corrected AirPlay joins heal themselves instead of re-joining (by @marcelveldt in #5194)
+- Start AirPlay late joins as soon as the speaker is ready (by @marcelveldt in #5202)
+
+### 🐛 Bugfixes
+
+- Remove stale Audiobookshelf playback sessions to avoid repeated sync failures (by @foobarth in #5120)
+- Fix AirPlay noise bursts and group sync issues on Apple devices (by @marcelveldt in #5168)
+- Clear stale library IDs in Audiobookshelf sync and validate cache on startup (by @foobarth in #5172)
+- Stop log flooding and retry storms when artwork fails to download (by @marcelveldt in #5174)
+- Stop re-sending unchanged album art around AirPlay track changes (by @marcelveldt in #5182)
+- Fix late-joining AirPlay players starting out of sync (by @marcelveldt in #5186)
+- Fix providers wrongly showing a setup error when they loaded fine (by @marcelveldt in #5190)
+- Fix rejoining AirPlay players that start out of sync when their clock is slow to lock (by @marcelveldt in #5191)
+- Fix SMB and NFS shares failing to reconnect after a reload (by @marcelveldt in #5192)
+- Fix providers that depend on another provider failing to start (by @marcelveldt in #5200)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>8 changes</summary>
+
+- Update airplay-cli to v0.4.0 (by @musicassistant-bot[bot] in #5176)
+- Fix noisy 'Task exception was never retrieved' errors in the log (by @marcelveldt in #5177)
+- Update airplay-cli to v0.4.1 (by @musicassistant-bot[bot] in #5183)
+- Update airplay-cli to v0.4.2 (by @musicassistant-bot[bot] in #5189)
+- Update airplay-cli to v0.4.3 (by @musicassistant-bot[bot] in #5193)
+- ⬆️ Update music-assistant-models to 1.1.177 (by @musicassistant-bot[bot] in #5195)
+- Update airplay-cli to v0.4.4 (by @musicassistant-bot[bot] in #5196)
+- Keep Apple TV protocol chatter out of AirPlay debug logs (by @marcelveldt in #5199)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@R3inoudR, @foobarth, @jozefKruszynski, @marcelveldt
+
+
 # [2.10.0.dev2026073104] - 31.07.2026
 
 ## 📦 Nightly Release
@@ -115,48 +165,3 @@ _Changes since [2.10.0.dev2026072904](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @alectogeek, @chrisuthe, @foobarth, @marcelveldt, @stvncode
-
-
-# [2.10.0.dev2026072904] - 29.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072804](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072804)_
-
-### 🐛 Bugfixes
-
-- Fix AirPlay players joining a playing group out of sync (by @marcelveldt in #5098)
-- Fix lyrics and other optional values breaking on cached empty results (by @MarvinSchenkel in #5099)
-- Keep AI Radio segments in order and add a shuffle toggle (by @MarvinSchenkel in #5106)
-
-### 🎨 Frontend Changes
-
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2226](https://github.com/music-assistant/frontend/pull/2226))
-- Add a shuffle toggle to AI Radio shows (by @MarvinSchenkel in [#2227](https://github.com/music-assistant/frontend/pull/2227))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5096)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- Promote LRC formatted text in the plain lyrics tag to lrc_lyrics (by @OzGav in #5066)
-- Bump actions/upload-artifact from 7.0.0 to 7.0.1 (by @dependabot[bot] in #5089)
-- Bump CodSpeedHQ/action from 4.18.5 to 4.19.1 (by @dependabot[bot] in #5090)
-- Bump actions/download-artifact from 8.0.0 to 8.0.1 (by @dependabot[bot] in #5091)
-- ⬆️ Update music-assistant-models to 1.1.174 (by @musicassistant-bot[bot] in #5095)
-- Align PR review instructions with current context engineering guidance (by @MarvinSchenkel in #5097)
-- Update airplay-cli to v0.3.7 (by @musicassistant-bot[bot] in #5100)
-- Remove Mother Earth Radio (by @OzGav in #5104)
-- ⬆️ Update music-assistant-frontend to 2.17.250 (by @musicassistant-bot[bot] in #5116)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @marcelveldt
