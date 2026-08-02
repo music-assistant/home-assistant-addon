@@ -1,3 +1,66 @@
+# [2.10.0.dev2026080201] - 02.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026080101](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080101)_
+
+### 🚀 Features and enhancements
+
+- Expose external id lookup on the API (by @OzGav in #5160)
+- Report AirPlay speakers that stay silent while shown as playing (by @marcelveldt in #5217)
+
+### 🐛 Bugfixes
+
+- Wait for a running library sync to stop before unloading a provider (by @marcelveldt in #5197)
+- Show the full track length after seeking (by @marcelveldt in #5198)
+- Stop one component's log level from flooding the log with unrelated messages (by @marcelveldt in #5203)
+- Don't let one bad Home Assistant entity break the whole HA integration (by @OzGav in #5206)
+- Remove the extra delay when starting a single AirPlay speaker (by @marcelveldt in #5208)
+- Keep the account login dialog in step with the browser (by @marcelveldt in #5209)
+- Fix speakers joining a playing group out of sync (by @marcelveldt in #5210)
+- Fix Music Timeline bonus questions running out of answer options (by @marcelveldt in #5212)
+- Improve Music Timeline song variety and release years (by @marcelveldt in #5213)
+- Show when a Music Quiz game is restarting (by @marcelveldt in #5214)
+- Load the Home Assistant settings much faster on large setups (by @marcelveldt in #5216)
+- Fix AirPlay 2 speakers playing silence on multi-homed hosts (by @marcelveldt in #5219)
+- Fix AirPlay speakers playing behind when grouped with a Sendspin player (by @marcelveldt in #5220)
+- Fix a group start recording an instant it never used (by @marcelveldt in #5223)
+
+### 🎨 Frontend Changes
+
+- Add support for Audiobook collections (by @fmunkes in [#2155](https://github.com/music-assistant/frontend/pull/2155))
+- Add "Play from beginning" for podcast episodes (by @chrisuthe in [#2184](https://github.com/music-assistant/frontend/pull/2184))
+- Add DSP stereo width and crossfeed filters (by @OzGav in [#2189](https://github.com/music-assistant/frontend/pull/2189))
+- Explain why joining a party or quiz failed (by @marcelveldt in [#2242](https://github.com/music-assistant/frontend/pull/2242))
+- Show when a Music Quiz game is restarting (by @marcelveldt in [#2240](https://github.com/music-assistant/frontend/pull/2240))
+- Start audio faster on web players (by @marcelveldt in [#2241](https://github.com/music-assistant/frontend/pull/2241))
+- Fix setup wizard jumping back to a previous step (by @marcelveldt in [#2239](https://github.com/music-assistant/frontend/pull/2239))
+- Remove JWT claims the server never mints (by @chrisuthe in [#2236](https://github.com/music-assistant/frontend/pull/2236))
+
+### Other Changes
+
+- Remove unused authentication middleware (by @marcelveldt in #5211)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Log the resolved interface and publish IP when starting cliairplay (by @marcelveldt in #5215)
+- Remove an unused, empty helper function (by @marcelveldt in #5218)
+- Update airplay-cli to v0.4.5 (by @musicassistant-bot[bot] in #5221)
+- ⬆️ Update music-assistant-frontend to 2.17.253 (by @musicassistant-bot[bot] in #5222)
+- Update airplay-cli to v0.4.6 (by @musicassistant-bot[bot] in #5224)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @chrisuthe, @fmunkes, @marcelveldt
+
+
 # [2.10.0.dev2026080101] - 01.08.2026
 
 ## 📦 Nightly Release
@@ -91,77 +154,3 @@ _Changes since [2.10.0.dev2026073004](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt
-
-
-# [2.10.0.dev2026073004] - 30.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026072904](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026072904)_
-
-### 🚀 Features and enhancements
-
-- Add Stereo Width and Crossfeed DSP filters (by @OzGav in #4971)
-- Announcements start faster and no longer get cut off (by @marcelveldt in #5115)
-- Autoplay continues your podcast or audiobook instead of switching to music (by @marcelveldt in #5141)
-- Autoplay is on by default for new players (by @marcelveldt in #5144)
-
-### 🐛 Bugfixes
-
-- Handle invalid MusicBrainz identifiers in file tags gracefully (by @OzGav in #5073)
-- Fix podcast playback on feeds that list a cover image before the audio (by @MarvinSchenkel in #5078)
-- Fix pause failing on Cast devices streaming via Sendspin (by @MarvinSchenkel in #5083)
-- Show protocol-connected speakers in the Music Quiz speaker picker (by @MarvinSchenkel in #5103)
-- Don't apply volume normalization to sound effects (by @MarvinSchenkel in #5105)
-- Fix Yandex My Wave stopping after initial batch (by @alectogeek in #5107)
-- Automatically re-join AirPlay group members after a brief connection loss (by @marcelveldt in #5112)
-- Don't render announcements twice when a player sends a HEAD request (by @marcelveldt in #5113)
-- Restore player state when an announcement fails (by @marcelveldt in #5114)
-- Reduce deezer-python-gql log verbosity to match provider level (by @foobarth in #5121)
-- Apple Music: signing in a second account no longer breaks the first (by @MarvinSchenkel in #5122)
-- Don't start unrelated music when pressing play on an empty queue (by @marcelveldt in #5124)
-- Fix remote access flooding the log with ICE and TURN warnings (by @MarvinSchenkel in #5125)
-- Don't show the dashboard keepalive as active playback on cast players (by @MarvinSchenkel in #5127)
-- Sendspin: freeze playback progress before tearing down the push stream (by @chrisuthe in #5129)
-- Keep an AI Radio show and its queue in sync when either one stops (by @MarvinSchenkel in #5130)
-- Snapshot Sendspin playback progress at natural end of stream (by @chrisuthe in #5131)
-- Support password-protected AirPlay speakers (by @marcelveldt in #5134)
-- Reconfiguring an AirPlay player can now redo or reset its pairing (by @marcelveldt in #5135)
-- AirPlay playback no longer starts muted after the speaker was in standby (by @marcelveldt in #5139)
-- Detect password-protected AirPlay devices more reliably (by @marcelveldt in #5147)
-- Use one source of truth for AirPlay password announcements (by @marcelveldt in #5148)
-
-### 🎨 Frontend Changes
-
-- Drop the AI Radio clear-queue-on-start option (by @MarvinSchenkel in [#2230](https://github.com/music-assistant/frontend/pull/2230))
-- Rename radio actions to endless mix (by @MarvinSchenkel in [#2148](https://github.com/music-assistant/frontend/pull/2148))
-- Add help text to the DSP filters and gain stages and begin migration to shadcn (by @OzGav in [#2180](https://github.com/music-assistant/frontend/pull/2180))
-- Update the error banner for provider in discover apge (by @stvncode in [#2225](https://github.com/music-assistant/frontend/pull/2225))
-- Fix shows vanishing from the AI Radio gallery under a non-English locale (by @MarvinSchenkel in [#2229](https://github.com/music-assistant/frontend/pull/2229))
-
-### Other Changes
-
-- Move announcement handling into its own module (by @marcelveldt in #5133)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- Bump docker/login-action from 4.5.1 to 4.5.2 (by @dependabot[bot] in #5108)
-- ⬆️ Update music-assistant-models to 1.1.175 (by @musicassistant-bot[bot] in #5117)
-- Update airplay-cli to v0.3.8 (by @musicassistant-bot[bot] in #5126)
-- Bump docker/login-action from 4.5.2 to 4.6.0 (by @dependabot[bot] in #5137)
-- Bump CodSpeedHQ/action from 4.19.1 to 5.0.1 (by @dependabot[bot] in #5138)
-- Update airplay-cli to v0.3.9 (by @musicassistant-bot[bot] in #5142)
-- Catch duplicate keys in translation source files (by @marcelveldt in #5145)
-- Fix failing protocol play/pause tests on dev (by @marcelveldt in #5146)
-- ⬆️ Update music-assistant-frontend to 2.17.251 (by @musicassistant-bot[bot] in #5152)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @alectogeek, @chrisuthe, @foobarth, @marcelveldt, @stvncode
