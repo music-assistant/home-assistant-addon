@@ -1,3 +1,58 @@
+# [2.10.0.dev2026080304] - 03.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026080201](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080201)_
+
+### 🚀 Features and enhancements
+
+- MusicBrainz recommendations: Person/band distinction (by @dmoo500 in #4687)
+- Establish and keep the duration of podcast episodes if their feed does not supply it (by @OzGav in #5178)
+
+### 🐛 Bugfixes
+
+- Fix playability of plain stream URLs and handle verification of URIs gracefully (by @fmunkes in #5204)
+- Do not update the playback position when we are not playing in MusicCast (by @fmunkes in #5205)
+- Keep speakers playing when a group switches output (by @marcelveldt in #5225)
+- Redact authorization headers from request logs (by @teancom in #5236)
+- Wait for every group member's clock before anchoring playback (by @marcelveldt in #5237)
+- Fix one bad join code locking out all other guests (by @marcelveldt in #5243)
+
+### 🎨 Frontend Changes
+
+- Fix untranslated text in the interface (by @marcelveldt in [#2244](https://github.com/music-assistant/frontend/pull/2244))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>16 changes</summary>
+
+- Clean MusicBrainz identifiers from OpenSubsonic and Plex servers (by @OzGav in #5149)
+- Bump nnaudio from 0.3.3 to 0.3.4 (by @dependabot[bot] in #5232)
+- Bump soco from 0.31.1 to 0.31.2 (by @dependabot[bot] in #5233)
+- Bump async-upnp-client from 0.46.2 to 0.48.0 (by @dependabot[bot] in #5234)
+- Bump syrupy from 5.2.0 to 5.5.3 (by @dependabot[bot] in #5235)
+- Reduce unexpected Snapcast debug logging (by @marcelveldt in #5238)
+- Enable Zeroconf discovery logging (by @marcelveldt in #5239)
+- Fail faster when an AirPlay start or flush is rejected (by @marcelveldt in #5240)
+- Improve AirPlay late-join buffering (by @marcelveldt in #5241)
+- Keep the AirPlay track position correct after a timing correction (by @marcelveldt in #5242)
+- Log which AirPlay speaker failed to start (by @marcelveldt in #5244)
+- Correct outdated comments about Sendspin stream buffering (by @marcelveldt in #5245)
+- Report AirPlay artwork rejections instead of hiding them (by @marcelveldt in #5247)
+- Report the real AirPlay timing state in diagnostics (by @marcelveldt in #5248)
+- Update airplay-cli to v0.4.7 (by @musicassistant-bot[bot] in #5251)
+- ⬆️ Update music-assistant-frontend to 2.17.254 (by @musicassistant-bot[bot] in #5252)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @dmoo500, @fmunkes, @marcelveldt, @teancom
+
+
 # [2.10.0.dev2026080201] - 02.08.2026
 
 ## 📦 Nightly Release
@@ -109,48 +164,3 @@ _Changes since [2.10.0.dev2026073104](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @R3inoudR, @foobarth, @jozefKruszynski, @marcelveldt
-
-
-# [2.10.0.dev2026073104] - 31.07.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026073004](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026073004)_
-
-### 🚀 Features and enhancements
-
-- Rename Radio Playlists plugin to Endless Mix Playlists (by @MarvinSchenkel in #5128)
-- A finished queue keeps its tracks so you can play it again (by @marcelveldt in #5156)
-
-### 🐛 Bugfixes
-
-- Fix volume limit enforcement for players with redirected volume control (by @OzGav in #5102)
-- Measure true peak during loudness analysis (by @MarvinSchenkel in #5118)
-- Reduce WebRTC and WiiM log noise when debug logging is enabled (by @MarvinSchenkel in #5153)
-- Fix startup provider failures and show which provider needs attention (by @marcelveldt in #5162)
-- Pick a new go-librespot API port when the configured one is unavailable (by @OzGav in #5169)
-
-### 🎨 Frontend Changes
-
-- Show that a queue finished playing (by @marcelveldt in [#2234](https://github.com/music-assistant/frontend/pull/2234))
-- Stop lint and formatting reaching into nested git worktrees (by @marcelveldt in [#2233](https://github.com/music-assistant/frontend/pull/2233))
-- Stop the test suite picking up tests from nested git worktrees (by @marcelveldt in [#2232](https://github.com/music-assistant/frontend/pull/2232))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- ⬆️ Update music-assistant-models to 1.1.176 (by @musicassistant-bot[bot] in #5154)
-- Add CI checks for pull request titles and descriptions (by @MarvinSchenkel in #5155)
-- Align minimum ffmpeg version requirements in the codebase  (by @OzGav in #5159)
-- Check out the base branch, and never post a bare mention (by @chrisuthe in #5164)
-- ⬆️ Update music-assistant-frontend to 2.17.252 (by @musicassistant-bot[bot] in #5170)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt
