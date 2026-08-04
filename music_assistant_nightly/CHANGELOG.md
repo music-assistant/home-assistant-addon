@@ -1,3 +1,88 @@
+# [2.10.0.dev2026080404] - 04.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026080304](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080304)_
+
+### 🚀 New Providers
+
+- Add Overcast podcast provider (by @OzGav in #5151)
+- Add OpenAI text-to-speech provider (by @marcelveldt in #5262)
+
+### 🚀 Features and enhancements
+
+- Add DSP convolution filter (by @OzGav in #4947)
+- Add Safety Limiter and Compressor DSP filters (by @OzGav in #5004)
+- Cache podcast episode listings and batch their resume lookups (by @distante in #5179)
+- Let each provider pick which AI and text-to-speech engine it uses (by @marcelveldt in #5253)
+- Let plugins and music providers describe audio the same way (by @marcelveldt in #5264)
+- Let clients correct for a clock that is out of sync (by @marcelveldt in #5266)
+- Change Home Assistant player controls without reconnecting (by @marcelveldt in #5268)
+- Enter text-to-speech voices as separate values (by @marcelveldt in #5278)
+
+### 🐛 Bugfixes
+
+- Library item counts now respect the user's provider filter (by @chrisuthe in #5165)
+- Fix seek progress snapback before stream restart (by @alectogeek in #5229)
+- Use original release years for Music Timeline songs (by @marcelveldt in #5250)
+- Announce preset changes when an impulse response is removed (by @OzGav in #5256)
+- Use whitelist for MusicBrainz artist types in recommendations (by @dmoo500 in #5260)
+- Keep Music Quiz lyrics in step with the audio (by @marcelveldt in #5263)
+- Fix Home Assistant connection drop on large entity registries (by @marcelveldt in #5270)
+- Fix muting being blocked by the volume control setting (by @marcelveldt in #5285)
+
+### 🎨 Frontend Changes
+
+- Add convolution DSP filter with impulse response library (by @OzGav in [#2223](https://github.com/music-assistant/frontend/pull/2223))
+- Keep timings correct when a device clock is out of sync (by @marcelveldt in [#2248](https://github.com/music-assistant/frontend/pull/2248))
+- Keep Music Quiz lyrics in step with the audio (by @marcelveldt in [#2246](https://github.com/music-assistant/frontend/pull/2246))
+- Keep settings pages up to date when other providers are added or removed (by @marcelveldt in [#2245](https://github.com/music-assistant/frontend/pull/2245))
+- Tell a guest when their party or quiz session has ended (by @marcelveldt in [#2243](https://github.com/music-assistant/frontend/pull/2243))
+- Maintain constant album art size on now playing view (by @OzGav in [#2237](https://github.com/music-assistant/frontend/pull/2237))
+- Remove leftover panel-expansion state from the settings config editor (by @marcelveldt in [#2256](https://github.com/music-assistant/frontend/pull/2256))
+- Fix a broken test assertion (by @marcelveldt in [#2255](https://github.com/music-assistant/frontend/pull/2255))
+- Fix the mini equalizer position at non-standard playback speeds (by @marcelveldt in [#2250](https://github.com/music-assistant/frontend/pull/2250))
+- Add missing tests for reconnect, language switching and connection warnings (by @marcelveldt in [#2249](https://github.com/music-assistant/frontend/pull/2249))
+- Add missing test coverage for guest entry provider updates (by @marcelveldt in [#2253](https://github.com/music-assistant/frontend/pull/2253))
+- Add test coverage for the guest entry route watcher (by @marcelveldt in [#2251](https://github.com/music-assistant/frontend/pull/2251))
+
+### Other Changes
+
+- Remove unused track info lookup from the MSX Bridge player (by @marcelveldt in #5201)
+- Clean up unreachable checks in player control commands (by @marcelveldt in #5286)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>17 changes</summary>
+
+- Skip an AirPlay speaker that would only play silence (by @marcelveldt in #5246)
+- Clarify a comment about how AirPlay playback is anchored (by @marcelveldt in #5249)
+- Migrate the podcast providers to the shared Overcast patterns (by @OzGav in #5254)
+- Point the SiriusXM labels at the common strings (by @OzGav in #5255)
+- Remove dead code from the AirPlay provider (by @marcelveldt in #5257)
+- Name the plugin each AI/TTS engine comes from in the picker (by @marcelveldt in #5258)
+- Test the instant an AirPlay start actually schedules (by @marcelveldt in #5259)
+- Name the speaker on every cliairplay log line (by @marcelveldt in #5265)
+- Fix remote access failing to reach the built-in Sendspin server (by @marcelveldt in #5267)
+- Also test IPv6 when listening on all network interfaces (by @marcelveldt in #5276)
+- Use one shared definition for wildcard bind addresses (by @marcelveldt in #5277)
+- Play AI Radio TTS clips that are rendered to a local file (by @marcelveldt in #5279)
+- Advertise all server addresses for AirPlay remote control (by @marcelveldt in #5281)
+- Stop tests from failing on a port another process took (by @marcelveldt in #5282)
+- Correct how remote access builds its local websocket address (by @marcelveldt in #5284)
+- Split voices pasted into a single value (by @marcelveldt in #5287)
+- ⬆️ Update music-assistant-frontend to 2.17.255 (by @musicassistant-bot[bot] in #5290)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @alectogeek, @chrisuthe, @distante, @dmoo500, @marcelveldt
+
+
 # [2.10.0.dev2026080304] - 03.08.2026
 
 ## 📦 Nightly Release
@@ -114,53 +199,3 @@ _Changes since [2.10.0.dev2026080101](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @chrisuthe, @fmunkes, @marcelveldt
-
-
-# [2.10.0.dev2026080101] - 01.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026073104](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026073104)_
-
-### 🚀 Features and enhancements
-
-- Add Dutch to Alexa language commands (by @R3inoudR in #5166)
-- Gapless seeks and reliable group sync on AirPlay players (by @marcelveldt in #5181)
-- Add external_until for poll-completed external steps (by @jozefKruszynski in #5184)
-- Let corrected AirPlay joins heal themselves instead of re-joining (by @marcelveldt in #5194)
-- Start AirPlay late joins as soon as the speaker is ready (by @marcelveldt in #5202)
-
-### 🐛 Bugfixes
-
-- Remove stale Audiobookshelf playback sessions to avoid repeated sync failures (by @foobarth in #5120)
-- Fix AirPlay noise bursts and group sync issues on Apple devices (by @marcelveldt in #5168)
-- Clear stale library IDs in Audiobookshelf sync and validate cache on startup (by @foobarth in #5172)
-- Stop log flooding and retry storms when artwork fails to download (by @marcelveldt in #5174)
-- Stop re-sending unchanged album art around AirPlay track changes (by @marcelveldt in #5182)
-- Fix late-joining AirPlay players starting out of sync (by @marcelveldt in #5186)
-- Fix providers wrongly showing a setup error when they loaded fine (by @marcelveldt in #5190)
-- Fix rejoining AirPlay players that start out of sync when their clock is slow to lock (by @marcelveldt in #5191)
-- Fix SMB and NFS shares failing to reconnect after a reload (by @marcelveldt in #5192)
-- Fix providers that depend on another provider failing to start (by @marcelveldt in #5200)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- Update airplay-cli to v0.4.0 (by @musicassistant-bot[bot] in #5176)
-- Fix noisy 'Task exception was never retrieved' errors in the log (by @marcelveldt in #5177)
-- Update airplay-cli to v0.4.1 (by @musicassistant-bot[bot] in #5183)
-- Update airplay-cli to v0.4.2 (by @musicassistant-bot[bot] in #5189)
-- Update airplay-cli to v0.4.3 (by @musicassistant-bot[bot] in #5193)
-- ⬆️ Update music-assistant-models to 1.1.177 (by @musicassistant-bot[bot] in #5195)
-- Update airplay-cli to v0.4.4 (by @musicassistant-bot[bot] in #5196)
-- Keep Apple TV protocol chatter out of AirPlay debug logs (by @marcelveldt in #5199)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@R3inoudR, @foobarth, @jozefKruszynski, @marcelveldt
