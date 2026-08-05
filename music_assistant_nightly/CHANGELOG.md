@@ -1,3 +1,60 @@
+# [2.10.0.dev2026080504] - 05.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026080404](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080404)_
+
+### 🚀 New Providers
+
+- Add OpenAI Compatible provider for the AI features (by @marcelveldt in #5261)
+
+### 🚀 Features and enhancements
+
+- Add party duration config option (by @lordhi in #5230)
+- Reuse the Home Assistant device list instead of re-fetching it constantly (by @marcelveldt in #5273)
+- Generate AI Radio segments at airtime instead of at run start (by @MarvinSchenkel in #5301)
+- Migration for new icons for picker (by @stvncode in #5306)
+
+### 🐛 Bugfixes
+
+- Fix Recently played dropping explicit track plays and logging empty containers (by @chrisuthe in #5163)
+- Mount the NFS export as configured and scan the Subfolder inside it (by @chrisuthe in #5167)
+- Fix squeezelite players stuck unavailable after restart  (by @gdesmott in #5207)
+- Fix Flow Mode progress after abandoned stream probes (by @alectogeek in #5228)
+- Fix media details occasionally resolving to the wrong item (by @marcelveldt in #5288)
+- Remove spurious error log entries for shared requests (by @marcelveldt in #5295)
+- Recover a bridged AirPlay speaker when its stream process dies (by @marcelveldt in #5311)
+
+### Other Changes
+
+- Use shared port helpers in Plex Connect port allocation (by @MarvinSchenkel in #4647)
+- Lokalise translations update (by @github-actions[bot] in #5292)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>10 changes</summary>
+
+- Bump cryptography from 49.0.0 to 50.0.0 (by @dependabot[bot] in #5272)
+- Let players fall back when a control is taken away (by @marcelveldt in #5280)
+- Fix AriaCast receiver being unreachable on networks without internet access (by @marcelveldt in #5283)
+- ⬆️ Update music-assistant-models to 1.1.178 (by @musicassistant-bot[bot] in #5291)
+- Fix duplicate requests and tasks outliving shutdown (by @marcelveldt in #5296)
+- Add tests for external player control power and volume commands (by @marcelveldt in #5297)
+- Fix remote access failing to reach the Music Assistant API (by @marcelveldt in #5299)
+- Keep bridged AirPlay speakers in sync after an audio dropout (by @marcelveldt in #5300)
+- ⬆️ Update music-assistant-models to 1.1.179 (by @musicassistant-bot[bot] in #5302)
+- Run the Test workflow on merge groups (by @MarvinSchenkel in #5305)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @alectogeek, @chrisuthe, @gdesmott, @lordhi, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026080404] - 04.08.2026
 
 ## 📦 Nightly Release
@@ -136,66 +193,3 @@ _Changes since [2.10.0.dev2026080201](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @dmoo500, @fmunkes, @marcelveldt, @teancom
-
-
-# [2.10.0.dev2026080201] - 02.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026080101](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080101)_
-
-### 🚀 Features and enhancements
-
-- Expose external id lookup on the API (by @OzGav in #5160)
-- Report AirPlay speakers that stay silent while shown as playing (by @marcelveldt in #5217)
-
-### 🐛 Bugfixes
-
-- Wait for a running library sync to stop before unloading a provider (by @marcelveldt in #5197)
-- Show the full track length after seeking (by @marcelveldt in #5198)
-- Stop one component's log level from flooding the log with unrelated messages (by @marcelveldt in #5203)
-- Don't let one bad Home Assistant entity break the whole HA integration (by @OzGav in #5206)
-- Remove the extra delay when starting a single AirPlay speaker (by @marcelveldt in #5208)
-- Keep the account login dialog in step with the browser (by @marcelveldt in #5209)
-- Fix speakers joining a playing group out of sync (by @marcelveldt in #5210)
-- Fix Music Timeline bonus questions running out of answer options (by @marcelveldt in #5212)
-- Improve Music Timeline song variety and release years (by @marcelveldt in #5213)
-- Show when a Music Quiz game is restarting (by @marcelveldt in #5214)
-- Load the Home Assistant settings much faster on large setups (by @marcelveldt in #5216)
-- Fix AirPlay 2 speakers playing silence on multi-homed hosts (by @marcelveldt in #5219)
-- Fix AirPlay speakers playing behind when grouped with a Sendspin player (by @marcelveldt in #5220)
-- Fix a group start recording an instant it never used (by @marcelveldt in #5223)
-
-### 🎨 Frontend Changes
-
-- Add support for Audiobook collections (by @fmunkes in [#2155](https://github.com/music-assistant/frontend/pull/2155))
-- Add "Play from beginning" for podcast episodes (by @chrisuthe in [#2184](https://github.com/music-assistant/frontend/pull/2184))
-- Add DSP stereo width and crossfeed filters (by @OzGav in [#2189](https://github.com/music-assistant/frontend/pull/2189))
-- Explain why joining a party or quiz failed (by @marcelveldt in [#2242](https://github.com/music-assistant/frontend/pull/2242))
-- Show when a Music Quiz game is restarting (by @marcelveldt in [#2240](https://github.com/music-assistant/frontend/pull/2240))
-- Start audio faster on web players (by @marcelveldt in [#2241](https://github.com/music-assistant/frontend/pull/2241))
-- Fix setup wizard jumping back to a previous step (by @marcelveldt in [#2239](https://github.com/music-assistant/frontend/pull/2239))
-- Remove JWT claims the server never mints (by @chrisuthe in [#2236](https://github.com/music-assistant/frontend/pull/2236))
-
-### Other Changes
-
-- Remove unused authentication middleware (by @marcelveldt in #5211)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Log the resolved interface and publish IP when starting cliairplay (by @marcelveldt in #5215)
-- Remove an unused, empty helper function (by @marcelveldt in #5218)
-- Update airplay-cli to v0.4.5 (by @musicassistant-bot[bot] in #5221)
-- ⬆️ Update music-assistant-frontend to 2.17.253 (by @musicassistant-bot[bot] in #5222)
-- Update airplay-cli to v0.4.6 (by @musicassistant-bot[bot] in #5224)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chrisuthe, @fmunkes, @marcelveldt
