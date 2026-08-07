@@ -1,3 +1,27 @@
+# [2.9.11] - 07.08.2026
+
+## 📦 Stable Release
+
+_Changes since [2.9.10](https://github.com/music-assistant/server/releases/tag/2.9.10)_
+
+### 🐛 Bugfixes
+
+- Fix one bad join code locking out all other guests (by @marcelveldt in #5243)
+- Sonos speakers now recover on their own after a network interruption (by @MarvinSchenkel in #5322)
+- Fix Sonos S1 speakers hanging after a failed subscription (by @marcelveldt in #5406)
+
+### Other Changes
+
+- Stop one bad join code from locking out everyone at a party (by @marcelveldt in #5269)
+- Fix playback from Home Assistant failing with an admin permission error (by @MarvinSchenkel in #5409)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt
+
+
 # [2.9.10] - 30.07.2026
 
 ## 📦 Stable Release
@@ -72,10 +96,5 @@ _Changes since [2.9.8](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav
-
-
-# [2.9.8] - 12.07.2026
-
-* Bumped the base image to fix the Spotify Connect plugin
 
 
