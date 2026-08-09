@@ -1,3 +1,147 @@
+# [2.10.0b13] - 09.08.2026
+
+## 📦 Beta Release
+
+_Changes since [2.10.0b12](https://github.com/music-assistant/server/releases/tag/2.10.0b12)_
+
+### 🚀 Features and enhancements
+
+- Allow configuring Snapcast TCP stream sample rate and bit depth (by @rwjack in #5140)
+- Addendum to collection support: Enhance search ability and overwrite collection metadata on provider sync (by @fmunkes in #5226)
+- More accurate release years for much reissued songs (by @marcelveldt in #5442)
+- Drop the entity dropdown from the Home Assistant settings (by @marcelveldt in #5446)
+- Show the real reason when AirPlay pairing fails (by @marcelveldt in #5486)
+
+### 🐛 Bugfixes
+
+- Fix Bose SoundTouch preset search and assignment (by @Odn0 in #5158)
+- Resolve OpenSubsonic playlist tracks without per-track album and lyrics fetches (by @GraysonCAdams in #5359)
+- Change ABC radio monochrome icon from black to white (by @OzGav in #5392)
+- Fix Pocket Casts sync failing on episodes without a duration (by @OzGav in #5397)
+- Plex: fix artist top tracks always being empty (by @MarvinSchenkel in #5405)
+- Fix Bluesound players cutting off the end of a track (by @marcelveldt in #5408)
+- Fix cast dashboards freezing for players with reserved characters in their id (by @MarvinSchenkel in #5415)
+- Fix playback stopping after an AI Radio announcement (by @MarvinSchenkel in #5416)
+- Fix Sonos S1 speakers no longer reacting instantly after a network hiccup (by @marcelveldt in #5432)
+- Fix Sonos connections lingering after a provider reload (by @marcelveldt in #5433)
+- Say which type failed when JSON serialization fails (by @OzGav in #5439)
+- Show player settings in your own language again (by @marcelveldt in #5447)
+- Keep simulated-mute speakers muted when the group volume changes (by @marcelveldt in #5449)
+- Remove the last spurious error log entries for shared work (by @marcelveldt in #5453)
+- Fix slow Home Assistant logins when a provider fails to finish loading (by @OzGav in #5455)
+- Fix a stray error in the log when a Cast speaker fails to join a group (by @marcelveldt in #5470)
+- Play announcements on muted speakers (by @marcelveldt in #5474)
+- Fix the OpenAI Compatible provider failing to load (by @marcelveldt in #5487)
+- Fix playlists not loading in Home Assistant (by @marcelveldt in #5489)
+- Fix Apple TV now-playing screen losing progress and artwork (by @marcelveldt in #5490)
+- Skip the provider search for an empty search query (by @MarvinSchenkel in #5500)
+- Fix filesystem sync never converging on changed files (by @MarvinSchenkel in #5506)
+- Fix file shares importing nothing and hiding playlists (#6019) (by @OzGav in #5510)
+- Skip unreachable IPv6 addresses when connecting to Cast devices (by @OzGav in #5513)
+- Fix broken playlists page after upgrading from stable to beta (by @marcelveldt in #5515)
+
+### 🎨 Frontend Changes
+
+- Add Timeline view for MusicBrainz artist events (by @dmoo500 in [#2042](https://github.com/music-assistant/frontend/pull/2042))
+- Fix the Discord playback position after seeking (by @marcelveldt in [#2299](https://github.com/music-assistant/frontend/pull/2299))
+- Restrict the test workflow to read-only repository access (by @marcelveldt in [#2311](https://github.com/music-assistant/frontend/pull/2311))
+- Remove an unused config setting type (by @marcelveldt in [#2310](https://github.com/music-assistant/frontend/pull/2310))
+- Run the test suite once per commit (by @marcelveldt in [#2309](https://github.com/music-assistant/frontend/pull/2309))
+- Cover the config link buttons in the disabled-state tests (by @marcelveldt in [#2305](https://github.com/music-assistant/frontend/pull/2305))
+- Import the API client normally in the companion and auth plugins (by @marcelveldt in [#2294](https://github.com/music-assistant/frontend/pull/2294))
+- Clean up unused props on the player bar timeline (by @marcelveldt in [#2300](https://github.com/music-assistant/frontend/pull/2300))
+- Player card no longer uses its own copy of the queue lookup (by @marcelveldt in [#2293](https://github.com/music-assistant/frontend/pull/2293))
+- Only load track waveforms while something is showing them (by @marcelveldt in [#2295](https://github.com/music-assistant/frontend/pull/2295))
+- Stop the player timeline animating when there is no track length (by @marcelveldt in [#2296](https://github.com/music-assistant/frontend/pull/2296))
+- Document when a queue counts as active (by @marcelveldt in [#2297](https://github.com/music-assistant/frontend/pull/2297))
+- Add tests for the settings field disabled state (by @marcelveldt in [#2283](https://github.com/music-assistant/frontend/pull/2283))
+- Share the app mount helper across the initialization tests (by @marcelveldt in [#2288](https://github.com/music-assistant/frontend/pull/2288))
+- Fix the playback position shown in Discord Rich Presence (by @marcelveldt in [#2291](https://github.com/music-assistant/frontend/pull/2291))
+- Party guest page no longer changes your selected player (by @marcelveldt in [#2290](https://github.com/music-assistant/frontend/pull/2290))
+- Stop test runs from reporting success when errors escape a test (by @marcelveldt in [#2292](https://github.com/music-assistant/frontend/pull/2292))
+- Search for a Home Assistant entity to use as a player control (by @marcelveldt in [#2316](https://github.com/music-assistant/frontend/pull/2316))
+- Add artist name sorting to library views (by @dmoo500 in [#2268](https://github.com/music-assistant/frontend/pull/2268))
+- Add support for authors and narrators (by @fmunkes in [#2000](https://github.com/music-assistant/frontend/pull/2000))
+- Make test fixtures match the real API models (by @marcelveldt in [#2337](https://github.com/music-assistant/frontend/pull/2337))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>63 changes</summary>
+
+- Search Home Assistant entities to use as player controls (by @marcelveldt in #5271)
+- Keep group players up to date regardless of who triggers the update (by @marcelveldt in #5393)
+- De-duplicate the metadata controller test fixture (by @marcelveldt in #5398)
+- Show what a settings action did instead of redrawing the form (by @marcelveldt in #5402)
+- Make player test config mocks behave like the real config (by @marcelveldt in #5422)
+- Catch vulnerabilities a dependency update pulls in indirectly (by @marcelveldt in #5424)
+- Stop tests crashing at random on a shared compile cache (by @marcelveldt in #5426)
+- Tidy up where the Music Quiz AI limits live (by @marcelveldt in #5428)
+- Share playlist track requests again on Yandex Music and KION Music (by @marcelveldt in #5430)
+- Report Sonos S1 grouping failures as proper player errors (by @marcelveldt in #5431)
+- Load the AcoustID fingerprinting library only when it is needed (by @marcelveldt in #5434)
+- Stop providers from reloading twice after a lost connection or settings change (by @marcelveldt in #5435)
+- ⬆️ Update music-assistant-frontend to 2.17.260 (by @musicassistant-bot[bot] in #5436)
+- Keep all members of a cached tuple value intact (by @marcelveldt in #5437)
+- Open Subsonic: Add API token based authentication and update to py-opensonic 10.3.0 (by @khers in #5438)
+- Keep the PR label in sync when the description changes (by @marcelveldt in #5441)
+- Clean up unused leftovers in the Sonos S1 player (by @marcelveldt in #5443)
+- Clean up unused code in the Sonos S1 error handling (by @marcelveldt in #5445)
+- Share the Music Quiz AI limit checks between quiz types (by @marcelveldt in #5448)
+- Fix wrong playback position and track length for HEOS players (by @marcelveldt in #5450)
+- Tidy up duplicated fixtures in the controller tests (by @marcelveldt in #5451)
+- Tidy up duplicated fixtures in the provider tests (by @marcelveldt in #5452)
+- Fix failing cache controller test on dev (by @marcelveldt in #5456)
+- Correct the cache docs on what single_flight=False does (by @marcelveldt in #5457)
+- Limit the length of AI-written smart playlist descriptions (by @marcelveldt in #5458)
+- Tidy up the duplicated Tidal test fixtures (by @marcelveldt in #5459)
+- Tidy up the API value parser (by @marcelveldt in #5460)
+- Keep a playback position of zero instead of treating it as unknown (by @marcelveldt in #5461)
+- Stop the dependency check from blaming a PR for a vulnerability it did not introduce (by @marcelveldt in #5462)
+- Remove duplicated code around waiting for shared work (by @marcelveldt in #5463)
+- Share My Wave and My Mix track requests between listeners (by @marcelveldt in #5464)
+- Keep a muted speaker working normally after it leaves a group (by @marcelveldt in #5465)
+- Make the Tidal ISRC lookup test check the real API URL (by @marcelveldt in #5466)
+- Show which vulnerability findings the dependency check set aside (by @marcelveldt in #5467)
+- Tidy up the helper order in the API helpers module (by @marcelveldt in #5468)
+- Stop confusing an unknown DLNA position or volume with zero (by @marcelveldt in #5469)
+- Name the argument in dictionary parse errors (by @marcelveldt in #5471)
+- Fix volume changes when unmuting a speaker (by @marcelveldt in #5473)
+- Make shared-request deduplication reliable for media item arguments (by @marcelveldt in #5475)
+- Fix pre-commit hooks failing when committing from a git worktree (by @marcelveldt in #5476)
+- Fix DLNA players reporting a position that runs ahead of the audio (by @marcelveldt in #5477)
+- Stop Sonos S1 discovery from freezing the server (by @marcelveldt in #5478)
+- Prevent Sonos S1 speakers from reconnecting after a provider reload (by @marcelveldt in #5479)
+- Clean up pending Sonos speaker setups when the provider is removed (by @marcelveldt in #5480)
+- Stop Sonos S1 from scanning for speakers after it is turned off (by @marcelveldt in #5481)
+- Keep speaker grouping correct for every user (by @marcelveldt in #5482)
+- Clean up disabled players when a player provider is unloaded (by @marcelveldt in #5483)
+- Keep unloading a provider when one of its players fails to shut down (by @marcelveldt in #5484)
+- Add test coverage for removing a player provider (by @marcelveldt in #5485)
+- Use consistent line endings in the pre-commit config file (by @marcelveldt in #5488)
+- Tidy up the Sonos S1 error handling helper (by @marcelveldt in #5491)
+- Stop a player registration that was cancelled halfway (by @marcelveldt in #5492)
+- Adjust Snapcast and Soundcloud code owners (by @OzGav in #5494)
+- ⬆️ Update music-assistant-models to 1.1.184 (by @musicassistant-bot[bot] in #5495)
+- ⬆️ Update music-assistant-frontend to 2.17.261 (by @musicassistant-bot[bot] in #5496)
+- Auto-merge dependency bumps without manual conflict resolution (by @MarvinSchenkel in #5499)
+- Use consistent line endings in provider icon files (by @marcelveldt in #5504)
+- Update airplay-cli to v0.4.12 (by @musicassistant-bot[bot] in #5505)
+- Fix dependency auto-merge workflow env contract test (by @MarvinSchenkel in #5507)
+- Stop AirPlay from re-sending unchanged artwork on every seek (by @marcelveldt in #5508)
+- Fix local code checks failing on some numba versions (by @marcelveldt in #5512)
+- ⬆️ Update music-assistant-frontend to 2.17.262 (by @musicassistant-bot[bot] in #5514)
+- Name the right speaker when Sonos S1 grouping fails (by @marcelveldt in #5519)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GraysonCAdams, @MarvinSchenkel, @Odn0, @OzGav, @dmoo500, @fmunkes, @khers, @marcelveldt, @rwjack
+
+
 # [2.10.0b12] - 07.08.2026
 
 ## 📦 Beta Release
@@ -319,138 +463,3 @@ _Changes since [2.10.0b10](https://github.com/music-assistant/server/releases/ta
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @alectogeek, @arturpragacz, @chrisuthe, @distante, @dmoo500, @fmunkes, @gdesmott, @lordhi, @marcelveldt, @stvncode, @teancom
-
-
-# [2.10.0b10] - 01.08.2026
-
-## 📦 Beta Release
-
-_Changes since [2.10.0b9](https://github.com/music-assistant/server/releases/tag/2.10.0b9)_
-
-### 🚀 Features and enhancements
-
-- Add Stereo Width and Crossfeed DSP filters (by @OzGav in #4971)
-- Announcements start faster and no longer get cut off (by @marcelveldt in #5115)
-- Rename Radio Playlists plugin to Endless Mix Playlists (by @MarvinSchenkel in #5128)
-- Autoplay continues your podcast or audiobook instead of switching to music (by @marcelveldt in #5141)
-- Autoplay is on by default for new players (by @marcelveldt in #5144)
-- A finished queue keeps its tracks so you can play it again (by @marcelveldt in #5156)
-- Add Dutch to Alexa language commands (by @R3inoudR in #5166)
-- Gapless seeks and reliable group sync on AirPlay players (by @marcelveldt in #5181)
-- Add external_until for poll-completed external steps (by @jozefKruszynski in #5184)
-- Let corrected AirPlay joins heal themselves instead of re-joining (by @marcelveldt in #5194)
-- Start AirPlay late joins as soon as the speaker is ready (by @marcelveldt in #5202)
-
-### 🐛 Bugfixes
-
-- Handle invalid MusicBrainz identifiers in file tags gracefully (by @OzGav in #5073)
-- Fix podcast playback on feeds that list a cover image before the audio (by @MarvinSchenkel in #5078)
-- Fix pause failing on Cast devices streaming via Sendspin (by @MarvinSchenkel in #5083)
-- Fix bit-perfect status for lossy sources (by @marcelveldt in #5087)
-- Fix Audiobookshelf configuration loading (by @marcelveldt in #5088)
-- Play the track you selected when shuffle is on (by @marcelveldt in #5092)
-- Fix AirPlay players joining a playing group out of sync (by @marcelveldt in #5098)
-- Fix lyrics and other optional values breaking on cached empty results (by @MarvinSchenkel in #5099)
-- Fix volume limit enforcement for players with redirected volume control (by @OzGav in #5102)
-- Show protocol-connected speakers in the Music Quiz speaker picker (by @MarvinSchenkel in #5103)
-- Don't apply volume normalization to sound effects (by @MarvinSchenkel in #5105)
-- Keep AI Radio segments in order and add a shuffle toggle (by @MarvinSchenkel in #5106)
-- Fix Yandex My Wave stopping after initial batch (by @alectogeek in #5107)
-- Automatically re-join AirPlay group members after a brief connection loss (by @marcelveldt in #5112)
-- Don't render announcements twice when a player sends a HEAD request (by @marcelveldt in #5113)
-- Restore player state when an announcement fails (by @marcelveldt in #5114)
-- Measure true peak during loudness analysis (by @MarvinSchenkel in #5118)
-- Remove stale Audiobookshelf playback sessions to avoid repeated sync failures (by @foobarth in #5120)
-- Reduce deezer-python-gql log verbosity to match provider level (by @foobarth in #5121)
-- Apple Music: signing in a second account no longer breaks the first (by @MarvinSchenkel in #5122)
-- Don't start unrelated music when pressing play on an empty queue (by @marcelveldt in #5124)
-- Fix remote access flooding the log with ICE and TURN warnings (by @MarvinSchenkel in #5125)
-- Don't show the dashboard keepalive as active playback on cast players (by @MarvinSchenkel in #5127)
-- Sendspin: freeze playback progress before tearing down the push stream (by @chrisuthe in #5129)
-- Keep an AI Radio show and its queue in sync when either one stops (by @MarvinSchenkel in #5130)
-- Snapshot Sendspin playback progress at natural end of stream (by @chrisuthe in #5131)
-- Support password-protected AirPlay speakers (by @marcelveldt in #5134)
-- Reconfiguring an AirPlay player can now redo or reset its pairing (by @marcelveldt in #5135)
-- AirPlay playback no longer starts muted after the speaker was in standby (by @marcelveldt in #5139)
-- Detect password-protected AirPlay devices more reliably (by @marcelveldt in #5147)
-- Use one source of truth for AirPlay password announcements (by @marcelveldt in #5148)
-- Reduce WebRTC and WiiM log noise when debug logging is enabled (by @MarvinSchenkel in #5153)
-- Fix startup provider failures and show which provider needs attention (by @marcelveldt in #5162)
-- Fix AirPlay noise bursts and group sync issues on Apple devices (by @marcelveldt in #5168)
-- Pick a new go-librespot API port when the configured one is unavailable (by @OzGav in #5169)
-- Clear stale library IDs in Audiobookshelf sync and validate cache on startup (by @foobarth in #5172)
-- Stop log flooding and retry storms when artwork fails to download (by @marcelveldt in #5174)
-- Stop re-sending unchanged album art around AirPlay track changes (by @marcelveldt in #5182)
-- Fix late-joining AirPlay players starting out of sync (by @marcelveldt in #5186)
-- Fix providers wrongly showing a setup error when they loaded fine (by @marcelveldt in #5190)
-- Fix rejoining AirPlay players that start out of sync when their clock is slow to lock (by @marcelveldt in #5191)
-- Fix SMB and NFS shares failing to reconnect after a reload (by @marcelveldt in #5192)
-- Fix providers that depend on another provider failing to start (by @marcelveldt in #5200)
-
-### 🎨 Frontend Changes
-
-- Revert "Add convolution DSP filter with impulse response library" (by @stvncode in [#2222](https://github.com/music-assistant/frontend/pull/2222))
-- Use vue-i18n pluralization for settings totals labels (by @geofffranks in [#2201](https://github.com/music-assistant/frontend/pull/2201))
-- Add convolution DSP filter with impulse response library (by @OzGav in [#2190](https://github.com/music-assistant/frontend/pull/2190))
-- Clarify the bit-perfect playback label (by @marcelveldt in [#2224](https://github.com/music-assistant/frontend/pull/2224))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2226](https://github.com/music-assistant/frontend/pull/2226))
-- Add a shuffle toggle to AI Radio shows (by @MarvinSchenkel in [#2227](https://github.com/music-assistant/frontend/pull/2227))
-- Drop the AI Radio clear-queue-on-start option (by @MarvinSchenkel in [#2230](https://github.com/music-assistant/frontend/pull/2230))
-- Rename radio actions to endless mix (by @MarvinSchenkel in [#2148](https://github.com/music-assistant/frontend/pull/2148))
-- Add help text to the DSP filters and gain stages and begin migration to shadcn (by @OzGav in [#2180](https://github.com/music-assistant/frontend/pull/2180))
-- Update the error banner for provider in discover apge (by @stvncode in [#2225](https://github.com/music-assistant/frontend/pull/2225))
-- Fix shows vanishing from the AI Radio gallery under a non-English locale (by @MarvinSchenkel in [#2229](https://github.com/music-assistant/frontend/pull/2229))
-- Show that a queue finished playing (by @marcelveldt in [#2234](https://github.com/music-assistant/frontend/pull/2234))
-- Stop lint and formatting reaching into nested git worktrees (by @marcelveldt in [#2233](https://github.com/music-assistant/frontend/pull/2233))
-- Stop the test suite picking up tests from nested git worktrees (by @marcelveldt in [#2232](https://github.com/music-assistant/frontend/pull/2232))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5096)
-- Move announcement handling into its own module (by @marcelveldt in #5133)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>32 changes</summary>
-
-- Promote LRC formatted text in the plain lyrics tag to lrc_lyrics (by @OzGav in #5066)
-- Bump actions/upload-artifact from 7.0.0 to 7.0.1 (by @dependabot[bot] in #5089)
-- Bump CodSpeedHQ/action from 4.18.5 to 4.19.1 (by @dependabot[bot] in #5090)
-- Bump actions/download-artifact from 8.0.0 to 8.0.1 (by @dependabot[bot] in #5091)
-- ⬆️ Update music-assistant-frontend to 2.17.249 (by @musicassistant-bot[bot] in #5094)
-- ⬆️ Update music-assistant-models to 1.1.174 (by @musicassistant-bot[bot] in #5095)
-- Align PR review instructions with current context engineering guidance (by @MarvinSchenkel in #5097)
-- Update airplay-cli to v0.3.7 (by @musicassistant-bot[bot] in #5100)
-- Remove Mother Earth Radio (by @OzGav in #5104)
-- Bump docker/login-action from 4.5.1 to 4.5.2 (by @dependabot[bot] in #5108)
-- ⬆️ Update music-assistant-frontend to 2.17.250 (by @musicassistant-bot[bot] in #5116)
-- ⬆️ Update music-assistant-models to 1.1.175 (by @musicassistant-bot[bot] in #5117)
-- Update airplay-cli to v0.3.8 (by @musicassistant-bot[bot] in #5126)
-- Bump docker/login-action from 4.5.2 to 4.6.0 (by @dependabot[bot] in #5137)
-- Bump CodSpeedHQ/action from 4.19.1 to 5.0.1 (by @dependabot[bot] in #5138)
-- Update airplay-cli to v0.3.9 (by @musicassistant-bot[bot] in #5142)
-- Catch duplicate keys in translation source files (by @marcelveldt in #5145)
-- Fix failing protocol play/pause tests on dev (by @marcelveldt in #5146)
-- ⬆️ Update music-assistant-frontend to 2.17.251 (by @musicassistant-bot[bot] in #5152)
-- ⬆️ Update music-assistant-models to 1.1.176 (by @musicassistant-bot[bot] in #5154)
-- Add CI checks for pull request titles and descriptions (by @MarvinSchenkel in #5155)
-- Align minimum ffmpeg version requirements in the codebase  (by @OzGav in #5159)
-- Check out the base branch, and never post a bare mention (by @chrisuthe in #5164)
-- ⬆️ Update music-assistant-frontend to 2.17.252 (by @musicassistant-bot[bot] in #5170)
-- Update airplay-cli to v0.4.0 (by @musicassistant-bot[bot] in #5176)
-- Fix noisy 'Task exception was never retrieved' errors in the log (by @marcelveldt in #5177)
-- Update airplay-cli to v0.4.1 (by @musicassistant-bot[bot] in #5183)
-- Update airplay-cli to v0.4.2 (by @musicassistant-bot[bot] in #5189)
-- Update airplay-cli to v0.4.3 (by @musicassistant-bot[bot] in #5193)
-- ⬆️ Update music-assistant-models to 1.1.177 (by @musicassistant-bot[bot] in #5195)
-- Update airplay-cli to v0.4.4 (by @musicassistant-bot[bot] in #5196)
-- Keep Apple TV protocol chatter out of AirPlay debug logs (by @marcelveldt in #5199)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @R3inoudR, @alectogeek, @chrisuthe, @foobarth, @geofffranks, @jozefKruszynski, @marcelveldt, @stvncode
