@@ -1,3 +1,56 @@
+# [2.10.0.dev2026081018] - 10.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081003](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081003)_
+
+### 🚀 Features and enhancements
+
+- Update and improve Sendspin pairing (by @arturpragacz in #5472)
+- Add Milkdrop visualizer plugin (by @jozefKruszynski in #5511)
+- Allow collapsing of collections when acquiring the audiobooks of an author or narrator (by @fmunkes in #5533)
+
+### 🐛 Bugfixes
+
+- Report a clear error when AI Radio TTS generation fails (by @MarvinSchenkel in #5497)
+- Enrich matched playlist entries with provider metadata during import (by @OzGav in #5554)
+- Fix missing artists on Apple Music playlist tracks (by @MarvinSchenkel in #5558)
+- Fix YouTube Music episode description breaking player state (by @andrei-marinache in #5560)
+
+### 🎨 Frontend Changes
+
+- Roboto (by @stvncode in [#2376](https://github.com/music-assistant/frontend/pull/2376))
+- Scrolldown on player fullscreen (by @stvncode in [#2375](https://github.com/music-assistant/frontend/pull/2375))
+- Remove player name in the song desc in player bar (by @stvncode in [#2374](https://github.com/music-assistant/frontend/pull/2374))
+- Improve player selection (by @marcelveldt in [#2372](https://github.com/music-assistant/frontend/pull/2372))
+- Music Quiz TV dashboard polish (by @MarvinSchenkel in [#2370](https://github.com/music-assistant/frontend/pull/2370))
+- Improve player settings controls (by @marcelveldt in [#2369](https://github.com/music-assistant/frontend/pull/2369))
+- Handle 'stop' player command from companion apps (by @teancom in [#2367](https://github.com/music-assistant/frontend/pull/2367))
+- Match the mobile status bar colour to the app background (by @MarvinSchenkel in [#2373](https://github.com/music-assistant/frontend/pull/2373))
+- Small fixes for player bar drawers (by @stvncode in [#2371](https://github.com/music-assistant/frontend/pull/2371))
+- Sort dashboard cast targets by provider and name (by @MarvinSchenkel in [#2368](https://github.com/music-assistant/frontend/pull/2368))
+- Fix a timing-dependent race condition on ItemsListing with tabs (by @fmunkes in [#2353](https://github.com/music-assistant/frontend/pull/2353))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Change Google Filesystem monochrome icon to white (by @OzGav in #5561)
+- Bump ytmusicapi to 1.12.2 (by @MarvinSchenkel in #5562)
+- Update One Drive icon_monochrome.svg (by @OzGav in #5564)
+- ⬆️ Update music-assistant-frontend to 2.17.265 (by @musicassistant-bot[bot] in #5565)
+- Bump CodSpeedHQ/action from 5.0.2 to 5.0.3 (by @dependabot[bot] in #5566)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @andrei-marinache, @arturpragacz, @fmunkes, @jozefKruszynski, @marcelveldt, @stvncode, @teancom
+
+
 # [2.10.0.dev2026081003] - 10.08.2026
 
 ## 📦 Nightly Release
@@ -103,65 +156,3 @@ _Changes since [2.10.0.dev2026080823](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt
-
-
-# [2.10.0.dev2026080823] - 09.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026080803](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080803)_
-
-### 🚀 Features and enhancements
-
-- Allow configuring Snapcast TCP stream sample rate and bit depth (by @rwjack in #5140)
-- Addendum to collection support: Enhance search ability and overwrite collection metadata on provider sync (by @fmunkes in #5226)
-
-### 🐛 Bugfixes
-
-- Fix Bose SoundTouch preset search and assignment (by @Odn0 in #5158)
-- Resolve OpenSubsonic playlist tracks without per-track album and lyrics fetches (by @GraysonCAdams in #5359)
-- Change ABC radio monochrome icon from black to white (by @OzGav in #5392)
-- Fix Pocket Casts sync failing on episodes without a duration (by @OzGav in #5397)
-- Say which type failed when JSON serialization fails (by @OzGav in #5439)
-- Fix slow Home Assistant logins when a provider fails to finish loading (by @OzGav in #5455)
-- Fix playlists not loading in Home Assistant (by @marcelveldt in #5489)
-- Fix Apple TV now-playing screen losing progress and artwork (by @marcelveldt in #5490)
-- Skip the provider search for an empty search query (by @MarvinSchenkel in #5500)
-- Fix filesystem sync never converging on changed files (by @MarvinSchenkel in #5506)
-- Fix file shares importing nothing and hiding playlists (#6019) (by @OzGav in #5510)
-- Skip unreachable IPv6 addresses when connecting to Cast devices (by @OzGav in #5513)
-- Fix broken playlists page after upgrading from stable to beta (by @marcelveldt in #5515)
-
-### 🎨 Frontend Changes
-
-- Make test fixtures match the real API models (by @marcelveldt in [#2337](https://github.com/music-assistant/frontend/pull/2337))
-- Match the browse folder type to what the server sends (by @marcelveldt in [#2333](https://github.com/music-assistant/frontend/pull/2333))
-- Remove an unused search helper (by @marcelveldt in [#2330](https://github.com/music-assistant/frontend/pull/2330))
-- Match two more API types to what the server actually sends (by @marcelveldt in [#2335](https://github.com/music-assistant/frontend/pull/2335))
-- Run the PR label check when a PR is opened (by @marcelveldt in [#2332](https://github.com/music-assistant/frontend/pull/2332))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>12 changes</summary>
-
-- Keep unloading a provider when one of its players fails to shut down (by @marcelveldt in #5484)
-- Stop a player registration that was cancelled halfway (by @marcelveldt in #5492)
-- Adjust Snapcast and Soundcloud code owners (by @OzGav in #5494)
-- ⬆️ Update music-assistant-models to 1.1.184 (by @musicassistant-bot[bot] in #5495)
-- Auto-merge dependency bumps without manual conflict resolution (by @MarvinSchenkel in #5499)
-- Use consistent line endings in provider icon files (by @marcelveldt in #5504)
-- Update airplay-cli to v0.4.12 (by @musicassistant-bot[bot] in #5505)
-- Fix dependency auto-merge workflow env contract test (by @MarvinSchenkel in #5507)
-- Stop AirPlay from re-sending unchanged artwork on every seek (by @marcelveldt in #5508)
-- Fix local code checks failing on some numba versions (by @marcelveldt in #5512)
-- ⬆️ Update music-assistant-frontend to 2.17.262 (by @musicassistant-bot[bot] in #5514)
-- Name the right speaker when Sonos S1 grouping fails (by @marcelveldt in #5519)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@GraysonCAdams, @MarvinSchenkel, @Odn0, @OzGav, @fmunkes, @marcelveldt, @rwjack
