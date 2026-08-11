@@ -1,3 +1,28 @@
+# [2.9.12] - 11.08.2026
+
+## 📦 Stable Release
+
+_Changes since [2.9.11](https://github.com/music-assistant/server/releases/tag/2.9.11)_
+
+### 🐛 Bugfixes
+
+- Fix Sonos S1 speakers no longer reacting instantly after a network hiccup (by @marcelveldt in #5432)
+- Keep the full duration of an audiobook when resuming mid-book (by @marcelveldt in #5524)
+- Fix YouTube Music episode description breaking player state (by @andrei-marinache in #5560)
+- Fix Spotify playback (by @marcelveldt in #5568)
+- Fix Spotify playback (by @marcelveldt in #5574)
+
+### Other Changes
+
+- Keep the full duration of an audiobook when resuming mid-book (by @marcelveldt in #5534)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@andrei-marinache, @marcelveldt
+
+
 # [2.9.11] - 07.08.2026
 
 ## 📦 Stable Release
@@ -63,38 +88,5 @@ _Changes since [2.9.9](https://github.com/music-assistant/server/releases/tag/2.
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @Matthew-Kilpatrick, @OzGav, @chrisuthe, @geofffranks, @jozefKruszynski, @marcelveldt
-
-
-# [2.9.9] - 17.07.2026
-
-## 📦 Stable Release
-
-_Changes since [2.9.8](https://github.com/music-assistant/server/releases/tag/2.9.8)_
-
-### 🐛 Bugfixes
-
-- Show artwork for SiriusXM radio streams (by @MarvinSchenkel in #4684)
-- Fix album artists for Apple Music compilations (by @MarvinSchenkel in #4764)
-- Fix YouTube Music podcast shows being parsed as albums (by @MarvinSchenkel in #4781)
-- Safely serialize OAuth callback values (by @MarvinSchenkel in #4796)
-- Fix legacy Smart Fades centroid corruption (by @MarvinSchenkel in #4798)
-- Fix radio station image passed as raw provider path in stream metadata (by @OzGav in #4800)
-- Fix ORF Radiothek provider staying unloaded when startup coincides with network unavailable (by @OzGav in #4801)
-- Offer fake mute control for players with protocol-provided volume (by @OzGav in #4802)
-- Keep metadata scan tasks running when a library row has corrupt metadata JSON (by @OzGav in #4803)
-- Fix Sonos S1 enqueue failing with UPnP error 701 (by @OzGav in #4813)
-- Allow adding players to a dynamic sync group when all members are offline (by @OzGav in #4814)
-- Fix OOM in Smart Fades centroid repair migration (by @MarvinSchenkel in #4819)
-- Fix album track order for YT Music tracks without disc info (by @MarvinSchenkel in #4826)
-
-### 🧰 Maintenance and dependency bumps
-
-- Prefer AirPlay 2 for known JBL models in automatic protocol selection (by @OzGav in #4822)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav
 
 
