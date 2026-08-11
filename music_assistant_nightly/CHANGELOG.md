@@ -1,3 +1,47 @@
+# [2.10.0.dev2026081100] - 11.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081018](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081018)_
+
+### 🚀 Features and enhancements
+
+- Add a configurable volume step size to the players core config (by @quadcom in #5571)
+- Make the Spotify setup steps easier to follow (by @marcelveldt in #5575)
+- Explain the background library import after adding a music provider (by @marcelveldt in #5576)
+
+### 🐛 Bugfixes
+
+- Fix Spotify playback (by @marcelveldt in #5568)
+- Fix minor typo in strings.json (by @dovy6 in #5569)
+- Keep bridged AirPlay speakers in sync after a seek or track change (by @marcelveldt in #5570)
+- Update strings for radio stations settings for OpenSubsonic Provider (by @frjol in #5572)
+
+### 🎨 Frontend Changes
+
+- Fix Music Quiz getting stuck for non-English users (by @marcelveldt in [#2366](https://github.com/music-assistant/frontend/pull/2366))
+- Show formatted text and working links in provider setup steps (by @marcelveldt in [#2382](https://github.com/music-assistant/frontend/pull/2382))
+- Tidy up API types that are always sent by the server (by @marcelveldt in [#2379](https://github.com/music-assistant/frontend/pull/2379))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Make failing background tasks fail the announcement tests (by @marcelveldt in #5551)
+- Clean up player settings when a player provider is removed (by @marcelveldt in #5552)
+- ⬆️ Update music-assistant-frontend to 2.17.266 (by @musicassistant-bot[bot] in #5578)
+- Update airplay-cli to v0.4.13 (by @musicassistant-bot[bot] in #5579)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@dovy6, @frjol, @marcelveldt, @quadcom
+
+
 # [2.10.0.dev2026081018] - 10.08.2026
 
 ## 📦 Nightly Release
@@ -134,25 +178,3 @@ _Changes since [2.10.0.dev2026080903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @GraysonCAdams, @MarvinSchenkel, @OzGav, @arturpragacz, @bsny, @chrisuthe, @dmoo500, @fmunkes, @khers, @marcelveldt
-
-
-# [2.10.0.dev2026080903] - 09.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026080823](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026080823)_
-
-### 🐛 Bugfixes
-
-- Report a failed Cast receiver app launch instead of ignoring it (by @OzGav in #5520)
-
-### 🧰 Maintenance and dependency bumps
-
-- Remove an unused internal helper from the music controller (by @marcelveldt in #5523)
-- ⬆️ Update music-assistant-models to 1.1.185 (by @musicassistant-bot[bot] in #5527)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt
