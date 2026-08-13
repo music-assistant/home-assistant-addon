@@ -2,9 +2,12 @@ configuration:
   log_level:
     name: Log Level
     description: "Set the (global) log level (NOTE: only enable debug when needed)."
-  branch:
-    name: Github branch
-    description: "Specify the branch (or PR) to install at startup."
+  server_repo:
+    name: Server repository
+    description: "Build the server from a branch, pr-<number>, full commit hash, or owner/repo@branch for a fork. Leave empty to use the nightly build in this image."
+  frontend_repo:
+    name: Frontend repository
+    description: "Build the frontend from a branch, pr-<number>, full commit hash, or owner/repo@branch for a fork. Leave empty to use the frontend bundled with the server."
   safe_mode:
     name: Safe mode
     description: "Start the Music Assistant server in safe mode where only the core controllers are started without any providers, to troubleshoot issues"
