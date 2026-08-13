@@ -1,3 +1,73 @@
+# [2.10.0.dev2026081303] - 13.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081203](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081203)_
+
+### 🚀 Features and enhancements
+
+- Use faster `stream/clear` for Sendspin track changes, behind a legacy toggle (by @maximmaxim345 in #3870)
+- Add artist name sorting for tracks and albums (by @dmoo500 in #5340)
+- AI Radio: reusable hosts and an AI DJ for any queue (by @MarvinSchenkel in #5538)
+- Rework and refine the Bose SoundTouch provider (by @fmunkes in #5573)
+- Pair the built-in web player automatically (by @maximmaxim345 in #5591)
+- Play announcements over the music on AirPlay players (by @marcelveldt in #5598)
+- Hand a sync group over to a speaker that's still playing (by @marcelveldt in #5612)
+- Send a spoken announcement by typing the text (by @marcelveldt in #5621)
+
+### 🐛 Bugfixes
+
+- Fix sync group breaking up when the leader is removed during playback (by @marcelveldt in #5606)
+- Fix music not resuming on WiiM speakers after a group change (by @MarvinSchenkel in #5609)
+- Fix Edifier and other older LinkPlay speakers playing silently over AirPlay (by @marcelveldt in #5618)
+
+### 🎨 Frontend Changes
+
+- Play an announcement from the player menu (by @marcelveldt in [#2458](https://github.com/music-assistant/frontend/pull/2458))
+- More room for the player bar buttons on a wide screen (by @marcelveldt in [#2449](https://github.com/music-assistant/frontend/pull/2449))
+- A floating dock for the player and bottom menu (by @marcelveldt in [#2441](https://github.com/music-assistant/frontend/pull/2441))
+- A slimmer floating player with the grouping button next to play (by @marcelveldt in [#2440](https://github.com/music-assistant/frontend/pull/2440))
+- Add encryption and auto-pairing to the built-in web player (by @maximmaxim345 in [#2399](https://github.com/music-assistant/frontend/pull/2399))
+- AI Radio hosts editor and the AI DJ queue menu (by @MarvinSchenkel in [#2354](https://github.com/music-assistant/frontend/pull/2354))
+- Use the same grouping icon with player count everywhere (by @marcelveldt in [#2436](https://github.com/music-assistant/frontend/pull/2436))
+- Swipe down player fullscreen from anywhere (by @stvncode in [#2431](https://github.com/music-assistant/frontend/pull/2431))
+- Show the app update prompt instead of hiding it behind the player bar (by @marcelveldt in [#2461](https://github.com/music-assistant/frontend/pull/2461))
+- Let a touch drag scroll the group volume popout (by @marcelveldt in [#2462](https://github.com/music-assistant/frontend/pull/2462))
+- Keep the sleep timer clear of the player bar timeline (by @marcelveldt in [#2460](https://github.com/music-assistant/frontend/pull/2460))
+- Keep the on-screen keyboard out of the AI radio and smart playlist pickers (by @marcelveldt in [#2455](https://github.com/music-assistant/frontend/pull/2455))
+- Keep floating buttons and popups clear of the screen cutout (by @marcelveldt in [#2459](https://github.com/music-assistant/frontend/pull/2459))
+- Keep the smart playlist picker's list steady while it closes (by @marcelveldt in [#2457](https://github.com/music-assistant/frontend/pull/2457))
+- Remove the web player from the server when you switch it off (by @marcelveldt in [#2453](https://github.com/music-assistant/frontend/pull/2453))
+- Let the mobile menu fill the screen behind the phone's controls (by @marcelveldt in [#2445](https://github.com/music-assistant/frontend/pull/2445))
+- Keep the player bar popouts floating as they grow (by @marcelveldt in [#2443](https://github.com/music-assistant/frontend/pull/2443))
+- Translate the menu button on the mobile bottom bar (by @marcelveldt in [#2442](https://github.com/music-assistant/frontend/pull/2442))
+- Less empty space below the mobile menu (by @marcelveldt in [#2434](https://github.com/music-assistant/frontend/pull/2434))
+- Show the full playlist list again when the AI radio picker reopens (by @marcelveldt in [#2435](https://github.com/music-assistant/frontend/pull/2435))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>9 changes</summary>
+
+- Keep sync group playing when the lead speaker is removed (by @marcelveldt in #5608)
+- Keep sync groups on the right protocol when a speaker can't play natively (by @marcelveldt in #5610)
+- Bump auntie-sounds to 2.0.4 (by @MarvinSchenkel in #5611)
+- Don't move a sync group onto a speaker's offline protocol (by @marcelveldt in #5613)
+- Only hand a sync group over to a speaker that can still be reached (by @marcelveldt in #5615)
+- Update airplay-cli to v0.4.15 (by @musicassistant-bot[bot] in #5619)
+- Add false-positive guards to the review-instructions shard (by @chrisuthe in #5620)
+- ⬆️ Update music-assistant-models to 1.1.187 (by @musicassistant-bot[bot] in #5623)
+- ⬆️ Update music-assistant-frontend to 2.17.269 (by @musicassistant-bot[bot] in #5624)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @dmoo500, @fmunkes, @marcelveldt, @maximmaxim345, @stvncode
+
+
 # [2.10.0.dev2026081203] - 12.08.2026
 
 ## 📦 Nightly Release
@@ -100,47 +170,3 @@ _Changes since [2.10.0.dev2026081100](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @florianhorner, @marcelveldt
-
-
-# [2.10.0.dev2026081100] - 11.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081018](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081018)_
-
-### 🚀 Features and enhancements
-
-- Add a configurable volume step size to the players core config (by @quadcom in #5571)
-- Make the Spotify setup steps easier to follow (by @marcelveldt in #5575)
-- Explain the background library import after adding a music provider (by @marcelveldt in #5576)
-
-### 🐛 Bugfixes
-
-- Fix Spotify playback (by @marcelveldt in #5568)
-- Fix minor typo in strings.json (by @dovy6 in #5569)
-- Keep bridged AirPlay speakers in sync after a seek or track change (by @marcelveldt in #5570)
-- Update strings for radio stations settings for OpenSubsonic Provider (by @frjol in #5572)
-
-### 🎨 Frontend Changes
-
-- Fix Music Quiz getting stuck for non-English users (by @marcelveldt in [#2366](https://github.com/music-assistant/frontend/pull/2366))
-- Show formatted text and working links in provider setup steps (by @marcelveldt in [#2382](https://github.com/music-assistant/frontend/pull/2382))
-- Tidy up API types that are always sent by the server (by @marcelveldt in [#2379](https://github.com/music-assistant/frontend/pull/2379))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Make failing background tasks fail the announcement tests (by @marcelveldt in #5551)
-- Clean up player settings when a player provider is removed (by @marcelveldt in #5552)
-- ⬆️ Update music-assistant-frontend to 2.17.266 (by @musicassistant-bot[bot] in #5578)
-- Update airplay-cli to v0.4.13 (by @musicassistant-bot[bot] in #5579)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@dovy6, @frjol, @marcelveldt, @quadcom
