@@ -2,8 +2,7 @@
 #
 # DEV MASS image: the nightly server image + the tooling to install MASS from source
 #
-ARG BUILD_FROM=ghcr.io/music-assistant/server:nightly
-FROM ${BUILD_FROM}
+FROM ghcr.io/music-assistant/server:nightly
 
 ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
