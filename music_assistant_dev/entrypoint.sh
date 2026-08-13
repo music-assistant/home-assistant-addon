@@ -34,15 +34,37 @@ parse_repo_ref() {
         return
     fi
 
-    # If input contains "/" (fork reference)
+    # If input contains "/" (branch name or fork reference)
     if echo "$input" | grep -q "/"; then
         # Check if it already has @ for branch
         if echo "$input" | grep -q "@"; then
             echo "$input"
-        else
-            # It's just owner/repo, use default branch
-            echo "${input}@main"
+            return
         fi
+        # A bare slash is ambiguous: "owner/repo" names a fork, but "user/my-feature"
+        # is just as likely a branch name. Ask the default repo which one it is.
+        # Patterns are fully qualified because ls-remote matches loosely otherwise.
+        local probe_rc=0
+        git ls-remote --exit-code \
+            "https://github.com/${default_owner}/${default_repo}" \
+            "refs/heads/${input}" "refs/tags/${input}" >/dev/null 2>&1 || probe_rc=$?
+        case "$probe_rc" in
+            0)
+                echo "${default_owner}/${default_repo}@${input}"
+                ;;
+            2)
+                # It's just owner/repo, use default branch
+                echo "${input}@$(default_branch "$input")"
+                ;;
+            *)
+                # Anything else means the lookup itself failed. Guessing here would
+                # silently install something other than what was asked for.
+                echo "" >&2
+                echo "ERROR: could not reach GitHub to look up '${input}'" >&2
+                echo "       Check the network connection and restart the App." >&2
+                exit 1
+                ;;
+        esac
         return
     fi
 
@@ -50,10 +72,29 @@ parse_repo_ref() {
     echo "${default_owner}/${default_repo}@${input}"
 }
 
+# Function to report the branch a repository points HEAD at
+default_branch() {
+    local head
+    head=$(git ls-remote --symref "https://github.com/$1" HEAD 2>/dev/null \
+        | awk '/^ref:/ { sub("refs/heads/", "", $2); print $2; exit }')
+    # An unreachable repository is reported later, by whoever tries to fetch it.
+    echo "${head:-main}"
+}
+
 # Function to build git URL from parsed reference
 build_git_url() {
     local parsed="$1"
     echo "git+https://github.com/${parsed}"
+}
+
+# Function to abort with a readable reason for an unreachable repository or reference
+repo_ref_error() {
+    local parsed="$1"
+    echo ""
+    echo "ERROR: could not fetch '${parsed#*@}' from https://github.com/${parsed%@*}"
+    echo "       Check that the repository exists and is public, and that the branch,"
+    echo "       PR or commit is spelled correctly. A fork can be written owner/repo@ref."
+    exit 1
 }
 
 # Activate virtual environment
@@ -64,6 +105,10 @@ build_git_url() {
 # package it hosts (e.g. pillow), failing resolution when the pinned version only
 # exists on PyPI. Matches the server repo's Dockerfile/CI/setup.sh behavior.
 export UV_INDEX_STRATEGY=unsafe-best-match
+
+# The App has no terminal, so a missing or private repository makes git block on a
+# credential prompt and report that instead of the actual problem.
+export GIT_TERMINAL_PROMPT=0
 
 echo "-----------------------------------------------------------"
 echo "Step 1: Installing Music Assistant Server"
@@ -89,6 +134,15 @@ if [ "$build_from_source" = true ]; then
 
     echo "Installing dependencies from: $requirements_url"
     echo ""
+
+    # This URL only resolves when the repository and the reference both exist, so a
+    # 404 here names a wrong reference before uv reports it as a dependency problem.
+    # Every other outcome is left to uv, which retries where a single request cannot.
+    req_rc=0
+    curl -fsI --connect-timeout 10 --max-time 30 -o /dev/null "$requirements_url" || req_rc=$?
+    if [ "$req_rc" -eq 22 ]; then
+        repo_ref_error "$server_ref"
+    fi
 
     # the bundled app vars live inside the package, so a source install removes them
     site_packages=$(python -c 'import sysconfig; print(sysconfig.get_path("purelib"))')
@@ -167,14 +221,12 @@ mkdir -p "$frontend_dir"
 echo "Cloning frontend repository..."
 cd "$frontend_dir"
 
-# Clone the repository
-git clone --depth 1 --branch "$frontend_branch" \
-    "https://github.com/${frontend_owner}/${frontend_repo_name}.git" . 2>/dev/null || \
-    (git clone "https://github.com/${frontend_owner}/${frontend_repo_name}.git" . && \
-     git checkout "$frontend_branch")
-
-# Ensure we have the absolute latest changes from the remote
-git fetch --depth 1 origin "$frontend_branch"
+# Fetching the reference is the only form that covers branches, tags,
+# refs/pull/<number>/head and full commit hashes alike, and it always lands on the
+# latest state of the remote.
+git init -q .
+git remote add origin "https://github.com/${frontend_owner}/${frontend_repo_name}.git"
+git fetch --depth 1 origin "$frontend_branch" || repo_ref_error "$frontend_ref"
 git reset --hard FETCH_HEAD
 
 echo "✓ Frontend cloned ($(git rev-parse --short HEAD))"

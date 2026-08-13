@@ -45,9 +45,9 @@ Use the `server_repo` option to specify which version of the Music Assistant ser
 
 **Format**: `owner/repo@reference` or just `reference`
 
-- **Branch**: `dev`, `main`, or any branch name
+- **Branch**: `dev`, `main`, or any branch name, including one with a slash like `feature/new-player`
 - **Pull Request**: `pr-123` (will checkout PR #123)
-- **Fork**: `username/server@branch-name`
+- **Fork**: `username/server@branch-name`, or `username/server` to use that fork's default branch
 - **Commit**: Full commit SHA
 - **Empty/blank**: Use the nightly build baked into the App image (fast mode - no install required)
 
@@ -83,9 +83,9 @@ Use the `frontend_repo` option to specify which version of the Music Assistant f
 
 **Format**: Same as server_repo - `owner/repo@reference` or just `reference`
 
-- **Branch**: `main`, `dev`, or any branch name
+- **Branch**: `main`, `dev`, or any branch name, including one with a slash like `feature/new-ui`
 - **Pull Request**: `pr-789` (will checkout PR #789)
-- **Fork**: `username/frontend@branch-name`
+- **Fork**: `username/frontend@branch-name`, or `username/frontend` to use that fork's default branch
 - **Commit**: Full commit SHA
 - **Empty/blank**: Skip frontend build (use bundled frontend)
 
@@ -175,7 +175,7 @@ When specifying a pull request, use `pr-NUMBER` (e.g., `pr-123`, `pr-456`). The 
 
 ### Build failures
 
-- Ensure the specified Git reference exists
+- Ensure the specified Git reference exists - the log names the repository and reference it could not reach
 - Check if there are dependency conflicts in the branch
 - Frontend build requires Node.js - build failures may indicate incompatible frontend code
 
