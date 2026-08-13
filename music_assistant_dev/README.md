@@ -22,7 +22,7 @@ Unlike the regular Music Assistant App which uses pre-built releases, this Dev A
 The build process:
 
 1. Installs the server package from the specified Git reference
-2. Builds the frontend according to its build procedure (npm build)
+2. Builds the frontend with the package manager detected from its lockfile (pnpm, yarn, or npm)
 3. Installs the frontend as a Python package (overwriting the default frontend)
 4. Starts Music Assistant
 
