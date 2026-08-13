@@ -10,7 +10,6 @@ arch:
 homeassistant_api: true
 discovery:
   - music_assistant
-audio: true
 auth_api: true
 host_network: true
 ingress: true
