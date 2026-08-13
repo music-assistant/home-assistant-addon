@@ -1,3 +1,60 @@
+# [2.10.0.dev2026081315] - 13.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081303](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081303)_
+
+### 🚀 Features and enhancements
+
+- Speak an announcement with your microphone (by @marcelveldt in #5626)
+- AI Radio: add host presets and a per-host language (by @MarvinSchenkel in #5627)
+- Allow radio stations to play as dynamic stations (by @MarvinSchenkel in #5628)
+- Speak an announcement in your own language (by @marcelveldt in #5630)
+- AI Radio: send per-host TTS options to Home Assistant (by @MarvinSchenkel in #5634)
+
+### 🐛 Bugfixes
+
+- Fix the new gPodder config flow (by @fmunkes in #5614)
+- Fix the Audible provider's setup flow (by @fmunkes in #5616)
+- Report an expired YouTube Music cookie instead of a raw parse error (by @MarvinSchenkel in #5629)
+
+### 🎨 Frontend Changes
+
+- Lay a phone out as a phone when it is turned on its side (by @marcelveldt in [#2473](https://github.com/music-assistant/frontend/pull/2473))
+- Speak an announcement with your microphone (by @marcelveldt in [#2471](https://github.com/music-assistant/frontend/pull/2471))
+- Replace play text by the speaker name + add povider icon for lib (by @stvncode in [#2486](https://github.com/music-assistant/frontend/pull/2486))
+- AI Radio: host presets, a per-host language, and a usable segment editor on mobile (by @MarvinSchenkel in [#2474](https://github.com/music-assistant/frontend/pull/2474))
+- Swipe left to go back, plus tidier mobile popouts (by @marcelveldt in [#2480](https://github.com/music-assistant/frontend/pull/2480))
+- Make the mobile volume slider easier to hit (by @marcelveldt in [#2468](https://github.com/music-assistant/frontend/pull/2468))
+- Land on the page you clicked after discarding unsaved settings (by @marcelveldt in [#2488](https://github.com/music-assistant/frontend/pull/2488))
+- Player bar buttons no longer keep a grey background after their popout closes (by @marcelveldt in [#2487](https://github.com/music-assistant/frontend/pull/2487))
+- Stop the fullscreen player button changing colour on hover (by @marcelveldt in [#2489](https://github.com/music-assistant/frontend/pull/2489))
+- Fill the dead strip at the bottom in the Home Assistant app (by @marcelveldt in [#2484](https://github.com/music-assistant/frontend/pull/2484))
+- Let the screen sleep again after visiting the party dashboard (by @marcelveldt in [#2485](https://github.com/music-assistant/frontend/pull/2485))
+- Stop the overflow menu button staying highlighted after its menu closes (by @marcelveldt in [#2482](https://github.com/music-assistant/frontend/pull/2482))
+- Back buttons no longer leave you stuck on a directly opened page (by @marcelveldt in [#2483](https://github.com/music-assistant/frontend/pull/2483))
+- Bring the app back when leaving the party dashboard fullscreen (by @marcelveldt in [#2475](https://github.com/music-assistant/frontend/pull/2475))
+- Keep the player popouts clear of the screen cutout (by @marcelveldt in [#2464](https://github.com/music-assistant/frontend/pull/2464))
+- Keep the party dashboard filling the screen (by @marcelveldt in [#2467](https://github.com/music-assistant/frontend/pull/2467))
+- Let a touch drag scroll the volume panel and player list (by @marcelveldt in [#2469](https://github.com/music-assistant/frontend/pull/2469))
+- Share the CSS cascade helpers between the style tests (by @marcelveldt in [#2477](https://github.com/music-assistant/frontend/pull/2477))
+- Let the party dashboard stop listening for updates when you leave it (by @marcelveldt in [#2481](https://github.com/music-assistant/frontend/pull/2481))
+- Round the home screen's edit button again (by @marcelveldt in [#2479](https://github.com/music-assistant/frontend/pull/2479))
+- One favourites menu on the player bar and full screen player (by @marcelveldt in [#2499](https://github.com/music-assistant/frontend/pull/2499))
+
+### 🧰 Maintenance and dependency bumps
+
+- ⬆️ Update music-assistant-frontend to 2.17.270 (by @musicassistant-bot[bot] in #5632)
+- ⬆️ Update music-assistant-models to 1.1.188 (by @musicassistant-bot[bot] in #5633)
+- ⬆️ Update music-assistant-frontend to 2.17.271 (by @musicassistant-bot[bot] in #5637)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @fmunkes, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026081303] - 13.08.2026
 
 ## 📦 Nightly Release
@@ -137,36 +194,3 @@ _Changes since [2.10.0.dev2026081103](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @arturpragacz, @chrisuthe, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @teancom, @trudenboy
-
-
-# [2.10.0.dev2026081103] - 11.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081100](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081100)_
-
-### 🚀 New Providers
-
-- Add Mamma Mi Radio music provider (by @florianhorner in #3836)
-
-### 🐛 Bugfixes
-
-- Stop Sonos S1 speakers from dropping on a single missed request (by @OzGav in #5556)
-- Fix a brief audio hiccup on the first playback after starting the server (by @marcelveldt in #5577)
-
-### 🎨 Frontend Changes
-
-- Add a pull request template so contributors know which label to pick (by @marcelveldt in [#2343](https://github.com/music-assistant/frontend/pull/2343))
-- Keep the test fixtures' item ids and uris in sync (by @marcelveldt in [#2377](https://github.com/music-assistant/frontend/pull/2377))
-- Use the shared media item fixtures in the smart playlist seed tests (by @marcelveldt in [#2378](https://github.com/music-assistant/frontend/pull/2378))
-- Share a player queue test fixture (by @marcelveldt in [#2381](https://github.com/music-assistant/frontend/pull/2381))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.267 (by @musicassistant-bot[bot] in #5580)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @florianhorner, @marcelveldt
