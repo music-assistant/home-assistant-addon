@@ -1,3 +1,53 @@
+# [2.10.0.dev2026081403] - 14.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081315](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081315)_
+
+### 🚀 Features and enhancements
+
+- Album art no longer holds up the app over a remote connection (by @marcelveldt in #5635)
+- Album art uses far less data over a remote connection (by @marcelveldt in #5643)
+
+### 🐛 Bugfixes
+
+- Fix Cast players ignoring media errors and the receiver app setting (by @OzGav in #5622)
+- Announcements no longer restart the Cast session (by @marcelveldt in #5644)
+
+### 🎨 Frontend Changes
+
+- Album art loads faster over a remote connection (by @marcelveldt in [#2507](https://github.com/music-assistant/frontend/pull/2507))
+- Highlight player bar buttons instead of filling them (by @marcelveldt in [#2508](https://github.com/music-assistant/frontend/pull/2508))
+- Album art no longer holds up the app over a remote connection (by @marcelveldt in [#2503](https://github.com/music-assistant/frontend/pull/2503))
+- Sleep timer and playback speed on the desktop player bar (by @marcelveldt in [#2505](https://github.com/music-assistant/frontend/pull/2505))
+- Use 4-space indentation in JSON config files (by @marcelveldt in [#2512](https://github.com/music-assistant/frontend/pull/2512))
+- Catch modules that get imported twice in the same file (by @marcelveldt in [#2511](https://github.com/music-assistant/frontend/pull/2511))
+- Stop ItemsListing tests from leaking state into each other (by @marcelveldt in [#2510](https://github.com/music-assistant/frontend/pull/2510))
+- Stop paging through the library after you leave a listing (by @marcelveldt in [#2504](https://github.com/music-assistant/frontend/pull/2504))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>8 changes</summary>
+
+- Rebuild the dev add-on when a new nightly is released (by @marcelveldt in #5636)
+- Fix outdated AirPlay late-join timing comments (by @marcelveldt in #5638)
+- Document the AirPlay audio buffer depth setting (by @marcelveldt in #5639)
+- Document the data channels used by remote access (by @marcelveldt in #5642)
+- Correct stale and inaccurate rules in the review-instructions standards (by @chrisuthe in #5645)
+- Remove the superseded bespoke PR-review workflow (by @chrisuthe in #5646)
+- Fix outdated AirPlay comments about how warm playback boundaries work (by @marcelveldt in #5647)
+- ⬆️ Update music-assistant-frontend to 2.17.272 (by @musicassistant-bot[bot] in #5652)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @chrisuthe, @marcelveldt
+
+
 # [2.10.0.dev2026081315] - 13.08.2026
 
 ## 📦 Nightly Release
@@ -123,74 +173,3 @@ _Changes since [2.10.0.dev2026081203](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @chrisuthe, @dmoo500, @fmunkes, @marcelveldt, @maximmaxim345, @stvncode
-
-
-# [2.10.0.dev2026081203] - 12.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081103](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081103)_
-
-### 🚀 Features and enhancements
-
-- Update Yandex Music provider to v3.8.8: shared playlist requests and current authentication (by @trudenboy in #5171)
-- Stop dating songs from hits compilations (by @marcelveldt in #5586)
-- Use expanded_options for sendspin pairing method (by @arturpragacz in #5592)
-- Date songs written for films by their soundtrack (by @marcelveldt in #5594)
-- Extend low-latency WAV default to Squeezelite and MPD live sources (by @marcelveldt in #5602)
-
-### 🐛 Bugfixes
-
-- Surface Bandcamp label-released performers as their own artists (by @teancom in #3824)
-- Only return the Phish artist when the query matches its name (by @OzGav in #5583)
-- Fix guests seeing another guest's web player (by @maximmaxim345 in #5590)
-- Fix sync group not re-forming after a leader switch (by @marcelveldt in #5595)
-- Fix Spotify pairing authorization (by @marcelveldt in #5599)
-- Improve live source playback compatibility (by @marcelveldt in #5600)
-
-### 🎨 Frontend Changes
-
-- Compact the mobile player in settings (by @marcelveldt in [#2428](https://github.com/music-assistant/frontend/pull/2428))
-- Add a radio group rendering for expanded config entry options (by @arturpragacz in [#2401](https://github.com/music-assistant/frontend/pull/2401))
-- Give the player list, group and volume panels more room (by @marcelveldt in [#2410](https://github.com/music-assistant/frontend/pull/2410))
-- Keep the fullscreen player open when picking a player (by @marcelveldt in [#2406](https://github.com/music-assistant/frontend/pull/2406))
-- Consistent settings screens and a save button that stays clear of the player bar (by @marcelveldt in [#2407](https://github.com/music-assistant/frontend/pull/2407))
-- Add Milkdrop visualizer plugin (by @jozefKruszynski in [#2340](https://github.com/music-assistant/frontend/pull/2340))
-- Add ability to collapse collections in the author / narrator details view (by @fmunkes in [#2351](https://github.com/music-assistant/frontend/pull/2351))
-- Keep the mobile save button close to the player (by @marcelveldt in [#2429](https://github.com/music-assistant/frontend/pull/2429))
-- Keep the mobile menu clear of phone controls (by @marcelveldt in [#2427](https://github.com/music-assistant/frontend/pull/2427))
-- Keep the settings save button above the mobile player (by @marcelveldt in [#2425](https://github.com/music-assistant/frontend/pull/2425))
-- No more keyboard popping up over short filter lists (by @marcelveldt in [#2419](https://github.com/music-assistant/frontend/pull/2419))
-- Apply the mobile sidebar side setting right away (by @marcelveldt in [#2423](https://github.com/music-assistant/frontend/pull/2423))
-- Stop the "items selected" box floating too far above the player bar (by @marcelveldt in [#2424](https://github.com/music-assistant/frontend/pull/2424))
-- Don't open the on-screen keyboard when a search list opens (by @marcelveldt in [#2420](https://github.com/music-assistant/frontend/pull/2420))
-- Let the group volume popout scroll instead of running off screen (by @marcelveldt in [#2418](https://github.com/music-assistant/frontend/pull/2418))
-- Remember the last selected player when opening from Home Assistant (by @marcelveldt in [#2417](https://github.com/music-assistant/frontend/pull/2417))
-- Stop the "items selected" box covering the player menus (by @marcelveldt in [#2412](https://github.com/music-assistant/frontend/pull/2412))
-- Don't open the on-screen keyboard when a search dialog opens (by @marcelveldt in [#2411](https://github.com/music-assistant/frontend/pull/2411))
-- Keep the selection bar and playback speed dialog clear of the player bar (by @marcelveldt in [#2408](https://github.com/music-assistant/frontend/pull/2408))
-- Fix shortcut drag-reorder and duplicate prevention (by @dmoo500 in [#2380](https://github.com/music-assistant/frontend/pull/2380))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5581)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Add mined review precedents as Copilot code-review instructions (by @chrisuthe in #5582)
-- Remove a redundant library from the test setup (by @marcelveldt in #5587)
-- Add Zvuk version metadata, ordering cleanup, and regression coverage (by @trudenboy in #5588)
-- ⬆️ Update music-assistant-models to 1.1.186 (by @musicassistant-bot[bot] in #5593)
-- Update airplay-cli to v0.4.14 (by @musicassistant-bot[bot] in #5597)
-- ⬆️ Update music-assistant-frontend to 2.17.268 (by @musicassistant-bot[bot] in #5604)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @arturpragacz, @chrisuthe, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @teancom, @trudenboy
