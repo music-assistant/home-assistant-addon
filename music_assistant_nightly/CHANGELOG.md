@@ -1,3 +1,58 @@
+# [2.10.0.dev2026081503] - 15.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081417](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081417)_
+
+### 🐛 Bugfixes
+
+- Universal Players no longer come back as a brand new player (by @OzGav in #5559)
+- Keep events and settings working when a path is not valid UTF-8 (by @OzGav in #5563)
+- Album art keeps showing when its provider has a hiccup (by @marcelveldt in #5671)
+- Show why AI Radio speech generation failed (by @marcelveldt in #5680)
+- Failed tracks are no longer requested twice from the same provider (by @marcelveldt in #5682)
+- Music from a NAS comes back on its own after a short outage (by @marcelveldt in #5683)
+
+### 🎨 Frontend Changes
+
+- Settings page no longer reloads when nothing changed (by @marcelveldt in [#2523](https://github.com/music-assistant/frontend/pull/2523))
+- Volume now changes while you drag the slider (by @quadcom in [#2470](https://github.com/music-assistant/frontend/pull/2470))
+- Keep the focus on the player menu when it opens on touch (by @marcelveldt in [#2465](https://github.com/music-assistant/frontend/pull/2465))
+- Remove the unused show/hide menu tooltip text (by @marcelveldt in [#2447](https://github.com/music-assistant/frontend/pull/2447))
+- Remove unused breadcrumb component set (by @marcelveldt in [#2521](https://github.com/music-assistant/frontend/pull/2521))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #5676)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>13 changes</summary>
+
+- Bump colorlog from 6.10.1 to 6.12.0 (by @dependabot[bot] in #5539)
+- Split up the Chromecast media status handler (by @marcelveldt in #5670)
+- Tidy up the protocol grouping code (by @marcelveldt in #5672)
+- Keep AirPlay speakers from starting at full volume or silent when a device has several interfaces (by @marcelveldt in #5674)
+- Tidy up the protocol linking code (by @marcelveldt in #5675)
+- Sendspin-driven AirPlay speakers keep the volume they are playing at across a track change (by @marcelveldt in #5677)
+- Play announcements through the speaker's usual output (by @marcelveldt in #5678)
+- Announcements no longer play at the wrong volume on AirPlay speakers with several interfaces (by @marcelveldt in #5679)
+- Announcements now respect the configured volume on speakers whose volume is handled elsewhere (by @marcelveldt in #5681)
+- Remove unused scandir wrapper from the local filesystem provider (by @marcelveldt in #5684)
+- AirPlay speakers on a Sendspin bridge now report the volume and mute they are really at (by @marcelveldt in #5685)
+- Non-UTF-8 filename tests no longer fail on macOS (by @marcelveldt in #5687)
+- ⬆️ Update music-assistant-frontend to 2.17.274 (by @musicassistant-bot[bot] in #5689)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt, @quadcom
+
+
 # [2.10.0.dev2026081417] - 14.08.2026
 
 ## 📦 Nightly Release
@@ -111,60 +166,3 @@ _Changes since [2.10.0.dev2026081315](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @chrisuthe, @marcelveldt
-
-
-# [2.10.0.dev2026081315] - 13.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081303](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081303)_
-
-### 🚀 Features and enhancements
-
-- Speak an announcement with your microphone (by @marcelveldt in #5626)
-- AI Radio: add host presets and a per-host language (by @MarvinSchenkel in #5627)
-- Allow radio stations to play as dynamic stations (by @MarvinSchenkel in #5628)
-- Speak an announcement in your own language (by @marcelveldt in #5630)
-- AI Radio: send per-host TTS options to Home Assistant (by @MarvinSchenkel in #5634)
-
-### 🐛 Bugfixes
-
-- Fix the new gPodder config flow (by @fmunkes in #5614)
-- Fix the Audible provider's setup flow (by @fmunkes in #5616)
-- Report an expired YouTube Music cookie instead of a raw parse error (by @MarvinSchenkel in #5629)
-
-### 🎨 Frontend Changes
-
-- Lay a phone out as a phone when it is turned on its side (by @marcelveldt in [#2473](https://github.com/music-assistant/frontend/pull/2473))
-- Speak an announcement with your microphone (by @marcelveldt in [#2471](https://github.com/music-assistant/frontend/pull/2471))
-- Replace play text by the speaker name + add povider icon for lib (by @stvncode in [#2486](https://github.com/music-assistant/frontend/pull/2486))
-- AI Radio: host presets, a per-host language, and a usable segment editor on mobile (by @MarvinSchenkel in [#2474](https://github.com/music-assistant/frontend/pull/2474))
-- Swipe left to go back, plus tidier mobile popouts (by @marcelveldt in [#2480](https://github.com/music-assistant/frontend/pull/2480))
-- Make the mobile volume slider easier to hit (by @marcelveldt in [#2468](https://github.com/music-assistant/frontend/pull/2468))
-- Land on the page you clicked after discarding unsaved settings (by @marcelveldt in [#2488](https://github.com/music-assistant/frontend/pull/2488))
-- Player bar buttons no longer keep a grey background after their popout closes (by @marcelveldt in [#2487](https://github.com/music-assistant/frontend/pull/2487))
-- Stop the fullscreen player button changing colour on hover (by @marcelveldt in [#2489](https://github.com/music-assistant/frontend/pull/2489))
-- Fill the dead strip at the bottom in the Home Assistant app (by @marcelveldt in [#2484](https://github.com/music-assistant/frontend/pull/2484))
-- Let the screen sleep again after visiting the party dashboard (by @marcelveldt in [#2485](https://github.com/music-assistant/frontend/pull/2485))
-- Stop the overflow menu button staying highlighted after its menu closes (by @marcelveldt in [#2482](https://github.com/music-assistant/frontend/pull/2482))
-- Back buttons no longer leave you stuck on a directly opened page (by @marcelveldt in [#2483](https://github.com/music-assistant/frontend/pull/2483))
-- Bring the app back when leaving the party dashboard fullscreen (by @marcelveldt in [#2475](https://github.com/music-assistant/frontend/pull/2475))
-- Keep the player popouts clear of the screen cutout (by @marcelveldt in [#2464](https://github.com/music-assistant/frontend/pull/2464))
-- Keep the party dashboard filling the screen (by @marcelveldt in [#2467](https://github.com/music-assistant/frontend/pull/2467))
-- Let a touch drag scroll the volume panel and player list (by @marcelveldt in [#2469](https://github.com/music-assistant/frontend/pull/2469))
-- Share the CSS cascade helpers between the style tests (by @marcelveldt in [#2477](https://github.com/music-assistant/frontend/pull/2477))
-- Let the party dashboard stop listening for updates when you leave it (by @marcelveldt in [#2481](https://github.com/music-assistant/frontend/pull/2481))
-- Round the home screen's edit button again (by @marcelveldt in [#2479](https://github.com/music-assistant/frontend/pull/2479))
-- One favourites menu on the player bar and full screen player (by @marcelveldt in [#2499](https://github.com/music-assistant/frontend/pull/2499))
-
-### 🧰 Maintenance and dependency bumps
-
-- ⬆️ Update music-assistant-frontend to 2.17.270 (by @musicassistant-bot[bot] in #5632)
-- ⬆️ Update music-assistant-models to 1.1.188 (by @musicassistant-bot[bot] in #5633)
-- ⬆️ Update music-assistant-frontend to 2.17.271 (by @musicassistant-bot[bot] in #5637)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @fmunkes, @marcelveldt, @stvncode
