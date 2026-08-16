@@ -1,6 +1,6 @@
 name: Music Assistant DEV SERVER
 # tracks the nightly base image; bumped by the server release workflow
-version: 2.10.0.dev2026081503
+version: 2.10.0.dev2026081603
 slug: music_assistant_dev
 description: Development App for Music Assistant. For developers only.
 url: https://music-assistant.io
