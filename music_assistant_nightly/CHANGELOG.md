@@ -1,3 +1,62 @@
+# [2.10.0.dev2026081703] - 17.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081603](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081603)_
+
+### 🚀 Features and enhancements
+
+- Shuffle no longer carries over into the next thing you play (by @marcelveldt in #5740)
+- Queueing an album over a radio no longer plays it shuffled (by @marcelveldt in #5747)
+
+### 🐛 Bugfixes
+
+- Preserve flow source errors (by @teancom in #5725)
+- Fix pause on Sonos S1 speakers stopping playback instead (by @marcelveldt in #5736)
+- Don't parse error pages as radio playlists (by @marcelveldt in #5739)
+- Recover AirPlay playback after dropouts (by @marcelveldt in #5750)
+- Refresh CUE metadata after encoding fixes (by @marcelveldt in #5754)
+- Prevent skipped tracks from resuming too far ahead (by @marcelveldt in #5757)
+- Radio shuffle resets after queue transfer (by @marcelveldt in #5758)
+- Prevent hidden audio stream failures (by @marcelveldt in #5759)
+
+### 🎨 Frontend Changes
+
+- Play an album or playlist shuffled straight from the play menu (by @marcelveldt in [#2537](https://github.com/music-assistant/frontend/pull/2537))
+- Highlight genre aliases on hover (by @marcelveldt in [#2534](https://github.com/music-assistant/frontend/pull/2534))
+- Add automatic refresh for Smart Playlists recommendation row (by @dmoo500 in [#2506](https://github.com/music-assistant/frontend/pull/2506))
+- Fix copying provider links over HTTP (by @marcelveldt in [#2541](https://github.com/music-assistant/frontend/pull/2541))
+- Fix mobile footer blur (by @marcelveldt in [#2536](https://github.com/music-assistant/frontend/pull/2536))
+- Stop player bar icons moving on hover (by @marcelveldt in [#2535](https://github.com/music-assistant/frontend/pull/2535))
+- Show accurate audio analysis progress (by @marcelveldt in [#2533](https://github.com/music-assistant/frontend/pull/2533))
+- Use named play media options (by @marcelveldt in [#2540](https://github.com/music-assistant/frontend/pull/2540))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>11 changes</summary>
+
+- Clean up unused source options on Sonos S1 speakers (by @marcelveldt in #5733)
+- Handle servers that declare an unusable character set (by @marcelveldt in #5735)
+- Stop approving dependency licenses on a partial name match (by @marcelveldt in #5741)
+- Bump deno from 2.7.12 to 2.9.5 (by @dependabot[bot] in #5743)
+- Bump numkong from 7.7.0 to 7.8.0 (by @dependabot[bot] in #5746)
+- Hide the volume controls on Sonos speakers with fixed line-out (by @marcelveldt in #5748)
+- Only download a radio station's playlist once (by @marcelveldt in #5749)
+- Add typosquatting safety tests (by @marcelveldt in #5755)
+- Recognize version-less HLS radio streams (by @marcelveldt in #5756)
+- Prevent flaky parallel test failures (by @marcelveldt in #5760)
+- ⬆️ Update music-assistant-frontend to 2.17.277 (by @musicassistant-bot[bot] in #5761)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@dmoo500, @marcelveldt, @teancom
+
+
 # [2.10.0.dev2026081603] - 16.08.2026
 
 ## 📦 Nightly Release
@@ -134,68 +193,3 @@ _Changes since [2.10.0.dev2026081417](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @marcelveldt, @quadcom
-
-
-# [2.10.0.dev2026081417] - 14.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081403](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081403)_
-
-### 🚀 New Providers
-
-- Add Sendspin `source@v1` role support (by @maximmaxim345 in #5658)
-
-### 🚀 Features and enhancements
-
-- AI Radio hosts no longer sound quieter than the music (by @marcelveldt in #5669)
-
-### 🐛 Bugfixes
-
-- Restore OpenSubsonic track artwork in playlist listings (by @MarvinSchenkel in #5607)
-- Cast devices are freed up again when playback ends (by @marcelveldt in #5654)
-- Fix AirPlay speaker joining a group at full volume (by @marcelveldt in #5668)
-
-### 🎨 Frontend Changes
-
-- Same page heading on Browse as on Settings (by @marcelveldt in [#2520](https://github.com/music-assistant/frontend/pull/2520))
-- One place for player settings (by @marcelveldt in [#2518](https://github.com/music-assistant/frontend/pull/2518))
-- Translate the app update prompt (by @marcelveldt in [#2516](https://github.com/music-assistant/frontend/pull/2516))
-- Fix smart playlist last played validation and rule loading (by @dmoo500 in [#2400](https://github.com/music-assistant/frontend/pull/2400))
-- Milkdrop settings and preset picker mobile fixes (by @jozefKruszynski in [#2509](https://github.com/music-assistant/frontend/pull/2509))
-- Tests fail fast when they try to reach the network (by @marcelveldt in [#2519](https://github.com/music-assistant/frontend/pull/2519))
-- Limit how much album art is cached over a remote connection (by @marcelveldt in [#2517](https://github.com/music-assistant/frontend/pull/2517))
-- Update the app in one piece (by @marcelveldt in [#2515](https://github.com/music-assistant/frontend/pull/2515))
-- Remove dead code from the remote album art cache (by @marcelveldt in [#2514](https://github.com/music-assistant/frontend/pull/2514))
-- Album art uses less memory over a remote connection (by @marcelveldt in [#2513](https://github.com/music-assistant/frontend/pull/2513))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>17 changes</summary>
-
-- Remote connections keep large messages within what the client accepts (by @marcelveldt in #5648)
-- Report a Cast group playback error once instead of once per speaker (by @marcelveldt in #5649)
-- Rename the player media-updated callback for consistency (by @marcelveldt in #5650)
-- Protocol links no longer carry a stale availability flag (by @marcelveldt in #5651)
-- Log the right size when a remote connection drops a message (by @marcelveldt in #5655)
-- Explain why a silent AirPlay speaker is handled differently on the Sendspin bridge (by @marcelveldt in #5656)
-- Move private Sendspin player methods to the bottom of the class (by @marcelveldt in #5657)
-- Fix silent AirPlay playback after breaking up a paused group (by @marcelveldt in #5659)
-- Explain why recovered protocol links are added in place (by @marcelveldt in #5660)
-- Explain why an AirPlay speaker's clock reading is a cycle old at a re-anchor (by @marcelveldt in #5661)
-- Document that an AirPlay pause park outlives the sync group (by @marcelveldt in #5662)
-- Restore saved speaker connections through the normal update path (by @marcelveldt in #5663)
-- Clearer AirPlay debug line when a speaker's clock is already usable (by @marcelveldt in #5664)
-- Ungrouping an AirPlay group leader now releases the whole group (by @marcelveldt in #5665)
-- Keep Cast playback working when a device release is already on its way (by @marcelveldt in #5666)
-- Document how AirPlay group removals are expected to be requested (by @marcelveldt in #5667)
-- ⬆️ Update music-assistant-frontend to 2.17.273 (by @musicassistant-bot[bot] in #5673)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @dmoo500, @jozefKruszynski, @marcelveldt, @maximmaxim345
