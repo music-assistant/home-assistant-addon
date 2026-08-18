@@ -1,3 +1,99 @@
+# [2.10.0rc2] - 18.08.2026
+
+## 📦 RC Release
+
+_Changes since [2.10.0rc1](https://github.com/music-assistant/server/releases/tag/2.10.0rc1)_
+
+### 🚀 Features and enhancements
+
+- Migrate the Tidal provider to the official API where possible. (by @jozefKruszynski in #4875)
+- Add generic LinkPlay speaker support to the WiiM provider (by @marcelveldt in #5729)
+- Group WiiM and generic LinkPlay speakers together (by @marcelveldt in #5737)
+- Shuffle no longer carries over into the next thing you play (by @marcelveldt in #5740)
+- Queueing an album over a radio no longer plays it shuffled (by @marcelveldt in #5747)
+- Add missing media click actions (by @marcelveldt in #5764)
+- Filter default recommendation rows by provider (by @marcelveldt in #5768)
+
+### 🐛 Bugfixes
+
+- Fix editability for owned YouTube Music playlists (by @seppegadeyne in #5187)
+- Ignore incoming media update events while starting HEOS playback (by @Tommatheussen in #5503)
+- Preserve flow source errors (by @teancom in #5725)
+- Fix pause on Sonos S1 speakers stopping playback instead (by @marcelveldt in #5736)
+- Skip DRM protected Soundcloud tracks on import (by @robsonke in #5738)
+- Don't parse error pages as radio playlists (by @marcelveldt in #5739)
+- Recover AirPlay playback after dropouts (by @marcelveldt in #5750)
+- Make the MilkDrop visualizer work on players that reach Sendspin through a linked output (by @jozefKruszynski in #5751)
+- Refresh CUE metadata after encoding fixes (by @marcelveldt in #5754)
+- Prevent skipped tracks from resuming too far ahead (by @marcelveldt in #5757)
+- Radio shuffle resets after queue transfer (by @marcelveldt in #5758)
+- Prevent hidden audio stream failures (by @marcelveldt in #5759)
+- Fix radioparadise metadata flapping (by @teancom in #5762)
+- Prevent track loss when merging duplicates (by @marcelveldt in #5769)
+- Improve library matching across providers (by @marcelveldt in #5770)
+- Improve album edition matching (by @marcelveldt in #5771)
+- Tidal: fix search against the new filter[query] endpoint (spec 1.10.101) (by @jozefKruszynski in #5781)
+
+### 🎨 Frontend Changes
+
+- Choose what happens to grouped playback (by @marcelveldt in [#2531](https://github.com/music-assistant/frontend/pull/2531))
+- Localize shared UI labels (by @teancom in [#2529](https://github.com/music-assistant/frontend/pull/2529))
+- Enforce zero-warning lint checks (by @teancom in [#2530](https://github.com/music-assistant/frontend/pull/2530))
+- Play an album or playlist shuffled straight from the play menu (by @marcelveldt in [#2537](https://github.com/music-assistant/frontend/pull/2537))
+- Highlight genre aliases on hover (by @marcelveldt in [#2534](https://github.com/music-assistant/frontend/pull/2534))
+- Add automatic refresh for Smart Playlists recommendation row (by @dmoo500 in [#2506](https://github.com/music-assistant/frontend/pull/2506))
+- Fix copying provider links over HTTP (by @marcelveldt in [#2541](https://github.com/music-assistant/frontend/pull/2541))
+- Fix mobile footer blur (by @marcelveldt in [#2536](https://github.com/music-assistant/frontend/pull/2536))
+- Stop player bar icons moving on hover (by @marcelveldt in [#2535](https://github.com/music-assistant/frontend/pull/2535))
+- Show accurate audio analysis progress (by @marcelveldt in [#2533](https://github.com/music-assistant/frontend/pull/2533))
+- Use named play media options (by @marcelveldt in [#2540](https://github.com/music-assistant/frontend/pull/2540))
+- Add management of custom ambient sounds to the audio overlay provider settings (by @jozefKruszynski in [#2472](https://github.com/music-assistant/frontend/pull/2472))
+- Add button to copy guest dashboard url (by @clstrickland in [#2532](https://github.com/music-assistant/frontend/pull/2532))
+- Add a landing screen and auto-scroll for Music Quiz players (by @MarvinSchenkel in [#2547](https://github.com/music-assistant/frontend/pull/2547))
+- Add click actions for more media types (by @marcelveldt in [#2546](https://github.com/music-assistant/frontend/pull/2546))
+- Only offer the visualizer on players that can produce a waveform (by @jozefKruszynski in [#2538](https://github.com/music-assistant/frontend/pull/2538))
+- Restore mobile footer blur (by @marcelveldt in [#2545](https://github.com/music-assistant/frontend/pull/2545))
+- Use player terminology in playback controls (by @marcelveldt in [#2544](https://github.com/music-assistant/frontend/pull/2544))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #5778)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>20 changes</summary>
+
+- Stop flagging safe dependencies as having no license (by @marcelveldt in #5728)
+- Add test coverage for remote playlist fetching (by @marcelveldt in #5732)
+- Clean up unused source options on Sonos S1 speakers (by @marcelveldt in #5733)
+- ⬆️ Update music-assistant-frontend to 2.17.276 (by @musicassistant-bot[bot] in #5734)
+- Handle servers that declare an unusable character set (by @marcelveldt in #5735)
+- Stop approving dependency licenses on a partial name match (by @marcelveldt in #5741)
+- Bump deno from 2.7.12 to 2.9.5 (by @dependabot[bot] in #5743)
+- Bump pre-commit from 4.6.1 to 4.6.2 (by @dependabot[bot] in #5744)
+- Bump qqmusic-api-python from 0.6.6 to 0.7.2 (by @dependabot[bot] in #5745)
+- Bump numkong from 7.7.0 to 7.8.0 (by @dependabot[bot] in #5746)
+- Hide the volume controls on Sonos speakers with fixed line-out (by @marcelveldt in #5748)
+- Only download a radio station's playlist once (by @marcelveldt in #5749)
+- Volume and mute controls no longer reappear on players that cannot use them (by @marcelveldt in #5752)
+- Add typosquatting safety tests (by @marcelveldt in #5755)
+- Recognize version-less HLS radio streams (by @marcelveldt in #5756)
+- Prevent flaky parallel test failures (by @marcelveldt in #5760)
+- ⬆️ Update music-assistant-frontend to 2.17.277 (by @musicassistant-bot[bot] in #5761)
+- ⬆️ Update music-assistant-models to 1.1.189 (by @musicassistant-bot[bot] in #5765)
+- ⬆️ Update music-assistant-models to 1.1.190 (by @musicassistant-bot[bot] in #5766)
+- ⬆️ Update music-assistant-frontend to 2.17.278 (by @musicassistant-bot[bot] in #5767)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Tommatheussen, @clstrickland, @dmoo500, @jozefKruszynski, @marcelveldt, @robsonke, @seppegadeyne, @teancom
+
+
 # [2.10.0rc1] - 16.08.2026
 
 ## 📦 RC Release
@@ -255,116 +351,3 @@ _Changes since [2.10.0b14](https://github.com/music-assistant/server/releases/ta
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @arturpragacz, @chrisuthe, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @teancom, @trudenboy
-
-
-# [2.10.0b14] - 11.08.2026
-
-## 📦 Beta Release
-
-_Changes since [2.10.0b13](https://github.com/music-assistant/server/releases/tag/2.10.0b13)_
-
-### 🚀 New Providers
-
-- Move library recommendations to plugin provider and add new folders (by @dmoo500 in #3890)
-
-### 🚀 Features and enhancements
-
-- Update and improve Sendspin pairing (by @arturpragacz in #5472)
-- Always state the TTS pronunciation rules in AI Radio queries (by @OzGav in #5509)
-- Add Milkdrop visualizer plugin (by @jozefKruszynski in #5511)
-- Better default player icons (by @marcelveldt in #5521)
-- Show dashboards on Fully Kiosk displays (by @MarvinSchenkel in #5531)
-- Allow collapsing of collections when acquiring the audiobooks of an author or narrator (by @fmunkes in #5533)
-- Support casting the Music Quiz dashboard (by @MarvinSchenkel in #5535)
-- Clarify output protocol toggle (by @marcelveldt in #5550)
-- Add a configurable volume step size to the players core config (by @quadcom in #5571)
-- Make the Spotify setup steps easier to follow (by @marcelveldt in #5575)
-- Explain the background library import after adding a music provider (by @marcelveldt in #5576)
-
-### 🐛 Bugfixes
-
-- End dashboard sessions with a warning when the receiver dies unexpectedly (by @MarvinSchenkel in #5157)
-- Impersonate users by auth provider link (by @arturpragacz in #5417)
-- Fix AirPlay software volume attenuating stream when another control owns volume (by @OzGav in #5454)
-- Report a clear error when AI Radio TTS generation fails (by @MarvinSchenkel in #5497)
-- Account for deleted metadata in a provider sync of audiobookshelf (by @fmunkes in #5516)
-- Fix MusicCast zone2/main-sync players never refreshing outside UDP push (by @bsny in #5517)
-- Report a failed Cast receiver app launch instead of ignoring it (by @OzGav in #5520)
-- Keep the full duration of an audiobook when resuming mid-book (by @marcelveldt in #5524)
-- Fix player not coming back after disabling and removing it (by @marcelveldt in #5525)
-- Resolve OpenSubsonic search and top tracks without per-track lyrics fetches (by @GraysonCAdams in #5526)
-- Make an author or narrator playable (by @fmunkes in #5532)
-- Open Subsonic: Fix extension name (by @khers in #5536)
-- Don't resolve a filesystem image path that points at a directory (by @chrisuthe in #5543)
-- Play announcements on muted speakers that announce natively (by @marcelveldt in #5549)
-- Enrich matched playlist entries with provider metadata during import (by @OzGav in #5554)
-- Fix missing artists on Apple Music playlist tracks (by @MarvinSchenkel in #5558)
-- Fix YouTube Music episode description breaking player state (by @andrei-marinache in #5560)
-- Fix Spotify playback (by @marcelveldt in #5568)
-- Fix minor typo in strings.json (by @dovy6 in #5569)
-- Keep bridged AirPlay speakers in sync after a seek or track change (by @marcelveldt in #5570)
-- Update strings for radio stations settings for OpenSubsonic Provider (by @frjol in #5572)
-
-### 🎨 Frontend Changes
-
-- Improve player control spacing (by @marcelveldt in [#2349](https://github.com/music-assistant/frontend/pull/2349))
-- Add settings links to player menus (by @marcelveldt in [#2348](https://github.com/music-assistant/frontend/pull/2348))
-- Make player setup actions easier to find (by @marcelveldt in [#2347](https://github.com/music-assistant/frontend/pull/2347))
-- Make provider setup actions easier to find (by @marcelveldt in [#2346](https://github.com/music-assistant/frontend/pull/2346))
-- Align player control links (by @marcelveldt in [#2345](https://github.com/music-assistant/frontend/pull/2345))
-- Check the fake server data in our tests against the real models (by @marcelveldt in [#2344](https://github.com/music-assistant/frontend/pull/2344))
-- Remove an unused favorite button component (by @marcelveldt in [#2341](https://github.com/music-assistant/frontend/pull/2341))
-- Remove unused folder handling from list view descriptions (by @marcelveldt in [#2342](https://github.com/music-assistant/frontend/pull/2342))
-- Music Quiz dashboard for TVs and casting (by @MarvinSchenkel in [#2352](https://github.com/music-assistant/frontend/pull/2352))
-- Simplify player output protocol settings (by @marcelveldt in [#2362](https://github.com/music-assistant/frontend/pull/2362))
-- Add DSP limiter, High/Low Pass and compressor filters (by @OzGav in [#2158](https://github.com/music-assistant/frontend/pull/2158))
-- Improve player bar controls (by @marcelveldt in [#2355](https://github.com/music-assistant/frontend/pull/2355))
-- Show a clear message for oversized convolution files instead of a failed upload (by @marcelveldt in [#2358](https://github.com/music-assistant/frontend/pull/2358))
-- Add missing metadata fields to the API types (by @marcelveldt in [#2365](https://github.com/music-assistant/frontend/pull/2365))
-- Share the queue item and stream details test fixtures (by @marcelveldt in [#2361](https://github.com/music-assistant/frontend/pull/2361))
-- Use a shared podcast fixture in the shortcuts tests (by @marcelveldt in [#2364](https://github.com/music-assistant/frontend/pull/2364))
-- Match audio processing types to what the server sends (by @marcelveldt in [#2363](https://github.com/music-assistant/frontend/pull/2363))
-- Remove API fields the server never sends (by @marcelveldt in [#2359](https://github.com/music-assistant/frontend/pull/2359))
-- Match the API error code type to the number the server sends (by @marcelveldt in [#2360](https://github.com/music-assistant/frontend/pull/2360))
-- Use the shared artist fixture in the guest artist tracks tests (by @marcelveldt in [#2357](https://github.com/music-assistant/frontend/pull/2357))
-- Roboto (by @stvncode in [#2376](https://github.com/music-assistant/frontend/pull/2376))
-- Fix Music Quiz getting stuck for non-English users (by @marcelveldt in [#2366](https://github.com/music-assistant/frontend/pull/2366))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>25 changes</summary>
-
-- Keep the fake AcoustID fingerprinter in sync with the real one (by @marcelveldt in #5444)
-- Stop speakers from reappearing while their provider is shutting down (by @marcelveldt in #5493)
-- Clean up library items left behind without a provider (by @marcelveldt in #5522)
-- Remove an unused internal helper from the music controller (by @marcelveldt in #5523)
-- ⬆️ Update music-assistant-models to 1.1.185 (by @musicassistant-bot[bot] in #5527)
-- ⬆️ Update music-assistant-frontend to 2.17.263 (by @musicassistant-bot[bot] in #5528)
-- Let dependency bump merges trigger the stale-PR refresh (by @MarvinSchenkel in #5529)
-- Bump pre-commit from 4.6.0 to 4.6.1 (by @dependabot[bot] in #5540)
-- Bump huggingface-hub from 1.22.0 to 1.26.1 (by @dependabot[bot] in #5541)
-- Bump usearch from 2.25.3 to 2.26.0 (by @dependabot[bot] in #5542)
-- Remove leftover unused audio reading code from the streams controller (by @marcelveldt in #5544)
-- Clean up queue settings when a player is removed (by @marcelveldt in #5545)
-- Keep protocol players working when their parent player is removed (by @marcelveldt in #5546)
-- Start playback at the saved position on Media Station X players (by @marcelveldt in #5547)
-- Never leave a library item without a playable source (by @marcelveldt in #5548)
-- Make failing background tasks fail the announcement tests (by @marcelveldt in #5551)
-- Clean up player settings when a player provider is removed (by @marcelveldt in #5552)
-- ⬆️ Update music-assistant-frontend to 2.17.264 (by @musicassistant-bot[bot] in #5555)
-- Change Google Filesystem monochrome icon to white (by @OzGav in #5561)
-- Bump ytmusicapi to 1.12.2 (by @MarvinSchenkel in #5562)
-- Update One Drive icon_monochrome.svg (by @OzGav in #5564)
-- ⬆️ Update music-assistant-frontend to 2.17.265 (by @musicassistant-bot[bot] in #5565)
-- Bump CodSpeedHQ/action from 5.0.2 to 5.0.3 (by @dependabot[bot] in #5566)
-- ⬆️ Update music-assistant-frontend to 2.17.266 (by @musicassistant-bot[bot] in #5578)
-- Update airplay-cli to v0.4.13 (by @musicassistant-bot[bot] in #5579)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@GraysonCAdams, @MarvinSchenkel, @OzGav, @andrei-marinache, @arturpragacz, @bsny, @chrisuthe, @dmoo500, @dovy6, @fmunkes, @frjol, @jozefKruszynski, @khers, @marcelveldt, @quadcom, @stvncode
