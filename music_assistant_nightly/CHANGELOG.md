@@ -1,3 +1,58 @@
+# [2.10.0.dev2026081800] - 18.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081703](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081703)_
+
+### ⚠ Breaking Changes
+
+- Migrate the Tidal provider to the official API where possible. (by @jozefKruszynski in #4875)
+
+### 🚀 Features and enhancements
+
+- Add generic LinkPlay speaker support to the WiiM provider (by @marcelveldt in #5729)
+- Group WiiM and generic LinkPlay speakers together (by @marcelveldt in #5737)
+- Add missing media click actions (by @marcelveldt in #5764)
+
+### 🐛 Bugfixes
+
+- Fix editability for owned YouTube Music playlists (by @seppegadeyne in #5187)
+- Ignore incoming media update events while starting HEOS playback (by @Tommatheussen in #5503)
+- Skip DRM protected Soundcloud tracks on import (by @robsonke in #5738)
+- Make the MilkDrop visualizer work on players that reach Sendspin through a linked output (by @jozefKruszynski in #5751)
+- Fix radioparadise metadata flapping (by @teancom in #5762)
+
+### 🎨 Frontend Changes
+
+- Add management of custom ambient sounds to the audio overlay provider settings (by @jozefKruszynski in [#2472](https://github.com/music-assistant/frontend/pull/2472))
+- Add button to copy guest dashboard url (by @clstrickland in [#2532](https://github.com/music-assistant/frontend/pull/2532))
+- Add a landing screen and auto-scroll for Music Quiz players (by @MarvinSchenkel in [#2547](https://github.com/music-assistant/frontend/pull/2547))
+- Add click actions for more media types (by @marcelveldt in [#2546](https://github.com/music-assistant/frontend/pull/2546))
+- Only offer the visualizer on players that can produce a waveform (by @jozefKruszynski in [#2538](https://github.com/music-assistant/frontend/pull/2538))
+- Restore mobile footer blur (by @marcelveldt in [#2545](https://github.com/music-assistant/frontend/pull/2545))
+- Use player terminology in playback controls (by @marcelveldt in [#2544](https://github.com/music-assistant/frontend/pull/2544))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Bump pre-commit from 4.6.1 to 4.6.2 (by @dependabot[bot] in #5744)
+- Bump qqmusic-api-python from 0.6.6 to 0.7.2 (by @dependabot[bot] in #5745)
+- Volume and mute controls no longer reappear on players that cannot use them (by @marcelveldt in #5752)
+- ⬆️ Update music-assistant-models to 1.1.189 (by @musicassistant-bot[bot] in #5765)
+- ⬆️ Update music-assistant-models to 1.1.190 (by @musicassistant-bot[bot] in #5766)
+- ⬆️ Update music-assistant-frontend to 2.17.278 (by @musicassistant-bot[bot] in #5767)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Tommatheussen, @clstrickland, @jozefKruszynski, @marcelveldt, @robsonke, @seppegadeyne, @teancom
+
+
 # [2.10.0.dev2026081703] - 17.08.2026
 
 ## 📦 Nightly Release
@@ -138,58 +193,3 @@ _Changes since [2.10.0.dev2026081503](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @dmoo500, @jozefKruszynski, @marcelveldt, @quadcom, @teancom, @testuser7, @trudenboy
-
-
-# [2.10.0.dev2026081503] - 15.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081417](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081417)_
-
-### 🐛 Bugfixes
-
-- Universal Players no longer come back as a brand new player (by @OzGav in #5559)
-- Keep events and settings working when a path is not valid UTF-8 (by @OzGav in #5563)
-- Album art keeps showing when its provider has a hiccup (by @marcelveldt in #5671)
-- Show why AI Radio speech generation failed (by @marcelveldt in #5680)
-- Failed tracks are no longer requested twice from the same provider (by @marcelveldt in #5682)
-- Music from a NAS comes back on its own after a short outage (by @marcelveldt in #5683)
-
-### 🎨 Frontend Changes
-
-- Settings page no longer reloads when nothing changed (by @marcelveldt in [#2523](https://github.com/music-assistant/frontend/pull/2523))
-- Volume now changes while you drag the slider (by @quadcom in [#2470](https://github.com/music-assistant/frontend/pull/2470))
-- Keep the focus on the player menu when it opens on touch (by @marcelveldt in [#2465](https://github.com/music-assistant/frontend/pull/2465))
-- Remove the unused show/hide menu tooltip text (by @marcelveldt in [#2447](https://github.com/music-assistant/frontend/pull/2447))
-- Remove unused breadcrumb component set (by @marcelveldt in [#2521](https://github.com/music-assistant/frontend/pull/2521))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5676)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>13 changes</summary>
-
-- Bump colorlog from 6.10.1 to 6.12.0 (by @dependabot[bot] in #5539)
-- Split up the Chromecast media status handler (by @marcelveldt in #5670)
-- Tidy up the protocol grouping code (by @marcelveldt in #5672)
-- Keep AirPlay speakers from starting at full volume or silent when a device has several interfaces (by @marcelveldt in #5674)
-- Tidy up the protocol linking code (by @marcelveldt in #5675)
-- Sendspin-driven AirPlay speakers keep the volume they are playing at across a track change (by @marcelveldt in #5677)
-- Play announcements through the speaker's usual output (by @marcelveldt in #5678)
-- Announcements no longer play at the wrong volume on AirPlay speakers with several interfaces (by @marcelveldt in #5679)
-- Announcements now respect the configured volume on speakers whose volume is handled elsewhere (by @marcelveldt in #5681)
-- Remove unused scandir wrapper from the local filesystem provider (by @marcelveldt in #5684)
-- AirPlay speakers on a Sendspin bridge now report the volume and mute they are really at (by @marcelveldt in #5685)
-- Non-UTF-8 filename tests no longer fail on macOS (by @marcelveldt in #5687)
-- ⬆️ Update music-assistant-frontend to 2.17.274 (by @musicassistant-bot[bot] in #5689)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt, @quadcom
