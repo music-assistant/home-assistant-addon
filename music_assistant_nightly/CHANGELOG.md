@@ -1,3 +1,79 @@
+# [2.10.0.dev2026081903] - 19.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026081800](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081800)_
+
+### 🚀 Features and enhancements
+
+- Filter default recommendation rows by provider (by @marcelveldt in #5768)
+- Show which provider hit its stream limit when playback stops (by @marcelveldt in #5802)
+- Play a track from another provider when its own provider is at the stream limit (by @marcelveldt in #5807)
+- Add Spotify Soloist as official backend for Spotify Connect (by @marcelveldt in #5810)
+
+### 🐛 Bugfixes
+
+- Prevent track loss when merging duplicates (by @marcelveldt in #5769)
+- Improve library matching across providers (by @marcelveldt in #5770)
+- Improve album edition matching (by @marcelveldt in #5771)
+- Match album editions across providers (by @marcelveldt in #5776)
+- Repair duplicate albums automatically (by @marcelveldt in #5780)
+- Tidal: fix search against the new filter[query] endpoint (spec 1.10.101) (by @jozefKruszynski in #5781)
+- Improve duplicate detection across music providers (by @marcelveldt in #5783)
+- Fix web players losing their queue when they switch role (by @marcelveldt in #5784)
+- Keep player access restrictions intact when a player is replaced (by @marcelveldt in #5785)
+- Fix sporadic stutter when playing live audio sources (by @marcelveldt in #5789)
+- Stop adding the same album twice when providers disagree on the details (by @marcelveldt in #5790)
+- Match artists across providers more reliably (by @marcelveldt in #5791)
+- Repair duplicate tracks that are already in the library (by @marcelveldt in #5792)
+- Keep a player usable when its saved queue cannot be read (by @marcelveldt in #5793)
+- Repair albums that are already duplicated in your library (by @marcelveldt in #5798)
+- Keep a library sync going when one item fails (by @marcelveldt in #5799)
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #5778)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>25 changes</summary>
+
+- Fix speakers showing twice when they get a native player (by @marcelveldt in #5772)
+- Limit concurrent provider streams (by @marcelveldt in #5773)
+- Bump stages for various providers (by @OzGav in #5775)
+- Switch on the pathlib lint rules and tidy up the remaining os.path calls (by @OzGav in #5777)
+- Use pathlib to get the last part of a path (by @OzGav in #5779)
+- Keep a bridged output with the speaker connection it runs on (by @marcelveldt in #5786)
+- Keep a player's queue when it switches role (by @marcelveldt in #5787)
+- Explain why a player becoming a speaker output is not stopped first (by @marcelveldt in #5788)
+- Let a player recover when its setup fails during registration (by @marcelveldt in #5795)
+- Clean up group memberships when a player is removed (by @marcelveldt in #5796)
+- Add shared groundwork for Spotify Soloist support (by @marcelveldt in #5797)
+- Keep a shared output from showing up on two players at once (by @marcelveldt in #5801)
+- Prepare Spotify Connect for multiple backends (by @marcelveldt in #5804)
+- Close MPD connections when connecting fails partway through (by @marcelveldt in #5805)
+- Fix missing and incorrect album details from TheAudioDB (by @marcelveldt in #5806)
+- Keep a speaker's outputs with the speaker they belong to (by @marcelveldt in #5808)
+- Keep albums that differ only by a symbol from being merged (by @marcelveldt in #5809)
+- Clarify a comment in the speaker output linking code (by @marcelveldt in #5811)
+- Keep the Plex library sync going when one item cannot be read (by @marcelveldt in #5812)
+- Skip empty Spotify saved tracks instead of stopping the sync (by @marcelveldt in #5813)
+- Finish replacing a universal player that lists the speaker itself (by @marcelveldt in #5814)
+- Include search-only providers in cross-provider matching (by @marcelveldt in #5815)
+- Stop test server background work from disturbing other tests (by @marcelveldt in #5816)
+- Match duplicate tracks across a spelled-out EP or single title (by @marcelveldt in #5817)
+- Match an EP or single title however the service writes the format (by @marcelveldt in #5818)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @jozefKruszynski, @marcelveldt
+
+
 # [2.10.0.dev2026081800] - 18.08.2026
 
 ## 📦 Nightly Release
@@ -110,86 +186,3 @@ _Changes since [2.10.0.dev2026081603](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @dmoo500, @marcelveldt, @teancom
-
-
-# [2.10.0.dev2026081603] - 16.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081503](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081503)_
-
-### 🚀 Features and enhancements
-
-- Allow adding custom ambient sounds by URL (by @jozefKruszynski in #5625)
-- A muted player stays muted when you change its volume (by @marcelveldt in #5706)
-- AirPlay speakers no longer need a deepened buffer by default (by @marcelveldt in #5707)
-- One streaming mode setting for AirPlay players, with automatic fallback for stubborn TVs (by @marcelveldt in #5721)
-- Streaming mode escape hatch now also available on Apple devices (by @marcelveldt in #5730)
-
-### 🐛 Bugfixes
-
-- Fix smart playlist removal from recommendations and add auto-refresh (by @dmoo500 in #5641)
-- Sonos no longer restarts Spotify instead of your queue (by @marcelveldt in #5688)
-- Restricted users no longer end up with an empty library (by @OzGav in #5690)
-- Player settings that need a stream restart now apply right away (by @marcelveldt in #5691)
-- Hue lights sync no longer restarts when you change brightness or colour mode (by @marcelveldt in #5698)
-- Fix Spotify playlists failing to load (by @marcelveldt in #5703)
-- AirPlay speakers no longer stay loud after an announcement (by @marcelveldt in #5704)
-- Prevent WiiM errors with external group members (by @marcelveldt in #5708)
-- Group volume no longer undoes a speaker you turned down yourself (by @marcelveldt in #5710)
-- Fix Home Assistant players showing an external source while Music Assistant is playing (by @marcelveldt in #5713)
-- Fix Cyrillic track and album names showing as question marks (by @marcelveldt in #5718)
-- Stop asking for a password on AirPlay devices that never had one (by @marcelveldt in #5720)
-- Apple TV players no longer get stuck on a paused app after losing their connection (by @marcelveldt in #5722)
-- Read CUE sheets and playlists in legacy codepages more reliably (by @marcelveldt in #5724)
-
-### 🎨 Frontend Changes
-
-- Localize faceted filter labels (by @teancom in [#2528](https://github.com/music-assistant/frontend/pull/2528))
-- Add a clear return to the Quiz host panel (by @marcelveldt in [#2527](https://github.com/music-assistant/frontend/pull/2527))
-- Add a relative mode and a haptics toggle to the volume slider (by @quadcom in [#2274](https://github.com/music-assistant/frontend/pull/2274))
-- Keep the player menu open when scrolling a nested select on touch (by @jozefKruszynski in [#2525](https://github.com/music-assistant/frontend/pull/2525))
-- Lokalise: Translations update (by @marcelveldt in [#2522](https://github.com/music-assistant/frontend/pull/2522))
-- Remove the unused local-value event from the volume slider (by @marcelveldt in [#2524](https://github.com/music-assistant/frontend/pull/2524))
-- Choose what happens to grouped playback (by @marcelveldt in [#2531](https://github.com/music-assistant/frontend/pull/2531))
-- Localize shared UI labels (by @teancom in [#2529](https://github.com/music-assistant/frontend/pull/2529))
-- Enforce zero-warning lint checks (by @teancom in [#2530](https://github.com/music-assistant/frontend/pull/2530))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>25 changes</summary>
-
-- Add MSX Bridge regression coverage for seeking and Sendspin URLs (by @trudenboy in #5331)
-- Simplify the Chromecast media-status tests (by @marcelveldt in #5686)
-- Group volume no longer settles on the wrong value after a drag (by @marcelveldt in #5692)
-- Remote access: one stuck client can no longer stall album art for the rest of the session (by @marcelveldt in #5693)
-- AirPlay speakers keep the volume they are set to (by @marcelveldt in #5694)
-- Set C.UTF-8 locale in Docker base image (by @testuser7 in #5695)
-- Test the Chromecast media-status state updates (by @marcelveldt in #5696)
-- Volume and mute always come from the control that owns them (by @marcelveldt in #5697)
-- Repeated volume up/down presses no longer lose steps (by @marcelveldt in #5699)
-- Give up on a streaming app that was left paused, on more speakers (by @marcelveldt in #5701)
-- Explain how volume reaches a Sendspin-bridged AirPlay speaker (by @marcelveldt in #5705)
-- Replace magic strings with constants in smart playlist provider (by @dmoo500 in #5709)
-- Keep WiiM speaker state in sync when updates stop arriving (by @marcelveldt in #5711)
-- Update airplay-cli to v0.5.0 (by @musicassistant-bot[bot] in #5712)
-- Announcements no longer leave older AirPlay speakers at the announcement volume (by @marcelveldt in #5715)
-- Use the WiiM SDK volume command now that the upstream fix has shipped (by @marcelveldt in #5716)
-- ⬆️ Update music-assistant-frontend to 2.17.275 (by @musicassistant-bot[bot] in #5717)
-- Fix the base image build failing to download its client files (by @marcelveldt in #5719)
-- Update airplay-cli to v0.5.1 (by @musicassistant-bot[bot] in #5723)
-- Read the AirPlay password flag the same way on every device (by @marcelveldt in #5726)
-- Playlists from stations with an unusual charset no longer fail to load (by @marcelveldt in #5727)
-- Stop flagging safe dependencies as having no license (by @marcelveldt in #5728)
-- Update airplay-cli to v0.5.2 (by @musicassistant-bot[bot] in #5731)
-- Add test coverage for remote playlist fetching (by @marcelveldt in #5732)
-- ⬆️ Update music-assistant-frontend to 2.17.276 (by @musicassistant-bot[bot] in #5734)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @dmoo500, @jozefKruszynski, @marcelveldt, @quadcom, @teancom, @testuser7, @trudenboy
