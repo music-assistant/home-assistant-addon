@@ -1,5 +1,5 @@
 name: Local Audio
-version: "0.1.1"
+version: "0.1.2"
 slug: local_audio
 description: >-
   Turns this Home Assistant system into a synchronized Sendspin player for
@@ -32,11 +32,15 @@ host_uts: true
 # DAC.
 audio: true
 options:
+  # Empty rather than absent, so the configuration screen shows the field
+  # instead of folding it away as unused. An empty name still falls back to
+  # this system's hostname.
+  name: ""
   output: default
   log_level: info
-# `name` and `server` are optional with no default on purpose: an unset name
-# falls back to this system's hostname, and setting a server switches the player
-# to dialling out, which suppresses its mDNS advertisement.
+# `server` is optional with no default on purpose: setting one switches the
+# player to dialling out, which suppresses its mDNS advertisement, so the field
+# belongs behind the fold a user has to open deliberately.
 schema:
   name: str?
   output: str

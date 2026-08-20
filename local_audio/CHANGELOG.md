@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2
+
+Built on `sendspin-cli` v0.1.1.
+
+- The player name is a regular field on the configuration screen now, rather
+  than folded away as an unused option. Empty still means this system's
+  hostname.
+- A `server` value carrying credentials no longer has them printed back in the
+  player's log: every line that names the server masks its userinfo.
+
 ## 0.1.1
 
 Fixes the AppArmor profile under real store-install enforcement, where 0.1.0's
