@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.1
+
+Fixes the AppArmor profile under real store-install enforcement, where 0.1.0's
+avahi crash-looped and the control socket never came up:
+
+- File locking is its own AppArmor permission: the daemons' pid files and the
+  player's control-socket lock now carry `k` alongside `rw`.
+- The child profiles' signal rules no longer name the profile: the Supervisor
+  rewrites the profile name to the installed slug, whose prefix depends on how
+  the app was installed, so a named peer can never match everywhere.
+
 ## 0.1.0
 
 Initial release, built on `sendspin-cli` v0.1.0.
