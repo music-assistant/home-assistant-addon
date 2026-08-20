@@ -1,3 +1,51 @@
+# [2.10.0.dev2026082014] - 20.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082003](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082003)_
+
+### 🚀 Features and enhancements
+
+- Improve crossfade buffering and account for realtime streams (by @marcelveldt in #5848)
+
+### 🐛 Bugfixes
+
+- Fix marking podcast episodes and audiobooks as played from the Discover rows (by @chrisuthe in #5825)
+- Fix Plex Connect duplicating tracks on play queue refresh (by @chrisuthe in #5852)
+- Stop a track refresh from wiping its album and artist details (by @marcelveldt in #5855)
+- Fix ABC Radio Network documentation URL typo in manifest.json (by @OzGav in #5857)
+- Fix a resume seeking far past the track end after an output protocol handover (by @MarvinSchenkel in #5860)
+- Fix static on hi-res AirPlay speakers in compatibility mode (by @OzGav in #5862)
+
+### 🎨 Frontend Changes
+
+- Enhance inline search and change dropdown for menu and icons (by @stvncode in [#2585](https://github.com/music-assistant/frontend/pull/2585))
+- Align the Guess the Song reveal with the Music Timeline layout (by @MarvinSchenkel in [#2584](https://github.com/music-assistant/frontend/pull/2584))
+- Show Music Quiz round results in the player header and compact the timeline (by @MarvinSchenkel in [#2578](https://github.com/music-assistant/frontend/pull/2578))
+- Fix copy to clipboard over plain http (by @OzGav in [#2581](https://github.com/music-assistant/frontend/pull/2581))
+- Fix hi / low pass graph calculation (by @OzGav in [#2580](https://github.com/music-assistant/frontend/pull/2580))
+- Remove the duplicate help icon from settings (by @OzGav in [#2582](https://github.com/music-assistant/frontend/pull/2582))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Enable TRY002, PERF402, ANN201 and B007 rules (by @OzGav in #5782)
+- Enable rule TRY 401 to stop logging the same error twice (by @OzGav in #5820)
+- Require a token to fetch audio from the MSX Bridge (by @marcelveldt in #5849)
+- Keep the rest of a Tidal list when one item cannot be read (by @marcelveldt in #5859)
+- ⬆️ Update music-assistant-frontend to 2.17.281 (by @musicassistant-bot[bot] in #5863)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026082003] - 20.08.2026
 
 ## 📦 Nightly Release
@@ -148,58 +196,3 @@ _Changes since [2.10.0.dev2026081800](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @jozefKruszynski, @marcelveldt
-
-
-# [2.10.0.dev2026081800] - 18.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081703](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081703)_
-
-### ⚠ Breaking Changes
-
-- Migrate the Tidal provider to the official API where possible. (by @jozefKruszynski in #4875)
-
-### 🚀 Features and enhancements
-
-- Add generic LinkPlay speaker support to the WiiM provider (by @marcelveldt in #5729)
-- Group WiiM and generic LinkPlay speakers together (by @marcelveldt in #5737)
-- Add missing media click actions (by @marcelveldt in #5764)
-
-### 🐛 Bugfixes
-
-- Fix editability for owned YouTube Music playlists (by @seppegadeyne in #5187)
-- Ignore incoming media update events while starting HEOS playback (by @Tommatheussen in #5503)
-- Skip DRM protected Soundcloud tracks on import (by @robsonke in #5738)
-- Make the MilkDrop visualizer work on players that reach Sendspin through a linked output (by @jozefKruszynski in #5751)
-- Fix radioparadise metadata flapping (by @teancom in #5762)
-
-### 🎨 Frontend Changes
-
-- Add management of custom ambient sounds to the audio overlay provider settings (by @jozefKruszynski in [#2472](https://github.com/music-assistant/frontend/pull/2472))
-- Add button to copy guest dashboard url (by @clstrickland in [#2532](https://github.com/music-assistant/frontend/pull/2532))
-- Add a landing screen and auto-scroll for Music Quiz players (by @MarvinSchenkel in [#2547](https://github.com/music-assistant/frontend/pull/2547))
-- Add click actions for more media types (by @marcelveldt in [#2546](https://github.com/music-assistant/frontend/pull/2546))
-- Only offer the visualizer on players that can produce a waveform (by @jozefKruszynski in [#2538](https://github.com/music-assistant/frontend/pull/2538))
-- Restore mobile footer blur (by @marcelveldt in [#2545](https://github.com/music-assistant/frontend/pull/2545))
-- Use player terminology in playback controls (by @marcelveldt in [#2544](https://github.com/music-assistant/frontend/pull/2544))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Bump pre-commit from 4.6.1 to 4.6.2 (by @dependabot[bot] in #5744)
-- Bump qqmusic-api-python from 0.6.6 to 0.7.2 (by @dependabot[bot] in #5745)
-- Volume and mute controls no longer reappear on players that cannot use them (by @marcelveldt in #5752)
-- ⬆️ Update music-assistant-models to 1.1.189 (by @musicassistant-bot[bot] in #5765)
-- ⬆️ Update music-assistant-models to 1.1.190 (by @musicassistant-bot[bot] in #5766)
-- ⬆️ Update music-assistant-frontend to 2.17.278 (by @musicassistant-bot[bot] in #5767)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @Tommatheussen, @clstrickland, @jozefKruszynski, @marcelveldt, @robsonke, @seppegadeyne, @teancom
