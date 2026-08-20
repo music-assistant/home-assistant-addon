@@ -1,0 +1,44 @@
+name: Local Audio
+version: "0.1.0"
+slug: local_audio
+description: >-
+  Turns this Home Assistant system into a synchronized Sendspin player for
+  Music Assistant, playing to speakers or a USB DAC attached to it.
+url: https://github.com/music-assistant/local-audio-addon
+image: ghcr.io/music-assistant/local-audio-addon
+arch:
+  - amd64
+  - aarch64
+# Promotion to stable waits on validation against real Home Assistant OS
+# hardware, which this release has not had.
+stage: experimental
+# Before Home Assistant, so a player that belongs to a group is already
+# advertising by the time Music Assistant starts looking for it.
+startup: services
+# The image brings its own s6-overlay v3 init.
+init: false
+# The mDNS advertisement, and the inbound websocket the server connects back in
+# on, both need the host's network namespace.
+host_network: true
+# Shares the host's UTS namespace, which is what makes `hostname` inside the
+# container answer with this machine's name. Without it an unset `name` option
+# would default the player to the container's own hostname, something like
+# "a1b2c3d4-local-audio". Renaming the host from in here would need
+# CAP_SYS_ADMIN, which apparmor.txt does not grant.
+host_uts: true
+# Maps Home Assistant's PulseAudio in: an /etc/asound.conf routing `default` to
+# it, a client.conf naming the sink, and the socket under /run/audio. It also
+# gives this app its own Audio selector, which is how a user points it at a USB
+# DAC.
+audio: true
+options:
+  output: default
+  log_level: info
+# `name` and `server` are optional with no default on purpose: an unset name
+# falls back to this system's hostname, and setting a server switches the player
+# to dialling out, which suppresses its mDNS advertisement.
+schema:
+  name: str?
+  output: str
+  log_level: list(debug|info|warning|error)
+  server: str?
