@@ -1,5 +1,5 @@
 name: Local Audio
-version: "0.1.0"
+version: "0.1.1"
 slug: local_audio
 description: >-
   Turns this Home Assistant system into a synchronized Sendspin player for

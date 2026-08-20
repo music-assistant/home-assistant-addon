@@ -1,9 +1,10 @@
 #include <tunables/global>
 
-# The top-level name must be the app's slug: the Supervisor rewrites a
-# mismatched name to the slug at install (adjust_profile), but the peer=
-# references below would not be rewritten with it, so the file ships with the
-# name the loaded profile will actually carry.
+# The name below is a placeholder: the Supervisor rewrites it to the installed
+# slug at load time, and the slug carries an install-dependent prefix (`local_`
+# for a local app, the repository hash for a store one). Nothing inside this
+# file may therefore reference the profile by name -- which is why the child
+# receive rules are peerless.
 profile local_audio flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
@@ -75,7 +76,7 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     capability setgid,
     capability setuid,
 
-    signal (receive) set=(kill,term) peer=local_audio,
+    signal (receive) set=(kill,term),
 
     /usr/bin/dbus-daemon mr,
     /usr/share/dbus-1/** r,
@@ -86,8 +87,10 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     /etc/nsswitch.conf r,
     /etc/passwd r,
     /etc/group r,
+    # k because the daemons lock their pid files, and locking is its own
+    # AppArmor permission -- rw alone denies fcntl(F_SETLKW) even for root.
     /run/dbus/ rw,
-    /run/dbus/** rw,
+    /run/dbus/** rwk,
 
     network unix stream,
     network unix dgram,
@@ -105,7 +108,7 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     capability sys_chroot,
     capability chown,
 
-    signal (receive) set=(kill,term,hup) peer=local_audio,
+    signal (receive) set=(kill,term,hup),
     # The health check's `avahi-daemon --check` is a kill(pid, 0) between two
     # processes carrying this same profile.
     signal set=(exists) peer=@{profile_name},
@@ -113,7 +116,7 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     /usr/sbin/avahi-daemon mr,
     /etc/avahi/** r,
     /run/avahi-daemon/ rw,
-    /run/avahi-daemon/** rw,
+    /run/avahi-daemon/** rwk,
     /run/dbus/system_bus_socket rw,
     @{PROC}/sys/net/ipv{4,6}/** r,
 
@@ -134,7 +137,7 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
     #include <abstractions/nameservice>
 
-    signal (receive) set=(kill,term,int,hup) peer=local_audio,
+    signal (receive) set=(kill,term,int,hup),
 
     /usr/bin/sendspin-cli mr,
 
@@ -147,8 +150,9 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     owner /root/.config/pulse/ w,
     owner /root/.config/pulse/** rw,
 
-    # Its own rendered config, control socket and persistent state.
-    /run/sendspin-cli/** rw,
+    # Its own rendered config, control socket and persistent state. k for the
+    # control socket's lock file.
+    /run/sendspin-cli/** rwk,
     /data/state/** rw,
 
     # ALSA: the library's configuration and the plugin that bridges to
