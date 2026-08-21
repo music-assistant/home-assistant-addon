@@ -1,3 +1,52 @@
+# [2.10.0.dev2026082103] - 21.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082014](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082014)_
+
+### 🚀 Features and enhancements
+
+- Start the next track's crossfade audio while the current one is still playing (by @marcelveldt in #5866)
+
+### 🐛 Bugfixes
+
+- Fix play count going negative when marking an unfinished item as unplayed (by @chrisuthe in #5865)
+- Keep shuffle on when you play something new (by @marcelveldt in #5867)
+- Ensure gapless playback in MusicCast after security hardening (by @fmunkes in #5871)
+- Don't empty the queue while loading what you picked next (by @marcelveldt in #5873)
+
+### 🎨 Frontend Changes
+
+- Call the group picker's visualizers section "Screens" (by @marcelveldt in [#2590](https://github.com/music-assistant/frontend/pull/2590))
+- Show a readable player type on the player settings page (by @marcelveldt in [#2596](https://github.com/music-assistant/frontend/pull/2596))
+- Fix silent group members from line-in capture devices (by @marcelveldt in [#2591](https://github.com/music-assistant/frontend/pull/2591))
+- Fix provider icon spacing in the add provider and add group player dialogs (by @marcelveldt in [#2593](https://github.com/music-assistant/frontend/pull/2593))
+- Use one shared component for the player protocol chips (by @marcelveldt in [#2595](https://github.com/music-assistant/frontend/pull/2595))
+- Clean up leftovers in the players filter (by @marcelveldt in [#2592](https://github.com/music-assistant/frontend/pull/2592))
+- Remove an unused option from the provider icon component (by @marcelveldt in [#2589](https://github.com/music-assistant/frontend/pull/2589))
+- Fix provider icon spacing on the Discover shelf and settings screens (by @marcelveldt in [#2587](https://github.com/music-assistant/frontend/pull/2587))
+- Various improvements to the App startup tests (by @marcelveldt in [#2586](https://github.com/music-assistant/frontend/pull/2586))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Stop a library item a provider cannot read from being removed from the library (by @marcelveldt in #5861)
+- Surface Spotify Connect queue and playback options from the Soloist engine (by @marcelveldt in #5874)
+- ⬆️ Update music-assistant-models to 1.1.194 (by @musicassistant-bot[bot] in #5876)
+- Stabilize Yandex login timeout tests (by @marcelveldt in #5879)
+- ⬆️ Update music-assistant-frontend to 2.17.282 (by @musicassistant-bot[bot] in #5884)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@chrisuthe, @fmunkes, @marcelveldt
+
+
 # [2.10.0.dev2026082014] - 20.08.2026
 
 ## 📦 Nightly Release
@@ -120,79 +169,3 @@ _Changes since [2.10.0.dev2026081903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @bferd, @internationalized, @intlify, @jozefKruszynski, @lucide, @marcelveldt, @stvncode, @tabler, @teancom, @types, @vitejs
-
-
-# [2.10.0.dev2026081903] - 19.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026081800](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026081800)_
-
-### 🚀 Features and enhancements
-
-- Filter default recommendation rows by provider (by @marcelveldt in #5768)
-- Show which provider hit its stream limit when playback stops (by @marcelveldt in #5802)
-- Play a track from another provider when its own provider is at the stream limit (by @marcelveldt in #5807)
-- Add Spotify Soloist as official backend for Spotify Connect (by @marcelveldt in #5810)
-
-### 🐛 Bugfixes
-
-- Prevent track loss when merging duplicates (by @marcelveldt in #5769)
-- Improve library matching across providers (by @marcelveldt in #5770)
-- Improve album edition matching (by @marcelveldt in #5771)
-- Match album editions across providers (by @marcelveldt in #5776)
-- Repair duplicate albums automatically (by @marcelveldt in #5780)
-- Tidal: fix search against the new filter[query] endpoint (spec 1.10.101) (by @jozefKruszynski in #5781)
-- Improve duplicate detection across music providers (by @marcelveldt in #5783)
-- Fix web players losing their queue when they switch role (by @marcelveldt in #5784)
-- Keep player access restrictions intact when a player is replaced (by @marcelveldt in #5785)
-- Fix sporadic stutter when playing live audio sources (by @marcelveldt in #5789)
-- Stop adding the same album twice when providers disagree on the details (by @marcelveldt in #5790)
-- Match artists across providers more reliably (by @marcelveldt in #5791)
-- Repair duplicate tracks that are already in the library (by @marcelveldt in #5792)
-- Keep a player usable when its saved queue cannot be read (by @marcelveldt in #5793)
-- Repair albums that are already duplicated in your library (by @marcelveldt in #5798)
-- Keep a library sync going when one item fails (by @marcelveldt in #5799)
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5778)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>25 changes</summary>
-
-- Fix speakers showing twice when they get a native player (by @marcelveldt in #5772)
-- Limit concurrent provider streams (by @marcelveldt in #5773)
-- Bump stages for various providers (by @OzGav in #5775)
-- Switch on the pathlib lint rules and tidy up the remaining os.path calls (by @OzGav in #5777)
-- Use pathlib to get the last part of a path (by @OzGav in #5779)
-- Keep a bridged output with the speaker connection it runs on (by @marcelveldt in #5786)
-- Keep a player's queue when it switches role (by @marcelveldt in #5787)
-- Explain why a player becoming a speaker output is not stopped first (by @marcelveldt in #5788)
-- Let a player recover when its setup fails during registration (by @marcelveldt in #5795)
-- Clean up group memberships when a player is removed (by @marcelveldt in #5796)
-- Add shared groundwork for Spotify Soloist support (by @marcelveldt in #5797)
-- Keep a shared output from showing up on two players at once (by @marcelveldt in #5801)
-- Prepare Spotify Connect for multiple backends (by @marcelveldt in #5804)
-- Close MPD connections when connecting fails partway through (by @marcelveldt in #5805)
-- Fix missing and incorrect album details from TheAudioDB (by @marcelveldt in #5806)
-- Keep a speaker's outputs with the speaker they belong to (by @marcelveldt in #5808)
-- Keep albums that differ only by a symbol from being merged (by @marcelveldt in #5809)
-- Clarify a comment in the speaker output linking code (by @marcelveldt in #5811)
-- Keep the Plex library sync going when one item cannot be read (by @marcelveldt in #5812)
-- Skip empty Spotify saved tracks instead of stopping the sync (by @marcelveldt in #5813)
-- Finish replacing a universal player that lists the speaker itself (by @marcelveldt in #5814)
-- Include search-only providers in cross-provider matching (by @marcelveldt in #5815)
-- Stop test server background work from disturbing other tests (by @marcelveldt in #5816)
-- Match duplicate tracks across a spelled-out EP or single title (by @marcelveldt in #5817)
-- Match an EP or single title however the service writes the format (by @marcelveldt in #5818)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @jozefKruszynski, @marcelveldt
