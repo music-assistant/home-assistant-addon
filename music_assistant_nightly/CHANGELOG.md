@@ -1,3 +1,34 @@
+# [2.10.0.dev2026082203] - 22.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082115](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082115)_
+
+### 🚀 Features and enhancements
+
+- Add a streaming quality setting for Spotify Connect (by @marcelveldt in #5882)
+
+### 🎨 Frontend Changes
+
+- Enter in mobile search hides the keyboard instead of opening the first result (by @stvncode in [#2607](https://github.com/music-assistant/frontend/pull/2607))
+- Fill the MilkDrop droplet icon while the visualizer is enabled (by @jozefKruszynski in [#2605](https://github.com/music-assistant/frontend/pull/2605))
+- Make the queue read-only while an external session manages it (by @marcelveldt in [#2604](https://github.com/music-assistant/frontend/pull/2604))
+- Show provider logos in the Browse list (by @OzGav in [#2574](https://github.com/music-assistant/frontend/pull/2574))
+- Line up the collapsed sidebar icons in one straight column (by @stvncode in [#2608](https://github.com/music-assistant/frontend/pull/2608))
+- Keep the app initialization tests independent of their order (by @marcelveldt in [#2298](https://github.com/music-assistant/frontend/pull/2298))
+
+### 🧰 Maintenance and dependency bumps
+
+- Make next/previous/seek on live audio sources work the same from every API (by @marcelveldt in #5901)
+- ⬆️ Update music-assistant-frontend to 2.17.284 (by @musicassistant-bot[bot] in #5906)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @jozefKruszynski, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026082115] - 21.08.2026
 
 ## 📦 Nightly Release
@@ -101,51 +132,3 @@ _Changes since [2.10.0.dev2026082014](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @chrisuthe, @fmunkes, @marcelveldt
-
-
-# [2.10.0.dev2026082014] - 20.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082003](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082003)_
-
-### 🚀 Features and enhancements
-
-- Improve crossfade buffering and account for realtime streams (by @marcelveldt in #5848)
-
-### 🐛 Bugfixes
-
-- Fix marking podcast episodes and audiobooks as played from the Discover rows (by @chrisuthe in #5825)
-- Fix Plex Connect duplicating tracks on play queue refresh (by @chrisuthe in #5852)
-- Stop a track refresh from wiping its album and artist details (by @marcelveldt in #5855)
-- Fix ABC Radio Network documentation URL typo in manifest.json (by @OzGav in #5857)
-- Fix a resume seeking far past the track end after an output protocol handover (by @MarvinSchenkel in #5860)
-- Fix static on hi-res AirPlay speakers in compatibility mode (by @OzGav in #5862)
-
-### 🎨 Frontend Changes
-
-- Enhance inline search and change dropdown for menu and icons (by @stvncode in [#2585](https://github.com/music-assistant/frontend/pull/2585))
-- Align the Guess the Song reveal with the Music Timeline layout (by @MarvinSchenkel in [#2584](https://github.com/music-assistant/frontend/pull/2584))
-- Show Music Quiz round results in the player header and compact the timeline (by @MarvinSchenkel in [#2578](https://github.com/music-assistant/frontend/pull/2578))
-- Fix copy to clipboard over plain http (by @OzGav in [#2581](https://github.com/music-assistant/frontend/pull/2581))
-- Fix hi / low pass graph calculation (by @OzGav in [#2580](https://github.com/music-assistant/frontend/pull/2580))
-- Remove the duplicate help icon from settings (by @OzGav in [#2582](https://github.com/music-assistant/frontend/pull/2582))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Enable TRY002, PERF402, ANN201 and B007 rules (by @OzGav in #5782)
-- Enable rule TRY 401 to stop logging the same error twice (by @OzGav in #5820)
-- Require a token to fetch audio from the MSX Bridge (by @marcelveldt in #5849)
-- Keep the rest of a Tidal list when one item cannot be read (by @marcelveldt in #5859)
-- ⬆️ Update music-assistant-frontend to 2.17.281 (by @musicassistant-bot[bot] in #5863)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @marcelveldt, @stvncode
