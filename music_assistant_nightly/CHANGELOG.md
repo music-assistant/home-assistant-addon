@@ -1,3 +1,45 @@
+# [2.10.0.dev2026082303] - 23.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082203](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082203)_
+
+### 🚀 Features and enhancements
+
+- Allow lower add to queue token limits and slower refill rates in Party plugin (by @Bulgus in #5904)
+- Refuse Spotify accounts that cannot work during setup (by @marcelveldt in #5911)
+
+### 🐛 Bugfixes
+
+- Fix white noise when playing DTS 5.1 audio packed inside WAV (by @vintvinst in #5803)
+- Fix the flow-mode 'next' command item for Cast children of Universal Players (by @OzGav in #5836)
+- Fixes an issue where tracks from Niconico Provider cannot be played (by @Shi-553 in #5842)
+- Keep the Spotify session alive when it moves to another player (by @marcelveldt in #5910)
+- Improve Audible sign-in setup (by @marcelveldt in #5915)
+- Don't parse playlist items already in the database (by @OzGav in #5916)
+- Add Symfonisk Table Lamp to Non-Hi Res models (by @OzGav in #5917)
+
+### 🎨 Frontend Changes
+
+- Show task reports (by @marcelveldt in [#2613](https://github.com/music-assistant/frontend/pull/2613))
+- Make server log viewer text selectable and copyable (by @teancom in [#2564](https://github.com/music-assistant/frontend/pull/2564))
+- Better styling for the now playing source badge (by @marcelveldt in [#2609](https://github.com/music-assistant/frontend/pull/2609))
+- Remove the read-only queue for external sessions (by @marcelveldt in [#2611](https://github.com/music-assistant/frontend/pull/2611))
+- Improve on collection thumbnails (by @fmunkes in [#2579](https://github.com/music-assistant/frontend/pull/2579))
+
+### 🧰 Maintenance and dependency bumps
+
+- Show episode descriptions for Audiobookshelf and Plex podcasts (by @OzGav in #5912)
+- Track a live external audio source on the player (by @marcelveldt in #5913)
+- ⬆️ Update music-assistant-frontend to 2.17.285 (by @musicassistant-bot[bot] in #5921)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Bulgus, @OzGav, @Shi-553, @fmunkes, @marcelveldt, @teancom, @vintvinst
+
+
 # [2.10.0.dev2026082203] - 22.08.2026
 
 ## 📦 Nightly Release
@@ -83,52 +125,3 @@ _Changes since [2.10.0.dev2026082103](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @jozefKruszynski, @marcelveldt, @stvncode
-
-
-# [2.10.0.dev2026082103] - 21.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082014](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082014)_
-
-### 🚀 Features and enhancements
-
-- Start the next track's crossfade audio while the current one is still playing (by @marcelveldt in #5866)
-
-### 🐛 Bugfixes
-
-- Fix play count going negative when marking an unfinished item as unplayed (by @chrisuthe in #5865)
-- Keep shuffle on when you play something new (by @marcelveldt in #5867)
-- Ensure gapless playback in MusicCast after security hardening (by @fmunkes in #5871)
-- Don't empty the queue while loading what you picked next (by @marcelveldt in #5873)
-
-### 🎨 Frontend Changes
-
-- Call the group picker's visualizers section "Screens" (by @marcelveldt in [#2590](https://github.com/music-assistant/frontend/pull/2590))
-- Show a readable player type on the player settings page (by @marcelveldt in [#2596](https://github.com/music-assistant/frontend/pull/2596))
-- Fix silent group members from line-in capture devices (by @marcelveldt in [#2591](https://github.com/music-assistant/frontend/pull/2591))
-- Fix provider icon spacing in the add provider and add group player dialogs (by @marcelveldt in [#2593](https://github.com/music-assistant/frontend/pull/2593))
-- Use one shared component for the player protocol chips (by @marcelveldt in [#2595](https://github.com/music-assistant/frontend/pull/2595))
-- Clean up leftovers in the players filter (by @marcelveldt in [#2592](https://github.com/music-assistant/frontend/pull/2592))
-- Remove an unused option from the provider icon component (by @marcelveldt in [#2589](https://github.com/music-assistant/frontend/pull/2589))
-- Fix provider icon spacing on the Discover shelf and settings screens (by @marcelveldt in [#2587](https://github.com/music-assistant/frontend/pull/2587))
-- Various improvements to the App startup tests (by @marcelveldt in [#2586](https://github.com/music-assistant/frontend/pull/2586))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Stop a library item a provider cannot read from being removed from the library (by @marcelveldt in #5861)
-- Surface Spotify Connect queue and playback options from the Soloist engine (by @marcelveldt in #5874)
-- ⬆️ Update music-assistant-models to 1.1.194 (by @musicassistant-bot[bot] in #5876)
-- Stabilize Yandex login timeout tests (by @marcelveldt in #5879)
-- ⬆️ Update music-assistant-frontend to 2.17.282 (by @musicassistant-bot[bot] in #5884)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@chrisuthe, @fmunkes, @marcelveldt
