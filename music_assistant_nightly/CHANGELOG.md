@@ -1,3 +1,51 @@
+# [2.10.0.dev2026082403] - 24.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082303](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082303)_
+
+### 🚀 Features and enhancements
+
+- Keep your queue when an external source starts playing (by @marcelveldt in #5914)
+- Play Spotify through Spotify's own playback engine (by @marcelveldt in #5918)
+- Add task reports (by @marcelveldt in #5925)
+- Show when a music service handles loudness and crossfade itself (by @marcelveldt in #5937)
+- Stop fighting the Spotify app over a Soloist playback session (by @marcelveldt in #5943)
+
+### 🐛 Bugfixes
+
+- Keep line breaks in metadata out of builtin M3U playlist files (by @OzGav in #5837)
+- Include genre_aliases in genre summary listings (by @jozefKruszynski in #5858)
+- Fix AirPlay players stuck 'playing' from a stale snapshot (by @teancom in #5938)
+
+### 🎨 Frontend Changes
+
+- Show when a music service handles loudness and crossfade itself (by @marcelveldt in [#2621](https://github.com/music-assistant/frontend/pull/2621))
+- Fix external source badges (by @marcelveldt in [#2622](https://github.com/music-assistant/frontend/pull/2622))
+- Fix alias count in the genre management table (by @jozefKruszynski in [#2583](https://github.com/music-assistant/frontend/pull/2583))
+- Fix shuffle and repeat while an external source is playing (by @marcelveldt in [#2612](https://github.com/music-assistant/frontend/pull/2612))
+- Rename the external source composable (by @marcelveldt in [#2616](https://github.com/music-assistant/frontend/pull/2616))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- ⬆️ Update music-assistant-models to 1.1.196 (by @musicassistant-bot[bot] in #5920)
+- Drop the audio format comparison workaround (by @marcelveldt in #5936)
+- Skipping a Spotify track no longer starts with a moment of the previous one (by @marcelveldt in #5940)
+- ⬆️ Update music-assistant-models to 1.1.198 (by @musicassistant-bot[bot] in #5945)
+- ⬆️ Update music-assistant-frontend to 2.17.286 (by @musicassistant-bot[bot] in #5946)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @jozefKruszynski, @marcelveldt, @teancom
+
+
 # [2.10.0.dev2026082303] - 23.08.2026
 
 ## 📦 Nightly Release
@@ -69,59 +117,3 @@ _Changes since [2.10.0.dev2026082115](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @jozefKruszynski, @marcelveldt, @stvncode
-
-
-# [2.10.0.dev2026082115] - 21.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082103](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082103)_
-
-### 🚀 Features and enhancements
-
-- Read the MilkDrop visualizer waveform from playback instead of Sendspin (by @jozefKruszynski in #5864)
-- Control the Spotify Connect session's queue from Music Assistant (by @marcelveldt in #5880)
-- Show episode descriptions and artwork for Pocket Casts (by @OzGav in #5898)
-
-### 🐛 Bugfixes
-
-- Signal a position jump when an incomplete anchor becomes complete (by @jozefKruszynski in #5872)
-- Release Spotify Connect when you clear the queue (by @marcelveldt in #5875)
-- Restore setup values that were dropped before they could be migrated (by @OzGav in #5878)
-- Keep autoplay running when a provider fails (by @marcelveldt in #5885)
-- Hide capture-only devices from universal groups (by @marcelveldt in #5886)
-- Keep capture-only Sendspin devices out of groups (by @marcelveldt in #5889)
-- Honor playback speed in the visualizer tap and cancel stale beat hydration (by @jozefKruszynski in #5891)
-- Fix WiiM players not reporting state after a restart (by @MarvinSchenkel in #5893)
-- Fix misleading errors when Home Assistant TTS fails (by @MarvinSchenkel in #5897)
-- Fix nugs.net playback for promo and trial subscriptions (by @OzGav in #5899)
-
-### 🎨 Frontend Changes
-
-- Move the MilkDrop visualizer settings into a menu popout (by @jozefKruszynski in [#2603](https://github.com/music-assistant/frontend/pull/2603))
-- Tint the MilkDrop visualizer with the track color (by @jozefKruszynski in [#2577](https://github.com/music-assistant/frontend/pull/2577))
-- Make the protocol documentation chip a real link (by @marcelveldt in [#2598](https://github.com/music-assistant/frontend/pull/2598))
-- Offer the visualizer on every player (by @jozefKruszynski in [#2588](https://github.com/music-assistant/frontend/pull/2588))
-- Fix Safari capitalizing the first letter when signing in (by @MarvinSchenkel in [#2599](https://github.com/music-assistant/frontend/pull/2599))
-- Fix the cramped merge button on genre pages (by @marcelveldt in [#2601](https://github.com/music-assistant/frontend/pull/2601))
-- Swiping back no longer freezes the page it returns to (by @stvncode in [#2594](https://github.com/music-assistant/frontend/pull/2594))
-- Make provider icon spacing opt-in (by @marcelveldt in [#2600](https://github.com/music-assistant/frontend/pull/2600))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Bump docker/setup-buildx-action from 4.2.0 to 4.3.0 (by @dependabot[bot] in #5869)
-- Keep malformed provider responses from emptying libraries (by @marcelveldt in #5877)
-- Keep raw Soundcloud API responses out of the log (by @MarvinSchenkel in #5894)
-- Use the logged-in account for YouTube Music searches (by @MarvinSchenkel in #5896)
-- ⬆️ Update music-assistant-frontend to 2.17.283 (by @musicassistant-bot[bot] in #5900)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @jozefKruszynski, @marcelveldt, @stvncode
