@@ -1,3 +1,53 @@
+# [2.10.0.dev2026082414] - 24.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082403](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082403)_
+
+### 🐛 Bugfixes
+
+- Mark players unavailable on controller disconnection for HEOS (by @MarvinSchenkel in #4068)
+- Fix Audible podcast sync skipping Periodical series (by @OzGav in #5907)
+- Dissolve sync group when a playback start never materializes (by @OzGav in #5908)
+- Fix Audible querying the old marketplace after a locale change (by @OzGav in #5909)
+- Fix missing played status on podcast episode details page (by @OzGav in #5927)
+- Fix podcast episodes showing in the wrong order (by @OzGav in #5929)
+- AI DJ no longer announces the wrong day of the week (by @MarvinSchenkel in #5947)
+- Smart fades no longer discards every plan on tracks with a mastered fade-out (by @MarvinSchenkel in #5949)
+
+### 🎨 Frontend Changes
+
+- Swiping back no longer shows the previous page twice (by @stvncode in [#2606](https://github.com/music-assistant/frontend/pull/2606))
+- Show podcast episodes newest first (by @OzGav in [#2620](https://github.com/music-assistant/frontend/pull/2620))
+- Stop reporting a format conversion Music Assistant did not make (by @marcelveldt in [#2623](https://github.com/music-assistant/frontend/pull/2623))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>12 changes</summary>
+
+- Keep the full details of Spotify episodes when fetched (by @OzGav in #5923)
+- Bump pytest-aiohttp from 1.1.0 to 1.1.1 (by @dependabot[bot] in #5932)
+- Bump fastmcp from 3.4.4 to 3.4.7 (by @dependabot[bot] in #5933)
+- Bump pytest from 9.0.3 to 9.1.1 (by @dependabot[bot] in #5934)
+- Report what a music service did to the audio per queue and per track boundary (by @marcelveldt in #5941)
+- Report the audio quality Spotify serves, not a conversion Music Assistant did not make (by @marcelveldt in #5942)
+- Prevent stale live source releases (by @marcelveldt in #5944)
+- Fix a missing import in the Audible setup flow (by @MarvinSchenkel in #5948)
+- Simplify Spotify Connect setup (by @marcelveldt in #5951)
+- Apply compact backend choice pattern to Spotify music provider (by @marcelveldt in #5952)
+- Bump wiim from 0.1.5 to 0.1.7 (by @MarvinSchenkel in #5953)
+- ⬆️ Update music-assistant-frontend to 2.17.287 (by @musicassistant-bot[bot] in #5956)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @marcelveldt, @stvncode
+
+
 # [2.10.0.dev2026082403] - 24.08.2026
 
 ## 📦 Nightly Release
@@ -86,34 +136,3 @@ _Changes since [2.10.0.dev2026082203](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Bulgus, @OzGav, @Shi-553, @fmunkes, @marcelveldt, @teancom, @vintvinst
-
-
-# [2.10.0.dev2026082203] - 22.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082115](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082115)_
-
-### 🚀 Features and enhancements
-
-- Add a streaming quality setting for Spotify Connect (by @marcelveldt in #5882)
-
-### 🎨 Frontend Changes
-
-- Enter in mobile search hides the keyboard instead of opening the first result (by @stvncode in [#2607](https://github.com/music-assistant/frontend/pull/2607))
-- Fill the MilkDrop droplet icon while the visualizer is enabled (by @jozefKruszynski in [#2605](https://github.com/music-assistant/frontend/pull/2605))
-- Make the queue read-only while an external session manages it (by @marcelveldt in [#2604](https://github.com/music-assistant/frontend/pull/2604))
-- Show provider logos in the Browse list (by @OzGav in [#2574](https://github.com/music-assistant/frontend/pull/2574))
-- Line up the collapsed sidebar icons in one straight column (by @stvncode in [#2608](https://github.com/music-assistant/frontend/pull/2608))
-- Keep the app initialization tests independent of their order (by @marcelveldt in [#2298](https://github.com/music-assistant/frontend/pull/2298))
-
-### 🧰 Maintenance and dependency bumps
-
-- Make next/previous/seek on live audio sources work the same from every API (by @marcelveldt in #5901)
-- ⬆️ Update music-assistant-frontend to 2.17.284 (by @musicassistant-bot[bot] in #5906)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @jozefKruszynski, @marcelveldt, @stvncode
