@@ -4,15 +4,6 @@ configuration:
     description: >-
       The name this player shows up under in Music Assistant. Leave it empty and
       it uses this system's hostname, which is usually "homeassistant".
-  output:
-    name: Audio output
-    description: >-
-      Where to play. Leave this at `default` to use Home Assistant's audio
-      system, and pick the sound card in this app's Audio panel instead. "null"
-      (quoted, when editing as YAML) throws the audio away, which is handy for
-      checking that the player shows up in Music Assistant before any speakers
-      are wired in. Sound-card names like `hw:1,0` cannot be opened from this
-      app and stop it — the Audio panel is how a card is chosen.
   log_level:
     name: Log level
     description: >-
