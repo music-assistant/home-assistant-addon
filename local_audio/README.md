@@ -29,15 +29,10 @@ connects to it.
 
 ## Choosing where the sound comes out
 
-Two separate settings decide this, and only the first one usually matters:
-
-- The **Audio** panel on this app's page in Home Assistant chooses the sound
-  card. This is Home Assistant's own audio routing, shared by every app, and it
-  is where a USB DAC gets selected.
-- The **Audio output** option stays at `default`, which means "whatever the
-  Audio panel points at". Set it to `null` to throw the audio away, which is a
-  quick way to confirm the player shows up in Music Assistant before any
-  speakers exist.
+The **Audio** panel on this app's page in Home Assistant chooses the sound card.
+This is Home Assistant's own audio routing, shared by every app, and it is where
+a USB DAC gets selected. Nothing in this app's own configuration picks an
+output; the Audio panel is the whole answer.
 
 A USB DAC plugged in while the app is running is not picked up until the app is
 restarted.
@@ -45,11 +40,10 @@ restarted.
 ### Direct hardware output is not available here
 
 This app plays through Home Assistant's audio system, and cannot open a sound
-card directly — an `hw:` or `plughw:` device in **Audio output** fails to open
-and **stops the app**, with the log naming the device it could not open. Put
-**Audio output** back to `default` and start it again. Home Assistant does not
-grant an app raw access to the sound hardware without also handing it every
-other device on the machine, which is not a trade this app makes.
+card directly. Home Assistant does not grant an app raw access to the sound
+hardware without also handing it every other device on the machine, which is not
+a trade this app makes. That is why the sound card is picked in the **Audio**
+panel rather than by naming an `hw:` or `plughw:` device.
 
 If you need exclusive, bit-perfect access to a DAC, run the container version of
 this player instead of the app. See the
@@ -79,6 +73,29 @@ in Music Assistant and raise its delay, in milliseconds, to however much latency
 that hardware adds after the audio leaves this box. The player then hands the
 audio over that much earlier, so it lands in sync with the group rather than
 late. It is remembered here, so it survives a restart.
+
+### No sound at any volume
+
+If the player shows up in Music Assistant and plays, but nothing comes out at
+any volume setting, the Home Assistant audio output itself is muted or turned
+down to zero. Music Assistant's volume cannot lift it: that adjusts the audio
+this app sends, not the level of the output it is sent to.
+
+That level is Home Assistant's, shared by every app on this machine and
+remembered across reboots, so something else may have set it. This app says so
+in its log when it starts, and names the output and the fix. From the Home
+Assistant host console, or a terminal app:
+
+```sh
+ha audio info
+ha audio volume output --index 0 --unmute
+ha audio volume output --index 0 --volume 85
+```
+
+`ha audio info` lists the outputs with their index; use the index of the one
+this app plays through, which is the one the log names. This app will not set
+the level for you — it is shared, so it stays yours to choose in the **Audio**
+panel.
 
 ## Known rough edges
 

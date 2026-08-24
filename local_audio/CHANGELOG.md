@@ -1,5 +1,41 @@
 # Changelog
 
+## 0.1.5
+
+Built on `sendspin-cli` v0.1.3.
+
+- Music now plays at the quality the sound card supports. The player offered
+  Music Assistant the formats it accepts worst first, and Music Assistant sends
+  the first one on the list it can encode, so the audio arrived at 22.05 kHz
+  however good the speakers were. The list now leads with the best the output
+  will take, which on an ordinary card is 48 kHz 16-bit stereo.
+
+## 0.1.4
+
+- The log now says so at start when the Home Assistant audio output this app
+  plays through is muted or turned all the way down. That is silence at every
+  Music Assistant volume setting, and until now it had no symptom anywhere: the
+  player appeared, accepted the music and played it to nothing. The warning
+  names the output and the `ha audio volume output` command that raises it.
+- Nothing is changed for you. That output level is shared with every other app
+  on this machine and is yours to set in the **Audio** panel, so this app
+  reports it rather than overriding it on every restart.
+
+## 0.1.3
+
+Fixes the error Home Assistant recorded every time this app was stopped.
+
+- Stopping the app no longer ends in `exited with non-zero exit code 137`. The
+  shutdown had no deadline of its own, so a bundled daemon that did not answer
+  its stop signal held the container open until Home Assistant gave up after ten
+  seconds and killed it. Each service now gets two seconds to stop before it is
+  killed, which keeps the whole shutdown inside the time Home Assistant allows.
+  The app always did reach Stopped; what changes is that it now gets there
+  cleanly rather than being recorded as a failure.
+- The AppArmor profile's three child profiles accept every signal the app is
+  allowed to send them. `SIGCONT` was missing from all three, and s6 sends it
+  alongside `SIGTERM` on every ordinary stop, so each stop took a denial.
+
 ## 0.1.2
 
 Built on `sendspin-cli` v0.1.1.
