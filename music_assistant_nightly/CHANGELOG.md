@@ -1,3 +1,42 @@
+# [2.10.0.dev2026082503] - 25.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082414](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082414)_
+
+### 🚀 Features and enhancements
+
+- Let Music Assistant mix crossfades for Spotify and other realtime sources (by @marcelveldt in #5960)
+
+### 🐛 Bugfixes
+
+- Fix Flow Mode sample rate setting being locked for players with enforced flow mode (by @vintvinst in #5955)
+
+### 🎨 Frontend Changes
+
+- Safer browser media controls (by @marcelveldt in [#2626](https://github.com/music-assistant/frontend/pull/2626))
+- Make crossfade details consistent (by @marcelveldt in [#2627](https://github.com/music-assistant/frontend/pull/2627))
+- Keep the Discover page in place when navigating back (by @MarvinSchenkel in [#2625](https://github.com/music-assistant/frontend/pull/2625))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Fix Spotify Connect quality reporting and a leftover audio process (by @marcelveldt in #5954)
+- Make publish IP tests reliable (by @marcelveldt in #5958)
+- ⬆️ Update music-assistant-models to 1.1.199 (by @musicassistant-bot[bot] in #5962)
+- ⬆️ Update music-assistant-frontend to 2.17.288 (by @musicassistant-bot[bot] in #5964)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt, @vintvinst
+
+
 # [2.10.0.dev2026082414] - 24.08.2026
 
 ## 📦 Nightly Release
@@ -94,45 +133,3 @@ _Changes since [2.10.0.dev2026082303](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @jozefKruszynski, @marcelveldt, @teancom
-
-
-# [2.10.0.dev2026082303] - 23.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082203](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082203)_
-
-### 🚀 Features and enhancements
-
-- Allow lower add to queue token limits and slower refill rates in Party plugin (by @Bulgus in #5904)
-- Refuse Spotify accounts that cannot work during setup (by @marcelveldt in #5911)
-
-### 🐛 Bugfixes
-
-- Fix white noise when playing DTS 5.1 audio packed inside WAV (by @vintvinst in #5803)
-- Fix the flow-mode 'next' command item for Cast children of Universal Players (by @OzGav in #5836)
-- Fixes an issue where tracks from Niconico Provider cannot be played (by @Shi-553 in #5842)
-- Keep the Spotify session alive when it moves to another player (by @marcelveldt in #5910)
-- Improve Audible sign-in setup (by @marcelveldt in #5915)
-- Don't parse playlist items already in the database (by @OzGav in #5916)
-- Add Symfonisk Table Lamp to Non-Hi Res models (by @OzGav in #5917)
-
-### 🎨 Frontend Changes
-
-- Show task reports (by @marcelveldt in [#2613](https://github.com/music-assistant/frontend/pull/2613))
-- Make server log viewer text selectable and copyable (by @teancom in [#2564](https://github.com/music-assistant/frontend/pull/2564))
-- Better styling for the now playing source badge (by @marcelveldt in [#2609](https://github.com/music-assistant/frontend/pull/2609))
-- Remove the read-only queue for external sessions (by @marcelveldt in [#2611](https://github.com/music-assistant/frontend/pull/2611))
-- Improve on collection thumbnails (by @fmunkes in [#2579](https://github.com/music-assistant/frontend/pull/2579))
-
-### 🧰 Maintenance and dependency bumps
-
-- Show episode descriptions for Audiobookshelf and Plex podcasts (by @OzGav in #5912)
-- Track a live external audio source on the player (by @marcelveldt in #5913)
-- ⬆️ Update music-assistant-frontend to 2.17.285 (by @musicassistant-bot[bot] in #5921)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Bulgus, @OzGav, @Shi-553, @fmunkes, @marcelveldt, @teancom, @vintvinst
