@@ -1,3 +1,53 @@
+# [2.10.0.dev2026082516] - 25.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082503](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082503)_
+
+### 🚀 Features and enhancements
+
+- Show audio quality for external sources (by @marcelveldt in #5963)
+- Support next/previous controls on Google Cast devices (by @MarvinSchenkel in #5970)
+- Show bit-perfect playback for external sources (by @marcelveldt in #5983)
+
+### 🐛 Bugfixes
+
+- Fix slow player response after pausing an external source (by @marcelveldt in #5961)
+- Announcements use the speaker's own announcement feature first (by @marcelveldt in #5974)
+- Fix mid-track silence on AirPlay receivers that need an explicit progress anchor (by @MarvinSchenkel in #5976)
+- Fix announcement volume and mute handling on AirPlay speakers (by @marcelveldt in #5977)
+
+### 🎨 Frontend Changes
+
+- Show audio quality for external sources (by @marcelveldt in [#2628](https://github.com/music-assistant/frontend/pull/2628))
+
+### Other Changes
+
+- Lokalise translations update (by @github-actions[bot] in #5966)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>8 changes</summary>
+
+- Fix flaky AirPlay announcement timing tests (by @marcelveldt in #5967)
+- Bump hass-client to 1.3.1 (by @MarvinSchenkel in #5969)
+- Speed up the slowest AirPlay announcement test (by @marcelveldt in #5971)
+- Let audio analysis notice players that are not served over HTTP (by @marcelveldt in #5972)
+- Keep tracks of the same album gapless when crossfade is on (by @marcelveldt in #5973)
+- Tidy up process cleanup code (by @marcelveldt in #5980)
+- ⬆️ Update music-assistant-frontend to 2.17.289 (by @musicassistant-bot[bot] in #5982)
+- Count album plays started from a streaming service's own listings (by @marcelveldt in #5984)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @marcelveldt
+
+
 # [2.10.0.dev2026082503] - 25.08.2026
 
 ## 📦 Nightly Release
@@ -85,51 +135,3 @@ _Changes since [2.10.0.dev2026082403](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @marcelveldt, @stvncode
-
-
-# [2.10.0.dev2026082403] - 24.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082303](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082303)_
-
-### 🚀 Features and enhancements
-
-- Keep your queue when an external source starts playing (by @marcelveldt in #5914)
-- Play Spotify through Spotify's own playback engine (by @marcelveldt in #5918)
-- Add task reports (by @marcelveldt in #5925)
-- Show when a music service handles loudness and crossfade itself (by @marcelveldt in #5937)
-- Stop fighting the Spotify app over a Soloist playback session (by @marcelveldt in #5943)
-
-### 🐛 Bugfixes
-
-- Keep line breaks in metadata out of builtin M3U playlist files (by @OzGav in #5837)
-- Include genre_aliases in genre summary listings (by @jozefKruszynski in #5858)
-- Fix AirPlay players stuck 'playing' from a stale snapshot (by @teancom in #5938)
-
-### 🎨 Frontend Changes
-
-- Show when a music service handles loudness and crossfade itself (by @marcelveldt in [#2621](https://github.com/music-assistant/frontend/pull/2621))
-- Fix external source badges (by @marcelveldt in [#2622](https://github.com/music-assistant/frontend/pull/2622))
-- Fix alias count in the genre management table (by @jozefKruszynski in [#2583](https://github.com/music-assistant/frontend/pull/2583))
-- Fix shuffle and repeat while an external source is playing (by @marcelveldt in [#2612](https://github.com/music-assistant/frontend/pull/2612))
-- Rename the external source composable (by @marcelveldt in [#2616](https://github.com/music-assistant/frontend/pull/2616))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- ⬆️ Update music-assistant-models to 1.1.196 (by @musicassistant-bot[bot] in #5920)
-- Drop the audio format comparison workaround (by @marcelveldt in #5936)
-- Skipping a Spotify track no longer starts with a moment of the previous one (by @marcelveldt in #5940)
-- ⬆️ Update music-assistant-models to 1.1.198 (by @musicassistant-bot[bot] in #5945)
-- ⬆️ Update music-assistant-frontend to 2.17.286 (by @musicassistant-bot[bot] in #5946)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @jozefKruszynski, @marcelveldt, @teancom
