@@ -1,3 +1,81 @@
+# [2.10.0rc7] - 26.08.2026
+
+## 📦 RC Release
+
+_Changes since [2.10.0rc6](https://github.com/music-assistant/server/releases/tag/2.10.0rc6)_
+
+### ⚠ Breaking Changes
+
+- Retire the local audio provider in favor of the Sendspin add-on (by @chrisuthe in #5965)
+
+### 🚀 Features and enhancements
+
+- Show fuller descriptions for BBC Sounds podcasts and shows (by @OzGav in #5924)
+- Add per player HEOS playback transition configuration (by @Tommatheussen in #5978)
+- Shuffle and repeat now work on a source your speaker runs itself (by @marcelveldt in #5993)
+- Use album loudness only for albums you actually played (by @marcelveldt in #5994)
+- Faster seeking on Spotify tracks played through Soloist (by @marcelveldt in #6000)
+- Keep the home page in step when played state changes (by @OzGav in #6005)
+
+### 🐛 Bugfixes
+
+- 'Play next' now really plays the chosen track next on a dynamic queue (by @MarvinSchenkel in #5950)
+- Use album loudness only when tracks really play as part of an album (by @marcelveldt in #5981)
+- Notice when Spotify playback loses its pairing (by @marcelveldt in #5987)
+- Seeking or resuming a Spotify track no longer cuts it off mid-song (by @marcelveldt in #5992)
+- Add dark theme icon for MilkDrop Visualizer (by @jozefKruszynski in #6007)
+
+### 🎨 Frontend Changes
+
+- Continue setup as soon as you pick an option (by @maximmaxim345 in [#2643](https://github.com/music-assistant/frontend/pull/2643))
+- Shuffle and repeat no longer apply to something that stopped playing (by @marcelveldt in [#2650](https://github.com/music-assistant/frontend/pull/2650))
+- Show shuffle and repeat failures again, except the expected one (by @marcelveldt in [#2652](https://github.com/music-assistant/frontend/pull/2652))
+- Document how the shuffle and repeat controls pick the source they act on (by @marcelveldt in [#2651](https://github.com/music-assistant/frontend/pull/2651))
+- Surface retired providers correctly in the settings UI (by @chrisuthe in [#2644](https://github.com/music-assistant/frontend/pull/2644))
+- Show the full menu on discover page items (by @OzGav in [#2624](https://github.com/music-assistant/frontend/pull/2624))
+- Translate the provider stage badge (by @chrisuthe in [#2629](https://github.com/music-assistant/frontend/pull/2629))
+- Fix permission popups on cast dashboards (by @MarvinSchenkel in [#2655](https://github.com/music-assistant/frontend/pull/2655))
+- Replace butterchurn with maintained fork (by @jozefKruszynski in [#2654](https://github.com/music-assistant/frontend/pull/2654))
+- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2630](https://github.com/music-assistant/frontend/pull/2630))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>23 changes</summary>
+
+- Count an album as played once, however its tracks are ordered in the queue (by @marcelveldt in #5991)
+- Keep the position shown for a live source in step with the player (by @marcelveldt in #5995)
+- Document which Spotify Soloist pairing failures are detected (by @marcelveldt in #5996)
+- Show the right bit-perfect badge when two speakers share one live source (by @marcelveldt in #5997)
+- Log how long a stream takes to deliver its first audio (by @marcelveldt in #5998)
+- Report a slow player stop after pausing Spotify Connect (by @marcelveldt in #5999)
+- Spread beat analysis over shorter steps so it stays out of playback's way (by @marcelveldt in #6001)
+- Cleanup and small tweaks to the Spotify provider (by @marcelveldt in #6002)
+- ⬆️ Update music-assistant-models to 1.1.200 (by @musicassistant-bot[bot] in #6003)
+- ⬆️ Update music-assistant-frontend to 2.17.291 (by @musicassistant-bot[bot] in #6004)
+- Stop leaving a subprocess running when closing it is cancelled (by @marcelveldt in #6006)
+- Make the Smart Fades unloaded-model guards actually work (by @marcelveldt in #6008)
+- ⬆️ Update music-assistant-models to 1.1.201 (by @musicassistant-bot[bot] in #6009)
+- Let a cancelled virtual player creation finish cleaning up (by @marcelveldt in #6010)
+- ⬆️ Update music-assistant-models to 1.1.202 (by @musicassistant-bot[bot] in #6011)
+- Keep analysis models loaded while a track is still being analysed (by @marcelveldt in #6012)
+- Keep the Smart Fades models as a single set (by @marcelveldt in #6013)
+- Keep Spotify playing without a gap when a track repeats or the queue changes (by @marcelveldt in #6014)
+- Stop logging an ordinary Spotify seek as a failure (by @marcelveldt in #6015)
+- Don't stall cleaning up a virtual player that was already removed (by @marcelveldt in #6016)
+- Free a cut Spotify channel's buffer as soon as nothing is reading it (by @marcelveldt in #6017)
+- Add tests for where Spotify Soloist splits one track from the next (by @marcelveldt in #6018)
+- ⬆️ Update music-assistant-frontend to 2.17.292 (by @musicassistant-bot[bot] in #6020)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @jozefKruszynski, @marcelveldt, @maximmaxim345
+
+
 # [2.10.0rc6] - 25.08.2026
 
 ## 📦 RC Release
@@ -159,78 +237,3 @@ _Changes since [2.10.0rc4](https://github.com/music-assistant/server/releases/ta
 Special thanks to the following contributors who helped with this release:
 
 @Bulgus, @MarvinSchenkel, @OzGav, @Shi-553, @fmunkes, @jozefKruszynski, @marcelveldt, @stvncode, @teancom, @vintvinst
-
-
-# [2.10.0rc4] - 21.08.2026
-
-## 📦 RC Release
-
-_Changes since [2.10.0rc3](https://github.com/music-assistant/server/releases/tag/2.10.0rc3)_
-
-### 🚀 Features and enhancements
-
-- Read the MilkDrop visualizer waveform from playback instead of Sendspin (by @jozefKruszynski in #5864)
-- Start the next track's crossfade audio while the current one is still playing (by @marcelveldt in #5866)
-- Control the Spotify Connect session's queue from Music Assistant (by @marcelveldt in #5880)
-- Add a streaming quality setting for Spotify Connect (by @marcelveldt in #5882)
-- Show episode descriptions and artwork for Pocket Casts (by @OzGav in #5898)
-
-### 🐛 Bugfixes
-
-- Fix play count going negative when marking an unfinished item as unplayed (by @chrisuthe in #5865)
-- Keep shuffle on when you play something new (by @marcelveldt in #5867)
-- Ensure gapless playback in MusicCast after security hardening (by @fmunkes in #5871)
-- Signal a position jump when an incomplete anchor becomes complete (by @jozefKruszynski in #5872)
-- Don't empty the queue while loading what you picked next (by @marcelveldt in #5873)
-- Release Spotify Connect when you clear the queue (by @marcelveldt in #5875)
-- Restore setup values that were dropped before they could be migrated (by @OzGav in #5878)
-- Keep autoplay running when a provider fails (by @marcelveldt in #5885)
-- Hide capture-only devices from universal groups (by @marcelveldt in #5886)
-- Keep capture-only Sendspin devices out of groups (by @marcelveldt in #5889)
-- Honor playback speed in the visualizer tap and cancel stale beat hydration (by @jozefKruszynski in #5891)
-- Fix WiiM players not reporting state after a restart (by @MarvinSchenkel in #5893)
-- Fix misleading errors when Home Assistant TTS fails (by @MarvinSchenkel in #5897)
-- Fix nugs.net playback for promo and trial subscriptions (by @OzGav in #5899)
-
-### 🎨 Frontend Changes
-
-- Call the group picker's visualizers section "Screens" (by @marcelveldt in [#2590](https://github.com/music-assistant/frontend/pull/2590))
-- Show a readable player type on the player settings page (by @marcelveldt in [#2596](https://github.com/music-assistant/frontend/pull/2596))
-- Fix silent group members from line-in capture devices (by @marcelveldt in [#2591](https://github.com/music-assistant/frontend/pull/2591))
-- Fix provider icon spacing in the add provider and add group player dialogs (by @marcelveldt in [#2593](https://github.com/music-assistant/frontend/pull/2593))
-- Use one shared component for the player protocol chips (by @marcelveldt in [#2595](https://github.com/music-assistant/frontend/pull/2595))
-- Clean up leftovers in the players filter (by @marcelveldt in [#2592](https://github.com/music-assistant/frontend/pull/2592))
-- Remove an unused option from the provider icon component (by @marcelveldt in [#2589](https://github.com/music-assistant/frontend/pull/2589))
-- Fix provider icon spacing on the Discover shelf and settings screens (by @marcelveldt in [#2587](https://github.com/music-assistant/frontend/pull/2587))
-- Various improvements to the App startup tests (by @marcelveldt in [#2586](https://github.com/music-assistant/frontend/pull/2586))
-- Move the MilkDrop visualizer settings into a menu popout (by @jozefKruszynski in [#2603](https://github.com/music-assistant/frontend/pull/2603))
-- Tint the MilkDrop visualizer with the track color (by @jozefKruszynski in [#2577](https://github.com/music-assistant/frontend/pull/2577))
-- Make the protocol documentation chip a real link (by @marcelveldt in [#2598](https://github.com/music-assistant/frontend/pull/2598))
-- Offer the visualizer on every player (by @jozefKruszynski in [#2588](https://github.com/music-assistant/frontend/pull/2588))
-- Fix Safari capitalizing the first letter when signing in (by @MarvinSchenkel in [#2599](https://github.com/music-assistant/frontend/pull/2599))
-- Fix the cramped merge button on genre pages (by @marcelveldt in [#2601](https://github.com/music-assistant/frontend/pull/2601))
-- Swiping back no longer freezes the page it returns to (by @stvncode in [#2594](https://github.com/music-assistant/frontend/pull/2594))
-- Make provider icon spacing opt-in (by @marcelveldt in [#2600](https://github.com/music-assistant/frontend/pull/2600))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>9 changes</summary>
-
-- Bump docker/setup-buildx-action from 4.2.0 to 4.3.0 (by @dependabot[bot] in #5869)
-- Surface Spotify Connect queue and playback options from the Soloist engine (by @marcelveldt in #5874)
-- ⬆️ Update music-assistant-models to 1.1.194 (by @musicassistant-bot[bot] in #5876)
-- Keep malformed provider responses from emptying libraries (by @marcelveldt in #5877)
-- Stabilize Yandex login timeout tests (by @marcelveldt in #5879)
-- ⬆️ Update music-assistant-frontend to 2.17.282 (by @musicassistant-bot[bot] in #5884)
-- Keep raw Soundcloud API responses out of the log (by @MarvinSchenkel in #5894)
-- Use the logged-in account for YouTube Music searches (by @MarvinSchenkel in #5896)
-- ⬆️ Update music-assistant-frontend to 2.17.283 (by @musicassistant-bot[bot] in #5900)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @jozefKruszynski, @marcelveldt, @stvncode
