@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.8
+
+Built on `sendspin-cli` v0.1.4, and through it `sendspin-cpp` v0.7.2.
+
+- Nothing is changed for you. This is the player itself moving up to its
+  current release; none of what it changes upstream shows up in playback here.
+
 ## 0.1.7
 
 - The player is called **Local Audio** by default, rather than taking the name
