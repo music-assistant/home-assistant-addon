@@ -3,7 +3,7 @@ configuration:
     name: Player name
     description: >-
       The name this player shows up under in Music Assistant. Leave it empty and
-      it uses this system's hostname, which is usually "homeassistant".
+      it is called "Local Audio".
   log_level:
     name: Log level
     description: >-

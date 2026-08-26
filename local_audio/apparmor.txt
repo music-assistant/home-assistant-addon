@@ -8,12 +8,10 @@
 profile local_audio flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
-  # A fixed-function player: no mount, umount or remount, no dac_read_search,
-  # and no sys_admin -- which is also what keeps `host_uts: true` from letting
-  # anything here rename the host. The supervision tree, bashio and the
-  # option-reading scripts all run as root and switch to no other user, so this
-  # outer profile declares no capability; the two bundled daemons declare
-  # theirs below.
+  # A fixed-function player: no mount, umount or remount, no dac_read_search
+  # and no sys_admin. The supervision tree, bashio and the option-reading
+  # scripts all run as root and switch to no other user, so this outer profile
+  # declares no capability; the two bundled daemons declare theirs below.
   file,
 
   # s6 supervises the three services and passes on a container stop. The stop

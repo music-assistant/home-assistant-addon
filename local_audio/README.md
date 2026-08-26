@@ -77,9 +77,10 @@ late. It is remembered here, so it survives a restart.
 ### No sound at any volume
 
 If the player shows up in Music Assistant and plays, but nothing comes out at
-any volume setting, the Home Assistant audio output itself is muted or turned
-down to zero. Music Assistant's volume cannot lift it: that adjusts the audio
-this app sends, not the level of the output it is sent to.
+any volume setting, the fault is in the Home Assistant audio output rather than
+in the player. Most often that output is muted or turned down to zero. Music
+Assistant's volume cannot lift it: that adjusts the audio this app sends, not
+the level of the output it is sent to.
 
 That level is Home Assistant's, shared by every app on this machine and
 remembered across reboots, so something else may have set it. This app says so
@@ -97,13 +98,19 @@ this app plays through, which is the one the log names. This app will not set
 the level for you — it is shared, so it stays yours to choose in the **Audio**
 panel.
 
+If `ha audio info` shows the level is already up, the output may instead be
+routed to a port with nothing plugged into it — a line-out on a card whose
+headphone jack is the one in use, say. The audio reaches that socket and stops
+there, at any volume. Unplug and replug the speakers or headphones, which is enough for the card to
+notice them and switch, or pick an output that is plugged in from the **Audio**
+panel. The log names the port it is playing out of at every start, so it is
+worth reading first.
+
 ## Known rough edges
 
 This app is **experimental**. It works, but it has not been through wide testing
 on real hardware.
 
-- The default player name is this machine's hostname, usually
-  **homeassistant**. Renaming it is what the **Player name** option is for.
 - The log may carry a one-off warning banner from the mDNS compatibility layer
   the player is built against. It is printed outside the player's own log format
   and is harmless.

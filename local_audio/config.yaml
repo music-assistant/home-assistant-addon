@@ -1,5 +1,5 @@
 name: Local Audio
-version: "0.1.5"
+version: "0.1.7"
 slug: local_audio
 description: >-
   Turns this Home Assistant system into a synchronized Sendspin player for
@@ -20,12 +20,6 @@ init: false
 # The mDNS advertisement, and the inbound websocket the server connects back in
 # on, both need the host's network namespace.
 host_network: true
-# Shares the host's UTS namespace, which is what makes `hostname` inside the
-# container answer with this machine's name. Without it an unset `name` option
-# would default the player to the container's own hostname, something like
-# "a1b2c3d4-local-audio". Renaming the host from in here would need
-# CAP_SYS_ADMIN, which apparmor.txt does not grant.
-host_uts: true
 # Maps Home Assistant's PulseAudio in: an /etc/asound.conf routing `default` to
 # it, a client.conf naming the sink, and the socket under /run/audio. It also
 # gives this app its own Audio selector, which is how a user points it at a USB
@@ -33,8 +27,8 @@ host_uts: true
 audio: true
 options:
   # Empty rather than absent, so the configuration screen shows the field
-  # instead of folding it away as unused. An empty name still falls back to
-  # this system's hostname.
+  # instead of folding it away as unused. An empty name is the default,
+  # "Local Audio".
   name: ""
   log_level: info
 # `server` is optional with no default on purpose: setting one switches the
