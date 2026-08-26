@@ -1,3 +1,57 @@
+# [2.10.0.dev2026082603] - 26.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082516](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082516)_
+
+### 🚀 Features and enhancements
+
+- Hide Sendspin token pairing method when PIN/code pairing is available (by @maximmaxim345 in #5975)
+- Shuffle and repeat now work on a source your speaker runs itself (by @marcelveldt in #5993)
+- Use album loudness only for albums you actually played (by @marcelveldt in #5994)
+
+### 🐛 Bugfixes
+
+- Use album loudness only when tracks really play as part of an album (by @marcelveldt in #5981)
+- Notice when Spotify playback loses its pairing (by @marcelveldt in #5987)
+- Seeking or resuming a Spotify track no longer cuts it off mid-song (by @marcelveldt in #5992)
+
+### 🎨 Frontend Changes
+
+- Select a player once its setup/pairing flow finishes (by @maximmaxim345 in [#2642](https://github.com/music-assistant/frontend/pull/2642))
+- Remember the artist page view mode across all artists (by @MarvinSchenkel in [#2641](https://github.com/music-assistant/frontend/pull/2641))
+- Bump @lucide/vue from 1.31.0 to 1.33.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2632](https://github.com/music-assistant/frontend/pull/2632))
+- Bump happy-dom from 20.11.1 to 20.11.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2640](https://github.com/music-assistant/frontend/pull/2640))
+- Continue setup as soon as you pick an option (by @maximmaxim345 in [#2643](https://github.com/music-assistant/frontend/pull/2643))
+- Shuffle and repeat no longer apply to something that stopped playing (by @marcelveldt in [#2650](https://github.com/music-assistant/frontend/pull/2650))
+- Show shuffle and repeat failures again, except the expected one (by @marcelveldt in [#2652](https://github.com/music-assistant/frontend/pull/2652))
+- Document how the shuffle and repeat controls pick the source they act on (by @marcelveldt in [#2651](https://github.com/music-assistant/frontend/pull/2651))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>10 changes</summary>
+
+- Bump `aiosendspin` to 9.1.1 (by @maximmaxim345 in #5985)
+- ⬆️ Update music-assistant-frontend to 2.17.290 (by @musicassistant-bot[bot] in #5988)
+- Count an album as played once, however its tracks are ordered in the queue (by @marcelveldt in #5991)
+- Keep the position shown for a live source in step with the player (by @marcelveldt in #5995)
+- Document which Spotify Soloist pairing failures are detected (by @marcelveldt in #5996)
+- Show the right bit-perfect badge when two speakers share one live source (by @marcelveldt in #5997)
+- Log how long a stream takes to deliver its first audio (by @marcelveldt in #5998)
+- Report a slow player stop after pausing Spotify Connect (by @marcelveldt in #5999)
+- ⬆️ Update music-assistant-models to 1.1.200 (by @musicassistant-bot[bot] in #6003)
+- ⬆️ Update music-assistant-frontend to 2.17.291 (by @musicassistant-bot[bot] in #6004)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @lucide, @marcelveldt, @maximmaxim345
+
+
 # [2.10.0.dev2026082516] - 25.08.2026
 
 ## 📦 Nightly Release
@@ -85,53 +139,3 @@ _Changes since [2.10.0.dev2026082414](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @marcelveldt, @vintvinst
-
-
-# [2.10.0.dev2026082414] - 24.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082403](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082403)_
-
-### 🐛 Bugfixes
-
-- Mark players unavailable on controller disconnection for HEOS (by @MarvinSchenkel in #4068)
-- Fix Audible podcast sync skipping Periodical series (by @OzGav in #5907)
-- Dissolve sync group when a playback start never materializes (by @OzGav in #5908)
-- Fix Audible querying the old marketplace after a locale change (by @OzGav in #5909)
-- Fix missing played status on podcast episode details page (by @OzGav in #5927)
-- Fix podcast episodes showing in the wrong order (by @OzGav in #5929)
-- AI DJ no longer announces the wrong day of the week (by @MarvinSchenkel in #5947)
-- Smart fades no longer discards every plan on tracks with a mastered fade-out (by @MarvinSchenkel in #5949)
-
-### 🎨 Frontend Changes
-
-- Swiping back no longer shows the previous page twice (by @stvncode in [#2606](https://github.com/music-assistant/frontend/pull/2606))
-- Show podcast episodes newest first (by @OzGav in [#2620](https://github.com/music-assistant/frontend/pull/2620))
-- Stop reporting a format conversion Music Assistant did not make (by @marcelveldt in [#2623](https://github.com/music-assistant/frontend/pull/2623))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>12 changes</summary>
-
-- Keep the full details of Spotify episodes when fetched (by @OzGav in #5923)
-- Bump pytest-aiohttp from 1.1.0 to 1.1.1 (by @dependabot[bot] in #5932)
-- Bump fastmcp from 3.4.4 to 3.4.7 (by @dependabot[bot] in #5933)
-- Bump pytest from 9.0.3 to 9.1.1 (by @dependabot[bot] in #5934)
-- Report what a music service did to the audio per queue and per track boundary (by @marcelveldt in #5941)
-- Report the audio quality Spotify serves, not a conversion Music Assistant did not make (by @marcelveldt in #5942)
-- Prevent stale live source releases (by @marcelveldt in #5944)
-- Fix a missing import in the Audible setup flow (by @MarvinSchenkel in #5948)
-- Simplify Spotify Connect setup (by @marcelveldt in #5951)
-- Apply compact backend choice pattern to Spotify music provider (by @marcelveldt in #5952)
-- Bump wiim from 0.1.5 to 0.1.7 (by @MarvinSchenkel in #5953)
-- ⬆️ Update music-assistant-frontend to 2.17.287 (by @musicassistant-bot[bot] in #5956)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @marcelveldt, @stvncode
