@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.1.7
+
+- The player is called **Local Audio** by default, rather than taking the name
+  of the machine it runs on. If you never set a name, this player is about to
+  be renamed from **homeassistant** to **Local Audio** in Music Assistant —
+  type the old name into **Player name** to keep it.
+- The app no longer asks for the host's UTS namespace. It was only ever there
+  so the name above could be read off the host, and nothing needs it now.
+
+## 0.1.6
+
+- The log now names the audio output this app plays through at every start —
+  which output it is, how loud it is set, and which socket on the card it is
+  coming out of. Until now a healthy start said nothing at all, which left a
+  "no sound" report with nothing in the log to go on.
+- A new warning for an output that is turned up and unmuted and still silent,
+  because it is routed to a socket with nothing plugged into it. That is what
+  a card does when its headphone jack is the one in use and the line-out is the
+  one selected, and replugging the speakers is usually enough to fix it. Only
+  ports the card actually reports as unavailable are named, so a card that
+  cannot tell whether anything is plugged in is left alone.
+- Two cases that used to pass in silence now say so: the output selected in the
+  **Audio** panel not being among the ones PulseAudio lists — an unplugged USB
+  DAC, a renamed card — and there being no audio outputs at all. Both meant the
+  audio was going somewhere other than where it was sent, with nothing to say
+  so.
+- Still nothing is changed for you. The level and the output selection are
+  shared with every other app on this machine and stay yours to set in the
+  **Audio** panel.
+
 ## 0.1.5
 
 Built on `sendspin-cli` v0.1.3.
