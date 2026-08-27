@@ -1,3 +1,32 @@
+# [2.11.0.dev2026082704] - 27.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.10.0.dev2026082618](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082618)_
+
+### 🚀 Features and enhancements
+
+- Enable Spotify Connect or AirPlay Receiver from the player's own settings (by @marcelveldt in #6042)
+- Keep other players' Spotify Connect and AirPlay devices alive when one daemon fails (by @marcelveldt in #6043)
+
+### 🎨 Frontend Changes
+
+- Scope audio sources in Browse to the selected player (by @marcelveldt in [#2660](https://github.com/music-assistant/frontend/pull/2660))
+- Fix the mobile player blur on Chromium browsers (by @marcelveldt in [#2662](https://github.com/music-assistant/frontend/pull/2662))
+- One shared code input for remote ID and pairing codes (by @marcelveldt in [#2661](https://github.com/music-assistant/frontend/pull/2661))
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix release creation failing on very large release notes (by @marcelveldt in #6041)
+- Hide non-audio players from the scrobbler player picker (by @marcelveldt in #6044)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt
+
+
 # [2.10.0.dev2026082618] - 26.08.2026
 
 ## 📦 Nightly Release
@@ -135,53 +164,3 @@ _Changes since [2.10.0.dev2026082516](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @lucide, @marcelveldt, @maximmaxim345
-
-
-# [2.10.0.dev2026082516] - 25.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082503](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082503)_
-
-### 🚀 Features and enhancements
-
-- Show audio quality for external sources (by @marcelveldt in #5963)
-- Support next/previous controls on Google Cast devices (by @MarvinSchenkel in #5970)
-- Show bit-perfect playback for external sources (by @marcelveldt in #5983)
-
-### 🐛 Bugfixes
-
-- Fix slow player response after pausing an external source (by @marcelveldt in #5961)
-- Announcements use the speaker's own announcement feature first (by @marcelveldt in #5974)
-- Fix mid-track silence on AirPlay receivers that need an explicit progress anchor (by @MarvinSchenkel in #5976)
-- Fix announcement volume and mute handling on AirPlay speakers (by @marcelveldt in #5977)
-
-### 🎨 Frontend Changes
-
-- Show audio quality for external sources (by @marcelveldt in [#2628](https://github.com/music-assistant/frontend/pull/2628))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5966)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- Fix flaky AirPlay announcement timing tests (by @marcelveldt in #5967)
-- Bump hass-client to 1.3.1 (by @MarvinSchenkel in #5969)
-- Speed up the slowest AirPlay announcement test (by @marcelveldt in #5971)
-- Let audio analysis notice players that are not served over HTTP (by @marcelveldt in #5972)
-- Keep tracks of the same album gapless when crossfade is on (by @marcelveldt in #5973)
-- Tidy up process cleanup code (by @marcelveldt in #5980)
-- ⬆️ Update music-assistant-frontend to 2.17.289 (by @musicassistant-bot[bot] in #5982)
-- Count album plays started from a streaming service's own listings (by @marcelveldt in #5984)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @marcelveldt
