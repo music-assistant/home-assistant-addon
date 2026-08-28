@@ -2,6 +2,8 @@
 
 ## 📦 Stable Release
 
+> 🎉 **Music Assistant 2.10 is here!** Read the [release announcement](https://www.music-assistant.io/blog/2026/08/26/music-assistant-2-10/) on our blog.
+
 _Changes since [2.9.13](https://github.com/music-assistant/server/releases/tag/2.9.13)_
 
 ### ⚠ Breaking Changes
