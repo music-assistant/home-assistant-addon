@@ -1,3 +1,95 @@
+# [2.11.0b0] - 28.08.2026
+
+## 📦 Beta Release
+
+_Changes since [2.10.0rc7](https://github.com/music-assistant/server/releases/tag/2.10.0rc7)_
+
+### 🚀 Features and enhancements
+
+- Report completed plays back to Tidal (by @jozefKruszynski in #5835)
+- Improve local album and artist folder matching (by @marcelveldt in #5939)
+- Add an icon for the `sendspin_source` provider (by @maximmaxim345 in #6023)
+- Show pairing codes as dedicated input boxes (by @marcelveldt in #6028)
+- Remove the retired local audio provider on installs that never played through it (by @chrisuthe in #6029)
+- Give the server a configurable name and external URL (by @marcelveldt in #6031)
+- Approve new Sendspin devices with a single click (by @maximmaxim345 in #6035)
+- Enable Spotify Connect or AirPlay Receiver from the player's own settings (by @marcelveldt in #6042)
+- Keep other players' Spotify Connect and AirPlay devices alive when one daemon fails (by @marcelveldt in #6043)
+
+### 🐛 Bugfixes
+
+- Snapcast: resume music after an announcement (by @MarvinSchenkel in #5968)
+- Spotify Connect no longer disappears when a different account connects (by @marcelveldt in #6019)
+- Selecting a source no longer takes five seconds to start playing (by @marcelveldt in #6021)
+- Cancel in-flight finalizes before freeing analysis models (by @chrisuthe in #6024)
+- Retry Sonic Analysis when a track loses its CLAP windows (by @chrisuthe in #6034)
+- Keep the AirPlay connection alive when seeking (by @marcelveldt in #6050)
+- Fix an AirPlay speaker going silent when it joins a group (by @marcelveldt in #6051)
+- Fix an AirPlay speaker going silent when two things start it at once (by @marcelveldt in #6054)
+- Stop restarting an AirPlay speaker when a seek needs a moment (by @marcelveldt in #6055)
+- Keep the queue on an audio player when a group leader drops out (by @marcelveldt in #6056)
+- Fix a speaker staying silent after its group is joined with another one (by @marcelveldt in #6057)
+- Stop AirPlay speakers in a group immediately on pause or stop (by @marcelveldt in #6058)
+- Keep an AirPlay player's streaming mode under the user's control (by @marcelveldt in #6059)
+- Make seeking forward in a slow source fast (by @marcelveldt in #6060)
+- Add a 24-bit audio toggle for AirPlay players (by @marcelveldt in #6061)
+- Fix a group member never re-joining after it drops off the network (by @marcelveldt in #6062)
+- Fix a Spotify audiobook stopping when you seek to another chapter (by @marcelveldt in #6063)
+- Fix Spotify not loading after updating to 2.10 (by @kiegsgroot in #6065)
+- Fix the Apple TV progress bar disappearing after a track change (by @marcelveldt in #6067)
+- Fix YouTube Music search finding nothing when the language is not English (by @marcelveldt in #6068)
+- Fix grouping being unavailable while Spotify Connect plays (by @marcelveldt in #6070)
+- Stop the music when you power off a speaker (by @marcelveldt in #6074)
+- Stop random music playing after a notification clip (by @marcelveldt in #6075)
+
+### 🎨 Frontend Changes
+
+- Show pairing codes as dedicated input boxes (by @marcelveldt in [#2657](https://github.com/music-assistant/frontend/pull/2657))
+- No more STABLE badge when adding a provider (by @marcelveldt in [#2656](https://github.com/music-assistant/frontend/pull/2656))
+- Show server name, addresses and remote access on the About page (by @marcelveldt in [#2658](https://github.com/music-assistant/frontend/pull/2658))
+- Show audio inputs and devices that need setup (by @maximmaxim345 in [#2659](https://github.com/music-assistant/frontend/pull/2659))
+- Scope audio sources in Browse to the selected player (by @marcelveldt in [#2660](https://github.com/music-assistant/frontend/pull/2660))
+- Fix the mobile player blur on Chromium browsers (by @marcelveldt in [#2662](https://github.com/music-assistant/frontend/pull/2662))
+- One shared code input for remote ID and pairing codes (by @marcelveldt in [#2661](https://github.com/music-assistant/frontend/pull/2661))
+- Fix loading spinners showing up too small (by @marcelveldt in [#2669](https://github.com/music-assistant/frontend/pull/2669))
+- Check the Python package builds in CI (by @marcelveldt in [#2668](https://github.com/music-assistant/frontend/pull/2668))
+- Silence the setuptools warning about the assets directory (by @marcelveldt in [#2667](https://github.com/music-assistant/frontend/pull/2667))
+- Clean up the Python packaging config (by @marcelveldt in [#2666](https://github.com/music-assistant/frontend/pull/2666))
+- Remove the unused VS Code workspace file (by @marcelveldt in [#2665](https://github.com/music-assistant/frontend/pull/2665))
+- Remove the unused webhint config file (by @marcelveldt in [#2664](https://github.com/music-assistant/frontend/pull/2664))
+- Remove the unused browser targets config file (by @marcelveldt in [#2663](https://github.com/music-assistant/frontend/pull/2663))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>16 changes</summary>
+
+- Hide the Sendspin legacy clients option (by @maximmaxim345 in #6025)
+- Set up Spotify Connect and AirPlay Receiver once and pick the players they serve (by @marcelveldt in #6026)
+- Use the new Sendspin mark for the provider icon (by @MarvinSchenkel in #6030)
+- Pairing texts now say 'pairing code' instead of 'PIN' (by @marcelveldt in #6033)
+- Update base image versions to 1.6.3 (by @marcelveldt in #6037)
+- Clean up snapcast mdns records when the provider unloads (by @marcelveldt in #6038)
+- Tidy up playback task handling when a Connect/AirPlay daemon is replaced (by @marcelveldt in #6040)
+- Fix release creation failing on very large release notes (by @marcelveldt in #6041)
+- Hide non-audio players from the scrobbler player picker (by @marcelveldt in #6044)
+- Keep a live source on its player when moving it to another one fails (by @marcelveldt in #6045)
+- Prevent accidental stable auto-release while a release candidate is pending (by @MarvinSchenkel in #6047)
+- Keep translation syncs and backport PRs out of the release notes (by @marcelveldt in #6048)
+- Bump CodSpeedHQ/action from 5.0.3 to 5.2.1 (by @dependabot[bot] in #6066)
+- Record why Spotify audiobook chapters cannot be fed ahead (by @marcelveldt in #6069)
+- Update airplay-cli to v0.5.3 (by @musicassistant-bot[bot] in #6071)
+- Tidy up the source lookup in the seek command (by @marcelveldt in #6072)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @jozefKruszynski, @kiegsgroot, @marcelveldt, @maximmaxim345
+
+
 # [2.10.0rc7] - 26.08.2026
 
 ## 📦 RC Release
@@ -140,100 +232,3 @@ _Changes since [2.10.0rc5](https://github.com/music-assistant/server/releases/ta
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @lucide, @marcelveldt, @maximmaxim345, @vintvinst
-
-
-# [2.10.0rc5] - 24.08.2026
-
-## 📦 RC Release
-
-_Changes since [2.10.0rc4](https://github.com/music-assistant/server/releases/tag/2.10.0rc4)_
-
-### 🚀 Features and enhancements
-
-- Allow lower add to queue token limits and slower refill rates in Party plugin (by @Bulgus in #5904)
-- Refuse Spotify accounts that cannot work during setup (by @marcelveldt in #5911)
-- Keep your queue when an external source starts playing (by @marcelveldt in #5914)
-- Play Spotify through Spotify's own playback engine (by @marcelveldt in #5918)
-- Add task reports (by @marcelveldt in #5925)
-
-### 🐛 Bugfixes
-
-- Mark players unavailable on controller disconnection for HEOS (by @MarvinSchenkel in #4068)
-- Fix white noise when playing DTS 5.1 audio packed inside WAV (by @vintvinst in #5803)
-- Fix the flow-mode 'next' command item for Cast children of Universal Players (by @OzGav in #5836)
-- Keep line breaks in metadata out of builtin M3U playlist files (by @OzGav in #5837)
-- Fixes an issue where tracks from Niconico Provider cannot be played (by @Shi-553 in #5842)
-- Include genre_aliases in genre summary listings (by @jozefKruszynski in #5858)
-- Fix Audible podcast sync skipping Periodical series (by @OzGav in #5907)
-- Dissolve sync group when a playback start never materializes (by @OzGav in #5908)
-- Fix Audible querying the old marketplace after a locale change (by @OzGav in #5909)
-- Keep the Spotify session alive when it moves to another player (by @marcelveldt in #5910)
-- Improve Audible sign-in setup (by @marcelveldt in #5915)
-- Don't parse playlist items already in the database (by @OzGav in #5916)
-- Add Symfonisk Table Lamp to Non-Hi Res models (by @OzGav in #5917)
-- Fix missing played status on podcast episode details page (by @OzGav in #5927)
-- Fix podcast episodes showing in the wrong order (by @OzGav in #5929)
-- Fix AirPlay players stuck 'playing' from a stale snapshot (by @teancom in #5938)
-- AI DJ no longer announces the wrong day of the week (by @MarvinSchenkel in #5947)
-- Smart fades no longer discards every plan on tracks with a mastered fade-out (by @MarvinSchenkel in #5949)
-- Fix Spotify Connect playback not starting (by @marcelveldt in #5957)
-
-### 🎨 Frontend Changes
-
-- Enter in mobile search hides the keyboard instead of opening the first result (by @stvncode in [#2607](https://github.com/music-assistant/frontend/pull/2607))
-- Fill the MilkDrop droplet icon while the visualizer is enabled (by @jozefKruszynski in [#2605](https://github.com/music-assistant/frontend/pull/2605))
-- Make the queue read-only while an external session manages it (by @marcelveldt in [#2604](https://github.com/music-assistant/frontend/pull/2604))
-- Show provider logos in the Browse list (by @OzGav in [#2574](https://github.com/music-assistant/frontend/pull/2574))
-- Line up the collapsed sidebar icons in one straight column (by @stvncode in [#2608](https://github.com/music-assistant/frontend/pull/2608))
-- Keep the app initialization tests independent of their order (by @marcelveldt in [#2298](https://github.com/music-assistant/frontend/pull/2298))
-- Show task reports (by @marcelveldt in [#2613](https://github.com/music-assistant/frontend/pull/2613))
-- Make server log viewer text selectable and copyable (by @teancom in [#2564](https://github.com/music-assistant/frontend/pull/2564))
-- Better styling for the now playing source badge (by @marcelveldt in [#2609](https://github.com/music-assistant/frontend/pull/2609))
-- Remove the read-only queue for external sessions (by @marcelveldt in [#2611](https://github.com/music-assistant/frontend/pull/2611))
-- Improve on collection thumbnails (by @fmunkes in [#2579](https://github.com/music-assistant/frontend/pull/2579))
-- Show when a music service handles loudness and crossfade itself (by @marcelveldt in [#2621](https://github.com/music-assistant/frontend/pull/2621))
-- Fix external source badges (by @marcelveldt in [#2622](https://github.com/music-assistant/frontend/pull/2622))
-- Fix alias count in the genre management table (by @jozefKruszynski in [#2583](https://github.com/music-assistant/frontend/pull/2583))
-- Fix shuffle and repeat while an external source is playing (by @marcelveldt in [#2612](https://github.com/music-assistant/frontend/pull/2612))
-- Rename the external source composable (by @marcelveldt in [#2616](https://github.com/music-assistant/frontend/pull/2616))
-- Swiping back no longer shows the previous page twice (by @stvncode in [#2606](https://github.com/music-assistant/frontend/pull/2606))
-- Show podcast episodes newest first (by @OzGav in [#2620](https://github.com/music-assistant/frontend/pull/2620))
-- Stop reporting a format conversion Music Assistant did not make (by @marcelveldt in [#2623](https://github.com/music-assistant/frontend/pull/2623))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>24 changes</summary>
-
-- Make next/previous/seek on live audio sources work the same from every API (by @marcelveldt in #5901)
-- ⬆️ Update music-assistant-frontend to 2.17.284 (by @musicassistant-bot[bot] in #5906)
-- Show episode descriptions for Audiobookshelf and Plex podcasts (by @OzGav in #5912)
-- Track a live external audio source on the player (by @marcelveldt in #5913)
-- ⬆️ Update music-assistant-models to 1.1.196 (by @musicassistant-bot[bot] in #5920)
-- ⬆️ Update music-assistant-frontend to 2.17.285 (by @musicassistant-bot[bot] in #5921)
-- Keep the full details of Spotify episodes when fetched (by @OzGav in #5923)
-- Bump pytest-aiohttp from 1.1.0 to 1.1.1 (by @dependabot[bot] in #5932)
-- Bump fastmcp from 3.4.4 to 3.4.7 (by @dependabot[bot] in #5933)
-- Bump pytest from 9.0.3 to 9.1.1 (by @dependabot[bot] in #5934)
-- Drop the audio format comparison workaround (by @marcelveldt in #5936)
-- Show when a music service handles loudness and crossfade itself (by @marcelveldt in #5937)
-- Skipping a Spotify track no longer starts with a moment of the previous one (by @marcelveldt in #5940)
-- Report what a music service did to the audio per queue and per track boundary (by @marcelveldt in #5941)
-- Report the audio quality Spotify serves, not a conversion Music Assistant did not make (by @marcelveldt in #5942)
-- Stop fighting the Spotify app over a Soloist playback session (by @marcelveldt in #5943)
-- Prevent stale live source releases (by @marcelveldt in #5944)
-- ⬆️ Update music-assistant-models to 1.1.198 (by @musicassistant-bot[bot] in #5945)
-- ⬆️ Update music-assistant-frontend to 2.17.286 (by @musicassistant-bot[bot] in #5946)
-- Fix a missing import in the Audible setup flow (by @MarvinSchenkel in #5948)
-- Simplify Spotify Connect setup (by @marcelveldt in #5951)
-- Apply compact backend choice pattern to Spotify music provider (by @marcelveldt in #5952)
-- Bump wiim from 0.1.5 to 0.1.7 (by @MarvinSchenkel in #5953)
-- ⬆️ Update music-assistant-frontend to 2.17.287 (by @musicassistant-bot[bot] in #5956)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Bulgus, @MarvinSchenkel, @OzGav, @Shi-553, @fmunkes, @jozefKruszynski, @marcelveldt, @stvncode, @teancom, @vintvinst
