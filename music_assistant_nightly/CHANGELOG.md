@@ -1,3 +1,68 @@
+# [2.11.0.dev2026082805] - 28.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026082704](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026082704)_
+
+### 🚀 Features and enhancements
+
+- Report completed plays back to Tidal (by @jozefKruszynski in #5835)
+
+### 🐛 Bugfixes
+
+- Snapcast: resume music after an announcement (by @MarvinSchenkel in #5968)
+- Keep the AirPlay connection alive when seeking (by @marcelveldt in #6050)
+- Fix an AirPlay speaker going silent when it joins a group (by @marcelveldt in #6051)
+- Fix an AirPlay speaker going silent when two things start it at once (by @marcelveldt in #6054)
+- Stop restarting an AirPlay speaker when a seek needs a moment (by @marcelveldt in #6055)
+- Keep the queue on an audio player when a group leader drops out (by @marcelveldt in #6056)
+- Fix a speaker staying silent after its group is joined with another one (by @marcelveldt in #6057)
+- Stop AirPlay speakers in a group immediately on pause or stop (by @marcelveldt in #6058)
+- Keep an AirPlay player's streaming mode under the user's control (by @marcelveldt in #6059)
+- Make seeking forward in a slow source fast (by @marcelveldt in #6060)
+- Add a 24-bit audio toggle for AirPlay players (by @marcelveldt in #6061)
+- Fix a group member never re-joining after it drops off the network (by @marcelveldt in #6062)
+- Fix a Spotify audiobook stopping when you seek to another chapter (by @marcelveldt in #6063)
+- Fix Spotify not loading after updating to 2.10 (by @kiegsgroot in #6065)
+- Fix the Apple TV progress bar disappearing after a track change (by @marcelveldt in #6067)
+- Fix YouTube Music search finding nothing when the language is not English (by @marcelveldt in #6068)
+- Fix grouping being unavailable while Spotify Connect plays (by @marcelveldt in #6070)
+- Stop the music when you power off a speaker (by @marcelveldt in #6074)
+- Stop random music playing after a notification clip (by @marcelveldt in #6075)
+- Bump aioaudiobookshelf to 0.1.25 (by @fmunkes in #6078)
+
+### 🎨 Frontend Changes
+
+- Fix loading spinners showing up too small (by @marcelveldt in [#2669](https://github.com/music-assistant/frontend/pull/2669))
+- Check the Python package builds in CI (by @marcelveldt in [#2668](https://github.com/music-assistant/frontend/pull/2668))
+- Silence the setuptools warning about the assets directory (by @marcelveldt in [#2667](https://github.com/music-assistant/frontend/pull/2667))
+- Clean up the Python packaging config (by @marcelveldt in [#2666](https://github.com/music-assistant/frontend/pull/2666))
+- Remove the unused VS Code workspace file (by @marcelveldt in [#2665](https://github.com/music-assistant/frontend/pull/2665))
+- Remove the unused webhint config file (by @marcelveldt in [#2664](https://github.com/music-assistant/frontend/pull/2664))
+- Remove the unused browser targets config file (by @marcelveldt in [#2663](https://github.com/music-assistant/frontend/pull/2663))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>7 changes</summary>
+
+- Keep a live source on its player when moving it to another one fails (by @marcelveldt in #6045)
+- Prevent accidental stable auto-release while a release candidate is pending (by @MarvinSchenkel in #6047)
+- Keep translation syncs and backport PRs out of the release notes (by @marcelveldt in #6048)
+- Bump CodSpeedHQ/action from 5.0.3 to 5.2.1 (by @dependabot[bot] in #6066)
+- Record why Spotify audiobook chapters cannot be fed ahead (by @marcelveldt in #6069)
+- Update airplay-cli to v0.5.3 (by @musicassistant-bot[bot] in #6071)
+- Tidy up the source lookup in the seek command (by @marcelveldt in #6072)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @fmunkes, @jozefKruszynski, @kiegsgroot, @marcelveldt
+
+
 # [2.11.0.dev2026082704] - 27.08.2026
 
 ## 📦 Nightly Release
@@ -110,57 +175,3 @@ _Changes since [2.10.0.dev2026082603](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @jozefKruszynski, @marcelveldt, @maximmaxim345
-
-
-# [2.10.0.dev2026082603] - 26.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082516](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082516)_
-
-### 🚀 Features and enhancements
-
-- Hide Sendspin token pairing method when PIN/code pairing is available (by @maximmaxim345 in #5975)
-- Shuffle and repeat now work on a source your speaker runs itself (by @marcelveldt in #5993)
-- Use album loudness only for albums you actually played (by @marcelveldt in #5994)
-
-### 🐛 Bugfixes
-
-- Use album loudness only when tracks really play as part of an album (by @marcelveldt in #5981)
-- Notice when Spotify playback loses its pairing (by @marcelveldt in #5987)
-- Seeking or resuming a Spotify track no longer cuts it off mid-song (by @marcelveldt in #5992)
-
-### 🎨 Frontend Changes
-
-- Select a player once its setup/pairing flow finishes (by @maximmaxim345 in [#2642](https://github.com/music-assistant/frontend/pull/2642))
-- Remember the artist page view mode across all artists (by @MarvinSchenkel in [#2641](https://github.com/music-assistant/frontend/pull/2641))
-- Bump @lucide/vue from 1.31.0 to 1.33.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2632](https://github.com/music-assistant/frontend/pull/2632))
-- Bump happy-dom from 20.11.1 to 20.11.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2640](https://github.com/music-assistant/frontend/pull/2640))
-- Continue setup as soon as you pick an option (by @maximmaxim345 in [#2643](https://github.com/music-assistant/frontend/pull/2643))
-- Shuffle and repeat no longer apply to something that stopped playing (by @marcelveldt in [#2650](https://github.com/music-assistant/frontend/pull/2650))
-- Show shuffle and repeat failures again, except the expected one (by @marcelveldt in [#2652](https://github.com/music-assistant/frontend/pull/2652))
-- Document how the shuffle and repeat controls pick the source they act on (by @marcelveldt in [#2651](https://github.com/music-assistant/frontend/pull/2651))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>10 changes</summary>
-
-- Bump `aiosendspin` to 9.1.1 (by @maximmaxim345 in #5985)
-- ⬆️ Update music-assistant-frontend to 2.17.290 (by @musicassistant-bot[bot] in #5988)
-- Count an album as played once, however its tracks are ordered in the queue (by @marcelveldt in #5991)
-- Keep the position shown for a live source in step with the player (by @marcelveldt in #5995)
-- Document which Spotify Soloist pairing failures are detected (by @marcelveldt in #5996)
-- Show the right bit-perfect badge when two speakers share one live source (by @marcelveldt in #5997)
-- Log how long a stream takes to deliver its first audio (by @marcelveldt in #5998)
-- Report a slow player stop after pausing Spotify Connect (by @marcelveldt in #5999)
-- ⬆️ Update music-assistant-models to 1.1.200 (by @musicassistant-bot[bot] in #6003)
-- ⬆️ Update music-assistant-frontend to 2.17.291 (by @musicassistant-bot[bot] in #6004)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @lucide, @marcelveldt, @maximmaxim345
