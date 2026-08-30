@@ -62,6 +62,43 @@ through a proxy.
 Do not put credentials in this field. It is shown as plain text on the
 configuration page and is included in Home Assistant backups.
 
+## If the sound breaks up
+
+**Audio buffer** is how much audio the player keeps queued up, in milliseconds.
+Leave it empty and the player uses its own default, which is right for almost
+every system. Raise it if the sound stutters or drops out on a busy or slow
+machine — there is then more queued up to play through the gap. The cost is a
+longer wait when a track starts and when you seek, so raise it in steps rather
+than going straight to the top.
+
+## Switching an amplifier on with the music
+
+**Command to run when playback starts** and **Command to run when playback
+stops** are for the amplifier or the light that should be on for as long as this
+player is playing. Leave both empty and nothing runs, which is what almost every
+system wants.
+
+Each is a shell command, and it is run as typed, inside this app, on every stream
+that starts or ends — so it is only as good as what this app can reach. `curl` at
+a smart relay's HTTP endpoint is the usual shape:
+
+```
+curl -fsS -X POST http://192.168.1.20/relay/0?turn=on
+```
+
+The command does not hold up playback, and one that fails writes a line in the
+log rather than stopping the player. Anything it prints goes to the log too,
+which is the place to look when a command is not doing what you expected.
+`SENDSPIN_EVENT` is `start` or `stop` in its environment, so one command can
+serve both fields.
+
+Two things worth knowing before you use them. A command here runs with the same
+access this app has, so treat the field the way you would treat a terminal on
+this machine — and only paste in something you understand. And filling either
+field is not what opens that door: this app is allowed to run commands whether or
+not you set one, because the permission it needs is fixed when the app is
+installed rather than when you save the setting.
+
 ## Volume, mute and delay
 
 Volume, mute and the speaker delay are remembered across restarts and app
@@ -105,6 +142,22 @@ there, at any volume. Unplug and replug the speakers or headphones, which is eno
 notice them and switch, or pick an output that is plugged in from the **Audio**
 panel. The log names the port it is playing out of at every start, so it is
 worth reading first.
+
+### If the sound stops part-way through
+
+An output that was working and then goes away — Home Assistant's audio server
+restarting, or a USB DAC unplugged — no longer leaves this player silent until
+the next track. It notices, and keeps trying to open the output again: five
+attempts over about a minute, the first a couple of seconds after the sound
+stops and each following gap longer than the last. If the output comes back in
+that time the music picks up part-way through the track, with nothing to do at
+this end. Everything else playing in the group carries on undisturbed
+throughout.
+
+If it does not come back inside that minute the player stops asking and says so
+in its log, rather than retrying forever. Nothing is stuck: the next track opens
+the output afresh, so playing something new is the way back once whatever went
+missing is there again.
 
 ## Known rough edges
 

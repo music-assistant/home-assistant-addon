@@ -10,8 +10,20 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
 
   # A fixed-function player: no mount, umount or remount, no dac_read_search
   # and no sys_admin. The supervision tree, bashio and the option-reading
-  # scripts all run as root and switch to no other user, so this outer profile
-  # declares no capability; the two bundled daemons declare theirs below.
+  # scripts all run as root and switch to no other user, so CAP_KILL is the
+  # only capability this outer profile declares; the two bundled daemons
+  # declare theirs below.
+  #
+  # s6-supervise signals each longrun down, and both daemons have dropped to
+  # their own uids by then, so every stop is a CAP_KILL check -- the SIGTERM,
+  # and equally the SIGKILL each service's `timeout-kill` fires behind it. Deny
+  # it and neither arrives, which leaves those files bounding nothing.
+  #
+  # It grants less than its name suggests. The container has its own pid
+  # namespace, so there is nothing outside it to signal, and the signal rules
+  # below still decide which signals may reach which of these processes.
+  capability kill,
+
   file,
 
   # s6 supervises the three services and passes on a container stop. The stop
@@ -124,10 +136,14 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     @{PROC}/sys/net/ipv{4,6}/** r,
 
     # 5353 on both families, plus the netlink socket it watches interface and
-    # address changes on.
+    # address changes on. `dgram` is the type avahi actually opens that one
+    # with -- socket(PF_NETLINK, SOCK_DGRAM, NETLINK_ROUTE) -- and a kernel
+    # that mediates netlink by type denies the bind under any other, which
+    # fails the daemon's interface enumeration and leaves it restarting for as
+    # long as the app runs.
     network inet dgram,
     network inet6 dgram,
-    network netlink raw,
+    network netlink dgram,
     network unix stream,
     network unix dgram,
   }
@@ -190,5 +206,55 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     network inet6 dgram,
     network unix stream,
     network unix dgram,
+
+    # ==========================================================================
+    # The stream hooks
+    #
+    # hook-start and hook-stop are a command, and the player runs one by
+    # execve()ing /bin/sh. This profile granted no exec of anything at all until
+    # these rules, and it is worth being plain about what they cost: somebody who
+    # takes this player over through the network can now start a shell, and
+    # through it any program in the image. What they cannot do is reach anything
+    # the player itself could not already reach -- every one of those programs
+    # runs under this same profile, holding no capability, able to open only the
+    # files listed above. The boundary that matters is this file's, and these
+    # rules do not move it.
+    #
+    # The rule below has to reach /usr/bin/dash, which is where /bin/sh resolves
+    # to in this usrmerged image -- AppArmor mediates the resolved path, so a
+    # rule written against /bin/sh parses, loads, and then denies at runtime.
+    #
+    # ix, and not the bounded `cx -> <a hook profile>` that would be better,
+    # because AppArmor cannot express it here. A child profile is reachable only
+    # by a name, and the only name form that needs none is `cx`, which resolves
+    # within the profile it is written in -- this one, which is already a child.
+    # AppArmor supports one level of child profile and no more: the second level
+    # loads (`... ///usr/bin/sendspin-cli//hook` appears in
+    # /sys/kernel/security/apparmor/profiles) and the transition is then refused
+    # at exec with `info="profile transition not found"`. Every form that would
+    # name a profile outside this one needs an absolute name, and this file may
+    # not use one: the Supervisor rewrites the top-level name to the installed
+    # slug before loading, which is what the note at the top of this file is
+    # about. Ux is the remaining alternative and is worse than ix in the only
+    # way that counts -- it would put the shell outside this profile entirely,
+    # capabilities, denials and all -- so the shell inherits instead.
+    # ==========================================================================
+
+    # One rule for both halves of running a hook: /usr/bin/dash, which is the
+    # shell the player execs, and the programs a hook runs with it -- curl at an
+    # amplifier's relay, jq over what it answers. A hook that could run only
+    # dash's builtins would not be a feature, and naming dash separately would be
+    # a rule this one already covers.
+    #
+    # /usr/sbin is deliberately not here beside it. Everything in it is system
+    # administration -- useradd, chroot, the filesystem and swap tools -- so it
+    # is a set no hook has a use for and the one set worth not handing to
+    # somebody who has reached this far. That holds only while /usr/sbin is a
+    # directory of its own, which it is on the Debian this image is built on and
+    # will not be once Debian's sbin-merge lands: after that every path in it
+    # resolves under /usr/bin and this rule swallows the lot. The confined check
+    # in scripts/smoke_test.sh asserts a hook cannot run out of /usr/sbin, so
+    # that day is a red test rather than a quiet widening.
+    /usr/bin/** ix,
   }
 }

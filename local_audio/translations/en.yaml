@@ -17,3 +17,25 @@ configuration:
       cannot discover the player by itself — doing so also stops the player
       being discoverable. Do not put a password in here; it is stored and shown
       as plain text.
+  buffer_ms:
+    name: Audio buffer
+    description: >-
+      How much audio the player keeps queued up, in milliseconds, between 10 and
+      2000. Leave it empty unless the sound breaks up — raising it rides out a
+      busy system, at the cost of a longer wait when a track starts or you seek.
+  hook_start:
+    name: Command to run when playback starts
+    description: >-
+      Left empty nothing runs, which is what you want unless you have something
+      to switch on — an amplifier relay, a light. Whatever you put here is a
+      shell command and is run as typed, inside this app, every time a stream
+      starts; it does not hold up the audio, and a command that fails is a line
+      in the log rather than a player that stops. It runs as root with everything
+      this app can reach, so put nothing here you would not run on this machine
+      yourself. What the stream was is in its environment — SENDSPIN_EVENT among
+      others, which the repository's README lists.
+  hook_stop:
+    name: Command to run when playback stops
+    description: >-
+      The same thing at the other end of a stream, for switching that amplifier
+      back off. It too is a shell command run as typed, inside this app.

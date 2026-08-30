@@ -1,5 +1,105 @@
 # Changelog
 
+## 0.1.13
+
+Built on `sendspin-cli` v0.1.6, and through it `sendspin-cpp` v0.7.2.
+
+- An audio output that goes away and comes back is now picked up again on its
+  own, usually within a few seconds, instead of leaving this player silent until
+  the next track starts. Home Assistant's PulseAudio restarting is the common
+  case; a USB DAC unplugged and plugged back in again is the other. While the
+  output is missing the player throws its audio away rather than stalling, so
+  everything else in the group plays on undisturbed, and when the output answers
+  again this player rejoins part-way through the track it was already on.
+- It does not keep asking forever. There are five attempts, the first about two
+  seconds after the output goes, each following wait twice the last up to thirty
+  seconds — about a minute of cover in total, which is longer than a sound
+  server takes to restart and longer than it takes to plug a DAC back in. After
+  that the player says so in its log and waits for the next track, which opens
+  the output afresh anyway. An output that is never coming back therefore costs
+  a minute of retrying rather than an endless one.
+
+## 0.1.12
+
+- Two new settings, **Command to run when playback starts** and **Command to run
+  when playback stops**, for switching something on while the music plays — an
+  amplifier relay, a light. Each is a shell command, run inside this app every
+  time a stream starts or ends. It does not hold up the audio, and a command that
+  fails is a line in the log rather than a player that stops; `SENDSPIN_EVENT`
+  says which of the two events it is. Leave them empty and nothing runs, which is
+  what almost every system wants. The Docker Compose deployment of the same image
+  has them as `SENDSPIN_HOOK_START` and `SENDSPIN_HOOK_STOP`.
+- Those two settings run a command, so this app's AppArmor profile now lets the
+  player start a shell and run the programs in this app with it, which it
+  previously could not do at all. Worth saying plainly, because it is the first
+  thing that profile has ever permitted the player to execute: somebody who took
+  the player over through the network could now reach a shell, where before
+  there was nothing to reach. What it does not do is let anything reach further
+  than the player already could — the shell and everything it starts run under
+  the player's own profile, hold no capability, and can open only the files that
+  profile lists. Leaving both settings empty does not close it: the profile is
+  the same either way.
+
+## 0.1.11
+
+- New **Audio buffer** setting, in milliseconds. Leave it empty and nothing
+  changes: the player uses its own default, which suits almost every system.
+  Raise it where the sound stutters or drops out on a busy or slow machine —
+  there is then more audio queued up to play through the gap — at the cost of a
+  longer wait when a track starts and when you seek. The Docker Compose
+  deployment of the same image has it as `SENDSPIN_BUFFER_MS`.
+- This player now names itself in Music Assistant's device list as **Music
+  Assistant** / **Local Audio**. It was listing the manufacturer and model of
+  the library it is built on, `sendspin-cpp-cli` and `sendspin-cli`. Nothing
+  else changes, and the name you gave the player is untouched.
+- Two more settings for that Compose deployment alone, covered in the
+  repository's `README.md`: `SENDSPIN_AUDIO_FORMAT` moves one audio format to
+  the front of the list the player advertises, which is how a DAC that is only
+  happy in one shape is held there, and `SENDSPIN_ID` gives each container its
+  own identity where more than one runs on a machine. Neither is offered here,
+  because neither has a problem to solve here: this app plays through Home
+  Assistant's own audio output, which converts, and it is one player per system.
+
+## 0.1.10
+
+Built on `sendspin-cli` v0.1.5, and through it `sendspin-cpp` v0.7.2.
+
+- The player can now play through a PulseAudio or PipeWire server directly,
+  rather than only through ALSA's bridges to them. Nothing changes for this app:
+  it plays through the PulseAudio that Home Assistant maps in, over ALSA,
+  exactly as before, and the output is still chosen in the **Audio** panel. The
+  new backends are for the Docker Compose deployment of the same image, on a
+  machine whose audio is a sound server rather than a card — there they can name
+  a particular sink or node, they show up in the host's mixer under their own
+  name, and they take their timing from the server, which matters for a player
+  whose job is staying in sync with others.
+- One change for that Compose deployment, and only where `SENDSPIN_OUTPUT` is
+  set to exactly `pulse` or `pipewire`: those two names now select the new
+  native backends instead of ALSA's plugin devices of the same name. They reach
+  the same server, so audio keeps playing, and the container says which route
+  it took in its log at every start. `alsa:pulse` and `alsa:pipewire` are the
+  way back.
+
+## 0.1.9
+
+Fixes the error Home Assistant recorded every time this app was stopped. That
+is what 0.1.3 set out to do as well; this is why it kept happening.
+
+- Stopping the app no longer ends in `exited with non-zero exit code 137`. The
+  two-second deadline added in 0.1.3 was never able to fire. This app runs
+  behind an AppArmor profile, and that profile did not let it signal the two
+  bundled daemons once they had dropped to their own user accounts — so
+  neither the stop signal nor the kill meant to follow it ever arrived, nothing
+  bounded the wait, and Home Assistant killed the container after ten seconds
+  exactly as before. The app now stops under its own power, in about two
+  seconds. The profile grants nothing beyond signalling its own processes,
+  which are the only ones in the container.
+- On some systems this player never appeared in Music Assistant at all. The
+  same profile would not let the bundled mDNS daemon open the socket it watches
+  the network on, so it failed at startup and restarted every second for as
+  long as the app ran, advertising nothing. Whether that happened at all
+  depended on the kernel underneath, so it was never a fault everybody saw.
+
 ## 0.1.8
 
 Built on `sendspin-cli` v0.1.4, and through it `sendspin-cpp` v0.7.2.

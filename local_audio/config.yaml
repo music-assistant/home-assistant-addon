@@ -1,5 +1,5 @@
 name: Local Audio
-version: "0.1.8"
+version: "0.1.13"
 slug: local_audio
 description: >-
   Turns this Home Assistant system into a synchronized Sendspin player for
@@ -31,10 +31,21 @@ options:
   # "Local Audio".
   name: ""
   log_level: info
-# `server` is optional with no default on purpose: setting one switches the
-# player to dialling out, which suppresses its mDNS advertisement, so the field
-# belongs behind the fold a user has to open deliberately.
+# `server`, `buffer_ms` and the two hooks are optional with no default on
+# purpose, which is what keeps them out of `options:` above and so behind the
+# fold a user has to open deliberately. Setting a `server` switches the player to
+# dialling out, which suppresses its mDNS advertisement. An unset `buffer_ms` has
+# to reach the player as no setting at all rather than as a number written here,
+# so that the default stays upstream's to change; the range is upstream's own, so
+# the configuration screen refuses what the player would refuse.
+#
+# `hook_start` and `hook_stop` are `str?` because a shell command is what they
+# are: there is no narrower schema that would describe one, and no validation
+# here that would make an arbitrary command safer than the person who typed it.
 schema:
   name: str?
   log_level: list(debug|info|warning|error)
   server: str?
+  buffer_ms: int(10,2000)?
+  hook_start: str?
+  hook_stop: str?
