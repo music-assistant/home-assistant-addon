@@ -1,3 +1,29 @@
+# [2.11.0.dev2026083003] - 30.08.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026082903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026082903)_
+
+### 🐛 Bugfixes
+
+- BBC Sounds return station catch-up menu to international users (by @kieranhogg in #6099)
+
+### 🎨 Frontend Changes
+
+- Update browser title with current track and artist (by @phiychai in [#2649](https://github.com/music-assistant/frontend/pull/2649))
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump ya-passport-auth to 2.0.1 (by @trudenboy in #6090)
+- Add a PR-description-quality review check (by @chrisuthe in #6100)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@chrisuthe, @kieranhogg, @phiychai, @trudenboy
+
+
 # [2.11.0.dev2026082903] - 29.08.2026
 
 ## 📦 Nightly Release
@@ -112,32 +138,3 @@ _Changes since [2.11.0.dev2026082704](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @fmunkes, @jozefKruszynski, @kiegsgroot, @marcelveldt
-
-
-# [2.11.0.dev2026082704] - 27.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.10.0.dev2026082618](https://github.com/music-assistant/server/releases/tag/2.10.0.dev2026082618)_
-
-### 🚀 Features and enhancements
-
-- Enable Spotify Connect or AirPlay Receiver from the player's own settings (by @marcelveldt in #6042)
-- Keep other players' Spotify Connect and AirPlay devices alive when one daemon fails (by @marcelveldt in #6043)
-
-### 🎨 Frontend Changes
-
-- Scope audio sources in Browse to the selected player (by @marcelveldt in [#2660](https://github.com/music-assistant/frontend/pull/2660))
-- Fix the mobile player blur on Chromium browsers (by @marcelveldt in [#2662](https://github.com/music-assistant/frontend/pull/2662))
-- One shared code input for remote ID and pairing codes (by @marcelveldt in [#2661](https://github.com/music-assistant/frontend/pull/2661))
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix release creation failing on very large release notes (by @marcelveldt in #6041)
-- Hide non-audio players from the scrobbler player picker (by @marcelveldt in #6044)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt
