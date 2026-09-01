@@ -1,3 +1,56 @@
+# [2.11.0.dev2026090103] - 01.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026083003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026083003)_
+
+### 🚀 New Providers
+
+- Add Yoto provider (by @pantsman0 in #5584)
+- Add VRT MAX music provider (by @bollewolle in #6098)
+
+### 🚀 Features and enhancements
+
+- Add support for transcoding plex streams before playback (by @chicco-carone in #4615)
+- Serve Pandora stations as dynamic radio stations (by @chrisuthe in #5557)
+- Make the balance slider work on mono tracks (by @OzGav in #6104)
+- Align smart playlists similar music with Endless Mixes (by @MarvinSchenkel in #6121)
+
+### 🐛 Bugfixes
+
+- Fix filesystem scan crash on non-decimal digits in names (by @OzGav in #6102)
+- Attach the parent album to imported album tracks (by @OzGav in #6111)
+- Default the Fully Kiosk output codec to AAC (by @OzGav in #6112)
+- Spotify: skip empty entries when syncing library albums (by @MarvinSchenkel in #6114)
+- Fix missing tracks on albums for collaboration tracks in YouTube Music (by @MarvinSchenkel in #6115)
+- Sonos speakers now play tracks you add to the queue (by @marcelveldt in #6116)
+- Fix BBC Sounds recommendations not loading (by @MarvinSchenkel in #6117)
+- Apple Music: don't report purchase-only library items as available (by @anthonws in #6123)
+- Crossfades no longer shrink to a few seconds on slower sources (by @marcelveldt in #6128)
+- Newly created tokens now show up in the token list (by @marcelveldt in #6131)
+- Fix raw PCM input being decoded with the source codec (by @OzGav in #6137)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Bump pylast from 7.0.2 to 7.1.0 (by @dependabot[bot] in #6105)
+- Bump ruff from 0.15.22 to 0.16.5 (by @dependabot[bot] in #6107)
+- Ask about migrations when a change touches stored data (by @MarvinSchenkel in #6120)
+- Revoking all tokens for a user now disconnects every one of them (by @marcelveldt in #6133)
+- Deleting a user now cleans up everything tied to it (by @marcelveldt in #6134)
+- Simplify how websocket sessions are disconnected (by @marcelveldt in #6135)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @anthonws, @bollewolle, @chicco-carone, @chrisuthe, @marcelveldt, @pantsman0
+
+
 # [2.11.0.dev2026083003] - 30.08.2026
 
 ## 📦 Nightly Release
@@ -73,68 +126,3 @@ _Changes since [2.11.0.dev2026082805](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @ChrisB85, @MizterB, @OzGav, @chrisuthe, @marcelveldt, @mescon, @mzellho
-
-
-# [2.11.0.dev2026082805] - 28.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026082704](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026082704)_
-
-### 🚀 Features and enhancements
-
-- Report completed plays back to Tidal (by @jozefKruszynski in #5835)
-
-### 🐛 Bugfixes
-
-- Snapcast: resume music after an announcement (by @MarvinSchenkel in #5968)
-- Keep the AirPlay connection alive when seeking (by @marcelveldt in #6050)
-- Fix an AirPlay speaker going silent when it joins a group (by @marcelveldt in #6051)
-- Fix an AirPlay speaker going silent when two things start it at once (by @marcelveldt in #6054)
-- Stop restarting an AirPlay speaker when a seek needs a moment (by @marcelveldt in #6055)
-- Keep the queue on an audio player when a group leader drops out (by @marcelveldt in #6056)
-- Fix a speaker staying silent after its group is joined with another one (by @marcelveldt in #6057)
-- Stop AirPlay speakers in a group immediately on pause or stop (by @marcelveldt in #6058)
-- Keep an AirPlay player's streaming mode under the user's control (by @marcelveldt in #6059)
-- Make seeking forward in a slow source fast (by @marcelveldt in #6060)
-- Add a 24-bit audio toggle for AirPlay players (by @marcelveldt in #6061)
-- Fix a group member never re-joining after it drops off the network (by @marcelveldt in #6062)
-- Fix a Spotify audiobook stopping when you seek to another chapter (by @marcelveldt in #6063)
-- Fix Spotify not loading after updating to 2.10 (by @kiegsgroot in #6065)
-- Fix the Apple TV progress bar disappearing after a track change (by @marcelveldt in #6067)
-- Fix YouTube Music search finding nothing when the language is not English (by @marcelveldt in #6068)
-- Fix grouping being unavailable while Spotify Connect plays (by @marcelveldt in #6070)
-- Stop the music when you power off a speaker (by @marcelveldt in #6074)
-- Stop random music playing after a notification clip (by @marcelveldt in #6075)
-- Bump aioaudiobookshelf to 0.1.25 (by @fmunkes in #6078)
-
-### 🎨 Frontend Changes
-
-- Fix loading spinners showing up too small (by @marcelveldt in [#2669](https://github.com/music-assistant/frontend/pull/2669))
-- Check the Python package builds in CI (by @marcelveldt in [#2668](https://github.com/music-assistant/frontend/pull/2668))
-- Silence the setuptools warning about the assets directory (by @marcelveldt in [#2667](https://github.com/music-assistant/frontend/pull/2667))
-- Clean up the Python packaging config (by @marcelveldt in [#2666](https://github.com/music-assistant/frontend/pull/2666))
-- Remove the unused VS Code workspace file (by @marcelveldt in [#2665](https://github.com/music-assistant/frontend/pull/2665))
-- Remove the unused webhint config file (by @marcelveldt in [#2664](https://github.com/music-assistant/frontend/pull/2664))
-- Remove the unused browser targets config file (by @marcelveldt in [#2663](https://github.com/music-assistant/frontend/pull/2663))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- Keep a live source on its player when moving it to another one fails (by @marcelveldt in #6045)
-- Prevent accidental stable auto-release while a release candidate is pending (by @MarvinSchenkel in #6047)
-- Keep translation syncs and backport PRs out of the release notes (by @marcelveldt in #6048)
-- Bump CodSpeedHQ/action from 5.0.3 to 5.2.1 (by @dependabot[bot] in #6066)
-- Record why Spotify audiobook chapters cannot be fed ahead (by @marcelveldt in #6069)
-- Update airplay-cli to v0.5.3 (by @musicassistant-bot[bot] in #6071)
-- Tidy up the source lookup in the seek command (by @marcelveldt in #6072)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @fmunkes, @jozefKruszynski, @kiegsgroot, @marcelveldt
