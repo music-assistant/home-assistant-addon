@@ -1,3 +1,114 @@
+# [2.11.0b1] - 02.09.2026
+
+## 📦 Beta Release
+
+_Changes since [2.11.0b0](https://github.com/music-assistant/server/releases/tag/2.11.0b0)_
+
+### 🚀 New Providers
+
+- Add Yoto provider (by @pantsman0 in #5584)
+- Add VRT MAX music provider (by @bollewolle in #6098)
+
+### 🚀 Features and enhancements
+
+- Add support for transcoding plex streams before playback (by @chicco-carone in #4615)
+- Serve Pandora stations as dynamic radio stations (by @chrisuthe in #5557)
+- SiriusXM Library Swap (by @MizterB in #5603)
+- Add bluetooth audio constants (by @mzellho in #6052)
+- Auto-Enable AirPlay when required for Sendspin (by @teancom in #6079)
+- Make Sendspin on Cast devices opt-in and mark it experimental (by @marcelveldt in #6081)
+- Let speakers with guest access play without a setup step (by @marcelveldt in #6088)
+- Make the balance slider work on mono tracks (by @OzGav in #6104)
+- Retry a failed provider load sooner, with jitter (by @balloob in #6119)
+- Align smart playlists similar music with Endless Mixes (by @MarvinSchenkel in #6121)
+- Set a global default for the Autoplay and Crossfade switches (by @MarvinSchenkel in #6130)
+- Add Smart Fades-aware Smart Shuffle ordering (by @leonkdk in #6144)
+- Prepare the core for AI Radio shows as playable radio stations (by @MarvinSchenkel in #6148)
+- Bandcamp Song Lyrics support (by @ALERTua in #6152)
+- Smart Fades: no more hard cuts or inaudible crossfades on tricky transitions (by @marcelveldt in #6163)
+
+### 🐛 Bugfixes
+
+- Resolve the party player without guest access outside remote mode (by @jozefKruszynski in #5930)
+- Stop the CLAP weights download from timing out sonic_analysis setup (by @chrisuthe in #6053)
+- Fix AirPlay player hanging when a seek fails to load its next stream (by @marcelveldt in #6076)
+- Stop the music when a speaker is powered off outside Music Assistant (by @marcelveldt in #6077)
+- Bump aioaudiobookshelf to 0.1.25 (by @fmunkes in #6078)
+- Stop the music when a group dissolves around its leader (by @marcelveldt in #6083)
+- Fix Spotify Connect group volume starting at 100% (by @OzGav in #6087)
+- Decode percent-encoded usernames in Spotify account match checks (by @mescon in #6089)
+- BBC Sounds return station catch-up menu to international users (by @kieranhogg in #6099)
+- Fix BBC Sounds station program metadata getting stuck from a stale cache (by @kieranhogg in #6101)
+- Fix filesystem scan crash on non-decimal digits in names (by @OzGav in #6102)
+- Attach the parent album to imported album tracks (by @OzGav in #6111)
+- Default the Fully Kiosk output codec to AAC (by @OzGav in #6112)
+- Fix chromecast player unload error during shutdown (by @balloob in #6113)
+- Spotify: skip empty entries when syncing library albums (by @MarvinSchenkel in #6114)
+- Fix missing tracks on albums for collaboration tracks in YouTube Music (by @MarvinSchenkel in #6115)
+- Sonos speakers now play tracks you add to the queue (by @marcelveldt in #6116)
+- Fix BBC Sounds recommendations not loading (by @MarvinSchenkel in #6117)
+- Restore pairing token support in Sendspin setup flow (by @meiser79 in #6122)
+- Apple Music: don't report purchase-only library items as available (by @anthonws in #6123)
+- Fix AriaCast receiver fetching artwork from arbitrary hosts (by @MarvinSchenkel in #6127)
+- Crossfades no longer shrink to a few seconds on slower sources (by @marcelveldt in #6128)
+- Newly created tokens now show up in the token list (by @marcelveldt in #6131)
+- Fix various issues with enqueuing the next track (by @marcelveldt in #6132)
+- Fix raw PCM input being decoded with the source codec (by @OzGav in #6137)
+- Fix crossfade on enqueue-capable speakers (like Sonos) when audio source is Spotify through Soloist (by @marcelveldt in #6141)
+- AI DJ no longer goes quiet after the queue is cleared (by @MarvinSchenkel in #6142)
+- Crossfade setting changes now apply at the next track on flow mode players (by @MarvinSchenkel in #6143)
+- Keep core/tasks parsable when the scheduler persists its state (by @OzGav in #6145)
+- Fix BBC Sounds sometimes using library ID instead of provider ID for listenting status update (by @kieranhogg in #6150)
+- Fix BBC Sounds menu data sometimes being stale (by @kieranhogg in #6153)
+- Honor system CA certificates in client SSL contexts (by @ecohash-co in #6154)
+- Fix Internet Archive search missing Live Music Archive content (by @OzGav in #6157)
+- Seeking within a track on Sonos now takes effect right away (by @marcelveldt in #6158)
+- Allow up to 3 concurrent YouTube Music streams (by @MarvinSchenkel in #6160)
+- Fix leaked aiohttp session when an AirPlay control connection drops (by @MarvinSchenkel in #6162)
+- Fix broken nl-NL Alexa invocation phrase (by @R3inoudR in #6164)
+
+### 🎨 Frontend Changes
+
+- Tidy up the setup flow dialog (by @marcelveldt in [#2673](https://github.com/music-assistant/frontend/pull/2673))
+- Keep artwork whose provider is no longer loaded (by @ChrisB85 in [#2670](https://github.com/music-assistant/frontend/pull/2670))
+- Add a Copilot review instructions shard for frontend PRs (by @chrisuthe in [#2672](https://github.com/music-assistant/frontend/pull/2672))
+- Add match policy option to playlist import (by @marcelveldt in [#2646](https://github.com/music-assistant/frontend/pull/2646))
+- Fix playlist import match-policy version gate (by @marcelveldt in [#2675](https://github.com/music-assistant/frontend/pull/2675))
+- Send issues opened on the frontend repo to the support repo (by @marcelveldt in [#2674](https://github.com/music-assistant/frontend/pull/2674))
+- Update browser title with current track and artist (by @phiychai in [#2649](https://github.com/music-assistant/frontend/pull/2649))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>17 changes</summary>
+
+- Keep a stop from cutting off playback that already restarted (by @marcelveldt in #6082)
+- Detach a stereo pair from its group when it is powered off (by @marcelveldt in #6084)
+- Bump ya-passport-auth to 2.0.1 (by @trudenboy in #6090)
+- Add cross-repo frontend awareness to the review instructions (by @chrisuthe in #6091)
+- Add shared-models awareness to the cross-repo review instructions (by @chrisuthe in #6092)
+- Send issues opened on the server repo to the support repo (by @marcelveldt in #6094)
+- Add a PR-description-quality review check (by @chrisuthe in #6100)
+- Bump pylast from 7.0.2 to 7.1.0 (by @dependabot[bot] in #6105)
+- Bump ruff from 0.15.22 to 0.16.5 (by @dependabot[bot] in #6107)
+- Ask about migrations when a change touches stored data (by @MarvinSchenkel in #6120)
+- Yandex Station: remove the unused CSRF request path (by @MarvinSchenkel in #6125)
+- Revoking all tokens for a user now disconnects every one of them (by @marcelveldt in #6133)
+- Deleting a user now cleans up everything tied to it (by @marcelveldt in #6134)
+- Simplify how websocket sessions are disconnected (by @marcelveldt in #6135)
+- Finish the websocket session cleanup started in #6135 (by @marcelveldt in #6136)
+- Treat the iBroadcast library the same as others that contain a user's tracks (by @OzGav in #6147)
+- Refine the schema-bump and PR-description review instructions (by @chrisuthe in #6149)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@ALERTua, @ChrisB85, @MarvinSchenkel, @MizterB, @OzGav, @R3inoudR, @anthonws, @balloob, @bollewolle, @chicco-carone, @chrisuthe, @ecohash-co, @fmunkes, @jozefKruszynski, @kieranhogg, @leonkdk, @marcelveldt, @meiser79, @mescon, @mzellho, @pantsman0, @phiychai, @teancom, @trudenboy
+
+
 # [2.11.0b0] - 28.08.2026
 
 ## 📦 Beta Release
@@ -166,69 +277,3 @@ _Changes since [2.10.0rc6](https://github.com/music-assistant/server/releases/ta
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @jozefKruszynski, @marcelveldt, @maximmaxim345
-
-
-# [2.10.0rc6] - 25.08.2026
-
-## 📦 RC Release
-
-_Changes since [2.10.0rc5](https://github.com/music-assistant/server/releases/tag/2.10.0rc5)_
-
-### 🚀 Features and enhancements
-
-- Let Music Assistant mix crossfades for Spotify and other realtime sources (by @marcelveldt in #5960)
-- Show audio quality for external sources (by @marcelveldt in #5963)
-- Support next/previous controls on Google Cast devices (by @MarvinSchenkel in #5970)
-- Hide Sendspin token pairing method when PIN/code pairing is available (by @maximmaxim345 in #5975)
-- Show bit-perfect playback for external sources (by @marcelveldt in #5983)
-
-### 🐛 Bugfixes
-
-- Fix Flow Mode sample rate setting being locked for players with enforced flow mode (by @vintvinst in #5955)
-- Fix slow player response after pausing an external source (by @marcelveldt in #5961)
-- Announcements use the speaker's own announcement feature first (by @marcelveldt in #5974)
-- Fix mid-track silence on AirPlay receivers that need an explicit progress anchor (by @MarvinSchenkel in #5976)
-- Fix announcement volume and mute handling on AirPlay speakers (by @marcelveldt in #5977)
-
-### 🎨 Frontend Changes
-
-- Safer browser media controls (by @marcelveldt in [#2626](https://github.com/music-assistant/frontend/pull/2626))
-- Make crossfade details consistent (by @marcelveldt in [#2627](https://github.com/music-assistant/frontend/pull/2627))
-- Keep the Discover page in place when navigating back (by @MarvinSchenkel in [#2625](https://github.com/music-assistant/frontend/pull/2625))
-- Show audio quality for external sources (by @marcelveldt in [#2628](https://github.com/music-assistant/frontend/pull/2628))
-- Select a player once its setup/pairing flow finishes (by @maximmaxim345 in [#2642](https://github.com/music-assistant/frontend/pull/2642))
-- Remember the artist page view mode across all artists (by @MarvinSchenkel in [#2641](https://github.com/music-assistant/frontend/pull/2641))
-- Bump @lucide/vue from 1.31.0 to 1.33.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2632](https://github.com/music-assistant/frontend/pull/2632))
-- Bump happy-dom from 20.11.1 to 20.11.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2640](https://github.com/music-assistant/frontend/pull/2640))
-
-### Other Changes
-
-- Lokalise translations update (by @github-actions[bot] in #5966)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>14 changes</summary>
-
-- Fix Spotify Connect quality reporting and a leftover audio process (by @marcelveldt in #5954)
-- Make publish IP tests reliable (by @marcelveldt in #5958)
-- ⬆️ Update music-assistant-models to 1.1.199 (by @musicassistant-bot[bot] in #5962)
-- ⬆️ Update music-assistant-frontend to 2.17.288 (by @musicassistant-bot[bot] in #5964)
-- Fix flaky AirPlay announcement timing tests (by @marcelveldt in #5967)
-- Bump hass-client to 1.3.1 (by @MarvinSchenkel in #5969)
-- Speed up the slowest AirPlay announcement test (by @marcelveldt in #5971)
-- Let audio analysis notice players that are not served over HTTP (by @marcelveldt in #5972)
-- Keep tracks of the same album gapless when crossfade is on (by @marcelveldt in #5973)
-- Tidy up process cleanup code (by @marcelveldt in #5980)
-- ⬆️ Update music-assistant-frontend to 2.17.289 (by @musicassistant-bot[bot] in #5982)
-- Count album plays started from a streaming service's own listings (by @marcelveldt in #5984)
-- Bump `aiosendspin` to 9.1.1 (by @maximmaxim345 in #5985)
-- ⬆️ Update music-assistant-frontend to 2.17.290 (by @musicassistant-bot[bot] in #5988)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @lucide, @marcelveldt, @maximmaxim345, @vintvinst
