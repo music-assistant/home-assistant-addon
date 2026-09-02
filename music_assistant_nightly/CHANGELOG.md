@@ -1,3 +1,37 @@
+# [2.11.0.dev2026090203] - 02.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026090103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090103)_
+
+### 🚀 Features and enhancements
+
+- Set a global default for the Autoplay and Crossfade switches (by @MarvinSchenkel in #6130)
+
+### 🐛 Bugfixes
+
+- Resolve the party player without guest access outside remote mode (by @jozefKruszynski in #5930)
+- Fix BBC Sounds station program metadata getting stuck from a stale cache (by @kieranhogg in #6101)
+- Restore pairing token support in Sendspin setup flow (by @meiser79 in #6122)
+- Fix AriaCast receiver fetching artwork from arbitrary hosts (by @MarvinSchenkel in #6127)
+- Fix various issues with enqueuing the next track (by @marcelveldt in #6132)
+- Fix crossfade on enqueue-capable speakers (like Sonos) when audio source is Spotify through Soloist (by @marcelveldt in #6141)
+- AI DJ no longer goes quiet after the queue is cleared (by @MarvinSchenkel in #6142)
+- Fix BBC Sounds sometimes using library ID instead of provider ID for listenting status update (by @kieranhogg in #6150)
+
+### 🧰 Maintenance and dependency bumps
+
+- Finish the websocket session cleanup started in #6135 (by @marcelveldt in #6136)
+- Treat the iBroadcast library the same as others that contain a user's tracks (by @OzGav in #6147)
+- Refine the schema-bump and PR-description review instructions (by @chrisuthe in #6149)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @jozefKruszynski, @kieranhogg, @marcelveldt, @meiser79
+
+
 # [2.11.0.dev2026090103] - 01.09.2026
 
 ## 📦 Nightly Release
@@ -75,54 +109,3 @@ _Changes since [2.11.0.dev2026082903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @chrisuthe, @kieranhogg, @phiychai, @trudenboy
-
-
-# [2.11.0.dev2026082903] - 29.08.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026082805](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026082805)_
-
-### 🚀 Features and enhancements
-
-- SiriusXM Library Swap (by @MizterB in #5603)
-- Add bluetooth audio constants (by @mzellho in #6052)
-- Make Sendspin on Cast devices opt-in and mark it experimental (by @marcelveldt in #6081)
-- Let speakers with guest access play without a setup step (by @marcelveldt in #6088)
-
-### 🐛 Bugfixes
-
-- Stop the CLAP weights download from timing out sonic_analysis setup (by @chrisuthe in #6053)
-- Fix AirPlay player hanging when a seek fails to load its next stream (by @marcelveldt in #6076)
-- Stop the music when a speaker is powered off outside Music Assistant (by @marcelveldt in #6077)
-- Stop the music when a group dissolves around its leader (by @marcelveldt in #6083)
-- Fix Spotify Connect group volume starting at 100% (by @OzGav in #6087)
-- Decode percent-encoded usernames in Spotify account match checks (by @mescon in #6089)
-
-### 🎨 Frontend Changes
-
-- Tidy up the setup flow dialog (by @marcelveldt in [#2673](https://github.com/music-assistant/frontend/pull/2673))
-- Keep artwork whose provider is no longer loaded (by @ChrisB85 in [#2670](https://github.com/music-assistant/frontend/pull/2670))
-- Add a Copilot review instructions shard for frontend PRs (by @chrisuthe in [#2672](https://github.com/music-assistant/frontend/pull/2672))
-- Add match policy option to playlist import (by @marcelveldt in [#2646](https://github.com/music-assistant/frontend/pull/2646))
-- Fix playlist import match-policy version gate (by @marcelveldt in [#2675](https://github.com/music-assistant/frontend/pull/2675))
-- Send issues opened on the frontend repo to the support repo (by @marcelveldt in [#2674](https://github.com/music-assistant/frontend/pull/2674))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Keep a stop from cutting off playback that already restarted (by @marcelveldt in #6082)
-- Detach a stereo pair from its group when it is powered off (by @marcelveldt in #6084)
-- Add cross-repo frontend awareness to the review instructions (by @chrisuthe in #6091)
-- Add shared-models awareness to the cross-repo review instructions (by @chrisuthe in #6092)
-- Send issues opened on the server repo to the support repo (by @marcelveldt in #6094)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@ChrisB85, @MizterB, @OzGav, @chrisuthe, @marcelveldt, @mescon, @mzellho
