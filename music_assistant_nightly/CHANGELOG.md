@@ -1,3 +1,34 @@
+# [2.11.0.dev2026090304] - 03.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026090213](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090213)_
+
+### 🐛 Bugfixes
+
+- Show library tracks in the Recently played playlist (by @MarvinSchenkel in #6161)
+- Deezer: fix multiple instances sharing the same account (by @jdaberkow in #6169)
+- Cheaper track changes: Spotify Soloist advertises its real single-stream limit (by @marcelveldt in #6172)
+- Sonos no longer plays a stale next track after you change the queue (by @marcelveldt in #6173)
+- Deezer: fix seeking landing short of the requested position (by @jdaberkow in #6174)
+
+### 🎨 Frontend Changes
+
+- Keep the app on screen while it reconnects after being backgrounded (by @MarvinSchenkel in [#2689](https://github.com/music-assistant/frontend/pull/2689))
+- Remove playlist import schema gate (by @marcelveldt in [#2692](https://github.com/music-assistant/frontend/pull/2692))
+
+### 🧰 Maintenance and dependency bumps
+
+- Quieter track changes: don't warn when the next track has to wait for a free Spotify slot (by @marcelveldt in #6170)
+- One place to check whether Spotify is set up for Soloist (by @marcelveldt in #6175)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @jdaberkow, @marcelveldt
+
+
 # [2.11.0.dev2026090213] - 02.09.2026
 
 ## 📦 Nightly Release
@@ -68,56 +99,3 @@ _Changes since [2.11.0.dev2026090103](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @chrisuthe, @jozefKruszynski, @kieranhogg, @marcelveldt, @meiser79
-
-
-# [2.11.0.dev2026090103] - 01.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026083003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026083003)_
-
-### 🚀 New Providers
-
-- Add Yoto provider (by @pantsman0 in #5584)
-- Add VRT MAX music provider (by @bollewolle in #6098)
-
-### 🚀 Features and enhancements
-
-- Add support for transcoding plex streams before playback (by @chicco-carone in #4615)
-- Serve Pandora stations as dynamic radio stations (by @chrisuthe in #5557)
-- Make the balance slider work on mono tracks (by @OzGav in #6104)
-- Align smart playlists similar music with Endless Mixes (by @MarvinSchenkel in #6121)
-
-### 🐛 Bugfixes
-
-- Fix filesystem scan crash on non-decimal digits in names (by @OzGav in #6102)
-- Attach the parent album to imported album tracks (by @OzGav in #6111)
-- Default the Fully Kiosk output codec to AAC (by @OzGav in #6112)
-- Spotify: skip empty entries when syncing library albums (by @MarvinSchenkel in #6114)
-- Fix missing tracks on albums for collaboration tracks in YouTube Music (by @MarvinSchenkel in #6115)
-- Sonos speakers now play tracks you add to the queue (by @marcelveldt in #6116)
-- Fix BBC Sounds recommendations not loading (by @MarvinSchenkel in #6117)
-- Apple Music: don't report purchase-only library items as available (by @anthonws in #6123)
-- Crossfades no longer shrink to a few seconds on slower sources (by @marcelveldt in #6128)
-- Newly created tokens now show up in the token list (by @marcelveldt in #6131)
-- Fix raw PCM input being decoded with the source codec (by @OzGav in #6137)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Bump pylast from 7.0.2 to 7.1.0 (by @dependabot[bot] in #6105)
-- Bump ruff from 0.15.22 to 0.16.5 (by @dependabot[bot] in #6107)
-- Ask about migrations when a change touches stored data (by @MarvinSchenkel in #6120)
-- Revoking all tokens for a user now disconnects every one of them (by @marcelveldt in #6133)
-- Deleting a user now cleans up everything tied to it (by @marcelveldt in #6134)
-- Simplify how websocket sessions are disconnected (by @marcelveldt in #6135)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @anthonws, @bollewolle, @chicco-carone, @chrisuthe, @marcelveldt, @pantsman0
