@@ -6,7 +6,6 @@ _Changes since [2.10.1](https://github.com/music-assistant/server/releases/tag/2
 
 ### 🚀 Features and enhancements
 
-- Serve Pandora stations as dynamic radio stations (by @chrisuthe in #5557)
 - Align smart playlists similar music with Endless Mixes (by @MarvinSchenkel in #6121)
 - Set a global default for the Autoplay and Crossfade switches (by @MarvinSchenkel in #6130)
 - Clarify the global Autoplay and crossfade default toggles (by @MarvinSchenkel in #6187)
