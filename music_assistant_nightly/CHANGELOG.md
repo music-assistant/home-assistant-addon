@@ -1,3 +1,29 @@
+# [2.11.0.dev2026090503] - 05.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026090403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090403)_
+
+### 🚀 Features and enhancements
+
+- Add support to use loudness data from plex (by @chicco-carone in #6166)
+
+### 🐛 Bugfixes
+
+- Guard Sendspin metadata progress against stale elapsed-time extrapolation (by @teancom in #6183)
+
+### 🧰 Maintenance and dependency bumps
+
+- Rename the DI provider to Digitally Imported (by @OzGav in #6197)
+- Switch critical-review gate to a scheduled poller (by @chrisuthe in #6201)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @chicco-carone, @chrisuthe, @teancom
+
+
 # [2.11.0.dev2026090403] - 04.09.2026
 
 ## 📦 Nightly Release
@@ -77,41 +103,3 @@ _Changes since [2.11.0.dev2026090213](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @jdaberkow, @marcelveldt
-
-
-# [2.11.0.dev2026090213] - 02.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026090203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090203)_
-
-### 🚀 Features and enhancements
-
-- Auto-Enable AirPlay when required for Sendspin (by @teancom in #6079)
-- Retry a failed provider load sooner, with jitter (by @balloob in #6119)
-- Add Smart Fades-aware Smart Shuffle ordering (by @leonkdk in #6144)
-- Prepare the core for AI Radio shows as playable radio stations (by @MarvinSchenkel in #6148)
-- Bandcamp Song Lyrics support (by @ALERTua in #6152)
-- Smart Fades: no more hard cuts or inaudible crossfades on tricky transitions (by @marcelveldt in #6163)
-
-### 🐛 Bugfixes
-
-- Fix chromecast player unload error during shutdown (by @balloob in #6113)
-- Crossfade setting changes now apply at the next track on flow mode players (by @MarvinSchenkel in #6143)
-- Fix BBC Sounds menu data sometimes being stale (by @kieranhogg in #6153)
-- Honor system CA certificates in client SSL contexts (by @ecohash-co in #6154)
-- Fix Internet Archive search missing Live Music Archive content (by @OzGav in #6157)
-- Seeking within a track on Sonos now takes effect right away (by @marcelveldt in #6158)
-- Allow up to 3 concurrent YouTube Music streams (by @MarvinSchenkel in #6160)
-- Fix leaked aiohttp session when an AirPlay control connection drops (by @MarvinSchenkel in #6162)
-- Fix broken nl-NL Alexa invocation phrase (by @R3inoudR in #6164)
-
-### 🧰 Maintenance and dependency bumps
-
-- Yandex Station: remove the unused CSRF request path (by @MarvinSchenkel in #6125)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@ALERTua, @MarvinSchenkel, @OzGav, @R3inoudR, @balloob, @ecohash-co, @kieranhogg, @leonkdk, @marcelveldt, @teancom
