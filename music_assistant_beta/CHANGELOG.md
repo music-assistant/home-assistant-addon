@@ -1,3 +1,98 @@
+# [2.11.0b2] - 08.09.2026
+
+## 📦 Beta Release
+
+_Changes since [2.11.0b1](https://github.com/music-assistant/server/releases/tag/2.11.0b1)_
+
+### 🚀 Features and enhancements
+
+- Add external ID lookup infrastructure (by @dmoo500 in #5110)
+- Match imported playlist tracks against other providers when their source is gone (by @marcelveldt in #5986)
+- Add playlist migration between providers (by @marcelveldt in #5989)
+- Sign in to Overcast with a QR code instead of a password (by @OzGav in #6126)
+- Add support to use loudness data from plex (by @chicco-carone in #6166)
+- Add ARTIST_TRACKS support to the Tidal provider (by @jozefKruszynski in #6167)
+- Show the year a track was originally released (by @OzGav in #6182)
+- Clarify the global Autoplay and crossfade default toggles (by @MarvinSchenkel in #6187)
+- Prefer loudness metadata from music providers over the built-in measurement (by @MarvinSchenkel in #6188)
+- Add measured SendSpin delay for LG SPx Cast devices (by @Toverbal in #6204)
+- Prefill the AmpliPi host from mDNS during setup (by @mcaulifn in #6206)
+- Play hi-res radio stations at their original bit depth (by @OzGav in #6214)
+
+### 🐛 Bugfixes
+
+- Clean up sidebar shortcuts when a music provider is removed (by @OzGav in #6124)
+- Show why a Podcast Index login or episode lookup failed (by @OzGav in #6146)
+- Use artist top tracks when sampling genre and dynamic radio seeds (by @jozefKruszynski in #6155)
+- Show library tracks in the Recently played playlist (by @MarvinSchenkel in #6161)
+- Deezer: fix multiple instances sharing the same account (by @jdaberkow in #6169)
+- Skip a Spotify track Spotify refuses, instead of logging a crash (by @marcelveldt in #6171)
+- Cheaper track changes: Spotify Soloist advertises its real single-stream limit (by @marcelveldt in #6172)
+- Sonos no longer plays a stale next track after you change the queue (by @marcelveldt in #6173)
+- Deezer: fix seeking landing short of the requested position (by @jdaberkow in #6174)
+- Fix spotify soloist new download (by @aauren in #6176)
+- Play the newest episode when you ask for the latest one (by @OzGav in #6178)
+- Show ARD Audiothek episodes in the right order (by @OzGav in #6179)
+- Guard Sendspin metadata progress against stale elapsed-time extrapolation (by @teancom in #6183)
+- AirPlay: fall back to the default port when discovery has no port (by @MarvinSchenkel in #6185)
+- Make Music Trivia title questions answerable (by @MarvinSchenkel in #6189)
+- Set Home for PulseAudio (by @aauren in #6190)
+- Improve Sounds playlist handling in BBC Sounds (by @kieranhogg in #6195)
+- Play a plain URL instead of a random track for users with a provider filter (by @MarvinSchenkel in #6205)
+- Fix sidebar shortcuts stuck after a provider was removed (by @OzGav in #6207)
+- Fix Deezer account isolation and clarify authentication failures (by @jdaberkow in #6213)
+- Fix Plex Connect starting the wrong track in large queues (by @MarvinSchenkel in #6217)
+- Fix Sonic Similarity not loading when the database holds a corrupt analysis row (by @MarvinSchenkel in #6218)
+- Sort Apple Music library by the date you actually added items (by @MarvinSchenkel in #6219)
+- Fix players not regrouping after an announcement on a synced player (by @MarvinSchenkel in #6220)
+
+### 🎨 Frontend Changes
+
+- Keep the app on screen while it reconnects after being backgrounded (by @MarvinSchenkel in [#2689](https://github.com/music-assistant/frontend/pull/2689))
+- Remove playlist import schema gate (by @marcelveldt in [#2692](https://github.com/music-assistant/frontend/pull/2692))
+- Migrate playlists between providers (by @marcelveldt in [#2647](https://github.com/music-assistant/frontend/pull/2647))
+- Correct the DSP help text about which filters need stereo (by @OzGav in [#2677](https://github.com/music-assistant/frontend/pull/2677))
+- Keep sidebar shortcuts tidied up after a provider is removed (by @OzGav in [#2694](https://github.com/music-assistant/frontend/pull/2694))
+- Bump eslint from 10.7.0 to 10.9.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2685](https://github.com/music-assistant/frontend/pull/2685))
+- Bump reka-ui from 2.10.1 to 2.10.3 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2639](https://github.com/music-assistant/frontend/pull/2639))
+- Bump lint-staged from 16.4.0 to 17.4.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2682](https://github.com/music-assistant/frontend/pull/2682))
+- Bump oxlint and eslint-plugin-oxlint (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2684](https://github.com/music-assistant/frontend/pull/2684))
+- Bump marked from 18.0.9 to 18.0.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2683](https://github.com/music-assistant/frontend/pull/2683))
+- Bump typescript-eslint from 8.64.0 to 8.68.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2686](https://github.com/music-assistant/frontend/pull/2686))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>18 changes</summary>
+
+- Fake Sendspin devices for testing the pairing screens (by @marcelveldt in #6085)
+- Move most webserver settings behind the advanced toggle (by @OzGav in #6168)
+- Quieter track changes: don't warn when the next track has to wait for a free Spotify slot (by @marcelveldt in #6170)
+- One place to check whether Spotify is set up for Soloist (by @marcelveldt in #6175)
+- Log Smart Fades ordering outcome at verbose level (by @MarvinSchenkel in #6186)
+- Add critical-review-gate workflow to draft PRs with critical findings (by @chrisuthe in #6191)
+- Bump auntie-sounds to 2.0.9 (by @kieranhogg in #6192)
+- Stop flagging valid Python 3.14 syntax (PEP 758) in reviews (by @chrisuthe in #6193)
+- Various code improvements and tests for BBC Sounds (by @kieranhogg in #6194)
+- Rename the DI provider to Digitally Imported (by @OzGav in #6197)
+- Switch critical-review gate to a scheduled poller (by @chrisuthe in #6201)
+- Bump deno from 2.9.5 to 2.9.6 (by @dependabot[bot] in #6209)
+- Bump bidict from 0.23.1 to 0.24.1 (by @dependabot[bot] in #6210)
+- Bump huggingface-hub from 1.26.1 to 1.30.0 (by @dependabot[bot] in #6211)
+- Keep changes that did not ship out of the release notes (by @MarvinSchenkel in #6216)
+- Remove settings migrations that were due to go after 2.9 (by @OzGav in #6221)
+- Use the coloured Sendspin logo for the provider icon (by @MarvinSchenkel in #6225)
+- Update aioslimproto to 3.2.0 (by @MarvinSchenkel in #6227)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Toverbal, @aauren, @chicco-carone, @chrisuthe, @dmoo500, @jdaberkow, @jozefKruszynski, @kieranhogg, @marcelveldt, @mcaulifn, @teancom
+
+
 # [2.11.0b1] - 02.09.2026
 
 ## 📦 Beta Release
@@ -199,81 +294,3 @@ _Changes since [2.10.0rc7](https://github.com/music-assistant/server/releases/ta
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @chrisuthe, @jozefKruszynski, @kiegsgroot, @marcelveldt, @maximmaxim345
-
-
-# [2.10.0rc7] - 26.08.2026
-
-## 📦 RC Release
-
-_Changes since [2.10.0rc6](https://github.com/music-assistant/server/releases/tag/2.10.0rc6)_
-
-### ⚠ Breaking Changes
-
-- Retire the local audio provider in favor of the Sendspin add-on (by @chrisuthe in #5965)
-
-### 🚀 Features and enhancements
-
-- Show fuller descriptions for BBC Sounds podcasts and shows (by @OzGav in #5924)
-- Add per player HEOS playback transition configuration (by @Tommatheussen in #5978)
-- Shuffle and repeat now work on a source your speaker runs itself (by @marcelveldt in #5993)
-- Use album loudness only for albums you actually played (by @marcelveldt in #5994)
-- Faster seeking on Spotify tracks played through Soloist (by @marcelveldt in #6000)
-- Keep the home page in step when played state changes (by @OzGav in #6005)
-
-### 🐛 Bugfixes
-
-- 'Play next' now really plays the chosen track next on a dynamic queue (by @MarvinSchenkel in #5950)
-- Use album loudness only when tracks really play as part of an album (by @marcelveldt in #5981)
-- Notice when Spotify playback loses its pairing (by @marcelveldt in #5987)
-- Seeking or resuming a Spotify track no longer cuts it off mid-song (by @marcelveldt in #5992)
-- Add dark theme icon for MilkDrop Visualizer (by @jozefKruszynski in #6007)
-
-### 🎨 Frontend Changes
-
-- Continue setup as soon as you pick an option (by @maximmaxim345 in [#2643](https://github.com/music-assistant/frontend/pull/2643))
-- Shuffle and repeat no longer apply to something that stopped playing (by @marcelveldt in [#2650](https://github.com/music-assistant/frontend/pull/2650))
-- Show shuffle and repeat failures again, except the expected one (by @marcelveldt in [#2652](https://github.com/music-assistant/frontend/pull/2652))
-- Document how the shuffle and repeat controls pick the source they act on (by @marcelveldt in [#2651](https://github.com/music-assistant/frontend/pull/2651))
-- Surface retired providers correctly in the settings UI (by @chrisuthe in [#2644](https://github.com/music-assistant/frontend/pull/2644))
-- Show the full menu on discover page items (by @OzGav in [#2624](https://github.com/music-assistant/frontend/pull/2624))
-- Translate the provider stage badge (by @chrisuthe in [#2629](https://github.com/music-assistant/frontend/pull/2629))
-- Fix permission popups on cast dashboards (by @MarvinSchenkel in [#2655](https://github.com/music-assistant/frontend/pull/2655))
-- Replace butterchurn with maintained fork (by @jozefKruszynski in [#2654](https://github.com/music-assistant/frontend/pull/2654))
-- Lokalise translations update (by @[github-actions[bot]](https://github.com/apps/github-actions) in [#2630](https://github.com/music-assistant/frontend/pull/2630))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>23 changes</summary>
-
-- Count an album as played once, however its tracks are ordered in the queue (by @marcelveldt in #5991)
-- Keep the position shown for a live source in step with the player (by @marcelveldt in #5995)
-- Document which Spotify Soloist pairing failures are detected (by @marcelveldt in #5996)
-- Show the right bit-perfect badge when two speakers share one live source (by @marcelveldt in #5997)
-- Log how long a stream takes to deliver its first audio (by @marcelveldt in #5998)
-- Report a slow player stop after pausing Spotify Connect (by @marcelveldt in #5999)
-- Spread beat analysis over shorter steps so it stays out of playback's way (by @marcelveldt in #6001)
-- Cleanup and small tweaks to the Spotify provider (by @marcelveldt in #6002)
-- ⬆️ Update music-assistant-models to 1.1.200 (by @musicassistant-bot[bot] in #6003)
-- ⬆️ Update music-assistant-frontend to 2.17.291 (by @musicassistant-bot[bot] in #6004)
-- Stop leaving a subprocess running when closing it is cancelled (by @marcelveldt in #6006)
-- Make the Smart Fades unloaded-model guards actually work (by @marcelveldt in #6008)
-- ⬆️ Update music-assistant-models to 1.1.201 (by @musicassistant-bot[bot] in #6009)
-- Let a cancelled virtual player creation finish cleaning up (by @marcelveldt in #6010)
-- ⬆️ Update music-assistant-models to 1.1.202 (by @musicassistant-bot[bot] in #6011)
-- Keep analysis models loaded while a track is still being analysed (by @marcelveldt in #6012)
-- Keep the Smart Fades models as a single set (by @marcelveldt in #6013)
-- Keep Spotify playing without a gap when a track repeats or the queue changes (by @marcelveldt in #6014)
-- Stop logging an ordinary Spotify seek as a failure (by @marcelveldt in #6015)
-- Don't stall cleaning up a virtual player that was already removed (by @marcelveldt in #6016)
-- Free a cut Spotify channel's buffer as soon as nothing is reading it (by @marcelveldt in #6017)
-- Add tests for where Spotify Soloist splits one track from the next (by @marcelveldt in #6018)
-- ⬆️ Update music-assistant-frontend to 2.17.292 (by @musicassistant-bot[bot] in #6020)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Tommatheussen, @chrisuthe, @jozefKruszynski, @marcelveldt, @maximmaxim345
