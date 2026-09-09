@@ -1,3 +1,49 @@
+# [2.11.0.dev2026090903] - 09.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026090803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090803)_
+
+### 🚀 Features and enhancements
+
+- Add triple J Hottest to ABC radio provider (by @Kludgy4 in #6140)
+
+### 🐛 Bugfixes
+
+- Improve Sounds playlist handling in BBC Sounds (by @kieranhogg in #6195)
+- Play a plain URL instead of a random track for users with a provider filter (by @MarvinSchenkel in #6205)
+- Fix Plex Connect starting the wrong track in large queues (by @MarvinSchenkel in #6217)
+
+### 🎨 Frontend Changes
+
+- Show the right release year for tracks in time zones west of UTC (by @OzGav in [#2697](https://github.com/music-assistant/frontend/pull/2697))
+- Bump vue-i18n from 11.4.8 to 11.4.10 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2701](https://github.com/music-assistant/frontend/pull/2701))
+- Bump pnpm/action-setup from 6.0.9 to 6.1.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2699](https://github.com/music-assistant/frontend/pull/2699))
+- Bump @internationalized/date from 3.12.3 to 3.12.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2705](https://github.com/music-assistant/frontend/pull/2705))
+- Bump swiper from 14.1.0 to 14.2.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2700](https://github.com/music-assistant/frontend/pull/2700))
+- Bump zod from 4.4.3 to 4.5.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2704](https://github.com/music-assistant/frontend/pull/2704))
+- Bump sass from 1.102.0 to 1.104.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2707](https://github.com/music-assistant/frontend/pull/2707))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Remove settings migrations that were due to go after 2.9 (by @OzGav in #6221)
+- Use the coloured Sendspin logo for the provider icon (by @MarvinSchenkel in #6225)
+- Remove f-strings from logging calls in BBC Sounds provider (by @kieranhogg in #6226)
+- Update aioslimproto to 3.2.0 (by @MarvinSchenkel in #6227)
+- Update FFmpeg to 9.0.1 (by @MarvinSchenkel in #6228)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Kludgy4, @MarvinSchenkel, @OzGav, @internationalized, @kieranhogg
+
+
 # [2.11.0.dev2026090803] - 08.09.2026
 
 ## 📦 Nightly Release
@@ -78,53 +124,3 @@ _Changes since [2.11.0.dev2026090403](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @chicco-carone, @chrisuthe, @teancom
-
-
-# [2.11.0.dev2026090403] - 04.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026090304](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090304)_
-
-### 🚀 Features and enhancements
-
-- Match imported playlist tracks against other providers when their source is gone (by @marcelveldt in #5986)
-- Add playlist migration between providers (by @marcelveldt in #5989)
-- Add ARTIST_TRACKS support to the Tidal provider (by @jozefKruszynski in #6167)
-- Clarify the global Autoplay and crossfade default toggles (by @MarvinSchenkel in #6187)
-- Prefer loudness metadata from music providers over the built-in measurement (by @MarvinSchenkel in #6188)
-
-### 🐛 Bugfixes
-
-- Clean up sidebar shortcuts when a music provider is removed (by @OzGav in #6124)
-- Show why a Podcast Index login or episode lookup failed (by @OzGav in #6146)
-- Use artist top tracks when sampling genre and dynamic radio seeds (by @jozefKruszynski in #6155)
-- Skip a Spotify track Spotify refuses, instead of logging a crash (by @marcelveldt in #6171)
-- Fix spotify soloist new download (by @aauren in #6176)
-- AirPlay: fall back to the default port when discovery has no port (by @MarvinSchenkel in #6185)
-- Make Music Trivia title questions answerable (by @MarvinSchenkel in #6189)
-- Set Home for PulseAudio (by @aauren in #6190)
-
-### 🎨 Frontend Changes
-
-- Migrate playlists between providers (by @marcelveldt in [#2647](https://github.com/music-assistant/frontend/pull/2647))
-- Correct the DSP help text about which filters need stereo (by @OzGav in [#2677](https://github.com/music-assistant/frontend/pull/2677))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Fake Sendspin devices for testing the pairing screens (by @marcelveldt in #6085)
-- Log Smart Fades ordering outcome at verbose level (by @MarvinSchenkel in #6186)
-- Add critical-review-gate workflow to draft PRs with critical findings (by @chrisuthe in #6191)
-- Bump auntie-sounds to 2.0.9 (by @kieranhogg in #6192)
-- Stop flagging valid Python 3.14 syntax (PEP 758) in reviews (by @chrisuthe in #6193)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @aauren, @chrisuthe, @jozefKruszynski, @kieranhogg, @marcelveldt
