@@ -1,3 +1,44 @@
+# [2.11.0.dev2026091003] - 10.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026090903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090903)_
+
+### 🐛 Bugfixes
+
+- Subsonic scrobbler: credit plays to the playing user's server account (by @pcc0x in #6200)
+- Route generic LinkPlay OEM devices to the generic WiiM backend (by @OzGav in #6223)
+- Plex provider - incorrectly accepts empty media container as lyrics (by @caraar12345 in #6229)
+- Keep local playlist covers in subfolders instead of replacing them with a collage (by @OzGav in #6230)
+- Stop TuneIn sync treating non-favourite stations as failed items (by @OzGav in #6231)
+- Skip corrupt audio files instead of crashing the play request (by @OzGav in #6242)
+- Don't mark a track unplayable when a speaker only probes it (by @marcelveldt in #6243)
+- Tidal: fix playback of tracks that have a Dolby Atmos version (by @jozefKruszynski in #6244)
+
+### 🎨 Frontend Changes
+
+- Improve accessible names for icon controls (by @teancom in [#2569](https://github.com/music-assistant/frontend/pull/2569))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Pace a stream by what is being served (by @marcelveldt in #6237)
+- Encode FLAC in the block size that is cheaper on both ends (by @marcelveldt in #6239)
+- BBC Sounds: remove duplicated function (by @kieranhogg in #6245)
+- Say so when a Sonos speaker cannot play a track (by @marcelveldt in #6246)
+- Keep Sonos playing an album of short tracks (by @marcelveldt in #6247)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @caraar12345, @jozefKruszynski, @kieranhogg, @marcelveldt, @pcc0x, @teancom
+
+
 # [2.11.0.dev2026090903] - 09.09.2026
 
 ## 📦 Nightly Release
@@ -98,29 +139,3 @@ _Changes since [2.11.0.dev2026090503](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Toverbal, @dmoo500, @jdaberkow, @kieranhogg, @mcaulifn
-
-
-# [2.11.0.dev2026090503] - 05.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026090403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090403)_
-
-### 🚀 Features and enhancements
-
-- Add support to use loudness data from plex (by @chicco-carone in #6166)
-
-### 🐛 Bugfixes
-
-- Guard Sendspin metadata progress against stale elapsed-time extrapolation (by @teancom in #6183)
-
-### 🧰 Maintenance and dependency bumps
-
-- Rename the DI provider to Digitally Imported (by @OzGav in #6197)
-- Switch critical-review gate to a scheduled poller (by @chrisuthe in #6201)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @chicco-carone, @chrisuthe, @teancom
