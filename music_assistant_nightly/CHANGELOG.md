@@ -1,3 +1,56 @@
+# [2.11.0.dev2026091103] - 11.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091003)_
+
+### 🚀 Features and enhancements
+
+- Use album.nfo album artist when the tag is missing (by @OzGav in #6233)
+- Tidal: add track and album lookup by ISRC and barcode (by @jozefKruszynski in #6248)
+- Music sources get an owner and can be shared with household members (by @marcelveldt in #6255)
+- Deezer: External id lookup (by @jdaberkow in #6257)
+- Align party and music quiz plugin icons with the frontend menu (by @MarvinSchenkel in #6258)
+
+### 🐛 Bugfixes
+
+- Fix DSD PCM buffer accounting and bound retention (by @mwd102 in #6177)
+- Keep Sonos S1 playback events from blocking the event loop (by @OzGav in #6235)
+- Cancel the prewarm of the old next track when a queue is replaced (by @MarvinSchenkel in #6238)
+- Update Yoto API dependency with Oauth refresh token fixes (by @pantsman0 in #6240)
+- Let repeat take priority over autoplay (by @MarvinSchenkel in #6250)
+- Fix Jellyfin 12 playback and artwork (by @MarvinSchenkel in #6251)
+- Fix a single-track Endless Mix looping over the same few songs (by @MarvinSchenkel in #6254)
+- Show the station logo instead of the previous track's artwork when a radio starts (by @OzGav in #6256)
+- Fix the Profiler plugin leaking memory during CPU profiling (by @marcelveldt in #6266)
+
+### 🎨 Frontend Changes
+
+- Link to the audio analysis status page from the providers tab (by @OzGav in [#2708](https://github.com/music-assistant/frontend/pull/2708))
+- Fix item menu not updating position correctly (by @pierosavi in [#2715](https://github.com/music-assistant/frontend/pull/2715))
+- Disable autoplay controls while repeat is on (by @MarvinSchenkel in [#2711](https://github.com/music-assistant/frontend/pull/2711))
+- Bump dompurify from 3.4.11 to 3.4.14 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2702](https://github.com/music-assistant/frontend/pull/2702))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Fix an outdated docstring in the PulseAudio capture helper (by @marcelveldt in #6259)
+- Expose the settings save as an awaitable (by @marcelveldt in #6262)
+- Remove unused volume curve code from the PulseAudio capture helper (by @marcelveldt in #6263)
+- Remove unused PulseAudio server discovery from the capture helper (by @marcelveldt in #6264)
+- Enabling debug logging no longer slows the server down (by @marcelveldt in #6265)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @jdaberkow, @jozefKruszynski, @marcelveldt, @mwd102, @pantsman0, @pierosavi
+
+
 # [2.11.0.dev2026091003] - 10.09.2026
 
 ## 📦 Nightly Release
@@ -83,59 +136,3 @@ _Changes since [2.11.0.dev2026090803](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Kludgy4, @MarvinSchenkel, @OzGav, @internationalized, @kieranhogg
-
-
-# [2.11.0.dev2026090803] - 08.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026090503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090503)_
-
-### 🚀 Features and enhancements
-
-- Add external ID lookup infrastructure (by @dmoo500 in #5110)
-- Sign in to Overcast with a QR code instead of a password (by @OzGav in #6126)
-- Show the year a track was originally released (by @OzGav in #6182)
-- Add measured SendSpin delay for LG SPx Cast devices (by @Toverbal in #6204)
-- Prefill the AmpliPi host from mDNS during setup (by @mcaulifn in #6206)
-- Play hi-res radio stations at their original bit depth (by @OzGav in #6214)
-
-### 🐛 Bugfixes
-
-- Play the newest episode when you ask for the latest one (by @OzGav in #6178)
-- Show ARD Audiothek episodes in the right order (by @OzGav in #6179)
-- Fix sidebar shortcuts stuck after a provider was removed (by @OzGav in #6207)
-- Fix Deezer account isolation and clarify authentication failures (by @jdaberkow in #6213)
-- Fix Sonic Similarity not loading when the database holds a corrupt analysis row (by @MarvinSchenkel in #6218)
-- Sort Apple Music library by the date you actually added items (by @MarvinSchenkel in #6219)
-- Fix players not regrouping after an announcement on a synced player (by @MarvinSchenkel in #6220)
-
-### 🎨 Frontend Changes
-
-- Keep sidebar shortcuts tidied up after a provider is removed (by @OzGav in [#2694](https://github.com/music-assistant/frontend/pull/2694))
-- Bump eslint from 10.7.0 to 10.9.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2685](https://github.com/music-assistant/frontend/pull/2685))
-- Bump reka-ui from 2.10.1 to 2.10.3 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2639](https://github.com/music-assistant/frontend/pull/2639))
-- Bump lint-staged from 16.4.0 to 17.4.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2682](https://github.com/music-assistant/frontend/pull/2682))
-- Bump oxlint and eslint-plugin-oxlint (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2684](https://github.com/music-assistant/frontend/pull/2684))
-- Bump marked from 18.0.9 to 18.0.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2683](https://github.com/music-assistant/frontend/pull/2683))
-- Bump typescript-eslint from 8.64.0 to 8.68.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2686](https://github.com/music-assistant/frontend/pull/2686))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Move most webserver settings behind the advanced toggle (by @OzGav in #6168)
-- Various code improvements and tests for BBC Sounds (by @kieranhogg in #6194)
-- Bump deno from 2.9.5 to 2.9.6 (by @dependabot[bot] in #6209)
-- Bump bidict from 0.23.1 to 0.24.1 (by @dependabot[bot] in #6210)
-- Bump huggingface-hub from 1.26.1 to 1.30.0 (by @dependabot[bot] in #6211)
-- Keep changes that did not ship out of the release notes (by @MarvinSchenkel in #6216)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Toverbal, @dmoo500, @jdaberkow, @kieranhogg, @mcaulifn
