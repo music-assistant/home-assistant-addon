@@ -1,3 +1,52 @@
+# [2.11.0.dev2026091203] - 12.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091103)_
+
+### 🚀 Features and enhancements
+
+- Members can add and manage their own music sources (by @marcelveldt in #6267)
+- Profiler: tell mapped files from heap growth in memory reports (by @marcelveldt in #6273)
+- Diagnostics dump includes the memory split and the full profiler report (by @marcelveldt in #6275)
+- Default the global autoplay setting to off (by @MarvinSchenkel in #6276)
+
+### 🐛 Bugfixes
+
+- Record a failed analysis session in the failures overview (by @OzGav in #6138)
+- Deezer: keep cover art and artist on user-uploaded tracks (by @jdaberkow in #6202)
+- Fix preset slot assignment and xml encoding in Bose Soundtouch (by @fmunkes in #6260)
+- Fix ariacast sticky active player on second session and beyond (by @arthurbre in #6261)
+- Keep the MilkDrop visualizer alive on tracks longer than the audio buffer (by @jozefKruszynski in #6272)
+- Fix saving the sharing of a music source when its owner or a shared member is disabled (by @marcelveldt in #6277)
+- Stop Sonos speakers cutting out a couple of tracks in (by @marcelveldt in #6278)
+
+### 🎨 Frontend Changes
+
+- Drop the plugin logo on built-in discover rows (by @marcelveldt in [#2719](https://github.com/music-assistant/frontend/pull/2719))
+- Owner and sharing controls for music sources (by @marcelveldt in [#2716](https://github.com/music-assistant/frontend/pull/2716))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Document how to enable asyncio debug mode when running the server locally (by @marcelveldt in #6274)
+- Refuse making a user a guest while it owns music sources (by @marcelveldt in #6282)
+- Bring back the VS Code launch configuration (by @marcelveldt in #6283)
+- Hand playback reports to scrobbler plugins through a plugin hook (by @marcelveldt in #6286)
+- Pace the universal group stream like the flow stream (by @marcelveldt in #6288)
+- Log what Sonos speakers ask the cloud queue for at debug level (by @marcelveldt in #6291)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @arthurbre, @fmunkes, @jdaberkow, @jozefKruszynski, @marcelveldt
+
+
 # [2.11.0.dev2026091103] - 11.09.2026
 
 ## 📦 Nightly Release
@@ -90,49 +139,3 @@ _Changes since [2.11.0.dev2026090903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @caraar12345, @jozefKruszynski, @kieranhogg, @marcelveldt, @pcc0x, @teancom
-
-
-# [2.11.0.dev2026090903] - 09.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026090803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090803)_
-
-### 🚀 Features and enhancements
-
-- Add triple J Hottest to ABC radio provider (by @Kludgy4 in #6140)
-
-### 🐛 Bugfixes
-
-- Improve Sounds playlist handling in BBC Sounds (by @kieranhogg in #6195)
-- Play a plain URL instead of a random track for users with a provider filter (by @MarvinSchenkel in #6205)
-- Fix Plex Connect starting the wrong track in large queues (by @MarvinSchenkel in #6217)
-
-### 🎨 Frontend Changes
-
-- Show the right release year for tracks in time zones west of UTC (by @OzGav in [#2697](https://github.com/music-assistant/frontend/pull/2697))
-- Bump vue-i18n from 11.4.8 to 11.4.10 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2701](https://github.com/music-assistant/frontend/pull/2701))
-- Bump pnpm/action-setup from 6.0.9 to 6.1.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2699](https://github.com/music-assistant/frontend/pull/2699))
-- Bump @internationalized/date from 3.12.3 to 3.12.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2705](https://github.com/music-assistant/frontend/pull/2705))
-- Bump swiper from 14.1.0 to 14.2.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2700](https://github.com/music-assistant/frontend/pull/2700))
-- Bump zod from 4.4.3 to 4.5.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2704](https://github.com/music-assistant/frontend/pull/2704))
-- Bump sass from 1.102.0 to 1.104.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2707](https://github.com/music-assistant/frontend/pull/2707))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Remove settings migrations that were due to go after 2.9 (by @OzGav in #6221)
-- Use the coloured Sendspin logo for the provider icon (by @MarvinSchenkel in #6225)
-- Remove f-strings from logging calls in BBC Sounds provider (by @kieranhogg in #6226)
-- Update aioslimproto to 3.2.0 (by @MarvinSchenkel in #6227)
-- Update FFmpeg to 9.0.1 (by @MarvinSchenkel in #6228)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Kludgy4, @MarvinSchenkel, @OzGav, @internationalized, @kieranhogg
