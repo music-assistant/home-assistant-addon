@@ -1,3 +1,54 @@
+# [2.11.0.dev2026091303] - 13.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091203)_
+
+### 🚀 Features and enhancements
+
+- Let members pick who to share a music source with (by @marcelveldt in #6284)
+- Personal Music Assistant playlists: private by default, shareable with other members (by @marcelveldt in #6285)
+- Shuffle and repeat now work for Spotify Connect and other sources playing on Sonos (by @marcelveldt in #6292)
+- Show the Home Assistant system account as a protected system user (by @marcelveldt in #6296)
+- Play through your own account of a service, never through someone else's (by @marcelveldt in #6297)
+- Let admins create their own user roles (by @marcelveldt in #6299)
+- Let everyone play AI Radio stations (by @marcelveldt in #6301)
+
+### 🐛 Bugfixes
+
+- Fix ListenBrainz scrobbler blocking startup while validating its token (by @marcelveldt in #6289)
+- Make AmpliPi setup aware of controllers that are already configured (by @mcaulifn in #6293)
+- fix issue with forwarded hls substream urls (by @jfeil in #6295)
+- Stop Sonos speakers logging an error on every queue change (by @marcelveldt in #6302)
+- Ask to re-authenticate Last.fm when its login stops working (by @marcelveldt in #6303)
+
+### 🎨 Frontend Changes
+
+- Ask before removing a music source from the list (by @marcelveldt in [#2738](https://github.com/music-assistant/frontend/pull/2738))
+- Reset scroll position on route change (by @pierosavi in [#2722](https://github.com/music-assistant/frontend/pull/2722))
+- Share Music Assistant playlists with other members (by @marcelveldt in [#2731](https://github.com/music-assistant/frontend/pull/2731))
+- Guide new admins through setup with an onboarding wizard (by @marcelveldt in [#2733](https://github.com/music-assistant/frontend/pull/2733))
+- Show the Home Assistant system account in user management (by @marcelveldt in [#2730](https://github.com/music-assistant/frontend/pull/2730))
+- Let members pick who to share a music source with (by @marcelveldt in [#2727](https://github.com/music-assistant/frontend/pull/2727))
+- New look for the artist page with customizable rows (by @stvncode in [#2720](https://github.com/music-assistant/frontend/pull/2720))
+- Clearer sharing hints for playlists without an owner (by @marcelveldt in [#2742](https://github.com/music-assistant/frontend/pull/2742))
+- Show each user only the actions their role allows (by @marcelveldt in [#2736](https://github.com/music-assistant/frontend/pull/2736))
+- Fix outdated auto-release workflow comments (by @marcelveldt in [#2741](https://github.com/music-assistant/frontend/pull/2741))
+- Fix duplicate error message when a profile update fails (by @marcelveldt in [#2739](https://github.com/music-assistant/frontend/pull/2739))
+- Clearer wording for the home page warning (by @marcelveldt in [#2734](https://github.com/music-assistant/frontend/pull/2734))
+- Spot and prevent music sources that nobody can use (by @marcelveldt in [#2735](https://github.com/music-assistant/frontend/pull/2735))
+- Clearer wording for music source sharing (by @marcelveldt in [#2726](https://github.com/music-assistant/frontend/pull/2726))
+- Say "music source" and "plugin" instead of "provider" in settings (by @marcelveldt in [#2723](https://github.com/music-assistant/frontend/pull/2723))
+- Bump vitest from 4.1.10 to 4.1.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2713](https://github.com/music-assistant/frontend/pull/2713))
+- Show the server's reason when saving a user fails (by @marcelveldt in [#2724](https://github.com/music-assistant/frontend/pull/2724))
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@jfeil, @marcelveldt, @mcaulifn, @pierosavi, @stvncode
+
+
 # [2.11.0.dev2026091203] - 12.09.2026
 
 ## 📦 Nightly Release
@@ -98,44 +149,3 @@ _Changes since [2.11.0.dev2026091003](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @jdaberkow, @jozefKruszynski, @marcelveldt, @mwd102, @pantsman0, @pierosavi
-
-
-# [2.11.0.dev2026091003] - 10.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026090903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026090903)_
-
-### 🐛 Bugfixes
-
-- Subsonic scrobbler: credit plays to the playing user's server account (by @pcc0x in #6200)
-- Route generic LinkPlay OEM devices to the generic WiiM backend (by @OzGav in #6223)
-- Plex provider - incorrectly accepts empty media container as lyrics (by @caraar12345 in #6229)
-- Keep local playlist covers in subfolders instead of replacing them with a collage (by @OzGav in #6230)
-- Stop TuneIn sync treating non-favourite stations as failed items (by @OzGav in #6231)
-- Skip corrupt audio files instead of crashing the play request (by @OzGav in #6242)
-- Don't mark a track unplayable when a speaker only probes it (by @marcelveldt in #6243)
-- Tidal: fix playback of tracks that have a Dolby Atmos version (by @jozefKruszynski in #6244)
-
-### 🎨 Frontend Changes
-
-- Improve accessible names for icon controls (by @teancom in [#2569](https://github.com/music-assistant/frontend/pull/2569))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Pace a stream by what is being served (by @marcelveldt in #6237)
-- Encode FLAC in the block size that is cheaper on both ends (by @marcelveldt in #6239)
-- BBC Sounds: remove duplicated function (by @kieranhogg in #6245)
-- Say so when a Sonos speaker cannot play a track (by @marcelveldt in #6246)
-- Keep Sonos playing an album of short tracks (by @marcelveldt in #6247)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @caraar12345, @jozefKruszynski, @kieranhogg, @marcelveldt, @pcc0x, @teancom
