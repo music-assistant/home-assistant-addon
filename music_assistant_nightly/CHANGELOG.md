@@ -1,3 +1,55 @@
+# [2.11.0.dev2026091603] - 16.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091503)_
+
+### 🚀 Features and enhancements
+
+- Implement Spotify external ID lookup (ISRC/UPC) (by @dmoo500 in #5356)
+- Load Plex library metadata in batches instead of one item at a time (by @RyanAtTanagra in #6353)
+
+### 🐛 Bugfixes
+
+- Keep provider item lookups scoped to their own media type (by @jdaberkow in #6203)
+- Fix Pandora album pages failing to open (by @OzGav in #6308)
+- Hold back every caller while a provider rate limit is active (by @balloob in #6332)
+- Keep one music provider from breaking every version lookup (by @stvncode in #6351)
+- Drop provider mappings for items the provider no longer has (by @RyanAtTanagra in #6355)
+- Fix library artists and albums picking up an invalid provider link (by @marcelveldt in #6362)
+
+### 🎨 Frontend Changes
+
+- Gray accents on the now playing screen (by @MarvinSchenkel in [#2762](https://github.com/music-assistant/frontend/pull/2762))
+- Invite members to connect their own music accounts (by @marcelveldt in [#2773](https://github.com/music-assistant/frontend/pull/2773))
+- New look for the album page (by @stvncode in [#2760](https://github.com/music-assistant/frontend/pull/2760))
+- Show Party, AI Radio and the visualizer to guests (by @marcelveldt in [#2777](https://github.com/music-assistant/frontend/pull/2777))
+- Show radio stream artwork in the Party dashboard (by @pierosavi in [#2712](https://github.com/music-assistant/frontend/pull/2712))
+- Space a source's icon apart from its name (by @stvncode in [#2774](https://github.com/music-assistant/frontend/pull/2774))
+- Report and undo a failed music source rename (by @marcelveldt in [#2772](https://github.com/music-assistant/frontend/pull/2772))
+- Simplify how the app tracks loaded plugins (by @marcelveldt in [#2779](https://github.com/music-assistant/frontend/pull/2779))
+- Show a music source's own name in the settings breadcrumb (by @marcelveldt in [#2778](https://github.com/music-assistant/frontend/pull/2778))
+- Fix tests (by @pierosavi in [#2776](https://github.com/music-assistant/frontend/pull/2776))
+- Bump @scure/base from 2.2.0 to 2.4.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2767](https://github.com/music-assistant/frontend/pull/2767))
+- Bump @vitest/ui from 4.1.10 to 5.0.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2769](https://github.com/music-assistant/frontend/pull/2769))
+- Bump vite-plugin-webfont-dl from 3.12.0 to 3.13.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2770](https://github.com/music-assistant/frontend/pull/2770))
+- Bump @vue/test-utils from 2.4.11 to 2.5.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2771](https://github.com/music-assistant/frontend/pull/2771))
+- Bump @fontsource/roboto from 5.2.10 to 5.3.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2764](https://github.com/music-assistant/frontend/pull/2764))
+- Bump vite from 8.1.5 to 8.3.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2766](https://github.com/music-assistant/frontend/pull/2766))
+- Bump vue-tsc from 3.3.7 to 3.3.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2768](https://github.com/music-assistant/frontend/pull/2768))
+- Bump zod from 4.5.4 to 4.6.2 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2765](https://github.com/music-assistant/frontend/pull/2765))
+
+### 🧰 Maintenance and dependency bumps
+
+- Add tests for Home Assistant ingress sign-in (by @marcelveldt in #6367)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @RyanAtTanagra, @balloob, @dmoo500, @fontsource, @jdaberkow, @marcelveldt, @pierosavi, @scure, @stvncode, @vitest, @vue
+
+
 # [2.11.0.dev2026091503] - 15.09.2026
 
 ## 📦 Nightly Release
@@ -113,54 +165,3 @@ _Changes since [2.11.0.dev2026091303](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @balloob, @marcelveldt, @stvncode
-
-
-# [2.11.0.dev2026091303] - 13.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091203)_
-
-### 🚀 Features and enhancements
-
-- Let members pick who to share a music source with (by @marcelveldt in #6284)
-- Personal Music Assistant playlists: private by default, shareable with other members (by @marcelveldt in #6285)
-- Shuffle and repeat now work for Spotify Connect and other sources playing on Sonos (by @marcelveldt in #6292)
-- Show the Home Assistant system account as a protected system user (by @marcelveldt in #6296)
-- Play through your own account of a service, never through someone else's (by @marcelveldt in #6297)
-- Let admins create their own user roles (by @marcelveldt in #6299)
-- Let everyone play AI Radio stations (by @marcelveldt in #6301)
-
-### 🐛 Bugfixes
-
-- Fix ListenBrainz scrobbler blocking startup while validating its token (by @marcelveldt in #6289)
-- Make AmpliPi setup aware of controllers that are already configured (by @mcaulifn in #6293)
-- fix issue with forwarded hls substream urls (by @jfeil in #6295)
-- Stop Sonos speakers logging an error on every queue change (by @marcelveldt in #6302)
-- Ask to re-authenticate Last.fm when its login stops working (by @marcelveldt in #6303)
-
-### 🎨 Frontend Changes
-
-- Ask before removing a music source from the list (by @marcelveldt in [#2738](https://github.com/music-assistant/frontend/pull/2738))
-- Reset scroll position on route change (by @pierosavi in [#2722](https://github.com/music-assistant/frontend/pull/2722))
-- Share Music Assistant playlists with other members (by @marcelveldt in [#2731](https://github.com/music-assistant/frontend/pull/2731))
-- Guide new admins through setup with an onboarding wizard (by @marcelveldt in [#2733](https://github.com/music-assistant/frontend/pull/2733))
-- Show the Home Assistant system account in user management (by @marcelveldt in [#2730](https://github.com/music-assistant/frontend/pull/2730))
-- Let members pick who to share a music source with (by @marcelveldt in [#2727](https://github.com/music-assistant/frontend/pull/2727))
-- New look for the artist page with customizable rows (by @stvncode in [#2720](https://github.com/music-assistant/frontend/pull/2720))
-- Clearer sharing hints for playlists without an owner (by @marcelveldt in [#2742](https://github.com/music-assistant/frontend/pull/2742))
-- Show each user only the actions their role allows (by @marcelveldt in [#2736](https://github.com/music-assistant/frontend/pull/2736))
-- Fix outdated auto-release workflow comments (by @marcelveldt in [#2741](https://github.com/music-assistant/frontend/pull/2741))
-- Fix duplicate error message when a profile update fails (by @marcelveldt in [#2739](https://github.com/music-assistant/frontend/pull/2739))
-- Clearer wording for the home page warning (by @marcelveldt in [#2734](https://github.com/music-assistant/frontend/pull/2734))
-- Spot and prevent music sources that nobody can use (by @marcelveldt in [#2735](https://github.com/music-assistant/frontend/pull/2735))
-- Clearer wording for music source sharing (by @marcelveldt in [#2726](https://github.com/music-assistant/frontend/pull/2726))
-- Say "music source" and "plugin" instead of "provider" in settings (by @marcelveldt in [#2723](https://github.com/music-assistant/frontend/pull/2723))
-- Bump vitest from 4.1.10 to 4.1.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2713](https://github.com/music-assistant/frontend/pull/2713))
-- Show the server's reason when saving a user fails (by @marcelveldt in [#2724](https://github.com/music-assistant/frontend/pull/2724))
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@jfeil, @marcelveldt, @mcaulifn, @pierosavi, @stvncode
