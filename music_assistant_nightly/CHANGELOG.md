@@ -1,3 +1,47 @@
+# [2.11.0.dev2026091703] - 17.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091603](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091603)_
+
+### 🚀 Features and enhancements
+
+- Implement Apple Music external ID lookup (ISRC/UPC) (by @dmoo500 in #5353)
+- Let the sample rates setting apply to Sonos players (by @RyanAtTanagra in #6356)
+- Add external id lookup to Qobuz provider (by @teancom in #6357)
+- Report the stream server address over the API (by @marcelveldt in #6370)
+
+### 🐛 Bugfixes
+
+- Properly surface "Other versions" of an album from Youtube Music (by @NasaGeek in #6159)
+- Keep the duplicate track walk from freezing the library database (by @OzGav in #6236)
+- Ensure that the in-library view doesn't "lose" media items during a socket update in Audiobookshelf (by @fmunkes in #6363)
+- Return HTTP 400 instead of 500 for a non-JSON login request body (by @MarvinSchenkel in #6371)
+- Treat YouTube Music as a realtime source (by @MarvinSchenkel in #6373)
+
+### 🎨 Frontend Changes
+
+- Give the add-provider dialog more room (by @marcelveldt in [#2788](https://github.com/music-assistant/frontend/pull/2788))
+- Explain and check the server addresses in the setup wizard (by @marcelveldt in [#2783](https://github.com/music-assistant/frontend/pull/2783))
+- Show onboarding as a pop-up and fix moving between steps (by @marcelveldt in [#2782](https://github.com/music-assistant/frontend/pull/2782))
+- Clearer onboarding wizard wording and a recommended first step (by @marcelveldt in [#2781](https://github.com/music-assistant/frontend/pull/2781))
+- Show the source name in audio details when a music source isn't shared (by @marcelveldt in [#2784](https://github.com/music-assistant/frontend/pull/2784))
+- Stop the onboarding tests timing out when the suite is busy (by @marcelveldt in [#2787](https://github.com/music-assistant/frontend/pull/2787))
+- Use one check for whether a plugin is loaded (by @marcelveldt in [#2785](https://github.com/music-assistant/frontend/pull/2785))
+- Catch mistaken writes to state the app calculates itself (by @marcelveldt in [#2786](https://github.com/music-assistant/frontend/pull/2786))
+- Sharing options say users instead of members (by @marcelveldt in [#2780](https://github.com/music-assistant/frontend/pull/2780))
+
+### 🧰 Maintenance and dependency bumps
+
+- Announce a loaded provider only after its commands are registered (by @marcelveldt in #6375)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @NasaGeek, @OzGav, @RyanAtTanagra, @dmoo500, @fmunkes, @marcelveldt, @teancom
+
+
 # [2.11.0.dev2026091603] - 16.09.2026
 
 ## 📦 Nightly Release
@@ -106,62 +150,3 @@ _Changes since [2.11.0.dev2026091403](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @CodeCommander, @MarvinSchenkel, @OzGav, @balloob, @chrisuthe, @marcelveldt, @stvncode
-
-
-# [2.11.0.dev2026091403] - 14.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091303)_
-
-### 🚀 Features and enhancements
-
-- Control shuffle and repeat for any service playing on Sonos (by @marcelveldt in #6304)
-
-### 🐛 Bugfixes
-
-- Stop a hostname in the Published IP address setting from breaking playback (by @marcelveldt in #6305)
-- Fix Squeezelite players sometimes playing static instead of music (by @marcelveldt in #6311)
-- Remove a playlist from the list of users who lose access to it (by @marcelveldt in #6314)
-- Fix Squeezelite players going silent when switching tracks quickly (by @marcelveldt in #6316)
-- Import deferred provider modules off the event loop (by @balloob in #6333)
-- Retry Wikipedia requests that hit a rate limit or an overloaded backend (by @balloob in #6335)
-
-### 🎨 Frontend Changes
-
-- Welcome new household members with their own onboarding (by @marcelveldt in [#2750](https://github.com/music-assistant/frontend/pull/2750))
-- Make the action icons in the item header keyboard accessible (by @marcelveldt in [#2748](https://github.com/music-assistant/frontend/pull/2748))
-- Replace the last browser popups with the app's own dialogs (by @stvncode in [#2746](https://github.com/music-assistant/frontend/pull/2746))
-- Add server settings and household members to the onboarding wizard (by @marcelveldt in [#2740](https://github.com/music-assistant/frontend/pull/2740))
-- Pick which sources the search box searches (by @stvncode in [#2745](https://github.com/music-assistant/frontend/pull/2745))
-- Create your own user roles in user management (by @marcelveldt in [#2732](https://github.com/music-assistant/frontend/pull/2732))
-- Clearer labels on the artist page (by @stvncode in [#2744](https://github.com/music-assistant/frontend/pull/2744))
-- Say "music source" instead of "provider" outside the settings screens (by @marcelveldt in [#2751](https://github.com/music-assistant/frontend/pull/2751))
-- Translate the genre table's selection count (by @marcelveldt in [#2753](https://github.com/music-assistant/frontend/pull/2753))
-- Update playlist listing comment to match server behaviour (by @marcelveldt in [#2752](https://github.com/music-assistant/frontend/pull/2752))
-- Use the built-in button spinner in four more dialogs (by @marcelveldt in [#2749](https://github.com/music-assistant/frontend/pull/2749))
-- Remove more unused translation keys and translate the genre table page counter (by @marcelveldt in [#2747](https://github.com/music-assistant/frontend/pull/2747))
-- Bump baseline-browser-mapping from 2.10.38 to 2.11.22 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2725](https://github.com/music-assistant/frontend/pull/2725))
-- Show a spinner on buttons while they are busy (by @marcelveldt in [#2743](https://github.com/music-assistant/frontend/pull/2743))
-- Remove unused provider translation keys (by @marcelveldt in [#2737](https://github.com/music-assistant/frontend/pull/2737))
-- Share the artist page's hero, row registry and editor with other detail pages (by @stvncode in [#2728](https://github.com/music-assistant/frontend/pull/2728))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Show the real reason when a music source action is refused (by @marcelveldt in #6290)
-- Refuse music source access that nobody could use (by @marcelveldt in #6300)
-- Remove the Squeezelite runtime patch for live stream buffering (by @marcelveldt in #6317)
-- Test that removing a playlist from the library checks its owner (by @marcelveldt in #6322)
-- Let members edit their own playlists (by @marcelveldt in #6323)
-- Fetch Music Assistant playlists fresh when adding them to the library (by @marcelveldt in #6328)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@balloob, @marcelveldt, @stvncode
