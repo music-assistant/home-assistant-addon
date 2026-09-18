@@ -1,3 +1,32 @@
+# [2.11.0.dev2026091803] - 18.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091703](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091703)_
+
+### 🚀 Features and enhancements
+
+- Wake sleeping Sonos portable speakers automatically (by @MarvinSchenkel in #6342)
+- Sync a Plex library as soon as Plex reports that it changed (by @RyanAtTanagra in #6354)
+
+### 🎨 Frontend Changes
+
+- Offer a short tour of the app after onboarding and from the profile menu (by @marcelveldt in [#2791](https://github.com/music-assistant/frontend/pull/2791))
+- Show the music sources shared with you in Settings and tidy up user management (by @marcelveldt in [#2792](https://github.com/music-assistant/frontend/pull/2792))
+- Show the players already found in the setup wizard (by @marcelveldt in [#2790](https://github.com/music-assistant/frontend/pull/2790))
+- Ask new users for the standard or expert experience and split the welcome into short steps (by @marcelveldt in [#2789](https://github.com/music-assistant/frontend/pull/2789))
+
+### 🧰 Maintenance and dependency bumps
+
+- Clarify that manual button presses are needed for Spotify setup flow (by @remon1496 in #6383)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @RyanAtTanagra, @marcelveldt, @remon1496
+
+
 # [2.11.0.dev2026091703] - 17.09.2026
 
 ## 📦 Nightly Release
@@ -92,61 +121,3 @@ _Changes since [2.11.0.dev2026091503](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @RyanAtTanagra, @balloob, @dmoo500, @fontsource, @jdaberkow, @marcelveldt, @pierosavi, @scure, @stvncode, @vitest, @vue
-
-
-# [2.11.0.dev2026091503] - 15.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091403)_
-
-### 🚀 Features and enhancements
-
-- Let anyone who may share a playlist pick the members to share it with (by @marcelveldt in #6325)
-- Warn once per album folder about a missing ALBUMARTIST tag (by @balloob in #6330)
-
-### 🐛 Bugfixes
-
-- Fill in unplayable album tracks from another provider (by @OzGav in #6310)
-- Prevent ListenBrainz scrobbling from hanging when the service is unresponsive (by @marcelveldt in #6312)
-- Keep retrying YouTube Music when the PO Token server is not up yet (by @CodeCommander in #6326)
-- Close pyatv session when an AirPlay control connect or pairing is cancelled (by @balloob in #6329)
-- Log an unavailable player at debug level while polling (by @balloob in #6336)
-- Let users control their own connected client player (by @MarvinSchenkel in #6340)
-- Random library mixes now favor your least-played tracks (by @MarvinSchenkel in #6343)
-- Show Qobuz tracks played outside the library in Recently played (by @chrisuthe in #6347)
-
-### 🎨 Frontend Changes
-
-- Clearer sources and layout on the artist page (by @stvncode in [#2758](https://github.com/music-assistant/frontend/pull/2758))
-- Consistent focus style for the favorite button in item details (by @marcelveldt in [#2756](https://github.com/music-assistant/frontend/pull/2756))
-- New look for the track page with customizable rows (by @stvncode in [#2729](https://github.com/music-assistant/frontend/pull/2729))
-- Show edit errors and require write access to edit playlists (by @marcelveldt in [#2755](https://github.com/music-assistant/frontend/pull/2755))
-- Resolve a music source's name through one helper (by @marcelveldt in [#2757](https://github.com/music-assistant/frontend/pull/2757))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>13 changes</summary>
-
-- Give the playlist owner refusal its own message and drop 'household' wording (by @marcelveldt in #6315)
-- Bump modern-colorthief from 0.2.1 to 0.3.0 (by @dependabot[bot] in #6318)
-- Bump syrupy from 5.5.3 to 6.0.0 (by @dependabot[bot] in #6320)
-- Bump pyblu from 2.0.8 to 2.1.0 (by @dependabot[bot] in #6321)
-- Skip the traceback when a scanned file is unreadable (by @balloob in #6331)
-- Validate a builtin playlist id before using it as a file name (by @marcelveldt in #6338)
-- Fix auto-merge getting stuck on dependency updates that need a newer Python (by @MarvinSchenkel in #6339)
-- Fix memory build-up when a crossfade gets interrupted (by @marcelveldt in #6341)
-- Fix streams tests leaking a raised log level into other tests (by @marcelveldt in #6344)
-- Show child process counts in the diagnostics dump (by @marcelveldt in #6346)
-- Prevent moving a music source owner to a role that can't manage sources (by @marcelveldt in #6349)
-- Only allow remote URLs in the built-in provider (by @marcelveldt in #6350)
-- Reliably stop the crossfade mixer when a crossfade is interrupted (by @marcelveldt in #6352)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@CodeCommander, @MarvinSchenkel, @OzGav, @balloob, @chrisuthe, @marcelveldt, @stvncode
