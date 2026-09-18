@@ -1,3 +1,47 @@
+# [2.10.4] - 18.09.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.3](https://github.com/music-assistant/server/releases/tag/2.10.3)_
+
+### 🚀 Features and enhancements
+
+- Let the sample rates setting apply to Sonos players (by @RyanAtTanagra in #6356)
+
+### 🐛 Bugfixes
+
+- Keep provider item lookups scoped to their own media type (by @jdaberkow in #6203)
+- Keep the duplicate track walk from freezing the library database (by @OzGav in #6236)
+- Stop a hostname in the Published IP address setting from breaking playback (by @marcelveldt in #6305)
+- Fill in unplayable album tracks from another provider (by @OzGav in #6310)
+- Fix Squeezelite players sometimes playing static instead of music (by @marcelveldt in #6311)
+- Fix Squeezelite players going silent when switching tracks quickly (by @marcelveldt in #6316)
+- Keep retrying YouTube Music when the PO Token server is not up yet (by @CodeCommander in #6326)
+- Log an unavailable player at debug level while polling (by @balloob in #6336)
+- Let users control their own connected client player (by @MarvinSchenkel in #6340)
+- Show Qobuz tracks played outside the library in Recently played (by @chrisuthe in #6347)
+- Drop provider mappings for items the provider no longer has (by @RyanAtTanagra in #6355)
+- Fix library artists and albums picking up an invalid provider link (by @marcelveldt in #6362)
+- Ensure that the in-library view doesn't "lose" media items during a socket update in Audiobookshelf (by @fmunkes in #6363)
+- Return HTTP 400 instead of 500 for a non-JSON login request body (by @MarvinSchenkel in #6371)
+- Treat YouTube Music as a realtime source (by @MarvinSchenkel in #6373)
+
+### Other Changes
+
+- Fix library artists and albums picking up an invalid provider link (by @marcelveldt in #6366)
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix memory build-up when a crossfade gets interrupted (by @marcelveldt in #6341)
+- Clarify that manual button presses are needed for Spotify setup flow (by @remon1496 in #6383)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@CodeCommander, @MarvinSchenkel, @OzGav, @RyanAtTanagra, @balloob, @chrisuthe, @fmunkes, @jdaberkow, @marcelveldt, @remon1496
+
+
 # [2.10.3] - 11.09.2026
 
 ## 📦 Stable Release
@@ -118,81 +162,3 @@ _Changes since [2.10.1](https://github.com/music-assistant/server/releases/tag/2
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @R3inoudR, @aauren, @anthonws, @chrisuthe, @jdaberkow, @jozefKruszynski, @kieranhogg, @marcelveldt, @meiser79
-
-
-# [2.10.1] - 29.08.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.0](https://github.com/music-assistant/server/releases/tag/2.10.0)_
-
-### 🚀 Features and enhancements
-
-- Add bluetooth audio constants (by @mzellho in #6052)
-- Make Sendspin on Cast devices opt-in and mark it experimental (by @marcelveldt in #6081)
-- Let speakers with guest access play without a setup step (by @marcelveldt in #6088)
-
-### 🐛 Bugfixes
-
-- Snapcast: resume music after an announcement (by @MarvinSchenkel in #5968)
-- Keep the AirPlay connection alive when seeking (by @marcelveldt in #6050)
-- Fix an AirPlay speaker going silent when it joins a group (by @marcelveldt in #6051)
-- Stop the CLAP weights download from timing out sonic_analysis setup (by @chrisuthe in #6053)
-- Fix an AirPlay speaker going silent when two things start it at once (by @marcelveldt in #6054)
-- Stop restarting an AirPlay speaker when a seek needs a moment (by @marcelveldt in #6055)
-- Keep the queue on an audio player when a group leader drops out (by @marcelveldt in #6056)
-- Fix a speaker staying silent after its group is joined with another one (by @marcelveldt in #6057)
-- Stop AirPlay speakers in a group immediately on pause or stop (by @marcelveldt in #6058)
-- Keep an AirPlay player's streaming mode under the user's control (by @marcelveldt in #6059)
-- Make seeking forward in a slow source fast (by @marcelveldt in #6060)
-- Add a 24-bit audio toggle for AirPlay players (by @marcelveldt in #6061)
-- Fix a group member never re-joining after it drops off the network (by @marcelveldt in #6062)
-- Fix a Spotify audiobook stopping when you seek to another chapter (by @marcelveldt in #6063)
-- Fix Spotify not loading after updating to 2.10 (by @kiegsgroot in #6065)
-- Fix the Apple TV progress bar disappearing after a track change (by @marcelveldt in #6067)
-- Fix YouTube Music search finding nothing when the language is not English (by @marcelveldt in #6068)
-- Fix grouping being unavailable while Spotify Connect plays (by @marcelveldt in #6070)
-- Stop the music when you power off a speaker (by @marcelveldt in #6074)
-- Stop random music playing after a notification clip (by @marcelveldt in #6075)
-- Fix AirPlay player hanging when a seek fails to load its next stream (by @marcelveldt in #6076)
-- Stop the music when a speaker is powered off outside Music Assistant (by @marcelveldt in #6077)
-- Bump aioaudiobookshelf to 0.1.25 (by @fmunkes in #6078)
-- Stop the music when a group dissolves around its leader (by @marcelveldt in #6083)
-- Fix Spotify Connect group volume starting at 100% (by @OzGav in #6087)
-- Decode percent-encoded usernames in Spotify account match checks (by @mescon in #6089)
-
-### 🎨 Frontend Changes
-
-- Scope audio sources in Browse to the selected player (by @marcelveldt in [#2660](https://github.com/music-assistant/frontend/pull/2660))
-- Fix the mobile player blur on Chromium browsers (by @marcelveldt in [#2662](https://github.com/music-assistant/frontend/pull/2662))
-- One shared code input for remote ID and pairing codes (by @marcelveldt in [#2661](https://github.com/music-assistant/frontend/pull/2661))
-- Fix loading spinners showing up too small (by @marcelveldt in [#2669](https://github.com/music-assistant/frontend/pull/2669))
-- Check the Python package builds in CI (by @marcelveldt in [#2668](https://github.com/music-assistant/frontend/pull/2668))
-- Silence the setuptools warning about the assets directory (by @marcelveldt in [#2667](https://github.com/music-assistant/frontend/pull/2667))
-- Clean up the Python packaging config (by @marcelveldt in [#2666](https://github.com/music-assistant/frontend/pull/2666))
-- Remove the unused VS Code workspace file (by @marcelveldt in [#2665](https://github.com/music-assistant/frontend/pull/2665))
-- Remove the unused webhint config file (by @marcelveldt in [#2664](https://github.com/music-assistant/frontend/pull/2664))
-- Remove the unused browser targets config file (by @marcelveldt in [#2663](https://github.com/music-assistant/frontend/pull/2663))
-- Tidy up the setup flow dialog (by @marcelveldt in [#2673](https://github.com/music-assistant/frontend/pull/2673))
-- Keep artwork whose provider is no longer loaded (by @ChrisB85 in [#2670](https://github.com/music-assistant/frontend/pull/2670))
-- Add a Copilot review instructions shard for frontend PRs (by @chrisuthe in [#2672](https://github.com/music-assistant/frontend/pull/2672))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Keep a live source on its player when moving it to another one fails (by @marcelveldt in #6045)
-- Keep translation syncs and backport PRs out of the release notes (by @marcelveldt in #6048)
-- Update airplay-cli to v0.5.3 (by @musicassistant-bot[bot] in #6071)
-- Tidy up the source lookup in the seek command (by @marcelveldt in #6072)
-- Keep a stop from cutting off playback that already restarted (by @marcelveldt in #6082)
-- Detach a stereo pair from its group when it is powered off (by @marcelveldt in #6084)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@ChrisB85, @MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @kiegsgroot, @marcelveldt, @mescon, @mzellho
