@@ -1,3 +1,40 @@
+# [2.11.0.dev2026092003] - 20.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026091803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091803)_
+
+### 🚀 Features and enhancements
+
+- Register Plex Connect players on plex.tv so mobile Plexamp apps can discover them (by @markjohnson303 in #4570)
+- Serve the app on the first-time setup page (by @marcelveldt in #6403)
+
+### 🐛 Bugfixes
+
+- Fix OpenSubsonic credential preservation during reconfiguration (by @teancom in #6376)
+- Stop the audio analysis background scan from spawning a task per track (by @balloobbot in #6384)
+- Update py-opensonic to 10.4.1 (by @khers in #6388)
+- Fix announcements on a speaker group playing out of sync (by @marcelveldt in #6392)
+- Fix shuffle/repeat failing on players playing a dynamic mix (by @marcelveldt in #6404)
+
+### 🎨 Frontend Changes
+
+- Tidy up the background tasks card view (by @marcelveldt in [#2795](https://github.com/music-assistant/frontend/pull/2795))
+- Remove dead playMenuShown store field (by @marcelveldt in [#2794](https://github.com/music-assistant/frontend/pull/2794))
+- Tidy up the music sources settings page (by @marcelveldt in [#2793](https://github.com/music-assistant/frontend/pull/2793))
+- Create the first admin account inside the setup wizard (by @marcelveldt in [#2799](https://github.com/music-assistant/frontend/pull/2799))
+- Show setting help in a popover next to the field (by @marcelveldt in [#2796](https://github.com/music-assistant/frontend/pull/2796))
+- Tidy up the background tasks list view (by @marcelveldt in [#2797](https://github.com/music-assistant/frontend/pull/2797))
+- Tidy up the provider name lookup (by @marcelveldt in [#2798](https://github.com/music-assistant/frontend/pull/2798))
+- Improve Player Group UX clarity (by @trisweb in [#2695](https://github.com/music-assistant/frontend/pull/2695))
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@balloobbot, @khers, @marcelveldt, @markjohnson303, @teancom, @trisweb
+
+
 # [2.11.0.dev2026091803] - 18.09.2026
 
 ## 📦 Nightly Release
@@ -69,55 +106,3 @@ _Changes since [2.11.0.dev2026091603](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @NasaGeek, @OzGav, @RyanAtTanagra, @dmoo500, @fmunkes, @marcelveldt, @teancom
-
-
-# [2.11.0.dev2026091603] - 16.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091503)_
-
-### 🚀 Features and enhancements
-
-- Implement Spotify external ID lookup (ISRC/UPC) (by @dmoo500 in #5356)
-- Load Plex library metadata in batches instead of one item at a time (by @RyanAtTanagra in #6353)
-
-### 🐛 Bugfixes
-
-- Keep provider item lookups scoped to their own media type (by @jdaberkow in #6203)
-- Fix Pandora album pages failing to open (by @OzGav in #6308)
-- Hold back every caller while a provider rate limit is active (by @balloob in #6332)
-- Keep one music provider from breaking every version lookup (by @stvncode in #6351)
-- Drop provider mappings for items the provider no longer has (by @RyanAtTanagra in #6355)
-- Fix library artists and albums picking up an invalid provider link (by @marcelveldt in #6362)
-
-### 🎨 Frontend Changes
-
-- Gray accents on the now playing screen (by @MarvinSchenkel in [#2762](https://github.com/music-assistant/frontend/pull/2762))
-- Invite members to connect their own music accounts (by @marcelveldt in [#2773](https://github.com/music-assistant/frontend/pull/2773))
-- New look for the album page (by @stvncode in [#2760](https://github.com/music-assistant/frontend/pull/2760))
-- Show Party, AI Radio and the visualizer to guests (by @marcelveldt in [#2777](https://github.com/music-assistant/frontend/pull/2777))
-- Show radio stream artwork in the Party dashboard (by @pierosavi in [#2712](https://github.com/music-assistant/frontend/pull/2712))
-- Space a source's icon apart from its name (by @stvncode in [#2774](https://github.com/music-assistant/frontend/pull/2774))
-- Report and undo a failed music source rename (by @marcelveldt in [#2772](https://github.com/music-assistant/frontend/pull/2772))
-- Simplify how the app tracks loaded plugins (by @marcelveldt in [#2779](https://github.com/music-assistant/frontend/pull/2779))
-- Show a music source's own name in the settings breadcrumb (by @marcelveldt in [#2778](https://github.com/music-assistant/frontend/pull/2778))
-- Fix tests (by @pierosavi in [#2776](https://github.com/music-assistant/frontend/pull/2776))
-- Bump @scure/base from 2.2.0 to 2.4.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2767](https://github.com/music-assistant/frontend/pull/2767))
-- Bump @vitest/ui from 4.1.10 to 5.0.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2769](https://github.com/music-assistant/frontend/pull/2769))
-- Bump vite-plugin-webfont-dl from 3.12.0 to 3.13.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2770](https://github.com/music-assistant/frontend/pull/2770))
-- Bump @vue/test-utils from 2.4.11 to 2.5.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2771](https://github.com/music-assistant/frontend/pull/2771))
-- Bump @fontsource/roboto from 5.2.10 to 5.3.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2764](https://github.com/music-assistant/frontend/pull/2764))
-- Bump vite from 8.1.5 to 8.3.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2766](https://github.com/music-assistant/frontend/pull/2766))
-- Bump vue-tsc from 3.3.7 to 3.3.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2768](https://github.com/music-assistant/frontend/pull/2768))
-- Bump zod from 4.5.4 to 4.6.2 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2765](https://github.com/music-assistant/frontend/pull/2765))
-
-### 🧰 Maintenance and dependency bumps
-
-- Add tests for Home Assistant ingress sign-in (by @marcelveldt in #6367)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @RyanAtTanagra, @balloob, @dmoo500, @fontsource, @jdaberkow, @marcelveldt, @pierosavi, @scure, @stvncode, @vitest, @vue
