@@ -1,3 +1,44 @@
+# [2.11.0.dev2026092103] - 21.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092003)_
+
+### 🚀 Features and enhancements
+
+- Apply the announcement volume consistently on grouped speakers (by @marcelveldt in #6412)
+
+### 🐛 Bugfixes
+
+- Move the ibroadcast item mapping to strings only (by @robsonke in #6405)
+- Fix a crash caused by a broken leftover player setting (by @marcelveldt in #6410)
+- Fix false permission error opening an artist page (by @marcelveldt in #6411)
+
+### 🎨 Frontend Changes
+
+- Share the remote access ID grouping (by @marcelveldt in [#2806](https://github.com/music-assistant/frontend/pull/2806))
+- Reuse shared provider-name lookup in the settings breadcrumb (by @marcelveldt in [#2805](https://github.com/music-assistant/frontend/pull/2805))
+- Fix inert z-index classes on dialogs, popovers and selects (by @marcelveldt in [#2803](https://github.com/music-assistant/frontend/pull/2803))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Bump docker/setup-buildx-action from 4.3.0 to 4.4.0 (by @dependabot[bot] in #6389)
+- Bump docker/build-push-action from 7.3.0 to 7.4.0 (by @dependabot[bot] in #6390)
+- Improve Sonos cloud-queue debug logging (by @marcelveldt in #6414)
+- Update the provider manifest table in the developer docs (by @marcelveldt in #6415)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @robsonke
+
+
 # [2.11.0.dev2026092003] - 20.09.2026
 
 ## 📦 Nightly Release
@@ -62,47 +103,3 @@ _Changes since [2.11.0.dev2026091703](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @RyanAtTanagra, @marcelveldt, @remon1496
-
-
-# [2.11.0.dev2026091703] - 17.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091603](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091603)_
-
-### 🚀 Features and enhancements
-
-- Implement Apple Music external ID lookup (ISRC/UPC) (by @dmoo500 in #5353)
-- Let the sample rates setting apply to Sonos players (by @RyanAtTanagra in #6356)
-- Add external id lookup to Qobuz provider (by @teancom in #6357)
-- Report the stream server address over the API (by @marcelveldt in #6370)
-
-### 🐛 Bugfixes
-
-- Properly surface "Other versions" of an album from Youtube Music (by @NasaGeek in #6159)
-- Keep the duplicate track walk from freezing the library database (by @OzGav in #6236)
-- Ensure that the in-library view doesn't "lose" media items during a socket update in Audiobookshelf (by @fmunkes in #6363)
-- Return HTTP 400 instead of 500 for a non-JSON login request body (by @MarvinSchenkel in #6371)
-- Treat YouTube Music as a realtime source (by @MarvinSchenkel in #6373)
-
-### 🎨 Frontend Changes
-
-- Give the add-provider dialog more room (by @marcelveldt in [#2788](https://github.com/music-assistant/frontend/pull/2788))
-- Explain and check the server addresses in the setup wizard (by @marcelveldt in [#2783](https://github.com/music-assistant/frontend/pull/2783))
-- Show onboarding as a pop-up and fix moving between steps (by @marcelveldt in [#2782](https://github.com/music-assistant/frontend/pull/2782))
-- Clearer onboarding wizard wording and a recommended first step (by @marcelveldt in [#2781](https://github.com/music-assistant/frontend/pull/2781))
-- Show the source name in audio details when a music source isn't shared (by @marcelveldt in [#2784](https://github.com/music-assistant/frontend/pull/2784))
-- Stop the onboarding tests timing out when the suite is busy (by @marcelveldt in [#2787](https://github.com/music-assistant/frontend/pull/2787))
-- Use one check for whether a plugin is loaded (by @marcelveldt in [#2785](https://github.com/music-assistant/frontend/pull/2785))
-- Catch mistaken writes to state the app calculates itself (by @marcelveldt in [#2786](https://github.com/music-assistant/frontend/pull/2786))
-- Sharing options say users instead of members (by @marcelveldt in [#2780](https://github.com/music-assistant/frontend/pull/2780))
-
-### 🧰 Maintenance and dependency bumps
-
-- Announce a loaded provider only after its commands are registered (by @marcelveldt in #6375)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @NasaGeek, @OzGav, @RyanAtTanagra, @dmoo500, @fmunkes, @marcelveldt, @teancom
