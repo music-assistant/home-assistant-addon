@@ -1,3 +1,32 @@
+# [2.11.0.dev2026092203] - 22.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092103)_
+
+### 🐛 Bugfixes
+
+- Log an error when Bandcamp returns invalid JSON (by @teancom in #6417)
+
+### 🎨 Frontend Changes
+
+- Show listeners a fitting AI Radio empty state (by @marcelveldt in [#2810](https://github.com/music-assistant/frontend/pull/2810))
+- Share the player rename helper with the rename dialog (by @marcelveldt in [#2808](https://github.com/music-assistant/frontend/pull/2808))
+- Tidy up redundant loading flags on dialog buttons (by @marcelveldt in [#2807](https://github.com/music-assistant/frontend/pull/2807))
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump wiim from 0.1.7 to 0.1.8 (by @dependabot[bot] in #6419)
+- Bump mashumaro from 3.20 to 3.22 (by @dependabot[bot] in #6420)
+- Bump websocket-client from 1.9.0 to 1.9.2 (by @dependabot[bot] in #6421)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @teancom
+
+
 # [2.11.0.dev2026092103] - 21.09.2026
 
 ## 📦 Nightly Release
@@ -74,32 +103,3 @@ _Changes since [2.11.0.dev2026091803](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @balloobbot, @khers, @marcelveldt, @markjohnson303, @teancom, @trisweb
-
-
-# [2.11.0.dev2026091803] - 18.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091703](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091703)_
-
-### 🚀 Features and enhancements
-
-- Wake sleeping Sonos portable speakers automatically (by @MarvinSchenkel in #6342)
-- Sync a Plex library as soon as Plex reports that it changed (by @RyanAtTanagra in #6354)
-
-### 🎨 Frontend Changes
-
-- Offer a short tour of the app after onboarding and from the profile menu (by @marcelveldt in [#2791](https://github.com/music-assistant/frontend/pull/2791))
-- Show the music sources shared with you in Settings and tidy up user management (by @marcelveldt in [#2792](https://github.com/music-assistant/frontend/pull/2792))
-- Show the players already found in the setup wizard (by @marcelveldt in [#2790](https://github.com/music-assistant/frontend/pull/2790))
-- Ask new users for the standard or expert experience and split the welcome into short steps (by @marcelveldt in [#2789](https://github.com/music-assistant/frontend/pull/2789))
-
-### 🧰 Maintenance and dependency bumps
-
-- Clarify that manual button presses are needed for Spotify setup flow (by @remon1496 in #6383)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @RyanAtTanagra, @marcelveldt, @remon1496
