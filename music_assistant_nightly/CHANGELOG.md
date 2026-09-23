@@ -1,3 +1,33 @@
+# [2.11.0.dev2026092303] - 23.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092203)_
+
+### 🚀 Features and enhancements
+
+- Use the loudness provided by Tidal (by @StollD in #6406)
+
+### 🐛 Bugfixes
+
+- Fix YTMusic album resolution crash on null audioPlaylistId (by @frosty-geek in #6435)
+
+### 🎨 Frontend Changes
+
+- Stop the add-provider dialog fetching while hidden (by @marcelveldt in [#2822](https://github.com/music-assistant/frontend/pull/2822))
+- Announce list rows to screen readers in settings lists (by @marcelveldt in [#2821](https://github.com/music-assistant/frontend/pull/2821))
+
+### 🧰 Maintenance and dependency bumps
+
+- Add test coverage for Ingress username-match sign-in (by @marcelveldt in #6437)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@StollD, @frosty-geek, @marcelveldt
+
+
 # [2.11.0.dev2026092203] - 22.09.2026
 
 ## 📦 Nightly Release
@@ -66,40 +96,3 @@ _Changes since [2.11.0.dev2026092003](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @robsonke
-
-
-# [2.11.0.dev2026092003] - 20.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026091803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026091803)_
-
-### 🚀 Features and enhancements
-
-- Register Plex Connect players on plex.tv so mobile Plexamp apps can discover them (by @markjohnson303 in #4570)
-- Serve the app on the first-time setup page (by @marcelveldt in #6403)
-
-### 🐛 Bugfixes
-
-- Fix OpenSubsonic credential preservation during reconfiguration (by @teancom in #6376)
-- Stop the audio analysis background scan from spawning a task per track (by @balloobbot in #6384)
-- Update py-opensonic to 10.4.1 (by @khers in #6388)
-- Fix announcements on a speaker group playing out of sync (by @marcelveldt in #6392)
-- Fix shuffle/repeat failing on players playing a dynamic mix (by @marcelveldt in #6404)
-
-### 🎨 Frontend Changes
-
-- Tidy up the background tasks card view (by @marcelveldt in [#2795](https://github.com/music-assistant/frontend/pull/2795))
-- Remove dead playMenuShown store field (by @marcelveldt in [#2794](https://github.com/music-assistant/frontend/pull/2794))
-- Tidy up the music sources settings page (by @marcelveldt in [#2793](https://github.com/music-assistant/frontend/pull/2793))
-- Create the first admin account inside the setup wizard (by @marcelveldt in [#2799](https://github.com/music-assistant/frontend/pull/2799))
-- Show setting help in a popover next to the field (by @marcelveldt in [#2796](https://github.com/music-assistant/frontend/pull/2796))
-- Tidy up the background tasks list view (by @marcelveldt in [#2797](https://github.com/music-assistant/frontend/pull/2797))
-- Tidy up the provider name lookup (by @marcelveldt in [#2798](https://github.com/music-assistant/frontend/pull/2798))
-- Improve Player Group UX clarity (by @trisweb in [#2695](https://github.com/music-assistant/frontend/pull/2695))
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@balloobbot, @khers, @marcelveldt, @markjohnson303, @teancom, @trisweb
