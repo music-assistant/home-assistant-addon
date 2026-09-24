@@ -1,3 +1,32 @@
+# [2.11.0.dev2026092403] - 24.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092303)_
+
+### 🚀 Features and enhancements
+
+- Nicovideo: show the MFA code as separate digit boxes (by @marcelveldt in #6444)
+
+### 🐛 Bugfixes
+
+- Improved syncing in case it fails halfway on a single item (by @robsonke in #6418)
+- Keep the stale mapping pass from emptying a library on mismatched ids (by @RyanAtTanagra in #6427)
+- Fix AirPlay speaker ignoring stop after a failed playback start (by @marcelveldt in #6439)
+- Show an error when your ListenBrainz token stops working (by @marcelveldt in #6447)
+
+### 🧰 Maintenance and dependency bumps
+
+- Add support for authors/ narrators as artists and collections to the test provider (by @fmunkes in #6396)
+- Deduplicate the streams controller test setup helper (by @marcelveldt in #6442)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@RyanAtTanagra, @fmunkes, @marcelveldt, @robsonke
+
+
 # [2.11.0.dev2026092303] - 23.09.2026
 
 ## 📦 Nightly Release
@@ -55,44 +84,3 @@ _Changes since [2.11.0.dev2026092103](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt, @teancom
-
-
-# [2.11.0.dev2026092103] - 21.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026092003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092003)_
-
-### 🚀 Features and enhancements
-
-- Apply the announcement volume consistently on grouped speakers (by @marcelveldt in #6412)
-
-### 🐛 Bugfixes
-
-- Move the ibroadcast item mapping to strings only (by @robsonke in #6405)
-- Fix a crash caused by a broken leftover player setting (by @marcelveldt in #6410)
-- Fix false permission error opening an artist page (by @marcelveldt in #6411)
-
-### 🎨 Frontend Changes
-
-- Share the remote access ID grouping (by @marcelveldt in [#2806](https://github.com/music-assistant/frontend/pull/2806))
-- Reuse shared provider-name lookup in the settings breadcrumb (by @marcelveldt in [#2805](https://github.com/music-assistant/frontend/pull/2805))
-- Fix inert z-index classes on dialogs, popovers and selects (by @marcelveldt in [#2803](https://github.com/music-assistant/frontend/pull/2803))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Bump docker/setup-buildx-action from 4.3.0 to 4.4.0 (by @dependabot[bot] in #6389)
-- Bump docker/build-push-action from 7.3.0 to 7.4.0 (by @dependabot[bot] in #6390)
-- Improve Sonos cloud-queue debug logging (by @marcelveldt in #6414)
-- Update the provider manifest table in the developer docs (by @marcelveldt in #6415)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@marcelveldt, @robsonke
