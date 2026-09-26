@@ -1,3 +1,30 @@
+# [2.11.0.dev2026092603] - 26.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092503)_
+
+### 🐛 Bugfixes
+
+- Stop a group's queue when it is powered off outside Music Assistant (by @marcelveldt in #6452)
+- Keep VBAN receiver open while sender is idle (by @sprocket-9 in #6456)
+
+### 🎨 Frontend Changes
+
+- Fix icon sizes ignored inside buttons (by @marcelveldt in [#2826](https://github.com/music-assistant/frontend/pull/2826))
+
+### 🧰 Maintenance and dependency bumps
+
+- Dedupe virtual-player cleanup retry loops (by @marcelveldt in #6460)
+- Deduplicate webserver test scaffolding (by @marcelveldt in #6464)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@marcelveldt, @sprocket-9
+
+
 # [2.11.0.dev2026092503] - 25.09.2026
 
 ## 📦 Nightly Release
@@ -47,33 +74,3 @@ _Changes since [2.11.0.dev2026092303](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @RyanAtTanagra, @fmunkes, @marcelveldt, @robsonke
-
-
-# [2.11.0.dev2026092303] - 23.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026092203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092203)_
-
-### 🚀 Features and enhancements
-
-- Use the loudness provided by Tidal (by @StollD in #6406)
-
-### 🐛 Bugfixes
-
-- Fix YTMusic album resolution crash on null audioPlaylistId (by @frosty-geek in #6435)
-
-### 🎨 Frontend Changes
-
-- Stop the add-provider dialog fetching while hidden (by @marcelveldt in [#2822](https://github.com/music-assistant/frontend/pull/2822))
-- Announce list rows to screen readers in settings lists (by @marcelveldt in [#2821](https://github.com/music-assistant/frontend/pull/2821))
-
-### 🧰 Maintenance and dependency bumps
-
-- Add test coverage for Ingress username-match sign-in (by @marcelveldt in #6437)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@StollD, @frosty-geek, @marcelveldt
