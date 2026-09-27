@@ -1,3 +1,40 @@
+# [2.11.0.dev2026092703] - 27.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092603](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092603)_
+
+### 🐛 Bugfixes
+
+- Scope favorite and library writes to the sources the acting user may write to (by @pcc0x in #6212)
+- Fix resume position after fallback announcements (by @sickkick in #6429)
+- Skip CUE sheets with a missing audio file when browsing (by @OzGav in #6463)
+- Break up a lead speaker's group when it's powered off from Music Assistant (by @marcelveldt in #6467)
+- Allow a speaker to rejoin a group right after the group broke up (by @marcelveldt in #6473)
+- Fix a speaker group going silent when one room is powered off while another joins (by @marcelveldt in #6474)
+- Share one player-access check across the core (by @marcelveldt in #6475)
+
+### 🎨 Frontend Changes
+
+- Tidy up the redesigned artist page (by @marcelveldt in [#2802](https://github.com/music-assistant/frontend/pull/2802))
+- A bigger global search that remembers your last search (by @marcelveldt in [#2800](https://github.com/music-assistant/frontend/pull/2800))
+- Add the item menu to search results (by @OzGav in [#2679](https://github.com/music-assistant/frontend/pull/2679))
+- Hide play button on non-playable search results (by @marcelveldt in [#2833](https://github.com/music-assistant/frontend/pull/2833))
+- Share one text field across the account forms (by @marcelveldt in [#2829](https://github.com/music-assistant/frontend/pull/2829))
+
+### 🧰 Maintenance and dependency bumps
+
+- Update airplay-cli to v0.5.4 (by @musicassistant-bot[bot] in #6409)
+- Tidy up the Spotify Connect soloist backend check (by @marcelveldt in #6428)
+- Tidy the native AirPlay start path after the spawn lock (by @marcelveldt in #6472)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt, @pcc0x, @sickkick
+
+
 # [2.11.0.dev2026092603] - 26.09.2026
 
 ## 📦 Nightly Release
@@ -45,32 +82,3 @@ _Changes since [2.11.0.dev2026092403](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @marcelveldt
-
-
-# [2.11.0.dev2026092403] - 24.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026092303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092303)_
-
-### 🚀 Features and enhancements
-
-- Nicovideo: show the MFA code as separate digit boxes (by @marcelveldt in #6444)
-
-### 🐛 Bugfixes
-
-- Improved syncing in case it fails halfway on a single item (by @robsonke in #6418)
-- Keep the stale mapping pass from emptying a library on mismatched ids (by @RyanAtTanagra in #6427)
-- Fix AirPlay speaker ignoring stop after a failed playback start (by @marcelveldt in #6439)
-- Show an error when your ListenBrainz token stops working (by @marcelveldt in #6447)
-
-### 🧰 Maintenance and dependency bumps
-
-- Add support for authors/ narrators as artists and collections to the test provider (by @fmunkes in #6396)
-- Deduplicate the streams controller test setup helper (by @marcelveldt in #6442)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@RyanAtTanagra, @fmunkes, @marcelveldt, @robsonke
