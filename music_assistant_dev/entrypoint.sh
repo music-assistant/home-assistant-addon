@@ -273,7 +273,8 @@ echo "✓ Dependencies installed"
 echo ""
 
 echo "Building frontend..."
-$frontend_pm build
+# The type-check exceeds Node's default heap, so give it the same headroom as the frontend CI
+NODE_OPTIONS=--max-old-space-size=6144 $frontend_pm build
 
 echo "✓ Frontend build complete"
 echo ""
