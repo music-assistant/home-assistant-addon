@@ -213,8 +213,9 @@ frontend_owner=$(echo "$frontend_ref" | cut -d'/' -f1)
 frontend_repo_name=$(echo "$frontend_ref" | cut -d'/' -f2 | cut -d'@' -f1)
 frontend_branch=$(echo "$frontend_ref" | cut -d'@' -f2)
 
-# Create temporary directory for frontend build
-frontend_dir="/tmp/frontend-build"
+# Build on disk rather than the tmpfs /tmp, so node_modules and the build don't
+# take up RAM, and pnpm can hardlink from its store on the same filesystem
+frontend_dir="/data/frontend-build"
 rm -rf "$frontend_dir"
 mkdir -p "$frontend_dir"
 
@@ -240,11 +241,6 @@ if [ ! -f "package.json" ]; then
 fi
 
 echo "Installing frontend dependencies..."
-# Try to remount /tmp with exec if it's mounted noexec
-if mount | grep -q "on /tmp.*noexec"; then
-  echo "Detected /tmp mounted with noexec, attempting to remount..."
-  mount -o remount,exec /tmp 2>/dev/null || echo "Warning: Could not remount /tmp"
-fi
 # Enable Corepack so the package manager pinned in package.json's "packageManager"
 # field (e.g. "pnpm@11.8.0") is used at the correct version. Persist Corepack's
 # download cache under /data so it isn't re-fetched on every restart.
@@ -256,25 +252,23 @@ if [ -f "pnpm-lock.yaml" ]; then
     echo "Detected pnpm project"
     # Persistent store dir so packages aren't re-downloaded on every restart.
     corepack pnpm install --frozen-lockfile --store-dir /data/.pnpm-store
-    frontend_pm="corepack pnpm"
 elif [ -f "yarn.lock" ]; then
     echo "Detected yarn project"
     # Persistent cache dir so yarn doesn't re-download packages on every restart.
     yarn config set cache-folder /data/.yarn-cache
     yarn install --frozen-lockfile --network-timeout 300000
-    frontend_pm="yarn"
 else
     echo "Detected npm project"
     npm ci
-    frontend_pm="npm run"
 fi
 
 echo "✓ Dependencies installed"
 echo ""
 
 echo "Building frontend..."
-# The type-check exceeds Node's default heap, so give it the same headroom as the frontend CI
-NODE_OPTIONS=--max-old-space-size=6144 $frontend_pm build
+# Only the bundle is needed here; skip the type-check (the frontend CI runs it),
+# it needs several GB of RAM
+./node_modules/.bin/vite build
 
 echo "✓ Frontend build complete"
 echo ""
