@@ -8,6 +8,8 @@ arch:
   - amd64
   - aarch64
 homeassistant_api: true
+hassio_api: true
+hassio_role: manager
 discovery:
   - music_assistant
 auth_api: true
