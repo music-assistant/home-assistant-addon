@@ -42,6 +42,3 @@ schema:
   server_repo: str?
   frontend_repo: str?
   safe_mode: bool
-privileged:
-  - SYS_ADMIN
-  - DAC_READ_SEARCH

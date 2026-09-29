@@ -39,6 +39,3 @@ options:
 schema:
   log_level: list(debug|info|warning|error)
   safe_mode: bool
-privileged:
-  - SYS_ADMIN
-  - DAC_READ_SEARCH
