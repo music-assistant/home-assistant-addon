@@ -1,3 +1,69 @@
+# [2.11.0.dev2026093003] - 30.09.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026092903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092903)_
+
+### 🚀 Features and enhancements
+
+- Raise the MusicBrainz rate limit to 30 requests per 10 seconds (by @MarvinSchenkel in #6445)
+- Show transcripts for podcast episodes from RSS feeds and Podcast Index (by @OzGav in #6537)
+- Deezer: ban disliked tracks and artists from recommendations (by @jdaberkow in #6542)
+- Pick the folder of a Local files source instead of typing a path (by @marcelveldt in #6548)
+- Turn SMB and NFS music sources into Local files sources (by @marcelveldt in #6560)
+- Show album type and artists in an artist's Appears on row (by @marcelveldt in #6582)
+
+### 🐛 Bugfixes
+
+- Fix Sendspin metadata during group content takeover (by @teancom in #6271)
+- Show the publish date and genres on Pocket Casts podcasts (by @OzGav in #6478)
+- Fix Plex login for users the server is shared with (by @aevans0001 in #6513)
+- Fix filesystem sync not removing deleted files with an uppercase extension (by @OzGav in #6539)
+- Fix YouTube Music album types for non-English languages (by @marcelveldt in #6552)
+- Keep DLNA players available when firmware sends a wrong Content-Length (by @MarvinSchenkel in #6557)
+- Fix YouTube Music album versions failing on a zero-height thumbnail (by @MarvinSchenkel in #6561)
+- Fix removed outputs lingering in player settings (by @marcelveldt in #6562)
+- Fix crossfades turning into hard cuts on players that buffer far ahead (by @marcelveldt in #6569)
+- Fix a stopped queue keeping a stream open at the music source (by @marcelveldt in #6573)
+- Keep playback responsive while a music provider is rate limiting (by @marcelveldt in #6575)
+- Keep a track playable when its music source has no free stream (by @marcelveldt in #6576)
+- Keep a track's other providers when its local file is deleted (by @marcelveldt in #6587)
+- Show an error when the Sendspin server fails to start (by @marcelveldt in #6588)
+
+### 🎨 Frontend Changes
+
+- Pick where your music lives: folder picker and Storage settings (by @marcelveldt in [#2860](https://github.com/music-assistant/frontend/pull/2860))
+- Open the start page after logging out (by @marcelveldt in [#2873](https://github.com/music-assistant/frontend/pull/2873))
+- Refresh artist and album page rows when the library changes (by @marcelveldt in [#2876](https://github.com/music-assistant/frontend/pull/2876))
+- Move the Storage settings under System and offer a location as music source (by @marcelveldt in [#2875](https://github.com/music-assistant/frontend/pull/2875))
+- Bump prettier from 3.8.3 to 3.9.9 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2867](https://github.com/music-assistant/frontend/pull/2867))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>11 changes</summary>
+
+- Add network shares from the Storage settings (by @marcelveldt in #6547)
+- Show what uses a storage location and why one is unavailable (by @marcelveldt in #6553)
+- Fix a test that failed at random after a library sync (by @marcelveldt in #6558)
+- Allow adding a mounted drive or share as a storage folder (by @marcelveldt in #6559)
+- Show which music sources read a storage location (by @marcelveldt in #6564)
+- Connect network shares at the start of the Home Assistant app (by @marcelveldt in #6565)
+- Update aioslimproto to 3.2.3 (by @MarvinSchenkel in #6570)
+- Keep source names up to date when a source is added or removed (by @marcelveldt in #6571)
+- Consolidate how provider links are copied to other accounts of the same service (by @marcelveldt in #6574)
+- Fix missing Local files tracks in folders named like the source folder (by @marcelveldt in #6581)
+- Remove unused playlist collage code (by @marcelveldt in #6586)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @aevans0001, @jdaberkow, @marcelveldt, @teancom
+
+
 # [2.11.0.dev2026092903] - 29.09.2026
 
 ## 📦 Nightly Release
@@ -154,40 +220,3 @@ _Changes since [2.11.0.dev2026092703](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @Simanias, @fmunkes, @kees, @marcelveldt
-
-
-# [2.11.0.dev2026092703] - 27.09.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026092603](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026092603)_
-
-### 🐛 Bugfixes
-
-- Scope favorite and library writes to the sources the acting user may write to (by @pcc0x in #6212)
-- Fix resume position after fallback announcements (by @sickkick in #6429)
-- Skip CUE sheets with a missing audio file when browsing (by @OzGav in #6463)
-- Break up a lead speaker's group when it's powered off from Music Assistant (by @marcelveldt in #6467)
-- Allow a speaker to rejoin a group right after the group broke up (by @marcelveldt in #6473)
-- Fix a speaker group going silent when one room is powered off while another joins (by @marcelveldt in #6474)
-- Share one player-access check across the core (by @marcelveldt in #6475)
-
-### 🎨 Frontend Changes
-
-- Tidy up the redesigned artist page (by @marcelveldt in [#2802](https://github.com/music-assistant/frontend/pull/2802))
-- A bigger global search that remembers your last search (by @marcelveldt in [#2800](https://github.com/music-assistant/frontend/pull/2800))
-- Add the item menu to search results (by @OzGav in [#2679](https://github.com/music-assistant/frontend/pull/2679))
-- Hide play button on non-playable search results (by @marcelveldt in [#2833](https://github.com/music-assistant/frontend/pull/2833))
-- Share one text field across the account forms (by @marcelveldt in [#2829](https://github.com/music-assistant/frontend/pull/2829))
-
-### 🧰 Maintenance and dependency bumps
-
-- Update airplay-cli to v0.5.4 (by @musicassistant-bot[bot] in #6409)
-- Tidy up the Spotify Connect soloist backend check (by @marcelveldt in #6428)
-- Tidy the native AirPlay start path after the spawn lock (by @marcelveldt in #6472)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @marcelveldt, @pcc0x, @sickkick
