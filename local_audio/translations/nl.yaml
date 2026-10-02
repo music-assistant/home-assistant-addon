@@ -1,0 +1,19 @@
+configuration:
+  name:
+    name: Spelernaam
+    description: "De naam waaronder deze speler in Music Assistant verschijnt. Laat je dit leeg, dan heet hij \"Local Audio\"."
+  log_level:
+    name: Logniveau
+    description: "Hoeveel deze speler naar zijn log schrijft. Zet het op debug terwijl je een probleem onderzoekt en zet het daarna weer terug."
+  server:
+    name: Music Assistant-server
+    description: "Laat dit leeg en de speler wacht tot hij via mDNS wordt gevonden, en dat is wat je wilt. Vul alleen een host, host:poort of ws://-URL in als de server de speler niet zelf kan vinden. Daarmee is de speler ook niet meer vindbaar. Zet hier geen wachtwoord in, want het wordt als platte tekst opgeslagen en getoond."
+  buffer_ms:
+    name: Audiobuffer
+    description: "Hoeveel audio de speler in de wachtrij houdt, in milliseconden, tussen 10 en 2000. Laat dit leeg, tenzij het geluid hapert. Een hogere waarde vangt een druk systeem op, maar je wacht dan langer als een nummer start of als je doorspoelt."
+  hook_start:
+    name: Opdracht bij start van afspelen
+    description: "Laat je dit leeg, dan wordt er niets uitgevoerd, en dat is wat je wilt, tenzij je iets moet inschakelen, zoals een versterkerrelais of een lamp. Wat je hier invult is een shell-opdracht die precies zo wordt uitgevoerd, binnen deze app, telkens wanneer een stream start. Het houdt de audio niet op, en een opdracht die mislukt geeft alleen een regel in het log, de speler stopt er niet door. De opdracht draait als root met toegang tot alles wat deze app kan bereiken, dus zet hier niets in wat je niet zelf op deze machine zou uitvoeren. Gegevens over de stream staan in de omgevingsvariabelen, onder andere SENDSPIN_EVENT. De README van de repository geeft het volledige overzicht."
+  hook_stop:
+    name: Opdracht bij stoppen van afspelen
+    description: "Hetzelfde aan het einde van een stream, om die versterker weer uit te zetten. Ook dit is een shell-opdracht die precies zo wordt uitgevoerd, binnen deze app."
