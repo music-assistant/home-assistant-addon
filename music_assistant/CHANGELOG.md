@@ -1,3 +1,113 @@
+# [2.10.5] - 02.10.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.4](https://github.com/music-assistant/server/releases/tag/2.10.4)_
+
+### 🚀 Features and enhancements
+
+- Link existing libraries to MusicBrainz in the background (by @marcelveldt in #6496)
+
+### 🐛 Bugfixes
+
+- Fix OpenSubsonic credential preservation during reconfiguration (by @teancom in #6376)
+- Stop the audio analysis background scan from spawning a task per track (by @balloobbot in #6384)
+- Update py-opensonic to 10.4.1 (by @khers in #6388)
+- Fix announcements on a speaker group playing out of sync (by @marcelveldt in #6392)
+- Remove stale author/narrator links when an audiobook is overwritten (by @fmunkes in #6397)
+- Fix shuffle/repeat failing on players playing a dynamic mix (by @marcelveldt in #6404)
+- Move the ibroadcast item mapping to strings only (by @robsonke in #6405)
+- Fix false permission error opening an artist page (by @marcelveldt in #6411)
+- Updates token management to allow PlexHome users to import their own libraries (by @romain38 in #6426)
+- Keep the stale mapping pass from emptying a library on mismatched ids (by @RyanAtTanagra in #6427)
+- Fix resume position after fallback announcements (by @sickkick in #6429)
+- Fix Snapcast volume/mute routing to idle native player when Sendspin is active (by @tortfeaser in #6432)
+- Fix YTMusic album resolution crash on null audioPlaylistId (by @frosty-geek in #6435)
+- Fix external auth consent banner being hidden by ad-blocker filters (by @lanquarden in #6443)
+- Keep one failing provider from aborting album, artist and genre playback (by @teancom in #6446)
+- Attribute synced progress to the reporting provider instance (by @fmunkes in #6450)
+- Stop a group's queue when it is powered off outside Music Assistant (by @marcelveldt in #6452)
+- Skip CUE sheets with a missing audio file when browsing (by @OzGav in #6463)
+- Reconnect radio streams that go silent before playback gives up (by @OzGav in #6466)
+- Allow a speaker to rejoin a group right after the group broke up (by @marcelveldt in #6473)
+- Fix a speaker group going silent when one room is powered off while another joins (by @marcelveldt in #6474)
+- Link ARD Audiothek episodes to their own podcast (by @OzGav in #6488)
+- Fix Spotify dropping out on Sonos after resuming near the end of a track (by @marcelveldt in #6497)
+- Keep manually linked genres when a music provider syncs (by @MarvinSchenkel in #6499)
+- Only defer the next-track preload for realtime single-stream sources (by @marcelveldt in #6500)
+- Fix an idle sync group dissolving in the middle of a member change (by @marcelveldt in #6501)
+- Stop Apple Music from adding empty albums whose songs were withdrawn from the catalog (by @MarvinSchenkel in #6502)
+- Resume audiobooks and podcast episodes at their saved position when the queue moves on (by @MarvinSchenkel in #6503)
+- Acquire the narrators from book metadata in Audiobookshelf (by @fmunkes in #6504)
+- Fix an announcement or play command on a grouped speaker locking up during a group change (by @marcelveldt in #6505)
+- Fix a play command on a synced speaker locking up during a group change (by @marcelveldt in #6510)
+- Fix Nicovideo feed artists not matching library items (by @marcelveldt in #6511)
+- Fix Plex login for users the server is shared with (by @aevans0001 in #6513)
+- Keep the library's housekeeping state when the music settings are saved (by @marcelveldt in #6514)
+- Stop Cast flow playback from skipping an extra track after pressing next (by @MarvinSchenkel in #6518)
+- Keep task schedules and run history when saving the Tasks settings (by @marcelveldt in #6522)
+- Keep a group playing when the speaker leading it is powered off (by @marcelveldt in #6525)
+- Fix static on Squeezelite sync groups when playing live sources like the AirPlay Receiver (by @MarvinSchenkel in #6529)
+- Fix external playback not tracked after a player leaves a Sendspin group (by @MarvinSchenkel in #6530)
+- Keep the WiiM queue on the right track when an event is missed (by @MarvinSchenkel in #6532)
+- Keep filling a seed pool past one unproductive radio batch (by @balloob in #6535)
+- Don't flag cleanly finished HTTP audio streams as failed (by @MarvinSchenkel in #6536)
+- Fix filesystem sync not removing deleted files with an uppercase extension (by @OzGav in #6539)
+- Fix scrobblers submitting a track twice (by @MarvinSchenkel in #6556)
+- Keep DLNA players available when firmware sends a wrong Content-Length (by @MarvinSchenkel in #6557)
+- Fix YouTube Music album versions failing on a zero-height thumbnail (by @MarvinSchenkel in #6561)
+- Fix crossfades turning into hard cuts on players that buffer far ahead (by @marcelveldt in #6569)
+- Honor HTTP proxy environment variables (by @MarvinSchenkel in #6572)
+- Fix a stopped queue keeping a stream open at the music source (by @marcelveldt in #6573)
+- Keep a track playable when its music source has no free stream (by @marcelveldt in #6576)
+- Fix a paused player keeping its music source busy for minutes (by @marcelveldt in #6577)
+- Fix Spotify app pairing not finding the device on hosts with Docker networks (by @MarvinSchenkel in #6578)
+- Show Spotify top tracks when a custom client ID is set (by @marcelveldt in #6583)
+- Fix Bandcamp requests returning an HTML challenge page instead of JSON (by @MarvinSchenkel in #6592)
+- Deezer: fix resume from other devices and a missing timeout (by @jdaberkow in #6596)
+- Resolve the current TuneIn stream url at playback time (by @MarvinSchenkel in #6606)
+- Stop playback jumping back to the first track when a player reconnects (by @marcelveldt in #6608)
+- Fix a universal player getting a new id on every restart (by @MarvinSchenkel in #6610)
+- Show Spotify new releases and genres when a custom client ID is set (by @marcelveldt in #6615)
+- Keep YouTube Music searches out of your YouTube search history (by @MarvinSchenkel in #6643)
+
+### 🎨 Frontend Changes
+
+- Use Escape for back navigation (by @teancom in [#2850](https://github.com/music-assistant/frontend/pull/2850))
+- Press Space to play or pause (by @pierosavi in [#2714](https://github.com/music-assistant/frontend/pull/2714))
+- Keep TanStack Form packages on the same version (by @marcelveldt in [#2858](https://github.com/music-assistant/frontend/pull/2858))
+- Bump vue-i18n from 11.4.10 to 11.4.12 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2819](https://github.com/music-assistant/frontend/pull/2819))
+- Bump typescript-eslint from 8.68.0 to 8.70.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2816](https://github.com/music-assistant/frontend/pull/2816))
+- Pick where your music lives: folder picker and Storage settings (by @marcelveldt in [#2860](https://github.com/music-assistant/frontend/pull/2860))
+- Open the start page after logging out (by @marcelveldt in [#2873](https://github.com/music-assistant/frontend/pull/2873))
+
+### Other Changes
+
+- Fix Sonos speakers getting stuck on the wrong playback state (by @marcelveldt in #6395)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>8 changes</summary>
+
+- Request Copilot review only after CI passes (by @chrisuthe in #6462)
+- Update various code owners (by @OzGav in #6485)
+- Keep runtime state of core modules when saving their settings (by @marcelveldt in #6519)
+- Tell Copilot the frontend ships in lockstep with the server (by @marcelveldt in #6523)
+- Update aioslimproto to 3.2.3 (by @MarvinSchenkel in #6570)
+- Fix missing Local files tracks in folders named like the source folder (by @marcelveldt in #6581)
+- Bind the Sendspin server to a free port in full-server test fixtures (by @teancom in #6590)
+- Update airplay-cli to v0.5.5 (by @musicassistant-bot[bot] in #6637)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @RyanAtTanagra, @aevans0001, @balloob, @balloobbot, @chrisuthe, @fmunkes, @frosty-geek, @jdaberkow, @khers, @lanquarden, @marcelveldt, @pierosavi, @robsonke, @romain38, @sickkick, @teancom, @tortfeaser
+
+
 # [2.10.4] - 18.09.2026
 
 ## 📦 Stable Release
@@ -100,65 +210,3 @@ _Changes since [2.10.2](https://github.com/music-assistant/server/releases/tag/2
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @caraar12345, @fmunkes, @jdaberkow, @jozefKruszynski, @kieranhogg, @marcelveldt
-
-
-# [2.10.2] - 04.09.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.1](https://github.com/music-assistant/server/releases/tag/2.10.1)_
-
-### 🚀 Features and enhancements
-
-- Align smart playlists similar music with Endless Mixes (by @MarvinSchenkel in #6121)
-- Set a global default for the Autoplay and Crossfade switches (by @MarvinSchenkel in #6130)
-- Clarify the global Autoplay and crossfade default toggles (by @MarvinSchenkel in #6187)
-
-### 🐛 Bugfixes
-
-- Fix filesystem scan crash on non-decimal digits in names (by @OzGav in #6102)
-- Attach the parent album to imported album tracks (by @OzGav in #6111)
-- Default the Fully Kiosk output codec to AAC (by @OzGav in #6112)
-- Spotify: skip empty entries when syncing library albums (by @MarvinSchenkel in #6114)
-- Fix missing tracks on albums for collaboration tracks in YouTube Music (by @MarvinSchenkel in #6115)
-- Sonos speakers now play tracks you add to the queue (by @marcelveldt in #6116)
-- Fix BBC Sounds recommendations not loading (by @MarvinSchenkel in #6117)
-- Restore pairing token support in Sendspin setup flow (by @meiser79 in #6122)
-- Apple Music: don't report purchase-only library items as available (by @anthonws in #6123)
-- Clean up sidebar shortcuts when a music provider is removed (by @OzGav in #6124)
-- Crossfades no longer shrink to a few seconds on slower sources (by @marcelveldt in #6128)
-- Newly created tokens now show up in the token list (by @marcelveldt in #6131)
-- Fix various issues with enqueuing the next track (by @marcelveldt in #6132)
-- Fix raw PCM input being decoded with the source codec (by @OzGav in #6137)
-- Fix crossfade on enqueue-capable speakers (like Sonos) when audio source is Spotify through Soloist (by @marcelveldt in #6141)
-- AI DJ no longer goes quiet after the queue is cleared (by @MarvinSchenkel in #6142)
-- Crossfade setting changes now apply at the next track on flow mode players (by @MarvinSchenkel in #6143)
-- Keep core/tasks parsable when the scheduler persists its state (by @OzGav in #6145)
-- Show why a Podcast Index login or episode lookup failed (by @OzGav in #6146)
-- Fix BBC Sounds sometimes using library ID instead of provider ID for listenting status update (by @kieranhogg in #6150)
-- Use artist top tracks when sampling genre and dynamic radio seeds (by @jozefKruszynski in #6155)
-- Fix Internet Archive search missing Live Music Archive content (by @OzGav in #6157)
-- Seeking within a track on Sonos now takes effect right away (by @marcelveldt in #6158)
-- Allow up to 3 concurrent YouTube Music streams (by @MarvinSchenkel in #6160)
-- Show library tracks in the Recently played playlist (by @MarvinSchenkel in #6161)
-- Fix leaked aiohttp session when an AirPlay control connection drops (by @MarvinSchenkel in #6162)
-- Fix broken nl-NL Alexa invocation phrase (by @R3inoudR in #6164)
-- Deezer: fix multiple instances sharing the same account (by @jdaberkow in #6169)
-- Skip a Spotify track Spotify refuses, instead of logging a crash (by @marcelveldt in #6171)
-- Cheaper track changes: Spotify Soloist advertises its real single-stream limit (by @marcelveldt in #6172)
-- Deezer: fix seeking landing short of the requested position (by @jdaberkow in #6174)
-- Fix spotify soloist new download (by @aauren in #6176)
-- AirPlay: fall back to the default port when discovery has no port (by @MarvinSchenkel in #6185)
-- Make Music Trivia title questions answerable (by @MarvinSchenkel in #6189)
-- Set Home for PulseAudio (by @aauren in #6190)
-
-### 🧰 Maintenance and dependency bumps
-
-- Treat the iBroadcast library the same as others that contain a user's tracks (by @OzGav in #6147)
-- Quieter track changes: don't warn when the next track has to wait for a free Spotify slot (by @marcelveldt in #6170)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @R3inoudR, @aauren, @anthonws, @chrisuthe, @jdaberkow, @jozefKruszynski, @kieranhogg, @marcelveldt, @meiser79
