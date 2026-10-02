@@ -1,0 +1,13 @@
+configuration:
+  log_level:
+    name: Logniveau
+    description: "Stel het (globale) logniveau in (LET OP: zet debug alleen aan als het nodig is)."
+  server_repo:
+    name: Server-repository
+    description: "Bouw de server vanaf een branch, pr-<nummer>, volledige commit-hash of owner/repo@branch voor een fork. Laat leeg om de nightly build in deze image te gebruiken."
+  frontend_repo:
+    name: Frontend-repository
+    description: "Bouw de frontend vanaf een branch, pr-<nummer>, volledige commit-hash of owner/repo@branch voor een fork. Laat leeg om de frontend te gebruiken die bij de server is meegeleverd."
+  safe_mode:
+    name: Veilige modus
+    description: "Start de Music Assistant-server in veilige modus, waarbij alleen de kerncontrollers zonder providers worden gestart, om problemen op te lossen"
