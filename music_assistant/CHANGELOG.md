@@ -4,10 +4,6 @@
 
 _Changes since [2.10.4](https://github.com/music-assistant/server/releases/tag/2.10.4)_
 
-### 🚀 Features and enhancements
-
-- Link existing libraries to MusicBrainz in the background (by @marcelveldt in #6496)
-
 ### 🐛 Bugfixes
 
 - Fix OpenSubsonic credential preservation during reconfiguration (by @teancom in #6376)
@@ -71,41 +67,21 @@ _Changes since [2.10.4](https://github.com/music-assistant/server/releases/tag/2
 - Show Spotify new releases and genres when a custom client ID is set (by @marcelveldt in #6615)
 - Keep YouTube Music searches out of your YouTube search history (by @MarvinSchenkel in #6643)
 
-### 🎨 Frontend Changes
-
-- Use Escape for back navigation (by @teancom in [#2850](https://github.com/music-assistant/frontend/pull/2850))
-- Press Space to play or pause (by @pierosavi in [#2714](https://github.com/music-assistant/frontend/pull/2714))
-- Keep TanStack Form packages on the same version (by @marcelveldt in [#2858](https://github.com/music-assistant/frontend/pull/2858))
-- Bump vue-i18n from 11.4.10 to 11.4.12 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2819](https://github.com/music-assistant/frontend/pull/2819))
-- Bump typescript-eslint from 8.68.0 to 8.70.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2816](https://github.com/music-assistant/frontend/pull/2816))
-- Pick where your music lives: folder picker and Storage settings (by @marcelveldt in [#2860](https://github.com/music-assistant/frontend/pull/2860))
-- Open the start page after logging out (by @marcelveldt in [#2873](https://github.com/music-assistant/frontend/pull/2873))
-
 ### Other Changes
 
 - Fix Sonos speakers getting stuck on the wrong playback state (by @marcelveldt in #6395)
 
 ### 🧰 Maintenance and dependency bumps
 
-<details>
-<summary>8 changes</summary>
-
-- Request Copilot review only after CI passes (by @chrisuthe in #6462)
 - Update various code owners (by @OzGav in #6485)
-- Keep runtime state of core modules when saving their settings (by @marcelveldt in #6519)
-- Tell Copilot the frontend ships in lockstep with the server (by @marcelveldt in #6523)
 - Update aioslimproto to 3.2.3 (by @MarvinSchenkel in #6570)
-- Fix missing Local files tracks in folders named like the source folder (by @marcelveldt in #6581)
-- Bind the Sendspin server to a free port in full-server test fixtures (by @teancom in #6590)
 - Update airplay-cli to v0.5.5 (by @musicassistant-bot[bot] in #6637)
-
-</details>
 
 ## :bow: Thanks to our contributors
 
 Special thanks to the following contributors who helped with this release:
 
-@MarvinSchenkel, @OzGav, @RyanAtTanagra, @aevans0001, @balloob, @balloobbot, @chrisuthe, @fmunkes, @frosty-geek, @jdaberkow, @khers, @lanquarden, @marcelveldt, @pierosavi, @robsonke, @romain38, @sickkick, @teancom, @tortfeaser
+@MarvinSchenkel, @OzGav, @RyanAtTanagra, @aevans0001, @balloob, @balloobbot, @fmunkes, @frosty-geek, @jdaberkow, @khers, @lanquarden, @marcelveldt, @robsonke, @romain38, @sickkick, @teancom, @tortfeaser
 
 
 # [2.10.4] - 18.09.2026
