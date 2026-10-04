@@ -1,3 +1,30 @@
+# [2.11.0.dev2026100404] - 04.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026100303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100303)_
+
+### 🚀 Features and enhancements
+
+- Add a Latest podcast episodes row to the Discover page (by @OzGav in #6659)
+- Skip music sources that no longer have a track or album (by @marcelveldt in #6686)
+
+### 🐛 Bugfixes
+
+- Pick provider mappings by priority in _select_provider_id (by @OzGav in #6661)
+- Preserve FeiNiu setup error translations on retry (by @neqq3 in #6680)
+
+### 🧰 Maintenance and dependency bumps
+
+- Harden password login timing (by @marcelveldt in #6678)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @marcelveldt, @neqq3
+
+
 # [2.11.0.dev2026100303] - 03.10.2026
 
 ## 📦 Nightly Release
@@ -129,91 +156,3 @@ _Changes since [2.11.0.dev2026100103](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @NasaGeek, @OzGav, @Simanias, @amodig, @chrisuthe, @jozefKruszynski, @marcelveldt, @szsolt
-
-
-# [2.11.0.dev2026100103] - 01.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026093003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026093003)_
-
-### 🚀 New Providers
-
-- Add native FeiNiu Music provider (by @neqq3 in #6416)
-
-### 🚀 Features and enhancements
-
-- Remove Open Subsonic podcast option (by @khers in #6348)
-- Let BBC Sounds rewind the programme on air to its start (by @thewillwilson in #6449)
-- Keep pause, seek and skip working on a sync group playing the leader's own source (by @marcelveldt in #6549)
-- Give crossfades on slower music sources their full length sooner (by @marcelveldt in #6584)
-- Give playback and user actions priority over background requests (by @marcelveldt in #6595)
-- Keep Spotify browsing and playback working while a custom Client ID is rate limited (by @marcelveldt in #6603)
-- Enhance recommendations in the iTunes Podcast Search provider (by @fmunkes in #6617)
-
-### 🐛 Bugfixes
-
-- Fix sync group volume capabilities (by @teancom in #6281)
-- Keep one failing provider from aborting album, artist and genre playback (by @teancom in #6446)
-- Stop Cast flow playback from skipping an extra track after pressing next (by @MarvinSchenkel in #6518)
-- Fix static on Squeezelite sync groups when playing live sources like the AirPlay Receiver (by @MarvinSchenkel in #6529)
-- Skip the zone renderers a Teufel Raumfeld host publishes as DLNA players (by @Simanias in #6563)
-- Honor HTTP proxy environment variables (by @MarvinSchenkel in #6572)
-- Fix a paused player keeping its music source busy for minutes (by @marcelveldt in #6577)
-- Fix Spotify app pairing not finding the device on hosts with Docker networks (by @MarvinSchenkel in #6578)
-- Show Spotify top tracks when a custom client ID is set (by @marcelveldt in #6583)
-- Fix Bandcamp requests returning an HTML challenge page instead of JSON (by @MarvinSchenkel in #6592)
-- Stop Chromecast from taking over a speaker's AirPlay Sendspin player (by @marcelveldt in #6593)
-- Deezer: fix resume from other devices and a missing timeout (by @jdaberkow in #6596)
-- Show images right away once a music source has loaded (by @marcelveldt in #6600)
-- Only auto-enable Smart Fades on recommended hardware (by @MarvinSchenkel in #6605)
-- Resolve the current TuneIn stream url at playback time (by @MarvinSchenkel in #6606)
-- Let a paused player give up its stream when another player starts (by @marcelveldt in #6607)
-- Stop playback jumping back to the first track when a player reconnects (by @marcelveldt in #6608)
-- Load the Spotify provider even while Spotify rate limits its Web API (by @marcelveldt in #6612)
-- Show Spotify new releases and genres when a custom client ID is set (by @marcelveldt in #6615)
-
-### 🎨 Frontend Changes
-
-- Show the album type in an artist's Appears on row (by @marcelveldt in [#2879](https://github.com/music-assistant/frontend/pull/2879))
-- Make the back button work in the Home Assistant app (by @marcelveldt in [#2847](https://github.com/music-assistant/frontend/pull/2847))
-- Center play buttons and fix icon sizes in the player controls (by @marcelveldt in [#2874](https://github.com/music-assistant/frontend/pull/2874))
-- Fix "album_type.undefined" in an artist's Appears on list (by @marcelveldt in [#2878](https://github.com/music-assistant/frontend/pull/2878))
-- Bump zod from 4.6.2 to 4.6.5 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2870](https://github.com/music-assistant/frontend/pull/2870))
-- Ask before removing a custom ambient sound (by @marcelveldt in [#2886](https://github.com/music-assistant/frontend/pull/2886))
-- Open the options menu of music sources and player cards with right-click or long-press (by @marcelveldt in [#2884](https://github.com/music-assistant/frontend/pull/2884))
-- Make it harder to remove a music source by accident (by @marcelveldt in [#2877](https://github.com/music-assistant/frontend/pull/2877))
-- Simplify player card warning styling ([#63](https://github.com/music-assistant/frontend/pull/63)) (by @joperafe in [#2188](https://github.com/music-assistant/frontend/pull/2188))
-- Keep the queue reorder grip from opening the item menu on long-press (by @MarvinSchenkel in [#2881](https://github.com/music-assistant/frontend/pull/2881))
-- Show the right source for artist top tracks and streaming services (by @marcelveldt in [#2880](https://github.com/music-assistant/frontend/pull/2880))
-- Shared icons repo sync logic rework (by @pierosavi in [#2775](https://github.com/music-assistant/frontend/pull/2775))
-- Clearer naming for an artist's track list (by @marcelveldt in [#2882](https://github.com/music-assistant/frontend/pull/2882))
-- Fix the slow AI Radio prefetch test (by @teancom in [#2709](https://github.com/music-assistant/frontend/pull/2709))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>14 changes</summary>
-
-- Name the tasks whose coroutine does not identify them (by @balloob in #6526)
-- Use one rule to find which player owns a group's playback (by @marcelveldt in #6540)
-- Favorites from the Home Assistant button go to the listening user (by @marcelveldt in #6543)
-- Fetch Spotify liked songs only once (by @marcelveldt in #6585)
-- Bind the Sendspin server to a free port in full-server test fixtures (by @teancom in #6590)
-- Send dependency bump PRs through the merge queue (by @MarvinSchenkel in #6594)
-- Fix setup flow tests missing the streams controller (by @MarvinSchenkel in #6599)
-- Spotify: pick up every playlist edit, including reordering (by @marcelveldt in #6601)
-- Make web requests work from the very start of the server (by @marcelveldt in #6602)
-- Retry metadata sooner after a metadata service failed for a moment (by @marcelveldt in #6604)
-- Reset the queue's next item when the queue is cleared (by @marcelveldt in #6614)
-- Remove two unused helpers (by @marcelveldt in #6616)
-- Pick up playlist renames and cover changes from music services (by @marcelveldt in #6623)
-- Clean up leftover background calls in player controller tests (by @marcelveldt in #6628)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @Simanias, @balloob, @fmunkes, @jdaberkow, @joperafe, @khers, @marcelveldt, @neqq3, @pierosavi, @teancom, @thewillwilson
