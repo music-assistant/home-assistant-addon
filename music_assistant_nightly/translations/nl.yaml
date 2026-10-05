@@ -1,0 +1,7 @@
+configuration:
+  log_level:
+    name: Logniveau
+    description: "Stel het (globale) logniveau in (LET OP: zet debug alleen aan als het nodig is)."
+  safe_mode:
+    name: Veilige modus
+    description: "Start de Music Assistant-server in veilige modus, waarbij alleen de kerncontrollers zonder providers worden gestart, om problemen op te lossen"
