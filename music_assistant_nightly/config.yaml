@@ -30,6 +30,7 @@ backup_exclude:
   - cache.db
   - collage_images/*
   - .cache/*
+  - library.db.backup
 stage: experimental
 image: ghcr.io/music-assistant/server
 tmpfs: true
