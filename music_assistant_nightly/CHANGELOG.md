@@ -1,3 +1,33 @@
+# [2.11.0.dev2026100814] - 08.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026100803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100803)_
+
+### 🚀 Features and enhancements
+
+- Run manually triggered tasks next in the background task queue (by @OzGav in #6764)
+- Stop network share actions from hanging when the share does not respond (by @marcelveldt in #6766)
+- Don't show "0 MB used" for the data folder on a fresh install (by @marcelveldt in #6777)
+
+### 🐛 Bugfixes
+
+- Update Zvuk Music provider to v1.8.11 (by @trudenboy in #6744)
+- Skip the DSP restart when the player is not playing the queue it would resume (by @mnestrud in #6760)
+- Move non-classical aliases out of the classical genre (by @OzGav in #6761)
+- Hide Sendspin token pairing when a pairing code is available (by @maximmaxim345 in #6768)
+- Fix Sendspin players not marking items played when playback starts near the end (by @maximmaxim345 in #6770)
+- Restrict what the image loader hands to ffmpeg (by @MarvinSchenkel in #6771)
+- Require the Supervisor as peer for Home Assistant Ingress requests (by @MarvinSchenkel in #6772)
+- Show Apple Music names in the user's language (by @MarvinSchenkel in #6775)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @marcelveldt, @maximmaxim345, @mnestrud, @trudenboy
+
+
 # [2.11.0.dev2026100803] - 08.10.2026
 
 ## 📦 Nightly Release
@@ -118,54 +148,3 @@ _Changes since [2.11.0.dev2026100603](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @NasaGeek, @OzGav, @bcl79, @chrisuthe, @fmunkes, @lucide, @marcelveldt, @maximmaxim345, @pierosavi, @stellar-aria, @trudenboy
-
-
-# [2.11.0.dev2026100603] - 06.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026100503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100503)_
-
-### ⚠ Breaking Changes
-
-- Update FastMCP Server provider to v2.1.22 (by @trudenboy in #5175)
-
-### 🚀 Features and enhancements
-
-- Show full listing of Albums and Singles/EPs on Youtube Music artist pages (by @NasaGeek in #6591)
-- Keep DSP preset selection when toggling DSP on/off (by @OzGav in #6684)
-- Add configurable response format to OpenAI TTS (by @OzGav in #6688)
-- Announce AI Radio state changes as provider events (by @MarvinSchenkel in #6713)
-
-### 🐛 Bugfixes
-
-- Plex: announce a stable client identity to plex.tv (by @anatosun in #4217)
-- Search Spotify playlists on the global session when a custom client ID is set (by @theravengroup in #6647)
-- Fix parsing of artists in YouTube Music recommendations (by @NasaGeek in #6677)
-- Stop placeholder ISRCs from merging unrelated tracks (by @OzGav in #6691)
-- Share one narrowed list of provider fetch failures (by @teancom in #6695)
-- Stop Apple Music from adding empty duplicates of albums that lack a catalog link (by @MarvinSchenkel in #6702)
-- Emby: include image tag in artwork URLs so they resolve with ValidateImageTags (by @hatharry in #6703)
-- Fix sync group picking a lights-only member as leader (by @MarvinSchenkel in #6707)
-- Show each user the artwork of their own music source (by @marcelveldt in #6708)
-- Play Sendspin audio at the music's own sample rate (by @marcelveldt in #6709)
-- Fix library items missing from search results when filtering by provider (by @marcelveldt in #6710)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Make the volume normalization choices translatable (by @OzGav in #6685)
-- Bump qqmusic-api-python from 0.7.2 to 0.7.3 (by @dependabot[bot] in #6696)
-- Bump numkong from 7.8.0 to 7.8.3 (by @dependabot[bot] in #6697)
-- Bump yoto-api from 4.4.1 to 4.5.0 (by @dependabot[bot] in #6698)
-- Bump zeroconf from 0.149.16 to 0.151.5 (by @dependabot[bot] in #6699)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @NasaGeek, @OzGav, @anatosun, @hatharry, @marcelveldt, @teancom, @theravengroup, @trudenboy
