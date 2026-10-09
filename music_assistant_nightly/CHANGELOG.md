@@ -1,3 +1,44 @@
+# [2.11.0.dev2026100903] - 09.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026100814](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100814)_
+
+### 🚀 Features and enhancements
+
+- Added episode_number property to PodcastEpisode media item in Storytel Provider (by @jonasbp2011 in #6784)
+
+### 🐛 Bugfixes
+
+- Keep hi-res quality for sources that don't report their audio format (by @marcelveldt in #6781)
+- Stop a Sonos from playing music again after the queue has finished (by @marcelveldt in #6782)
+
+### 🎨 Frontend Changes
+
+- Remove unused fallback from remote album art loading (by @marcelveldt in [#2935](https://github.com/music-assistant/frontend/pull/2935))
+- Remove leftover support code for outdated servers (by @marcelveldt in [#2936](https://github.com/music-assistant/frontend/pull/2936))
+- Ask web app users to update an outdated server instead of hiding features (by @marcelveldt in [#2891](https://github.com/music-assistant/frontend/pull/2891))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>5 changes</summary>
+
+- Clarify the Sendspin automatic audio format option (by @marcelveldt in #6720)
+- Bump Yandex Music and KION Music API dependency to 3.2.1 (by @trudenboy in #6774)
+- Keep audio flowing while a crossfade waits for the next track's source (by @marcelveldt in #6783)
+- Remove duplicate mixer stand-ins from the realtime source tests (by @marcelveldt in #6785)
+- Bring the webserver auth README in line with the code (by @marcelveldt in #6786)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@jonasbp2011, @marcelveldt, @trudenboy
+
+
 # [2.11.0.dev2026100814] - 08.10.2026
 
 ## 📦 Nightly Release
@@ -90,61 +131,3 @@ _Changes since [2.11.0.dev2026100703](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Kiranwin, @MarvinSchenkel, @OzGav, @fmunkes, @jdaberkow, @jonasbp2011, @lucide, @marcelveldt, @tabler, @trudenboy, @vueuse
-
-
-# [2.11.0.dev2026100703] - 07.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026100603](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100603)_
-
-### 🚀 Features and enhancements
-
-- Move audio analysis storage into its own database file (by @chrisuthe in #6377)
-- Promote audio analysis arrays to typed fields (by @chrisuthe in #6378)
-- Store audio analysis records in a packed format (by @chrisuthe in #6379)
-- Update Sendspin to 1.0.0-rc1 (by @maximmaxim345 in #6716)
-- Show episode and season numbers on podcast episodes (by @OzGav in #6728)
-
-### 🐛 Bugfixes
-
-- Fix queue stalling after one track when current item is briefly unset (by @bcl79 in #6110)
-- Pause, resume and skip Spotify Connect on DLNA speakers (by @MarvinSchenkel in #6609)
-- Keep HEOS players playing while they restart on a new stream (by @MarvinSchenkel in #6611)
-- Keep the last played position when a player pauses (by @fmunkes in #6693)
-- Fix radio stations sharing the same artwork (by @MarvinSchenkel in #6715)
-- Drop thumbnails from YouTube Music less frequently (by @NasaGeek in #6721)
-- Keep favorite tracks of multiple Tidal accounts apart in the library (by @MarvinSchenkel in #6726)
-- Hide encrypted config values from the API (by @MarvinSchenkel in #6731)
-
-### 🎨 Frontend Changes
-
-- Add a cover-size slider to the grid views (by @stellar-aria in [#2830](https://github.com/music-assistant/frontend/pull/2830))
-- Show played state and podcast name on episode tiles (by @OzGav in [#2895](https://github.com/music-assistant/frontend/pull/2895))
-- Refresh AI Radio state from provider events instead of polling (by @MarvinSchenkel in [#2907](https://github.com/music-assistant/frontend/pull/2907))
-- Give the podcast page a new header (by @OzGav in [#2892](https://github.com/music-assistant/frontend/pull/2892))
-- Avoid duplicate library items in global search results (by @marcelveldt in [#2905](https://github.com/music-assistant/frontend/pull/2905))
-- Line up the Cancel button in confirmation dialogs (by @marcelveldt in [#2909](https://github.com/music-assistant/frontend/pull/2909))
-- Fix player covering sidebar (by @pierosavi in [#2906](https://github.com/music-assistant/frontend/pull/2906))
-- Bump @lucide/vue from 1.33.0 to 1.48.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2871](https://github.com/music-assistant/frontend/pull/2871))
-- Use consistent wording for the app and menu paths (by @marcelveldt in [#2904](https://github.com/music-assistant/frontend/pull/2904))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Bump ya-passport-auth to 2.1.0 (by @trudenboy in #6714)
-- Bump CodSpeedHQ/action from 5.2.1 to 5.4.0 (by @dependabot[bot] in #6719)
-- Teach the review how data migrations are handled here (by @chrisuthe in #6733)
-- Fix the critical-review gate never converting a PR to draft (by @chrisuthe in #6734)
-- Stop asking for an API schema bump where no client can gate on it (by @chrisuthe in #6735)
-- Widen the critical-review gate's window to two hours (by @chrisuthe in #6736)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @NasaGeek, @OzGav, @bcl79, @chrisuthe, @fmunkes, @lucide, @marcelveldt, @maximmaxim345, @pierosavi, @stellar-aria, @trudenboy
