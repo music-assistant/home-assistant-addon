@@ -1,3 +1,55 @@
+# [2.10.6] - 09.10.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.5](https://github.com/music-assistant/server/releases/tag/2.10.5)_
+
+### 🚀 Features and enhancements
+
+- Run manually triggered tasks next in the background task queue (by @OzGav in #6764)
+
+### 🐛 Bugfixes
+
+- Fix queue stalling after one track when current item is briefly unset (by @bcl79 in #6110)
+- Pause, resume and skip Spotify Connect on DLNA speakers (by @MarvinSchenkel in #6609)
+- Keep HEOS players playing while they restart on a new stream (by @MarvinSchenkel in #6611)
+- Fix parsing of artists in YouTube Music recommendations (by @NasaGeek in #6677)
+- Pick provider mappings by availability and priority in _select_provider_id (stable) (by @OzGav in #6679)
+- Stop placeholder ISRCs from merging unrelated tracks (by @OzGav in #6691)
+- Keep the last played position when a player pauses (by @fmunkes in #6693)
+- Stop Apple Music from adding empty duplicates of albums that lack a catalog link (by @MarvinSchenkel in #6702)
+- Fix sync group picking a lights-only member as leader (by @MarvinSchenkel in #6707)
+- Play Sendspin audio at the music's own sample rate (by @marcelveldt in #6709)
+- Drop thumbnails from YouTube Music less frequently (by @NasaGeek in #6721)
+- Keep favorite tracks of multiple Tidal accounts apart in the library (by @MarvinSchenkel in #6726)
+- Fix audiobooks not starting when resuming deep into a long mp3 (by @MarvinSchenkel in #6727)
+- Fix personalized NetEase endpoints returning wrong data on some NCM API backends (by @Kiranwin in #6730)
+- Revoke guest access when the party or music quiz plugin is disabled (by @MarvinSchenkel in #6747)
+- Bind the playlog lookup parameters (by @MarvinSchenkel in #6751)
+- Deezer: Fix Family profiles showing the admin's library (by @jdaberkow in #6753)
+- Refuse CIFS usernames and shares that would add mount options (by @MarvinSchenkel in #6756)
+- Fix Sendspin players not marking items played when playback starts near the end (by @maximmaxim345 in #6770)
+- Restrict what the image loader hands to ffmpeg (by @MarvinSchenkel in #6771)
+- Require the Supervisor as peer for Home Assistant Ingress requests (by @MarvinSchenkel in #6772)
+- Show Apple Music names in the user's language (by @MarvinSchenkel in #6775)
+- Stop a Sonos from playing music again after the queue has finished (by @marcelveldt in #6782)
+- Fix album covers not loading when archive.org is slow or down (by @OzGav in #6787)
+
+### Other Changes
+
+- Only allow releases to be started from the dev branch (stable) (by @marcelveldt in #6674)
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix release notes listing changes that did not ship in a stable patch release (by @marcelveldt in #6672)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Kiranwin, @MarvinSchenkel, @NasaGeek, @OzGav, @bcl79, @fmunkes, @jdaberkow, @marcelveldt, @maximmaxim345
+
+
 # [2.10.5] - 02.10.2026
 
 ## 📦 Stable Release
@@ -126,63 +178,3 @@ _Changes since [2.10.3](https://github.com/music-assistant/server/releases/tag/2
 Special thanks to the following contributors who helped with this release:
 
 @CodeCommander, @MarvinSchenkel, @OzGav, @RyanAtTanagra, @balloob, @chrisuthe, @fmunkes, @jdaberkow, @marcelveldt, @remon1496
-
-
-# [2.10.3] - 11.09.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.2](https://github.com/music-assistant/server/releases/tag/2.10.2)_
-
-### 🚀 Features and enhancements
-
-- Align party and music quiz plugin icons with the frontend menu (by @MarvinSchenkel in #6258)
-- Default the global autoplay setting to off (by @MarvinSchenkel in #6276)
-
-### 🐛 Bugfixes
-
-- Play the newest episode when you ask for the latest one (by @OzGav in #6178)
-- Show ARD Audiothek episodes in the right order (by @OzGav in #6179)
-- Deezer: keep cover art and artist on user-uploaded tracks (by @jdaberkow in #6202)
-- Play a plain URL instead of a random track for users with a provider filter (by @MarvinSchenkel in #6205)
-- Fix sidebar shortcuts stuck after a provider was removed (by @OzGav in #6207)
-- Fix Deezer account isolation and clarify authentication failures (by @jdaberkow in #6213)
-- Fix Plex Connect starting the wrong track in large queues (by @MarvinSchenkel in #6217)
-- Fix Sonic Similarity not loading when the database holds a corrupt analysis row (by @MarvinSchenkel in #6218)
-- Sort Apple Music library by the date you actually added items (by @MarvinSchenkel in #6219)
-- Fix players not regrouping after an announcement on a synced player (by @MarvinSchenkel in #6220)
-- Route generic LinkPlay OEM devices to the generic WiiM backend (by @OzGav in #6223)
-- Plex provider - incorrectly accepts empty media container as lyrics (by @caraar12345 in #6229)
-- Keep local playlist covers in subfolders instead of replacing them with a collage (by @OzGav in #6230)
-- Stop TuneIn sync treating non-favourite stations as failed items (by @OzGav in #6231)
-- Keep Sonos S1 playback events from blocking the event loop (by @OzGav in #6235)
-- Skip corrupt audio files instead of crashing the play request (by @OzGav in #6242)
-- Tidal: fix playback of tracks that have a Dolby Atmos version (by @jozefKruszynski in #6244)
-- Fix Jellyfin 12 playback and artwork (by @MarvinSchenkel in #6251)
-- Fix a single-track Endless Mix looping over the same few songs (by @MarvinSchenkel in #6254)
-- Show the station logo instead of the previous track's artwork when a radio starts (by @OzGav in #6256)
-- Fix preset slot assignment and xml encoding in Bose Soundtouch (by @fmunkes in #6260)
-- Fix the Profiler plugin leaking memory during CPU profiling (by @marcelveldt in #6266)
-- Keep the MilkDrop visualizer alive on tracks longer than the audio buffer (by @jozefKruszynski in #6272)
-- Stop Sonos speakers cutting out a couple of tracks in (by @marcelveldt in #6278)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>7 changes</summary>
-
-- Rename the DI provider to Digitally Imported (by @OzGav in #6197)
-- Use the coloured Sendspin logo for the provider icon (by @MarvinSchenkel in #6225)
-- Pace a stream by what is being served (by @marcelveldt in #6237)
-- BBC Sounds: remove duplicated function (by @kieranhogg in #6245)
-- Say so when a Sonos speaker cannot play a track (by @marcelveldt in #6246)
-- Keep Sonos playing an album of short tracks (by @marcelveldt in #6247)
-- Enabling debug logging no longer slows the server down (by @marcelveldt in #6265)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @caraar12345, @fmunkes, @jdaberkow, @jozefKruszynski, @kieranhogg, @marcelveldt
