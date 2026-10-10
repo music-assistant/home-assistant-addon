@@ -1,3 +1,64 @@
+# [2.11.0.dev2026101003] - 10.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026100903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100903)_
+
+### 🚀 Features and enhancements
+
+- Link system settings to their documentation (by @marcelveldt in #6626)
+- Make skipping back in podcasts and audiobooks fast (by @OzGav in #6682)
+
+### 🐛 Bugfixes
+
+- Update KION Music provider to v3.0.12 (by @trudenboy in #5585)
+- Fix album track deduplication for repeated movement titles (by @teancom in #6425)
+- Stop Plex Connect from logging unrelated items in the Plex history (by @MarvinSchenkel in #6705)
+- Qobuz: report playback start when the track actually starts playing (by @marcelveldt in #6711)
+- Speed up the gPodder provider and fix its progress sync (by @fmunkes in #6718)
+- Return an error when sending commands to an unavailable player (by @MarvinSchenkel in #6748)
+- Fix album covers not loading when archive.org is slow or down (by @OzGav in #6787)
+- Fix play doing nothing after the queue's current track was replaced (by @marcelveldt in #6796)
+- Keep a Sonos group playing after the speaker reports a failed track (by @marcelveldt in #6797)
+- Stop play requests from running at the same time on one queue (by @marcelveldt in #6798)
+- Fix play reporting an empty queue when its position is past the last track (by @marcelveldt in #6800)
+
+### 🎨 Frontend Changes
+
+- Show where a Local files source reads its music from (by @marcelveldt in [#2948](https://github.com/music-assistant/frontend/pull/2948))
+- Add a Documentation button to the player settings page (by @marcelveldt in [#2945](https://github.com/music-assistant/frontend/pull/2945))
+- Tidier settings pages with all options in one card (by @marcelveldt in [#2885](https://github.com/music-assistant/frontend/pull/2885))
+- Prevent audio session dropping when paused (by @pierosavi in [#2721](https://github.com/music-assistant/frontend/pull/2721))
+- Keep the floating Save button from covering the last setting (by @marcelveldt in [#2937](https://github.com/music-assistant/frontend/pull/2937))
+- Keep keyboard focus on the menu button after closing a menu (by @marcelveldt in [#2947](https://github.com/music-assistant/frontend/pull/2947))
+- Share how detail pages keep up with item updates (by @OzGav in [#2933](https://github.com/music-assistant/frontend/pull/2933))
+- Remove unused fallback from the Add player group page (by @marcelveldt in [#2941](https://github.com/music-assistant/frontend/pull/2941))
+- Remove unused watcher from the Add player group dialog (by @marcelveldt in [#2940](https://github.com/music-assistant/frontend/pull/2940))
+- Remove unused fallback from the Add player group dialog (by @marcelveldt in [#2939](https://github.com/music-assistant/frontend/pull/2939))
+- Remove unused provider check from the player grouping picker (by @marcelveldt in [#2938](https://github.com/music-assistant/frontend/pull/2938))
+- Re-enable the vue/no-v-html lint rule (by @MarvinSchenkel in [#2930](https://github.com/music-assistant/frontend/pull/2930))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Upgrade QQ Music provider to API 0.8.2 (by @xiasi0 in #6737)
+- Clean up unused code in the login callback page (by @marcelveldt in #6793)
+- Stop saving the album cover into a track's own images (by @marcelveldt in #6794)
+- Keep GITHUB_TOKEN out of the PyPI download step in auto-merge (by @chrisuthe in #6811)
+- Run CI tests in our own base image and split them over parallel jobs (by @marcelveldt in #6814)
+- Tell the settings page which storage location a Local files source uses (by @marcelveldt in #6816)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @marcelveldt, @pierosavi, @teancom, @trudenboy, @xiasi0
+
+
 # [2.11.0.dev2026100903] - 09.10.2026
 
 ## 📦 Nightly Release
@@ -67,67 +128,3 @@ _Changes since [2.11.0.dev2026100803](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @marcelveldt, @maximmaxim345, @mnestrud, @trudenboy
-
-
-# [2.11.0.dev2026100803] - 08.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026100703](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100703)_
-
-### 🚀 New Providers
-
-- Add Yandex Disk provider (by @trudenboy in #4828)
-
-### 🚀 Features and enhancements
-
-- Add a payload version to invalidate persisted recommendation payloads (by @fmunkes in #6618)
-- Use native items in Audiobookshelf browse and recommendations (by @fmunkes in #6619)
-- Show the provider type in diagnostics sections (by @marcelveldt in #6754)
-- Add issuer and audience claims to access tokens (by @MarvinSchenkel in #6758)
-- Storytel - Add explicit cache durations for cache calls. (by @jonasbp2011 in #6763)
-
-### 🐛 Bugfixes
-
-- Fix Yandex Station credential borrowing and audio playback (by @trudenboy in #5605)
-- Fix audiobooks not starting when resuming deep into a long mp3 (by @MarvinSchenkel in #6727)
-- Fix personalized NetEase endpoints returning wrong data on some NCM API backends (by @Kiranwin in #6730)
-- Deezer: Fix Family profiles showing the admin's library (by @jdaberkow in #6738)
-- Revoke guest access when the party or music quiz plugin is disabled (by @MarvinSchenkel in #6747)
-- Bind the playlog lookup parameters (by @MarvinSchenkel in #6751)
-- Update FastMCP Server provider to v2.1.24 (by @trudenboy in #6755)
-- Refuse CIFS usernames and shares that would add mount options (by @MarvinSchenkel in #6756)
-
-### 🎨 Frontend Changes
-
-- Don't repeat the album year on every track of an album page (by @MarvinSchenkel in [#2924](https://github.com/music-assistant/frontend/pull/2924))
-- Remember the web player volume between sessions (by @OzGav in [#2900](https://github.com/music-assistant/frontend/pull/2900))
-- Bump release-drafter/release-drafter from 7.7.0 to 7.9.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2912](https://github.com/music-assistant/frontend/pull/2912))
-- Bump @vueuse/core from 14.3.0 to 15.0.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2916](https://github.com/music-assistant/frontend/pull/2916))
-- Bump vitest from 4.1.11 to 5.0.3 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2914](https://github.com/music-assistant/frontend/pull/2914))
-- Bump @tabler/icons-vue from 3.46.0 to 3.48.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2915](https://github.com/music-assistant/frontend/pull/2915))
-- Bump @lucide/vue from 1.48.0 to 1.51.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2918](https://github.com/music-assistant/frontend/pull/2918))
-- Bump lint-staged from 17.5.1 to 17.6.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2919](https://github.com/music-assistant/frontend/pull/2919))
-- Bump oxlint and eslint-plugin-oxlint (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2920](https://github.com/music-assistant/frontend/pull/2920))
-- Bump typescript-eslint from 8.70.1 to 8.71.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2921](https://github.com/music-assistant/frontend/pull/2921))
-- Bump vite from 8.3.0 to 8.3.2 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2917](https://github.com/music-assistant/frontend/pull/2917))
-- Say on the Storage page why a location can not be removed (by @marcelveldt in [#2922](https://github.com/music-assistant/frontend/pull/2922))
-- Manage a music source from its own page (by @marcelveldt in [#2887](https://github.com/music-assistant/frontend/pull/2887))
-- Show podcast season and episode numbers (by @OzGav in [#2925](https://github.com/music-assistant/frontend/pull/2925))
-- Let party guests re-request tracks when duplicates are allowed (by @MarvinSchenkel in [#2872](https://github.com/music-assistant/frontend/pull/2872))
-- Show album and track versions in search results (by @MarvinSchenkel in [#2923](https://github.com/music-assistant/frontend/pull/2923))
-- Show the source name in the Reconfigure dialog when the source is not loaded (by @marcelveldt in [#2908](https://github.com/music-assistant/frontend/pull/2908))
-- ⬆️ Sync shared-icons to 0.4.0 (by @[musicassistant-bot[bot]](https://github.com/apps/musicassistant-bot) in [#2931](https://github.com/music-assistant/frontend/pull/2931))
-- Show read-only locations in the folder picker (by @marcelveldt in [#2910](https://github.com/music-assistant/frontend/pull/2910))
-- Remove unused shortcut helpers that compare pins by their text (by @marcelveldt in [#2927](https://github.com/music-assistant/frontend/pull/2927))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump ya-passport-auth to 2.2.0 (by @trudenboy in #6741)
-- Verify the FFmpeg and Snapcast downloads in the base image (by @MarvinSchenkel in #6750)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Kiranwin, @MarvinSchenkel, @OzGav, @fmunkes, @jdaberkow, @jonasbp2011, @lucide, @marcelveldt, @tabler, @trudenboy, @vueuse
