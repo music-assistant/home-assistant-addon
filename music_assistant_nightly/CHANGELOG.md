@@ -1,3 +1,111 @@
+# [2.11.0.dev2026101103] - 11.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026101003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101003)_
+
+### ⚠ Breaking Changes
+
+- Update MSX Bridge provider from v1.4.9 to v1.6.2 (by @trudenboy in #5868)
+
+### 🚀 New Providers
+
+- Add NetEase Cloud Music scrobbler plugin (by @Kiranwin in #6759)
+
+### 🚀 Features and enhancements
+
+- Typed sorting for library listings with discoverable sort options (by @dmoo500 in #5498)
+- Add a stream quality setting to the nugs.net provider (by @igray in #6480)
+- Add NetEase Personal Recommend section with daily and radar playlists (by @Kiranwin in #6742)
+- Adding music to a large shuffled queue no longer takes a minute (by @marcelveldt in #6813)
+- Keep the tracks of a share that was already down when the server started (by @marcelveldt in #6855)
+- Warn when another Local files source already reads the picked folder (by @marcelveldt in #6856)
+- Sign in with Home Assistant from the remote app without an External URL (by @marcelveldt in #6859)
+- Let the AI DJ talk over the intro of the next song (by @marcelveldt in #6866)
+
+### 🐛 Bugfixes
+
+- Add a Cast player option to apply a volume set while idle at playback start (by @distante in #5800)
+- Faster start and seek for remote MP3s with large ID3 tags (by @chrisuthe in #6374)
+- Keep the next track in sync with quick queue edits (by @marcelveldt in #6807)
+- Stop counting a track as played when it never started (by @marcelveldt in #6808)
+- Use the External URL for party and quiz QR codes (by @marcelveldt in #6812)
+- Fix speaker discovery breaking after changing the discovery interfaces setting (by @marcelveldt in #6815)
+- Stop instead of pause while Music Assistant streams to a Bose SoundTouch speaker (by @fmunkes in #6821)
+- Make Bose SoundTouch survive flaky speaker responses (by @fmunkes in #6822)
+- Give Local files sources with the same folder name a unique name (by @marcelveldt in #6823)
+- Fix Home Assistant sign-in through the External URL or Remote Access (by @marcelveldt in #6826)
+- Sonos: allow 24-bit playback on Play:1 and Connect (Gen 2) (by @orb9 in #6828)
+- Keep Local files sources inside their own folder (by @marcelveldt in #6831)
+- Show which setting is wrong when saving settings fails (by @marcelveldt in #6834)
+- Stop Last.fm recommendations from re-searching music providers (by @Bazooper-blip in #6843)
+- Cut the Apple Music requests made per lookup and per Discover refresh (by @Bazooper-blip in #6845)
+- Stop Apple Music from fetching the album again for its album tracks (by @Bazooper-blip in #6846)
+- Fix Home Assistant sign-in from the mobile app through the External URL or Remote Access (by @marcelveldt in #6849)
+- Fix MSX Bridge TVs going silent after the first track (by @marcelveldt in #6858)
+- Keep tracks of a disconnected share when syncing the folder above it (by @marcelveldt in #6869)
+- Fix possible crashes when a lookup comes back empty (by @marcelveldt in #6876)
+
+### 🎨 Frontend Changes
+
+- Let a DJ segment talk over the intro of the next song (by @jpittelkow in [#2828](https://github.com/music-assistant/frontend/pull/2828))
+- Show grouping options right away when opening players from Now Playing (by @marcelveldt in [#2955](https://github.com/music-assistant/frontend/pull/2955))
+- Show the Music Assistant URLs in one clear card (by @marcelveldt in [#2952](https://github.com/music-assistant/frontend/pull/2952))
+- Fix saving a cleared optional number setting (by @marcelveldt in [#2957](https://github.com/music-assistant/frontend/pull/2957))
+- Hide Home Assistant sign-in on Remote Access without an External URL (by @marcelveldt in [#2951](https://github.com/music-assistant/frontend/pull/2951))
+- Get the dashboard link even without a cast device (by @marcelveldt in [#2950](https://github.com/music-assistant/frontend/pull/2950))
+- Left-align dialog titles on desktop (by @marcelveldt in [#2949](https://github.com/music-assistant/frontend/pull/2949))
+- Show a banner on unsupported installations (by @marcelveldt in [#2954](https://github.com/music-assistant/frontend/pull/2954))
+- Label the voice-over transition in the audio processing details (by @marcelveldt in [#2956](https://github.com/music-assistant/frontend/pull/2956))
+- Show the album cover for tracks in the party view (by @marcelveldt in [#2946](https://github.com/music-assistant/frontend/pull/2946))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>32 changes</summary>
+
+- Choose a track's stream source with one deterministic ranking (by @marcelveldt in #6804)
+- Stop re-reading every podcast episode on each Local files sync (by @marcelveldt in #6817)
+- Remove an unused package from the base image (by @marcelveldt in #6820)
+- Speed up CI test runs by using all runner CPUs (by @marcelveldt in #6824)
+- Use the server External URL for the MCP Connect Wizard link (by @marcelveldt in #6827)
+- Hide passwords and tokens in the API message log (by @marcelveldt in #6829)
+- Stop album covers from being saved as a track's own image (by @marcelveldt in #6830)
+- Speed up test server boots (by @marcelveldt in #6832)
+- Smart fades: 2 bar fades between tracks in different time signatures, clearer logging (by @marcelveldt in #6833)
+- Fix unawaited coroutine warnings in library sync tests (by @marcelveldt in #6836)
+- Speed up test server boots by waiting for startup work instead of a fixed delay (by @marcelveldt in #6837)
+- Speed up library tests with the light test fixture (by @marcelveldt in #6839)
+- Keep bundled service credentials out of the source tarball and clarify their license (by @marcelveldt in #6840)
+- Smart fades: replay tool and one log line per transition (by @marcelveldt in #6841)
+- Expire abandoned Home Assistant sign-ins (by @marcelveldt in #6842)
+- Document ffmpeg 7.0 as the minimum version (by @marcelveldt in #6850)
+- Flag installations that do not run from the official image (by @marcelveldt in #6851)
+- Make several tests check real behaviour (by @marcelveldt in #6852)
+- Speed up the Bandcamp integration tests (by @marcelveldt in #6853)
+- Clearer help text for the Internal URL setting (by @marcelveldt in #6854)
+- Use PKCE when signing in with Home Assistant (by @marcelveldt in #6857)
+- Clean up the Bandcamp provider tests (by @marcelveldt in #6860)
+- Smart fades: longer, smoother transitions between tracks that can't be beatmatched (by @marcelveldt in #6861)
+- Ask Last.fm for artist top tracks and similar artists only when the music services have none (by @marcelveldt in #6862)
+- Search music services one at a time when resolving Last.fm recommendations (by @marcelveldt in #6863)
+- Smart fades: only stretch the tempo where both tracks have a beat (by @marcelveldt in #6864)
+- Smart fades: filter out and echo out when two beats don't match (by @marcelveldt in #6867)
+- Reuse nugs.net account details between track starts (by @marcelveldt in #6870)
+- Resolve Last.fm recommendations through MusicBrainz links before searching music services (by @marcelveldt in #6871)
+- Time the AI DJ's talk-over to the version of the song that actually plays (by @marcelveldt in #6874)
+- Give the audio overlay one home in the streams controller (by @marcelveldt in #6875)
+- Read the web interface files without blocking the server at startup (by @marcelveldt in #6879)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Bazooper-blip, @Kiranwin, @chrisuthe, @distante, @dmoo500, @fmunkes, @igray, @jpittelkow, @marcelveldt, @orb9, @trudenboy
+
+
 # [2.11.0.dev2026101003] - 10.10.2026
 
 ## 📦 Nightly Release
@@ -98,33 +206,3 @@ _Changes since [2.11.0.dev2026100814](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @jonasbp2011, @marcelveldt, @trudenboy
-
-
-# [2.11.0.dev2026100814] - 08.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026100803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100803)_
-
-### 🚀 Features and enhancements
-
-- Run manually triggered tasks next in the background task queue (by @OzGav in #6764)
-- Stop network share actions from hanging when the share does not respond (by @marcelveldt in #6766)
-- Don't show "0 MB used" for the data folder on a fresh install (by @marcelveldt in #6777)
-
-### 🐛 Bugfixes
-
-- Update Zvuk Music provider to v1.8.11 (by @trudenboy in #6744)
-- Skip the DSP restart when the player is not playing the queue it would resume (by @mnestrud in #6760)
-- Move non-classical aliases out of the classical genre (by @OzGav in #6761)
-- Hide Sendspin token pairing when a pairing code is available (by @maximmaxim345 in #6768)
-- Fix Sendspin players not marking items played when playback starts near the end (by @maximmaxim345 in #6770)
-- Restrict what the image loader hands to ffmpeg (by @MarvinSchenkel in #6771)
-- Require the Supervisor as peer for Home Assistant Ingress requests (by @MarvinSchenkel in #6772)
-- Show Apple Music names in the user's language (by @MarvinSchenkel in #6775)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @marcelveldt, @maximmaxim345, @mnestrud, @trudenboy
