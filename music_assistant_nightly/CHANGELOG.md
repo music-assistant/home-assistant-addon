@@ -1,3 +1,50 @@
+# [2.11.0.dev2026101203] - 12.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026101103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101103)_
+
+### 🚀 Features and enhancements
+
+- Name the Profiler section in diagnostics like other providers (by @marcelveldt in #6700)
+- Show the OpenSubsonic playlist comment as the playlist description (by @theomega in #6892)
+
+### 🐛 Bugfixes
+
+- Limit the Home Assistant image proxy to entity pictures (by @MarvinSchenkel in #6746)
+- Push Sendspin progress when playback restarts on the same item (by @chrisuthe in #6900)
+
+### 🎨 Frontend Changes
+
+- Show settings save errors only once (by @marcelveldt in [#2958](https://github.com/music-assistant/frontend/pull/2958))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>12 changes</summary>
+
+- Describe smart fades as they work today in the README and settings (by @marcelveldt in #6877)
+- Stop re-reading audiobook chapter files on each Local files sync (by @marcelveldt in #6878)
+- Check that a release image is recognized as official before it is published (by @marcelveldt in #6880)
+- Turn on the lint check for listening on all network interfaces (by @marcelveldt in #6886)
+- Turn on the lint check for non-secure random numbers (by @marcelveldt in #6887)
+- Use lazy log formatting in the core helpers (by @marcelveldt in #6889)
+- Turn on the lint checks for overly complex functions (by @marcelveldt in #6890)
+- Use PKCE when linking Home Assistant during provider setup (by @marcelveldt in #6894)
+- Tidy up method order in the player and music provider models (by @marcelveldt in #6895)
+- Shrink oversized provider icons (by @marcelveldt in #6903)
+- Turn on the lint check for hardcoded passwords (by @marcelveldt in #6904)
+- Turn on the lint check for commented-out code (by @marcelveldt in #6905)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @chrisuthe, @marcelveldt, @theomega
+
+
 # [2.11.0.dev2026101103] - 11.10.2026
 
 ## 📦 Nightly Release
@@ -165,44 +212,3 @@ _Changes since [2.11.0.dev2026100903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @marcelveldt, @pierosavi, @teancom, @trudenboy, @xiasi0
-
-
-# [2.11.0.dev2026100903] - 09.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026100814](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100814)_
-
-### 🚀 Features and enhancements
-
-- Added episode_number property to PodcastEpisode media item in Storytel Provider (by @jonasbp2011 in #6784)
-
-### 🐛 Bugfixes
-
-- Keep hi-res quality for sources that don't report their audio format (by @marcelveldt in #6781)
-- Stop a Sonos from playing music again after the queue has finished (by @marcelveldt in #6782)
-
-### 🎨 Frontend Changes
-
-- Remove unused fallback from remote album art loading (by @marcelveldt in [#2935](https://github.com/music-assistant/frontend/pull/2935))
-- Remove leftover support code for outdated servers (by @marcelveldt in [#2936](https://github.com/music-assistant/frontend/pull/2936))
-- Ask web app users to update an outdated server instead of hiding features (by @marcelveldt in [#2891](https://github.com/music-assistant/frontend/pull/2891))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>5 changes</summary>
-
-- Clarify the Sendspin automatic audio format option (by @marcelveldt in #6720)
-- Bump Yandex Music and KION Music API dependency to 3.2.1 (by @trudenboy in #6774)
-- Keep audio flowing while a crossfade waits for the next track's source (by @marcelveldt in #6783)
-- Remove duplicate mixer stand-ins from the realtime source tests (by @marcelveldt in #6785)
-- Bring the webserver auth README in line with the code (by @marcelveldt in #6786)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@jonasbp2011, @marcelveldt, @trudenboy
