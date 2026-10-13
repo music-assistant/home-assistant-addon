@@ -1,3 +1,90 @@
+# [2.11.0.dev2026101303] - 13.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026101203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101203)_
+
+### 🚀 Features and enhancements
+
+- Play AI Radio shows as Radio stations (by @MarvinSchenkel in #6372)
+- Add an order setting for playing an artist (by @szsolt in #6690)
+- Separate play history from media progress (by @dmoo500 in #6792)
+- Album tracks sort, search and page on the server (by @marcelveldt in #6848)
+- Add search support to the Nugs provider (by @jonesy827 in #6902)
+- Let the AI DJ talk over the intro on Sonos and other gapless players (by @marcelveldt in #6924)
+- Send Home Assistant text-to-speech engines a language they support (by @marcelveldt in #6925)
+- Pause the AI DJ when its speech engine keeps failing (by @marcelveldt in #6927)
+- Apply the different-sample-rates crossfade option to the AI DJ's talk-over (by @marcelveldt in #6933)
+
+### 🐛 Bugfixes
+
+- Release the queue when another app casts to a Chromecast via the Default Media Receiver (by @MarvinSchenkel in #6528)
+- Fix DLNA player showing up twice when the device advertises a relative presentation URL (by @MarvinSchenkel in #6597)
+- Fix Spotify playlists missing from large libraries (by @MarvinSchenkel in #6613)
+- Only accept http(s) URLs and data URIs as builtin item artwork (by @MarvinSchenkel in #6780)
+- Establish default behaviour when playing an artist not in library (by @OzGav in #6795)
+- Show the podcast name as the artist for podcast episodes (by @OzGav in #6838)
+- Stop Apple Music from sending item names to the API as ids (by @Bazooper-blip in #6844)
+- Allow slashes and dots in playlist names (by @OzGav in #6885)
+- Match play_media sort_by to the frontend's track sort (by @OzGav in #6906)
+- Keep downloaded models in the Music Assistant cache dir (by @MarvinSchenkel in #6910)
+- Show the custom Plex poster of a playlist instead of the generated grid (by @MarvinSchenkel in #6911)
+- Report expired YouTube Music cookies instead of missing Premium (by @MarvinSchenkel in #6915)
+- Fix the server running out of memory on large album covers (by @marcelveldt in #6919)
+- Serve original-size JPEG artwork without re-encoding it (by @marcelveldt in #6920)
+- Fix Sendspin players with DSP joining a group out of sync (by @maximmaxim345 in #6921)
+- Fix Patreon podcast feeds blocked by a Cloudflare challenge (by @OzGav in #6922)
+- Bump `aiosendspin` to 10.0.1 to fix audio gaps and sync drift (by @maximmaxim345 in #6923)
+- Fix a track's source being opened for a request the player already gave up on (by @marcelveldt in #6926)
+- Fix updated ESPHome Sendspin speakers reappearing as new players (by @maximmaxim345 in #6928)
+- Fix a Spotify track stalling the queue when Soloist's sign-in fails (by @marcelveldt in #6930)
+
+### 🎨 Frontend Changes
+
+- Add seek back and forward buttons for audiobooks and podcasts (by @OzGav in [#2901](https://github.com/music-assistant/frontend/pull/2901))
+- Play AI Radio shows as radio stations (by @MarvinSchenkel in [#2690](https://github.com/music-assistant/frontend/pull/2690))
+- Show playlist and album length as hours and minutes (by @stvncode in [#2966](https://github.com/music-assistant/frontend/pull/2966))
+- Add a search box to the Add to playlist dialog (by @OzGav in [#2902](https://github.com/music-assistant/frontend/pull/2902))
+- Add server-driven library sorting (by @dmoo500 in [#2928](https://github.com/music-assistant/frontend/pull/2928))
+- Redesign the playlist page (by @stvncode in [#2962](https://github.com/music-assistant/frontend/pull/2962))
+- Reorder and hide the podcast page rows (by @stvncode in [#2964](https://github.com/music-assistant/frontend/pull/2964))
+- Line up list headers with their rows (by @stvncode in [#2965](https://github.com/music-assistant/frontend/pull/2965))
+- Open settings from the audio pipeline popover (by @OzGav in [#2959](https://github.com/music-assistant/frontend/pull/2959))
+- Keep DSP preset badge when toggling DSP on/off (by @OzGav in [#2899](https://github.com/music-assistant/frontend/pull/2899))
+- Play albums and playlists in the order their page shows (by @OzGav in [#2961](https://github.com/music-assistant/frontend/pull/2961))
+- Stop listings from retrying a failed load as fast as it fails (by @Bazooper-blip in [#2953](https://github.com/music-assistant/frontend/pull/2953))
+- Bump @types/node from 26.2.0 to 26.6.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2913](https://github.com/music-assistant/frontend/pull/2913))
+- Add 'sk_SK' to VAR_LANGUAGES in workflow (by @OzGav in [#2960](https://github.com/music-assistant/frontend/pull/2960))
+- Document Tailwind-first styling (by @stvncode in [#2963](https://github.com/music-assistant/frontend/pull/2963))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>13 changes</summary>
+
+- Keep Local files tag, artwork and folder reads inside the source folder (by @marcelveldt in #6881)
+- Keep Local files playback inside the source folder (by @marcelveldt in #6884)
+- Bump aioaudiobookshelf to 0.2.0 (by @fmunkes in #6888)
+- Bump getmac from 0.9.5 to 0.9.6 (by @dependabot[bot] in #6896)
+- Bump pycryptodome from 3.23.0 to 3.24.0 (by @dependabot[bot] in #6897)
+- Bump yoto-api from 4.5.0 to 4.5.1 (by @dependabot[bot] in #6898)
+- Turn on the last two non-strict type checker settings (by @marcelveldt in #6909)
+- Update airplay-cli to v0.5.6 (by @musicassistant-bot[bot] in #6913)
+- Turn on the lint check for raising inside a try block (by @marcelveldt in #6914)
+- Use one shared PKCE helper for all sign-in flows (by @marcelveldt in #6916)
+- Update FastMCP Server provider to v2.2.2 (by @trudenboy in #6917)
+- Fix a child process not being stopped while its output is still being read (by @marcelveldt in #6931)
+- Name the speech engine that actually failed in the AI DJ pause warning (by @marcelveldt in #6936)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Bazooper-blip, @MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @jonesy827, @marcelveldt, @maximmaxim345, @stvncode, @szsolt, @trudenboy, @types
+
+
 # [2.11.0.dev2026101203] - 12.10.2026
 
 ## 📦 Nightly Release
@@ -151,64 +238,3 @@ _Changes since [2.11.0.dev2026101003](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Bazooper-blip, @Kiranwin, @chrisuthe, @distante, @dmoo500, @fmunkes, @igray, @jpittelkow, @marcelveldt, @orb9, @trudenboy
-
-
-# [2.11.0.dev2026101003] - 10.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026100903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026100903)_
-
-### 🚀 Features and enhancements
-
-- Link system settings to their documentation (by @marcelveldt in #6626)
-- Make skipping back in podcasts and audiobooks fast (by @OzGav in #6682)
-
-### 🐛 Bugfixes
-
-- Update KION Music provider to v3.0.12 (by @trudenboy in #5585)
-- Fix album track deduplication for repeated movement titles (by @teancom in #6425)
-- Stop Plex Connect from logging unrelated items in the Plex history (by @MarvinSchenkel in #6705)
-- Qobuz: report playback start when the track actually starts playing (by @marcelveldt in #6711)
-- Speed up the gPodder provider and fix its progress sync (by @fmunkes in #6718)
-- Return an error when sending commands to an unavailable player (by @MarvinSchenkel in #6748)
-- Fix album covers not loading when archive.org is slow or down (by @OzGav in #6787)
-- Fix play doing nothing after the queue's current track was replaced (by @marcelveldt in #6796)
-- Keep a Sonos group playing after the speaker reports a failed track (by @marcelveldt in #6797)
-- Stop play requests from running at the same time on one queue (by @marcelveldt in #6798)
-- Fix play reporting an empty queue when its position is past the last track (by @marcelveldt in #6800)
-
-### 🎨 Frontend Changes
-
-- Show where a Local files source reads its music from (by @marcelveldt in [#2948](https://github.com/music-assistant/frontend/pull/2948))
-- Add a Documentation button to the player settings page (by @marcelveldt in [#2945](https://github.com/music-assistant/frontend/pull/2945))
-- Tidier settings pages with all options in one card (by @marcelveldt in [#2885](https://github.com/music-assistant/frontend/pull/2885))
-- Prevent audio session dropping when paused (by @pierosavi in [#2721](https://github.com/music-assistant/frontend/pull/2721))
-- Keep the floating Save button from covering the last setting (by @marcelveldt in [#2937](https://github.com/music-assistant/frontend/pull/2937))
-- Keep keyboard focus on the menu button after closing a menu (by @marcelveldt in [#2947](https://github.com/music-assistant/frontend/pull/2947))
-- Share how detail pages keep up with item updates (by @OzGav in [#2933](https://github.com/music-assistant/frontend/pull/2933))
-- Remove unused fallback from the Add player group page (by @marcelveldt in [#2941](https://github.com/music-assistant/frontend/pull/2941))
-- Remove unused watcher from the Add player group dialog (by @marcelveldt in [#2940](https://github.com/music-assistant/frontend/pull/2940))
-- Remove unused fallback from the Add player group dialog (by @marcelveldt in [#2939](https://github.com/music-assistant/frontend/pull/2939))
-- Remove unused provider check from the player grouping picker (by @marcelveldt in [#2938](https://github.com/music-assistant/frontend/pull/2938))
-- Re-enable the vue/no-v-html lint rule (by @MarvinSchenkel in [#2930](https://github.com/music-assistant/frontend/pull/2930))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Upgrade QQ Music provider to API 0.8.2 (by @xiasi0 in #6737)
-- Clean up unused code in the login callback page (by @marcelveldt in #6793)
-- Stop saving the album cover into a track's own images (by @marcelveldt in #6794)
-- Keep GITHUB_TOKEN out of the PyPI download step in auto-merge (by @chrisuthe in #6811)
-- Run CI tests in our own base image and split them over parallel jobs (by @marcelveldt in #6814)
-- Tell the settings page which storage location a Local files source uses (by @marcelveldt in #6816)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @marcelveldt, @pierosavi, @teancom, @trudenboy, @xiasi0
