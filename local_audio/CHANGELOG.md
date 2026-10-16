@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.2.0
+
+Built on `sendspin-cli` v0.3.0, and through it `sendspin-cpp` v0.8.0.
+
+- An output that drops out a second time now comes back too. After one
+  recovery the player had no attempts left, so a second PulseAudio restart or
+  unplugged DAC in the same track left it silent until the next track, with
+  nothing in the log to say why. Every outage now gets the full set of
+  attempts.
+- A recovered output no longer jumps ahead by the length of the gap. The player
+  used to count the audio it threw away during an outage as already played, so
+  after recovering it ran early and drifted in and out of sync with the group.
+- A **Music Assistant server** value that is not a valid host, host:port,
+  `ws://` URL or `mdns:` name now stops the app at startup with an error, rather
+  than starting a player that can never connect. The error does not repeat any
+  credentials the value carried.
+
 ## 0.1.13
 
 Built on `sendspin-cli` v0.1.6, and through it `sendspin-cpp` v0.7.2.
