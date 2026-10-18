@@ -1,3 +1,37 @@
+# [2.11.0.dev2026101803] - 18.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026101703](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101703)_
+
+### 🚀 Features and enhancements
+
+- Find the Raumfeld host on the network during setup (by @Simanias in #7024)
+- Add counts for artist listings (by @dmoo500 in #7050)
+- Show the playlist cover on AI Radio shows in the Radio library (by @MarvinSchenkel in #7051)
+- List Sendspin line-ins on their own player (by @maximmaxim345 in #7059)
+- Handle Audiobookshelf author socket events (by @fmunkes in #7069)
+
+### 🐛 Bugfixes
+
+- Don't blame the address when a self-hosted speech server is slow to start (by @marcelveldt in #7005)
+- Keep Sonos playing when it gives up on a slow track (by @marcelveldt in #7026)
+- Update Yandex Station provider to v1.5.23 (by @trudenboy in #7043)
+- Allow setting up Sendspin devices with other servers on the network (by @maximmaxim345 in #7060)
+- Fix similar tracks for originals when remastered versions are kept apart (by @marcelveldt in #7061)
+- Keep the YouTube Music session alive instead of letting the cookie expire (by @bbauti in #7075)
+
+### 🧰 Maintenance and dependency bumps
+
+- Base album loudness and same-album crossfade on where a track was played from (by @marcelveldt in #7062)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Simanias, @bbauti, @dmoo500, @fmunkes, @marcelveldt, @maximmaxim345, @trudenboy
+
+
 # [2.11.0.dev2026101703] - 17.10.2026
 
 ## 📦 Nightly Release
@@ -103,80 +137,3 @@ _Changes since [2.11.0.dev2026101504](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @BeeSouul, @MarvinSchenkel, @chrisuthe, @dmoo500, @marcelveldt, @maximmaxim345, @stvncode, @szsolt, @teancom, @trudenboy
-
-
-# [2.11.0.dev2026101504] - 15.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026101403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101403)_
-
-### 🚀 Features and enhancements
-
-- Playlist tracks and podcast episodes sort, search and page on the server (by @marcelveldt in #6932)
-- Artist and track listings sort, search and page on the server (by @marcelveldt in #6935)
-- Version, genre and browse listings sort, search and page on the server (by @marcelveldt in #6937)
-- Add a setting to choose which source plays (by @marcelveldt in #6978)
-- Play albums from your own streaming account instead of the household's (by @marcelveldt in #6993)
-- Skip unchanged Apple Music library syncs (by @MarvinSchenkel in #6998)
-- Refetch Apple Music playlist tracks only when the playlist changed (by @MarvinSchenkel in #6999)
-- Pick up Apple Music favourites on days the library sync is skipped (by @MarvinSchenkel in #7002)
-- Play albums and playlists in the order their listing shows (by @marcelveldt in #7004)
-
-### 🐛 Bugfixes
-
-- Fix audiobook playback position when repeating flow streams (by @teancom in #6810)
-- Show the full episode description for podcast feeds (by @OzGav in #6908)
-- Fix AirPlay drifting out of sync with Sendspin players (by @maximmaxim345 in #6974)
-- Optimize the Audiobookshelf progress sync and keep its token on the server (by @fmunkes in #6977)
-- Skip album covers Tidal gives as artist pictures (by @OzGav in #6985)
-- Sync the Apple Music library daily instead of every 12 hours (by @MarvinSchenkel in #6986)
-- Cache the Apple Music song check of catalog-less library albums (by @MarvinSchenkel in #6987)
-- Get Apple Music track sync relations from the library listing and count API requests (by @MarvinSchenkel in #6990)
-- Fix YouTube Music podcast tasks failing on a podcast YouTube no longer serves (by @MarvinSchenkel in #6991)
-- Reduce Apple Music rate limiting by sharing the catalog edge cache (by @MarvinSchenkel in #6992)
-- Fail fast on low priority Apple Music requests during a throttle (by @MarvinSchenkel in #6994)
-- Fix Apple Music asking to sign in again when the app token is rejected (by @MarvinSchenkel in #6995)
-- Bump `aiosxm` to 0.3.1 to fix SiriusXM channels that 404 on every segment (by @MizterB in #7001)
-
-### 🎨 Frontend Changes
-
-- Show larger album art over a softly blurred backdrop (by @stvncode in [#2997](https://github.com/music-assistant/frontend/pull/2997))
-- Make the detail page headers fit on phones (by @stvncode in [#2996](https://github.com/music-assistant/frontend/pull/2996))
-- Onboarding smaller UI/UX improvements (by @pierosavi in [#2898](https://github.com/music-assistant/frontend/pull/2898))
-- Link artists and albums in the playlist table, pin the toolbar on phones (by @stvncode in [#2992](https://github.com/music-assistant/frontend/pull/2992))
-- Sign in with Home Assistant on the remote app without an External URL (by @marcelveldt in [#2967](https://github.com/music-assistant/frontend/pull/2967))
-- Refactor ItemsListing and finish library sorting follow-ups (by @dmoo500 in [#2985](https://github.com/music-assistant/frontend/pull/2985))
-- Centre the empty state on listing pages (by @stvncode in [#2988](https://github.com/music-assistant/frontend/pull/2988))
-- Load the first page of library listings while sort options are still loading (by @fmunkes in [#2984](https://github.com/music-assistant/frontend/pull/2984))
-- Let admins pause and resume the setup wizard (by @pierosavi in [#2980](https://github.com/music-assistant/frontend/pull/2980))
-- Show a retry button when a listing fails to load (by @stvncode in [#2989](https://github.com/music-assistant/frontend/pull/2989))
-- Show only one spinner in the Command Center search (by @stvncode in [#2990](https://github.com/music-assistant/frontend/pull/2990))
-- Move the settings, players and providers lists to shadcn-vue (by @pierosavi in [#2986](https://github.com/music-assistant/frontend/pull/2986))
-- Bump actions/setup-node from 7.0.0 to 7.1.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2995](https://github.com/music-assistant/frontend/pull/2995))
-- Bump release-drafter/release-drafter from 7.9.0 to 7.10.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#2994](https://github.com/music-assistant/frontend/pull/2994))
-- Stop the dev server reloading when a page uses a new Vuetify component (by @pierosavi in [#2993](https://github.com/music-assistant/frontend/pull/2993))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>10 changes</summary>
-
-- List all streams controller modules in its README (by @marcelveldt in #6893)
-- Fix a misleading 'Failed to drain the pipes' warning when a process is killed while still being read (by @marcelveldt in #6957)
-- Bump actions/download-artifact from 8.0.1 to 8.0.2 (by @dependabot[bot] in #6979)
-- Bump actions/upload-artifact from 7.0.1 to 7.0.2 (by @dependabot[bot] in #6980)
-- Bump CodSpeedHQ/action from 5.4.0 to 5.4.2 (by @dependabot[bot] in #6981)
-- Update airplay-cli to v0.5.8 (by @musicassistant-bot[bot] in #6984)
-- Clean up redundant code in the MSX Bridge player provider (by @marcelveldt in #6997)
-- Remove unused jump-to-index path from the MSX Bridge provider (by @marcelveldt in #7003)
-- Show sign-in errors in the language of the app (by @marcelveldt in #7006)
-- Update aioslimproto to 3.3.0 (by @MarvinSchenkel in #7007)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @MizterB, @OzGav, @dmoo500, @fmunkes, @marcelveldt, @maximmaxim345, @pierosavi, @stvncode, @teancom
