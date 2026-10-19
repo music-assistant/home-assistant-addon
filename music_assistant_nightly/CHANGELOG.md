@@ -1,3 +1,41 @@
+# [2.11.0.dev2026101903] - 19.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026101803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101803)_
+
+### 🚀 Features and enhancements
+
+- Merge library artists that MusicBrainz shows are the same (by @OzGav in #6988)
+- Control playback started outside Music Assistant on Raumfeld players (by @Simanias in #6989)
+- Unpack only the analysis arrays a bulk reader asks for (by @chrisuthe in #7039)
+- Keep seeded random listing order stable across pages (by @dmoo500 in #7078)
+
+### 🐛 Bugfixes
+
+- Drop the old artist when a local file is moved and retagged (by @OzGav in #6790)
+- Ignore Qobuz artist links without an artist id (by @OzGav in #7066)
+- Fix Plex track artist library lookup (by @NasaGeek in #7072)
+- Pin async-upnp-client 0.49.0 for Raumfeld too (by @Simanias in #7080)
+
+### 🎨 Frontend Changes
+
+- Add server-side listings and typed playback sorting (by @dmoo500 in [#2998](https://github.com/music-assistant/frontend/pull/2998))
+- Add new language options to translations (by @OzGav in [#3012](https://github.com/music-assistant/frontend/pull/3012))
+
+### 🧰 Maintenance and dependency bumps
+
+- Skip the metadata update of an item removed from the library (by @OzGav in #7048)
+- Harden MusicCast rediscovery, zone grouping and player updates (by @fmunkes in #7077)
+- Move more non-classical aliases out of the classical genre (by @OzGav in #7083)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@NasaGeek, @OzGav, @Simanias, @chrisuthe, @dmoo500, @fmunkes
+
+
 # [2.11.0.dev2026101803] - 18.10.2026
 
 ## 📦 Nightly Release
@@ -91,49 +129,3 @@ _Changes since [2.11.0.dev2026101603](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Reznov6896, @Simanias, @chrisuthe, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @pierosavi, @stvncode
-
-
-# [2.11.0.dev2026101603] - 16.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026101504](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101504)_
-
-### 🚀 Features and enhancements
-
-- Keep untouched AI Radio preset hosts in sync with the bundled wording (by @MarvinSchenkel in #6966)
-- Alexa: fast two-way volume for Echo devices (by @szsolt in #7011)
-- Add filters and paging for remaining listings (by @dmoo500 in #7014)
-
-### 🐛 Bugfixes
-
-- Let announcements and providers skip TLS verification for ffmpeg inputs (by @MarvinSchenkel in #6769)
-- Update Yandex Music provider to v3.8.28 (by @trudenboy in #6791)
-- Soundcloud: play tracks only served as AAC (HLS) (by @BeeSouul in #6975)
-- Let a universal player follow the name of its device (by @chrisuthe in #7010)
-- Update MSX Bridge provider to v1.6.5: fix native volume, Search and dynamic playlist playback (by @trudenboy in #7019)
-- Fix remote access retrying the signaling server every 10s when registration is refused (by @MarvinSchenkel in #7020)
-- Name Sendspin inputs after their player (by @maximmaxim345 in #7023)
-- Fix Sendspin pairing option missing after unpair (by @maximmaxim345 in #7027)
-- Keep the AI DJ going when the song before a break fails or is skipped (by @marcelveldt in #7028)
-- Allow Sendspin sources to be used without pairing (by @maximmaxim345 in #7029)
-- Keep the paused position in the Sendspin metadata (by @maximmaxim345 in #7030)
-- Bump `aiosendspin` to 10.1.0 to fix Sendspin players disappearing with multiple servers (by @maximmaxim345 in #7034)
-
-### 🎨 Frontend Changes
-
-- Add space above the featured artists on the playlist page (by @stvncode in [#3005](https://github.com/music-assistant/frontend/pull/3005))
-- Say Play on the player whenever the play button has room (by @stvncode in [#3000](https://github.com/music-assistant/frontend/pull/3000))
-- Show the artwork full width atop detail pages on phones (by @stvncode in [#3001](https://github.com/music-assistant/frontend/pull/3001))
-- Keep AI Radio preset tags on hosts saved from the editor (by @MarvinSchenkel in [#2979](https://github.com/music-assistant/frontend/pull/2979))
-- Show sign-in errors in the language of the app (by @marcelveldt in [#3002](https://github.com/music-assistant/frontend/pull/3002))
-
-### 🧰 Maintenance and dependency bumps
-
-- Log the user that requested playback at INFO level (by @teancom in #7018)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@BeeSouul, @MarvinSchenkel, @chrisuthe, @dmoo500, @marcelveldt, @maximmaxim345, @stvncode, @szsolt, @teancom, @trudenboy
