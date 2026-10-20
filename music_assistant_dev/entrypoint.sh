@@ -151,8 +151,13 @@ if [ "$build_from_source" = true ]; then
         cp "$bundled_app_secrets" /tmp/app_secrets.json
     fi
 
+    # uv builds in TMPDIR, and git dependencies alone outgrow the RAM-backed /tmp on small hosts
+    build_tmp="/data/server-build-tmp"
+    rm -rf "$build_tmp"
+    mkdir -p "$build_tmp"
+
     # Install dependencies from the branch's requirements_all.txt
-    uv pip install \
+    TMPDIR="$build_tmp" uv pip install \
         --no-cache \
         --link-mode=copy \
         -r "$requirements_url"
@@ -161,10 +166,12 @@ if [ "$build_from_source" = true ]; then
     echo ""
 
     # Install server from specified repository
-    uv pip install \
+    TMPDIR="$build_tmp" uv pip install \
         --no-cache \
         --link-mode=copy \
         "$server_url"
+
+    rm -rf "$build_tmp"
 
     if [ -f /tmp/app_secrets.json ]; then
         cp /tmp/app_secrets.json "$bundled_app_secrets"
