@@ -1,3 +1,40 @@
+# [2.11.0.dev2026102203] - 22.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102103)_
+
+### 🚀 Features and enhancements
+
+- Read Kodi artist NFO tags case-insensitively and import type, style, mood and life span (by @OzGav in #7130)
+- Offer the station buttons of a Raumfeld speaker as sources (by @Simanias in #7141)
+
+### 🐛 Bugfixes
+
+- Reconnect Home Assistant after an unexpected listener error (by @ryanmac8 in #6767)
+- Keep AirPlay receivers that share one IP on their own Universal Player (by @MarvinSchenkel in #7100)
+- Pausing Spotify on the Soloist engine from the Spotify app no longer skips the track (by @MarvinSchenkel in #7117)
+- Fix radio metadata updates in groups with protocol-backed leaders (by @teancom in #7129)
+- Fix Home Assistant plugin not recovering after a setup timeout (by @MarvinSchenkel in #7131)
+- Keep Sonic Similarity's "Inspired by recently played" row separate per user (by @MarvinSchenkel in #7133)
+- Fix Endless Mix not playing when seeded by a radio station (by @MarvinSchenkel in #7134)
+- Use AirPlay 2 compatibility mode for a shairport-sync receiver on the MA host (by @MarvinSchenkel in #7135)
+- Let the sample rates of each Raumfeld room be chosen, up to 96 kHz by default (by @Simanias in #7138)
+- Report a play or stop the Raumfeld host rejects (by @Simanias in #7140)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump certifi from 2025.11.12 to 2026.10.19 (by @dependabot[bot] in #7127)
+- Bump pillow from 12.3.0 to 13.0.0 (by @dependabot[bot] in #7128)
+- Update airplay-cli to v0.5.9 (by @musicassistant-bot[bot] in #7137)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Simanias, @ryanmac8, @teancom
+
+
 # [2.11.0.dev2026102103] - 21.10.2026
 
 ## 📦 Nightly Release
@@ -121,41 +158,3 @@ _Changes since [2.11.0.dev2026101903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @DerGary, @MarvinSchenkel, @OzGav, @Simanias, @fmunkes, @jetersen, @marcelveldt, @maximmaxim345, @trudenboy
-
-
-# [2.11.0.dev2026101903] - 19.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026101803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101803)_
-
-### 🚀 Features and enhancements
-
-- Merge library artists that MusicBrainz shows are the same (by @OzGav in #6988)
-- Control playback started outside Music Assistant on Raumfeld players (by @Simanias in #6989)
-- Unpack only the analysis arrays a bulk reader asks for (by @chrisuthe in #7039)
-- Keep seeded random listing order stable across pages (by @dmoo500 in #7078)
-
-### 🐛 Bugfixes
-
-- Drop the old artist when a local file is moved and retagged (by @OzGav in #6790)
-- Ignore Qobuz artist links without an artist id (by @OzGav in #7066)
-- Fix Plex track artist library lookup (by @NasaGeek in #7072)
-- Pin async-upnp-client 0.49.0 for Raumfeld too (by @Simanias in #7080)
-
-### 🎨 Frontend Changes
-
-- Add server-side listings and typed playback sorting (by @dmoo500 in [#2998](https://github.com/music-assistant/frontend/pull/2998))
-- Add new language options to translations (by @OzGav in [#3012](https://github.com/music-assistant/frontend/pull/3012))
-
-### 🧰 Maintenance and dependency bumps
-
-- Skip the metadata update of an item removed from the library (by @OzGav in #7048)
-- Harden MusicCast rediscovery, zone grouping and player updates (by @fmunkes in #7077)
-- Move more non-classical aliases out of the classical genre (by @OzGav in #7083)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@NasaGeek, @OzGav, @Simanias, @chrisuthe, @dmoo500, @fmunkes
