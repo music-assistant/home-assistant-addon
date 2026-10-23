@@ -1,3 +1,38 @@
+# [2.11.0.dev2026102303] - 23.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102203)_
+
+### 🚀 Features and enhancements
+
+- Add statistics API for play history (by @dmoo500 in #5700)
+- Send Thumbs up/down to Pandora stations when clicking favorite/dislike on a track (by @drawsmcgraw in #7068)
+- Follow Raumfeld zone changes and speed up regrouping (by @Simanias in #7079)
+- Offer shuffle and repeat for Raumfeld playback started outside Music Assistant (by @Simanias in #7151)
+
+### 🐛 Bugfixes
+
+- Start a transferred queue at the source's position (by @mnestrud in #7123)
+- Fix flow streams holding back FLAC audio on quiet passages (by @MarvinSchenkel in #7132)
+- Fix web players showing up in Home Assistant while not exposed (by @MarvinSchenkel in #7145)
+- Play a reassigned Raumfeld station button's new item (by @Simanias in #7146)
+- Keep a WiiM seek from moving the queue to the end of the item (by @MarvinSchenkel in #7149)
+- Keep the library when a migration runs out of disk space (by @MarvinSchenkel in #7153)
+- Resume WiiM playback after the firmware restarts the stream on the first group join (by @MarvinSchenkel in #7157)
+- Fix YouTube Music album links without a playlist ID (by @jetersen in #7158)
+
+### 🧰 Maintenance and dependency bumps
+
+- Let the Raumfeld provider's unload wait for its tasks (by @Simanias in #7150)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @Simanias, @dmoo500, @drawsmcgraw, @jetersen, @mnestrud
+
+
 # [2.11.0.dev2026102203] - 22.10.2026
 
 ## 📦 Nightly Release
@@ -97,64 +132,3 @@ _Changes since [2.11.0.dev2026102003](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @CaseyRo, @MarvinSchenkel, @NeptuneHub, @OzGav, @dmoo500, @elcaptain, @fmunkes, @jozefKruszynski, @mnestrud, @pcc0x, @pierosavi, @smellybellyy, @teancom, @types, @vitejs
-
-
-# [2.11.0.dev2026102003] - 20.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026101903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026101903)_
-
-### 🚀 Features and enhancements
-
-- Update Yandex Music Connect to v4.3.13 with linked accounts, AudioSource lifecycle, and queue controls (by @trudenboy in #5589)
-- Require the impersonated user to hold the command's scope (by @fmunkes in #6801)
-- Add folder rule to smart playlists (by @DerGary in #6945)
-- Link genres right away when adding an item to the library (by @OzGav in #7017)
-- Allow including videos in YouTube Music searches (by @jetersen in #7045)
-- Identify artists on MusicBrainz by their top track titles instead of streaming searches (by @OzGav in #7055)
-
-### 🐛 Bugfixes
-
-- Keep the queue position when a stopped player reports a new position (by @MarvinSchenkel in #7022)
-- Fix QueueEmpty error when ungrouping a group leader with DSP enabled (by @MarvinSchenkel in #7035)
-- Fix DSD in WavPack failing analysis due to wrong PCM size (by @MarvinSchenkel in #7041)
-- Launch the Sendspin Cast app before the stream starts (by @Simanias in #7074)
-- Only count album artists of albums in the library (by @OzGav in #7088)
-- Join albums that share a barcode but list different album artists (by @OzGav in #7089)
-- Fix track numbers on multi-disc Tidal albums (by @OzGav in #7090)
-- Fix Genius returning lyrics of the wrong song (by @MarvinSchenkel in #7094)
-- Fix featured artists showing as album artists for Emby (by @MarvinSchenkel in #7095)
-- Fix autoplay queueing the same tracks repeatedly (by @MarvinSchenkel in #7096)
-- Fix Spotify playlist search failing while the shared Spotify client is rate limited (by @MarvinSchenkel in #7097)
-- Keep the Spotify account when reconfiguring during a rate limit (by @MarvinSchenkel in #7098)
-- Report playlist items that could not be added (by @MarvinSchenkel in #7099)
-- Fix local files album artist fallback for album folders in the share root (by @MarvinSchenkel in #7102)
-- Show Aux In as the active source on WiiM devices (by @MarvinSchenkel in #7103)
-- Bump `aiosendspin` to 10.2.1 to fix Opus stutter on ESP32 ESPHome speakers (by @maximmaxim345 in #7105)
-
-### 🎨 Frontend Changes
-
-- Add folder rule to the smart playlist editor (by @DerGary in [#2970](https://github.com/music-assistant/frontend/pull/2970))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- Bump actions/create-github-app-token from 3.2.0 to 3.3.0 (by @dependabot[bot] in #7042)
-- Base album play counts on where a track was played from (by @marcelveldt in #7073)
-- Bump hass-client from 1.4.0 to 1.4.1 in the music-assistant-libs group (by @dependabot[bot] in #7084)
-- Bump numkong from 7.8.3 to 7.8.5 (by @dependabot[bot] in #7085)
-- Bump audible from 0.10.0 to 0.13.0 (by @dependabot[bot] in #7086)
-- Bump wiim from 0.1.9 to 0.3.1 (by @dependabot[bot] in #7087)
-- Fix the queue position tests failing on dev (by @MarvinSchenkel in #7104)
-- Share UPnP AVTransport requests between MusicCast and Bose SoundTouch (by @fmunkes in #7107)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@DerGary, @MarvinSchenkel, @OzGav, @Simanias, @fmunkes, @jetersen, @marcelveldt, @maximmaxim345, @trudenboy
