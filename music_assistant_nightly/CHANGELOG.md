@@ -1,3 +1,26 @@
+# [2.11.0.dev2026102504] - 25.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102403)_
+
+### 🚀 New Providers
+
+- Add WLED Audio Sync plugin provider (by @netmindz in #5537)
+
+### 🐛 Bugfixes
+
+- Play a Raumfeld group at a sample rate each of its rooms plays (by @Simanias in #7148)
+- Give the Raumfeld host 10 s and three tries before dropping the connection (by @culmat in #7171)
+- Fix Nicovideo playback and track details after the watch API change (by @Shi-553 in #7184)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Shi-553, @Simanias, @culmat, @netmindz
+
+
 # [2.11.0.dev2026102403] - 24.10.2026
 
 ## 📦 Nightly Release
@@ -57,40 +80,3 @@ _Changes since [2.11.0.dev2026102203](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @Simanias, @dmoo500, @drawsmcgraw, @jetersen, @mnestrud
-
-
-# [2.11.0.dev2026102203] - 22.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026102103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102103)_
-
-### 🚀 Features and enhancements
-
-- Read Kodi artist NFO tags case-insensitively and import type, style, mood and life span (by @OzGav in #7130)
-- Offer the station buttons of a Raumfeld speaker as sources (by @Simanias in #7141)
-
-### 🐛 Bugfixes
-
-- Reconnect Home Assistant after an unexpected listener error (by @ryanmac8 in #6767)
-- Keep AirPlay receivers that share one IP on their own Universal Player (by @MarvinSchenkel in #7100)
-- Pausing Spotify on the Soloist engine from the Spotify app no longer skips the track (by @MarvinSchenkel in #7117)
-- Fix radio metadata updates in groups with protocol-backed leaders (by @teancom in #7129)
-- Fix Home Assistant plugin not recovering after a setup timeout (by @MarvinSchenkel in #7131)
-- Keep Sonic Similarity's "Inspired by recently played" row separate per user (by @MarvinSchenkel in #7133)
-- Fix Endless Mix not playing when seeded by a radio station (by @MarvinSchenkel in #7134)
-- Use AirPlay 2 compatibility mode for a shairport-sync receiver on the MA host (by @MarvinSchenkel in #7135)
-- Let the sample rates of each Raumfeld room be chosen, up to 96 kHz by default (by @Simanias in #7138)
-- Report a play or stop the Raumfeld host rejects (by @Simanias in #7140)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump certifi from 2025.11.12 to 2026.10.19 (by @dependabot[bot] in #7127)
-- Bump pillow from 12.3.0 to 13.0.0 (by @dependabot[bot] in #7128)
-- Update airplay-cli to v0.5.9 (by @musicassistant-bot[bot] in #7137)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Simanias, @ryanmac8, @teancom
