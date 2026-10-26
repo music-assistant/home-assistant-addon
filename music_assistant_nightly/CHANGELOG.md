@@ -1,3 +1,49 @@
+# [2.11.0.dev2026102604] - 26.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102504](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102504)_
+
+### 🚀 New Providers
+
+- Add FIP provider with live song details for FIP and its webradios (by @culmat in #7182)
+- Add a Local metadata provider for a Kodi style artist information folder (by @OzGav in #7190)
+
+### 🚀 Features and enhancements
+
+- Let a Raumfeld group restart its stream when a room joins (by @Simanias in #7179)
+- Keep the Raumfeld renderers' UPnP actions, so switching stations starts a second sooner (by @culmat in #7198)
+
+### 🐛 Bugfixes
+
+- Don't fail HEOS setup when one device's inputs can't be browsed (by @OzGav in #7114)
+- Stop pushing metadata to legacy AirPlay receivers that advertise none (by @OzGav in #7168)
+- Report no song position for a stream that gives its song's duration but no position (by @culmat in #7187)
+- Show the station image when a Live365 station has no track cover (by @OzGav in #7188)
+- Raumfeld: don't poll a room the host no longer lists (by @Simanias in #7194)
+- Chromecast: offer a cast app the controls it can take (by @Simanias in #7196)
+- Tell Music Assistant FIP's streams are 48 kHz, so they are not resampled twice (by @culmat in #7197)
+- Skip sonic analysis for audiobooks, podcasts and radio (by @OzGav in #7199)
+
+### 🎨 Frontend Changes
+
+- Bump zod from 4.6.5 to 4.6.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3045](https://github.com/music-assistant/frontend/pull/3045))
+- Bump dompurify from 3.4.16 to 3.4.17 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3044](https://github.com/music-assistant/frontend/pull/3044))
+- Bump @vitest/ui from 5.0.0 to 5.0.5 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3043](https://github.com/music-assistant/frontend/pull/3043))
+
+### 🧰 Maintenance and dependency bumps
+
+- Share the login and SSL config keys across providers (by @afeldman1 in #7177)
+- Add documentation link to MusicBrainz manifest (by @OzGav in #7189)
+- Bump aiosonos from 0.1.14 to 0.1.15 in the music-assistant-libs group (by @dependabot[bot] in #7205)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @Simanias, @afeldman1, @culmat, @vitest
+
+
 # [2.11.0.dev2026102504] - 25.10.2026
 
 ## 📦 Nightly Release
@@ -45,38 +91,3 @@ _Changes since [2.11.0.dev2026102303](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @caraar12345, @fmunkes, @maximmaxim345
-
-
-# [2.11.0.dev2026102303] - 23.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026102203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102203)_
-
-### 🚀 Features and enhancements
-
-- Add statistics API for play history (by @dmoo500 in #5700)
-- Send Thumbs up/down to Pandora stations when clicking favorite/dislike on a track (by @drawsmcgraw in #7068)
-- Follow Raumfeld zone changes and speed up regrouping (by @Simanias in #7079)
-- Offer shuffle and repeat for Raumfeld playback started outside Music Assistant (by @Simanias in #7151)
-
-### 🐛 Bugfixes
-
-- Start a transferred queue at the source's position (by @mnestrud in #7123)
-- Fix flow streams holding back FLAC audio on quiet passages (by @MarvinSchenkel in #7132)
-- Fix web players showing up in Home Assistant while not exposed (by @MarvinSchenkel in #7145)
-- Play a reassigned Raumfeld station button's new item (by @Simanias in #7146)
-- Keep a WiiM seek from moving the queue to the end of the item (by @MarvinSchenkel in #7149)
-- Keep the library when a migration runs out of disk space (by @MarvinSchenkel in #7153)
-- Resume WiiM playback after the firmware restarts the stream on the first group join (by @MarvinSchenkel in #7157)
-- Fix YouTube Music album links without a playlist ID (by @jetersen in #7158)
-
-### 🧰 Maintenance and dependency bumps
-
-- Let the Raumfeld provider's unload wait for its tasks (by @Simanias in #7150)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @Simanias, @dmoo500, @drawsmcgraw, @jetersen, @mnestrud
