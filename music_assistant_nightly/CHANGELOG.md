@@ -1,3 +1,42 @@
+# [2.11.0.dev2026102704] - 27.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102604](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102604)_
+
+### 🚀 Features and enhancements
+
+- Move YouSee Musik onto the shared 24-7 code (by @OzGav in #7192)
+- Raumfeld: restart at once for a joined room that cannot hook into the stream (by @Simanias in #7214)
+- Update Yandex Station provider to v1.5.24: option to stop mirroring Station volume to the intercept target (by @trudenboy in #7215)
+- Raumfeld: default ICY metadata to basic (by @Simanias in #7218)
+- Explain missing line-in autostart on Sendspin devices (by @maximmaxim345 in #7225)
+- Update ABC Radio Network Provider to support multiple states in Australia (by @genesispc in #7226)
+
+### 🐛 Bugfixes
+
+- Handle Sonos coordinator moves, session takeovers and announcement clip status (by @mnestrud in #6779)
+- Fix Qobuz performer names, paging and artists known only by name (by @OzGav in #7211)
+
+### 🎨 Frontend Changes
+
+- Avoid background refresh to clear the name field in MusicQuiz (by @TimoPtr in [#2944](https://github.com/music-assistant/frontend/pull/2944))
+- Stop detail pages flashing while an item is refreshed (by @OzGav in [#3048](https://github.com/music-assistant/frontend/pull/3048))
+- Bump happy-dom from 20.11.6 to 21.0.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3046](https://github.com/music-assistant/frontend/pull/3046))
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump pytest-cov from 7.0.0 to 7.1.0 (by @dependabot[bot] in #7206)
+- Bump soco from 0.31.2 to 0.32.0 (by @dependabot[bot] in #7207)
+- Bump fastmcp from 4.1.0 to 4.1.3 (by @dependabot[bot] in #7208)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @Simanias, @TimoPtr, @genesispc, @maximmaxim345, @mnestrud, @trudenboy
+
+
 # [2.11.0.dev2026102604] - 26.10.2026
 
 ## 📦 Nightly Release
@@ -65,29 +104,3 @@ _Changes since [2.11.0.dev2026102403](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Shi-553, @Simanias, @culmat, @netmindz
-
-
-# [2.11.0.dev2026102403] - 24.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026102303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102303)_
-
-### 🐛 Bugfixes
-
-- Stop a Sendspin player reporting a position ahead of what it is playing (by @caraar12345 in #6345)
-- Fix short dropouts on SiriusXM and other HLS radio (by @MarvinSchenkel in #7139)
-- Stop cutting off YouTube Music and Spotify Soloist tracks on AirPlay in Sendspin groups (by @maximmaxim345 in #7160)
-- Bump aioaudiobookshelf to 0.2.1 (by @fmunkes in #7161)
-- Stop exposing the Jellyfin access token to API clients (by @MarvinSchenkel in #7164)
-- Fix Apple Music failing to load with an expired stored app token (by @MarvinSchenkel in #7165)
-
-### 🧰 Maintenance and dependency bumps
-
-- Stop the backport workflow from skipping a labelled PR merged seconds earlier (by @MarvinSchenkel in #7167)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @caraar12345, @fmunkes, @maximmaxim345
