@@ -1,3 +1,51 @@
+# [2.11.0.dev2026102904] - 29.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102804](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102804)_
+
+### 🚀 New Providers
+
+- Add BookOrbit audiobook music provider (by @justinwoodland in #7009)
+
+### 🚀 Features and enhancements
+
+- Identify more tracks on MusicBrainz by their ISRC (by @OzGav in #7261)
+
+### 🐛 Bugfixes
+
+- Keep a track's length after its queue moves to another player (by @Simanias in #7136)
+- Keep a Universal Player's id when a stale native player claims its protocol (by @MarvinSchenkel in #7156)
+- Fix Apple Music track lookup for library IDs (by @anthonws in #7203)
+- Fix a restarted Squeezelite group member staying silent (by @MarvinSchenkel in #7264)
+- Stop showing a disconnected player's queue as playing (by @MarvinSchenkel in #7265)
+- Fix WiiM position not updating for up to 30 s after playback starts (by @MarvinSchenkel in #7266)
+- Fix Snapcast timing with an external Snapserver (by @MarvinSchenkel in #7267)
+- Release a disconnected player's prepared audio and pending next-track work (by @MarvinSchenkel in #7268)
+- Fix Snapcast playing the old track for seconds after next (by @MarvinSchenkel in #7269)
+- Show the TV input as the active source when a WiiM switches away from MA (by @GoatsAndMonkeys in #7270)
+- Send album art to Home Assistant DLNA players (by @GoatsAndMonkeys in #7272)
+- Fix Snapcast elapsed time after a native announcement (by @MarvinSchenkel in #7275)
+- Fix Squeezelite group skipping the playing track after an announcement on a member (by @MarvinSchenkel in #7276)
+- Fix resume restarting the track after a longer pause on players without native pause (by @MarvinSchenkel in #7277)
+- Stop the Snapcast queue when its player goes unavailable (by @MarvinSchenkel in #7284)
+
+### 🎨 Frontend Changes
+
+- Show library sort, view and filters in the title bar (by @stvncode in [#3065](https://github.com/music-assistant/frontend/pull/3065))
+- Load list items before they enter the viewport (by @NasaGeek in [#3068](https://github.com/music-assistant/frontend/pull/3068))
+- Show Live instead of a position for a stopped radio stream (by @pierosavi in [#3070](https://github.com/music-assistant/frontend/pull/3070))
+- Fade the mobile album artwork into black above the title (by @stvncode in [#3069](https://github.com/music-assistant/frontend/pull/3069))
+- Give the warning colour and slider their own theme tokens (by @pierosavi in [#3071](https://github.com/music-assistant/frontend/pull/3071))
+- Stop reading Vuetify's theme state (by @pierosavi in [#3067](https://github.com/music-assistant/frontend/pull/3067))
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GoatsAndMonkeys, @MarvinSchenkel, @NasaGeek, @OzGav, @Simanias, @anthonws, @justinwoodland, @pierosavi, @stvncode
+
+
 # [2.11.0.dev2026102804] - 28.10.2026
 
 ## 📦 Nightly Release
@@ -104,49 +152,3 @@ _Changes since [2.11.0.dev2026102604](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @Simanias, @TimoPtr, @genesispc, @maximmaxim345, @mnestrud, @trudenboy
-
-
-# [2.11.0.dev2026102604] - 26.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026102504](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102504)_
-
-### 🚀 New Providers
-
-- Add FIP provider with live song details for FIP and its webradios (by @culmat in #7182)
-- Add a Local metadata provider for a Kodi style artist information folder (by @OzGav in #7190)
-
-### 🚀 Features and enhancements
-
-- Let a Raumfeld group restart its stream when a room joins (by @Simanias in #7179)
-- Keep the Raumfeld renderers' UPnP actions, so switching stations starts a second sooner (by @culmat in #7198)
-
-### 🐛 Bugfixes
-
-- Don't fail HEOS setup when one device's inputs can't be browsed (by @OzGav in #7114)
-- Stop pushing metadata to legacy AirPlay receivers that advertise none (by @OzGav in #7168)
-- Report no song position for a stream that gives its song's duration but no position (by @culmat in #7187)
-- Show the station image when a Live365 station has no track cover (by @OzGav in #7188)
-- Raumfeld: don't poll a room the host no longer lists (by @Simanias in #7194)
-- Chromecast: offer a cast app the controls it can take (by @Simanias in #7196)
-- Tell Music Assistant FIP's streams are 48 kHz, so they are not resampled twice (by @culmat in #7197)
-- Skip sonic analysis for audiobooks, podcasts and radio (by @OzGav in #7199)
-
-### 🎨 Frontend Changes
-
-- Bump zod from 4.6.5 to 4.6.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3045](https://github.com/music-assistant/frontend/pull/3045))
-- Bump dompurify from 3.4.16 to 3.4.17 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3044](https://github.com/music-assistant/frontend/pull/3044))
-- Bump @vitest/ui from 5.0.0 to 5.0.5 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3043](https://github.com/music-assistant/frontend/pull/3043))
-
-### 🧰 Maintenance and dependency bumps
-
-- Share the login and SSL config keys across providers (by @afeldman1 in #7177)
-- Add documentation link to MusicBrainz manifest (by @OzGav in #7189)
-- Bump aiosonos from 0.1.14 to 0.1.15 in the music-assistant-libs group (by @dependabot[bot] in #7205)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @Simanias, @afeldman1, @culmat, @vitest
