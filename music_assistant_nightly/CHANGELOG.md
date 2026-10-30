@@ -1,3 +1,47 @@
+# [2.11.0.dev2026103004] - 30.10.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026102904](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102904)_
+
+### 🚀 Features and enhancements
+
+- Compute the metadata of collapsed collections over all their items (by @fmunkes in #7170)
+- Update Yandex Station provider to v1.7.9: Alice speech API commands and report-driven playback state (by @trudenboy in #7242)
+- Match an album's tracks to MusicBrainz in order when the whole album lines up (by @OzGav in #7262)
+- Return every bucket in plays over time (by @stvncode in #7282)
+- Return the artist with each listening time result (by @stvncode in #7283)
+- Show song details from Italian RadioMediaset radio stations (by @OzGav in #7297)
+
+### 🐛 Bugfixes
+
+- Run tini as PID 1 so orphaned child processes are reaped (by @cateim in #7191)
+- Follow artists and albums MusicBrainz merged into others (by @OzGav in #7212)
+- Stop the MusicBrainz link run reporting merged items as failed (by @OzGav in #7248)
+- Offer overlay volumes of a container as media locations (by @GoatsAndMonkeys in #7258)
+- Fix NetEase Cloud Music bitrate unit (bps to kbps) (by @lcisconl in #7263)
+- Improve Listenbrainz_scrobble setup failure handling (by @Tommatheussen in #7279)
+- Fix squeezelite position jumping ahead after resume or seek (by @MarvinSchenkel in #7280)
+
+### 🎨 Frontend Changes
+
+- Merge thumbs view compact into thumbs view (by @pierosavi in [#2926](https://github.com/music-assistant/frontend/pull/2926))
+- Add statistics and charts to discover page (by @dmoo500 in [#2526](https://github.com/music-assistant/frontend/pull/2526))
+- Keep the mobile search usable on short screens (by @pierosavi in [#3077](https://github.com/music-assistant/frontend/pull/3077))
+- Turn off the Vitest module cache that breaks Vuetify styles on reruns (by @stvncode in [#3078](https://github.com/music-assistant/frontend/pull/3078))
+- Share the detail section title (by @OzGav in [#3075](https://github.com/music-assistant/frontend/pull/3075))
+
+### 🧰 Maintenance and dependency bumps
+
+- Let the critical-review gate act on Bot-MArley's findings (by @chrisuthe in #7300)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GoatsAndMonkeys, @MarvinSchenkel, @OzGav, @Tommatheussen, @cateim, @chrisuthe, @dmoo500, @fmunkes, @lcisconl, @pierosavi, @stvncode, @trudenboy
+
+
 # [2.11.0.dev2026102904] - 29.10.2026
 
 ## 📦 Nightly Release
@@ -113,42 +157,3 @@ _Changes since [2.11.0.dev2026102704](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @GoatsAndMonkeys, @MarvinSchenkel, @Simanias, @apophisnow, @arturpragacz, @culmat, @fmunkes, @imoamo72, @lucide, @maximmaxim345, @pierosavi, @trudenboy, @vitest
-
-
-# [2.11.0.dev2026102704] - 27.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026102604](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102604)_
-
-### 🚀 Features and enhancements
-
-- Move YouSee Musik onto the shared 24-7 code (by @OzGav in #7192)
-- Raumfeld: restart at once for a joined room that cannot hook into the stream (by @Simanias in #7214)
-- Update Yandex Station provider to v1.5.24: option to stop mirroring Station volume to the intercept target (by @trudenboy in #7215)
-- Raumfeld: default ICY metadata to basic (by @Simanias in #7218)
-- Explain missing line-in autostart on Sendspin devices (by @maximmaxim345 in #7225)
-- Update ABC Radio Network Provider to support multiple states in Australia (by @genesispc in #7226)
-
-### 🐛 Bugfixes
-
-- Handle Sonos coordinator moves, session takeovers and announcement clip status (by @mnestrud in #6779)
-- Fix Qobuz performer names, paging and artists known only by name (by @OzGav in #7211)
-
-### 🎨 Frontend Changes
-
-- Avoid background refresh to clear the name field in MusicQuiz (by @TimoPtr in [#2944](https://github.com/music-assistant/frontend/pull/2944))
-- Stop detail pages flashing while an item is refreshed (by @OzGav in [#3048](https://github.com/music-assistant/frontend/pull/3048))
-- Bump happy-dom from 20.11.6 to 21.0.4 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3046](https://github.com/music-assistant/frontend/pull/3046))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump pytest-cov from 7.0.0 to 7.1.0 (by @dependabot[bot] in #7206)
-- Bump soco from 0.31.2 to 0.32.0 (by @dependabot[bot] in #7207)
-- Bump fastmcp from 4.1.0 to 4.1.3 (by @dependabot[bot] in #7208)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @Simanias, @TimoPtr, @genesispc, @maximmaxim345, @mnestrud, @trudenboy
