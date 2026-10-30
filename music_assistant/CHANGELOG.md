@@ -1,3 +1,49 @@
+# [2.10.9] - 30.10.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.8](https://github.com/music-assistant/server/releases/tag/2.10.8)_
+
+### 🚀 Features and enhancements
+
+- Auto pair Sendspin clients through Home Assistant (by @arturpragacz in #7181)
+
+### 🐛 Bugfixes
+
+- Don't fail HEOS setup when one device's inputs can't be browsed (by @OzGav in #7114)
+- Keep a track's length after its queue moves to another player (by @Simanias in #7136)
+- Keep a Universal Player's id when a stale native player claims its protocol (by @MarvinSchenkel in #7156)
+- Stop pushing metadata to legacy AirPlay receivers that advertise none (by @OzGav in #7168)
+- Report no song position for a stream that gives its song's duration but no position (by @culmat in #7187)
+- Show the station image when a Live365 station has no track cover (by @OzGav in #7188)
+- Chromecast: offer a cast app the controls it can take (by @Simanias in #7196)
+- Skip sonic analysis for audiobooks, podcasts and radio (by @OzGav in #7199)
+- Fix Qobuz performer names, paging and artists known only by name (by @OzGav in #7211)
+- Fix adding library audiobooks to builtin playlists (by @fmunkes in #7241)
+- Fix Spotify on Soloist stopping the queue at the end of every track (by @MarvinSchenkel in #7244)
+- Pick the Cast HTTP profile default per receiver model (by @MarvinSchenkel in #7245)
+- Fix disconnected players showing as available and playing (by @MarvinSchenkel in #7249)
+- Fix Snapcast queue not advancing to the next track (by @MarvinSchenkel in #7250)
+- Fix Snapcast skipping music during an announcement (by @MarvinSchenkel in #7252)
+- Fix Snapcast cutting off the end of short announcements (by @MarvinSchenkel in #7253)
+- Fix Snapcast playing old audio when replaying after a stop (by @MarvinSchenkel in #7254)
+- Fix a restarted Squeezelite group member staying silent (by @MarvinSchenkel in #7264)
+- Stop showing a disconnected player's queue as playing (by @MarvinSchenkel in #7265)
+- Fix WiiM position not updating for up to 30 s after playback starts (by @MarvinSchenkel in #7266)
+- Fix Snapcast playing the old track for seconds after next (by @MarvinSchenkel in #7269)
+- Fix Snapcast elapsed time after a native announcement (by @MarvinSchenkel in #7275)
+- Fix Squeezelite group skipping the playing track after an announcement on a member (by @MarvinSchenkel in #7276)
+- Fix resume restarting the track after a longer pause on players without native pause (by @MarvinSchenkel in #7277)
+- Fix squeezelite position jumping ahead after resume or seek (by @MarvinSchenkel in #7280)
+- Stop the Snapcast queue when its player goes unavailable (by @MarvinSchenkel in #7284)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Simanias, @arturpragacz, @culmat, @fmunkes
+
+
 # [2.10.8] - 23.10.2026
 
 ## 📦 Stable Release
@@ -149,55 +195,3 @@ _Changes since [2.10.6](https://github.com/music-assistant/server/releases/tag/2
 Special thanks to the following contributors who helped with this release:
 
 @Bazooper-blip, @BeeSouul, @MarvinSchenkel, @OzGav, @Simanias, @chrisuthe, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @orb9, @teancom, @thatcoleyouknow
-
-
-# [2.10.6] - 09.10.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.5](https://github.com/music-assistant/server/releases/tag/2.10.5)_
-
-### 🚀 Features and enhancements
-
-- Run manually triggered tasks next in the background task queue (by @OzGav in #6764)
-
-### 🐛 Bugfixes
-
-- Fix queue stalling after one track when current item is briefly unset (by @bcl79 in #6110)
-- Pause, resume and skip Spotify Connect on DLNA speakers (by @MarvinSchenkel in #6609)
-- Keep HEOS players playing while they restart on a new stream (by @MarvinSchenkel in #6611)
-- Fix parsing of artists in YouTube Music recommendations (by @NasaGeek in #6677)
-- Pick provider mappings by availability and priority in _select_provider_id (stable) (by @OzGav in #6679)
-- Stop placeholder ISRCs from merging unrelated tracks (by @OzGav in #6691)
-- Keep the last played position when a player pauses (by @fmunkes in #6693)
-- Stop Apple Music from adding empty duplicates of albums that lack a catalog link (by @MarvinSchenkel in #6702)
-- Fix sync group picking a lights-only member as leader (by @MarvinSchenkel in #6707)
-- Play Sendspin audio at the music's own sample rate (by @marcelveldt in #6709)
-- Drop thumbnails from YouTube Music less frequently (by @NasaGeek in #6721)
-- Keep favorite tracks of multiple Tidal accounts apart in the library (by @MarvinSchenkel in #6726)
-- Fix audiobooks not starting when resuming deep into a long mp3 (by @MarvinSchenkel in #6727)
-- Fix personalized NetEase endpoints returning wrong data on some NCM API backends (by @Kiranwin in #6730)
-- Revoke guest access when the party or music quiz plugin is disabled (by @MarvinSchenkel in #6747)
-- Bind the playlog lookup parameters (by @MarvinSchenkel in #6751)
-- Deezer: Fix Family profiles showing the admin's library (by @jdaberkow in #6753)
-- Refuse CIFS usernames and shares that would add mount options (by @MarvinSchenkel in #6756)
-- Fix Sendspin players not marking items played when playback starts near the end (by @maximmaxim345 in #6770)
-- Restrict what the image loader hands to ffmpeg (by @MarvinSchenkel in #6771)
-- Require the Supervisor as peer for Home Assistant Ingress requests (by @MarvinSchenkel in #6772)
-- Show Apple Music names in the user's language (by @MarvinSchenkel in #6775)
-- Stop a Sonos from playing music again after the queue has finished (by @marcelveldt in #6782)
-- Fix album covers not loading when archive.org is slow or down (by @OzGav in #6787)
-
-### Other Changes
-
-- Only allow releases to be started from the dev branch (stable) (by @marcelveldt in #6674)
-
-### 🧰 Maintenance and dependency bumps
-
-- Fix release notes listing changes that did not ship in a stable patch release (by @marcelveldt in #6672)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Kiranwin, @MarvinSchenkel, @NasaGeek, @OzGav, @bcl79, @fmunkes, @jdaberkow, @marcelveldt, @maximmaxim345
