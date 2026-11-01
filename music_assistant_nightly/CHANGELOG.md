@@ -1,3 +1,25 @@
+# [2.11.0.dev2026110104] - 01.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026103104](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026103104)_
+
+### 🚀 Features and enhancements
+
+- Jellyfin replaygain tags (by @Florin-Popescu in #4784)
+- Add a Qobuz Discover row with new releases from your favorite artists (by @RobinFrcd in #7317)
+
+### 🐛 Bugfixes
+
+- Fill in a track's recording codes when it is refreshed (by @OzGav in #7302)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Florin-Popescu, @OzGav, @RobinFrcd
+
+
 # [2.11.0.dev2026103104] - 31.10.2026
 
 ## 📦 Nightly Release
@@ -65,51 +87,3 @@ _Changes since [2.11.0.dev2026102904](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @GoatsAndMonkeys, @MarvinSchenkel, @OzGav, @Tommatheussen, @cateim, @chrisuthe, @dmoo500, @fmunkes, @lcisconl, @pierosavi, @stvncode, @trudenboy
-
-
-# [2.11.0.dev2026102904] - 29.10.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026102804](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026102804)_
-
-### 🚀 New Providers
-
-- Add BookOrbit audiobook music provider (by @justinwoodland in #7009)
-
-### 🚀 Features and enhancements
-
-- Identify more tracks on MusicBrainz by their ISRC (by @OzGav in #7261)
-
-### 🐛 Bugfixes
-
-- Keep a track's length after its queue moves to another player (by @Simanias in #7136)
-- Keep a Universal Player's id when a stale native player claims its protocol (by @MarvinSchenkel in #7156)
-- Fix Apple Music track lookup for library IDs (by @anthonws in #7203)
-- Fix a restarted Squeezelite group member staying silent (by @MarvinSchenkel in #7264)
-- Stop showing a disconnected player's queue as playing (by @MarvinSchenkel in #7265)
-- Fix WiiM position not updating for up to 30 s after playback starts (by @MarvinSchenkel in #7266)
-- Fix Snapcast timing with an external Snapserver (by @MarvinSchenkel in #7267)
-- Release a disconnected player's prepared audio and pending next-track work (by @MarvinSchenkel in #7268)
-- Fix Snapcast playing the old track for seconds after next (by @MarvinSchenkel in #7269)
-- Show the TV input as the active source when a WiiM switches away from MA (by @GoatsAndMonkeys in #7270)
-- Send album art to Home Assistant DLNA players (by @GoatsAndMonkeys in #7272)
-- Fix Snapcast elapsed time after a native announcement (by @MarvinSchenkel in #7275)
-- Fix Squeezelite group skipping the playing track after an announcement on a member (by @MarvinSchenkel in #7276)
-- Fix resume restarting the track after a longer pause on players without native pause (by @MarvinSchenkel in #7277)
-- Stop the Snapcast queue when its player goes unavailable (by @MarvinSchenkel in #7284)
-
-### 🎨 Frontend Changes
-
-- Show library sort, view and filters in the title bar (by @stvncode in [#3065](https://github.com/music-assistant/frontend/pull/3065))
-- Load list items before they enter the viewport (by @NasaGeek in [#3068](https://github.com/music-assistant/frontend/pull/3068))
-- Show Live instead of a position for a stopped radio stream (by @pierosavi in [#3070](https://github.com/music-assistant/frontend/pull/3070))
-- Fade the mobile album artwork into black above the title (by @stvncode in [#3069](https://github.com/music-assistant/frontend/pull/3069))
-- Give the warning colour and slider their own theme tokens (by @pierosavi in [#3071](https://github.com/music-assistant/frontend/pull/3071))
-- Stop reading Vuetify's theme state (by @pierosavi in [#3067](https://github.com/music-assistant/frontend/pull/3067))
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@GoatsAndMonkeys, @MarvinSchenkel, @NasaGeek, @OzGav, @Simanias, @anthonws, @justinwoodland, @pierosavi, @stvncode
