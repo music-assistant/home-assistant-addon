@@ -13,6 +13,7 @@ hassio_api: true
 hassio_role: manager
 discovery:
   - music_assistant
+  - mcp
 auth_api: true
 host_network: true
 ingress: true
