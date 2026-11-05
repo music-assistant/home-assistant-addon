@@ -20,7 +20,7 @@ audio: true
 panel_icon: mdi:music-assistant
 panel_title: Music Assistant
 panel_admin: false
-uart: false
+uart: true
 apparmor: true
 map:
   - media:rw
