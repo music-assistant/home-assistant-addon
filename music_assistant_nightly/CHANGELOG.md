@@ -1,3 +1,45 @@
+# [2.11.0.dev2026110704] - 07.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026110604](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110604)_
+
+### 🚀 Features and enhancements
+
+- Update metadata now replaces outdated details (by @OzGav in #7338)
+- Raumfeld: call the speakers and the host's web service without hassfeld (by @Simanias in #7367)
+- Allow smart playlists to exclude favorites (by @dmoo500 in #7372)
+- Offer this device as the Music Quiz venue player (by @marcelveldt in #7417)
+
+### 🐛 Bugfixes
+
+- Time out hanging MAC address lookups (by @OzGav in #7346)
+- Fix Sendspin output staying unavailable on some AirPlay and Cast speakers (by @maximmaxim345 in #7357)
+- Start at 0:00 when seeking to the start of an audiobook or episode (by @fmunkes in #7363)
+- Keep Spotify playing after a speaker drops a track instead of skipping through the queue (by @marcelveldt in #7409)
+- Don't store a disabled state for providers that can't be disabled (by @marcelveldt in #7414)
+- Recognize the browser's own web player when opened from the Home Assistant sidebar (by @marcelveldt in #7418)
+
+### 🎨 Frontend Changes
+
+- Play the Music Quiz on the device that shows it (by @marcelveldt in [#3124](https://github.com/music-assistant/frontend/pull/3124))
+- Let admins view the statistics of other or all users (by @fmunkes in [#3112](https://github.com/music-assistant/frontend/pull/3112))
+- Recognize this browser's web player when opened from the Home Assistant sidebar (by @marcelveldt in [#3125](https://github.com/music-assistant/frontend/pull/3125))
+- Show one message when a play action fails, not two (by @marcelveldt in [#3121](https://github.com/music-assistant/frontend/pull/3121))
+- Update the Web player to Sendspin 1.0.0-rc1 (by @maximmaxim345 in [#3119](https://github.com/music-assistant/frontend/pull/3119))
+
+### 🧰 Maintenance and dependency bumps
+
+- Fix rare Spotify playback hangs and wrong settings after the session rework (by @marcelveldt in #7397)
+- Fix five flaky tests that block the merge queue (by @fmunkes in #7405)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @Simanias, @dmoo500, @fmunkes, @marcelveldt, @maximmaxim345
+
+
 # [2.11.0.dev2026110604] - 06.11.2026
 
 ## 📦 Nightly Release
@@ -68,54 +110,3 @@ _Changes since [2.11.0.dev2026110404](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @apophisnow, @chrisuthe, @dmoo500, @fmunkes, @marcelveldt, @stvncode
-
-
-# [2.11.0.dev2026110404] - 04.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026110304](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110304)_
-
-### 🚀 New Providers
-
-- Auracast Provider (by @Yagoor in #7142)
-
-### 🚀 Features and enhancements
-
-- Give speakers a bit more lead on just-in-time music sources (by @marcelveldt in #7355)
-- Raumfeld: follow the host to a new address (by @Simanias in #7364)
-
-### 🐛 Bugfixes
-
-- Allow pairing a Sendspin device again after it was unpaired (by @maximmaxim345 in #7337)
-- Load chapters of audiobooks played from a listing (by @fmunkes in #7349)
-- Raumfeld: a speaker keeps its player when it moves to another room (by @Simanias in #7350)
-- Fix Open Subsonic remote image URLs being passed to getCoverArt (by @anatosun in #7351)
-- Link artists whose MusicBrainz page uses a play.qobuz.com link (by @OzGav in #7354)
-- Re-form a speaker group faster and keep the next track ready when its leader drops (by @marcelveldt in #7356)
-- Fix misleading reconnect text on Sendspin devices another server took (by @maximmaxim345 in #7361)
-
-### 🎨 Frontend Changes
-
-- Remember the Discover statistics row period across reloads (by @OzGav in [#3102](https://github.com/music-assistant/frontend/pull/3102))
-- Improve waveform seek preview with 3-level brightness (by @dmoo500 in [#2146](https://github.com/music-assistant/frontend/pull/2146))
-- Load only English and German translations in tests (by @stvncode in [#3101](https://github.com/music-assistant/frontend/pull/3101))
-- Bump eslint from 10.13.0 to 10.14.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3092](https://github.com/music-assistant/frontend/pull/3092))
-- Bump sass from 1.105.0 to 1.107.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3095](https://github.com/music-assistant/frontend/pull/3095))
-- Bump @lucide/vue from 1.61.0 to 1.66.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3097](https://github.com/music-assistant/frontend/pull/3097))
-- Bump ts-pattern from 5.9.0 to 5.9.2 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3098](https://github.com/music-assistant/frontend/pull/3098))
-- Bump @tabler/icons-vue from 3.48.0 to 3.50.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3093](https://github.com/music-assistant/frontend/pull/3093))
-- Bump marked from 18.1.1 to 18.1.2 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3094](https://github.com/music-assistant/frontend/pull/3094))
-- Bump vite from 8.3.4 to 8.3.5 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3096](https://github.com/music-assistant/frontend/pull/3096))
-- Bump zod from 4.6.6 to 4.6.7 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3099](https://github.com/music-assistant/frontend/pull/3099))
-- Bump @tanstack/vue-virtual from 3.13.39 to 3.13.50 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3100](https://github.com/music-assistant/frontend/pull/3100))
-
-### 🧰 Maintenance and dependency bumps
-
-- Clear up two misleading log lines (by @marcelveldt in #7362)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @Simanias, @Yagoor, @anatosun, @dmoo500, @fmunkes, @lucide, @marcelveldt, @maximmaxim345, @stvncode, @tabler, @tanstack
