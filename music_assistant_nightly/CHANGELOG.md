@@ -1,3 +1,48 @@
+# [2.11.0.dev2026110804] - 08.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026110704](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110704)_
+
+### 🚀 New Providers
+
+- Add the Sunshine Live provider (by @jordiboehme in #7406)
+
+### 🚀 Features and enhancements
+
+- Refuse playlist edits whose positions no longer hold the expected tracks (by @pierosavi in #7359)
+- Raumfeld: follow the host's rooms and zones without hassfeld (by @Simanias in #7368)
+- Play Deezer hi-res tracks at their real sample rate and bit depth (by @jpmenil in #7403)
+- Spotify setup: Soloist as the default engine and updated wizard text (by @marcelveldt in #7416)
+- Swap descriptions to the new language after a language change (by @OzGav in #7423)
+- Add seek support to the AriaCast receiver (by @meiser79 in #7426)
+- Raumfeld: follow the speakers' events instead of polling them (by @Simanias in #7427)
+- Deezer: sync playback with the Deezer app (by @jdaberkow in #7428)
+
+### 🐛 Bugfixes
+
+- Fix Apple TV pairing not working (by @cleverer in #7352)
+- Say at once that Spotify is busy elsewhere instead of after loading the playlist (by @marcelveldt in #7408)
+- Fix iBroadcast tracks with additional genres being skipped during sync (by @flagoworld in #7415)
+- Fix AriaCast receiver playback on a linked protocol player (by @meiser79 in #7425)
+
+### 🎨 Frontend Changes
+
+- Offer to move Spotify playback here when another player holds it (by @marcelveldt in [#3122](https://github.com/music-assistant/frontend/pull/3122))
+- Send quiz guests back to the Party page when the quiz is over (by @marcelveldt in [#3126](https://github.com/music-assistant/frontend/pull/3126))
+
+### 🧰 Maintenance and dependency bumps
+
+- Add regression tests for the image loader, ingress sign-in and playlist mapping guards (by @chrisuthe in #7398)
+- Skip upstream-only workflows on forks (by @balloob in #7420)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @Simanias, @balloob, @chrisuthe, @cleverer, @flagoworld, @jdaberkow, @jordiboehme, @jpmenil, @marcelveldt, @meiser79, @pierosavi
+
+
 # [2.11.0.dev2026110704] - 07.11.2026
 
 ## 📦 Nightly Release
@@ -77,36 +122,3 @@ _Changes since [2.11.0.dev2026110504](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Yagoor, @dmoo500, @fmunkes, @jpittelkow, @marcelveldt, @stvncode
-
-
-# [2.11.0.dev2026110504] - 05.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026110404](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110404)_
-
-### 🚀 Features and enhancements
-
-- Refresh item now clears a track's measured volume (by @OzGav in #7339)
-
-### 🎨 Frontend Changes
-
-- Use the library sort and filter controls on album, playlist, podcast and radio pages (by @OzGav in [#3110](https://github.com/music-assistant/frontend/pull/3110))
-- Update radio details with shared hero and configurable rows (by @dmoo500 in [#3086](https://github.com/music-assistant/frontend/pull/3086))
-- Show top artist, album and track in Discover statistics (by @dmoo500 in [#3106](https://github.com/music-assistant/frontend/pull/3106))
-- Playlist track reordering drag, multi-track moves, move to top/bottom (by @apophisnow in [#3038](https://github.com/music-assistant/frontend/pull/3038))
-- Remove the hover box from the favorite and queue buttons in the fullscreen player (by @stvncode in [#3107](https://github.com/music-assistant/frontend/pull/3107))
-- Add bookmarks for audiobooks and podcast episodes (by @fmunkes in [#3074](https://github.com/music-assistant/frontend/pull/3074))
-- Replace the tabler icon package with local player icons (by @stvncode in [#3108](https://github.com/music-assistant/frontend/pull/3108))
-- Replace genre, DSP menu and party badge icons with Lucide (by @dmoo500 in [#3104](https://github.com/music-assistant/frontend/pull/3104))
-- Automate frontend backports for the stable server release (by @marcelveldt in [#3010](https://github.com/music-assistant/frontend/pull/3010))
-
-### Other Changes
-
-- Revert "Pair Sendspin players on the Home Assistant host with their local token" (by @chrisuthe in #7370)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@OzGav, @apophisnow, @chrisuthe, @dmoo500, @fmunkes, @marcelveldt, @stvncode
