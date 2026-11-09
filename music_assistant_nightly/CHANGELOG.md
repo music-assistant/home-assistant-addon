@@ -1,3 +1,46 @@
+# [2.11.0.dev2026110904] - 09.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026110804](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110804)_
+
+### 🚀 Features and enhancements
+
+- Squeezelite: report the player names set in Music Assistant to the clients (by @lawrence-jeff in #7402)
+- Stop adding MediaItemImage objects for images outside of subsonic (by @khers in #7431)
+- Turn on offline players through their power control (by @marcelveldt in #7435)
+- Deezer: more metadata and a few small improvements (by @jdaberkow in #7441)
+- Power off idle players through their power control (by @marcelveldt in #7446)
+
+### 🐛 Bugfixes
+
+- Keep a playing group on Sendspin when a Sendspin speaker joins (by @maximmaxim345 in #7358)
+- Squeezelite: start announcements on the small buffer (by @lawrence-jeff in #7400)
+- Fix Music Quiz rounds stuttering at the start on Sendspin players (by @marcelveldt in #7433)
+- Fix Spotify going silent for 20 s at a track change (by @marcelveldt in #7436)
+- Add Legacy Auth option to subsonic setup flow (by @khers in #7439)
+- Fix abrupt Spotify song changes when your account has crossfade on (by @marcelveldt in #7442)
+- Stop refreshing the YouTube Music session from Music Assistant (by @bbauti in #7448)
+
+### 🎨 Frontend Changes
+
+- Minimize the fullscreen player when a search result is opened (by @pierosavi in [#3131](https://github.com/music-assistant/frontend/pull/3131))
+- Enable seeded random sorting in paginated listings (by @dmoo500 in [#3113](https://github.com/music-assistant/frontend/pull/3113))
+- Don't send a stable pin PR to the wrong server branch (by @marcelveldt in [#3129](https://github.com/music-assistant/frontend/pull/3129))
+- Use shared SVG icons for explicit content badges (by @dmoo500 in [#3118](https://github.com/music-assistant/frontend/pull/3118))
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump pywam from 0.2.0 to 0.2.3 (by @FSund in #7322)
+- Similar tracks and the Discover row no longer freeze the server on large libraries (by @marcelveldt in #7437)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@FSund, @bbauti, @dmoo500, @jdaberkow, @khers, @lawrence-jeff, @marcelveldt, @maximmaxim345, @pierosavi
+
+
 # [2.11.0.dev2026110804] - 08.11.2026
 
 ## 📦 Nightly Release
@@ -83,42 +126,3 @@ _Changes since [2.11.0.dev2026110604](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @Simanias, @dmoo500, @fmunkes, @marcelveldt, @maximmaxim345
-
-
-# [2.11.0.dev2026110604] - 06.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026110504](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110504)_
-
-### 🚀 Features and enhancements
-
-- Let synced lyrics lead the AI Radio post onset (by @jpittelkow in #6882)
-- Allow admins to combine statistics of several users (by @fmunkes in #7375)
-- Sort artist releases by full release date before paging (by @dmoo500 in #7376)
-- Feature/auracast provider improvements (by @Yagoor in #7379)
-- Builtin MCP server for AI assistants and Home Assistant (by @marcelveldt in #7381)
-- Tell which player holds Spotify instead of waiting 15 seconds (by @marcelveldt in #7382)
-- Spotify Soloist: no more silence between tracks (by @marcelveldt in #7384)
-
-### 🐛 Bugfixes
-
-- Keep regular providers off in safe mode (by @marcelveldt in #7394)
-- Keep Sonos playing when the queue changes under it (by @marcelveldt in #7395)
-
-### 🎨 Frontend Changes
-
-- Show who maintains each integration (by @marcelveldt in [#3115](https://github.com/music-assistant/frontend/pull/3115))
-- Add a play button to the track rows of detail pages (by @stvncode in [#3109](https://github.com/music-assistant/frontend/pull/3109))
-
-### 🧰 Maintenance and dependency bumps
-
-- Mark every provider as core or community maintained (by @marcelveldt in #7383)
-- Let new models sort fields and listing types land without failing the server (by @marcelveldt in #7389)
-- Use the reverse-DNS _meta key for the Home Assistant user in MCP tool calls (by @marcelveldt in #7396)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Yagoor, @dmoo500, @fmunkes, @jpittelkow, @marcelveldt, @stvncode
