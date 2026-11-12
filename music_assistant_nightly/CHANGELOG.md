@@ -1,3 +1,64 @@
+# [2.11.0.dev2026111203] - 12.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026111103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111103)_
+
+### 🚀 New Providers
+
+- Add DR LYD provider (by @mikkelke in #7488)
+
+### 🚀 Features and enhancements
+
+- Easier setup code copy option in setup flow for Tidal/Spotify/Audible music provider (by @afeldman1 in #6268)
+- Handle m4a albumartists tag (by @NasaGeek in #7459)
+- Pick between provider and own resume progress by one rule everywhere (by @fmunkes in #7482)
+- Add resume timestamps to providers where available (by @fmunkes in #7483)
+- Grey out library podcasts and radio stations if their provider no longer has them (by @OzGav in #7490)
+- Make Subsonic provider use the last modified bookmark date (by @khers in #7536)
+- Re-order M3U playlists (by @OzGav in #7539)
+- Reorder tracks in Qobuz playlists (by @OzGav in #7544)
+
+### 🐛 Bugfixes
+
+- Fix Roku Media Assistant player queue stalls and end-of-stream detection (by @kees in #7217)
+- Fix missing played status on a Spotify podcast episode page (by @OzGav in #7353)
+- Reconnect the MPD player when its connection drops silently (by @lucamartinetti in #7522)
+- Prevent clipping when volume normalization raises a quiet track (by @marcelveldt in #7538)
+
+### 🎨 Frontend Changes
+
+- Add optional copy text button in setup dialog (by @afeldman1 in [#2710](https://github.com/music-assistant/frontend/pull/2710))
+- Play media on the player you picked when it is in a group (by @marcelveldt in [#3159](https://github.com/music-assistant/frontend/pull/3159))
+- Bump vue from 3.5.44 to 3.5.45 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3153](https://github.com/music-assistant/frontend/pull/3153))
+- Bump pnpm/action-setup from 6.1.0 to 6.1.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3144](https://github.com/music-assistant/frontend/pull/3144))
+- Bump typescript-eslint from 8.72.0 to 8.72.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3151](https://github.com/music-assistant/frontend/pull/3151))
+- Bump oxlint and eslint-plugin-oxlint (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3147](https://github.com/music-assistant/frontend/pull/3147))
+- Bump @types/node from 26.6.5 to 26.6.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3146](https://github.com/music-assistant/frontend/pull/3146))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>8 changes</summary>
+
+- Keep audio pipes off the disk so a busy disk cannot freeze playback (by @marcelveldt in #7514)
+- Check player access for commands that are passed on to a group (by @marcelveldt in #7523)
+- Keep a group playing when a play request on one of its players cannot start (by @marcelveldt in #7524)
+- Remove Auracast (by @OzGav in #7527)
+- Play on a speaker right after it leaves its group (by @marcelveldt in #7529)
+- Stop two tests failing when a task list update lands mid-test (by @marcelveldt in #7530)
+- Stop a storage test failing when the CI runner stalls briefly (by @marcelveldt in #7532)
+- Update the Hue Entertainment library to 0.6.0 (by @marcelveldt in #7535)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@NasaGeek, @OzGav, @afeldman1, @fmunkes, @kees, @khers, @lucamartinetti, @marcelveldt, @mikkelke, @types
+
+
 # [2.11.0.dev2026111103] - 11.11.2026
 
 ## 📦 Nightly Release
@@ -140,46 +201,3 @@ _Changes since [2.11.0.dev2026110904](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Simanias, @apophisnow, @chrisuthe, @fmunkes, @jerome-pouiller, @khers, @lawrence-jeff, @marcelveldt, @martinbuergi, @pcc0x, @pierosavi
-
-
-# [2.11.0.dev2026110904] - 09.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026110804](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110804)_
-
-### 🚀 Features and enhancements
-
-- Squeezelite: report the player names set in Music Assistant to the clients (by @lawrence-jeff in #7402)
-- Stop adding MediaItemImage objects for images outside of subsonic (by @khers in #7431)
-- Turn on offline players through their power control (by @marcelveldt in #7435)
-- Deezer: more metadata and a few small improvements (by @jdaberkow in #7441)
-- Power off idle players through their power control (by @marcelveldt in #7446)
-
-### 🐛 Bugfixes
-
-- Keep a playing group on Sendspin when a Sendspin speaker joins (by @maximmaxim345 in #7358)
-- Squeezelite: start announcements on the small buffer (by @lawrence-jeff in #7400)
-- Fix Music Quiz rounds stuttering at the start on Sendspin players (by @marcelveldt in #7433)
-- Fix Spotify going silent for 20 s at a track change (by @marcelveldt in #7436)
-- Add Legacy Auth option to subsonic setup flow (by @khers in #7439)
-- Fix abrupt Spotify song changes when your account has crossfade on (by @marcelveldt in #7442)
-- Stop refreshing the YouTube Music session from Music Assistant (by @bbauti in #7448)
-
-### 🎨 Frontend Changes
-
-- Minimize the fullscreen player when a search result is opened (by @pierosavi in [#3131](https://github.com/music-assistant/frontend/pull/3131))
-- Enable seeded random sorting in paginated listings (by @dmoo500 in [#3113](https://github.com/music-assistant/frontend/pull/3113))
-- Don't send a stable pin PR to the wrong server branch (by @marcelveldt in [#3129](https://github.com/music-assistant/frontend/pull/3129))
-- Use shared SVG icons for explicit content badges (by @dmoo500 in [#3118](https://github.com/music-assistant/frontend/pull/3118))
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump pywam from 0.2.0 to 0.2.3 (by @FSund in #7322)
-- Similar tracks and the Discover row no longer freeze the server on large libraries (by @marcelveldt in #7437)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@FSund, @bbauti, @dmoo500, @jdaberkow, @khers, @lawrence-jeff, @marcelveldt, @maximmaxim345, @pierosavi
