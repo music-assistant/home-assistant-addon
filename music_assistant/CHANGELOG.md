@@ -1,3 +1,48 @@
+# [2.10.11] - 13.11.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.9](https://github.com/music-assistant/server/releases/tag/2.10.9)_
+
+### 🚀 Features and enhancements
+
+- Allow multiple Pocket Casts instances (by @OzGav in #7328)
+- Subsonic setup refactor (by @khers in #7456)
+- Make Subsonic provider use the last modified bookmark date (by @khers in #7536)
+
+### 🐛 Bugfixes
+
+- Keep the last Squeezelite volume when its cache entry expires (by @thelad-dev in #6944)
+- Fix Home Assistant player updates failing on non-text media_content_id (by @MarvinSchenkel in #7152)
+- Fix Bluesound multi-zone players missing on routed networks (by @MarvinSchenkel in #7159)
+- Fix a speaker group staying silent after its leader drops offline (by @marcelveldt in #7320)
+- Fix Apple TV pairing not working (by @cleverer in #7352)
+- Re-form a speaker group faster and keep the next track ready when its leader drops (by @marcelveldt in #7356)
+- Fix Sendspin output staying unavailable on some AirPlay and Cast speakers (by @maximmaxim345 in #7357)
+- Keep a playing group on Sendspin when a Sendspin speaker joins (by @maximmaxim345 in #7358)
+- Start at 0:00 when seeking to the start of an audiobook or episode (by @fmunkes in #7363)
+- Add Legacy Auth option to subsonic setup flow (by @khers in #7439)
+- Fix Sendspin group going silent after a leader switch with a visualizer member (by @MarvinSchenkel in #7461)
+- Fix ARD Sounds search failing when a show or station has no social media links (by @OzGav in #7496)
+- Prevent clipping when volume normalization raises a quiet track (by @marcelveldt in #7538)
+- Stop Cast speakers replaying earlier tracks at the end of a queue (by @marcelveldt in #7549)
+- Stop the end of a queue being cut off on Cast and Bluesound speakers (by @marcelveldt in #7550)
+- Fix Cast speakers dropping out during longer playback (by @marcelveldt in #7568)
+- Tidal: name album artists and playlist owners in search results (by @jozefKruszynski in #7585)
+
+### 🧰 Maintenance and dependency bumps
+
+- Bump CodSpeedHQ/action from 5.6.0 to 5.6.3 (by @dependabot[bot] in #7411)
+- Install the frontend from its GitHub release instead of PyPI (by @marcelveldt in #7434)
+- Complete onboarding when the setup wizard finishes, not when the first provider is added (by @marcelveldt in #7509)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @cleverer, @fmunkes, @jozefKruszynski, @khers, @marcelveldt, @maximmaxim345, @thelad-dev
+
+
 # [2.10.9] - 30.10.2026
 
 ## 📦 Stable Release
@@ -85,113 +130,3 @@ _Changes since [2.10.7](https://github.com/music-assistant/server/releases/tag/2
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Simanias, @fmunkes, @jetersen, @jozefKruszynski, @maximmaxim345, @mnestrud, @smellybellyy
-
-
-# [2.10.7] - 17.10.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.6](https://github.com/music-assistant/server/releases/tag/2.10.6)_
-
-### 🚀 Features and enhancements
-
-- List Sendspin line-ins on their own player (by @maximmaxim345 in #7059)
-
-### 🐛 Bugfixes
-
-- Fix DLNA player showing up twice when the device advertises a relative presentation URL (by @MarvinSchenkel in #6597)
-- Fix Spotify playlists missing from large libraries (by @MarvinSchenkel in #6613)
-- Stop Plex Connect from logging unrelated items in the Plex history (by @MarvinSchenkel in #6705)
-- Fix play doing nothing after the queue's current track was replaced (by @marcelveldt in #6796)
-- Fix play reporting an empty queue when its position is past the last track (by @marcelveldt in #6800)
-- Use the External URL for party and quiz QR codes (by @marcelveldt in #6812)
-- Stop instead of pause while Music Assistant streams to a Bose SoundTouch speaker (by @fmunkes in #6821)
-- Fix Home Assistant sign-in through the External URL or Remote Access (by @marcelveldt in #6826)
-- Sonos: allow 24-bit playback on Play:1 and Connect (Gen 2) (by @orb9 in #6828)
-- Show the podcast name as the artist for podcast episodes (by @OzGav in #6838)
-- Stop Last.fm recommendations from re-searching music providers (by @Bazooper-blip in #6843)
-- Stop Apple Music from sending item names to the API as ids (by @Bazooper-blip in #6844)
-- Cut the Apple Music requests made per lookup and per Discover refresh (by @Bazooper-blip in #6845)
-- Stop Apple Music from fetching the album again for its album tracks (by @Bazooper-blip in #6846)
-- Fix Home Assistant sign-in from the mobile app through the External URL or Remote Access (by @marcelveldt in #6849)
-- Fix MSX Bridge TVs going silent after the first track (by @marcelveldt in #6858)
-- Release AirPlay speakers when a stream finishes instead of two minutes later (by @thatcoleyouknow in #6868)
-- Push Sendspin progress when playback restarts on the same item (by @chrisuthe in #6900)
-- Match play_media sort_by to the frontend's track sort (by @OzGav in #6906)
-- Show the full episode description for podcast feeds (by @OzGav in #6908)
-- Keep downloaded models in the Music Assistant cache dir (by @MarvinSchenkel in #6910)
-- Show the custom Plex poster of a playlist instead of the generated grid (by @MarvinSchenkel in #6911)
-- Report expired YouTube Music cookies instead of missing Premium (by @MarvinSchenkel in #6915)
-- Fix the server running out of memory on large album covers (by @marcelveldt in #6919)
-- Serve original-size JPEG artwork without re-encoding it (by @marcelveldt in #6920)
-- Fix Sendspin players with DSP joining a group out of sync (by @maximmaxim345 in #6921)
-- Fix Patreon podcast feeds blocked by a Cloudflare challenge (by @OzGav in #6922)
-- Bump `aiosendspin` to 10.0.1 to fix audio gaps and sync drift (by @maximmaxim345 in #6923)
-- Fix updated ESPHome Sendspin speakers reappearing as new players (by @maximmaxim345 in #6928)
-- Fix a Spotify track stalling the queue when Soloist's sign-in fails (by @marcelveldt in #6930)
-- Keep the queue going after an AI DJ clip (by @MarvinSchenkel in #6950)
-- Fix a short dropout when a Sendspin player with DSP joins a group (by @maximmaxim345 in #6962)
-- Fix more out-of-sync cases for Sendspin players with DSP (by @maximmaxim345 in #6965)
-- Bump `aiosendspin` to 10.0.2 to fix slow reconnects of updated ESPHome speakers (by @maximmaxim345 in #6969)
-- Fix AirPlay drifting out of sync with Sendspin players (by @maximmaxim345 in #6974)
-- Soundcloud: play tracks only served as AAC (HLS) (by @BeeSouul in #6975)
-- Skip album covers Tidal gives as artist pictures (by @OzGav in #6985)
-- Sync the Apple Music library daily instead of every 12 hours (by @MarvinSchenkel in #6986)
-- Cache the Apple Music song check of catalog-less library albums (by @MarvinSchenkel in #6987)
-- Get Apple Music track sync relations from the library listing and count API requests (by @MarvinSchenkel in #6990)
-- Fix YouTube Music podcast tasks failing on a podcast YouTube no longer serves (by @MarvinSchenkel in #6991)
-- Reduce Apple Music rate limiting by sharing the catalog edge cache (by @MarvinSchenkel in #6992)
-- Fix Apple Music asking to sign in again when the app token is rejected (by @MarvinSchenkel in #6995)
-- Keep excluded genres off an item when the library syncs (by @OzGav in #7000)
-- Let a universal player follow the name of its device (by @chrisuthe in #7010)
-- Fix remote access retrying the signaling server every 10s when registration is refused (by @MarvinSchenkel in #7020)
-- Name Sendspin inputs after their player (by @maximmaxim345 in #7023)
-- Fix Sendspin pairing option missing after unpair (by @maximmaxim345 in #7027)
-- Allow Sendspin sources to be used without pairing (by @maximmaxim345 in #7029)
-- Keep the paused position in the Sendspin metadata (by @maximmaxim345 in #7030)
-- Fix Sendspin progress jumping back to the track start (by @maximmaxim345 in #7033)
-- Bump `aiosendspin` to 10.1.0 to fix Sendspin players disappearing with multiple servers (by @maximmaxim345 in #7034)
-- Fail Sendspin over Cast at once when the receiver refuses the app (by @Simanias in #7037)
-- Keep the Sonic Similarity index builds off the provider load path (by @chrisuthe in #7038)
-- Stop a library reset from mixing up artist details (by @OzGav in #7052)
-- Fix Tidal mixes missing beyond the first page of a module (by @jozefKruszynski in #7053)
-- Resume Sendspin sources more reliably after a short network drop (by @maximmaxim345 in #7054)
-- Fix Sendspin progress running ahead after pause and resume (by @maximmaxim345 in #7056)
-- Allow playing a Sendspin input held by another server (by @maximmaxim345 in #7057)
-- Fix a player showing the group's position after leaving it (by @maximmaxim345 in #7058)
-- Allow setting up Sendspin devices with other servers on the network (by @maximmaxim345 in #7060)
-
-### 🎨 Frontend Changes
-
-- Hide Home Assistant sign-in on Remote Access without an External URL ([#2951](https://github.com/music-assistant/frontend/pull/2951))
-- Keep sidebar shortcuts tidied up after a provider is removed ([#2694](https://github.com/music-assistant/frontend/pull/2694))
-- Fix saving a cleared optional number setting ([#2957](https://github.com/music-assistant/frontend/pull/2957))
-- Show the right release year for tracks in time zones west of UTC ([#2697](https://github.com/music-assistant/frontend/pull/2697))
-- Fix item menu not updating position correctly ([#2715](https://github.com/music-assistant/frontend/pull/2715))
-- Fix player covering sidebar ([#2906](https://github.com/music-assistant/frontend/pull/2906))
-- Allow selecting text in read-only config label fields ([#2717](https://github.com/music-assistant/frontend/pull/2717))
-- Allow selecting and copying text in the setup wizard ([#2839](https://github.com/music-assistant/frontend/pull/2839))
-- Fix inert z-index classes on dialogs, popovers and selects ([#2803](https://github.com/music-assistant/frontend/pull/2803))
-- Avoid duplicate media titles in screen reader announcements ([#2759](https://github.com/music-assistant/frontend/pull/2759))
-- Fix missing accessible label on player mute button ([#2761](https://github.com/music-assistant/frontend/pull/2761))
-- Fix redundant mobile sidebar announcements ([#2754](https://github.com/music-assistant/frontend/pull/2754))
-- Remember the web player volume between sessions ([#2900](https://github.com/music-assistant/frontend/pull/2900))
-- Prevent audio session dropping when paused ([#2721](https://github.com/music-assistant/frontend/pull/2721))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Hide passwords and tokens in the API message log (by @marcelveldt in #6829)
-- Search music services one at a time when resolving Last.fm recommendations (by @marcelveldt in #6863)
-- Update airplay-cli to v0.5.8 (by @musicassistant-bot[bot] in #6984)
-- Log the user that requested playback at INFO level (by @teancom in #7018)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@Bazooper-blip, @BeeSouul, @MarvinSchenkel, @OzGav, @Simanias, @chrisuthe, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @orb9, @teancom, @thatcoleyouknow
