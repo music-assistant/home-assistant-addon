@@ -1,3 +1,59 @@
+# [2.11.0.dev2026111303] - 13.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026111203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111203)_
+
+### 🚀 Features and enhancements
+
+- Jump to a letter in the artist, album and track libraries (by @OzGav in #7468)
+- Play line-ins on Sendspin players at the source's sample rate (by @maximmaxim345 in #7507)
+- Sync Hue lamps on Home Assistant's ZHA without a Hue bridge (by @marcelveldt in #7540)
+- Reorder tracks in Spotify playlists (by @OzGav in #7543)
+- YouTube Music: edit and reorder your playlists (by @MarvinSchenkel in #7553)
+- Add icon for the statistics controller (by @MarvinSchenkel in #7555)
+- Add playlist reordering to the Audiobookshelf provider (by @fmunkes in #7572)
+
+### 🐛 Bugfixes
+
+- Keep the last Squeezelite volume when its cache entry expires (by @thelad-dev in #6944)
+- Keep same-name artists on one streaming provider apart via MusicBrainz (by @OzGav in #7124)
+- Reassemble chunked client messages on the remote access API channel (by @jozefKruszynski in #7537)
+- Stop Cast speakers replaying earlier tracks at the end of a queue (by @marcelveldt in #7549)
+- Stop the end of a queue being cut off on Cast and Bluesound speakers (by @marcelveldt in #7550)
+- Back off AirPlay control reconnects for receivers that keep failing (by @MarvinSchenkel in #7554)
+- Fix Cast speakers dropping out during longer playback (by @marcelveldt in #7559)
+- Replace the HTTP profile setting with a fixed content length toggle (by @marcelveldt in #7560)
+
+### 🎨 Frontend Changes
+
+- Use one subtle hover effect for clickable settings cards (by @pierosavi in [#3117](https://github.com/music-assistant/frontend/pull/3117))
+- Add artist shelf counts and release-date sorting (by @dmoo500 in [#3015](https://github.com/music-assistant/frontend/pull/3015))
+- Jump to a letter in the library (by @OzGav in [#3138](https://github.com/music-assistant/frontend/pull/3138))
+- Add an exclude favorites option to smart playlists (by @dmoo500 in [#3111](https://github.com/music-assistant/frontend/pull/3111))
+- Name the maintainer of every provider a person maintains (by @marcelveldt in [#3165](https://github.com/music-assistant/frontend/pull/3165))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>6 changes</summary>
+
+- Faster Sonos grouping right after an earlier group change (by @marcelveldt in #7534)
+- Keep Sonos playing when another Music Assistant server on the network restarts (by @marcelveldt in #7545)
+- Require ffmpeg 8.0 or newer (by @marcelveldt in #7558)
+- Keep playing while an Endless Mix fetches new tracks (by @marcelveldt in #7564)
+- Describe both Hue Lights Sync backends in the setup notes (by @marcelveldt in #7567)
+- Mark everything that ships with the server as built-in (by @marcelveldt in #7575)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @pierosavi, @thelad-dev
+
+
 # [2.11.0.dev2026111203] - 12.11.2026
 
 ## 📦 Nightly Release
@@ -128,76 +184,3 @@ _Changes since [2.11.0.dev2026111003](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @CasperNaudts, @OzGav, @Simanias, @apophisnow, @chrisuthe, @dmoo500, @fmunkes, @jordiboehme, @marcelveldt, @maximmaxim345, @pierosavi, @remon1496, @stvncode
-
-
-# [2.11.0.dev2026111003] - 10.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026110904](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026110904)_
-
-### 🚀 Features and enhancements
-
-- OpenSubsonic: move a track within a playlist (by @pcc0x in #7032)
-- Party: add configurable number of votes required to skip a song (by @martinbuergi in #7081)
-- Let the sleep timer stop at the end of the current item or chapter (by @fmunkes in #7209)
-- Sync YouTube Music podcast progress (by @OzGav in #7293)
-- Show and control an app on a linked protocol player MA did not start (by @Simanias in #7312)
-- Play artists faster on providers without an artist tracks listing (by @apophisnow in #7390)
-- Keep disliked genres out of radio, mixes and autoplay (by @apophisnow in #7393)
-- Default MusicCast players to MP3 output (by @jerome-pouiller in #7440)
-- Add a queue's items to an existing playlist (by @pierosavi in #7447)
-- Choose how long a paused player stays paused before it stops (by @marcelveldt in #7451)
-- Subsonic setup refactor (by @khers in #7456)
-
-### 🐛 Bugfixes
-
-- Fix Home Assistant player updates failing on non-text media_content_id (by @MarvinSchenkel in #7152)
-- Fix Bluesound multi-zone players missing on routed networks (by @MarvinSchenkel in #7159)
-- Keep ICY flow streams flowing in small writes instead of one write per metadata interval (by @MarvinSchenkel in #7166)
-- Stop album and track refreshes from renaming shared artists (by @OzGav in #7201)
-- Fix Sendspin group going silent after a leader switch with a visualizer member (by @MarvinSchenkel in #7461)
-- Fix the first Music Quiz round stuttering at the start (by @marcelveldt in #7466)
-- Keep an artist's other folders when its artist.nfo changes (by @marcelveldt in #7475)
-- Squeezelite: give the visualization setting a plain string default (by @lawrence-jeff in #7476)
-- Keep queue state and log unload errors when the server stops (by @marcelveldt in #7478)
-
-### 🎨 Frontend Changes
-
-- Show the played state of audiobook collections and keep their covers when filtered (by @fmunkes in [#3034](https://github.com/music-assistant/frontend/pull/3034))
-- Move the required source picker into the Filters panel (by @pierosavi in [#3137](https://github.com/music-assistant/frontend/pull/3137))
-- Offer sleep timers that stop at the end of the current item or chapter (by @fmunkes in [#3050](https://github.com/music-assistant/frontend/pull/3050))
-- Open the right DSP filter from the Audio Pipeline (by @OzGav in [#3120](https://github.com/music-assistant/frontend/pull/3120))
-- Use the library sort and filter controls on genre, browse and author pages (by @OzGav in [#3116](https://github.com/music-assistant/frontend/pull/3116))
-- Split the artist discography into two rows by release type (by @OzGav in [#3085](https://github.com/music-assistant/frontend/pull/3085))
-- Stop publishing the frontend to PyPI (by @marcelveldt in [#3127](https://github.com/music-assistant/frontend/pull/3127))
-- Run the nightly release an hour earlier (by @marcelveldt in [#3134](https://github.com/music-assistant/frontend/pull/3134))
-
-### Other Changes
-
-- Fix the Home Assistant player test that broke dev (by @marcelveldt in #7473)
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>11 changes</summary>
-
-- Bump av from 18.1.0 to 19.0.2 (by @dependabot[bot] in #7324)
-- Bump CodSpeedHQ/action from 5.6.0 to 5.6.3 (by @dependabot[bot] in #7411)
-- Install the frontend from its GitHub release instead of PyPI (by @marcelveldt in #7434)
-- Bump the music-assistant-libs group with 3 updates (by @dependabot[bot] in #7443)
-- Revert "Default MusicCast players to MP3 output" (by @fmunkes in #7458)
-- Run the nightly release an hour earlier (by @marcelveldt in #7460)
-- Raumfeld: test connecting to the host, registering rooms and the setup flow (by @Simanias in #7464)
-- Drop a stale comment in the Pandora error handler (by @chrisuthe in #7469)
-- Show the right YouTube Music podcast progress when an episode starts (by @OzGav in #7471)
-- Drop the settings migrations for upgrades from 2.9 (by @marcelveldt in #7481)
-- Give Home Assistant a token for the MCP server (by @marcelveldt in #7485)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Simanias, @apophisnow, @chrisuthe, @fmunkes, @jerome-pouiller, @khers, @lawrence-jeff, @marcelveldt, @martinbuergi, @pcc0x, @pierosavi
