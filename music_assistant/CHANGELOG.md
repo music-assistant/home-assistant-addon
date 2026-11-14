@@ -2,6 +2,8 @@
 
 ## 📦 Stable Release
 
+**Why this extra release?** Music Assistant was sending more requests to music services than needed, which made playback slow or unreliable, with Spotify in particular. This release brings those requests back down. It also fixes several AirPlay problems: pairing on OS 27.2 and silent HomePod mini 2 and Shairport Sync speakers. Updating is recommended for everyone who uses Spotify or AirPlay.
+
 _Changes since [2.10.11](https://github.com/music-assistant/server/releases/tag/2.10.11)_
 
 ### 🐛 Bugfixes
