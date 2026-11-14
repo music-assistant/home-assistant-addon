@@ -1,3 +1,41 @@
+# [2.10.12] - 14.11.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.11](https://github.com/music-assistant/server/releases/tag/2.10.11)_
+
+### 🐛 Bugfixes
+
+- Reject control characters in concat file lists (by @chrisuthe in #7412)
+- Strip control characters from AirPlay now-playing metadata (by @chrisuthe in #7413)
+- Fix AirPlay group members drifting apart after a corrected cold start (by @cTopher in #7503)
+- Bound ffprobe/ffmpeg tag probes with a timeout (by @OzGav in #7584)
+- Keep playback within the request limits of music services (by @marcelveldt in #7599)
+- Give up on a play request that takes longer than a minute (by @marcelveldt in #7601)
+- Stop artists from fetching their whole catalogue when played or opened (by @marcelveldt in #7602)
+- Fix silent HomePod mini 2 and failing AirPlay group starts (airplay-cli v0.5.10) (by @musicassistant-bot[bot] in #7615)
+- Fix AirPlay pairing with Apple TV and HomeView on OS 27.2 (by @marcelveldt in #7632)
+- Fix AirPlay pairing on OS 27.2 and show HomePod controls in the Home app (airplay-cli v0.5.11) (by @musicassistant-bot[bot] in #7633)
+- Fix silent AirPlay 2 playback on Shairport Sync receivers (by @marcelveldt in #7662)
+- Fix silent Shairport Sync speakers after the first AirPlay 2 stream (airplay-cli v0.5.12) (by @musicassistant-bot[bot] in #7668)
+
+### 🎨 Frontend Changes
+
+- Show an artist's top tracks on the party guest page when the service lists no artist tracks (by @marcelveldt in [#3168](https://github.com/music-assistant/frontend/pull/3168))
+
+### 🧰 Maintenance and dependency bumps
+
+- Stop playback from requesting music services that asked us to wait (by @marcelveldt in #7600)
+- Stop a whole library folder from being played in one go (by @marcelveldt in #7604)
+- Fix music files failing to import while the server is busy (by @marcelveldt in #7660)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@OzGav, @cTopher, @chrisuthe, @marcelveldt
+
+
 # [2.10.11] - 13.11.2026
 
 ## 📦 Stable Release
@@ -87,46 +125,3 @@ _Changes since [2.10.8](https://github.com/music-assistant/server/releases/tag/2
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Simanias, @arturpragacz, @culmat, @fmunkes
-
-
-# [2.10.8] - 23.10.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.7](https://github.com/music-assistant/server/releases/tag/2.10.7)_
-
-### 🐛 Bugfixes
-
-- Release sync group members when an idle group dissolves (by @smellybellyy in #7008)
-- Keep the queue position when a stopped player reports a new position (by @MarvinSchenkel in #7022)
-- Fix QueueEmpty error when ungrouping a group leader with DSP enabled (by @MarvinSchenkel in #7035)
-- Fix DSD in WavPack failing analysis due to wrong PCM size (by @MarvinSchenkel in #7041)
-- Launch the Sendspin Cast app before the stream starts (by @Simanias in #7074)
-- Limit Tidal to one concurrent stream per account (by @jozefKruszynski in #7082)
-- Only count album artists of albums in the library (by @OzGav in #7088)
-- Fix track numbers on multi-disc Tidal albums (by @OzGav in #7090)
-- Fix Genius returning lyrics of the wrong song (by @MarvinSchenkel in #7094)
-- Fix featured artists showing as album artists for Emby (by @MarvinSchenkel in #7095)
-- Fix autoplay queueing the same tracks repeatedly (by @MarvinSchenkel in #7096)
-- Keep the Spotify account when reconfiguring during a rate limit (by @MarvinSchenkel in #7098)
-- Report playlist items that could not be added (by @MarvinSchenkel in #7099)
-- Keep AirPlay receivers that share one IP on their own Universal Player (by @MarvinSchenkel in #7100)
-- Fix local files album artist fallback for album folders in the share root (by @MarvinSchenkel in #7102)
-- Bump `aiosendspin` to 10.2.1 to fix Opus stutter on ESP32 ESPHome speakers (by @maximmaxim345 in #7105)
-- Keep a provider's progress sync on its own account (by @fmunkes in #7106)
-- Pausing Spotify on the Soloist engine from the Spotify app no longer skips the track (by @MarvinSchenkel in #7117)
-- Fix ARD Audiothek account login (by @MarvinSchenkel in #7118)
-- Fix newer Google Cast speakers stopping after about 24 MiB (by @MarvinSchenkel in #7120)
-- Start a transferred queue at the source's position (by @mnestrud in #7123)
-- Fix Home Assistant plugin not recovering after a setup timeout (by @MarvinSchenkel in #7131)
-- Fix flow streams holding back FLAC audio on quiet passages (by @MarvinSchenkel in #7132)
-- Fix web players showing up in Home Assistant while not exposed (by @MarvinSchenkel in #7145)
-- Keep a WiiM seek from moving the queue to the end of the item (by @MarvinSchenkel in #7149)
-- Fix YouTube Music album links without a playlist ID (by @jetersen in #7158)
-- Fix Apple Music failing to load with an expired stored app token (by @MarvinSchenkel in #7165)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Simanias, @fmunkes, @jetersen, @jozefKruszynski, @maximmaxim345, @mnestrud, @smellybellyy
