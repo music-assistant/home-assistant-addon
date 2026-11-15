@@ -8,6 +8,9 @@ configuration:
   frontend_repo:
     name: Frontend-repository
     description: "Bouw de frontend vanaf een branch, pr-<nummer>, volledige commit-hash of owner/repo@branch voor een fork. Laat leeg om de frontend te gebruiken die bij de server is meegeleverd."
+  provider_repo:
+    name: Provider-repository
+    description: "Laad de providers uit een eigen repository: owner/repo voor de standaardbranch, owner/repo@ref voor een branch, tag of commit, of owner/repo@pr-<nummer>. Laat leeg om er geen te laden."
   safe_mode:
     name: Veilige modus
     description: "Start de Music Assistant-server in veilige modus, waarbij alleen de kerncontrollers zonder providers worden gestart, om problemen op te lossen"
