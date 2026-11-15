@@ -1,3 +1,84 @@
+# [2.11.0.dev2026111503] - 15.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026111403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111403)_
+
+### 🚀 New Providers
+
+- Add CBC Listen provider (by @iwismer in #7556)
+
+### 🚀 Features and enhancements
+
+- Add player options to the Sonos provider (by @fmunkes in #7531)
+- Add a perceived energy level to track audio metadata (by @MarvinSchenkel in #7589)
+- Community catalog: install, load and update providers that the community maintains (by @marcelveldt in #7641)
+- Player linking improvements (by @marcelveldt in #7649)
+- Keep the order of in-progress audiobooks and podcasts when providers sync progress (by @fmunkes in #7658)
+- Report the progress time from Audiobookshelf, gPodder and Overcast (by @fmunkes in #7659)
+- Link an artist to a newly added music service when its page is opened (by @marcelveldt in #7689)
+
+### 🐛 Bugfixes
+
+- Use LMS synchronisation logic for squeezelite sync groups (by @Carunga in #6477)
+- Keep HLS radio playing through stalls of its CDN (by @jordiboehme in #7407)
+- Reject control characters in concat file lists (by @chrisuthe in #7412)
+- Strip control characters from AirPlay now-playing metadata (by @chrisuthe in #7413)
+- Accept whole numbers for float API arguments (by @pierosavi in #7477)
+- Fix missing covers in Music Assistant playlists (by @OzGav in #7546)
+- Fix stale album links of local files whose album tag changed (by @OzGav in #7548)
+- Fix AirPlay pairing with Apple TV and HomeView on OS 27.2 (by @marcelveldt in #7632)
+- Fix silent AirPlay 2 playback on Shairport Sync receivers (by @marcelveldt in #7662)
+- Fix removing several players from a Squeezelite group at once (by @marcelveldt in #7666)
+- Reject oversized ID3 tags before scanning local audio files (by @marcelveldt in #7667)
+- Fix silent Shairport Sync speakers after the first AirPlay 2 stream (airplay-cli v0.5.12) (by @musicassistant-bot[bot] in #7668)
+- Release AirPlay speakers on stop and let another app take them over (by @marcelveldt in #7671)
+- Release AirPlay speakers on stop and notice when another app takes them over (airplay-cli v0.5.13) (by @musicassistant-bot[bot] in #7673)
+- Keep the album cover on an Apple TV across tracks of the same album (airplay-cli v0.5.14) (by @musicassistant-bot[bot] in #7699)
+
+### 🎨 Frontend Changes
+
+- Recolour the visualizer from the artwork palette (by @jozefKruszynski in [#3172](https://github.com/music-assistant/frontend/pull/3172))
+- Upgrade the visualizer engine to butterchurn v3 presets (by @jozefKruszynski in [#3170](https://github.com/music-assistant/frontend/pull/3170))
+- Show a music service's albums on the artist page when your library has none (by @marcelveldt in [#3184](https://github.com/music-assistant/frontend/pull/3184))
+- Show a track's energy level next to BPM and key (by @MarvinSchenkel in [#3181](https://github.com/music-assistant/frontend/pull/3181))
+- Make setup wizard controls easier to reach (by @marcelveldt in [#3182](https://github.com/music-assistant/frontend/pull/3182))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>20 changes</summary>
+
+- Artist Events no longer queues a metadata refresh for every artist (by @marcelveldt in #7654)
+- Rate limit the iTunes artwork and Genius lyrics lookups (by @marcelveldt in #7655)
+- Rate limit requests to Audible (by @marcelveldt in #7656)
+- Fix music files failing to import while the server is busy (by @marcelveldt in #7660)
+- Last.fm top tracks list your own library instead of searching every music service (by @marcelveldt in #7663)
+- Pausing a squeezelite group member on its own device now pauses the whole group (by @marcelveldt in #7669)
+- Count only the albums and artists that are in your library (by @marcelveldt in #7675)
+- Remove the old database alias for library items (by @marcelveldt in #7677)
+- Collect metadata only for the artists and albums in your library (by @marcelveldt in #7678)
+- State the artist albums limit in the development guide (by @marcelveldt in #7681)
+- Test that a queue keeps its user when a play request runs out of time (by @marcelveldt in #7682)
+- Keep the dependency report within the size GitHub allows for a comment (by @marcelveldt in #7683)
+- Fetch a YouTube Music podcast once when its page opens (by @marcelveldt in #7684)
+- Show Last.fm top tracks again after a failed request (by @marcelveldt in #7685)
+- Count the genres the genre list shows (by @marcelveldt in #7686)
+- Look up fewer tracks for Last.fm similar tracks and radio (by @marcelveldt in #7687)
+- Open more discography albums by trying the editions that can be found (by @marcelveldt in #7688)
+- Update aioslimproto to 3.4.1 (by @marcelveldt in #7691)
+- A WiiM stopped from its own app now leaves its squeezelite group (by @marcelveldt in #7695)
+- Community catalog: say why an action is refused (by @marcelveldt in #7700)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@Carunga, @MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @iwismer, @jordiboehme, @jozefKruszynski, @marcelveldt, @pierosavi
+
+
 # [2.11.0.dev2026111403] - 14.11.2026
 
 ## 📦 Nightly Release
@@ -131,64 +212,3 @@ _Changes since [2.11.0.dev2026111203](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @pierosavi, @thelad-dev
-
-
-# [2.11.0.dev2026111203] - 12.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026111103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111103)_
-
-### 🚀 New Providers
-
-- Add DR LYD provider (by @mikkelke in #7488)
-
-### 🚀 Features and enhancements
-
-- Easier setup code copy option in setup flow for Tidal/Spotify/Audible music provider (by @afeldman1 in #6268)
-- Handle m4a albumartists tag (by @NasaGeek in #7459)
-- Pick between provider and own resume progress by one rule everywhere (by @fmunkes in #7482)
-- Add resume timestamps to providers where available (by @fmunkes in #7483)
-- Grey out library podcasts and radio stations if their provider no longer has them (by @OzGav in #7490)
-- Make Subsonic provider use the last modified bookmark date (by @khers in #7536)
-- Re-order M3U playlists (by @OzGav in #7539)
-- Reorder tracks in Qobuz playlists (by @OzGav in #7544)
-
-### 🐛 Bugfixes
-
-- Fix Roku Media Assistant player queue stalls and end-of-stream detection (by @kees in #7217)
-- Fix missing played status on a Spotify podcast episode page (by @OzGav in #7353)
-- Reconnect the MPD player when its connection drops silently (by @lucamartinetti in #7522)
-- Prevent clipping when volume normalization raises a quiet track (by @marcelveldt in #7538)
-
-### 🎨 Frontend Changes
-
-- Add optional copy text button in setup dialog (by @afeldman1 in [#2710](https://github.com/music-assistant/frontend/pull/2710))
-- Play media on the player you picked when it is in a group (by @marcelveldt in [#3159](https://github.com/music-assistant/frontend/pull/3159))
-- Bump vue from 3.5.44 to 3.5.45 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3153](https://github.com/music-assistant/frontend/pull/3153))
-- Bump pnpm/action-setup from 6.1.0 to 6.1.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3144](https://github.com/music-assistant/frontend/pull/3144))
-- Bump typescript-eslint from 8.72.0 to 8.72.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3151](https://github.com/music-assistant/frontend/pull/3151))
-- Bump oxlint and eslint-plugin-oxlint (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3147](https://github.com/music-assistant/frontend/pull/3147))
-- Bump @types/node from 26.6.5 to 26.6.6 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3146](https://github.com/music-assistant/frontend/pull/3146))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>8 changes</summary>
-
-- Keep audio pipes off the disk so a busy disk cannot freeze playback (by @marcelveldt in #7514)
-- Check player access for commands that are passed on to a group (by @marcelveldt in #7523)
-- Keep a group playing when a play request on one of its players cannot start (by @marcelveldt in #7524)
-- Remove Auracast (by @OzGav in #7527)
-- Play on a speaker right after it leaves its group (by @marcelveldt in #7529)
-- Stop two tests failing when a task list update lands mid-test (by @marcelveldt in #7530)
-- Stop a storage test failing when the CI runner stalls briefly (by @marcelveldt in #7532)
-- Update the Hue Entertainment library to 0.6.0 (by @marcelveldt in #7535)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@NasaGeek, @OzGav, @afeldman1, @fmunkes, @kees, @khers, @lucamartinetti, @marcelveldt, @mikkelke, @types
