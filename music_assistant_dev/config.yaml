@@ -38,9 +38,11 @@ options:
   log_level: info
   server_repo: ""
   frontend_repo: ""
+  provider_repo: ""
   safe_mode: false
 schema:
   log_level: list(debug|info|warning|error)
   server_repo: str?
   frontend_repo: str?
+  provider_repo: str?
   safe_mode: bool

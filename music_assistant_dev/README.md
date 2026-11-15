@@ -17,7 +17,8 @@ Unlike the regular Music Assistant App which uses pre-built releases, this Dev A
 
 1. Builds and installs the server from a specified Git source (branch, PR, or fork)
 2. Builds and installs the frontend from a specified Git source (branch, PR, or fork)
-3. Starts Music Assistant with your custom code
+3. Loads the providers of a repository of their own, such as one made from the [community provider template](https://github.com/music-assistant/community-provider-template)
+4. Starts Music Assistant with your custom code
 
 The build process:
 
@@ -26,9 +27,11 @@ The build process:
 3. Installs the frontend as a Python package (overwriting the default frontend)
 4. Starts Music Assistant
 
-The App image is built on top of the nightly server image, so the dependency set, the bundled
-app variables and the cliairplay binary are already in place. Installing a branch only has to
-apply what actually differs from that nightly.
+The App runs the server's development image (`ghcr.io/music-assistant/server:dev`), which is
+built on top of the nightly server image, so the dependency set, the bundled app variables and
+the cliairplay binary are already in place. Installing a branch only has to apply what actually
+differs from that nightly. The options `server_repo`, `frontend_repo` and `provider_repo` are
+handed to that image as `SERVER_REPO`, `FRONTEND_REPO` and `PROVIDER_REPO`.
 
 ## Configuration
 
@@ -114,6 +117,35 @@ frontend_repo: abc123def456...
 **Default**: `""` (empty - uses bundled frontend, no build)
 
 > **Note**: When `frontend_repo` is left empty or blank, the frontend build will be **skipped entirely**. This significantly reduces startup time and is ideal when you only need to test backend features. The frontend bundled with the server installation will be used instead.
+
+### Provider Repository Configuration
+
+Use the `provider_repo` option to load the providers of a repository of their own. The repository holds one or more provider folders (a folder with a `manifest.json`), as the [community provider template](https://github.com/music-assistant/community-provider-template) does. It is fetched again at every start, and the server then runs in dev mode with it as its provider folder.
+
+**Format**: always `owner/repo`, there is no default repository
+
+- **Default branch**: `owner/repo`
+- **Branch, tag or commit**: `owner/repo@ref`
+- **Pull Request**: `owner/repo@pr-12` (pull request 12 of that repository)
+- **Empty/blank**: Load no provider repository
+
+**Examples**:
+
+```yaml
+# Load no provider repository
+provider_repo: ""
+
+# The default branch of your provider repository
+provider_repo: yourusername/your-provider
+
+# A branch of it
+provider_repo: yourusername/your-provider@my-feature
+
+# Test a pull request on it
+provider_repo: yourusername/your-provider@pr-12
+```
+
+**Default**: `""` (empty - no provider repository)
 
 ## Full Configuration Examples
 

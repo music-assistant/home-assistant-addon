@@ -8,6 +8,9 @@ configuration:
   frontend_repo:
     name: Frontend repository
     description: "Build the frontend from a branch, pr-<number>, full commit hash, or owner/repo@branch for a fork. Leave empty to use the frontend bundled with the server."
+  provider_repo:
+    name: Provider repository
+    description: "Load the providers of a repository of their own: owner/repo for its default branch, owner/repo@ref for a branch, tag or commit, or owner/repo@pr-<number>. Leave empty to load none."
   safe_mode:
     name: Safe mode
     description: "Start the Music Assistant server in safe mode where only the core controllers are started without any providers, to troubleshoot issues"
