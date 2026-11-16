@@ -1,3 +1,91 @@
+# [2.11.0.dev2026111603] - 16.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026111503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111503)_
+
+### 🚀 Features and enhancements
+
+- Open every Discover row in full (by @ryanmac8 in #7374)
+- Update BBC Sounds provider to library v3.0.1 (by @kieranhogg in #7571)
+- Show an artist's most played tracks from ListenBrainz when no music service ranks them (by @marcelveldt in #7709)
+- Let a provider add its own entries to the menu of a track, album or playlist (by @marcelveldt in #7716)
+- Let Squeezebox and squeezelite speakers play in sync with Sendspin speakers (by @marcelveldt in #7717)
+- Marketplace: stop suggesting what you already have (by @marcelveldt in #7718)
+- Spread the track energy level over the full 1 to 10 scale (by @MarvinSchenkel in #7721)
+- Find a provider in the Marketplace by the name of your product (by @marcelveldt in #7728)
+- Keep a speaker's left, right or mono setting when it plays through a Sendspin bridge (by @marcelveldt in #7736)
+- Let the play button of a stopped Squeezebox or squeezelite speaker start playback again (by @marcelveldt in #7745)
+
+### 🐛 Bugfixes
+
+- Fix AirPlay 1 speakers staying silent after a live input restarts (by @devon3000 in #6819)
+- Keep album artwork on AirPlay when the next track shares the cover (by @MarvinSchenkel in #6912)
+- Correct the Alexa player's position from the Echo's own reports (by @nyakaspeter in #7143)
+- Play Apple Music purchases that Apple still sells (by @anthonws in #7202)
+- Report Plex playback in Plex for players without Plex Connect (by @anatosun in #7204)
+- Fix pasted-link search returning the same item once per provider (by @jgruber in #7228)
+- Keep genres a provider adds after import when the genre scan runs (by @GoatsAndMonkeys in #7247)
+- Keep a music provider on the account it was set up with (by @GoatsAndMonkeys in #7256)
+- Keep the DLNA position across a pause on renderers that don't report one (by @GoatsAndMonkeys in #7273)
+- Fix bridged speakers ignoring their DSP and channel settings in a Sendspin group (by @piushartmann in #7692)
+- Start YouTube Music Endless Mixes in seconds again (by @MarvinSchenkel in #7723)
+
+### 🎨 Frontend Changes
+
+- Marketplace: the same cards on every tab (by @marcelveldt in [#3190](https://github.com/music-assistant/frontend/pull/3190))
+- Show the menu entries a plugin adds to a track, album or playlist (by @marcelveldt in [#3188](https://github.com/music-assistant/frontend/pull/3188))
+- Party: show skip vote progress on the guest page and dashboard (by @martinbuergi in [#3014](https://github.com/music-assistant/frontend/pull/3014))
+- Update audiobook details with shared hero and configurable rows (by @dmoo500 in [#3105](https://github.com/music-assistant/frontend/pull/3105))
+- Show the dashboard on the current device from its cast button (by @culmat in [#3079](https://github.com/music-assistant/frontend/pull/3079))
+- Marketplace: suggestions from your own setup (by @marcelveldt in [#3187](https://github.com/music-assistant/frontend/pull/3187))
+- Marketplace: a Discover tab with a top pick, and a page that fits a phone (by @marcelveldt in [#3186](https://github.com/music-assistant/frontend/pull/3186))
+- Community catalog: updates, automatic updates and what is new (by @marcelveldt in [#3179](https://github.com/music-assistant/frontend/pull/3179))
+- Community catalog: enable it, install and remove community contributions (by @marcelveldt in [#3177](https://github.com/music-assistant/frontend/pull/3177))
+- Add the Marketplace: one page to find and add music sources, players, metadata and plugins (by @marcelveldt in [#3176](https://github.com/music-assistant/frontend/pull/3176))
+- Manage players whose provider is not running, and remove all unavailable players at once (by @marcelveldt in [#3161](https://github.com/music-assistant/frontend/pull/3161))
+- Setup wizard: popular providers come from the server (by @marcelveldt in [#3189](https://github.com/music-assistant/frontend/pull/3189))
+- Show, open and play tracks and albums that are looked up on your music services when needed (by @marcelveldt in [#3185](https://github.com/music-assistant/frontend/pull/3185))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>24 changes</summary>
+
+- Add tests for Sonos reconnect delay limit, cancellation and shutdown (by @muttleydosomething in #7299)
+- Tell contributors what a provider in the server asks of them (by @marcelveldt in #7611)
+- Find tracks and albums by their MusicBrainz id, ISRC or barcode when they are opened (by @marcelveldt in #7701)
+- List discography albums outside the library by their MusicBrainz id in the general external form (by @marcelveldt in #7703)
+- Look up tracks known by an external id when the queue reaches them (by @marcelveldt in #7704)
+- Let a community provider test itself against a real server (by @marcelveldt in #7708)
+- Community catalog: say enable and disable, and what to do with what is left (by @marcelveldt in #7711)
+- Marketplace: a release says which providers are new in it (by @marcelveldt in #7712)
+- Add the sync loop for the Squeezebox Sendspin bridge (by @marcelveldt in #7713)
+- Update aioslimproto to 3.5.0 (by @marcelveldt in #7714)
+- A development image to try a branch or your own provider on Docker (by @marcelveldt in #7715)
+- Play the last moment of a queue on Sendspin players that resample or encode (by @marcelveldt in #7719)
+- Let the squeezelite Sendspin bridge win over the Cast bridge on a device that has both (by @marcelveldt in #7722)
+- Answer refused HTTP API commands with a proper error instead of a server error (by @marcelveldt in #7724)
+- Update the Dev app only after its development image is published (by @marcelveldt in #7725)
+- Make the Bose SoundTouch, ABC Radio and Media Station X icons visible in the light theme (by @marcelveldt in #7726)
+- Clarify two developer docs: the test fixture's network isolation and the admin-only scope (by @marcelveldt in #7727)
+- Play bridged Squeezebox and squeezelite speakers in their own audio quality and show what is playing (by @marcelveldt in #7737)
+- Refuse moving a provider out of the server before the community catalog offers it (by @marcelveldt in #7742)
+- Give an MCP tool call time to wake a speaker that is switched off (by @marcelveldt in #7744)
+- Make three weak server tests reliable (by @marcelveldt in #7746)
+- Save a queue as a playlist even when some of its tracks still have to be looked up (by @marcelveldt in #7750)
+- Fix a sync group playing on one speaker when its first member can't group with the rest (by @marcelveldt in #7751)
+- Say that a music service could not be reached instead of calling a track unavailable (by @marcelveldt in #7757)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@GoatsAndMonkeys, @MarvinSchenkel, @anatosun, @anthonws, @culmat, @devon3000, @dmoo500, @jgruber, @kieranhogg, @marcelveldt, @martinbuergi, @muttleydosomething, @nyakaspeter, @piushartmann, @ryanmac8
+
+
 # [2.11.0.dev2026111503] - 15.11.2026
 
 ## 📦 Nightly Release
@@ -156,59 +244,3 @@ _Changes since [2.11.0.dev2026111303](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Simanias, @afeldman1, @cTopher, @dmoo500, @fmunkes, @jdaberkow, @jozefKruszynski, @marcelveldt, @pierosavi, @stvncode
-
-
-# [2.11.0.dev2026111303] - 13.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026111203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111203)_
-
-### 🚀 Features and enhancements
-
-- Jump to a letter in the artist, album and track libraries (by @OzGav in #7468)
-- Play line-ins on Sendspin players at the source's sample rate (by @maximmaxim345 in #7507)
-- Sync Hue lamps on Home Assistant's ZHA without a Hue bridge (by @marcelveldt in #7540)
-- Reorder tracks in Spotify playlists (by @OzGav in #7543)
-- YouTube Music: edit and reorder your playlists (by @MarvinSchenkel in #7553)
-- Add icon for the statistics controller (by @MarvinSchenkel in #7555)
-- Add playlist reordering to the Audiobookshelf provider (by @fmunkes in #7572)
-
-### 🐛 Bugfixes
-
-- Keep the last Squeezelite volume when its cache entry expires (by @thelad-dev in #6944)
-- Keep same-name artists on one streaming provider apart via MusicBrainz (by @OzGav in #7124)
-- Reassemble chunked client messages on the remote access API channel (by @jozefKruszynski in #7537)
-- Stop Cast speakers replaying earlier tracks at the end of a queue (by @marcelveldt in #7549)
-- Stop the end of a queue being cut off on Cast and Bluesound speakers (by @marcelveldt in #7550)
-- Back off AirPlay control reconnects for receivers that keep failing (by @MarvinSchenkel in #7554)
-- Fix Cast speakers dropping out during longer playback (by @marcelveldt in #7559)
-- Replace the HTTP profile setting with a fixed content length toggle (by @marcelveldt in #7560)
-
-### 🎨 Frontend Changes
-
-- Use one subtle hover effect for clickable settings cards (by @pierosavi in [#3117](https://github.com/music-assistant/frontend/pull/3117))
-- Add artist shelf counts and release-date sorting (by @dmoo500 in [#3015](https://github.com/music-assistant/frontend/pull/3015))
-- Jump to a letter in the library (by @OzGav in [#3138](https://github.com/music-assistant/frontend/pull/3138))
-- Add an exclude favorites option to smart playlists (by @dmoo500 in [#3111](https://github.com/music-assistant/frontend/pull/3111))
-- Name the maintainer of every provider a person maintains (by @marcelveldt in [#3165](https://github.com/music-assistant/frontend/pull/3165))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>6 changes</summary>
-
-- Faster Sonos grouping right after an earlier group change (by @marcelveldt in #7534)
-- Keep Sonos playing when another Music Assistant server on the network restarts (by @marcelveldt in #7545)
-- Require ffmpeg 8.0 or newer (by @marcelveldt in #7558)
-- Keep playing while an Endless Mix fetches new tracks (by @marcelveldt in #7564)
-- Describe both Hue Lights Sync backends in the setup notes (by @marcelveldt in #7567)
-- Mark everything that ships with the server as built-in (by @marcelveldt in #7575)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @jozefKruszynski, @marcelveldt, @maximmaxim345, @pierosavi, @thelad-dev
