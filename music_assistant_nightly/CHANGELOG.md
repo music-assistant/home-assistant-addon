@@ -1,3 +1,97 @@
+# [2.11.0.dev2026111703] - 17.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026111603](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111603)_
+
+### 🚀 Features and enhancements
+
+- Keep in-progress episodes of library podcasts in the "In progress" row beyond a week (by @fmunkes in #7676)
+- Keep settings you chose explicitly when the default changes (by @marcelveldt in #7735)
+- DLNA: add devices manually by IP address or description URL (by @m-a-r-k-e in #7752)
+- Give a speaker a Sendspin output when its AirPlay output is switched off (by @marcelveldt in #7753)
+- Notice sooner when a speaker behind a smart plug has lost its power (by @marcelveldt in #7758)
+- Explain in the log why the Sendspin Cast bridge is skipped for unsupported devices (by @MarvinSchenkel in #7775)
+- Make a positive sync delay play earlier on AirPlay, as on every other player (by @marcelveldt in #7778)
+- Keep a speaker's Sendspin delay per bridge when another bridge takes the output over (by @marcelveldt in #7780)
+- Let an analysis provider follow a live source, such as a turntable (by @marcelveldt in #7787)
+- Show the sample rate and bit depth of the stream on squeezelite players such as WiiM (by @marcelveldt in #7790)
+- Tell Music Assistant when a smart plug cuts the power of a player (by @marcelveldt in #7799)
+- Spotify: keep browsing responsive when your own Client ID is rate limited (by @marcelveldt in #7803)
+
+### 🐛 Bugfixes
+
+- Fix URL-encoded titles for untagged files on filesystem providers (by @OzGav in #7455)
+- Report the Sendspin playback position from when the audio is heard (by @ivbeck in #7467)
+- Give every player the whole track's duration for a flow stream (by @Simanias in #7498)
+- Fix ARD Sounds account login and sync subscriptions and progress (by @meiser79 in #7645)
+- Keep AirPlay groups in sync after the audio source stalls (by @marcelveldt in #7730)
+- Pass Sonos volume changes through quickly during AirPlay playback (by @marcelveldt in #7732)
+- Keep HEOS group members playing when an AirPlay speaker joins (by @marcelveldt in #7734)
+- Reset repeat mode when entering dynamic mode (by @willowkap in #7754)
+- Bring Sonos speakers back into their group after an AirPlay speaker joins (by @marcelveldt in #7755)
+- Accept ReplayGain gain tags without a space before dB (by @OzGav in #7767)
+- Play gPodder and iTunes Podcasts episodes whose guid and stream url contain a space (by @fmunkes in #7768)
+- Start fully played podcast episodes and audiobooks from the beginning (by @MarvinSchenkel in #7772)
+- Fix tracks greyed out in a saved playlist when users share a provider type (by @MarvinSchenkel in #7774)
+- Fix hi-res playback failing on gen 1 HEOS speakers (by @MarvinSchenkel in #7776)
+- Fix Cast bridge startup error when the bridge is removed during its opt-out (by @MarvinSchenkel in #7777)
+- Delete only playlist art inside the provider's images folder (by @MarvinSchenkel in #7781)
+- Fix Snapcast restoring a missing 'default' stream after an announcement (by @MarvinSchenkel in #7784)
+- Fix sign-in being blocked by Cloudflare for Tailscale and CGNAT addresses (by @MarvinSchenkel in #7791)
+
+### 🎨 Frontend Changes
+
+- Add a volume control for Music Quiz players in Remote mode (by @abb848 in [#2943](https://github.com/music-assistant/frontend/pull/2943))
+- Call the metadata page Metadata sources (by @marcelveldt in [#3197](https://github.com/music-assistant/frontend/pull/3197))
+- Show why a provider is suggested in the Marketplace lists, and list those first (by @marcelveldt in [#3200](https://github.com/music-assistant/frontend/pull/3200))
+- Improve player card hierarchy and playback status (by @trisweb in [#2688](https://github.com/music-assistant/frontend/pull/2688))
+- Rework chapters in the player, queue and detail page (by @pierosavi in [#3141](https://github.com/music-assistant/frontend/pull/3141))
+- Reset to defaults clears the settings you saved (by @marcelveldt in [#3192](https://github.com/music-assistant/frontend/pull/3192))
+- Label the visualizer settings controls for screen readers (by @jozefKruszynski in [#3183](https://github.com/music-assistant/frontend/pull/3183))
+- Offer current device when transferring a queue (by @pierosavi in [#3072](https://github.com/music-assistant/frontend/pull/3072))
+- Fit artist top tracks columns to the available width (by @pierosavi in [#3198](https://github.com/music-assistant/frontend/pull/3198))
+- Fix the black screen on cast dashboards on older Cast receivers (by @jozefKruszynski in [#3193](https://github.com/music-assistant/frontend/pull/3193))
+- Keep stacked collection covers inside the tile at every cover size (by @fmunkes in [#3194](https://github.com/music-assistant/frontend/pull/3194))
+- Let the setup wizard switch on a player whose provider is not running (by @marcelveldt in [#3202](https://github.com/music-assistant/frontend/pull/3202))
+- Select the player a link names once it is available, and find AI Radio players by their old id (by @marcelveldt in [#3199](https://github.com/music-assistant/frontend/pull/3199))
+- Name the players in the "Remove unavailable players" confirmation (by @marcelveldt in [#3195](https://github.com/music-assistant/frontend/pull/3195))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>20 changes</summary>
+
+- Keep bookmarks only for audiobooks and podcasts in the library (by @fmunkes in #7679)
+- Leave out AirPlay speakers that join a group but never answer its clock (by @marcelveldt in #7731)
+- Announce only reachable addresses for the AirPlay Receiver (by @marcelveldt in #7733)
+- Say music source, metadata source and player support in the server's texts (by @marcelveldt in #7756)
+- Only a real start switches a speaker's power control on (by @marcelveldt in #7760)
+- Fix a track being added twice to a playlist on a music service (by @marcelveldt in #7761)
+- Refactor BBC Sounds provider (by @kieranhogg in #7763)
+- Make the server stop timer test independent of runner speed (by @marcelveldt in #7770)
+- Remove the leftover Universal Player and builtin_player providers from the settings (by @marcelveldt in #7771)
+- Audio analysis providers say which audio they are for (by @marcelveldt in #7779)
+- Keep a squeezelite speaker in sync when it joins a playing Sendspin group (by @marcelveldt in #7788)
+- Play squeezelite speakers in sync from the first note in a Sendspin group (by @marcelveldt in #7794)
+- Read the community catalog from its new address, over https only (by @marcelveldt in #7795)
+- Give each Music Assistant server its own mDNS host name (by @marcelveldt in #7797)
+- Keep radio analysis running for every queue on the station (by @marcelveldt in #7801)
+- Say in the flow mode setting that crossfade turns it on for players without gapless support (by @marcelveldt in #7804)
+- AirPlay: don't bring a speaker back into its group once it is switched off (by @marcelveldt in #7806)
+- Bring a squeezelite speaker back into its Sendspin group after two dropouts (by @marcelveldt in #7807)
+- Fix a playlist editing test that failed now and then (by @marcelveldt in #7810)
+- Let an offline speaker be removed from a universal group (by @marcelveldt in #7813)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Simanias, @abb848, @fmunkes, @ivbeck, @jozefKruszynski, @kieranhogg, @m-a-r-k-e, @marcelveldt, @meiser79, @pierosavi, @trisweb, @willowkap
+
+
 # [2.11.0.dev2026111603] - 16.11.2026
 
 ## 📦 Nightly Release
@@ -165,82 +259,3 @@ _Changes since [2.11.0.dev2026111403](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @Carunga, @MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @iwismer, @jordiboehme, @jozefKruszynski, @marcelveldt, @pierosavi
-
-
-# [2.11.0.dev2026111403] - 14.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026111303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111303)_
-
-### 🚀 Features and enhancements
-
-- Deezer: play hi-res and add a stream quality setting (by @jdaberkow in #7512)
-- Send supported artist types with the provider (by @fmunkes in #7595)
-- Replace the MilkDrop color tint setting with the artwork palette (by @jozefKruszynski in #7622)
-
-### 🐛 Bugfixes
-
-- Raumfeld: a room of several speakers keeps its player (by @Simanias in #7180)
-- Fix AirPlay group members drifting apart after a corrected cold start (by @cTopher in #7503)
-- Bound ffprobe/ffmpeg tag probes with a timeout (by @OzGav in #7584)
-- Tidal: name album artists and playlist owners in search results (by @jozefKruszynski in #7585)
-- Give up on a play request that takes longer than a minute (by @marcelveldt in #7601)
-- Stop artists from fetching their whole catalogue when played or opened (by @marcelveldt in #7602)
-- Skip post load work for a provider unloaded while registering (by @jozefKruszynski in #7612)
-- Fix silent HomePod mini 2 and failing AirPlay group starts (airplay-cli v0.5.10) (by @musicassistant-bot[bot] in #7615)
-- Fix AirPlay pairing on OS 27.2 and show HomePod controls in the Home app (airplay-cli v0.5.11) (by @musicassistant-bot[bot] in #7633)
-
-### 🎨 Frontend Changes
-
-- Make first-time setup clearer (by @marcelveldt in [#3169](https://github.com/music-assistant/frontend/pull/3169))
-- Use the title bar controls on collection pages (by @pierosavi in [#3136](https://github.com/music-assistant/frontend/pull/3136))
-- Use one subtle hover effect for clickable settings cards (by @pierosavi in [#3117](https://github.com/music-assistant/frontend/pull/3117))
-- Add artist shelf counts and release-date sorting (by @dmoo500 in [#3015](https://github.com/music-assistant/frontend/pull/3015))
-- Jump to a letter in the library (by @OzGav in [#3138](https://github.com/music-assistant/frontend/pull/3138))
-- Add an exclude favorites option to smart playlists (by @dmoo500 in [#3111](https://github.com/music-assistant/frontend/pull/3111))
-- Add optional copy text button in setup dialog (by @afeldman1 in [#2710](https://github.com/music-assistant/frontend/pull/2710))
-- Show the played state of audiobook collections and keep their covers when filtered (by @fmunkes in [#3034](https://github.com/music-assistant/frontend/pull/3034))
-- Move the required source picker into the Filters panel (by @pierosavi in [#3137](https://github.com/music-assistant/frontend/pull/3137))
-- Offer sleep timers that stop at the end of the current item or chapter (by @fmunkes in [#3050](https://github.com/music-assistant/frontend/pull/3050))
-- Open the right DSP filter from the Audio Pipeline (by @OzGav in [#3120](https://github.com/music-assistant/frontend/pull/3120))
-- Use the library sort and filter controls on genre, browse and author pages (by @OzGav in [#3116](https://github.com/music-assistant/frontend/pull/3116))
-- Split the artist discography into two rows by release type (by @OzGav in [#3085](https://github.com/music-assistant/frontend/pull/3085))
-- Minimize the fullscreen player when a search result is opened (by @pierosavi in [#3131](https://github.com/music-assistant/frontend/pull/3131))
-- Enable seeded random sorting in paginated listings (by @dmoo500 in [#3113](https://github.com/music-assistant/frontend/pull/3113))
-- Offer to move Spotify playback here when another player holds it (by @marcelveldt in [#3122](https://github.com/music-assistant/frontend/pull/3122))
-- Play the Music Quiz on the device that shows it (by @marcelveldt in [#3124](https://github.com/music-assistant/frontend/pull/3124))
-- Let admins view the statistics of other or all users (by @fmunkes in [#3112](https://github.com/music-assistant/frontend/pull/3112))
-- Show who maintains each integration (by @marcelveldt in [#3115](https://github.com/music-assistant/frontend/pull/3115))
-- Add a play button to the track rows of detail pages (by @stvncode in [#3109](https://github.com/music-assistant/frontend/pull/3109))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>17 changes</summary>
-
-- Remove the ffmpeg 7.1.1 workaround for niconico video audio (by @marcelveldt in #7587)
-- Auto Release skips empty releases and waits for the stable backport PR (by @MarvinSchenkel in #7590)
-- Bump peter-evans/create-pull-request from 8.1.2 to 8.1.3 (by @dependabot[bot] in #7597)
-- Document that one action never fans out over a music service's catalogue (by @marcelveldt in #7598)
-- Stop playback from requesting music services that asked us to wait (by @marcelveldt in #7600)
-- Stop a whole library folder from being played in one go (by @marcelveldt in #7604)
-- SoundCloud: make far fewer requests and respect rate limits (by @marcelveldt in #7605)
-- Deezer: respect rate limits on all requests (by @marcelveldt in #7606)
-- Show at most 100 releases of an artist so big discographies stay quick (by @marcelveldt in #7607)
-- YouTube Music: make fewer requests and respect rate limits (by @marcelveldt in #7608)
-- Spotify: list album tracks with one request instead of two (by @marcelveldt in #7609)
-- Load the texts of a provider that is installed later (by @marcelveldt in #7613)
-- Let the server load providers from a second folder (by @marcelveldt in #7614)
-- Install the requirements of community providers next to the server, never over it (by @marcelveldt in #7616)
-- Fix a test-order failure in the built-in favorites playlist tests (by @marcelveldt in #7621)
-- Make the queue transfer tests independent of how fast the machine is (by @marcelveldt in #7626)
-- Update aioslimproto to 3.4.0 (by @marcelveldt in #7627)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Simanias, @afeldman1, @cTopher, @dmoo500, @fmunkes, @jdaberkow, @jozefKruszynski, @marcelveldt, @pierosavi, @stvncode
