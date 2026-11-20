@@ -10,8 +10,10 @@ synchronization protocol built into Music Assistant.
 
 ## What you need
 
-- Music Assistant 2.7 or newer. Sendspin is built into Music Assistant and
-  cannot be turned off, so there is nothing to enable.
+- A Music Assistant whose Sendspin support speaks Sendspin 1.0.0-rc1 — built on
+  aiosendspin 10 or later. An older one cannot connect to this player at all.
+  Sendspin is built into Music Assistant and cannot be turned off, so there is
+  nothing to enable.
 - Music Assistant and this player on the same local network. Discovery and audio
   both stay on the LAN; there is no reverse proxy, HTTPS or VPN story.
 - Something to play through, wired to this machine.
@@ -24,8 +26,56 @@ synchronization protocol built into Music Assistant.
 3. In Music Assistant the player appears by itself, named after this machine —
    usually **homeassistant**. Set **Player name** to something better.
 
+4. If Music Assistant runs on this same Home Assistant system, it pairs with
+   the player by itself. Otherwise pair it by hand — see below.
+
 Nothing else needs configuring. Music Assistant finds the player over mDNS and
 connects to it.
+
+## Pairing with Music Assistant
+
+Every connection to the player is encrypted, and a server has to **pair** with
+it once before it may play. A server that has not paired can connect but stays
+idle. Pairing is remembered in this app's data, so it survives restarts and
+updates; uninstalling the app forgets it.
+
+When Music Assistant runs as an app on this same Home Assistant system, there
+is nothing to do: **Pair with Music Assistant on this machine** is on by
+default, and Music Assistant pairs with the player as soon as it connects. The
+player offers its pairing token only on Home Assistant's internal network, at
+`172.30.32.1`, which the apps on this machine can reach and nothing else on
+your network can, and only until a server has paired. The port is 8929; set
+**Local pairing port** if the log says it is already in use. While this is on,
+the token is not shown in the log.
+
+For a Music Assistant on another machine, there are two ways to pair:
+
+- **The pairing token.** Turn **Pair with Music Assistant on this machine**
+  off and restart the app. While nothing is paired, the log then shows the
+  token once at startup, on a line that starts `No server is paired yet.
+  Pairing token`. Copy the `SP:0…` string and paste it into Music Assistant
+  where it asks to pair a player with a token.
+- **A 6-digit code.** Ask Music Assistant to pair with a code. The player makes
+  one up for that attempt and logs it as `*** Pairing code: 123456 ***`; type it
+  into Music Assistant.
+
+**Treat the token like a password.** Anyone who has it can pair a server with
+this player, and it does not change. It stops being logged once a server is
+paired. The app log is visible only to Home Assistant administrators.
+
+**Let unpaired servers play** turns pairing off: any server on your network may
+then play here without it. Leave it off unless you have a reason; it is the
+setting that turns the encryption back into a formality.
+
+Upstream's [Pairing a Player](https://github.com/Sendspin/sendspin-cpp-cli/wiki/Pairing-a-Player)
+page goes into more detail.
+
+### Upgrading from 0.2.x
+
+The player's identity is now a key it generates on first start, so Music
+Assistant sees a new player after the upgrade. Volume, grouping and anything
+else stored for the old one do not carry over: pair the new one, add it to its
+groups again, and remove the old one.
 
 ## Choosing where the sound comes out
 
@@ -49,6 +99,56 @@ If you need exclusive, bit-perfect access to a DAC, run the container version of
 this player instead of the app. See the
 [repository README](https://github.com/music-assistant/local-audio-addon).
 
+## Streaming an input to Music Assistant
+
+**Audio input** sends audio from this machine to Music Assistant, for a turntable
+on a line-in or a microphone in a room. It shows up under **Live Inputs** in Music
+Assistant, once Music Assistant is paired with this player, and can be played on
+any player or group. Nothing is captured until you play it there.
+
+- `off` streams nothing, and is the default.
+- `audio_panel` uses the input chosen in this app's **Audio** panel. Restart the
+  app after changing it.
+- `named_source` captures the source or sink named in **Input source name**, for
+  what the Audio panel does not offer: naming a sink captures whatever another app
+  or a Bluetooth device is playing to it.
+- `test_tone` streams a 440 Hz tone, to check that the input reaches Music
+  Assistant before any hardware is involved.
+
+If the input cannot be used, the player still starts and plays as usual. It offers
+no input, and its log says why and lists the sources and sinks it can see, which is
+also the way to find a name to use. That covers a name that is not there, so a
+Bluetooth device has to be connected before the app starts: restart the app once it
+is.
+
+### An input that is missing while nothing is plugged in
+
+Many sound cards offer no input at all until something is plugged into the
+line-in or mic socket, because the card starts on a profile that has outputs
+only. **Input card profile** switches a card to a profile that has an input as
+well, when this app starts. With `named_source`, the input is captured on that
+same start. With `audio_panel`, it only appears in the Audio panel once this app
+has switched the card, so pick it there and restart the app. Unplugging
+afterwards leaves it in place.
+
+Set it to the card's name and the profile's, separated by a colon:
+
+```text
+alsa_card.pci-0000_00_1f.3:output:analog-stereo+input:analog-stereo
+```
+
+`ha audio info` lists both. Set a name that is not there, and the log lists the
+profiles that would work. The app only switches to a profile that is available
+and keeps the card's current output, so the speakers keep playing.
+
+This changes the card for **every app and add-on** on this machine, not just this
+one, and Home Assistant keeps the change across restarts. To undo it, empty the
+setting and pick the card's previous profile in the Home Assistant **Audio** panel.
+
+Music Assistant must not get its own audio back, so this app refuses to capture the
+output it plays to. `audio_panel` also refuses to fall back on capturing what this
+machine plays when it has no real input.
+
 ## Connecting to one specific server
 
 Leave **Music Assistant server** empty unless discovery genuinely does not work.
@@ -70,6 +170,11 @@ every system. Raise it if the sound stutters or drops out on a busy or slow
 machine — there is then more queued up to play through the gap. The cost is a
 longer wait when a track starts and when you seek, so raise it in steps rather
 than going straight to the top.
+
+## When something goes wrong
+
+**Log level** sets how much the player writes to this app's log. Raise it to
+`debug` while chasing a problem, and put it back to `info` afterwards.
 
 ## Switching an amplifier on with the music
 

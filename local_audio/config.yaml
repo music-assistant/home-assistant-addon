@@ -1,5 +1,5 @@
 name: Local Audio
-version: "0.2.0"
+version: "0.3.0"
 slug: local_audio
 description: >-
   Turns this Home Assistant system into a synchronized Sendspin player for
@@ -31,21 +31,37 @@ options:
   # "Local Audio".
   name: ""
   log_level: info
-# `server`, `buffer_ms` and the two hooks are optional with no default on
-# purpose, which is what keeps them out of `options:` above and so behind the
-# fold a user has to open deliberately. Setting a `server` switches the player to
-# dialling out, which suppresses its mDNS advertisement. An unset `buffer_ms` has
-# to reach the player as no setting at all rather than as a number written here,
+  # Quoted because a bare `off` is a YAML boolean, which the list below refuses.
+  input: "off"
+  local_pairing: true
+# `server`, `buffer_ms`, `allow_unpaired`, `local_pairing_port` and the two
+# hooks are optional with no default on purpose, which is what keeps them out of
+# `options:` above and so behind the fold a user has to open deliberately. Setting a `server` switches the
+# player to dialling out, which suppresses its mDNS advertisement. An unset
+# `buffer_ms` has to reach the player as no setting at all rather than as a number written here,
 # so that the default stays upstream's to change; the range is upstream's own, so
 # the configuration screen refuses what the player would refuse.
 #
 # `hook_start` and `hook_stop` are `str?` because a shell command is what they
 # are: there is no narrower schema that would describe one, and no validation
 # here that would make an arbitrary command safer than the person who typed it.
+#
+# `input_source` is a name PulseAudio only knows at run time, so no list could hold
+# it. It is behind the fold because only `named_source` reads it.
+#
+# `input_card_profile` is behind the fold too, because it changes a card for every
+# app on the host. The pattern is PulseAudio's own rule for card names, which is
+# what makes the first colon the separator.
 schema:
   name: str?
   log_level: list(debug|info|warning|error)
+  input: list(off|audio_panel|named_source|test_tone)
+  input_source: str?
+  input_card_profile: match(^[A-Za-z0-9_.-]+:.+$)?
   server: str?
   buffer_ms: int(10,2000)?
+  allow_unpaired: bool?
+  local_pairing: bool
+  local_pairing_port: int(1024,65535)?
   hook_start: str?
   hook_stop: str?

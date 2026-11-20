@@ -189,7 +189,7 @@ profile local_audio flags=(attach_disconnected,mediate_deleted) {
     /sys/devices/**/sound/** r,
 
     # Home Assistant's PulseAudio, which `audio: true` maps in and which the
-    # player's `default` ALSA device plays through.
+    # player's native `pulse` output plays to.
     /etc/pulse/** r,
     /run/audio/** rw,
     /dev/shm/** rw,

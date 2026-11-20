@@ -1,5 +1,59 @@
 # Changelog
 
+## 0.3.0
+
+Built on `sendspin-cli` v1.0.1, and through it `sendspin-cpp` v0.10.0.
+
+**Breaking:** the player now speaks Sendspin 1.0.0-rc1, and every connection to
+it is encrypted.
+
+- **It needs a newer Music Assistant.** The server has to run aiosendspin 10 or
+  later; an older one cannot connect to this player at all.
+- **It shows up as a new player.** Its identity is now a key it generates on
+  first start and keeps in this app's data, so Music Assistant sees a player it
+  has never met. Volume, grouping and anything else stored for the old one do
+  not carry over: add the new one to its groups again.
+- **A server has to pair with it before it can play.** Paste the pairing
+  token from this app's log at startup into Music Assistant, or use the 6-digit
+  code the log shows while Music Assistant asks for one. The README covers both.
+- A new setting, **Let unpaired servers play**, turns pairing off for this
+  player. It is off by default, and best left that way.
+- The pairing token is a password for this player. It is in the log only until
+  a server pairs, and this app never writes it to a file.
+- **A Music Assistant on the same Home Assistant system pairs by itself.** The
+  new setting **Pair with Music Assistant on this machine**, on by default,
+  offers the pairing token on Home Assistant's internal network only, where
+  Music Assistant fetches it, and only until a server has paired; nothing else
+  on your network can reach it. While
+  it is on, the token is not shown in the log. Turn it off to pair by hand. The
+  token is offered on port 8929; set **Local pairing port** if the log says it
+  is already in use.
+- Home Assistant's audio output can suspend between streams: the player
+  no longer holds it open once a stream ends.
+- A change of audio format mid-stream no longer knocks the player out of sync.
+- The player no longer makes hard sync corrections while the system's time
+  service is gently adjusting the clock.
+- A new **Audio input** setting streams a line-in or microphone to Music
+  Assistant, where it shows up under Live Inputs. Off by default. `audio_panel`
+  uses the input chosen in this app's Audio panel, `named_source` captures a
+  source or sink by name, such as another app's output or a Bluetooth device, and
+  `test_tone` checks the path without any hardware.
+- A new **Input card profile** setting, empty by default, switches a sound card
+  to a profile with an input when this app starts, for cards that offer no input
+  while nothing is plugged in (#55). It changes the card for every app on this
+  machine, so it only switches to a profile that is available and keeps the
+  card's output, and the log says why when it does not.
+- A container that was stopped and started again, rather than recreated,
+  now advertises itself to Music Assistant again instead of going unseen
+  (#49, thanks @rfavreau).
+
+## 0.2.1
+
+- The player talks to Home Assistant's audio system directly instead of through
+  an ALSA compatibility layer. That layer could get stuck after a stream started
+  and keep one CPU core at 100% while the music played on, until the app was
+  restarted. The output is still chosen in the app's **Audio** panel, as before.
+
 ## 0.2.0
 
 Built on `sendspin-cli` v0.3.0, and through it `sendspin-cpp` v0.8.0.

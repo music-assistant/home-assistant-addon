@@ -9,6 +9,35 @@ configuration:
     description: >-
       How much this player writes to its log. Raise it to debug while chasing a
       problem, and put it back afterwards.
+  input:
+    name: Audio input
+    description: >-
+      Streams audio from this machine to Music Assistant, where it shows up under
+      Live Inputs once Music Assistant is paired with this player. audio_panel
+      uses the input chosen in this app's Audio panel, such as a line-in or a USB
+      microphone. named_source captures the one named in Input source name, such
+      as another app's output or a Bluetooth device. test_tone streams a 440 Hz
+      tone, to check the path without any hardware. Leave it off if you have
+      nothing to stream.
+  input_source:
+    name: Input source name
+    description: >-
+      Only read when Audio input is named_source. The name of a PulseAudio source
+      or sink; naming a sink captures what is playing to it. If the name is not
+      there when this app starts, the player runs with no input and its log lists
+      the names it can use, so restart the app once the device is connected.
+  input_card_profile:
+    name: Input card profile
+    description: >-
+      Only read when Audio input is audio_panel or named_source. Leave it empty
+      unless the input you want is missing while nothing is plugged into it. Set
+      it to card:profile, such as
+      alsa_card.pci-0000_00_1f.3:output:analog-stereo+input:analog-stereo, to
+      switch that card to a profile with an input when this app starts; with
+      audio_panel, pick the new input in the Audio panel and restart. This
+      changes the card for every app and add-on on this machine; the Audio panel
+      can switch it back. A profile that would change the card's output, or that
+      is not available, is refused, and the log lists the ones that would work.
   server:
     name: Music Assistant server
     description: >-
@@ -23,6 +52,25 @@ configuration:
       How much audio the player keeps queued up, in milliseconds, between 10 and
       2000. Leave it empty unless the sound breaks up — raising it rides out a
       busy system, at the cost of a longer wait when a track starts or you seek.
+  allow_unpaired:
+    name: Let unpaired servers play
+    description: >-
+      Off by default, and best left off: a server has to pair with this player
+      before it can play on it. Turn it on only to let any server on your
+      network play here without pairing.
+  local_pairing:
+    name: Pair with Music Assistant on this machine
+    description: >-
+      On by default: a Music Assistant app on this same Home Assistant system
+      pairs with this player by itself, with no token to copy. The token is
+      offered only on Home Assistant's internal network, which nothing else on
+      your network can reach, and only until a server has paired. Turn it off to pair by hand instead.
+  local_pairing_port:
+    name: Local pairing port
+    description: >-
+      The port the pairing token is offered on, between 1024 and 65535, and
+      8929 when left empty. Change it only if the log says the port is already
+      in use.
   hook_start:
     name: Command to run when playback starts
     description: >-
