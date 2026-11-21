@@ -1,3 +1,65 @@
+# [2.11.0.dev2026112103] - 21.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026112003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112003)_
+
+### 🚀 Features and enhancements
+
+- Play a stereo pair of HomePods as one player (by @marcelveldt in #7937)
+- Emby provider: support audiobook libraries (by @hatharry in #7962)
+- Follow Home app volume changes on an idle HomePod (by @marcelveldt in #7982)
+- Support native decoding Jellyfin wma formats, including wmapro & wmalossless (by @afeldman1 in #7989)
+- Show only the pre-announce toggle in basic announcement settings (by @marcelveldt in #8009)
+- Name the audio input of a Sendspin player (by @marcelveldt in #8010)
+
+### 🐛 Bugfixes
+
+- Close the first-time setup 15 minutes after the server starts (by @chrisuthe in #7410)
+- Don't quit Cast sessions that Music Assistant didn't start (by @benjamin-m-holden in #7811)
+- Make the Audio Analysis settings page read less from disk on large libraries (by @MarvinSchenkel in #7991)
+- Bring a squeezelite player back to the power state it had (by @lawrence-jeff in #8005)
+- Use MP3 by default for most Google Cast speakers to prevent dropouts (by @marcelveldt in #8011)
+- Restart playback when a speaker drops its stream and goes silent (by @marcelveldt in #8017)
+
+### 🎨 Frontend Changes
+
+- Add share links for tracks, albums and artists (by @dmoo500 in [#3040](https://github.com/music-assistant/frontend/pull/3040))
+- Add a back arrow to Settings pages (by @marcelveldt in [#3282](https://github.com/music-assistant/frontend/pull/3282))
+- Show each analysis module's progress on its own card (by @marcelveldt in [#3289](https://github.com/music-assistant/frontend/pull/3289))
+- Open settings in place on Metadata, Audio analysis and Background tasks (by @marcelveldt in [#3288](https://github.com/music-assistant/frontend/pull/3288))
+- Show a missing AI engine under its picker (by @marcelveldt in [#3287](https://github.com/music-assistant/frontend/pull/3287))
+- Open the docs at the new Playback heading from a player's Playback page (by @marcelveldt in [#3285](https://github.com/music-assistant/frontend/pull/3285))
+- Return to the previous page after saving settings (by @marcelveldt in [#3284](https://github.com/music-assistant/frontend/pull/3284))
+- Keep Escape going back after picking from a dropdown (by @marcelveldt in [#3283](https://github.com/music-assistant/frontend/pull/3283))
+- Call each player's queue settings Playback (by @marcelveldt in [#3281](https://github.com/music-assistant/frontend/pull/3281))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>11 changes</summary>
+
+- Let the queue alone decide when the audio of a track is released (by @marcelveldt in #7884)
+- Keep a track playing when a radio queue refreshes its upcoming tracks (by @marcelveldt in #7894)
+- Keep an Apple TV room audible after switching its audio output (by @marcelveldt in #7977)
+- Stop an AirPlay device from taking the model of another device with the same name (by @marcelveldt in #7978)
+- Describe how a player provider delivers a set of speakers (by @marcelveldt in #7983)
+- Call the player queue defaults Playback in setting texts (by @marcelveldt in #7990)
+- Narrow broad exception handlers in Plex and Plex Connect (BLE001) (by @anatosun in #7992)
+- Bump transformers to 5.23.0 and huggingface-hub to 2.4.0 (by @chrisuthe in #8002)
+- Keep Sonos playing after the upcoming tracks are replaced (by @marcelveldt in #8004)
+- Show the background task limit without the advanced switch (by @marcelveldt in #8008)
+- Tidy up after the queue took over releasing audio (by @marcelveldt in #8013)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @afeldman1, @anatosun, @benjamin-m-holden, @chrisuthe, @dmoo500, @hatharry, @lawrence-jeff, @marcelveldt
+
+
 # [2.11.0.dev2026112003] - 20.11.2026
 
 ## 📦 Nightly Release
@@ -187,107 +249,3 @@ _Changes since [2.11.0.dev2026111803](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Simanias, @anatosun, @apophisnow, @dmoo500, @fmunkes, @jdaberkow, @jordiboehme, @jozefKruszynski, @justinwoodland, @kieranhogg, @marcelveldt, @pierosavi
-
-
-# [2.11.0.dev2026111803] - 18.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026111703](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111703)_
-
-### 🚀 Features and enhancements
-
-- Add support for Jellyfin Quick Connect (by @afeldman1 in #6368)
-- Browse the playlists and albums of followed SoundCloud users (by @robsonke in #7720)
-- Add 'Listen from start' menu item to BBC Sounds station listings (by @kieranhogg in #7765)
-- Let the user disable audio analysis of a line-in or VBAN input (by @marcelveldt in #7798)
-- Play a Sendspin group at the sample rate of the music instead of its leader's (by @marcelveldt in #7805)
-- Show the song an analysis provider recognises on radio stations without their own metadata (by @marcelveldt in #7809)
-- Show why a player or queue action is refused (by @marcelveldt in #7812)
-- Allow impersonation on the sleep timer and bookmark commands (by @fmunkes in #7827)
-- Let a provider list tools for AI assistants in its manifest (by @marcelveldt in #7857)
-- Show a set of speakers as one multi-channel player with its layout (by @marcelveldt in #7862)
-- Show Sonos stereo pairs and home theater sets as multi-channel players (by @marcelveldt in #7863)
-- Enable multi instance support in BBC Sounds provider (by @kieranhogg in #7877)
-
-### 🐛 Bugfixes
-
-- Ignore stale HEOS progress until the new stream plays (by @glintin50 in #7740)
-- Raumfeld: restart for a joined room that cannot hook into the stream (by @Simanias in #7786)
-- Fix Jellyfin track Favorite writeback and cached playlist flags (by @tobernguyen in #7796)
-- Fix detecting providers for similar autoplay (by @G74v3Dw31137 in #7816)
-- Backfill artists when updating metadata for sparse albums in library (by @NasaGeek in #7820)
-- Rename the Sonos "status light on remote control" option to "IR signal light" (by @fmunkes in #7822)
-- Fix Smart Fades not recovering when its model download fails (by @OzGav in #7823)
-- Restart playback where it was when a speaker loses its stream connection (by @marcelveldt in #7828)
-- Ask to save the SSL certificate and key before Verify (by @MarvinSchenkel in #7832)
-- Keep a muted WiiM speaker muted when its volume changes (by @MarvinSchenkel in #7834)
-- Count tracks shorter than 5 seconds as played (by @MarvinSchenkel in #7835)
-- Keep smart fades beatmatched through long blends (by @MarvinSchenkel in #7839)
-- Clean up the Home Assistant provider when connecting fails unexpectedly (by @glintin50 in #7844)
-- Keep DLNA players available after a failed event subscription renewal (by @MarvinSchenkel in #7846)
-- Fix the album cover on an Apple TV, Shairport Sync pause and seek, and HomePod group drift (airplay-cli v0.5.15) (by @musicassistant-bot[bot] in #7850)
-- Make the volume of a WiiM follow Music Assistant over squeezelite (by @marcelveldt in #7853)
-- Hide provider tokens in the failed image fetch warning (by @MarvinSchenkel in #7855)
-
-### 🎨 Frontend Changes
-
-- Merge two players into one, or split an output off as its own player (by @marcelveldt in [#3228](https://github.com/music-assistant/frontend/pull/3228))
-- Add authors and narrators to search, link audiobook authors (by @fmunkes in [#3167](https://github.com/music-assistant/frontend/pull/3167))
-- Hide the other selected tracks while dragging a selection (by @OzGav in [#3166](https://github.com/music-assistant/frontend/pull/3166))
-- Like the song a radio station plays, or add it to a playlist (by @marcelveldt in [#3201](https://github.com/music-assistant/frontend/pull/3201))
-- Lay out detail heroes by their own width, not the window's (by @pierosavi in [#3217](https://github.com/music-assistant/frontend/pull/3217))
-- Keep the scroll position when going back to an artist page (by @MarvinSchenkel in [#3004](https://github.com/music-assistant/frontend/pull/3004))
-- Fix dropping a track at the top of the queue (by @OzGav in [#3162](https://github.com/music-assistant/frontend/pull/3162))
-- Fix Slovak and Serbian plural forms (by @MarvinSchenkel in [#3218](https://github.com/music-assistant/frontend/pull/3218))
-- Make the task toast test reliable (by @marcelveldt in [#3225](https://github.com/music-assistant/frontend/pull/3225))
-- Show offline members in the group editor so they can be removed (by @marcelveldt in [#3203](https://github.com/music-assistant/frontend/pull/3203))
-- Bump prettier from 3.9.10 to 3.10.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3210](https://github.com/music-assistant/frontend/pull/3210))
-- Bump jsdom from 30.1.1 to 31.0.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3207](https://github.com/music-assistant/frontend/pull/3207))
-- Bump oxlint and eslint-plugin-oxlint (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3208](https://github.com/music-assistant/frontend/pull/3208))
-- Bump vue-router from 5.4.0 to 5.5.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3211](https://github.com/music-assistant/frontend/pull/3211))
-- Bump marked from 18.1.2 to 18.2.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3213](https://github.com/music-assistant/frontend/pull/3213))
-- Bump @lucide/vue from 1.66.0 to 1.73.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3215](https://github.com/music-assistant/frontend/pull/3215))
-- Bump sass from 1.107.1 to 1.108.2 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3216](https://github.com/music-assistant/frontend/pull/3216))
-- Bump @vitejs/plugin-vue from 6.0.10 to 6.0.11 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3212](https://github.com/music-assistant/frontend/pull/3212))
-- Bump vite from 8.3.6 to 8.3.8 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3214](https://github.com/music-assistant/frontend/pull/3214))
-- Bump peter-evans/create-pull-request from 8.1.2 to 8.1.3 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3206](https://github.com/music-assistant/frontend/pull/3206))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>25 changes</summary>
-
-- Bump python-slugify from 9.1.1 to 9.1.3 (by @dependabot[bot] in #7747)
-- Fix playback stalling after the queue is changed while the next track is prepared (by @marcelveldt in #7800)
-- Tell apps which track a radio station is playing (by @marcelveldt in #7802)
-- Keep a squeezelite speaker playing through short stalls in a Sendspin group (by @marcelveldt in #7808)
-- Let the lock tests catch any wait again, not only a wait for a lock (by @marcelveldt in #7815)
-- Fix a BBC Sounds test that fails when a test run crosses midnight (by @marcelveldt in #7818)
-- Stop repeated AirPlay Docker address warnings in the log (by @OzGav in #7829)
-- Fix Sendspin bridge test leaving aiohttp's StreamResponse mocked for later tests (by @MarvinSchenkel in #7836)
-- Keep the community catalog refusal test working once Dutch translates the reason (by @MarvinSchenkel in #7837)
-- Fix three tests that fail on slow CI runners (by @MarvinSchenkel in #7838)
-- Keep a squeezelite speaker in its Sendspin group while its restarted stream plays (by @marcelveldt in #7841)
-- Send a squeezelite speaker in a Sendspin group FLAC and no more bits than its music has (by @marcelveldt in #7842)
-- Start a Sendspin group on the beat when the server is slow in the first moments (by @marcelveldt in #7843)
-- Add the community catalog steps to the release guide (by @marcelveldt in #7851)
-- Give a power control more time to switch on before playback starts (by @marcelveldt in #7854)
-- Call the server lines of the community catalog channels (by @marcelveldt in #7860)
-- Let each queue keep track of the audio loaded for its tracks (by @marcelveldt in #7861)
-- Fix a seek taking five seconds longer on a group of speakers (by @marcelveldt in #7864)
-- Show that playback is starting while a player starts up (by @marcelveldt in #7865)
-- Fix a Sonos speaker ignoring play right after AirPlay playback was stopped (by @marcelveldt in #7866)
-- Fix removing a Sonos speaker from its group right after an AirPlay speaker joined (by @marcelveldt in #7869)
-- Fix an empty setup error and a misleading log in Hue Lights Sync over ZHA (by @marcelveldt in #7876)
-- Bump auntie-sounds to 3.1.0 (by @kieranhogg in #7879)
-- Play the end of a queue in full on a squeezelite speaker in a Sendspin group (by @marcelveldt in #7880)
-- Make three more weak server tests reliable (by @marcelveldt in #7888)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@G74v3Dw31137, @MarvinSchenkel, @NasaGeek, @OzGav, @Simanias, @afeldman1, @fmunkes, @glintin50, @kieranhogg, @lucide, @marcelveldt, @pierosavi, @robsonke, @tobernguyen, @vitejs
