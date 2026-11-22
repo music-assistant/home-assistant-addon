@@ -1,3 +1,72 @@
+# [2.11.0.dev2026112203] - 22.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026112103](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112103)_
+
+### 🚀 Features and enhancements
+
+- Remove duplicate albums found during the MusicBrainz lookup (by @OzGav in #7821)
+- Deezer: give audiobook authors their own pages (by @jdaberkow in #7927)
+- Add Spotify Recently Played browse folder and recommendation row (by @rutj87 in #8024)
+- Show how long to wait when a provider is rate limited (by @marcelveldt in #8025)
+- Show a live source by its own name on its own player (by @marcelveldt in #8031)
+- Gather live sources in one Browse folder, and list them for the app (by @marcelveldt in #8037)
+- Stop showing Spotify Connect playback on a speaker that is off (by @marcelveldt in #8047)
+
+### 🐛 Bugfixes
+
+- Stop an announcement to an AirPlay group from resuming the old queue (by @MarvinSchenkel in #7959)
+- Line-in sources follow the player access of the user (by @marcelveldt in #8015)
+- Don't abort a playlist migration or import when a music service rate limits (by @marcelveldt in #8026)
+- Let speakers switch back to the AirPlay Receiver and play it once they are on (by @marcelveldt in #8028)
+- Control each zone of a Sonos Amp Multi separately (by @marcelveldt in #8032)
+- Keep the sleep timer when pausing a player that can't pause (by @fmunkes in #8033)
+- Stop Sonos speakers going silent when a track repeats (by @marcelveldt in #8038)
+- Keep AirPlay and Sendspin groups in sync when the server's clock runs fast or slow (by @marcelveldt in #8040)
+- Fix Apple HomeView speakers staying silent on AirPlay 2 (airplay-cli v0.5.16) (by @musicassistant-bot[bot] in #8042)
+- Show an error when no speaker of a universal group can play (by @marcelveldt in #8048)
+
+### 🎨 Frontend Changes
+
+- Find live sources by name in search (by @marcelveldt in [#3297](https://github.com/music-assistant/frontend/pull/3297))
+- Add a Live sources page (by @marcelveldt in [#3295](https://github.com/music-assistant/frontend/pull/3295))
+- Show the Live sources folder by name in Browse (by @marcelveldt in [#3294](https://github.com/music-assistant/frontend/pull/3294))
+- Show a live source once in now playing (by @marcelveldt in [#3291](https://github.com/music-assistant/frontend/pull/3291))
+- Add a subwoofer to Sendspin multi-channel players (by @marcelveldt in [#3286](https://github.com/music-assistant/frontend/pull/3286))
+- Replace dynamic sample and dashboard icons with Lucide (by @dmoo500 in [#3292](https://github.com/music-assistant/frontend/pull/3292))
+- Replace settings icons with Lucide (by @dmoo500 in [#3293](https://github.com/music-assistant/frontend/pull/3293))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>15 changes</summary>
+
+- Fail playlist-migration matching per track instead of per provider (by @parski in #7881)
+- Check broad error catches in playback and the player providers (by @OzGav in #7979)
+- Remove an old upgrade step that switched disabled players back on (by @OzGav in #7981)
+- Speed up library pages and the MusicBrainz link run on a new install (by @OzGav in #7984)
+- Share one method for storing the main artists of albums and tracks (by @OzGav in #7998)
+- Add a subwoofer to combined Sendspin speakers (by @marcelveldt in #7999)
+- Add or remove a subwoofer on combined Sendspin speakers (by @marcelveldt in #8000)
+- Update to latest py-opensonic (by @khers in #8020)
+- Use public provider properties and helpers in the Apple Music provider (by @kneeyard126 in #8022)
+- Speakers say which of their sources are inputs (by @marcelveldt in #8029)
+- Send fewer Spotify search requests (by @marcelveldt in #8030)
+- Bring an AirPlay speaker in a Sendspin group back within seconds after it drops out (by @marcelveldt in #8034)
+- Respect a rate limit from Zvuk Music and KION Music (by @marcelveldt in #8036)
+- Speed up two slow AirPlay tests (by @marcelveldt in #8041)
+- Share the 'can this speaker play now' check between plugins (by @marcelveldt in #8045)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @jdaberkow, @khers, @kneeyard126, @marcelveldt, @parski, @rutj87
+
+
 # [2.11.0.dev2026112103] - 21.11.2026
 
 ## 📦 Nightly Release
@@ -146,106 +215,3 @@ _Changes since [2.11.0.dev2026111903](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @AirPlr, @CDrummond, @MarvinSchenkel, @OzGav, @acuntex, @chrisuthe, @digitalvir, @dmoo500, @dodog, @justinladwig, @marcelveldt, @maximmaxim345, @ryanmac8, @stvncode, @tobernguyen
-
-
-# [2.11.0.dev2026111903] - 19.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026111803](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111803)_
-
-### 🚀 New Providers
-
-- Add provider-independent share links for tracks, albums and artists (by @dmoo500 in #7172)
-
-### 🚀 Features and enhancements
-
-- Play every group of Squeezebox and squeezelite speakers through Sendspin (by @marcelveldt in #7739)
-- Fetch missing 'now playing' metadata images from Spotify oEmbed API for BBC Sounds (by @kieranhogg in #7883)
-- Offer the tools a provider declares to AI assistants (by @marcelveldt in #7885)
-- Merge library tracks of one MusicBrainz recording (by @OzGav in #7893)
-- Remove the old player of a Sonos speaker that became part of a stereo pair or home theater set (by @marcelveldt in #7897)
-- Let a provider declare its features in its manifest (by @marcelveldt in #7899)
-- Use one default AI engine for every feature, unless it picks its own (by @marcelveldt in #7900)
-- Add an icon for the MCP server provider (by @MarvinSchenkel in #7902)
-- Add an icon for the WLED Audio Sync provider (by @MarvinSchenkel in #7903)
-- Add an icon for the AudioMuse-AI provider (by @MarvinSchenkel in #7904)
-- Add an icon for the OpenAI TTS provider (by @MarvinSchenkel in #7905)
-- Raumfeld: show a room of several speakers as a multi-channel player (by @Simanias in #7906)
-- Play a Sendspin device's line-in without a separate plugin (by @marcelveldt in #7909)
-- Let a provider serve a page of its own, listed in the app's menu (by @marcelveldt in #7910)
-- Prefer squeezelite over AirPlay for a speaker's Sendspin output (by @marcelveldt in #7917)
-- Subsonic: use sonicSimilarity for similar tracks (by @anatosun in #7931)
-- Show the repeat and shuffle of the queue on Squeezebox and squeezelite players (by @marcelveldt in #7934)
-
-### 🐛 Bugfixes
-
-- Harden return URL validation and handle IdP errors at the auth callback (by @apophisnow in #7759)
-- Fix smart playlist genre exclusions for mapped tracks and aliases (by @dmoo500 in #7769)
-- Don't treat Sendspin remotes, artwork screens and lights as speakers (by @marcelveldt in #7882)
-- Raumfeld: a speaker moved to another room takes its outputs along (by @Simanias in #7911)
-- Play the Apple Music live stations with a subsample per sample (by @jordiboehme in #7915)
-- Keep Squeezebox players in a group playing after their stream restarts (by @marcelveldt in #7916)
-- Keep the track on a Squeezebox Radio's display after its stream restarts (by @marcelveldt in #7918)
-- Keep showing the stopped track on a Squeezebox when its group is stopped (by @marcelveldt in #7920)
-- Let you clear your display name and avatar (by @marcelveldt in #7923)
-- Stop a WiiM on squeezelite from playing too loud after a server restart (by @MarvinSchenkel in #7925)
-- Show the position in the track on a squeezelite speaker in a Sendspin group (by @marcelveldt in #7942)
-
-### 🎨 Frontend Changes
-
-- System becomes a hub, with all log levels on Diagnostics (by @marcelveldt in [#3231](https://github.com/music-assistant/frontend/pull/3231))
-- Library options under Music sources and metadata settings under Metadata sources (by @marcelveldt in [#3229](https://github.com/music-assistant/frontend/pull/3229))
-- Connect Home Assistant from the setup wizard (by @marcelveldt in [#3238](https://github.com/music-assistant/frontend/pull/3238))
-- Group devices on the Players page and add a Playback page (by @marcelveldt in [#3226](https://github.com/music-assistant/frontend/pull/3226))
-- Offer the apps that play to Music Assistant in the setup wizard (by @marcelveldt in [#3237](https://github.com/music-assistant/frontend/pull/3237))
-- Show the network settings together on one Network page (by @marcelveldt in [#3223](https://github.com/music-assistant/frontend/pull/3223))
-- Audio analysis and background tasks each get one place in Settings (by @marcelveldt in [#3222](https://github.com/music-assistant/frontend/pull/3222))
-- Open the page a plugin serves from the main menu (by @marcelveldt in [#3241](https://github.com/music-assistant/frontend/pull/3241))
-- Split off an output from its own row in the player settings (by @marcelveldt in [#3247](https://github.com/music-assistant/frontend/pull/3247))
-- Open author and narrator pages under Audiobooks, link them in collections (by @fmunkes in [#3235](https://github.com/music-assistant/frontend/pull/3235))
-- Drag the Marketplace rows with the mouse (by @OzGav in [#3230](https://github.com/music-assistant/frontend/pull/3230))
-- Show a set of speakers as a multi-channel player with its layout (by @marcelveldt in [#3221](https://github.com/music-assistant/frontend/pull/3221))
-- Let the server refuse stale playlist edits and drop the client-side locks (by @pierosavi in [#3103](https://github.com/music-assistant/frontend/pull/3103))
-- Add the queue to a new or existing playlist (by @pierosavi in [#3130](https://github.com/music-assistant/frontend/pull/3130))
-- Always show the close chevron on the fullscreen player (by @pierosavi in [#3248](https://github.com/music-assistant/frontend/pull/3248))
-- Fix the volume slider ignoring the mouse on touchscreen PCs (by @MarvinSchenkel in [#3242](https://github.com/music-assistant/frontend/pull/3242))
-- Chunk oversized API commands over remote access (by @jozefKruszynski in [#3160](https://github.com/music-assistant/frontend/pull/3160))
-- Show the right items after changing a Discover row's source filter (by @OzGav in [#3232](https://github.com/music-assistant/frontend/pull/3232))
-- Leave switched-off EQ bands out of the graph's total line (by @OzGav in [#3239](https://github.com/music-assistant/frontend/pull/3239))
-- Show only library audiobooks in the library row of an author page (by @jdaberkow in [#3224](https://github.com/music-assistant/frontend/pull/3224))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>21 changes</summary>
-
-- Tell the docs site when a beta or stable release is out (by @marcelveldt in #7856)
-- Release the audio of a track as soon as its queue no longer needs it (by @marcelveldt in #7867)
-- Let a speaker keep its music service stream when it moves to the next track (by @marcelveldt in #7870)
-- Give a speaker one Sendspin output, whichever connection carries it (by @marcelveldt in #7875)
-- Keep a removed speaker from coming back out of the mDNS cache (by @marcelveldt in #7887)
-- Group the crossfade, volume normalization and self-registration settings by what they do (by @marcelveldt in #7889)
-- Let any provider type deliver audio sources (by @marcelveldt in #7890)
-- Let a provider remove the old players of the other speakers of a stereo pair or home theater set (by @marcelveldt in #7892)
-- List the AI engines and what uses them for the AI settings page (by @marcelveldt in #7907)
-- Check the Marketplace's suggestion lists before every minor beta (by @marcelveldt in #7908)
-- Use lazy log arguments in the Audible provider (by @OzGav in #7912)
-- Use lazy log arguments in the Plex Connect provider (by @OzGav in #7913)
-- Show provider authors how to offer tools to AI assistants (by @marcelveldt in #7919)
-- Narrow BookOrbit broad exception handlers for BLE001 (by @justinwoodland in #7928)
-- Let music providers say in their manifest what they offer (by @marcelveldt in #7930)
-- Read the AirPlay session and stream settings through the player (by @marcelveldt in #7932)
-- Fix a DLNA error at startup for Sonos stereo pairs (by @marcelveldt in #7935)
-- Make the Raumfeld player tests pass in any order (by @marcelveldt in #7940)
-- Explain both routes to someone adding a provider (by @marcelveldt in #7943)
-- Clearer texts around community providers (by @marcelveldt in #7944)
-- Run a provider from its provider or providers folder in dev mode (by @marcelveldt in #7946)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @Simanias, @anatosun, @apophisnow, @dmoo500, @fmunkes, @jdaberkow, @jordiboehme, @jozefKruszynski, @justinwoodland, @kieranhogg, @marcelveldt, @pierosavi
