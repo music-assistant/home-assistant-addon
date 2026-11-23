@@ -1,3 +1,49 @@
+# [2.11.0.dev2026112303] - 23.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026112203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112203)_
+
+### 🚀 New Providers
+
+- Add LIFX Lights Sync plugin provider (by @sonic1200 in #7947)
+
+### 🚀 Features and enhancements
+
+- Show a WiiM stereo pair as one player (by @marcelveldt in #7988)
+- Standardise the naming across the BBC Sounds provider code (by @kieranhogg in #8006)
+- Play the input of one Sonos or HEOS speaker on the others (by @marcelveldt in #8039)
+
+### 🐛 Bugfixes
+
+- Deezer: fix audiobooks stopping after the first chapter (by @jdaberkow in #8054)
+- Fix the AirPlay Receiver sometimes not starting or stopping playback (by @marcelveldt in #8055)
+- Keep old browser and app players hidden and out of Home Assistant (by @marcelveldt in #8066)
+- MusicCast: don't show the previous track's info while on an input like TV (by @fmunkes in #8067)
+
+### 🎨 Frontend Changes
+
+- Search only when you press Enter in party, quiz and smart playlist search (by @marcelveldt in [#3302](https://github.com/music-assistant/frontend/pull/3302))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>4 changes</summary>
+
+- Use library method for removing cookie jar when unloading BBC Sounds (by @kieranhogg in #8044)
+- Update the AirPlay Receiver to shairport-sync 5.6.3 (by @marcelveldt in #8050)
+- Show how far the server's clock runs off in the diagnostics report (by @marcelveldt in #8051)
+- Stop a speaker paused from its own app or remote after the pause timeout (by @marcelveldt in #8056)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@fmunkes, @jdaberkow, @kieranhogg, @marcelveldt, @sonic1200
+
+
 # [2.11.0.dev2026112203] - 22.11.2026
 
 ## 📦 Nightly Release
@@ -127,91 +173,3 @@ _Changes since [2.11.0.dev2026112003](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @afeldman1, @anatosun, @benjamin-m-holden, @chrisuthe, @dmoo500, @hatharry, @lawrence-jeff, @marcelveldt
-
-
-# [2.11.0.dev2026112003] - 20.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026111903](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026111903)_
-
-### 🚀 Features and enhancements
-
-- Pair Sendspin players on the Home Assistant host with their local token (by @chrisuthe in #7371)
-- Log ISRCs that MusicBrainz lacks for an album (by @OzGav in #7831)
-- Match album tracks to MusicBrainz by release length and ISRC (by @OzGav in #7845)
-- Add Title Reveal game to Music Quiz (by @justinladwig in #7852)
-- Add Jellyfin playlist track editing (by @tobernguyen in #7896)
-- Let Discover rows hide fully played episodes and audiobooks (by @OzGav in #7898)
-- Add lyrics support for Jellyfin provider (by @dodog in #7933)
-- Play an Apple TV and its HomePods as one player (by @marcelveldt in #7936)
-- Map OpenSubsonic release_types field onto MusicAssistant AlbumType. (by @CDrummond in #7951)
-- Combine Sendspin speakers into a stereo pair (by @marcelveldt in #7954)
-- Pick the models while adding OpenAI Compatible (by @marcelveldt in #7958)
-- Show remotes and volume knobs on Sendspin as controllers (by @marcelveldt in #7966)
-- Reuse your Soloist API key between Spotify and Spotify Connect (by @marcelveldt in #7972)
-
-### 🐛 Bugfixes
-
-- Forget a Sendspin device's pairing when its player is removed (by @maximmaxim345 in #7773)
-- Fix Sendspin failing to start when port 8927 is taken (by @maximmaxim345 in #7792)
-- Hold the queue's position while an announcement plays (by @acuntex in #7847)
-- Allow source-sharing clients to request guest recipients (by @digitalvir in #7849)
-- Keep AirPlay speakers with another sender after it takes them over from a Sendspin group (by @MarvinSchenkel in #7952)
-- Keep the queue on the new track after Next while the player still reports the old stream (by @MarvinSchenkel in #7955)
-- Keep the duplicate album check from freezing a library with many same-title albums (by @MarvinSchenkel in #7956)
-- Show a connection error instead of "no libraries" when Plex setup cannot reach the server (by @MarvinSchenkel in #7957)
-- Keep Sonos playing when crossfading into a track added after playback started (by @marcelveldt in #7964)
-- Stop a WiiM on squeezelite from pausing what plays right after a stop (by @MarvinSchenkel in #7968)
-
-### 🎨 Frontend Changes
-
-- Redesign the setup wizard layout (by @marcelveldt in [#3280](https://github.com/music-assistant/frontend/pull/3280))
-- Make the remaining setup wizard steps more inviting (by @marcelveldt in [#3270](https://github.com/music-assistant/frontend/pull/3270))
-- Polish the setup wizard's choice and music app steps (by @marcelveldt in [#3265](https://github.com/music-assistant/frontend/pull/3265))
-- Make the optional steps of the setup wizard more inviting (by @marcelveldt in [#3266](https://github.com/music-assistant/frontend/pull/3266))
-- Reorder and hide the rows of a podcast episode page (by @stvncode in [#3246](https://github.com/music-assistant/frontend/pull/3246))
-- Start the first setup with a welcome and keep account creation in the wizard (by @marcelveldt in [#3264](https://github.com/music-assistant/frontend/pull/3264))
-- Clarify library-based statistics (by @dmoo500 in [#3132](https://github.com/music-assistant/frontend/pull/3132))
-- Open a Discover section in full by clicking its title (by @ryanmac8 in [#3114](https://github.com/music-assistant/frontend/pull/3114))
-- Ask about AI in the setup wizard (by @marcelveldt in [#3262](https://github.com/music-assistant/frontend/pull/3262))
-- Open the Marketplace on AI services from the AI page (by @marcelveldt in [#3261](https://github.com/music-assistant/frontend/pull/3261))
-- Combine Sendspin speakers into a stereo pair (by @marcelveldt in [#3253](https://github.com/music-assistant/frontend/pull/3253))
-- Filter plugins by what they do (by @marcelveldt in [#3254](https://github.com/music-assistant/frontend/pull/3254))
-- Connect Home Assistant before setting up remote access in the setup wizard (by @marcelveldt in [#3259](https://github.com/music-assistant/frontend/pull/3259))
-- Make the setup wizard's network step only about remote access (by @marcelveldt in [#3255](https://github.com/music-assistant/frontend/pull/3255))
-- Show the AI from Home Assistant on its settings page (by @marcelveldt in [#3257](https://github.com/music-assistant/frontend/pull/3257))
-- Add an AI page to the settings (by @marcelveldt in [#3256](https://github.com/music-assistant/frontend/pull/3256))
-- Hide fully played episodes on the Latest podcast episodes row (by @OzGav in [#3233](https://github.com/music-assistant/frontend/pull/3233))
-- Show controllers in their own section on the Players page (by @marcelveldt in [#3252](https://github.com/music-assistant/frontend/pull/3252))
-- Game interface for Title Reveal game in Music Quiz (by @justinladwig in [#3220](https://github.com/music-assistant/frontend/pull/3220))
-- Show what each music source offers, with live sources in the same list (by @marcelveldt in [#3245](https://github.com/music-assistant/frontend/pull/3245))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>15 changes</summary>
-
-- Use lazy log arguments in the remaining providers and turn on the G004 lint rule (by @OzGav in #7914)
-- Start checking broad error catches, first batch of providers (by @OzGav in #7921)
-- Narrow exception handling in Smart Playlist (by @dmoo500 in #7924)
-- Narrow exception handling in Playlist Metadata (by @dmoo500 in #7929)
-- Stop playback when a music service gives no audio for three tracks in a row (by @marcelveldt in #7945)
-- Play an Apple TV and its HomePods in a Sendspin group (by @marcelveldt in #7950)
-- Narrow broad exception handlers in AriaCast Receiver (BLE001) (by @AirPlr in #7953)
-- Check broad error catches in the core of the server (by @OzGav in #7961)
-- Let every provider declare what it offers in its manifest (by @marcelveldt in #7965)
-- Bump aioslimproto to 3.6.8 (by @MarvinSchenkel in #7967)
-- Fix an occasionally failing mDNS lookup test (by @marcelveldt in #7969)
-- Keep open sessions up to date after a profile or preference change (by @marcelveldt in #7971)
-- Shorter Spotify Soloist setup texts (by @marcelveldt in #7973)
-- List Home Assistant as an AI and text-to-speech service (by @marcelveldt in #7974)
-- Apply Home Assistant player control changes right away (by @marcelveldt in #7975)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@AirPlr, @CDrummond, @MarvinSchenkel, @OzGav, @acuntex, @chrisuthe, @digitalvir, @dmoo500, @dodog, @justinladwig, @marcelveldt, @maximmaxim345, @ryanmac8, @stvncode, @tobernguyen
