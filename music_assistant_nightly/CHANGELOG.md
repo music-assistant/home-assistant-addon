@@ -1,3 +1,60 @@
+# [2.11.0.dev2026112403] - 24.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026112303](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112303)_
+
+### 🚀 Features and enhancements
+
+- Lyrics continue to search for lrc lyrics after finding plain ones (by @tony-schellenberg in #7741)
+- Bypass the MusicBrainz cache when refreshing a library item (by @OzGav in #7833)
+- Improve now playing for BBC Sounds (by @kieranhogg in #8012)
+- Raumfeld: move the provider from experimental to beta (by @Simanias in #8077)
+- Discover players on every local network the server is connected to (by @marcelveldt in #8091)
+
+### 🐛 Bugfixes
+
+- Decode HTML entities in radio stream titles (by @zackwag in #7868)
+- Report the position in the track for a squeezelite player after a seek (by @lawrence-jeff in #7987)
+- Add a Bluesound player that doesn't answer at startup as unavailable (by @MarvinSchenkel in #7995)
+- Keep adding Bluesound players when a stereo pair speaker has no presets (by @MarvinSchenkel in #7996)
+- Raumfeld: wait for the host after taking a room out of a group (by @Simanias in #8076)
+
+### 🎨 Frontend Changes
+
+- Show where a live source comes from when it has no player (by @marcelveldt in [#3301](https://github.com/music-assistant/frontend/pull/3301))
+- Show an add to playlist button instead of the heart for podcast episodes (by @OzGav in [#3303](https://github.com/music-assistant/frontend/pull/3303))
+- Show the chapter as title in the minimized player (by @fmunkes in [#3299](https://github.com/music-assistant/frontend/pull/3299))
+- Open library audiobooks and podcast episodes from the fullscreen player (by @fmunkes in [#3300](https://github.com/music-assistant/frontend/pull/3300))
+- Search listings when you pause typing instead of on every letter (by @marcelveldt in [#3307](https://github.com/music-assistant/frontend/pull/3307))
+- Simplify the seed search in the smart playlist editor (by @marcelveldt in [#3306](https://github.com/music-assistant/frontend/pull/3306))
+- Move the player buttons to the newer button style (by @OzGav in [#3304](https://github.com/music-assistant/frontend/pull/3304))
+- Remove unused Music Quiz texts (by @marcelveldt in [#3308](https://github.com/music-assistant/frontend/pull/3308))
+- Fix misleading search text in Music Quiz (by @marcelveldt in [#3305](https://github.com/music-assistant/frontend/pull/3305))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>8 changes</summary>
+
+- Test the server startup and the generated API docs (by @OzGav in #8003)
+- Fix line-in selection on sync groups and hide disabled Sendspin line-ins (by @marcelveldt in #8059)
+- Bump gql from 4.0.0 to 4.4.0 (by @dependabot[bot] in #8062)
+- Bump numpy from 2.3.5 to 2.5.5 (by @dependabot[bot] in #8063)
+- Find all Home Assistant AI and speech engines after a Home Assistant restart (by @marcelveldt in #8075)
+- Remove unneeded glib install from the base image (by @marcelveldt in #8086)
+- Let MCP tokens limited to music sources use live sources and Discover (by @marcelveldt in #8088)
+- Track FFmpeg, shairport-sync, Snapcast and go-librespot updates with Renovate (by @marcelveldt in #8090)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @Simanias, @fmunkes, @kieranhogg, @lawrence-jeff, @marcelveldt, @tony-schellenberg, @zackwag
+
+
 # [2.11.0.dev2026112303] - 23.11.2026
 
 ## 📦 Nightly Release
@@ -111,65 +168,3 @@ _Changes since [2.11.0.dev2026112103](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @dmoo500, @fmunkes, @jdaberkow, @khers, @kneeyard126, @marcelveldt, @parski, @rutj87
-
-
-# [2.11.0.dev2026112103] - 21.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026112003](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112003)_
-
-### 🚀 Features and enhancements
-
-- Play a stereo pair of HomePods as one player (by @marcelveldt in #7937)
-- Emby provider: support audiobook libraries (by @hatharry in #7962)
-- Follow Home app volume changes on an idle HomePod (by @marcelveldt in #7982)
-- Support native decoding Jellyfin wma formats, including wmapro & wmalossless (by @afeldman1 in #7989)
-- Show only the pre-announce toggle in basic announcement settings (by @marcelveldt in #8009)
-- Name the audio input of a Sendspin player (by @marcelveldt in #8010)
-
-### 🐛 Bugfixes
-
-- Close the first-time setup 15 minutes after the server starts (by @chrisuthe in #7410)
-- Don't quit Cast sessions that Music Assistant didn't start (by @benjamin-m-holden in #7811)
-- Make the Audio Analysis settings page read less from disk on large libraries (by @MarvinSchenkel in #7991)
-- Bring a squeezelite player back to the power state it had (by @lawrence-jeff in #8005)
-- Use MP3 by default for most Google Cast speakers to prevent dropouts (by @marcelveldt in #8011)
-- Restart playback when a speaker drops its stream and goes silent (by @marcelveldt in #8017)
-
-### 🎨 Frontend Changes
-
-- Add share links for tracks, albums and artists (by @dmoo500 in [#3040](https://github.com/music-assistant/frontend/pull/3040))
-- Add a back arrow to Settings pages (by @marcelveldt in [#3282](https://github.com/music-assistant/frontend/pull/3282))
-- Show each analysis module's progress on its own card (by @marcelveldt in [#3289](https://github.com/music-assistant/frontend/pull/3289))
-- Open settings in place on Metadata, Audio analysis and Background tasks (by @marcelveldt in [#3288](https://github.com/music-assistant/frontend/pull/3288))
-- Show a missing AI engine under its picker (by @marcelveldt in [#3287](https://github.com/music-assistant/frontend/pull/3287))
-- Open the docs at the new Playback heading from a player's Playback page (by @marcelveldt in [#3285](https://github.com/music-assistant/frontend/pull/3285))
-- Return to the previous page after saving settings (by @marcelveldt in [#3284](https://github.com/music-assistant/frontend/pull/3284))
-- Keep Escape going back after picking from a dropdown (by @marcelveldt in [#3283](https://github.com/music-assistant/frontend/pull/3283))
-- Call each player's queue settings Playback (by @marcelveldt in [#3281](https://github.com/music-assistant/frontend/pull/3281))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>11 changes</summary>
-
-- Let the queue alone decide when the audio of a track is released (by @marcelveldt in #7884)
-- Keep a track playing when a radio queue refreshes its upcoming tracks (by @marcelveldt in #7894)
-- Keep an Apple TV room audible after switching its audio output (by @marcelveldt in #7977)
-- Stop an AirPlay device from taking the model of another device with the same name (by @marcelveldt in #7978)
-- Describe how a player provider delivers a set of speakers (by @marcelveldt in #7983)
-- Call the player queue defaults Playback in setting texts (by @marcelveldt in #7990)
-- Narrow broad exception handlers in Plex and Plex Connect (BLE001) (by @anatosun in #7992)
-- Bump transformers to 5.23.0 and huggingface-hub to 2.4.0 (by @chrisuthe in #8002)
-- Keep Sonos playing after the upcoming tracks are replaced (by @marcelveldt in #8004)
-- Show the background task limit without the advanced switch (by @marcelveldt in #8008)
-- Tidy up after the queue took over releasing audio (by @marcelveldt in #8013)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @afeldman1, @anatosun, @benjamin-m-holden, @chrisuthe, @dmoo500, @hatharry, @lawrence-jeff, @marcelveldt
