@@ -1,3 +1,74 @@
+# [2.11.0.dev2026112603] - 26.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026112503](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112503)_
+
+### 🚀 Features and enhancements
+
+- Play announcements only on the speaker you send them to, and duck them on Sendspin over AirPlay (by @marcelveldt in #8117)
+- Find your own uploads when searching YouTube Music (by @MarvinSchenkel in #8135)
+- Follow volume changes made on the HomePods of an Apple TV (by @marcelveldt in #8147)
+- Sync podcast listening progress with your iHeartRadio account (by @OzGav in #8149)
+- Show players as paused while Spotify Connect is paused (by @marcelveldt in #8152)
+- Let a DLNA player pause, resume and seek by itself in a WAV track (by @marcelveldt in #8160)
+- Let a Sonos speaker pause, resume and seek by itself in a WAV track (by @marcelveldt in #8167)
+
+### 🐛 Bugfixes
+
+- Fix search skipping a selected account when a service has several accounts (by @digitalvir in #7848)
+- Keep a track's length when its source stops short (by @acuntex in #7926)
+- Stop the queue when another device takes over Spotify playback (by @MarvinSchenkel in #8007)
+- Fix AI Task image downloads in the Home Assistant app (by @dmoo500 in #8023)
+- Give a clear message for items that can not be favorites or library items (by @OzGav in #8069)
+- Check a radio station again after its address could not be reached (by @OzGav in #8100)
+- Stop an AirPlay play echo during group setup from resuming the old queue (by @MarvinSchenkel in #8103)
+- Fix Spotify Connect hanging after a stop with go-librespot (by @marcelveldt in #8127)
+- Stop searching music services for every local album in the background (by @marcelveldt in #8128)
+- Fix Spotify Connect staying silent when playback starts outside the Spotify app (by @marcelveldt in #8129)
+- Keep syncing YouTube Music tracks when an upload can't be resolved (by @chrisuthe in #8130)
+- Keep yt-dlp up to date for YouTube Music (by @MarvinSchenkel in #8137)
+- Fix short audio gaps in live inputs when the server briefly stalls (by @MarvinSchenkel in #8138)
+- Fix a WiiM stereo pair falling apart when added to another speaker's group (by @marcelveldt in #8140)
+- Fix WAV playback on Sonos for hi-res tracks and with crossfade enabled (by @marcelveldt in #8148)
+- Keep a sync group together when its Sonos speaker reports playback late (by @marcelveldt in #8162)
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>21 changes</summary>
+
+- Keep release tests independent of local Git signing settings (by @jetersen in #8060)
+- Check broad error catches in five community providers (by @OzGav in #8104)
+- Check broad error catches in the last six providers (by @OzGav in #8105)
+- Bump CodSpeedHQ/action from 5.6.3 to 5.8.0 (by @dependabot[bot] in #8115)
+- Keep volume working on a speaker after its group stops (by @marcelveldt in #8125)
+- Don't make AirPlay speakers wait 30 seconds for a source that refuses to play (by @marcelveldt in #8139)
+- Add podcast and audiobook examples to the demo music provider (by @OzGav in #8141)
+- Keep the control connection to HomePods and Apple TVs open (by @marcelveldt in #8145)
+- Remove CodSpeed benchmarks (by @MarvinSchenkel in #8146)
+- Keep Home Assistant control names and speech languages right after a restart (by @marcelveldt in #8150)
+- Give the stream buffer tests more time on a slow test machine (by @marcelveldt in #8151)
+- Keep the crossfade on Sonos after the upcoming tracks are replaced (by @marcelveldt in #8155)
+- Only give portable Sonos speakers a power control (by @marcelveldt in #8156)
+- Keep the rest of an AirPlay group together when its leader is taken out (by @marcelveldt in #8157)
+- Keep a fixed sync group whole when one of its speakers is taken out (by @marcelveldt in #8158)
+- Let an AirPlay speaker that lost its connection only come back to its own group (by @marcelveldt in #8159)
+- Show what a speaker plays by itself after it left its AirPlay group (by @marcelveldt in #8164)
+- Fetch Pocket Casts listening progress once per library pass (by @OzGav in #8165)
+- Fetch gPodder episode actions once per library pass (by @OzGav in #8169)
+- Update airplay-cli to v0.5.18 (by @musicassistant-bot[bot] in #8171)
+- Fetch Audiobookshelf listening progress once per library pass (by @OzGav in #8172)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @acuntex, @chrisuthe, @digitalvir, @dmoo500, @jetersen, @marcelveldt
+
+
 # [2.11.0.dev2026112503] - 25.11.2026
 
 ## 📦 Nightly Release
@@ -142,49 +213,3 @@ _Changes since [2.11.0.dev2026112303](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @Simanias, @fmunkes, @kieranhogg, @lawrence-jeff, @marcelveldt, @tony-schellenberg, @zackwag
-
-
-# [2.11.0.dev2026112303] - 23.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026112203](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112203)_
-
-### 🚀 New Providers
-
-- Add LIFX Lights Sync plugin provider (by @sonic1200 in #7947)
-
-### 🚀 Features and enhancements
-
-- Show a WiiM stereo pair as one player (by @marcelveldt in #7988)
-- Standardise the naming across the BBC Sounds provider code (by @kieranhogg in #8006)
-- Play the input of one Sonos or HEOS speaker on the others (by @marcelveldt in #8039)
-
-### 🐛 Bugfixes
-
-- Deezer: fix audiobooks stopping after the first chapter (by @jdaberkow in #8054)
-- Fix the AirPlay Receiver sometimes not starting or stopping playback (by @marcelveldt in #8055)
-- Keep old browser and app players hidden and out of Home Assistant (by @marcelveldt in #8066)
-- MusicCast: don't show the previous track's info while on an input like TV (by @fmunkes in #8067)
-
-### 🎨 Frontend Changes
-
-- Search only when you press Enter in party, quiz and smart playlist search (by @marcelveldt in [#3302](https://github.com/music-assistant/frontend/pull/3302))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>4 changes</summary>
-
-- Use library method for removing cookie jar when unloading BBC Sounds (by @kieranhogg in #8044)
-- Update the AirPlay Receiver to shairport-sync 5.6.3 (by @marcelveldt in #8050)
-- Show how far the server's clock runs off in the diagnostics report (by @marcelveldt in #8051)
-- Stop a speaker paused from its own app or remote after the pause timeout (by @marcelveldt in #8056)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@fmunkes, @jdaberkow, @kieranhogg, @marcelveldt, @sonic1200
