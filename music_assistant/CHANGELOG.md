@@ -1,3 +1,57 @@
+# [2.10.14] - 27.11.2026
+
+## 📦 Stable Release
+
+_Changes since [2.10.13](https://github.com/music-assistant/server/releases/tag/2.10.13)_
+
+### 🚀 Features and enhancements
+
+- Sync uploaded YouTube Music music into the library (by @MarvinSchenkel in #8114)
+
+### 🐛 Bugfixes
+
+- Decode HTML entities in radio stream titles (by @zackwag in #7868)
+- Stop an announcement to an AirPlay group from resuming the old queue (by @MarvinSchenkel in #7959)
+- Sync Audible audiobooks that have no cover image (by @MarvinSchenkel in #7993)
+- Keep HEOS groups in sync after the controller reconnects (by @MarvinSchenkel in #7994)
+- Add a Bluesound player that doesn't answer at startup as unavailable (by @MarvinSchenkel in #7995)
+- Keep adding Bluesound players when a stereo pair speaker has no presets (by @MarvinSchenkel in #7996)
+- Don't create dashboard displays for Chromecast Audio and Home Mini speakers (by @MarvinSchenkel in #7997)
+- Stop the queue when another device takes over Spotify playback (by @MarvinSchenkel in #8007)
+- Keep a group playing when a play request on one of its speakers cannot start (by @marcelveldt in #8019)
+- Keep Spotify Connect paused when a speaker reopens its stream (by @marcelveldt in #8049)
+- Deezer: fix audiobooks stopping after the first chapter (by @jdaberkow in #8054)
+- Fix missing last track when a CUE sheet lists one file per track (by @OzGav in #8057)
+- Fix the AirPlay Receiver sometimes not starting or stopping playback (by @marcelveldt in #8065)
+- MusicCast: don't show the previous track's info while on an input like TV (by @fmunkes in #8067)
+- Fix Sendspin player takeover for legacy clients with a lowercase MAC id (by @MarvinSchenkel in #8073)
+- Fix Apple Music start delay that grows with track length (by @MarvinSchenkel in #8099)
+- Check a radio station again after its address could not be reached (by @OzGav in #8100)
+- Fix playback stopping when the next track changes right after a track starts (by @maximmaxim345 in #8101)
+- Stop an AirPlay play echo during group setup from resuming the old queue (by @MarvinSchenkel in #8103)
+- Let Cast speakers in a Sendspin group play short sounds from the start (by @marcelveldt in #8119)
+- Fix Spotify Connect hanging after a stop with go-librespot (by @marcelveldt in #8127)
+- Fix Spotify Connect staying silent when playback starts outside the Spotify app (by @marcelveldt in #8129)
+- Keep syncing YouTube Music tracks when an upload can't be resolved (by @chrisuthe in #8130)
+- Keep yt-dlp up to date for YouTube Music (by @MarvinSchenkel in #8137)
+- Fix short audio gaps in live inputs when the server briefly stalls (by @MarvinSchenkel in #8138)
+- Keep WiiM and Bose SoundTouch speakers at their own volume when AirPlay starts (by @marcelveldt in #8176)
+- Bump `aiosendspin` to 11.0.0 to fix silent line-in from idle Sendspin devices (by @maximmaxim345 in #8184)
+- Play podcast episodes from Spotify playlists instead of failing on them as tracks (by @joepadmiraal in #8188)
+
+### 🧰 Maintenance and dependency bumps
+
+- Keep the control connection to HomePods and Apple TVs open (by @marcelveldt in #8145)
+- Remove CodSpeed benchmarks (by @MarvinSchenkel in #8146)
+- Update airplay-cli to v0.5.19 (by @musicassistant-bot[bot] in #8200)
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @OzGav, @chrisuthe, @fmunkes, @jdaberkow, @joepadmiraal, @marcelveldt, @maximmaxim345, @zackwag
+
+
 # [2.10.13] - 21.11.2026
 
 ## 📦 Stable Release
@@ -96,48 +150,3 @@ _Changes since [2.10.11](https://github.com/music-assistant/server/releases/tag/
 Special thanks to the following contributors who helped with this release:
 
 @OzGav, @cTopher, @chrisuthe, @marcelveldt
-
-
-# [2.10.11] - 13.11.2026
-
-## 📦 Stable Release
-
-_Changes since [2.10.9](https://github.com/music-assistant/server/releases/tag/2.10.9)_
-
-### 🚀 Features and enhancements
-
-- Allow multiple Pocket Casts instances (by @OzGav in #7328)
-- Subsonic setup refactor (by @khers in #7456)
-- Make Subsonic provider use the last modified bookmark date (by @khers in #7536)
-
-### 🐛 Bugfixes
-
-- Keep the last Squeezelite volume when its cache entry expires (by @thelad-dev in #6944)
-- Fix Home Assistant player updates failing on non-text media_content_id (by @MarvinSchenkel in #7152)
-- Fix Bluesound multi-zone players missing on routed networks (by @MarvinSchenkel in #7159)
-- Fix a speaker group staying silent after its leader drops offline (by @marcelveldt in #7320)
-- Fix Apple TV pairing not working (by @cleverer in #7352)
-- Re-form a speaker group faster and keep the next track ready when its leader drops (by @marcelveldt in #7356)
-- Fix Sendspin output staying unavailable on some AirPlay and Cast speakers (by @maximmaxim345 in #7357)
-- Keep a playing group on Sendspin when a Sendspin speaker joins (by @maximmaxim345 in #7358)
-- Start at 0:00 when seeking to the start of an audiobook or episode (by @fmunkes in #7363)
-- Add Legacy Auth option to subsonic setup flow (by @khers in #7439)
-- Fix Sendspin group going silent after a leader switch with a visualizer member (by @MarvinSchenkel in #7461)
-- Fix ARD Sounds search failing when a show or station has no social media links (by @OzGav in #7496)
-- Prevent clipping when volume normalization raises a quiet track (by @marcelveldt in #7538)
-- Stop Cast speakers replaying earlier tracks at the end of a queue (by @marcelveldt in #7549)
-- Stop the end of a queue being cut off on Cast and Bluesound speakers (by @marcelveldt in #7550)
-- Fix Cast speakers dropping out during longer playback (by @marcelveldt in #7568)
-- Tidal: name album artists and playlist owners in search results (by @jozefKruszynski in #7585)
-
-### 🧰 Maintenance and dependency bumps
-
-- Bump CodSpeedHQ/action from 5.6.0 to 5.6.3 (by @dependabot[bot] in #7411)
-- Install the frontend from its GitHub release instead of PyPI (by @marcelveldt in #7434)
-- Complete onboarding when the setup wizard finishes, not when the first provider is added (by @marcelveldt in #7509)
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @cleverer, @fmunkes, @jozefKruszynski, @khers, @marcelveldt, @maximmaxim345, @thelad-dev
