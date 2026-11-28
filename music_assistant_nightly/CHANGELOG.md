@@ -1,3 +1,86 @@
+# [2.11.0.dev2026112803] - 28.11.2026
+
+## 📦 Nightly Release
+
+_Changes since [2.11.0.dev2026112703](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112703)_
+
+### 🚀 Features and enhancements
+
+- Replace a Sendspin next track that was already sent without a restart (by @maximmaxim345 in #8083)
+- Allow moving the buffered next track on Sendspin players (by @maximmaxim345 in #8084)
+- Playback quality: pick a quality level per player instead of an output codec (by @marcelveldt in #8212)
+- Make the playback settings simpler to read (by @marcelveldt in #8217)
+- Make a skip asked of Siri on a HomePod or Apple TV work (by @marcelveldt in #8219)
+- Playback quality: Sonos speakers default to lossless, uncompressed (by @marcelveldt in #8237)
+- Playback quality: HEOS players default to lossless, uncompressed (by @marcelveldt in #8238)
+- Playback quality: DLNA players default to lossless, uncompressed (by @marcelveldt in #8239)
+- Playback quality: Squeezelite players default to lossless, uncompressed (by @marcelveldt in #8240)
+- Playback quality: Cast devices play track by track in high quality, compressed by default (by @marcelveldt in #8241)
+- Keep a Sonos sync group playing when its leader is removed (by @marcelveldt in #8244)
+- Playback quality: Sonos S1 speakers default to lossless, uncompressed (by @marcelveldt in #8245)
+- Playback quality: a radio station at the compressed level shows its titles on a Sonos speaker (by @marcelveldt in #8259)
+- Playback quality: flow mode plays lossless on a Sonos speaker (by @marcelveldt in #8262)
+- Keep a Sonos sync group playing when its leader is taken out in the Sonos app (by @marcelveldt in #8263)
+
+### 🐛 Bugfixes
+
+- Don't create dashboard displays for Chromecast Audio and Home Mini speakers (by @MarvinSchenkel in #7997)
+- Spotify: halve the requests for opening and playing albums (by @MarvinSchenkel in #8136)
+
+### 🎨 Frontend Changes
+
+- Playback quality: friendly names in the audio chain (by @marcelveldt in [#3368](https://github.com/music-assistant/frontend/pull/3368))
+- Give the DSP page the same header as the other player settings pages (by @marcelveldt in [#3364](https://github.com/music-assistant/frontend/pull/3364))
+- Keep the add button visible on phones in settings lists (by @stvncode in [#3366](https://github.com/music-assistant/frontend/pull/3366))
+- Make the header of a settings page compact on a phone (by @marcelveldt in [#3367](https://github.com/music-assistant/frontend/pull/3367))
+- Allow moving and removing the next track on Sendspin players (by @maximmaxim345 in [#3326](https://github.com/music-assistant/frontend/pull/3326))
+- Tidy up the header of a player's settings page (by @marcelveldt in [#3357](https://github.com/music-assistant/frontend/pull/3357))
+- Fix the Music Quiz dashboard on older Cast receivers (by @MarvinSchenkel in [#3345](https://github.com/music-assistant/frontend/pull/3345))
+- Anchor long-press menus to the touch position (by @balloob in [#3362](https://github.com/music-assistant/frontend/pull/3362))
+- Fix the Start setup button of a player overlapping the status icon on a phone (by @marcelveldt in [#3365](https://github.com/music-assistant/frontend/pull/3365))
+- Fix settings pages claiming unsaved changes after jumping from another one (by @marcelveldt in [#3363](https://github.com/music-assistant/frontend/pull/3363))
+- Fix settings pages being cut off after scrolling past the end (by @marcelveldt in [#3361](https://github.com/music-assistant/frontend/pull/3361))
+- Add a combobox component and use it in the link alias dialog (by @pierosavi in [#3089](https://github.com/music-assistant/frontend/pull/3089))
+- Ignore the release of the press that opened the item menu (by @pierosavi in [#3349](https://github.com/music-assistant/frontend/pull/3349))
+- Update the Web player to sendspin-js 6.1.0 (by @maximmaxim345 in [#3346](https://github.com/music-assistant/frontend/pull/3346))
+- Save the diagnostics settings and log levels from one save bar (by @marcelveldt in [#3359](https://github.com/music-assistant/frontend/pull/3359))
+- Leave out the section heading when a settings form has only one section (by @marcelveldt in [#3358](https://github.com/music-assistant/frontend/pull/3358))
+
+### 🧰 Maintenance and dependency bumps
+
+<details>
+<summary>20 changes</summary>
+
+- Developer guide: when a provider moves to the community catalog (by @marcelveldt in #8216)
+- Start quiet tracks on squeezelite players without a delay (by @marcelveldt in #8224)
+- Let each player protocol tell whether its sync group can change leader without a restart (by @marcelveldt in #8228)
+- Tidy the settings labels and explain greyed-out power options (by @marcelveldt in #8229)
+- Let the stream of a sync group follow the group's leader (by @marcelveldt in #8230)
+- Serve the queue of a Sonos-led sync group under the group's id (by @marcelveldt in #8231)
+- Keep a track starting fast after a player drops a request (by @marcelveldt in #8234)
+- Show an AirPlay Receiver pause on Sonos speakers right away (by @marcelveldt in #8235)
+- Keep a paused squeezelite player from playing again by itself (by @marcelveldt in #8236)
+- Show the right position when a DLNA player starts again after a stop (by @marcelveldt in #8242)
+- Start Spotify Connect streams without waiting for the volume sync (by @marcelveldt in #8243)
+- Keep a track playing when a second speaker asks for the same file (by @marcelveldt in #8247)
+- Update go-librespot to 0.10.7 and Snapcast to 0.35.0 (by @marcelveldt in #8249)
+- Keep the position right when a Sonos speaker is paused right after a skip (by @marcelveldt in #8250)
+- Let two speakers read a track with crossfade at the same time (by @marcelveldt in #8253)
+- Show Jellyfin and Snapcast as stable again, and update the maintainers of three providers (by @marcelveldt in #8255)
+- Remove unused status call from Spotify Connect's go-librespot client (by @marcelveldt in #8256)
+- Clarify the Snapcast control script cleanup comment (by @marcelveldt in #8257)
+- Handle Spotify Connect playback errors and a lost Spotify session (by @marcelveldt in #8258)
+- Ask for the README next to the code to be kept up to date (by @marcelveldt in #8264)
+
+</details>
+
+## :bow: Thanks to our contributors
+
+Special thanks to the following contributors who helped with this release:
+
+@MarvinSchenkel, @balloob, @marcelveldt, @maximmaxim345, @pierosavi, @stvncode
+
+
 # [2.11.0.dev2026112703] - 27.11.2026
 
 ## 📦 Nightly Release
@@ -165,92 +248,3 @@ _Changes since [2.11.0.dev2026112503](https://github.com/music-assistant/server/
 Special thanks to the following contributors who helped with this release:
 
 @MarvinSchenkel, @OzGav, @acuntex, @chrisuthe, @digitalvir, @dmoo500, @jetersen, @marcelveldt
-
-
-# [2.11.0.dev2026112503] - 25.11.2026
-
-## 📦 Nightly Release
-
-_Changes since [2.11.0.dev2026112403](https://github.com/music-assistant/server/releases/tag/2.11.0.dev2026112403)_
-
-### 🚀 Features and enhancements
-
-- Add custom image upload for media items, scoped to genres (by @jozefKruszynski in #5753)
-- Read the ALBUMARTISTS tag from ID3 and APEv2 files (by @OzGav in #8058)
-- Crossfade and hand over the next track on direct PCM queue streams (by @maximmaxim345 in #8081)
-- Play Sendspin queues track by track, switching formats without a restart (by @maximmaxim345 in #8082)
-- Deezer: sort audiobooks by release date and find them by their chapters (by @jdaberkow in #8089)
-- Offer the NTP timing streaming mode on HomePods and Apple TVs (by @marcelveldt in #8110)
-- YouTube Music: option to search with your account (by @MarvinSchenkel in #8113)
-- Sync uploaded YouTube Music music into the library (by @MarvinSchenkel in #8114)
-
-### 🐛 Bugfixes
-
-- Keep HEOS groups in sync after the controller reconnects (by @MarvinSchenkel in #7994)
-- Keep Spotify Connect playing when a speaker reopens its stream on start (by @MarvinSchenkel in #8001)
-- Keep Spotify Connect paused when a speaker reopens its stream (by @marcelveldt in #8049)
-- Fix missing last track when a CUE sheet lists one file per track (by @OzGav in #8057)
-- Show "auto" as the volume and mute control default when another protocol can take it (by @fmunkes in #8064)
-- Fix genre mapping scan failing on genres with a NUL character (by @MarvinSchenkel in #8074)
-- Fix Repeat One starting mid-track after a seek (by @maximmaxim345 in #8080)
-- Don't show "LIVE" on Google Cast devices while a track plays (by @marcelveldt in #8087)
-- Fix Apple Music start delay that grows with track length (by @MarvinSchenkel in #8099)
-- Fix playback stopping when the next track changes right after a track starts (by @maximmaxim345 in #8101)
-- Fix Spotify going silent for 20 s at the end of a track (by @marcelveldt in #8106)
-- Offer the update of a community provider that does not run (by @marcelveldt in #8111)
-- Show track info on Bose speakers from the start and fix AirPlay 2 NTP timing (airplay-cli v0.5.17) (by @musicassistant-bot[bot] in #8118)
-- Let Cast speakers in a Sendspin group play short sounds from the start (by @marcelveldt in #8119)
-- Follow volume changes made on a playing HomePod (by @marcelveldt in #8126)
-
-### 🎨 Frontend Changes
-
-- Leave the player out of the Live sources header (by @marcelveldt in [#3328](https://github.com/music-assistant/frontend/pull/3328))
-- Make the play button's loading ring smoother (by @pierosavi in [#3310](https://github.com/music-assistant/frontend/pull/3310))
-- Show the update of a community provider that does not run (by @marcelveldt in [#3327](https://github.com/music-assistant/frontend/pull/3327))
-- Don't list recent searches when you search for pages (by @marcelveldt in [#3332](https://github.com/music-assistant/frontend/pull/3332))
-- Don't search in the background when you switch to Pages (by @marcelveldt in [#3330](https://github.com/music-assistant/frontend/pull/3330))
-- Fix a live sources search test that failed at random (by @marcelveldt in [#3331](https://github.com/music-assistant/frontend/pull/3331))
-- Stop searching in the background after you leave a search (by @marcelveldt in [#3329](https://github.com/music-assistant/frontend/pull/3329))
-- Don't repeat the previous search when you change a search filter (by @marcelveldt in [#3309](https://github.com/music-assistant/frontend/pull/3309))
-- Bump eslint-plugin-vue from 10.11.1 to 10.12.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3321](https://github.com/music-assistant/frontend/pull/3321))
-- Bump vue-i18n from 11.4.18 to 11.4.23 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3325](https://github.com/music-assistant/frontend/pull/3325))
-- Bump vue from 3.5.45 to 3.5.46 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3318](https://github.com/music-assistant/frontend/pull/3318))
-- Bump marked from 18.2.0 to 18.2.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3319](https://github.com/music-assistant/frontend/pull/3319))
-- Bump tailwindcss from 4.3.3 to 4.3.5 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3320](https://github.com/music-assistant/frontend/pull/3320))
-- Bump tailwind-merge from 3.7.0 to 3.7.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3323](https://github.com/music-assistant/frontend/pull/3323))
-- Bump vite-plugin-webfont-dl from 3.13.1 to 3.14.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3324](https://github.com/music-assistant/frontend/pull/3324))
-- Bump typescript-eslint from 8.72.1 to 8.73.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3316](https://github.com/music-assistant/frontend/pull/3316))
-- Bump eslint from 10.14.0 to 10.15.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3322](https://github.com/music-assistant/frontend/pull/3322))
-- Bump lint-staged from 17.6.0 to 17.6.1 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3317](https://github.com/music-assistant/frontend/pull/3317))
-- Bump actions/create-github-app-token from 3.3.0 to 3.4.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3315](https://github.com/music-assistant/frontend/pull/3315))
-- Bump release-drafter/release-drafter from 7.10.0 to 7.11.0 (by @[dependabot[bot]](https://github.com/apps/dependabot) in [#3314](https://github.com/music-assistant/frontend/pull/3314))
-
-### 🧰 Maintenance and dependency bumps
-
-<details>
-<summary>16 changes</summary>
-
-- niconico video: drop the custom seek workaround now that ffmpeg 8 seeks natively (by @marcelveldt in #7594)
-- Check broad error catches in the team's plugin and music providers (by @OzGav in #7980)
-- Don't log an error when a source refuses to play on a Sendspin speaker (by @marcelveldt in #8046)
-- Use the shared Sendspin lights analyzer in Hue Lights Sync (by @sonic1200 in #8071)
-- Bump actions/create-github-app-token from 3.3.0 to 3.4.0 (by @dependabot[bot] in #8078)
-- Bump astral-sh/setup-uv from 10.3.3 to 10.4.0 (by @dependabot[bot] in #8079)
-- Free the music service stream when a speaker refuses to start (by @marcelveldt in #8092)
-- Keep a sync group playing when its AirPlay leader drops out (by @marcelveldt in #8093)
-- Keep a sync group playing when a leader on AirPlay leaves it (by @marcelveldt in #8107)
-- Fix the end of some Spotify songs being cut off (by @marcelveldt in #8108)
-- Keep a group silent when you stop it while it changes leader (by @marcelveldt in #8112)
-- Keep mains-powered Sonos speakers connected (by @marcelveldt in #8116)
-- Don't log an error when a source refuses to play on AirPlay, group or MSX speakers (by @marcelveldt in #8121)
-- Don't fetch artwork that a Sonos speaker dropped after AirPlay playback (by @marcelveldt in #8122)
-- Fix a Sonos speaker not starting other music while it still plays (by @marcelveldt in #8123)
-- Notice when a Sendspin Cast app that survived a restart closes (by @marcelveldt in #8124)
-
-</details>
-
-## :bow: Thanks to our contributors
-
-Special thanks to the following contributors who helped with this release:
-
-@MarvinSchenkel, @OzGav, @fmunkes, @jdaberkow, @jozefKruszynski, @marcelveldt, @maximmaxim345, @pierosavi, @sonic1200
